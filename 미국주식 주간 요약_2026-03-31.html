@@ -34,8 +34,6 @@
     .chip { display:inline-block; border:1px solid var(--line); background:rgba(255,250,242,0.92); border-radius:999px; padding:3px 8px; font-size:12px; color:var(--muted); }
     .mini-svg { width:100%; height:220px; display:block; border-radius:14px; background:rgba(255,255,255,0.5); }
     .labels { display:grid; gap:4px; margin-top:8px; color:var(--muted); font-size:12px; text-align:center; }
-    .widget-shell { width:100%; height:220px; border-radius:14px; overflow:hidden; background:rgba(255,255,255,0.5); }
-    .tradingview-widget-container,.tradingview-widget-container__widget { width:100%; height:220px; }
     .widget-meta { margin-top:8px; color:var(--muted); font-size:12px; line-height:1.5; }
     .sources { margin:0; padding-left:18px; color:#334155; line-height:1.7; }
     @media (max-width:1100px) { .special-grid { grid-template-columns:1fr; } }
@@ -78,7 +76,6 @@
     const chartGrid = document.getElementById('chartGrid');
     const specialGrid = document.getElementById('specialGrid');
     const dailyGrid = document.getElementById('dailyGrid');
-    const trendRangeText = '2026-03-09 ~ 2026-03-31';
 
     const fmt = (value, unit) => {
       const options = Math.abs(value) >= 100 ? { maximumFractionDigits: 2 } : { minimumFractionDigits: 2, maximumFractionDigits: 2 };
@@ -99,7 +96,7 @@
       summaryGrid.appendChild(summary);
     });
 
-    const buildLineChartCard = (label, item, color) => {
+    const buildLineChartCard = (label, item, color, footerText = '') => {
       const change = Number(item.changePct || 0);
       const klass = change > 0 ? 'up' : (change < 0 ? 'down' : 'flat');
 
@@ -129,9 +126,10 @@
         const tickValue = maxV - ((maxV - minV) / 3) * i;
         const gy = padY + (plotH / 3) * i + 4;
         let labelText = Number(tickValue).toLocaleString('en-US', { maximumFractionDigits: 1 });
-        if (item.unit === '$') labelText = '$' + labelText;
-        if (item.unit === '%') labelText += '%';
-        ticks.push(`<text x="2" y="${gy}" fill="#6b7280" font-size="10">${labelText}</text>`);
+      if (item.unit === '$') labelText = '$' + labelText;
+      if (item.unit === '%') labelText += '%';
+      if (item.unit === 'x') labelText += 'x';
+      ticks.push(`<text x="2" y="${gy}" fill="#6b7280" font-size="10">${labelText}</text>`);
       }
 
       const d = values.map((v, i) => `${i === 0 ? 'M' : 'L'} ${x(i)} ${y(v)}`).join(' ');
@@ -143,12 +141,12 @@
 
       const card = document.createElement('div');
       card.className = 'chart-card';
-      card.innerHTML = `<div class="chart-meta"><div><h3>${label}</h3><span class="chip">${item.category}</span></div><div class="${klass}">${change > 0 ? '+' : ''}${change.toFixed(2)}%</div></div><svg class="mini-svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="none" aria-label="${label} chart">${grid.join('')}${ticks.join('')}<path d="${d}" fill="none" stroke="${color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>${points}</svg><div class="labels" style="grid-template-columns:repeat(${labelIndexes.length},minmax(0,1fr))">${labels}</div>`;
+      card.innerHTML = `<div class="chart-meta"><div><h3>${label}</h3><span class="chip">${item.category}</span></div><div class="${klass}">${change > 0 ? '+' : ''}${change.toFixed(2)}%</div></div><svg class="mini-svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="none" aria-label="${label} chart">${grid.join('')}${ticks.join('')}<path d="${d}" fill="none" stroke="${color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>${points}</svg><div class="labels" style="grid-template-columns:repeat(${labelIndexes.length},minmax(0,1fr))">${labels}</div>${footerText ? `<div class="widget-meta">${footerText}</div>` : ''}`;
       return card;
     };
 
     Object.entries(series).forEach(([label, item], idx) => {
-      if (label === 'Fear & Greed') { return; }
+      if (label === 'Fear & Greed' || label === 'Bitcoin (USD)' || label === 'BIT/GOLD') { return; }
       const card = buildLineChartCard(label, item, colors[idx % colors.length]);
       chartGrid.appendChild(card);
     });
@@ -157,66 +155,13 @@
       specialGrid.appendChild(buildLineChartCard('Fear & Greed', series['Fear & Greed'], '#334155'));
     }
 
-    const appendTradingViewCard = (title, category, sourceNote, config) => {
-      const card = document.createElement('div');
-      card.className = 'chart-card';
+    if (series['Bitcoin (USD)']) {
+      specialGrid.appendChild(buildLineChartCard('Bitcoin (USD)', series['Bitcoin (USD)'], '#f7931a', '자료 출처: TradingView · BITSTAMP:BTCUSD · Nasdaq 종가 시점 정렬'));
+    }
 
-      card.innerHTML = `<div class="chart-meta"><div><h3>${title}</h3><span class="chip">${category}</span></div><div class="flat">TradingView</div></div><div class="widget-shell"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div></div></div><div class="widget-meta">${sourceNote}</div>`;
-      specialGrid.appendChild(card);
-
-      const widgetContainer = card.querySelector('.tradingview-widget-container');
-      const script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
-      script.async = true;
-      script.text = JSON.stringify(Object.assign({
-        autosize: true,
-        width: '100%',
-        height: '220',
-        locale: 'kr',
-        colorTheme: 'light',
-        isTransparent: true,
-        dateRange: '12M',
-        largeChartUrl: 'https://kr.tradingview.com/',
-        chartOnly: true,
-        lineWidth: 2,
-        hideMarketStatus: true,
-        hideSymbolLogo: false,
-        fontFamily: 'Segoe UI, Malgun Gothic, sans-serif',
-        fontSize: '10',
-        changeMode: 'price-and-percent',
-        plotLineColorGrowing: '#0f9d58',
-        plotLineColorFalling: '#c2410c',
-        plotLineColorNeutral: '#1d4ed8',
-        scalePosition: 'right',
-        scaleMode: 'Normal'
-      }, config));
-      widgetContainer.appendChild(script);
-    };
-
-    appendTradingViewCard(
-      'Bitcoin (USD)',
-      'Crypto',
-      `자료 출처: TradingView · 기준일 범위: ${trendRangeText} · Nasdaq 종가 기준 일자 정리`,
-      {
-        symbol: 'BITSTAMP:BTCUSD',
-        plotLineColorGrowing: '#f7931a',
-        plotLineColorFalling: '#f7931a',
-        plotLineColorNeutral: '#f7931a'
-      }
-    );
-
-    appendTradingViewCard(
-      'BIT/GOLD',
-      'Cross Asset',
-      `자료 출처: TradingView · 계산식: BTCUSD / XAUUSD · 기준일 범위: ${trendRangeText}`,
-      {
-        symbol: 'BITSTAMP:BTCUSD/OANDA:XAUUSD',
-        plotLineColorGrowing: '#8b5cf6',
-        plotLineColorFalling: '#8b5cf6',
-        plotLineColorNeutral: '#8b5cf6'
-      }
-    );
+    if (series['BIT/GOLD']) {
+      specialGrid.appendChild(buildLineChartCard('BIT/GOLD', series['BIT/GOLD'], '#8b5cf6', '자료 출처: TradingView · BITSTAMP:BTCUSD / OANDA:XAUUSD · Nasdaq 종가 시점 정렬'));
+    }
 
     dailyNews.forEach(item => {
       const card = document.createElement('div');
