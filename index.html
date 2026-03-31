@@ -29,11 +29,15 @@
     .news-card ul { margin:0; padding-left:18px; }
     .news-card .news-date { color:var(--accent); font-weight:700; font-size:13px; margin-bottom:6px; }
     .chart-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .special-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:14px; }
     .chart-meta { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px; }
     .chip { display:inline-block; border:1px solid var(--line); background:rgba(255,250,242,0.92); border-radius:999px; padding:3px 8px; font-size:12px; color:var(--muted); }
     .mini-svg { width:100%; height:220px; display:block; border-radius:14px; background:rgba(255,255,255,0.5); }
     .labels { display:grid; gap:4px; margin-top:8px; color:var(--muted); font-size:12px; text-align:center; }
+    .widget-shell { width:100%; height:220px; border-radius:14px; overflow:hidden; background:rgba(255,255,255,0.5); }
+    .widget-meta { margin-top:8px; color:var(--muted); font-size:12px; line-height:1.5; }
     .sources { margin:0; padding-left:18px; color:#334155; line-height:1.7; }
+    @media (max-width:1100px) { .special-grid { grid-template-columns:1fr; } }
     @media (max-width:960px) { .grid-4,.grid-2,.chart-grid { grid-template-columns:1fr; } }
   </style>
 </head>
@@ -54,6 +58,7 @@
     <section class="panel">
       <h2>&#51088;&#49328;&#48324; 1&#45380; &#45572;&#51201; &#53944;&#47116;&#46300;</h2>
       <div class="chart-grid" id="chartGrid"></div>
+      <div class="special-grid" id="specialGrid"></div>
     </section>
 
     <section class="panel">
@@ -70,7 +75,9 @@
     const colors = ['#0f766e','#1d4ed8','#ea580c','#7c3aed','#b45309','#be123c','#0891b2','#4d7c0f','#334155'];
     const summaryGrid = document.getElementById('summaryGrid');
     const chartGrid = document.getElementById('chartGrid');
+    const specialGrid = document.getElementById('specialGrid');
     const dailyGrid = document.getElementById('dailyGrid');
+    const trendRangeText = '2026-03-09 ~ 2026-03-31';
 
     const fmt = (value, unit) => {
       const options = Math.abs(value) >= 100 ? { maximumFractionDigits: 2 } : { minimumFractionDigits: 2, maximumFractionDigits: 2 };
@@ -91,11 +98,10 @@
       summaryGrid.appendChild(summary);
     });
 
-    Object.entries(series).forEach(([label, item], idx) => {
+    const buildLineChartCard = (label, item, color) => {
       const change = Number(item.changePct || 0);
       const klass = change > 0 ? 'up' : (change < 0 ? 'down' : 'flat');
 
-      const color = colors[idx % colors.length];
       const values = item.values.map(Number);
       const width = 560, height = 220, padX = 50, padY = 24;
       const plotW = width - padX * 2, plotH = height - padY * 2;
@@ -137,8 +143,82 @@
       const card = document.createElement('div');
       card.className = 'chart-card';
       card.innerHTML = `<div class="chart-meta"><div><h3>${label}</h3><span class="chip">${item.category}</span></div><div class="${klass}">${change > 0 ? '+' : ''}${change.toFixed(2)}%</div></div><svg class="mini-svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="none" aria-label="${label} chart">${grid.join('')}${ticks.join('')}<path d="${d}" fill="none" stroke="${color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>${points}</svg><div class="labels" style="grid-template-columns:repeat(${labelIndexes.length},minmax(0,1fr))">${labels}</div>`;
+      return card;
+    };
+
+    Object.entries(series).forEach(([label, item], idx) => {
+      if (label === 'Fear & Greed') { return; }
+      const card = buildLineChartCard(label, item, colors[idx % colors.length]);
       chartGrid.appendChild(card);
     });
+
+    if (series['Fear & Greed']) {
+      specialGrid.appendChild(buildLineChartCard('Fear & Greed', series['Fear & Greed'], '#334155'));
+    }
+
+    const appendTradingViewCard = (title, category, sourceNote, config) => {
+      const card = document.createElement('div');
+      card.className = 'chart-card';
+
+      const widgetId = `tv_${title.replace(/[^A-Za-z0-9]/g, '')}_${Math.random().toString(36).slice(2, 8)}`;
+      card.innerHTML = `<div class="chart-meta"><div><h3>${title}</h3><span class="chip">${category}</span></div><div class="flat">TradingView</div></div><div class="widget-shell"><div class="tradingview-widget-container" style="height:220px;width:100%;"><div id="${widgetId}" style="height:220px;width:100%;"></div></div></div><div class="widget-meta">${sourceNote}</div>`;
+      specialGrid.appendChild(card);
+
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
+      script.async = true;
+      script.text = JSON.stringify(Object.assign({
+        autosize: true,
+        width: '100%',
+        height: 220,
+        locale: 'kr',
+        colorTheme: 'light',
+        isTransparent: true,
+        chartType: 'area',
+        lineWidth: 2,
+        dateRanges: ['1m|1D', '3m|1D', '12m|1D'],
+        hideDateRanges: false,
+        hideMarketStatus: true,
+        hideSymbolLogo: false,
+        showVolume: false,
+        showMA: false,
+        scalePosition: 'right',
+        scaleMode: 'Normal',
+        fontFamily: 'Segoe UI, Malgun Gothic, sans-serif',
+        fontSize: '10',
+        noTimeScale: false,
+        valuesTracking: '1',
+        changeMode: 'price-and-percent',
+        chartOnly: true,
+        container_id: widgetId
+      }, config));
+      card.querySelector('.tradingview-widget-container').appendChild(script);
+    };
+
+    appendTradingViewCard(
+      'Bitcoin (USD)',
+      'Crypto',
+      `자료 출처: TradingView · 기준일 범위: ${trendRangeText} · Nasdaq 종가 기준 일자 정리`,
+      {
+        symbols: [['Bitcoin / USD', 'BITSTAMP:BTCUSD|1D']],
+        lineColor: '#f7931a',
+        topColor: 'rgba(247,147,26,0.28)',
+        bottomColor: 'rgba(247,147,26,0.04)'
+      }
+    );
+
+    appendTradingViewCard(
+      'BIT/GOLD',
+      'Cross Asset',
+      `자료 출처: TradingView · 계산식: BTCUSD / XAUUSD · 기준일 범위: ${trendRangeText}`,
+      {
+        symbols: [['BIT / GOLD', 'BITSTAMP:BTCUSD/OANDA:XAUUSD|1D']],
+        lineColor: '#8b5cf6',
+        topColor: 'rgba(139,92,246,0.28)',
+        bottomColor: 'rgba(139,92,246,0.04)'
+      }
+    );
 
     dailyNews.forEach(item => {
       const card = document.createElement('div');
