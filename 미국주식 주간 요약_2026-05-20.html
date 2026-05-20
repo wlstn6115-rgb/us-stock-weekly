@@ -47,9 +47,33 @@
     .correlation-table .column-label { width:50px; min-width:50px; max-width:50px; height:36px; padding:3px 4px; word-break:keep-all; overflow-wrap:normal; }
     .correlation-table .corr-cell { width:50px; min-width:50px; max-width:50px; height:50px; padding:0; font-weight:700; color:#1f2937; vertical-align:middle; }
     .correlation-table .label-short { display:block; white-space:normal; }
+    .portfolio-lab { background:linear-gradient(145deg,#09111f 0%,#101827 56%,#182032 100%); border-color:rgba(148,163,184,0.22); color:#e5e7eb; box-shadow:0 22px 44px rgba(2,6,23,0.22); }
+    .portfolio-lab h2,.portfolio-lab h3 { color:#f8fafc; }
+    .portfolio-lab .sub { color:#94a3b8; }
+    .formula-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:14px 0; }
+    .formula-card { border:1px solid rgba(148,163,184,0.22); border-radius:14px; background:rgba(15,23,42,0.72); padding:12px; overflow:auto; color:#dbeafe; }
+    .portfolio-grid { display:grid; grid-template-columns:1.08fr 0.92fr; gap:16px; align-items:stretch; }
+    .control-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+    .macro-control { border:1px solid rgba(148,163,184,0.18); border-radius:14px; background:rgba(15,23,42,0.66); padding:12px; }
+    .macro-control label { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; color:#f8fafc; font-weight:700; font-size:13px; margin-bottom:8px; }
+    .macro-control .hint { display:block; color:#94a3b8; font-weight:500; font-size:11px; margin-top:2px; }
+    .macro-control input[type=range] { width:100%; accent-color:#38bdf8; }
+    .macro-control input[type=number] { width:86px; border:1px solid rgba(148,163,184,0.28); border-radius:10px; background:#020617; color:#f8fafc; padding:7px 8px; font-size:13px; }
+    .portfolio-output { border:1px solid rgba(148,163,184,0.2); border-radius:18px; background:rgba(2,6,23,0.48); padding:16px; display:grid; gap:14px; }
+    .allocation-list { display:grid; gap:8px; }
+    .allocation-row { display:grid; grid-template-columns:92px 1fr 62px; gap:10px; align-items:center; color:#e5e7eb; font-size:13px; }
+    .allocation-bar { height:9px; border-radius:999px; background:rgba(148,163,184,0.18); overflow:hidden; }
+    .allocation-fill { height:100%; border-radius:999px; transition:width .18s ease; }
+    .score-strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+    .score-box { border:1px solid rgba(148,163,184,0.16); border-radius:12px; background:rgba(15,23,42,0.72); padding:10px; }
+    .score-box span { display:block; color:#94a3b8; font-size:11px; margin-bottom:4px; }
+    .score-box strong { color:#f8fafc; font-size:16px; }
+    .chart-shell { min-height:260px; display:grid; place-items:center; }
+    .chart-shell canvas { max-width:270px; max-height:270px; }
+    .portfolio-note { color:#94a3b8; font-size:12px; line-height:1.6; margin:0; }
     .sources { margin:0; padding-left:18px; color:#334155; line-height:1.7; }
     @media (max-width:1100px) { .special-grid,.correlation-stack { grid-template-columns:1fr; } }
-    @media (max-width:960px) { .grid-4,.grid-2,.chart-grid { grid-template-columns:1fr; } }
+    @media (max-width:960px) { .grid-4,.grid-2,.chart-grid,.formula-grid,.portfolio-grid,.control-grid { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -83,8 +107,48 @@
       <div class="grid-2" id="dailyGrid"></div>
     </section>
 
+    <section class="panel portfolio-lab">
+      <h2>월별 추천 동적 포트폴리오 비중 테스트</h2>
+      <p class="sub">아래 계산기는 수식 검증용 시뮬레이터입니다. 7개 매크로 변수 값을 조절하면 Nasdaq, Bitcoin, Gold, Cash 비중이 실시간으로 다시 계산됩니다.</p>
+      <div class="formula-grid">
+        <div class="formula-card">$$\text{S}_{nasdaq} = (A_{rate} - 1) \times CR_{stock}$$</div>
+        <div class="formula-card">$$\text{W}_{btc} = CR_{btc\_nas} - CR_{btc\_gold}$$</div>
+        <div class="formula-card">$$\text{Nasdaq (\%)} = \max(55, \, \min(75, \, 65 + 25 \times \text{S}_{nasdaq}))$$</div>
+        <div class="formula-card">$$\text{Bitcoin (\%)} = \frac{10}{1 + e^{-2 \times \text{W}_{btc} \times (A_{greed} - 1)}}$$</div>
+        <div class="formula-card">$$\text{Gold (\%)} = [100 - (\text{Nasdaq} + \text{Bitcoin})] \times \max(0, \, \min(1, \, 0.5 - 0.5 \times CR_{gold\_rate}))$$</div>
+      </div>
+
+      <div class="portfolio-grid">
+        <div>
+          <h3>입력 변수</h3>
+          <div class="control-grid" id="portfolioControls"></div>
+        </div>
+        <div class="portfolio-output">
+          <div>
+            <h3>계산 결과</h3>
+            <p class="portfolio-note">비중 합계는 100%가 되도록 방어 자산 잔여분을 Gold와 Cash로 나눕니다.</p>
+          </div>
+          <div class="score-strip">
+            <div class="score-box"><span>S_nasdaq</span><strong id="scoreNasdaq">0.00</strong></div>
+            <div class="score-box"><span>W_btc</span><strong id="scoreBtc">0.00</strong></div>
+            <div class="score-box"><span>Gold multiplier</span><strong id="scoreGoldMultiplier">0.00</strong></div>
+          </div>
+          <div class="chart-shell"><canvas id="portfolioChart"></canvas></div>
+          <div class="allocation-list" id="allocationList"></div>
+        </div>
+      </div>
+    </section>
+
   </div>
 
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   <script>
     const weeklySnapshot = {"S\u0026P 500":{"category":"US Equity","unit":"pts","source":"raw_reports PDF","dates":["2026-05-18","2026-05-19"],"values":[7403.05,7353.61],"first":7403.05,"last":7353.61,"changePct":-0.67},"Nasdaq 100":{"category":"US Equity","unit":"pts","source":"raw_reports PDF","dates":["2026-05-18","2026-05-19"],"values":[28994.37,28818.84],"first":28994.37,"last":28818.84,"changePct":-0.61},"Dow":{"category":"US Equity","unit":"pts","source":"raw_reports PDF","dates":["2026-05-18","2026-05-19"],"values":[49686.12,49363.88],"first":49686.12,"last":49363.88,"changePct":-0.65},"Russell 2000":{"category":"US Equity","unit":"pts","source":"raw_reports PDF","dates":["2026-05-18","2026-05-19"],"values":[2775.1,2747.07],"first":2775.1,"last":2747.07,"changePct":-1.01},"US 10Y Treasury":{"category":"Rates","unit":"%","source":"raw_reports PDF","dates":["2026-05-18","2026-05-19"],"values":[4.585,4.667],"first":4.585,"last":4.667,"changePct":1.79},"WTI Crude":{"category":"Commodities","unit":"$","source":"raw_reports PDF","dates":["2026-05-18","2026-05-19"],"values":[102.49,104.03],"first":102.49,"last":104.03,"changePct":1.5},"Dollar Index":{"category":"FX","unit":"pts","source":"raw_reports PDF","dates":["2026-05-18","2026-05-19"],"values":[99,99.305],"first":99,"last":99.305,"changePct":0.31},"Gold":{"category":"Commodities","unit":"$","source":"raw_reports PDF","dates":["2026-05-18","2026-05-19"],"values":[4570.8,4485.4],"first":4570.8,"last":4485.4,"changePct":-1.87},"Fear \u0026 Greed":{"category":"Sentiment","unit":"Index","source":"raw_reports PDF page 4 OCR","dates":["2026-05-18","2026-05-19"],"values":[62,59],"first":62,"last":59,"changePct":-4.84}};
     const series = {"S\u0026P 500":{"category":"US Equity","unit":"pts","source":"raw_reports PDF","dates":["2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-03","2026-04-06","2026-04-07","2026-04-08","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19"],"values":[6740.02,6795.99,6781.48,6775.8,6672.62,6632.19,6699.38,6716.09,6624.7,6606.49,6506.48,6581,6556.37,6591.9,6477.16,6368.85,6343.72,6528.52,6575.32,6582.69,6611.83,6616.85,6782.81,6816.89,6886.24,6967.38,7022.95,7041.28,7126.06,7109.14,7064.01,7137.9,7108.4,7165.08,7173.91,7138.8,7135.95,7209.01,7230.12,7200.75,7259.22,7365.12,7337.11,7398.93,7412.84,7400.96,7444.25,7501.24,7408.5,7403.05,7353.61],"first":6740.02,"last":7353.61,"changePct":9.1},"Nasdaq 100":{"category":"US Equity","unit":"pts","source":"raw_reports PDF","dates":["2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-03","2026-04-06","2026-04-07","2026-04-08","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19"],"values":[24643.02,24967.25,24956.47,24965.01,24533.58,24380.73,24655.34,24708.42,24425.09,24355.28,23898.15,24188.59,24002.45,24162.98,23586.99,23132.77,22953.38,23740.19,24019.99,24045.53,24192.17,24202.37,24903.17,25116.34,25383.72,25842,26204.58,26333,26672.43,26590.34,26479.47,26937.28,26782.63,27303.67,27305.68,27029.01,27186.98,27452.12,27710.36,27651.82,28015.06,28599.17,28563.95,29234.99,29320.66,29064.8,29366.94,29580.3,29125.2,28994.37,28818.84],"first":24643.02,"last":28818.84,"changePct":16.95},"Dow":{"category":"US Equity","unit":"pts","source":"raw_reports PDF","dates":["2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-03","2026-04-06","2026-04-07","2026-04-08","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19"],"values":[47501.55,47740.8,47706.51,47417.27,46677.85,46558.47,46946.41,46993.26,46225.15,46021.43,45577.47,46208.47,46124.06,46429.49,45960.11,45166.64,45216.14,46341.51,46565.74,46504.67,46669.88,46584.46,47909.92,47916.57,48218.25,48535.99,48463.72,48578.72,49447.43,49442.56,49149.38,49490.03,49310.32,49230.71,49167.79,49141.93,48861.81,49652.14,49499.27,48941.9,49298.25,49910.59,49596.97,49609.16,49704.47,49760.56,49693.2,50063.46,49526.17,49686.12,49363.88],"first":47501.55,"last":49363.88,"changePct":3.92},"Russell 2000":{"category":"US Equity","unit":"pts","source":"raw_reports PDF","dates":["2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-03","2026-04-06","2026-04-07","2026-04-08","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19"],"values":[2525.3,2553.67,2548.08,2542.9,2488.99,2480.05,2503.29,2519.99,2478.64,2494.71,2438.45,2494.23,2505.44,2536.38,2493.32,2449.7,2414.01,2496.37,2512.37,2530.04,2540.64,2544.95,2620.46,2603.59,2670.49,2705.67,2713.66,2719.6,2776.9,2792.96,2764.97,2785.38,2775.1,2787,2788.19,2756.05,2739.47,2799.91,2812.82,2796,2845,2886.77,2839.63,2861.21,2870.64,2842.83,2843.93,2863.09,2793.3,2775.1,2747.07],"first":2525.3,"last":2747.07,"changePct":8.78},"US 10Y Treasury":{"category":"Rates","unit":"%","source":"raw_reports PDF","dates":["2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-03","2026-04-06","2026-04-07","2026-04-08","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19"],"values":[4.138,4.102,4.156,4.228,4.261,4.283,4.222,4.2,4.265,4.251,4.386,4.348,4.368,4.332,4.412,4.428,4.35,4.319,4.321,4.309,4.337,4.301,4.295,4.317,4.293,4.248,4.281,4.313,4.248,4.258,4.299,4.307,4.323,4.306,4.34,4.348,4.43,4.372,4.372,4.432,4.426,4.352,4.386,4.36,4.412,4.463,4.467,4.483,4.597,4.585,4.667],"first":4.138,"last":4.667,"changePct":12.78},"WTI Crude":{"category":"Commodities","unit":"$","source":"raw_reports PDF","dates":["2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-03","2026-04-06","2026-04-07","2026-04-08","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19"],"values":[91.27,88.9,86.39,89.8,97.75,98.48,94.22,95.3,99.05,94.59,98.09,88.92,88.39,91.29,93.79,101.18,105.01,101.56,98.89,112.06,112.61,110.34,96.5,95.63,98.01,92.07,91.39,89.65,84,85.89,90.22,92.87,96.5,94.88,96.68,99.62,108.57,105.41,102.5,105.14,102.68,96,97.48,94.68,98.25,102.09,101,102.02,101.16,102.49,104.03],"first":91.27,"last":104.03,"changePct":13.98},"Dollar Index":{"category":"FX","unit":"pts","source":"raw_reports PDF","dates":["2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-03","2026-04-06","2026-04-07","2026-04-08","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19"],"values":[99.855,98.727,98.937,99.252,99.738,100.494,99.808,99.573,100.168,99.182,99.503,99.15,99.227,99.624,99.886,100.193,100.512,99.876,99.561,100.01,99.995,99.656,99.024,98.697,98.435,98.131,98.084,98.211,98.226,98.056,98.389,98.61,98.798,98.51,98.475,98.619,98.974,98.102,98.211,98.469,98.49,98.014,98.258,97.842,97.907,98.289,98.464,98.868,99.269,99,99.305],"first":99.855,"last":99.305,"changePct":-0.55},"Gold":{"category":"Commodities","unit":"$","source":"raw_reports PDF","dates":["2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-03","2026-04-06","2026-04-07","2026-04-08","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19"],"values":[5181.3,5135.4,5198.7,5184.2,5081.7,5023.1,5011.3,5011.3,4823.9,4651.9,4492,4414.4,4474.9,4503.3,4376.9,4521.3,4540.4,4699.6,4786,4702.5,4676.1,4733.3,4745,4790.5,4766.6,4864.5,4813.9,4810.9,4849.4,4841,4738.5,4738.5,4714,4725.4,4679.7,4679.7,4559.7,4636,4625.6,4532.4,4567.8,4706,4704.9,4723.7,4723.7,4724,4697.1,4655.4,4543.6,4570.8,4485.4],"first":5181.3,"last":4485.4,"changePct":-13.43},"Fear \u0026 Greed":{"category":"Sentiment","unit":"Index","source":"raw_reports PDF page 4 OCR","dates":["2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-03","2026-04-06","2026-04-07","2026-04-08","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19"],"values":[26,28,25,24,19,22,22,21,17,16,12,16,18,18,17,11,13,14,14,19,23,22,32,38,42,49,58,63,68,71,68,69,67,66,68,64,63,67,66,62,67,69,67,67,66,66,64,65,63,62,59],"first":26,"last":59,"changePct":126.92},"Bitcoin (USD)":{"category":"Crypto","unit":"$","source":"TradingView BITSTAMP:BTCUSD, Nasdaq close aligned","dates":["2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-03","2026-04-06","2026-04-07","2026-04-08","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19"],"values":[70243,67607,70780,69611,70423,72483,73789,73736,73958,70133,70599,68527,71256,71481,69470,66457,67420,66308,68570,66882,69765,68222,71489,71921,70756,74406,73889,74326,75319,75055,76780,78179,77428,77777,77864,76614,77616,76009,77290,78930,80830,82286,80842,80203,80941,80643,80800,79553,80690,76728,76959],"first":70243,"last":76959,"changePct":9.56},"BIT/GOLD":{"category":"Cross Asset","unit":"x","source":"TradingView BITSTAMP:BTCUSD / OANDA:XAUUSD, Nasdaq close aligned","dates":["2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-06","2026-04-07","2026-04-08","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19"],"values":[13.8348,13.2893,13.6715,13.4225,13.5887,14.2264,14.7609,14.746,14.887,14.9882,15.1974,16.0518,16.0535,15.6795,15.6335,15.0528,14.8743,14.5826,14.493,14.8756,14.6641,14.9468,15.1181,14.9838,15.6034,15.393,15.4284,15.7325,15.6495,16.0294,16.4261,16.4852,16.6264,16.536,16.6429,16.984,16.3821,16.9234,17.2994,17.7892,17.4408,17.0704,16.9928,17.3539,17.1783,17.2128,16.9367,17.6714,16.8986,16.933],"first":13.8348,"last":16.933,"changePct":22.39}};
@@ -222,6 +286,112 @@
       card.innerHTML = `<div class="news-date">${item.date}</div><h3>${item.headline}</h3><ul>${bullets}</ul>`;
       dailyGrid.appendChild(card);
     });
+
+    const portfolioVariables = [
+      { key:'A_rate', label:'A_rate', desc:'10년물 금리 이격도', min:0.5, max:1.5, step:0.01, value:1.0 },
+      { key:'A_oil', label:'A_oil', desc:'WTI 유가 이격도', min:0.5, max:1.5, step:0.01, value:1.0 },
+      { key:'A_greed', label:'A_greed', desc:'Fear & Greed Index / 50', min:0.0, max:2.0, step:0.01, value:1.0 },
+      { key:'CR_stock', label:'CR_stock', desc:'주식-금리 상관계수', min:-1.0, max:1.0, step:0.01, value:-0.4 },
+      { key:'CR_gold_rate', label:'CR_gold_rate', desc:'금-금리 상관계수', min:-1.0, max:1.0, step:0.01, value:-0.7 },
+      { key:'CR_btc_nas', label:'CR_btc_nas', desc:'코인-나스닥 상관계수', min:-1.0, max:1.0, step:0.01, value:0.5 },
+      { key:'CR_btc_gold', label:'CR_btc_gold', desc:'코인-금 상관계수', min:-1.0, max:1.0, step:0.01, value:-0.6 }
+    ];
+
+    const portfolioState = Object.fromEntries(portfolioVariables.map(item => [item.key, item.value]));
+    const portfolioControls = document.getElementById('portfolioControls');
+    const allocationList = document.getElementById('allocationList');
+    const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+    const allocationColors = {
+      Nasdaq:'#38bdf8',
+      Bitcoin:'#f7931a',
+      Gold:'#facc15',
+      Cash:'#94a3b8'
+    };
+
+    portfolioVariables.forEach(item => {
+      const control = document.createElement('div');
+      control.className = 'macro-control';
+      control.innerHTML = `
+        <label>
+          <span>${item.label}<span class="hint">${item.desc}</span></span>
+          <input type="number" data-key="${item.key}" min="${item.min}" max="${item.max}" step="${item.step}" value="${item.value}">
+        </label>
+        <input type="range" data-key="${item.key}" min="${item.min}" max="${item.max}" step="${item.step}" value="${item.value}">
+      `;
+      portfolioControls.appendChild(control);
+    });
+
+    let portfolioChart = null;
+    const calculatePortfolio = () => {
+      const S_nasdaq = (portfolioState.A_rate - 1) * portfolioState.CR_stock;
+      const W_btc = portfolioState.CR_btc_nas - portfolioState.CR_btc_gold;
+      const nasdaq = clamp(65 + 25 * S_nasdaq, 55, 75);
+      const bitcoin = 10 / (1 + Math.exp(-2 * W_btc * (portfolioState.A_greed - 1)));
+      const defensive = Math.max(0, 100 - (nasdaq + bitcoin));
+      const goldMultiplier = clamp(0.5 - 0.5 * portfolioState.CR_gold_rate, 0, 1);
+      const gold = defensive * goldMultiplier;
+      const cash = defensive - gold;
+      return {
+        scores: { S_nasdaq, W_btc, goldMultiplier },
+        allocations: { Nasdaq:nasdaq, Bitcoin:bitcoin, Gold:gold, Cash:cash }
+      };
+    };
+
+    const renderPortfolio = () => {
+      const result = calculatePortfolio();
+      document.getElementById('scoreNasdaq').textContent = result.scores.S_nasdaq.toFixed(3);
+      document.getElementById('scoreBtc').textContent = result.scores.W_btc.toFixed(3);
+      document.getElementById('scoreGoldMultiplier').textContent = result.scores.goldMultiplier.toFixed(3);
+
+      allocationList.innerHTML = Object.entries(result.allocations).map(([name, value]) => `
+        <div class="allocation-row">
+          <strong>${name}</strong>
+          <div class="allocation-bar"><div class="allocation-fill" style="width:${value.toFixed(2)}%;background:${allocationColors[name]}"></div></div>
+          <strong>${value.toFixed(2)}%</strong>
+        </div>
+      `).join('');
+
+      const labels = Object.keys(result.allocations);
+      const data = Object.values(result.allocations).map(value => Number(value.toFixed(2)));
+      const ctx = document.getElementById('portfolioChart');
+      if (window.Chart && ctx) {
+        if (!portfolioChart) {
+          portfolioChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+              labels,
+              datasets: [{ data, backgroundColor: labels.map(label => allocationColors[label]), borderColor:'#0f172a', borderWidth:3 }]
+            },
+            options: {
+              responsive:true,
+              maintainAspectRatio:false,
+              cutout:'62%',
+              plugins: {
+                legend: { position:'bottom', labels:{ color:'#e5e7eb', boxWidth:12, padding:14 } },
+                tooltip: { callbacks:{ label: context => `${context.label}: ${Number(context.raw).toFixed(2)}%` } }
+              }
+            }
+          });
+        } else {
+          portfolioChart.data.datasets[0].data = data;
+          portfolioChart.update('none');
+        }
+      }
+    };
+
+    portfolioControls.addEventListener('input', event => {
+      const input = event.target;
+      const key = input.dataset.key;
+      if (!key) { return; }
+      const spec = portfolioVariables.find(item => item.key === key);
+      const value = clamp(Number(input.value), spec.min, spec.max);
+      portfolioState[key] = value;
+      portfolioControls.querySelectorAll(`[data-key="${key}"]`).forEach(peer => {
+        if (peer !== input) peer.value = value;
+      });
+      renderPortfolio();
+    });
+    renderPortfolio();
 
   </script>
 </body>
