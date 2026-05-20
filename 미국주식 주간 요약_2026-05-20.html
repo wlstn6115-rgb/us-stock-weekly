@@ -68,8 +68,11 @@
     .score-box { border:1px solid rgba(148,163,184,0.16); border-radius:12px; background:rgba(15,23,42,0.72); padding:10px; }
     .score-box span { display:block; color:#94a3b8; font-size:11px; margin-bottom:4px; }
     .score-box strong { color:#f8fafc; font-size:16px; }
-    .chart-shell { min-height:260px; display:grid; place-items:center; }
+    .chart-shell { min-height:260px; display:grid; place-items:center; position:relative; }
     .chart-shell canvas { max-width:270px; max-height:270px; }
+    .fallback-donut { width:238px; height:238px; border-radius:50%; display:grid; place-items:center; position:absolute; inset:50% auto auto 50%; transform:translate(-50%,-50%); box-shadow:inset 0 0 0 1px rgba(148,163,184,0.16); }
+    .fallback-donut::after { content:""; width:128px; height:128px; border-radius:50%; background:#0f172a; box-shadow:0 0 0 1px rgba(148,163,184,0.12); }
+    .fallback-donut span { position:absolute; z-index:1; color:#f8fafc; font-weight:800; font-size:18px; text-align:center; line-height:1.2; }
     .portfolio-note { color:#94a3b8; font-size:12px; line-height:1.6; margin:0; }
     .sources { margin:0; padding-left:18px; color:#334155; line-height:1.7; }
     @media (max-width:1100px) { .special-grid,.correlation-stack { grid-template-columns:1fr; } }
@@ -133,7 +136,10 @@
             <div class="score-box"><span>W_btc</span><strong id="scoreBtc">0.00</strong></div>
             <div class="score-box"><span>Gold multiplier</span><strong id="scoreGoldMultiplier">0.00</strong></div>
           </div>
-          <div class="chart-shell"><canvas id="portfolioChart"></canvas></div>
+          <div class="chart-shell">
+            <div class="fallback-donut" id="portfolioFallbackChart"><span>100%<br>Allocated</span></div>
+            <canvas id="portfolioChart"></canvas>
+          </div>
           <div class="allocation-list" id="allocationList"></div>
         </div>
       </div>
@@ -354,7 +360,18 @@
       const labels = Object.keys(result.allocations);
       const data = Object.values(result.allocations).map(value => Number(value.toFixed(2)));
       const ctx = document.getElementById('portfolioChart');
+      const fallbackChart = document.getElementById('portfolioFallbackChart');
+      if (fallbackChart) {
+        let cursor = 0;
+        const stops = labels.map(label => {
+          const start = cursor;
+          cursor += result.allocations[label];
+          return `${allocationColors[label]} ${start.toFixed(2)}% ${cursor.toFixed(2)}%`;
+        }).join(', ');
+        fallbackChart.style.background = `conic-gradient(${stops})`;
+      }
       if (window.Chart && ctx) {
+        if (fallbackChart) fallbackChart.style.display = 'none';
         if (!portfolioChart) {
           portfolioChart = new Chart(ctx, {
             type: 'doughnut',
