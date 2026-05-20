@@ -47,32 +47,32 @@
     .correlation-table .column-label { width:50px; min-width:50px; max-width:50px; height:36px; padding:3px 4px; word-break:keep-all; overflow-wrap:normal; }
     .correlation-table .corr-cell { width:50px; min-width:50px; max-width:50px; height:50px; padding:0; font-weight:700; color:#1f2937; vertical-align:middle; }
     .correlation-table .label-short { display:block; white-space:normal; }
-    .portfolio-lab { background:linear-gradient(145deg,#09111f 0%,#101827 56%,#182032 100%); border-color:rgba(148,163,184,0.22); color:#e5e7eb; box-shadow:0 22px 44px rgba(2,6,23,0.22); }
-    .portfolio-lab h2,.portfolio-lab h3 { color:#f8fafc; }
-    .portfolio-lab .sub { color:#94a3b8; }
+    .portfolio-lab { background:rgba(255,250,242,0.92); border-color:var(--line); color:var(--ink); }
+    .portfolio-lab h2,.portfolio-lab h3 { color:var(--ink); }
+    .portfolio-lab .sub { color:var(--muted); }
     .formula-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:14px 0; }
-    .formula-card { border:1px solid rgba(148,163,184,0.22); border-radius:14px; background:rgba(15,23,42,0.72); padding:12px; overflow:auto; color:#dbeafe; }
-    .portfolio-grid { display:grid; grid-template-columns:1.02fr 0.98fr; gap:16px; align-items:stretch; }
+    .formula-card { border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,0.58); padding:12px; overflow:auto; color:#334155; }
+    .portfolio-grid { display:grid; grid-template-columns:0.95fr 1.05fr; gap:16px; align-items:stretch; }
     .metric-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
-    .metric-card { border:1px solid rgba(148,163,184,0.18); border-radius:14px; background:rgba(15,23,42,0.66); padding:12px; }
-    .metric-card span { display:block; color:#94a3b8; font-size:11px; line-height:1.45; margin-top:5px; }
-    .metric-card strong { display:flex; align-items:baseline; justify-content:space-between; gap:10px; color:#f8fafc; font-size:13px; }
-    .metric-card .metric-value { color:#7dd3fc; font-size:18px; font-weight:800; }
-    .portfolio-output { border:1px solid rgba(148,163,184,0.2); border-radius:18px; background:rgba(2,6,23,0.48); padding:16px; display:grid; gap:14px; }
+    .metric-card { border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,0.58); padding:12px; }
+    .metric-card span { display:block; color:var(--muted); font-size:11px; line-height:1.45; margin-top:5px; }
+    .metric-card strong { display:flex; align-items:baseline; justify-content:space-between; gap:10px; color:var(--ink); font-size:13px; }
+    .metric-card .metric-value { color:var(--accent); font-size:18px; font-weight:800; }
+    .portfolio-output { border:1px solid var(--line); border-radius:18px; background:rgba(255,255,255,0.58); padding:16px; display:grid; gap:14px; }
     .allocation-list { display:grid; gap:8px; }
-    .allocation-row { display:grid; grid-template-columns:92px 1fr 62px; gap:10px; align-items:center; color:#e5e7eb; font-size:13px; }
-    .allocation-bar { height:9px; border-radius:999px; background:rgba(148,163,184,0.18); overflow:hidden; }
+    .allocation-row { display:grid; grid-template-columns:92px 1fr 62px; gap:10px; align-items:center; color:var(--ink); font-size:13px; }
+    .allocation-bar { height:9px; border-radius:999px; background:rgba(215,203,182,0.55); overflow:hidden; }
     .allocation-fill { height:100%; border-radius:999px; transition:width .18s ease; }
     .score-strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
-    .score-box { border:1px solid rgba(148,163,184,0.16); border-radius:12px; background:rgba(15,23,42,0.72); padding:10px; }
-    .score-box span { display:block; color:#94a3b8; font-size:11px; margin-bottom:4px; }
-    .score-box strong { color:#f8fafc; font-size:16px; }
+    .score-box { border:1px solid var(--line); border-radius:12px; background:rgba(255,250,242,0.92); padding:10px; }
+    .score-box span { display:block; color:var(--muted); font-size:11px; margin-bottom:4px; }
+    .score-box strong { color:var(--ink); font-size:16px; }
     .chart-shell { min-height:260px; display:grid; place-items:center; position:relative; }
     .chart-shell canvas { max-width:270px; max-height:270px; }
     .fallback-donut { width:238px; height:238px; border-radius:50%; display:grid; place-items:center; position:absolute; inset:50% auto auto 50%; transform:translate(-50%,-50%); box-shadow:inset 0 0 0 1px rgba(148,163,184,0.16); }
-    .fallback-donut::after { content:""; width:128px; height:128px; border-radius:50%; background:#0f172a; box-shadow:0 0 0 1px rgba(148,163,184,0.12); }
-    .fallback-donut span { position:absolute; z-index:1; color:#f8fafc; font-weight:800; font-size:18px; text-align:center; line-height:1.2; }
-    .portfolio-note { color:#94a3b8; font-size:12px; line-height:1.6; margin:0; }
+    .fallback-donut::after { content:""; width:128px; height:128px; border-radius:50%; background:#fffaf2; box-shadow:0 0 0 1px var(--line); }
+    .fallback-donut span { position:absolute; z-index:1; color:var(--ink); font-weight:800; font-size:18px; text-align:center; line-height:1.2; }
+    .portfolio-note { color:var(--muted); font-size:12px; line-height:1.6; margin:0; }
     .sources { margin:0; padding-left:18px; color:#334155; line-height:1.7; }
     @media (max-width:1100px) { .special-grid,.correlation-stack { grid-template-columns:1fr; } }
     @media (max-width:960px) { .grid-4,.grid-2,.chart-grid,.formula-grid,.portfolio-grid,.metric-grid { grid-template-columns:1fr; } }
@@ -86,6 +86,44 @@
       <p class="sub">&#48120;&#44397;&#51109; &#51333;&#44032; &#44592;&#51456;&#51068;: 2026-05-19 (2026-05-20 &#47532;&#54252;&#53944; &#48152;&#50689;)</p>
       <p class="sub">&#51088;&#49328;&#48324; 1&#45380; &#45572;&#51201; &#53944;&#47116;&#46300; &#48152;&#50689; &#48276;&#50948;: 2026-03-06 ~ 2026-05-19</p>
       <p class="sub">&#51452;&#50836; &#45684;&#49828; &#48152;&#50689; &#48276;&#50948;: 2026-04-20 ~ 2026-05-20 (&#52572;&#44540; 30&#51068;)</p>
+    </section>
+
+    <section class="panel portfolio-lab">
+      <h2>최근 6개월 기반 동적 포트폴리오 추천</h2>
+      <p class="sub">원본 데이터에 누적된 최근 6개월 구간만 사용해 Nasdaq, Bitcoin, Gold, Cash 비중을 자동 계산합니다. 6개월치가 부족한 초기 구간은 실제 존재하는 데이터만 반영합니다.</p>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-output">
+          <div>
+            <h3>추천 비중</h3>
+          </div>
+          <div class="score-strip">
+            <div class="score-box"><span>S_nasdaq</span><strong id="scoreNasdaq">0.00</strong></div>
+            <div class="score-box"><span>W_btc</span><strong id="scoreBtc">0.00</strong></div>
+            <div class="score-box"><span>Gold multiplier</span><strong id="scoreGoldMultiplier">0.00</strong></div>
+          </div>
+          <div class="chart-shell">
+            <div class="fallback-donut" id="portfolioFallbackChart"><span>100%<br>Allocated</span></div>
+            <canvas id="portfolioChart"></canvas>
+          </div>
+          <div class="allocation-list" id="allocationList"></div>
+        </div>
+        <div>
+          <h3>산출 기준</h3>
+          <p class="portfolio-note" id="portfolioWindowNote"></p>
+          <div class="metric-grid" id="portfolioMetrics"></div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:16px;">수식 설명</h3>
+      <p class="portfolio-note">Nasdaq 비중은 기본 65%에서 금리와 유가 부담을 반영해 55~75% 안에서 조정합니다. Bitcoin 비중은 Bitcoin이 Nasdaq 대비 Gold와 얼마나 다르게 움직이는지와 Fear & Greed 수준을 함께 반영합니다. 남은 방어자산은 Gold와 Cash로 나누며, Gold가 금리와 반대로 움직일수록 Gold 비중을 더 높입니다.</p>
+      <div class="formula-grid">
+        <div class="formula-card">$$\text{S}_{nasdaq} = (A_{rate} - 1) \times CR_{stock} - 0.25 \times (A_{oil} - 1)$$</div>
+        <div class="formula-card">$$\text{W}_{btc} = CR_{btc\_nas} - CR_{btc\_gold}$$</div>
+        <div class="formula-card">$$\text{Nasdaq (\%)} = \max(55, \, \min(75, \, 65 + 25 \times \text{S}_{nasdaq}))$$</div>
+        <div class="formula-card">$$\text{Bitcoin (\%)} = \frac{10}{1 + e^{-2 \times \text{W}_{btc} \times (A_{greed} - 1)}}$$</div>
+        <div class="formula-card">$$\text{Gold (\%)} = [100 - (\text{Nasdaq} + \text{Bitcoin})] \times \max(0, \, \min(1, \, 0.5 - 0.5 \times CR_{gold\_rate}))$$</div>
+      </div>
     </section>
 
     <section class="panel">
@@ -107,42 +145,6 @@
     <section class="panel">
       <h2>&#51452;&#50836; &#45684;&#49828; (&#52572;&#44540; 30&#51068;)</h2>
       <div class="grid-2" id="dailyGrid"></div>
-    </section>
-
-    <section class="panel portfolio-lab">
-      <h2>최근 6개월 기반 동적 포트폴리오 추천</h2>
-      <p class="sub">원본 데이터에 누적된 최근 6개월 구간만 사용해 Nasdaq, Bitcoin, Gold, Cash 비중을 자동 계산합니다. 아직 6개월치가 부족한 초기 구간은 비어있는 날짜를 더미로 채우지 않고 실제 존재하는 데이터만 반영합니다.</p>
-      <div class="formula-grid">
-        <div class="formula-card">$$\text{S}_{nasdaq} = (A_{rate} - 1) \times CR_{stock} - 0.25 \times (A_{oil} - 1)$$</div>
-        <div class="formula-card">$$\text{W}_{btc} = CR_{btc\_nas} - CR_{btc\_gold}$$</div>
-        <div class="formula-card">$$\text{Nasdaq (\%)} = \max(55, \, \min(75, \, 65 + 25 \times \text{S}_{nasdaq}))$$</div>
-        <div class="formula-card">$$\text{Bitcoin (\%)} = \frac{10}{1 + e^{-2 \times \text{W}_{btc} \times (A_{greed} - 1)}}$$</div>
-        <div class="formula-card">$$\text{Gold (\%)} = [100 - (\text{Nasdaq} + \text{Bitcoin})] \times \max(0, \, \min(1, \, 0.5 - 0.5 \times CR_{gold\_rate}))$$</div>
-      </div>
-
-      <div class="portfolio-grid">
-        <div>
-          <h3>자동 산출 입력값</h3>
-          <p class="portfolio-note" id="portfolioWindowNote"></p>
-          <div class="metric-grid" id="portfolioMetrics"></div>
-        </div>
-        <div class="portfolio-output">
-          <div>
-            <h3>추천 비중</h3>
-            <p class="portfolio-note">유가 이격도는 기존 테스트식에서 빠져 있었기 때문에 비중이 바뀌지 않았습니다. 이제는 유가가 6개월 평균보다 높을수록 위험자산 점수를 낮추도록 반영합니다.</p>
-          </div>
-          <div class="score-strip">
-            <div class="score-box"><span>S_nasdaq</span><strong id="scoreNasdaq">0.00</strong></div>
-            <div class="score-box"><span>W_btc</span><strong id="scoreBtc">0.00</strong></div>
-            <div class="score-box"><span>Gold multiplier</span><strong id="scoreGoldMultiplier">0.00</strong></div>
-          </div>
-          <div class="chart-shell">
-            <div class="fallback-donut" id="portfolioFallbackChart"><span>100%<br>Allocated</span></div>
-            <canvas id="portfolioChart"></canvas>
-          </div>
-          <div class="allocation-list" id="allocationList"></div>
-        </div>
-      </div>
     </section>
 
   </div>
@@ -360,14 +362,14 @@
             type: 'doughnut',
             data: {
               labels,
-              datasets: [{ data, backgroundColor: labels.map(label => allocationColors[label]), borderColor:'#0f172a', borderWidth:3 }]
+              datasets: [{ data, backgroundColor: labels.map(label => allocationColors[label]), borderColor:'#fffaf2', borderWidth:3 }]
             },
             options: {
               responsive:true,
               maintainAspectRatio:false,
               cutout:'62%',
               plugins: {
-                legend: { position:'bottom', labels:{ color:'#e5e7eb', boxWidth:12, padding:14 } },
+                legend: { position:'bottom', labels:{ color:'#334155', boxWidth:12, padding:14 } },
                 tooltip: { callbacks:{ label: context => `${context.label}: ${Number(context.raw).toFixed(2)}%` } }
               }
             }
