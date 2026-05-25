@@ -36,16 +36,16 @@
     .labels { display:grid; gap:4px; margin-top:8px; color:var(--muted); font-size:12px; text-align:center; }
     .widget-meta { margin-top:8px; color:var(--muted); font-size:12px; line-height:1.5; }
     .correlation-stack { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; align-items:start; }
-    .correlation-card { border:1px solid var(--line); border-radius:16px; background:rgba(255,255,255,0.58); padding:12px; overflow:auto; }
+    .correlation-card { border:1px solid var(--line); border-radius:16px; background:rgba(255,255,255,0.58); padding:10px; overflow:hidden; }
     .correlation-card h3 { margin:0 0 4px; font-size:15px; }
     .correlation-note { color:var(--muted); font-size:11px; margin:0 0 8px; white-space:nowrap; }
-    .correlation-table { border-collapse:separate; border-spacing:3px; table-layout:fixed; width:auto; }
-    .correlation-table th,.correlation-table td { border-radius:7px; text-align:center; font-size:9px; line-height:1.08; }
+    .correlation-table { border-collapse:separate; border-spacing:2px; table-layout:fixed; width:100%; }
+    .correlation-table th,.correlation-table td { border-radius:6px; text-align:center; font-size:8px; line-height:1.05; }
     .correlation-table th { background:rgba(255,250,242,0.92); color:#334155; font-weight:700; }
     .correlation-table th:first-child { text-align:left; }
-    .correlation-table .corner-cell,.correlation-table .row-label { width:64px; min-width:64px; max-width:64px; padding:4px 5px; }
-    .correlation-table .column-label { width:40px; min-width:40px; max-width:40px; height:34px; padding:3px 4px; word-break:keep-all; overflow-wrap:normal; }
-    .correlation-table .corr-cell { width:40px; min-width:40px; max-width:40px; height:40px; padding:0; font-weight:700; color:#1f2937; vertical-align:middle; }
+    .correlation-table .corner-cell,.correlation-table .row-label { width:48px; min-width:48px; max-width:48px; padding:3px; }
+    .correlation-table .column-label { width:auto; height:31px; padding:2px; word-break:keep-all; overflow-wrap:normal; }
+    .correlation-table .corr-cell { width:auto; height:36px; padding:0; font-weight:700; color:#1f2937; vertical-align:middle; }
     .correlation-table .label-short { display:block; white-space:normal; }
     .portfolio-lab { background:rgba(255,250,242,0.92); border-color:var(--line); color:var(--ink); }
     .portfolio-lab h2,.portfolio-lab h3 { color:var(--ink); }
