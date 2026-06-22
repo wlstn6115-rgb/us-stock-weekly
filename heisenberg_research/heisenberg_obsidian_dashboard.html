@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Bottleneck Knowledge Graph</title>
+<style>
+:root{--bg:#efe4d2;--panel:#fffaf2;--panel2:#f7efe3;--line:#d7cbb6;--text:#1f2937;--muted:#6b7280;--accent:#9a5b16;--accent2:#0f766e;--warn:#b45309;--chip:#f2e8d8;--shadow:0 16px 32px rgba(31,41,55,.07)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top left,rgba(216,181,128,.24),transparent 28%),linear-gradient(180deg,#fbf7f0 0%,#efe4d2 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif}button,input{font:inherit}a{color:var(--accent2);text-decoration:none}
+.app{display:grid;grid-template-columns:330px minmax(620px,1fr) minmax(700px,.95fr);min-height:100vh;max-width:1920px;margin:0 auto;padding:14px;gap:14px}.sidebar,.main,.detail{background:rgba(255,250,242,.92);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.sidebar{padding:18px;position:sticky;top:14px;height:calc(100vh - 28px);overflow:auto}.main{min-width:0;padding:18px;position:sticky;top:14px;height:calc(100vh - 28px);display:flex;flex-direction:column;overflow:hidden}.detail{padding:18px;position:sticky;top:14px;height:calc(100vh - 28px);overflow:auto}
+h1{font-size:24px;line-height:1.2;margin:0 0 8px;font-weight:850}h2{font-size:18px;margin:22px 0 10px}h3{font-size:18px;margin:0 0 10px}.sub{color:var(--muted);font-size:13px;line-height:1.55}.search{width:100%;height:42px;border:1px solid #d7cbb6;border-radius:14px;background:#fffaf7;color:var(--text);padding:0 13px;outline:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.7);font-size:14px}.search:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(154,91,22,.12)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}.stat{background:rgba(255,255,255,.58);border:1px solid var(--line);border-radius:14px;padding:10px}.stat strong{display:block;font-size:22px}.stat span{color:var(--muted);font-size:12px}.tabs{display:flex;gap:6px;margin:14px 0 10px;flex-wrap:wrap}.tab{border:1px solid var(--line);background:var(--panel2);color:var(--text);height:34px;border-radius:999px;padding:0 12px;cursor:pointer;font-weight:700}.tab.active{background:#1f2937;color:#fffaf2;border-color:#1f2937}.cloud{display:flex;flex-wrap:wrap;gap:8px}.chip{border:1px solid var(--line);background:var(--chip);color:#334155;border-radius:999px;padding:7px 10px;cursor:pointer;font-size:13px}.chip:hover{border-color:var(--accent);color:var(--accent)}.chip b{color:var(--warn);font-weight:800}
+.dateFilter{margin:14px 0 16px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.48);padding:12px}.dateFilterTitle{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}.dateFilterTitle strong{font-size:14px}.dateFilterTitle span{font-size:11px;color:var(--muted);text-align:right}.rangeBtns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-bottom:10px}.rangeBtn{border:1px solid var(--line);background:var(--panel2);border-radius:999px;height:32px;cursor:pointer;font-size:12px;font-weight:800;color:#334155}.rangeBtn.active{background:#1f2937;color:#fffaf2;border-color:#1f2937}.rangeScroller{overflow:visible;padding:6px 0 2px}.rangeScrollerInner{width:100%;min-width:0}.rangeBounds{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin-bottom:4px}.rangePair{position:relative;height:52px;padding-top:16px}.rangePair::before{content:"";position:absolute;left:0;right:0;top:32px;height:6px;border-radius:999px;background:#eadfce}.rangeBubble{position:absolute;top:0;transform:translateX(-50%);padding:3px 8px;border-radius:999px;border:1px solid var(--line);background:rgba(255,250,242,.96);color:#334155;font-size:10px;font-weight:800;white-space:nowrap;box-shadow:0 4px 12px rgba(31,41,55,.08);pointer-events:none}.rangeBubble.start{color:#9a5b16}.rangeBubble.end{color:#0f766e}.dateRange{position:absolute;left:0;right:0;top:16px;width:100%;height:36px;background:transparent;pointer-events:none;appearance:none}.dateRange::-webkit-slider-thumb{appearance:none;width:17px;height:17px;border-radius:999px;background:#9a5b16;border:3px solid #fffaf2;box-shadow:0 2px 8px rgba(31,41,55,.25);pointer-events:auto;cursor:pointer}.dateRange::-webkit-slider-runnable-track{height:6px;background:transparent}.dateRange::-moz-range-thumb{width:17px;height:17px;border-radius:999px;background:#9a5b16;border:3px solid #fffaf2;box-shadow:0 2px 8px rgba(31,41,55,.25);pointer-events:auto;cursor:pointer}.dateRange::-moz-range-track{height:6px;background:transparent}.filterHint{margin-top:7px;color:var(--muted);font-size:11px;line-height:1.45}
+.graphTools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:6px 0 10px}.graphTools .search{flex:1;min-width:220px}.smallBtn{min-height:32px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:6px 10px;cursor:pointer;font-weight:700}.smallBtn:hover{border-color:var(--accent);color:var(--accent)}
+.graphWrap{position:relative;flex:1;min-height:0;border:1px solid var(--line);border-radius:18px;background:linear-gradient(rgba(154,91,22,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(154,91,22,.045) 1px,transparent 1px),radial-gradient(circle at 50% 42%,rgba(255,250,242,.98),rgba(242,232,216,.86) 68%);background-size:28px 28px,28px 28px,100% 100%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.45);overflow:hidden}#cy{position:absolute;inset:0}.graphLegend{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.legendPill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.55);padding:5px 9px;color:#334155;font-size:12px}.legendDot{width:10px;height:10px;border-radius:99px}
+.panel{min-height:0;overflow:auto;background:rgba(255,255,255,.42);border:1px solid var(--line);border-radius:18px;padding:14px}.list{display:grid;gap:10px}.article{border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.62);padding:13px;cursor:pointer}.article:hover{border-color:var(--accent);box-shadow:0 8px 18px rgba(31,41,55,.06)}.articleTitle{font-size:14px;font-weight:800;line-height:1.35}.meta{font-size:12px;color:var(--muted);margin-top:5px}.summary{font-size:14px;color:#334155;line-height:1.65;margin-top:8px}.pillrow{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.pill{font-size:11px;background:#f2e8d8;color:#334155;border:1px solid var(--line);border-radius:999px;padding:4px 7px}.panelTitle{font-size:20px;font-weight:850;line-height:1.28}.markdownBody{border-top:1px solid var(--line);margin-top:12px;padding-top:12px;line-height:1.78;color:#334155;font-size:14px}.markdownBody h4{font-size:16px;margin:18px 0 8px;color:#111827}.markdownBody p{margin:0 0 12px}.markdownBody .quote{border-left:3px solid var(--accent);padding-left:10px;color:#4b5563;background:rgba(255,255,255,.35)}.empty{color:var(--muted);font-size:13px;padding:16px;border:1px dashed var(--line);border-radius:14px}
+.readerModal[hidden]{display:none}.readerModal{position:fixed;inset:0;z-index:1000;background:rgba(17,24,39,.68);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;padding:28px}.readerPanel{width:min(1120px,92vw);height:min(900px,90vh);background:#fffaf2;border:1px solid var(--line);border-radius:20px;box-shadow:0 28px 90px rgba(0,0,0,.32);display:grid;grid-template-rows:auto 1fr;overflow:hidden}.readerHead{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:flex-start;justify-content:space-between}.readerHead h2{margin:0;font-size:24px;line-height:1.28}.readerBody{padding:22px 28px;overflow:auto}.readerBody .summary{font-size:16px}.readerBody .markdownBody{font-size:16px;line-height:1.9;max-width:860px;margin-left:auto;margin-right:auto}.readerBody .markdownBody h4{font-size:18px}.iconBtn{width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);font-size:22px;line-height:1;cursor:pointer;color:var(--text)}.iconBtn:hover{border-color:var(--accent);color:var(--accent)}body.modal-open{overflow:hidden}.mobileNav{display:none}.mobileTab{border:1px solid var(--line);background:rgba(255,250,242,.95);color:#334155;border-radius:999px;min-height:40px;padding:0 12px;font-weight:800;cursor:pointer}.mobileTab.active{background:#1f2937;color:#fffaf2;border-color:#1f2937}
+@media(max-width:1500px){.app{grid-template-columns:330px minmax(0,1fr)}.main{position:relative;height:760px}.detail{position:relative;grid-column:1 / -1;height:880px}}@media(max-width:900px){body{overflow:hidden}.mobileNav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;position:sticky;top:0;z-index:60;padding:10px 10px 0;background:linear-gradient(180deg,rgba(251,247,240,.98) 0%,rgba(251,247,240,.9) 78%,rgba(251,247,240,0) 100%)}.app{display:block;max-width:none;min-height:calc(100dvh - 56px);padding:10px 10px 88px}.sidebar,.main,.detail{display:none;position:relative;top:auto;height:calc(100dvh - 96px);border-radius:18px}.app>[data-pane].active{display:block}.main.active{display:flex}.sidebar{padding:14px;overflow:auto}.main,.detail{padding:14px}.detail{overflow:auto}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.graphTools{gap:6px}.graphTools .search{min-width:0}.graphWrap{height:48dvh;min-height:320px}.panel{margin-bottom:12px;max-height:none}.article{padding:12px}.panelTitle{font-size:18px}.summary,.markdownBody{font-size:15px;line-height:1.72}.readerModal{padding:8px}.readerPanel{width:100%;height:min(calc(100dvh - 16px),920px);border-radius:16px}.readerHead{padding:14px 16px}.readerHead h2{font-size:20px}.readerBody{padding:16px}.readerBody .summary,.readerBody .markdownBody{font-size:15px;line-height:1.8}}@media(max-width:640px){h1{font-size:20px}h2{font-size:16px;margin:18px 0 8px}.sub{font-size:12px}.search{height:40px;font-size:13px}.chip{font-size:12px;padding:6px 9px}.rangeBubble{font-size:9px;padding:3px 6px}.graphWrap{height:42dvh;min-height:280px}.legendPill{font-size:11px}.summary,.markdownBody{font-size:14px}.panelTitle{font-size:17px}}
+</style>
+</head>
+<body>
+<div class="mobileNav" aria-label="모바일 섹션 전환">
+  <button class="mobileTab" type="button" data-pane="detail">글 읽기</button>
+  <button class="mobileTab" type="button" data-pane="main">그래프</button>
+  <button class="mobileTab" type="button" data-pane="sidebar">필터</button>
+</div>
+<div class="app">
+  <aside class="sidebar" data-pane="sidebar">
+    <h1 id="sideTitle"></h1>
+    <div id="intro" class="sub" hidden></div>
+    <div class="stats"><div class="stat"><strong id="articleCount">0</strong><span>articles</span></div><div class="stat"><strong id="topicCount">0</strong><span>topics</span></div></div>
+    <input id="search" class="search" placeholder="원문 검색: HBM, 전력망, Claude...">
+    <div class="dateFilter">
+      <div class="dateFilterTitle"><strong>기간 필터</strong><span id="dateRangeLabel">전체 기간</span></div>
+      <div class="rangeBtns">
+        <button class="rangeBtn" type="button" data-range-days="30">최근 1개월</button>
+        <button class="rangeBtn" type="button" data-range-days="90">최근 3개월</button>
+        <button class="rangeBtn" type="button" data-range-days="180">최근 6개월</button>
+        <button class="rangeBtn active" type="button" data-range-days="365">최근 1년</button>
+      </div>
+      <div class="rangeScroller">
+        <div class="rangeScrollerInner">
+          <div class="rangeBounds"><span id="dateMinLabel"></span><span id="dateMaxLabel"></span></div>
+          <div class="rangePair">
+            <span id="dateStartBubble" class="rangeBubble start"></span>
+            <span id="dateEndBubble" class="rangeBubble end"></span>
+            <input id="dateStartRange" class="dateRange" type="range" min="0" max="0" value="0" aria-label="시작일">
+            <input id="dateEndRange" class="dateRange" type="range" min="0" max="0" value="0" aria-label="종료일">
+          </div>
+        </div>
+      </div>
+      <div class="filterHint">버튼으로 빠르게 고르거나, 아래 가로 스크롤 범위를 자유롭게 조정하세요.</div>
+    </div>
+    <div class="tabs"><button class="tab active" data-mode="topics" id="tabTopics">주제</button><button class="tab" data-mode="companies" id="tabCompanies">기업</button><button class="tab" data-mode="ideas" id="tabIdeas">아이디어</button></div>
+    <h2 id="topicHeading">자주 언급되는 주제</h2><div id="topicCloud" class="cloud"></div>
+  </aside>
+  <main class="main" data-pane="main">
+    <div class="toolbar"><div><h1 id="mainTitle">AI Bottleneck Knowledge Graph</h1><div id="mainSub" class="sub" hidden></div></div><button id="reset" class="smallBtn">Reset</button></div>
+    <div class="graphTools"><input id="graphSearch" class="search" placeholder="그래프 검색: HBM, NVIDIA, Power..."><button id="fitGraph" class="smallBtn" type="button">Fit</button></div>
+    <div class="graphWrap"><div id="cy"></div></div>
+    <div class="graphLegend">
+      <span class="legendPill"><span class="legendDot" style="background:#ff6f91"></span>AI Infrastructure</span>
+      <span class="legendPill"><span class="legendDot" style="background:#5ee0c2"></span>병목 카테고리</span>
+      <span class="legendPill"><span class="legendDot" style="background:#f6b94f"></span>하위 병목</span>
+      <span class="legendPill"><span class="legendDot" style="background:#78a6ff"></span>기업</span>
+    </div>
+  </main>
+  <aside class="detail" data-pane="detail">
+    <h3 id="resultsHeading">최근 글</h3><div id="results" class="list"></div>
+  </aside>
+</div>
+<div class="readerModal" id="readerModal" hidden>
+  <article class="readerPanel" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+    <header class="readerHead"><div><h2 id="readerTitle"></h2><div id="readerMeta" class="meta"></div></div><button class="iconBtn" id="readerClose" type="button" aria-label="닫기">×</button></header>
+    <div class="readerBody" id="readerBody"></div>
+  </article>
+</div>
+<script src="heisenberg_dashboard_data.js"></script>
+<script src="vendor/cytoscape.min.js"></script>
+<script>
+const T={side:"AI 인프라 그래프",recent:"최근 글",noResults:"결과가 없습니다.",source:"원문 페이지",searchTitle:"원문 검색: "};
+const DATA=window.HEISENBERG_DATA||{articles:[],themeCounts:{},companyCounts:{},narrativeCounts:{},aiBottlenecks:[],investmentGroups:[]};
+const byId=new Map(DATA.articles.map(a=>[a.id,a]));
+const el=id=>document.getElementById(id);
+const topEntries=obj=>Object.entries(obj||{}).sort((a,b)=>b[1]-a[1]);
+let selectedArticleId=null;
+let cy=null;
+let activeArticles=[...DATA.articles];
+let activeMode="topics";
+const mobileMq=window.matchMedia("(max-width:900px)");
+const datePoints=Array.from(new Set(DATA.articles.map(a=>a.date).filter(Boolean))).sort();
+const dateState={start:0,end:Math.max(0,datePoints.length-1)};
+let rangePreviewFrame=0;
+let lastAppliedRangeKey="";
+const rangeButtons=()=>document.querySelectorAll(".rangeBtn");
+
+function normalizeRange(start,end){
+  if(!datePoints.length)return{start:0,end:0};
+  let safeStart=Math.max(0,Math.min(Number(start)||0,datePoints.length-1));
+  let safeEnd=Math.max(0,Math.min(Number(end)||0,datePoints.length-1));
+  if(safeStart>safeEnd)[safeStart,safeEnd]=[safeEnd,safeStart];
+  return{start:safeStart,end:safeEnd};
+}
+function updateDateInputsAndLabel(){
+  if(!datePoints.length)return;
+  el("dateStartRange").value=dateState.start;
+  el("dateEndRange").value=dateState.end;
+  el("dateRangeLabel").textContent=datePoints[dateState.start]+" ~ "+datePoints[dateState.end];
+  queueRangeBubbleUpdate();
+}
+function updateRangeBubbles(){
+  if(!datePoints.length)return;
+  const startBubble=el("dateStartBubble"),endBubble=el("dateEndBubble");
+  if(!startBubble||!endBubble)return;
+  const maxIndex=Math.max(1,datePoints.length-1);
+  const startPct=dateState.start/maxIndex*100;
+  const endPct=dateState.end/maxIndex*100;
+  startBubble.textContent=datePoints[dateState.start];
+  endBubble.textContent=datePoints[dateState.end];
+  startBubble.style.left=startPct+"%";
+  endBubble.style.left=endPct+"%";
+}
+function queueRangeBubbleUpdate(){
+  if(rangePreviewFrame)cancelAnimationFrame(rangePreviewFrame);
+  rangePreviewFrame=requestAnimationFrame(()=>{
+    rangePreviewFrame=0;
+    updateRangeBubbles();
+  });
+}
+function refreshActiveArticles({syncButtons=false}={}){
+  if(!datePoints.length)return;
+  const startDate=datePoints[dateState.start],endDate=datePoints[dateState.end];
+  const rangeKey=startDate+"|"+endDate+"|"+activeMode+"|"+el("search").value;
+  if(rangeKey===lastAppliedRangeKey)return;
+  lastAppliedRangeKey=rangeKey;
+  activeArticles=DATA.articles.filter(a=>a.date>=startDate&&a.date<=endDate);
+  setLabels();
+  renderCloud(activeMode);
+  refreshGraph();
+  search(el("search").value);
+  if(syncButtons)rangeButtons().forEach(b=>b.classList.remove("active"));
+}
+
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]))}
+function haystack(a){return [a.title,a.summary,a.fullText,a.category,a.author,(a.themes||[]).join(" "),(a.companies||[]).join(" "),a.narrative||""].join(" ").toLowerCase()}
+function tokenizeTerms(terms){return terms.map(x=>x.toLowerCase())}
+function currentArticles(){return activeArticles.slice().sort((a,b)=>String(b.date).localeCompare(String(a.date)))}
+function countBy(list,getter){return list.reduce((acc,a)=>{const values=getter(a)||[];values.forEach(v=>{if(!v)return;acc[v]=(acc[v]||0)+1});return acc},{})}
+function mentionCount(terms){const tokens=tokenizeTerms(terms);return activeArticles.reduce((sum,a)=>{const h=haystack(a);return sum+(tokens.some(t=>h.includes(t))?1:0)},0)}
+function relatedArticlesForTerms(terms,limit=80){const tokens=tokenizeTerms(terms);return activeArticles.map(a=>{const h=haystack(a);const score=tokens.reduce((s,t)=>s+(h.includes(t)?1:0),0);return{a,score}}).filter(x=>x.score>0).sort((x,y)=>y.score-x.score||y.a.date.localeCompare(x.a.date)).slice(0,limit).map(x=>x.a)}
+
+const graphModel=[
+  {id:"infra",label:"AI Infrastructure",kind:"root",terms:["ai infrastructure","AI 인프라","데이터센터","인프라","AI 투자","CAPEX"]},
+  {id:"compute",label:"Compute",kind:"category",terms:["compute","컴퓨트","GPU","가속기","AI 칩","반도체","Blackwell","CUDA","멀티모달","추론"]},
+  {id:"memory",label:"Memory",kind:"category",terms:["memory","메모리","HBM","DRAM","CXL","대역폭"]},
+  {id:"network",label:"Network",kind:"category",terms:["network","네트워크","이더넷","인피니밴드","스위치","interconnect","CPO"]},
+  {id:"power",label:"Power",kind:"category",terms:["power","전력","전력망","송배전","UPS","ESS","배터리","800V"]},
+  {id:"cooling",label:"Cooling",kind:"category",terms:["cooling","냉각","액침","수냉","공랭","direct-to-chip"]},
+  {id:"construction",label:"Construction",kind:"category",terms:["construction","건설","데이터센터 건설","utility","엔지니어링","시공"]},
+  {id:"governance",label:"Data Governance",kind:"category",terms:["data governance","데이터 거버넌스","데이터 레이크","카탈로그","보안","workflow","워크플로우"]},
+  {id:"physical",label:"Physical AI",kind:"category",terms:["physical ai","피지컬 AI","로봇","휴머노이드","자율주행","edge ai","엣지 AI","멀티모달","vision language action","VLA"]},
+  {id:"hbm",label:"HBM",kind:"sub",group:"memory",terms:["HBM","고대역폭 메모리","high bandwidth memory","HBM3","HBM4"]},
+  {id:"dram",label:"DRAM",kind:"sub",group:"memory",terms:["DRAM","디램","메모리 사이클"]},
+  {id:"cxl",label:"CXL",kind:"sub",group:"memory",terms:["CXL","컴퓨트 익스프레스 링크","메모리 확장"]},
+  {id:"emerging_memory",label:"Emerging Memory",kind:"sub",group:"memory",terms:["emerging memory","차세대 메모리","MRAM","ReRAM"]},
+  {id:"optical",label:"Optical",kind:"sub",group:"network",terms:["optical","광통신","광모듈","CPO","실리콘 포토닉스"]},
+  {id:"switch",label:"Switch",kind:"sub",group:"network",terms:["switch","스위치","이더넷 스위치","라우터"]},
+  {id:"interconnect",label:"Interconnect",kind:"sub",group:"network",terms:["interconnect","인터커넥트","인피니밴드","NVLink","ethernet"]},
+  {id:"grid",label:"Grid",kind:"sub",group:"power",terms:["grid","전력망","송배전","변압기","전력 인프라"]},
+  {id:"ups",label:"UPS",kind:"sub",group:"power",terms:["UPS","무정전 전원","backup power"]},
+  {id:"dc800",label:"800V DC",kind:"sub",group:"power",terms:["800V","DC 전력","직류","전력 효율"]},
+  {id:"energy_storage",label:"Energy Storage",kind:"sub",group:"power",terms:["energy storage","ESS","배터리","전력 저장"]},
+  {id:"air_cooling",label:"Air Cooling",kind:"sub",group:"cooling",terms:["air cooling","공랭","팬","공기 냉각"]},
+  {id:"direct_chip",label:"Direct-to-Chip",kind:"sub",group:"cooling",terms:["direct-to-chip","수냉","액체 냉각","cold plate"]},
+  {id:"immersion",label:"Immersion Cooling",kind:"sub",group:"cooling",terms:["immersion cooling","액침 냉각","액침"]},
+  {id:"dc_build",label:"Data Center Build",kind:"sub",group:"construction",terms:["data center build","데이터센터 건설","시공","증설"]},
+  {id:"utility_infra",label:"Utility Infrastructure",kind:"sub",group:"construction",terms:["utility infrastructure","유틸리티","전력 인입","송전"]},
+  {id:"engineering",label:"Engineering Services",kind:"sub",group:"construction",terms:["engineering services","엔지니어링","설계","EPC"]},
+  {id:"data_lake",label:"Data Lake",kind:"sub",group:"governance",terms:["data lake","데이터 레이크","lakehouse"]},
+  {id:"data_catalog",label:"Data Catalog",kind:"sub",group:"governance",terms:["data catalog","데이터 카탈로그","metadata","메타데이터"]},
+  {id:"security",label:"Security",kind:"sub",group:"governance",terms:["security","보안","권한","거버넌스","규제"]},
+  {id:"workflow",label:"Workflow",kind:"sub",group:"governance",terms:["workflow","워크플로우","자동화","agent","에이전트"]},
+  {id:"robotics",label:"Robotics",kind:"sub",group:"physical",terms:["robotics","로봇","휴머노이드"]},
+  {id:"autonomous",label:"Autonomous Systems",kind:"sub",group:"physical",terms:["autonomous","자율주행","자율 시스템"]},
+  {id:"edge_ai",label:"Edge AI",kind:"sub",group:"physical",terms:["edge ai","엣지 AI","온디바이스","추론"]},
+  {id:"nvidia",label:"NVIDIA",kind:"company",group:"compute",terms:["NVIDIA","엔비디아"]},
+  {id:"amd",label:"AMD",kind:"company",group:"compute",terms:["AMD"]},
+  {id:"broadcom",label:"Broadcom",kind:"company",group:"compute",terms:["Broadcom","브로드컴"]},
+  {id:"skhynix",label:"SK hynix",kind:"company",group:"memory",terms:["SK hynix","SK하이닉스","하이닉스"]},
+  {id:"micron",label:"Micron",kind:"company",group:"memory",terms:["Micron","마이크론"]},
+  {id:"samsung",label:"Samsung",kind:"company",group:"memory",terms:["Samsung","삼성전자","삼성"]},
+  {id:"vertiv",label:"Vertiv",kind:"company",group:"power",terms:["Vertiv","버티브"]},
+  {id:"eaton",label:"Eaton",kind:"company",group:"power",terms:["Eaton","이튼"]},
+  {id:"schneider",label:"Schneider",kind:"company",group:"power",terms:["Schneider","슈나이더"]},
+  {id:"snowflake",label:"Snowflake",kind:"company",group:"governance",terms:["Snowflake","스노우플레이크"]},
+  {id:"databricks",label:"Databricks",kind:"company",group:"governance",terms:["Databricks","데이터브릭스"]},
+  {id:"tesla",label:"Tesla",kind:"company",group:"physical",terms:["Tesla","테슬라"]},
+  {id:"qualcomm",label:"Qualcomm",kind:"company",group:"physical",terms:["Qualcomm","퀄컴"]},
+  {id:"google",label:"Google",kind:"company",group:"physical",terms:["Google","구글","Alphabet","알파벳"]}
+];
+
+const relations=[
+  ["infra","compute","depends_on"],
+  ["infra","memory","depends_on"],
+  ["infra","network","depends_on"],
+  ["infra","power","depends_on"],
+  ["infra","cooling","depends_on"],
+  ["infra","construction","depends_on"],
+  ["infra","governance","depends_on"],
+  ["infra","physical","depends_on"],
+  ["compute","memory","creates_bottleneck"],
+  ["memory","network","creates_bottleneck"],
+  ["network","power","creates_bottleneck"],
+  ["power","cooling","creates_bottleneck"],
+  ["cooling","construction","creates_bottleneck"],
+  ["construction","governance","supports"],
+  ["governance","physical","supports"],
+  ["physical","compute","feedback_bottleneck"],
+  ["memory","hbm","depends_on"],["memory","dram","depends_on"],["memory","cxl","depends_on"],["memory","emerging_memory","depends_on"],
+  ["network","optical","depends_on"],["network","switch","depends_on"],["network","interconnect","depends_on"],
+  ["power","grid","depends_on"],["power","ups","depends_on"],["power","dc800","depends_on"],["power","energy_storage","depends_on"],
+  ["cooling","air_cooling","depends_on"],["cooling","direct_chip","depends_on"],["cooling","immersion","depends_on"],
+  ["construction","dc_build","depends_on"],["construction","utility_infra","depends_on"],["construction","engineering","depends_on"],
+  ["governance","data_lake","depends_on"],["governance","data_catalog","depends_on"],["governance","security","depends_on"],["governance","workflow","depends_on"],
+  ["physical","robotics","depends_on"],["physical","autonomous","depends_on"],["physical","edge_ai","depends_on"],
+  ["compute","nvidia","beneficiary"],["compute","amd","beneficiary"],["compute","broadcom","beneficiary"],
+  ["memory","skhynix","beneficiary"],["memory","micron","beneficiary"],["memory","samsung","beneficiary"],
+  ["power","vertiv","beneficiary"],["power","eaton","beneficiary"],["power","schneider","beneficiary"],
+  ["cooling","vertiv","beneficiary"],["cooling","schneider","beneficiary"],
+  ["governance","snowflake","beneficiary"],["governance","databricks","beneficiary"],
+  ["physical","tesla","beneficiary"],["physical","qualcomm","beneficiary"],["physical","google","beneficiary"]
+];
+
+function setLabels(){el("sideTitle").textContent=T.side;el("articleCount").textContent=activeArticles.length;el("topicCount").textContent=Object.keys(countBy(activeArticles,a=>a.themes||[])).length}
+function renderCloud(mode=activeMode){activeMode=mode;const src=mode==="companies"?countBy(activeArticles,a=>a.companies||[]):mode==="ideas"?countBy(activeArticles,a=>a.narrative?[a.narrative]:[]):countBy(activeArticles,a=>a.themes||[]);el("topicCloud").innerHTML=topEntries(src).slice(0,32).map(([k,v])=>'<button class="chip" data-kind="'+mode+'" data-name="'+esc(k)+'">'+esc(k)+" <b>"+v+"</b></button>").join("")}
+function articleCard(a,query=""){let snip=a.summary||"";if(query&&a.fullText){const idx=a.fullText.toLowerCase().indexOf(query.toLowerCase());if(idx>=0)snip=a.fullText.slice(Math.max(0,idx-70),idx+180)}const safeQ=query?new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),"ig"):null;const body=safeQ?esc(snip).replace(safeQ,m=>"<mark>"+esc(m)+"</mark>"):esc(snip);return '<div class="article" data-article="'+a.id+'"><div class="articleTitle">'+esc(a.title)+'</div><div class="meta">'+esc(a.date)+" · "+esc(a.category)+" · "+esc(a.author||"")+'</div><div class="summary snippet">'+body+'</div><div class="pillrow">'+(a.themes||[]).slice(0,4).map(t=>'<span class="pill">'+esc(t)+"</span>").join("")+"</div></div>"}
+function showArticles(title,articles,query=""){selectedArticleId=null;el("resultsHeading").textContent=title;el("results").innerHTML=articles.length?articles.slice(0,80).map(a=>articleCard(a,query)).join(""):'<div class="empty">'+T.noResults+"</div>";focusDetailPane()}
+function markdownish(text){const lines=String(text||"").split(/\r?\n/).map(x=>x.trim());const chunks=[];let buf=[];const flush=()=>{if(buf.length){const body=buf.join(" ").replace(/\s+/g," ").trim();if(body)chunks.push("<p>"+esc(body)+"</p>");buf=[]}};for(const line of lines){if(!line){flush();continue}if(/^(Chapter\s*\d+\.|Chapter\s*\d+:|본문|연구자 의견|출처|문의하기|태그)/i.test(line)){flush();chunks.push("<h4>"+esc(line)+"</h4>")}else if(/^[\-–]\s+/.test(line)){flush();chunks.push('<p class="quote">'+esc(line)+"</p>")}else{buf.push(line)}}flush();return chunks.join("")}
+function articleReaderHtml(a,full=false){return '<div class="pillrow">'+(a.themes||[]).map(t=>'<span class="pill">'+esc(t)+"</span>").join("")+'</div><p class="summary">'+esc(a.summary||"")+'</p><div class="toolbar"><a class="smallBtn" href="'+esc(a.url)+'" target="_blank">'+T.source+'</a>'+(full?"":'<button class="smallBtn" type="button" data-open-reader="'+a.id+'">크게 보기</button>')+'</div><div class="markdownBody">'+markdownish(a.fullText||"")+"</div>"}
+function showArticle(a){if(!a)return;selectedArticleId=a.id;el("resultsHeading").textContent="선택한 글";el("results").innerHTML='<div class="panelTitle">'+esc(a.title)+'</div><div class="meta">'+esc(a.date)+" · "+esc(a.category)+" · "+esc(a.author||"")+"</div>"+articleReaderHtml(a,false)}
+function openReader(a){if(!a)return;selectedArticleId=a.id;el("readerTitle").textContent=a.title;el("readerMeta").textContent=[a.date,a.category,a.author||""].filter(Boolean).join(" · ");el("readerBody").innerHTML=articleReaderHtml(a,true);el("readerModal").hidden=false;document.body.classList.add("modal-open")}
+function closeReader(){el("readerModal").hidden=true;document.body.classList.remove("modal-open")}
+function search(q){q=q.trim();if(!q){showArticles(T.recent,currentArticles());return}const parts=q.toLowerCase().split(/\s+/).filter(Boolean);const res=activeArticles.map(a=>{const h=haystack(a);const score=parts.reduce((s,p)=>s+(h.includes(p)?1:0),0);return{a,score}}).filter(x=>x.score>0).sort((x,y)=>y.score-x.score||y.a.date.localeCompare(x.a.date)).map(x=>x.a);showArticles(T.searchTitle+q,res,parts[0])}
+function selectKind(kind,name){let list=[];if(kind==="topics"||kind==="topic")list=activeArticles.filter(a=>(a.themes||[]).includes(name));if(kind==="companies"||kind==="company")list=activeArticles.filter(a=>(a.companies||[]).includes(name));if(kind==="ideas"||kind==="idea")list=activeArticles.filter(a=>a.narrative===name);showArticles(name,list)}
+function setMobilePane(pane){
+  document.body.dataset.mobilePane=pane;
+  document.querySelectorAll(".mobileTab").forEach(btn=>btn.classList.toggle("active",btn.dataset.pane===pane));
+  document.querySelectorAll(".app > [data-pane]").forEach(section=>section.classList.toggle("active",section.dataset.pane===pane));
+  if(pane==="main"&&cy){requestAnimationFrame(()=>{cy.resize();cy.fit(null,26)})}
+}
+function syncMobileLayout(){
+  if(mobileMq.matches){setMobilePane(document.body.dataset.mobilePane||"detail");return}
+  delete document.body.dataset.mobilePane;
+  document.querySelectorAll(".mobileTab").forEach(btn=>btn.classList.remove("active"));
+  document.querySelectorAll(".app > [data-pane]").forEach(section=>section.classList.remove("active"));
+}
+function focusDetailPane(){if(mobileMq.matches)setMobilePane("detail")}
+function initMobileNav(){
+  document.querySelectorAll(".mobileTab").forEach(btn=>btn.addEventListener("click",()=>setMobilePane(btn.dataset.pane)));
+  if(typeof mobileMq.addEventListener==="function")mobileMq.addEventListener("change",syncMobileLayout);
+  else window.addEventListener("resize",syncMobileLayout,{passive:true});
+  syncMobileLayout();
+}
+
+function setActiveRange(start,end,{syncButtons=false}={}){
+  if(!datePoints.length)return;
+  const next=normalizeRange(start,end);
+  dateState.start=next.start;
+  dateState.end=next.end;
+  updateDateInputsAndLabel();
+  refreshActiveArticles({syncButtons});
+}
+function previewActiveRange(start,end,{syncButtons=false}={}){
+  if(!datePoints.length)return;
+  const next=normalizeRange(start,end);
+  dateState.start=next.start;
+  dateState.end=next.end;
+  updateDateInputsAndLabel();
+  if(syncButtons)rangeButtons().forEach(b=>b.classList.remove("active"));
+}
+function applyPresetDays(days){
+  if(!datePoints.length)return;
+  const maxDate=new Date(datePoints[datePoints.length-1]);
+  const cutoff=new Date(maxDate);
+  cutoff.setDate(cutoff.getDate()-Number(days));
+  const startIndex=Math.max(0,datePoints.findIndex(d=>new Date(d)>=cutoff));
+  setActiveRange(startIndex,datePoints.length-1);
+}
+function initDateFilter(){
+  const startRange=el("dateStartRange"),endRange=el("dateEndRange");
+  if(!datePoints.length)return;
+  startRange.max=endRange.max=datePoints.length-1;
+  el("dateMinLabel").textContent=datePoints[0];
+  el("dateMaxLabel").textContent=datePoints[datePoints.length-1];
+  const handleRangeInput=()=>previewActiveRange(Number(startRange.value),Number(endRange.value),{syncButtons:true});
+  const handleRangeCommit=()=>setActiveRange(Number(startRange.value),Number(endRange.value),{syncButtons:true});
+  startRange.addEventListener("input",handleRangeInput);
+  endRange.addEventListener("input",handleRangeInput);
+  startRange.addEventListener("change",handleRangeCommit);
+  endRange.addEventListener("change",handleRangeCommit);
+  startRange.addEventListener("mouseup",handleRangeCommit);
+  endRange.addEventListener("mouseup",handleRangeCommit);
+  startRange.addEventListener("touchend",handleRangeCommit,{passive:true});
+  endRange.addEventListener("touchend",handleRangeCommit,{passive:true});
+  rangeButtons().forEach(btn=>btn.addEventListener("click",()=>{rangeButtons().forEach(b=>b.classList.remove("active"));btn.classList.add("active");applyPresetDays(btn.dataset.rangeDays)}));
+  applyPresetDays(365);
+}
+
+function buildGraphElements(){const maxMention=Math.max(1,...graphModel.map(n=>mentionCount(n.terms)));const center={x:640,y:390};const positions={infra:center};const categories=graphModel.filter(n=>n.kind==="category");const categoryAngles={compute:-110,memory:-62,network:-18,power:25,cooling:68,construction:112,governance:158,physical:205};const toRad=d=>d*Math.PI/180;function polar(angle,r){const a=toRad(angle);return{x:center.x+Math.cos(a)*r,y:center.y+Math.sin(a)*r}}categories.forEach((n,i)=>{const angle=categoryAngles[n.id]??(-120+i*45);positions[n.id]=polar(angle,250)});categories.forEach(cat=>{const angle=categoryAngles[cat.id]??0;const subs=graphModel.filter(n=>n.group===cat.id&&n.kind==="sub");const cos=Math.cos(toRad(angle)),sin=Math.sin(toRad(angle));const tangent={x:-sin,y:cos};subs.forEach((n,i)=>{const offset=(i-(subs.length-1)/2)*82;const base=polar(angle,392);positions[n.id]={x:base.x+tangent.x*offset,y:base.y+tangent.y*offset}});const companies=graphModel.filter(n=>n.group===cat.id&&n.kind==="company");companies.forEach((n,i)=>{const offset=(i-(companies.length-1)/2)*72;const base=polar(angle,515);positions[n.id]={x:base.x+tangent.x*offset,y:base.y+tangent.y*offset}})});const nodeWeight=n=>{const mentions=mentionCount(n.terms);if(n.kind==="root")return 112;if(n.kind==="category")return 74+Math.sqrt(mentions/maxMention)*28;if(n.kind==="sub")return 46+Math.sqrt(mentions/maxMention)*18;return 30+Math.sqrt(mentions/maxMention)*10};const nodes=graphModel.map(n=>{const mentions=mentionCount(n.terms),weight=nodeWeight(n);return{data:{...n,mentions,weight,label:n.label+"\n"+mentions},position:positions[n.id]||center}});const edges=relations.map(([source,target,type],i)=>({data:{id:"e"+i,source,target,type,label:type,color:relationColor(type)}}));return[...nodes,...edges]}
+function relationColor(type){return type==="feedback_bottleneck"?"#be123c":type==="creates_bottleneck"?"#b45309":type==="beneficiary"?"#2563eb":type==="competes_with"?"#7c2d12":type==="depends_on"?"#0f766e":"#9a5b16"}
+function initGraph(){if(!window.cytoscape){el("cy").innerHTML='<div class="empty" style="margin:18px">Cytoscape.js를 불러오지 못했습니다.</div>';return}cy=cytoscape({container:el("cy"),elements:buildGraphElements(),layout:{name:"preset",padding:28},minZoom:.32,maxZoom:2.6,wheelSensitivity:.18,style:[{selector:"node",style:{"label":"data(label)","text-wrap":"wrap","text-max-width":"132px","font-size":"14px","font-weight":850,"text-valign":"center","text-halign":"center","color":"#172033","background-color":"#5ee0c2","border-color":"#fffaf2","border-width":3,"width":"data(weight)","height":"data(weight)","shadow-blur":16,"shadow-color":"rgba(31,41,55,.20)","shadow-opacity":.78,"shadow-offset-y":5}},{selector:'node[kind="root"]',style:{"background-color":"#ff6f91","font-size":"16px","text-max-width":"150px","border-width":4}},{selector:'node[kind="category"]',style:{"background-color":"#5ee0c2","font-size":"15px","text-max-width":"138px"}},{selector:'node[kind="sub"]',style:{"background-color":"#f6b94f","font-size":"12px","text-max-width":"110px"}},{selector:'node[kind="company"]',style:{"background-color":"#78a6ff","shape":"round-rectangle","font-size":"10px","text-max-width":"84px","border-width":2}},{selector:"edge",style:{"curve-style":"bezier","target-arrow-shape":"triangle","width":1.7,"line-color":"data(color)","target-arrow-color":"data(color)","opacity":.58,"label":"","font-size":"10px","color":"#6b7280","text-background-color":"#fffaf2","text-background-opacity":.9,"text-background-padding":"3px"}},{selector:'edge[type="creates_bottleneck"]',style:{"width":3,"line-style":"solid","opacity":.85}},{selector:'edge[type="feedback_bottleneck"]',style:{"width":4,"curve-style":"unbundled-bezier","control-point-distances":"-145","control-point-weights":".52","line-style":"dashed","opacity":.95}},{selector:'edge[type="beneficiary"]',style:{"line-style":"dotted","target-arrow-shape":"none","opacity":.46}},{selector:".faded",style:{"opacity":.12}},{selector:".highlighted",style:{"opacity":1,"border-color":"#111827","border-width":4,"z-index":20}},{selector:"edge.highlighted",style:{"width":4,"opacity":1,"z-index":10,"label":"data(label)"}}]});cy.on("tap","node",evt=>selectGraphNode(evt.target));cy.on("mouseover","node",evt=>highlightNeighborhood(evt.target));cy.on("mouseout","node",()=>clearGraphHighlight());cy.fit(null,26)}
+function refreshGraph(){if(!cy)return;clearGraphHighlight();cy.batch(()=>{cy.elements().remove();cy.add(buildGraphElements())})}
+function clearGraphHighlight(){if(!cy)return;cy.elements().removeClass("faded highlighted")}
+function highlightNeighborhood(node){if(!cy)return;const hood=node.closedNeighborhood();cy.elements().addClass("faded");hood.removeClass("faded").addClass("highlighted")}
+function selectGraphNode(node){highlightNeighborhood(node);const terms=node.data("terms")||[node.data("label")];const label=String(node.data("label")||"").split("\n")[0];showArticles(label+" · 관련 글 "+node.data("mentions")+"개",relatedArticlesForTerms(terms));}
+function graphSearch(q){if(!cy)return;clearGraphHighlight();q=q.trim().toLowerCase();if(!q)return;const matched=cy.nodes().filter(n=>n.data("label").toLowerCase().includes(q)||(n.data("terms")||[]).join(" ").toLowerCase().includes(q));cy.elements().addClass("faded");matched.removeClass("faded").addClass("highlighted");matched.connectedEdges().removeClass("faded").addClass("highlighted");matched.connectedEdges().connectedNodes().removeClass("faded");if(matched.length)cy.animate({fit:{eles:matched.closedNeighborhood(),padding:80},duration:220})}
+
+document.addEventListener("click",e=>{const modalBtn=e.target.closest("[data-open-reader]");if(modalBtn){openReader(byId.get(Number(modalBtn.dataset.openReader)));return}if(e.target.closest("#readerClose")||e.target.id==="readerModal"){closeReader();return}const chip=e.target.closest(".chip");if(chip){selectKind(chip.dataset.kind,chip.dataset.name);return}const art=e.target.closest("[data-article]");if(art){const id=Number(art.dataset.article),article=byId.get(id);if(selectedArticleId===id)openReader(article);else showArticle(article);return}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!el("readerModal").hidden)closeReader()});
+el("search").addEventListener("input",e=>search(e.target.value));
+el("graphSearch").addEventListener("input",e=>graphSearch(e.target.value));
+el("fitGraph").addEventListener("click",()=>cy&&cy.fit(null,40));
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderCloud(b.dataset.mode)});
+el("reset").onclick=()=>{selectedArticleId=null;closeReader();el("search").value="";el("graphSearch").value="";rangeButtons().forEach(b=>b.classList.remove("active"));const yearBtn=document.querySelector('.rangeBtn[data-range-days="365"]');if(yearBtn)yearBtn.classList.add("active");lastAppliedRangeKey="";applyPresetDays(365);clearGraphHighlight();cy&&cy.fit(null,40)};
+
+setLabels();
+el("intro").textContent="";
+initGraph();
+initDateFilter();
+initMobileNav();
+</script>
+</body>
+</html>
