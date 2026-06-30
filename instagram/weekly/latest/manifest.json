@@ -1,0 +1,33 @@
+{
+    "type":  "weekly",
+    "date":  "2026-06-26",
+    "generatedAt":  "2026-06-30T23:42:43.1633609+09:00",
+    "caption":  "미국주식 주간 브리핑 2026-06-26",
+    "items":  [
+                  {
+                      "file":  "00_thumbnail.png",
+                      "path":  "instagram/weekly/2026-06-26/00_thumbnail.png",
+                      "latestPath":  "instagram/weekly/latest/00_thumbnail.png"
+                  },
+                  {
+                      "file":  "01_weekly_indices.png",
+                      "path":  "instagram/weekly/2026-06-26/01_weekly_indices.png",
+                      "latestPath":  "instagram/weekly/latest/01_weekly_indices.png"
+                  },
+                  {
+                      "file":  "02_sector_weekly_compare.png",
+                      "path":  "instagram/weekly/2026-06-26/02_sector_weekly_compare.png",
+                      "latestPath":  "instagram/weekly/latest/02_sector_weekly_compare.png"
+                  },
+                  {
+                      "file":  "03_macro_indicators.png",
+                      "path":  "instagram/weekly/2026-06-26/03_macro_indicators.png",
+                      "latestPath":  "instagram/weekly/latest/03_macro_indicators.png"
+                  },
+                  {
+                      "file":  "04_key_news.png",
+                      "path":  "instagram/weekly/2026-06-26/04_key_news.png",
+                      "latestPath":  "instagram/weekly/latest/04_key_news.png"
+                  }
+              ]
+}
