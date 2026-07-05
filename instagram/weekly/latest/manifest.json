@@ -1,7 +1,7 @@
 {
     "type":  "weekly",
     "date":  "2026-07-02",
-    "generatedAt":  "2026-07-04T16:32:04.3318641+09:00",
+    "generatedAt":  "2026-07-04T16:49:37.1604404+09:00",
     "caption":  "미국주식 주간 브리핑 2026-07-02",
     "items":  [
                   {
@@ -28,6 +28,11 @@
                       "file":  "04_key_news.png",
                       "path":  "instagram/weekly/2026-07-02/04_key_news.png",
                       "latestPath":  "instagram/weekly/latest/04_key_news.png"
+                  },
+                  {
+                      "file":  "05_key_news_part2.png",
+                      "path":  "instagram/weekly/2026-07-02/05_key_news_part2.png",
+                      "latestPath":  "instagram/weekly/latest/05_key_news_part2.png"
                   }
               ]
 }
