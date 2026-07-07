@@ -1,7 +1,7 @@
 {
     "type":  "weekly",
     "date":  "2026-07-02",
-    "generatedAt":  "2026-07-04T16:49:37.1604404+09:00",
+    "generatedAt":  "2026-07-06T22:57:21.0577216+09:00",
     "caption":  "미국주식 주간 브리핑 2026-07-02",
     "items":  [
                   {
@@ -33,6 +33,21 @@
                       "file":  "05_key_news_part2.png",
                       "path":  "instagram/weekly/2026-07-02/05_key_news_part2.png",
                       "latestPath":  "instagram/weekly/latest/05_key_news_part2.png"
+                  },
+                  {
+                      "file":  "06_weekly_calendar.png",
+                      "path":  "instagram/weekly/2026-07-02/06_weekly_calendar.png",
+                      "latestPath":  "instagram/weekly/latest/06_weekly_calendar.png"
+                  },
+                  {
+                      "file":  "07_monthly_asset_temperature.png",
+                      "path":  "instagram/weekly/2026-07-02/07_monthly_asset_temperature.png",
+                      "latestPath":  "instagram/weekly/latest/07_monthly_asset_temperature.png"
+                  },
+                  {
+                      "file":  "08_monthly_liquidity_ai_cycle.png",
+                      "path":  "instagram/weekly/2026-07-02/08_monthly_liquidity_ai_cycle.png",
+                      "latestPath":  "instagram/weekly/latest/08_monthly_liquidity_ai_cycle.png"
                   }
               ]
 }
