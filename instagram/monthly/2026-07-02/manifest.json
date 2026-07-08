@@ -1,0 +1,28 @@
+{
+    "type":  "monthly",
+    "date":  "2026-07-02",
+    "generatedAt":  "2026-07-07T22:39:21.2945280+09:00",
+    "caption":  "월간 시장 온도계 2026-07-02",
+    "files":  [
+                  {
+                      "file":  "01_monthly_asset_temperature.png",
+                      "length":  54980,
+                      "lastWriteTime":  "2026-07-07T22:39:20.9705542+09:00"
+                  },
+                  {
+                      "file":  "02_monthly_liquidity_bitgold.png",
+                      "length":  133768,
+                      "lastWriteTime":  "2026-07-07T22:39:21.1494127+09:00"
+                  },
+                  {
+                      "file":  "03_monthly_bigtech_ai_cycle.png",
+                      "length":  46927,
+                      "lastWriteTime":  "2026-07-07T22:39:21.2935309+09:00"
+                  }
+              ],
+    "metadata":  {
+                     "period":  "2026-06-29 ~ 2026-07-03",
+                     "reportPath":  ".\\미국주식 주간 요약_2026-07-05.html",
+                     "pages":  3
+                 }
+}
