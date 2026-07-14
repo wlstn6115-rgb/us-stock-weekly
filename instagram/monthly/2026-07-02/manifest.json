@@ -1,23 +1,23 @@
 {
     "type":  "monthly",
     "date":  "2026-07-02",
-    "generatedAt":  "2026-07-07T22:39:21.2945280+09:00",
+    "generatedAt":  "2026-07-13T23:10:34.1408340+09:00",
     "caption":  "월간 시장 온도계 2026-07-02",
     "files":  [
                   {
                       "file":  "01_monthly_asset_temperature.png",
-                      "length":  54980,
-                      "lastWriteTime":  "2026-07-07T22:39:20.9705542+09:00"
+                      "length":  76571,
+                      "lastWriteTime":  "2026-07-13T23:10:33.7652236+09:00"
                   },
                   {
                       "file":  "02_monthly_liquidity_bitgold.png",
-                      "length":  133768,
-                      "lastWriteTime":  "2026-07-07T22:39:21.1494127+09:00"
+                      "length":  100155,
+                      "lastWriteTime":  "2026-07-13T23:10:33.9389742+09:00"
                   },
                   {
                       "file":  "03_monthly_bigtech_ai_cycle.png",
-                      "length":  46927,
-                      "lastWriteTime":  "2026-07-07T22:39:21.2935309+09:00"
+                      "length":  70826,
+                      "lastWriteTime":  "2026-07-13T23:10:34.1398379+09:00"
                   }
               ],
     "metadata":  {

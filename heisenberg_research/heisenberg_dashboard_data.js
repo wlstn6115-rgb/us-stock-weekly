@@ -1,9 +1,40 @@
 window.HEISENBERG_DATA = {
-    "generatedAt":  "2026-07-13T13:54:29.1757815Z",
-    "cutoffDate":  "2025-07-08",
+    "generatedAt":  "2026-07-14T11:59:25.3885525Z",
+    "cutoffDate":  "2025-07-09",
     "articles":  [
                      {
                          "id":  1,
+                         "url":  "https://heisenberg.kr/tritium/",
+                         "slug":  "tritium",
+                         "lastmod":  "2026-07-14T09:00:00+00:00",
+                         "date":  "2026-07-14",
+                         "title":  "핵융합의 숨은",
+                         "category":  "그인",
+                         "author":  "",
+                         "siteTags":  [
+                                          "#핵융합"
+                                      ],
+                         "themes":  [
+                                        "전력망/에너지",
+                                        "한국 기업"
+                                    ],
+                         "companies":  [
+
+                                       ],
+                         "narrative":  "기술 전환",
+                         "horizon":  "단기",
+                         "summary":  "핵융합은 흔히 바닷물 속 수소로 무한한 에너지를 만드는 기술로 알려져 있습니다. 하지만 실제로 가장 현실적인 핵융합 연료는 그냥 수소가 아니라, 중수소와 삼중수소라는 특별한 수소입니다. 중수소는 바닷물에서 얻을 수 있지만, 삼중수소는 자연에 거의 없고 민간 공급망도 사실상 캐나다가 장악해 왔습니다. 문제는 ITER 같은 대형 핵융합 실험 장치와 민간 핵융합 기업들이 이 삼중수소를 본격적으로 태우기 시작한다는 점입니다. 그런데 한국 월성 원전에는 중수로 운전 과정에서 생긴 삼중수소가 남아 있고, 이를 분리할 수 있는 설비까지 갖춰져 있습니다. 지금까지 골칫거리였던 월성의 방사성 부산물이 핵융합 시대에는 한국이 잡을 수 있는 가장 현실적인 공급망 카드가 될 수 있습니다.",
+                         "headings":  [
+                                          "Chapter 1. 나의 생각",
+                                          "1. 훌륭한 레토릭과 절반의 진실",
+                                          "1. “핵융합은 물에 풍부한 수소를 활용해 무한한 에너지를 만들 수 있다.”",
+                                          "2. “핵융합 발전을 하려면 중수로에서 만들어지는 삼중수소가 필수적이다.”"
+                                      ],
+                         "fullText":  "그인 \n\n회원 가입 \n\n--\u003e\n\nLatest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nEnergy \n | \n \n 2026.07.14 \n\n핵융합의 숨은 ‘석유’, 월성 원전에 쌓여 있다 \n\n연구자 정보\n\nL\u0027etranger\n 프로필 보기 \n\n출신대학 :\n KAIST \n\n전공 : 원자력 및 양자공학과\n\n연구분야 : 핵융합 경계 플라즈마\n\n1분 요약\n\n핵융합은 흔히 바닷물 속 수소로 무한한 에너지를 만드는 기술로 알려져 있습니다. 하지만 실제로 가장 현실적인 핵융합 연료는 그냥 수소가 아니라, 중수소와 삼중수소라는 특별한 수소입니다. 중수소는 바닷물에서 얻을 수 있지만, 삼중수소는 자연에 거의 없고 민간 공급망도 사실상 캐나다가 장악해 왔습니다. 문제는 ITER 같은 대형 핵융합 실험 장치와 민간 핵융합 기업들이 이 삼중수소를 본격적으로 태우기 시작한다는 점입니다. 그런데 한국 월성 원전에는 중수로 운전 과정에서 생긴 삼중수소가 남아 있고, 이를 분리할 수 있는 설비까지 갖춰져 있습니다. 지금까지 골칫거리였던 월성의 방사성 부산물이 핵융합 시대에는 한국이 잡을 수 있는 가장 현실적인 공급망 카드가 될 수 있습니다.\n\n본문\n\nChapter 1. 나의 생각\n\n흔한 원소로 만드는 에너지\n\n “바닷물에 널려 있는 수소로 엄청난 에너지를 만들 수 있다” \n\n어린 시절, 핵융합 발전이라는 주제를 제 머릿속에 박아넣은 캐치프레이즈가 있습니다. 물에서 수소를 뽑아내고, 그 수소로 인류가 지금까지 알아낸 가장 강력한 에너지원 중 하나인 핵융합을 일으킨다는 이야기입니다. \n\n핵융합은 바닷물 속 수소로 …\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n말 뿐인 \u0027정치적 구호\u0027를 넘어 정말로 성과를 낼 수 있을까?\n\n핵융합과 삼중수소 산업: 레토릭을 넘어 상용화의 목전으로\n\n1. 훌륭한 레토릭과 절반의 진실\n\n1. “핵융합은 물에 풍부한 수소를 활용해 무한한 에너지를 만들 수 있다.”\n\n2. “핵융합 발전을 하려면 중수로에서 만들어지는 삼중수소가 필수적이다.”\n\n둘 다 훌륭한 레토릭입니다. 학자로서 대중에게 거짓말을 하지 않으면서도, 자신이 헌신하고 연구하는 분야의 본질…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#핵융합 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nSemiconductor \n\n삼성·하이닉스 위협한다는 ‘메모리 없는 AI’의 진실 \n\nSemiconductor \n 김민우 \n\n4 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n5 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
+                         "textLength":  2355
+                     },
+                     {
+                         "id":  2,
                          "url":  "https://heisenberg.kr/mamba/",
                          "slug":  "mamba",
                          "lastmod":  "2026-07-13T09:00:00+00:00",
@@ -33,7 +64,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2293
                      },
                      {
-                         "id":  2,
+                         "id":  3,
                          "url":  "https://heisenberg.kr/k-gaming/",
                          "slug":  "k-gaming",
                          "lastmod":  "2026-07-10T09:00:00+00:00",
@@ -63,7 +94,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2414
                      },
                      {
-                         "id":  3,
+                         "id":  4,
                          "url":  "https://heisenberg.kr/hyndai-byd/",
                          "slug":  "hyndai-byd",
                          "lastmod":  "2026-07-09T09:00:00+00:00",
@@ -94,7 +125,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2387
                      },
                      {
-                         "id":  4,
+                         "id":  5,
                          "url":  "https://heisenberg.kr/tesla-dry/",
                          "slug":  "tesla-dry",
                          "lastmod":  "2026-07-06T09:00:00+00:00",
@@ -123,7 +154,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2279
                      },
                      {
-                         "id":  5,
+                         "id":  6,
                          "url":  "https://heisenberg.kr/iclr-2026/",
                          "slug":  "iclr-2026",
                          "lastmod":  "2026-07-03T09:00:00+00:00",
@@ -150,7 +181,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2360
                      },
                      {
-                         "id":  6,
+                         "id":  7,
                          "url":  "https://heisenberg.kr/samsung-dx-ds/",
                          "slug":  "samsung-dx-ds",
                          "lastmod":  "2026-07-01T09:33:03+00:00",
@@ -180,7 +211,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2122
                      },
                      {
-                         "id":  7,
+                         "id":  8,
                          "url":  "https://heisenberg.kr/2d-3d/",
                          "slug":  "2d-3d",
                          "lastmod":  "2026-06-26T09:00:00+00:00",
@@ -207,7 +238,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2399
                      },
                      {
-                         "id":  8,
+                         "id":  9,
                          "url":  "https://heisenberg.kr/illumina/",
                          "slug":  "illumina",
                          "lastmod":  "2026-06-26T08:58:14+00:00",
@@ -240,7 +271,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2429
                      },
                      {
-                         "id":  9,
+                         "id":  10,
                          "url":  "https://heisenberg.kr/vibe-coding-edutech/",
                          "slug":  "vibe-coding-edutech",
                          "lastmod":  "2026-06-24T09:00:00+00:00",
@@ -267,7 +298,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2408
                      },
                      {
-                         "id":  10,
+                         "id":  11,
                          "url":  "https://heisenberg.kr/youtube-vs-insta/",
                          "slug":  "youtube-vs-insta",
                          "lastmod":  "2026-06-23T09:00:00+00:00",
@@ -295,7 +326,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2343
                      },
                      {
-                         "id":  11,
+                         "id":  12,
                          "url":  "https://heisenberg.kr/claude-mythos/",
                          "slug":  "claude-mythos",
                          "lastmod":  "2026-06-22T09:00:00+00:00",
@@ -325,7 +356,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2428
                      },
                      {
-                         "id":  12,
+                         "id":  13,
                          "url":  "https://heisenberg.kr/lg-innotek/",
                          "slug":  "lg-innotek",
                          "lastmod":  "2026-06-19T09:06:45+00:00",
@@ -355,7 +386,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  8614
                      },
                      {
-                         "id":  13,
+                         "id":  14,
                          "url":  "https://heisenberg.kr/amazon-semiconductor/",
                          "slug":  "amazon-semiconductor",
                          "lastmod":  "2026-06-18T09:00:00+00:00",
@@ -387,7 +418,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  11965
                      },
                      {
-                         "id":  14,
+                         "id":  15,
                          "url":  "https://heisenberg.kr/google-gemini-3-5/",
                          "slug":  "google-gemini-3-5",
                          "lastmod":  "2026-06-17T09:00:00+00:00",
@@ -421,7 +452,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  11079
                      },
                      {
-                         "id":  15,
+                         "id":  16,
                          "url":  "https://heisenberg.kr/wegovy-cancer/",
                          "slug":  "wegovy-cancer",
                          "lastmod":  "2026-06-16T09:00:00+00:00",
@@ -449,7 +480,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  13001
                      },
                      {
-                         "id":  16,
+                         "id":  17,
                          "url":  "https://heisenberg.kr/korea-society-structure/",
                          "slug":  "korea-society-structure",
                          "lastmod":  "2026-06-15T09:00:00+00:00",
@@ -480,7 +511,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  11639
                      },
                      {
-                         "id":  17,
+                         "id":  18,
                          "url":  "https://heisenberg.kr/korea-bio/",
                          "slug":  "korea-bio",
                          "lastmod":  "2026-06-12T09:00:00+00:00",
@@ -512,7 +543,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  17825
                      },
                      {
-                         "id":  18,
+                         "id":  19,
                          "url":  "https://heisenberg.kr/sic/",
                          "slug":  "sic",
                          "lastmod":  "2026-06-11T09:00:00+00:00",
@@ -544,7 +575,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  25385
                      },
                      {
-                         "id":  19,
+                         "id":  20,
                          "url":  "https://heisenberg.kr/anti-cancer/",
                          "slug":  "anti-cancer",
                          "lastmod":  "2026-06-10T09:00:00+00:00",
@@ -573,7 +604,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  23187
                      },
                      {
-                         "id":  20,
+                         "id":  21,
                          "url":  "https://heisenberg.kr/claude-code_saas/",
                          "slug":  "claude-code_saas",
                          "lastmod":  "2026-06-09T09:00:00+00:00",
@@ -607,7 +638,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  21,
+                         "id":  22,
                          "url":  "https://heisenberg.kr/robot-skin/",
                          "slug":  "robot-skin",
                          "lastmod":  "2026-06-08T06:41:00+00:00",
@@ -639,7 +670,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  22,
+                         "id":  23,
                          "url":  "https://heisenberg.kr/2026may/",
                          "slug":  "2026may",
                          "lastmod":  "2026-06-05T09:00:00+00:00",
@@ -668,7 +699,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  23,
+                         "id":  24,
                          "url":  "https://heisenberg.kr/cpo-samsung/",
                          "slug":  "cpo-samsung",
                          "lastmod":  "2026-06-04T09:00:00+00:00",
@@ -703,7 +734,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  24,
+                         "id":  25,
                          "url":  "https://heisenberg.kr/intel_nvidia/",
                          "slug":  "intel_nvidia",
                          "lastmod":  "2026-06-03T09:00:00+00:00",
@@ -742,7 +773,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  25,
+                         "id":  26,
                          "url":  "https://heisenberg.kr/metasurface-lens/",
                          "slug":  "metasurface-lens",
                          "lastmod":  "2026-06-02T09:00:00+00:00",
@@ -774,7 +805,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  26,
+                         "id":  27,
                          "url":  "https://heisenberg.kr/hantavirus/",
                          "slug":  "hantavirus",
                          "lastmod":  "2026-06-01T09:00:00+00:00",
@@ -804,7 +835,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  27,
+                         "id":  28,
                          "url":  "https://heisenberg.kr/lg_exaone/",
                          "slug":  "lg_exaone",
                          "lastmod":  "2026-05-29T09:00:00+00:00",
@@ -836,7 +867,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  28,
+                         "id":  29,
                          "url":  "https://heisenberg.kr/ai-short-selling/",
                          "slug":  "ai-short-selling",
                          "lastmod":  "2026-05-28T09:00:00+00:00",
@@ -868,7 +899,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  29,
+                         "id":  30,
                          "url":  "https://heisenberg.kr/quanta-service/",
                          "slug":  "quanta-service",
                          "lastmod":  "2026-05-27T09:00:00+00:00",
@@ -898,7 +929,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  30,
+                         "id":  31,
                          "url":  "https://heisenberg.kr/snowflake/",
                          "slug":  "snowflake",
                          "lastmod":  "2026-05-26T10:09:36+00:00",
@@ -928,7 +959,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  31,
+                         "id":  32,
                          "url":  "https://heisenberg.kr/ferrari/",
                          "slug":  "ferrari",
                          "lastmod":  "2026-05-25T09:00:00+00:00",
@@ -957,7 +988,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  32,
+                         "id":  33,
                          "url":  "https://heisenberg.kr/skhynix_adr/",
                          "slug":  "skhynix_adr",
                          "lastmod":  "2026-05-30T03:56:23+00:00",
@@ -992,7 +1023,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  33,
+                         "id":  34,
                          "url":  "https://heisenberg.kr/claude_design/",
                          "slug":  "claude_design",
                          "lastmod":  "2026-05-21T09:08:34+00:00",
@@ -1025,7 +1056,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  34,
+                         "id":  35,
                          "url":  "https://heisenberg.kr/china_bci/",
                          "slug":  "china_bci",
                          "lastmod":  "2026-05-20T09:00:00+00:00",
@@ -1058,7 +1089,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  35,
+                         "id":  36,
                          "url":  "https://heisenberg.kr/samsungsdi_solidstate/",
                          "slug":  "samsungsdi_solidstate",
                          "lastmod":  "2026-05-19T09:00:00+00:00",
@@ -1093,7 +1124,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  36,
+                         "id":  37,
                          "url":  "https://heisenberg.kr/hyperscaler-capex/",
                          "slug":  "hyperscaler-capex",
                          "lastmod":  "2026-05-24T12:01:11+00:00",
@@ -1135,7 +1166,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  37,
+                         "id":  38,
                          "url":  "https://heisenberg.kr/vertex-pharmaceuticals/",
                          "slug":  "vertex-pharmaceuticals",
                          "lastmod":  "2026-05-15T09:00:00+00:00",
@@ -1166,7 +1197,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  38,
+                         "id":  39,
                          "url":  "https://heisenberg.kr/point2technology/",
                          "slug":  "point2technology",
                          "lastmod":  "2026-05-14T09:00:00+00:00",
@@ -1204,7 +1235,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  39,
+                         "id":  40,
                          "url":  "https://heisenberg.kr/agenticai_turbo/",
                          "slug":  "agenticai_turbo",
                          "lastmod":  "2026-05-13T09:00:00+00:00",
@@ -1241,7 +1272,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  40,
+                         "id":  41,
                          "url":  "https://heisenberg.kr/arc_nvidia/",
                          "slug":  "arc_nvidia",
                          "lastmod":  "2026-05-12T09:00:00+00:00",
@@ -1277,7 +1308,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  41,
+                         "id":  42,
                          "url":  "https://heisenberg.kr/lunit_medicalai/",
                          "slug":  "lunit_medicalai",
                          "lastmod":  "2026-05-11T09:00:00+00:00",
@@ -1309,7 +1340,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  42,
+                         "id":  43,
                          "url":  "https://heisenberg.kr/tokamak-energy/",
                          "slug":  "tokamak-energy",
                          "lastmod":  "2026-05-08T09:00:00+00:00",
@@ -1342,7 +1373,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  43,
+                         "id":  44,
                          "url":  "https://heisenberg.kr/moreh_ceo/",
                          "slug":  "moreh_ceo",
                          "lastmod":  "2026-05-07T09:00:00+00:00",
@@ -1379,7 +1410,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  44,
+                         "id":  45,
                          "url":  "https://heisenberg.kr/nvidia_and_tsmc/",
                          "slug":  "nvidia_and_tsmc",
                          "lastmod":  "2026-05-06T09:00:00+00:00",
@@ -1413,7 +1444,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  45,
+                         "id":  46,
                          "url":  "https://heisenberg.kr/hypersonic_missile/",
                          "slug":  "hypersonic_missile",
                          "lastmod":  "2026-05-05T09:00:00+00:00",
@@ -1443,7 +1474,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  46,
+                         "id":  47,
                          "url":  "https://heisenberg.kr/kv_cache_memory/",
                          "slug":  "kv_cache_memory",
                          "lastmod":  "2026-05-04T09:00:00+00:00",
@@ -1477,7 +1508,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  47,
+                         "id":  48,
                          "url":  "https://heisenberg.kr/2026april/",
                          "slug":  "2026april",
                          "lastmod":  "2026-05-01T03:00:00+00:00",
@@ -1508,7 +1539,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  48,
+                         "id":  49,
                          "url":  "https://heisenberg.kr/harness_ai/",
                          "slug":  "harness_ai",
                          "lastmod":  "2026-04-30T09:00:00+00:00",
@@ -1540,7 +1571,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  49,
+                         "id":  50,
                          "url":  "https://heisenberg.kr/samsung_labor/",
                          "slug":  "samsung_labor",
                          "lastmod":  "2026-04-29T09:00:00+00:00",
@@ -1573,7 +1604,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  50,
+                         "id":  51,
                          "url":  "https://heisenberg.kr/fadu/",
                          "slug":  "fadu",
                          "lastmod":  "2026-04-28T09:00:00+00:00",
@@ -1624,7 +1655,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  51,
+                         "id":  52,
                          "url":  "https://heisenberg.kr/interbattery/",
                          "slug":  "interbattery",
                          "lastmod":  "2026-05-02T09:35:33+00:00",
@@ -1663,7 +1694,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  52,
+                         "id":  53,
                          "url":  "https://heisenberg.kr/recursion_pham/",
                          "slug":  "recursion_pham",
                          "lastmod":  "2026-05-14T10:44:18+00:00",
@@ -1697,7 +1728,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  53,
+                         "id":  54,
                          "url":  "https://heisenberg.kr/heisenberg_investment/",
                          "slug":  "heisenberg_investment",
                          "lastmod":  "2026-04-23T09:00:00+00:00",
@@ -1727,7 +1758,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  54,
+                         "id":  55,
                          "url":  "https://heisenberg.kr/electric_semiconductor/",
                          "slug":  "electric_semiconductor",
                          "lastmod":  "2026-04-22T09:00:00+00:00",
@@ -1759,7 +1790,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  55,
+                         "id":  56,
                          "url":  "https://heisenberg.kr/korea_ccpi/",
                          "slug":  "korea_ccpi",
                          "lastmod":  "2026-04-21T09:00:00+00:00",
@@ -1789,7 +1820,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  56,
+                         "id":  57,
                          "url":  "https://heisenberg.kr/coherent_cohr/",
                          "slug":  "coherent_cohr",
                          "lastmod":  "2026-04-20T09:00:00+00:00",
@@ -1821,7 +1852,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  57,
+                         "id":  58,
                          "url":  "https://heisenberg.kr/heisenberg_success_fail/",
                          "slug":  "heisenberg_success_fail",
                          "lastmod":  "2026-04-18T09:00:00+00:00",
@@ -1852,7 +1883,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  58,
+                         "id":  59,
                          "url":  "https://heisenberg.kr/ai_agent_openclaw/",
                          "slug":  "ai_agent_openclaw",
                          "lastmod":  "2026-04-17T14:39:49+00:00",
@@ -1883,7 +1914,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  59,
+                         "id":  60,
                          "url":  "https://heisenberg.kr/co-packaged-optics/",
                          "slug":  "co-packaged-optics",
                          "lastmod":  "2026-04-16T09:00:00+00:00",
@@ -1919,7 +1950,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  60,
+                         "id":  61,
                          "url":  "https://heisenberg.kr/scgpt/",
                          "slug":  "scgpt",
                          "lastmod":  "2026-04-15T09:00:00+00:00",
@@ -1949,7 +1980,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  61,
+                         "id":  62,
                          "url":  "https://heisenberg.kr/kospi_6000/",
                          "slug":  "kospi_6000",
                          "lastmod":  "2026-04-14T09:16:29+00:00",
@@ -1982,7 +2013,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  62,
+                         "id":  63,
                          "url":  "https://heisenberg.kr/skhynix_h3/",
                          "slug":  "skhynix_h3",
                          "lastmod":  "2026-04-13T09:00:00+00:00",
@@ -2016,7 +2047,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  63,
+                         "id":  64,
                          "url":  "https://heisenberg.kr/openai_anthropic/",
                          "slug":  "openai_anthropic",
                          "lastmod":  "2026-04-10T09:00:00+00:00",
@@ -2047,7 +2078,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  64,
+                         "id":  65,
                          "url":  "https://heisenberg.kr/helicity-space/",
                          "slug":  "helicity-space",
                          "lastmod":  "2026-04-09T09:00:00+00:00",
@@ -2077,7 +2108,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  65,
+                         "id":  66,
                          "url":  "https://heisenberg.kr/deepx_official/",
                          "slug":  "deepx_official",
                          "lastmod":  "2026-04-08T09:00:00+00:00",
@@ -2118,7 +2149,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  66,
+                         "id":  67,
                          "url":  "https://heisenberg.kr/economic_freedom/",
                          "slug":  "economic_freedom",
                          "lastmod":  "2026-04-07T11:25:09+00:00",
@@ -2151,7 +2182,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  67,
+                         "id":  68,
                          "url":  "https://heisenberg.kr/arc-institute/",
                          "slug":  "arc-institute",
                          "lastmod":  "2026-04-06T09:00:00+00:00",
@@ -2182,7 +2213,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  68,
+                         "id":  69,
                          "url":  "https://heisenberg.kr/ms_maia200/",
                          "slug":  "ms_maia200",
                          "lastmod":  "2026-04-03T09:00:00+00:00",
@@ -2216,7 +2247,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  69,
+                         "id":  70,
                          "url":  "https://heisenberg.kr/openclaw_agent/",
                          "slug":  "openclaw_agent",
                          "lastmod":  "2026-04-02T09:00:00+00:00",
@@ -2249,7 +2280,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  70,
+                         "id":  71,
                          "url":  "https://heisenberg.kr/cancer-vaccine/",
                          "slug":  "cancer-vaccine",
                          "lastmod":  "2026-04-28T13:12:52+00:00",
@@ -2285,7 +2316,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  71,
+                         "id":  72,
                          "url":  "https://heisenberg.kr/korea_graduate/",
                          "slug":  "korea_graduate",
                          "lastmod":  "2026-03-31T09:00:00+00:00",
@@ -2321,7 +2352,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  72,
+                         "id":  73,
                          "url":  "https://heisenberg.kr/2026march/",
                          "slug":  "2026march",
                          "lastmod":  "2026-03-31T03:00:00+00:00",
@@ -2350,7 +2381,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  73,
+                         "id":  74,
                          "url":  "https://heisenberg.kr/deepx_npu/",
                          "slug":  "deepx_npu",
                          "lastmod":  "2026-03-30T13:20:06+00:00",
@@ -2387,7 +2418,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  74,
+                         "id":  75,
                          "url":  "https://heisenberg.kr/turbo-quant/",
                          "slug":  "turbo-quant",
                          "lastmod":  "2026-03-27T09:00:00+00:00",
@@ -2421,7 +2452,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  75,
+                         "id":  76,
                          "url":  "https://heisenberg.kr/na_battery/",
                          "slug":  "na_battery",
                          "lastmod":  "2026-03-26T09:00:00+00:00",
@@ -2454,7 +2485,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  76,
+                         "id":  77,
                          "url":  "https://heisenberg.kr/meta_surface/",
                          "slug":  "meta_surface",
                          "lastmod":  "2026-03-25T09:00:00+00:00",
@@ -2486,7 +2517,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  77,
+                         "id":  78,
                          "url":  "https://heisenberg.kr/ginko_bioworks/",
                          "slug":  "ginko_bioworks",
                          "lastmod":  "2026-03-24T09:00:00+00:00",
@@ -2521,7 +2552,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  78,
+                         "id":  79,
                          "url":  "https://heisenberg.kr/china_ph-d/",
                          "slug":  "china_ph-d",
                          "lastmod":  "2026-03-23T09:00:00+00:00",
@@ -2551,7 +2582,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  79,
+                         "id":  80,
                          "url":  "https://heisenberg.kr/perovskite_display/",
                          "slug":  "perovskite_display",
                          "lastmod":  "2026-03-20T09:00:00+00:00",
@@ -2588,7 +2619,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  80,
+                         "id":  81,
                          "url":  "https://heisenberg.kr/general_fusion/",
                          "slug":  "general_fusion",
                          "lastmod":  "2026-03-19T09:00:00+00:00",
@@ -2618,7 +2649,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  81,
+                         "id":  82,
                          "url":  "https://heisenberg.kr/glass_substrate/",
                          "slug":  "glass_substrate",
                          "lastmod":  "2026-03-18T09:00:00+00:00",
@@ -2654,7 +2685,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  82,
+                         "id":  83,
                          "url":  "https://heisenberg.kr/gtc2026/",
                          "slug":  "gtc2026",
                          "lastmod":  "2026-03-16T22:00:00+00:00",
@@ -2691,7 +2722,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  83,
+                         "id":  84,
                          "url":  "https://heisenberg.kr/inertia/",
                          "slug":  "inertia",
                          "lastmod":  "2026-03-16T09:00:00+00:00",
@@ -2723,7 +2754,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  84,
+                         "id":  85,
                          "url":  "https://heisenberg.kr/classum/",
                          "slug":  "classum",
                          "lastmod":  "2026-03-13T09:00:00+00:00",
@@ -2759,7 +2790,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  85,
+                         "id":  86,
                          "url":  "https://heisenberg.kr/waymo_wfm/",
                          "slug":  "waymo_wfm",
                          "lastmod":  "2026-03-29T13:27:12+00:00",
@@ -2792,7 +2823,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  86,
+                         "id":  87,
                          "url":  "https://heisenberg.kr/ph-d/",
                          "slug":  "ph-d",
                          "lastmod":  "2026-03-24T03:45:48+00:00",
@@ -2823,7 +2854,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  87,
+                         "id":  88,
                          "url":  "https://heisenberg.kr/space_datacenter/",
                          "slug":  "space_datacenter",
                          "lastmod":  "2026-03-10T09:00:00+00:00",
@@ -2862,7 +2893,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  88,
+                         "id":  89,
                          "url":  "https://heisenberg.kr/ai_investment/",
                          "slug":  "ai_investment",
                          "lastmod":  "2026-03-09T09:00:00+00:00",
@@ -2896,7 +2927,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  89,
+                         "id":  90,
                          "url":  "https://heisenberg.kr/codex/",
                          "slug":  "codex",
                          "lastmod":  "2026-03-10T07:12:09+00:00",
@@ -2932,7 +2963,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  90,
+                         "id":  91,
                          "url":  "https://heisenberg.kr/nvidia_eli_lilly/",
                          "slug":  "nvidia_eli_lilly",
                          "lastmod":  "2026-03-05T09:00:00+00:00",
@@ -2966,7 +2997,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  91,
+                         "id":  92,
                          "url":  "https://heisenberg.kr/glass_substrate_red/",
                          "slug":  "glass_substrate_red",
                          "lastmod":  "2026-03-04T09:00:00+00:00",
@@ -3000,7 +3031,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  92,
+                         "id":  93,
                          "url":  "https://heisenberg.kr/neurips_ai/",
                          "slug":  "neurips_ai",
                          "lastmod":  "2026-03-03T10:36:47+00:00",
@@ -3034,7 +3065,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  93,
+                         "id":  94,
                          "url":  "https://heisenberg.kr/2026february/",
                          "slug":  "2026february",
                          "lastmod":  "2026-02-28T09:00:00+00:00",
@@ -3066,7 +3097,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  94,
+                         "id":  95,
                          "url":  "https://heisenberg.kr/samsungsdi/",
                          "slug":  "samsungsdi",
                          "lastmod":  "2026-03-09T04:53:05+00:00",
@@ -3102,7 +3133,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  95,
+                         "id":  96,
                          "url":  "https://heisenberg.kr/deepsonbio/",
                          "slug":  "deepsonbio",
                          "lastmod":  "2026-02-26T09:58:41+00:00",
@@ -3134,7 +3165,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  96,
+                         "id":  97,
                          "url":  "https://heisenberg.kr/hologram/",
                          "slug":  "hologram",
                          "lastmod":  "2026-02-25T15:12:56+00:00",
@@ -3166,7 +3197,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  97,
+                         "id":  98,
                          "url":  "https://heisenberg.kr/korea_zinc/",
                          "slug":  "korea_zinc",
                          "lastmod":  "2026-02-24T09:00:50+00:00",
@@ -3198,7 +3229,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  98,
+                         "id":  99,
                          "url":  "https://heisenberg.kr/grail_cancer/",
                          "slug":  "grail_cancer",
                          "lastmod":  "2026-02-24T07:00:15+00:00",
@@ -3230,7 +3261,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  99,
+                         "id":  100,
                          "url":  "https://heisenberg.kr/membership_16/",
                          "slug":  "membership_16",
                          "lastmod":  "2026-02-22T09:00:00+00:00",
@@ -3279,7 +3310,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  100,
+                         "id":  101,
                          "url":  "https://heisenberg.kr/nvidia_openclaw/",
                          "slug":  "nvidia_openclaw",
                          "lastmod":  "2026-02-21T09:00:00+00:00",
@@ -3311,7 +3342,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  101,
+                         "id":  102,
                          "url":  "https://heisenberg.kr/tsfm/",
                          "slug":  "tsfm",
                          "lastmod":  "2026-02-20T09:00:00+00:00",
@@ -3340,7 +3371,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  102,
+                         "id":  103,
                          "url":  "https://heisenberg.kr/semiconductor_collapse/",
                          "slug":  "semiconductor_collapse",
                          "lastmod":  "2026-02-19T09:00:00+00:00",
@@ -3384,7 +3415,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  103,
+                         "id":  104,
                          "url":  "https://heisenberg.kr/tesla_hyundai/",
                          "slug":  "tesla_hyundai",
                          "lastmod":  "2026-02-18T09:00:00+00:00",
@@ -3423,7 +3454,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  104,
+                         "id":  105,
                          "url":  "https://heisenberg.kr/heisenberg_stock/",
                          "slug":  "heisenberg_stock",
                          "lastmod":  "2026-02-17T09:00:00+00:00",
@@ -3451,7 +3482,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  105,
+                         "id":  106,
                          "url":  "https://heisenberg.kr/edu_ai/",
                          "slug":  "edu_ai",
                          "lastmod":  "2026-02-22T06:40:16+00:00",
@@ -3486,7 +3517,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  106,
+                         "id":  107,
                          "url":  "https://heisenberg.kr/him_hers/",
                          "slug":  "him_hers",
                          "lastmod":  "2026-02-13T11:11:49+00:00",
@@ -3516,7 +3547,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  107,
+                         "id":  108,
                          "url":  "https://heisenberg.kr/china_best/",
                          "slug":  "china_best",
                          "lastmod":  "2026-02-13T11:10:49+00:00",
@@ -3548,7 +3579,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  108,
+                         "id":  109,
                          "url":  "https://heisenberg.kr/tesla_autopilot/",
                          "slug":  "tesla_autopilot",
                          "lastmod":  "2026-02-11T09:06:47+00:00",
@@ -3575,7 +3606,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  109,
+                         "id":  110,
                          "url":  "https://heisenberg.kr/tsmc_cooling/",
                          "slug":  "tsmc_cooling",
                          "lastmod":  "2026-02-13T12:05:37+00:00",
@@ -3609,7 +3640,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  110,
+                         "id":  111,
                          "url":  "https://heisenberg.kr/spacex/",
                          "slug":  "spacex",
                          "lastmod":  "2026-02-09T09:00:00+00:00",
@@ -3646,7 +3677,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  111,
+                         "id":  112,
                          "url":  "https://heisenberg.kr/copenhagen/",
                          "slug":  "copenhagen",
                          "lastmod":  "2026-02-07T09:31:18+00:00",
@@ -3688,7 +3719,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  112,
+                         "id":  113,
                          "url":  "https://heisenberg.kr/sapient/",
                          "slug":  "sapient",
                          "lastmod":  "2026-02-23T11:37:01+00:00",
@@ -3720,7 +3751,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  113,
+                         "id":  114,
                          "url":  "https://heisenberg.kr/thea_energy/",
                          "slug":  "thea_energy",
                          "lastmod":  "2026-02-07T07:33:21+00:00",
@@ -3748,7 +3779,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  114,
+                         "id":  115,
                          "url":  "https://heisenberg.kr/unitree/",
                          "slug":  "unitree",
                          "lastmod":  "2026-02-04T09:00:00+00:00",
@@ -3781,7 +3812,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  115,
+                         "id":  116,
                          "url":  "https://heisenberg.kr/fake_neurlps/",
                          "slug":  "fake_neurlps",
                          "lastmod":  "2026-02-03T14:34:46+00:00",
@@ -3816,7 +3847,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  116,
+                         "id":  117,
                          "url":  "https://heisenberg.kr/solid_battery_seo/",
                          "slug":  "solid_battery_seo",
                          "lastmod":  "2026-02-03T14:21:51+00:00",
@@ -3848,7 +3879,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  117,
+                         "id":  118,
                          "url":  "https://heisenberg.kr/2026january/",
                          "slug":  "2026january",
                          "lastmod":  "2026-01-31T06:04:33+00:00",
@@ -3877,7 +3908,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  118,
+                         "id":  119,
                          "url":  "https://heisenberg.kr/palantir_bubble/",
                          "slug":  "palantir_bubble",
                          "lastmod":  "2026-02-02T09:00:08+00:00",
@@ -3911,7 +3942,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  119,
+                         "id":  120,
                          "url":  "https://heisenberg.kr/wirobotics/",
                          "slug":  "wirobotics",
                          "lastmod":  "2026-01-29T11:20:11+00:00",
@@ -3944,7 +3975,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  120,
+                         "id":  121,
                          "url":  "https://heisenberg.kr/telsa_patent/",
                          "slug":  "telsa_patent",
                          "lastmod":  "2026-02-03T14:22:03+00:00",
@@ -3977,7 +4008,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  121,
+                         "id":  122,
                          "url":  "https://heisenberg.kr/synopsys/",
                          "slug":  "synopsys",
                          "lastmod":  "2026-01-27T16:47:58+00:00",
@@ -4031,7 +4062,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  122,
+                         "id":  123,
                          "url":  "https://heisenberg.kr/anti_cancer_china/",
                          "slug":  "anti_cancer_china",
                          "lastmod":  "2026-01-26T09:00:00+00:00",
@@ -4063,7 +4094,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  123,
+                         "id":  124,
                          "url":  "https://heisenberg.kr/ces2026/",
                          "slug":  "ces2026",
                          "lastmod":  "2026-02-03T14:34:20+00:00",
@@ -4090,7 +4121,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  124,
+                         "id":  125,
                          "url":  "https://heisenberg.kr/high-k-nand/",
                          "slug":  "high-k-nand",
                          "lastmod":  "2026-01-24T02:48:48+00:00",
@@ -4130,7 +4161,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  125,
+                         "id":  126,
                          "url":  "https://heisenberg.kr/nokia/",
                          "slug":  "nokia",
                          "lastmod":  "2026-02-03T14:23:46+00:00",
@@ -4171,7 +4202,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  126,
+                         "id":  127,
                          "url":  "https://heisenberg.kr/medicalai/",
                          "slug":  "medicalai",
                          "lastmod":  "2026-01-29T11:37:16+00:00",
@@ -4202,7 +4233,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  127,
+                         "id":  128,
                          "url":  "https://heisenberg.kr/jepa/",
                          "slug":  "jepa",
                          "lastmod":  "2026-01-20T06:32:12+00:00",
@@ -4235,7 +4266,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  128,
+                         "id":  129,
                          "url":  "https://heisenberg.kr/artificial_sun/",
                          "slug":  "artificial_sun",
                          "lastmod":  "2026-04-01T09:48:02+00:00",
@@ -4266,7 +4297,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  129,
+                         "id":  130,
                          "url":  "https://heisenberg.kr/upstage_edutech/",
                          "slug":  "upstage_edutech",
                          "lastmod":  "2026-01-16T09:00:00+00:00",
@@ -4298,7 +4329,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  130,
+                         "id":  131,
                          "url":  "https://heisenberg.kr/gbrain/",
                          "slug":  "gbrain",
                          "lastmod":  "2026-01-16T04:31:07+00:00",
@@ -4335,7 +4366,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  131,
+                         "id":  132,
                          "url":  "https://heisenberg.kr/upstage/",
                          "slug":  "upstage",
                          "lastmod":  "2026-01-15T08:13:17+00:00",
@@ -4367,7 +4398,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  132,
+                         "id":  133,
                          "url":  "https://heisenberg.kr/buffet_google/",
                          "slug":  "buffet_google",
                          "lastmod":  "2026-01-13T09:00:00+00:00",
@@ -4402,7 +4433,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  133,
+                         "id":  134,
                          "url":  "https://heisenberg.kr/e-tube/",
                          "slug":  "e-tube",
                          "lastmod":  "2026-04-27T17:45:02+00:00",
@@ -4434,7 +4465,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  134,
+                         "id":  135,
                          "url":  "https://heisenberg.kr/opinion_5g/",
                          "slug":  "opinion_5g",
                          "lastmod":  "2026-02-03T14:33:15+00:00",
@@ -4467,7 +4498,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  135,
+                         "id":  136,
                          "url":  "https://heisenberg.kr/kimi_linear/",
                          "slug":  "kimi_linear",
                          "lastmod":  "2026-01-17T06:27:07+00:00",
@@ -4499,7 +4530,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  136,
+                         "id":  137,
                          "url":  "https://heisenberg.kr/anti_aging/",
                          "slug":  "anti_aging",
                          "lastmod":  "2026-01-08T11:00:00+00:00",
@@ -4526,7 +4557,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  137,
+                         "id":  138,
                          "url":  "https://heisenberg.kr/nvidia_alpamayo/",
                          "slug":  "nvidia_alpamayo",
                          "lastmod":  "2026-01-07T18:20:43+00:00",
@@ -4557,7 +4588,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  138,
+                         "id":  139,
                          "url":  "https://heisenberg.kr/oklo/",
                          "slug":  "oklo",
                          "lastmod":  "2026-01-06T09:00:00+00:00",
@@ -4586,7 +4617,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  139,
+                         "id":  140,
                          "url":  "https://heisenberg.kr/meta_future/",
                          "slug":  "meta_future",
                          "lastmod":  "2026-01-05T17:58:33+00:00",
@@ -4619,7 +4650,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  140,
+                         "id":  141,
                          "url":  "https://heisenberg.kr/china_euv/",
                          "slug":  "china_euv",
                          "lastmod":  "2026-02-03T14:32:57+00:00",
@@ -4656,7 +4687,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  141,
+                         "id":  142,
                          "url":  "https://heisenberg.kr/arista_6g/",
                          "slug":  "arista_6g",
                          "lastmod":  "2026-01-02T09:00:00+00:00",
@@ -4692,7 +4723,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  142,
+                         "id":  143,
                          "url":  "https://heisenberg.kr/tpu_and_gpu/",
                          "slug":  "tpu_and_gpu",
                          "lastmod":  "2026-01-01T09:00:00+00:00",
@@ -4727,7 +4758,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  143,
+                         "id":  144,
                          "url":  "https://heisenberg.kr/value_alignment/",
                          "slug":  "value_alignment",
                          "lastmod":  "2026-01-01T02:14:14+00:00",
@@ -4779,7 +4810,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  144,
+                         "id":  145,
                          "url":  "https://heisenberg.kr/hybrid_bonding/",
                          "slug":  "hybrid_bonding",
                          "lastmod":  "2025-12-30T09:00:00+00:00",
@@ -4820,7 +4851,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  145,
+                         "id":  146,
                          "url":  "https://heisenberg.kr/2025december/",
                          "slug":  "2025december",
                          "lastmod":  "2026-01-30T13:34:23+00:00",
@@ -4847,7 +4878,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  146,
+                         "id":  147,
                          "url":  "https://heisenberg.kr/quantum_ibm_google/",
                          "slug":  "quantum_ibm_google",
                          "lastmod":  "2025-12-26T10:33:44+00:00",
@@ -4877,7 +4908,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  147,
+                         "id":  148,
                          "url":  "https://heisenberg.kr/car_t/",
                          "slug":  "car_t",
                          "lastmod":  "2025-12-25T09:00:00+00:00",
@@ -4907,7 +4938,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  148,
+                         "id":  149,
                          "url":  "https://heisenberg.kr/opinion_samsung/",
                          "slug":  "opinion_samsung",
                          "lastmod":  "2026-02-03T14:32:44+00:00",
@@ -4938,7 +4969,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  149,
+                         "id":  150,
                          "url":  "https://heisenberg.kr/smartglass/",
                          "slug":  "smartglass",
                          "lastmod":  "2026-01-20T08:09:48+00:00",
@@ -4972,7 +5003,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  150,
+                         "id":  151,
                          "url":  "https://heisenberg.kr/physical_ai/",
                          "slug":  "physical_ai",
                          "lastmod":  "2025-12-23T09:00:00+00:00",
@@ -5008,7 +5039,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  151,
+                         "id":  152,
                          "url":  "https://heisenberg.kr/avatar_organoid/",
                          "slug":  "avatar_organoid",
                          "lastmod":  "2025-12-22T09:12:29+00:00",
@@ -5037,7 +5068,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  152,
+                         "id":  153,
                          "url":  "https://heisenberg.kr/membership015/",
                          "slug":  "membership015",
                          "lastmod":  "2025-12-21T12:14:01+00:00",
@@ -5076,7 +5107,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  153,
+                         "id":  154,
                          "url":  "https://heisenberg.kr/eda_cadence_synopsys/",
                          "slug":  "eda_cadence_synopsys",
                          "lastmod":  "2025-12-21T10:12:44+00:00",
@@ -5117,7 +5148,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  154,
+                         "id":  155,
                          "url":  "https://heisenberg.kr/baidu/",
                          "slug":  "baidu",
                          "lastmod":  "2026-02-03T14:21:39+00:00",
@@ -5150,7 +5181,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  155,
+                         "id":  156,
                          "url":  "https://heisenberg.kr/drone/",
                          "slug":  "drone",
                          "lastmod":  "2025-12-17T09:00:00+00:00",
@@ -5181,7 +5212,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  156,
+                         "id":  157,
                          "url":  "https://heisenberg.kr/arista-networks/",
                          "slug":  "arista-networks",
                          "lastmod":  "2025-12-19T09:39:09+00:00",
@@ -5210,7 +5241,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  157,
+                         "id":  158,
                          "url":  "https://heisenberg.kr/lg_financial/",
                          "slug":  "lg_financial",
                          "lastmod":  "2025-12-17T17:55:44+00:00",
@@ -5241,7 +5272,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  158,
+                         "id":  159,
                          "url":  "https://heisenberg.kr/ai_creature/",
                          "slug":  "ai_creature",
                          "lastmod":  "2025-12-22T15:06:10+00:00",
@@ -5269,7 +5300,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  159,
+                         "id":  160,
                          "url":  "https://heisenberg.kr/david_hilbert/",
                          "slug":  "david_hilbert",
                          "lastmod":  "2025-12-11T09:00:15+00:00",
@@ -5299,7 +5330,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  160,
+                         "id":  161,
                          "url":  "https://heisenberg.kr/meta_evolution_llm/",
                          "slug":  "meta_evolution_llm",
                          "lastmod":  "2025-12-10T09:00:00+00:00",
@@ -5329,7 +5360,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  161,
+                         "id":  162,
                          "url":  "https://heisenberg.kr/aidt/",
                          "slug":  "aidt",
                          "lastmod":  "2025-12-09T09:00:00+00:00",
@@ -5358,7 +5389,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  162,
+                         "id":  163,
                          "url":  "https://heisenberg.kr/highna/",
                          "slug":  "highna",
                          "lastmod":  "2025-12-08T09:00:00+00:00",
@@ -5392,7 +5423,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  163,
+                         "id":  164,
                          "url":  "https://heisenberg.kr/membership_014/",
                          "slug":  "membership_014",
                          "lastmod":  "2025-12-06T13:58:23+00:00",
@@ -5425,7 +5456,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  164,
+                         "id":  165,
                          "url":  "https://heisenberg.kr/fluxonium/",
                          "slug":  "fluxonium",
                          "lastmod":  "2025-12-05T09:00:00+00:00",
@@ -5457,7 +5488,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  165,
+                         "id":  166,
                          "url":  "https://heisenberg.kr/helionenergy/",
                          "slug":  "helionenergy",
                          "lastmod":  "2025-12-05T15:48:36+00:00",
@@ -5492,7 +5523,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  166,
+                         "id":  167,
                          "url":  "https://heisenberg.kr/samsung_trm/",
                          "slug":  "samsung_trm",
                          "lastmod":  "2025-12-03T12:28:15+00:00",
@@ -5523,7 +5554,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  167,
+                         "id":  168,
                          "url":  "https://heisenberg.kr/egas/",
                          "slug":  "egas",
                          "lastmod":  "2025-12-09T14:12:36+00:00",
@@ -5552,7 +5583,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  168,
+                         "id":  169,
                          "url":  "https://heisenberg.kr/bloom_energy_han/",
                          "slug":  "bloom_energy_han",
                          "lastmod":  "2025-12-01T09:00:00+00:00",
@@ -5581,7 +5612,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  169,
+                         "id":  170,
                          "url":  "https://heisenberg.kr/membership013_tpu/",
                          "slug":  "membership013_tpu",
                          "lastmod":  "2025-11-30T09:00:00+00:00",
@@ -5613,7 +5644,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  170,
+                         "id":  171,
                          "url":  "https://heisenberg.kr/grail_samsung/",
                          "slug":  "grail_samsung",
                          "lastmod":  "2025-11-28T09:00:00+00:00",
@@ -5645,7 +5676,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2404
                      },
                      {
-                         "id":  171,
+                         "id":  172,
                          "url":  "https://heisenberg.kr/blackhole/",
                          "slug":  "blackhole",
                          "lastmod":  "2025-11-29T05:00:50+00:00",
@@ -5672,7 +5703,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  172,
+                         "id":  173,
                          "url":  "https://heisenberg.kr/ooac/",
                          "slug":  "ooac",
                          "lastmod":  "2025-11-29T04:58:55+00:00",
@@ -5702,7 +5733,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  173,
+                         "id":  174,
                          "url":  "https://heisenberg.kr/worldmodel_dion/",
                          "slug":  "worldmodel_dion",
                          "lastmod":  "2025-11-25T09:00:00+00:00",
@@ -5732,7 +5763,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  174,
+                         "id":  175,
                          "url":  "https://heisenberg.kr/evolution_of_ai/",
                          "slug":  "evolution_of_ai",
                          "lastmod":  "2025-11-28T19:18:27+00:00",
@@ -5760,7 +5791,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  175,
+                         "id":  176,
                          "url":  "https://heisenberg.kr/membership_video12/",
                          "slug":  "membership_video12",
                          "lastmod":  "2025-11-23T14:57:06+00:00",
@@ -5790,7 +5821,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  176,
+                         "id":  177,
                          "url":  "https://heisenberg.kr/serendipity_ionradiotherapy/",
                          "slug":  "serendipity_ionradiotherapy",
                          "lastmod":  "2025-11-21T10:30:37+00:00",
@@ -5821,7 +5852,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2405
                      },
                      {
-                         "id":  177,
+                         "id":  178,
                          "url":  "https://heisenberg.kr/apple_and_meta_ar/",
                          "slug":  "apple_and_meta_ar",
                          "lastmod":  "2025-11-23T07:44:29+00:00",
@@ -5851,7 +5882,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2336
                      },
                      {
-                         "id":  178,
+                         "id":  179,
                          "url":  "https://heisenberg.kr/1-5celsius/",
                          "slug":  "1-5celsius",
                          "lastmod":  "2025-11-22T09:12:47+00:00",
@@ -5879,7 +5910,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2151
                      },
                      {
-                         "id":  179,
+                         "id":  180,
                          "url":  "https://heisenberg.kr/korea_electric/",
                          "slug":  "korea_electric",
                          "lastmod":  "2025-11-22T09:11:17+00:00",
@@ -5909,7 +5940,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2324
                      },
                      {
-                         "id":  180,
+                         "id":  181,
                          "url":  "https://heisenberg.kr/coupang-gangstar/",
                          "slug":  "coupang-gangstar",
                          "lastmod":  "2025-11-17T09:00:00+00:00",
@@ -5938,7 +5969,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2319
                      },
                      {
-                         "id":  181,
+                         "id":  182,
                          "url":  "https://heisenberg.kr/neuralink_bci/",
                          "slug":  "neuralink_bci",
                          "lastmod":  "2025-12-24T10:35:18+00:00",
@@ -5971,7 +6002,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  182,
+                         "id":  183,
                          "url":  "https://heisenberg.kr/synchron/",
                          "slug":  "synchron",
                          "lastmod":  "2025-11-30T09:06:05+00:00",
@@ -6004,7 +6035,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  183,
+                         "id":  184,
                          "url":  "https://heisenberg.kr/metalens_samsung/",
                          "slug":  "metalens_samsung",
                          "lastmod":  "2025-12-24T09:15:27+00:00",
@@ -6039,7 +6070,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  184,
+                         "id":  185,
                          "url":  "https://heisenberg.kr/hanmi/",
                          "slug":  "hanmi",
                          "lastmod":  "2025-11-27T16:29:07+00:00",
@@ -6071,7 +6102,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  185,
+                         "id":  186,
                          "url":  "https://heisenberg.kr/ev_casm/",
                          "slug":  "ev_casm",
                          "lastmod":  "2026-02-03T14:21:27+00:00",
@@ -6106,7 +6137,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  186,
+                         "id":  187,
                          "url":  "https://heisenberg.kr/membership_010/",
                          "slug":  "membership_010",
                          "lastmod":  "2025-11-25T10:33:05+00:00",
@@ -6142,7 +6173,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  187,
+                         "id":  188,
                          "url":  "https://heisenberg.kr/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-800%ec%a1%b0-%ec%a6%9d%eb%b0%9c%ec%9d%98-%ec%a3%bc%ec%9d%b8%ea%b3%b5-%eb%94%a5%ec%8b%9c%ed%81%ac-%eb%84%a4%ec%9d%b4%ec%b2%98-%ed%91%9c%ec%a7%80-%ec%84%a0%ec%a0%95/",
                          "slug":  "%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-800%ec%a1%b0-%ec%a6%9d%eb%b0%9c%ec%9d%98-%ec%a3%bc%ec%9d%b8%ea%b3%b5-%eb%94%a5%ec%8b%9c%ed%81%ac-%eb%84%a4%ec%9d%b4%ec%b2%98-%ed%91%9c%ec%a7%80-%ec%84%a0%ec%a0%95",
                          "lastmod":  "2025-11-12T17:16:33+00:00",
@@ -6174,7 +6205,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2342
                      },
                      {
-                         "id":  188,
+                         "id":  189,
                          "url":  "https://heisenberg.kr/%ea%b5%ad%ec%a0%95%ec%9e%90%ec%9b%90-%ed%99%94%ec%9e%ac-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%84%a4%ea%b3%84-%ec%8b%a4%ed%8c%a8%ec%9d%98-%eb%af%bc%eb%82%af/",
                          "slug":  "%ea%b5%ad%ec%a0%95%ec%9e%90%ec%9b%90-%ed%99%94%ec%9e%ac-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%84%a4%ea%b3%84-%ec%8b%a4%ed%8c%a8%ec%9d%98-%eb%af%bc%eb%82%af",
                          "lastmod":  "2025-11-12T17:16:10+00:00",
@@ -6203,7 +6234,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2414
                      },
                      {
-                         "id":  189,
+                         "id":  190,
                          "url":  "https://heisenberg.kr/etri_quantum/",
                          "slug":  "etri_quantum",
                          "lastmod":  "2025-12-04T08:17:21+00:00",
@@ -6233,7 +6264,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  190,
+                         "id":  191,
                          "url":  "https://heisenberg.kr/42dot/",
                          "slug":  "42dot",
                          "lastmod":  "2025-12-05T13:19:06+00:00",
@@ -6265,7 +6296,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  191,
+                         "id":  192,
                          "url":  "https://heisenberg.kr/membership_009/",
                          "slug":  "membership_009",
                          "lastmod":  "2025-11-25T10:24:05+00:00",
@@ -6297,7 +6328,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  192,
+                         "id":  193,
                          "url":  "https://heisenberg.kr/%ec%9d%98%ec%82%ac%eb%93%a4%ec%9d%b4-%ec%84%a0%ed%83%9d%ed%95%9c-%ec%a3%bc%ec%8b%9d-%ec%9d%98%eb%a3%8cai-%eb%8b%a4%ed%81%ac%ed%98%b8%ec%8a%a4-%ed%95%98%ed%8a%b8%ed%94%8c%eb%a1%9c%ec%9a%b0/",
                          "slug":  "%ec%9d%98%ec%82%ac%eb%93%a4%ec%9d%b4-%ec%84%a0%ed%83%9d%ed%95%9c-%ec%a3%bc%ec%8b%9d-%ec%9d%98%eb%a3%8cai-%eb%8b%a4%ed%81%ac%ed%98%b8%ec%8a%a4-%ed%95%98%ed%8a%b8%ed%94%8c%eb%a1%9c%ec%9a%b0",
                          "lastmod":  "2025-12-01T10:22:35+00:00",
@@ -6330,7 +6361,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  193,
+                         "id":  194,
                          "url":  "https://heisenberg.kr/bm25/",
                          "slug":  "bm25",
                          "lastmod":  "2025-12-08T12:20:31+00:00",
@@ -6365,7 +6396,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  194,
+                         "id":  195,
                          "url":  "https://heisenberg.kr/%ed%85%90%eb%b0%b0%ea%b1%b0%eb%8a%94-%ec%97%90%eb%93%80%ed%85%8c%ed%81%ac%ec%97%90-%ec%9e%88%eb%8b%a4800%ec%a1%b0-%ec%8b%9c%ec%9e%a5%ec%9d%98-%eb%af%b8%ea%b0%9c%ec%b2%99/",
                          "slug":  "%ed%85%90%eb%b0%b0%ea%b1%b0%eb%8a%94-%ec%97%90%eb%93%80%ed%85%8c%ed%81%ac%ec%97%90-%ec%9e%88%eb%8b%a4800%ec%a1%b0-%ec%8b%9c%ec%9e%a5%ec%9d%98-%eb%af%b8%ea%b0%9c%ec%b2%99",
                          "lastmod":  "2025-11-10T09:48:20+00:00",
@@ -6395,7 +6426,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2431
                      },
                      {
-                         "id":  195,
+                         "id":  196,
                          "url":  "https://heisenberg.kr/89%eb%85%84%ec%83%9d-mit-%ed%95%9c%ea%b5%ad%ec%9d%b8-%eb%b0%95%ec%82%ac%eb%93%a4-%ec%95%94%eb%aa%a8%eb%8b%88%ec%95%84-%ec%97%b0%eb%a3%8c%ec%a0%84%ec%a7%80%eb%a1%9c-sk%c2%b7%ed%98%84%eb%8c%80%eb%a5%bc/",
                          "slug":  "89%eb%85%84%ec%83%9d-mit-%ed%95%9c%ea%b5%ad%ec%9d%b8-%eb%b0%95%ec%82%ac%eb%93%a4-%ec%95%94%eb%aa%a8%eb%8b%88%ec%95%84-%ec%97%b0%eb%a3%8c%ec%a0%84%ec%a7%80%eb%a1%9c-sk%c2%b7%ed%98%84%eb%8c%80%eb%a5%bc",
                          "lastmod":  "2025-11-10T12:49:58+00:00",
@@ -6425,7 +6456,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2386
                      },
                      {
-                         "id":  196,
+                         "id":  197,
                          "url":  "https://heisenberg.kr/%ec%b9%a9%ec%9d%b8%eb%a5%98%ec%9d%98-%ed%83%84%ec%83%9d-ai%ea%b0%80-%eb%91%90%eb%a0%a4%ec%9b%a0%eb%8d%98-%eb%a8%b8%ec%8a%a4%ed%81%ac%ec%9d%98-%ec%84%a0%ed%83%9d/",
                          "slug":  "%ec%b9%a9%ec%9d%b8%eb%a5%98%ec%9d%98-%ed%83%84%ec%83%9d-ai%ea%b0%80-%eb%91%90%eb%a0%a4%ec%9b%a0%eb%8d%98-%eb%a8%b8%ec%8a%a4%ed%81%ac%ec%9d%98-%ec%84%a0%ed%83%9d",
                          "lastmod":  "2025-11-10T09:50:54+00:00",
@@ -6454,7 +6485,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2314
                      },
                      {
-                         "id":  197,
+                         "id":  198,
                          "url":  "https://heisenberg.kr/membership_008/",
                          "slug":  "membership_008",
                          "lastmod":  "2025-11-25T10:18:33+00:00",
@@ -6491,7 +6522,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  198,
+                         "id":  199,
                          "url":  "https://heisenberg.kr/%ed%98%81%ec%8b%a0%ec%9d%b8%ea%b0%80-%ea%b0%90%ec%98%a5%ec%9d%b8%ea%b0%80%ec%95%84%eb%a7%88%ec%a1%b4%ec%9d%98-%ea%b0%80%eb%91%90%eb%a6%ac-%ec%96%91%ec%8b%9d%ec%9e%a5%ec%97%90-%ea%b0%87/",
                          "slug":  "%ed%98%81%ec%8b%a0%ec%9d%b8%ea%b0%80-%ea%b0%90%ec%98%a5%ec%9d%b8%ea%b0%80%ec%95%84%eb%a7%88%ec%a1%b4%ec%9d%98-%ea%b0%80%eb%91%90%eb%a6%ac-%ec%96%91%ec%8b%9d%ec%9e%a5%ec%97%90-%ea%b0%87",
                          "lastmod":  "2025-11-10T09:52:18+00:00",
@@ -6520,7 +6551,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2324
                      },
                      {
-                         "id":  199,
+                         "id":  200,
                          "url":  "https://heisenberg.kr/sk%ed%95%98%ec%9d%b4%eb%8b%89%ec%8a%a4%ec%9d%98-hbm%ec%9d%b4-%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90%eb%a5%bc-%ec%9d%b4%ea%b8%b4-%ec%9d%b4%ec%9c%a0/",
                          "slug":  "sk%ed%95%98%ec%9d%b4%eb%8b%89%ec%8a%a4%ec%9d%98-hbm%ec%9d%b4-%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90%eb%a5%bc-%ec%9d%b4%ea%b8%b4-%ec%9d%b4%ec%9c%a0",
                          "lastmod":  "2025-11-27T16:54:52+00:00",
@@ -6556,7 +6587,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  200,
+                         "id":  201,
                          "url":  "https://heisenberg.kr/higgsfield/",
                          "slug":  "higgsfield",
                          "lastmod":  "2025-11-23T11:29:24+00:00",
@@ -6590,7 +6621,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  201,
+                         "id":  202,
                          "url":  "https://heisenberg.kr/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%eb%96%a1%ec%83%81%ec%9d%98-%ec%8b%9c%eb%b0%9c%ec%a0%90-%ec%95%8c%eb%a0%89%ec%8a%a4%eb%84%b7alexnet/",
                          "slug":  "%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%eb%96%a1%ec%83%81%ec%9d%98-%ec%8b%9c%eb%b0%9c%ec%a0%90-%ec%95%8c%eb%a0%89%ec%8a%a4%eb%84%b7alexnet",
                          "lastmod":  "2025-10-31T05:07:26+00:00",
@@ -6621,7 +6652,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  202,
+                         "id":  203,
                          "url":  "https://heisenberg.kr/%eb%b9%9b%ec%9d%98-%ec%86%8d%eb%8f%84%eb%a1%9c-%eb%aa%85%ec%a4%91-%ec%a0%84%ec%9f%81%ec%9d%98-%ed%8c%90%eb%8f%84%ea%b0%80-%eb%b0%94%eb%80%90%eb%8b%a4-%ed%95%9c%ed%99%94%ec%8b%9c/",
                          "slug":  "%eb%b9%9b%ec%9d%98-%ec%86%8d%eb%8f%84%eb%a1%9c-%eb%aa%85%ec%a4%91-%ec%a0%84%ec%9f%81%ec%9d%98-%ed%8c%90%eb%8f%84%ea%b0%80-%eb%b0%94%eb%80%90%eb%8b%a4-%ed%95%9c%ed%99%94%ec%8b%9c",
                          "lastmod":  "2025-10-27T05:51:19+00:00",
@@ -6652,7 +6683,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  203,
+                         "id":  204,
                          "url":  "https://heisenberg.kr/nano_led/",
                          "slug":  "nano_led",
                          "lastmod":  "2026-01-03T19:56:11+00:00",
@@ -6687,7 +6718,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  204,
+                         "id":  205,
                          "url":  "https://heisenberg.kr/%ed%95%9c%ea%b2%a8%eb%a0%88%ec%99%80-%ec%a1%b0%ec%84%a0%ec%9d%bc%eb%b3%b4%ec%9d%98-%ed%83%9c%ec%96%91%ea%b4%91-vs-%ec%9b%90%ec%a0%84-%eb%85%bc%ec%9f%81-%ed%95%b4%eb%8b%b5%ec%9d%80-ess%eb%8b%a4/",
                          "slug":  "%ed%95%9c%ea%b2%a8%eb%a0%88%ec%99%80-%ec%a1%b0%ec%84%a0%ec%9d%bc%eb%b3%b4%ec%9d%98-%ed%83%9c%ec%96%91%ea%b4%91-vs-%ec%9b%90%ec%a0%84-%eb%85%bc%ec%9f%81-%ed%95%b4%eb%8b%b5%ec%9d%80-ess%eb%8b%a4",
                          "lastmod":  "2025-11-01T05:11:26+00:00",
@@ -6725,7 +6756,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  205,
+                         "id":  206,
                          "url":  "https://heisenberg.kr/%ed%8a%b9%ec%a7%91-%ed%95%9c%ea%b5%ad%ec%9d%84-%eb%92%a4%ed%9d%94%eb%93%a0-%ec%97%90%eb%b9%84%ec%95%99-%ec%83%9d%ec%88%98-%ec%9d%b4%ec%8a%88%ec%9d%98-%ec%a7%84%ec%8b%a4/",
                          "slug":  "%ed%8a%b9%ec%a7%91-%ed%95%9c%ea%b5%ad%ec%9d%84-%eb%92%a4%ed%9d%94%eb%93%a0-%ec%97%90%eb%b9%84%ec%95%99-%ec%83%9d%ec%88%98-%ec%9d%b4%ec%8a%88%ec%9d%98-%ec%a7%84%ec%8b%a4",
                          "lastmod":  "2025-10-27T05:56:09+00:00",
@@ -6759,7 +6790,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  206,
+                         "id":  207,
                          "url":  "https://heisenberg.kr/kt-%ed%95%b4%ed%82%b9-%ec%82%ac%ed%83%9c%ec%9d%98-%ec%a7%84%ec%a7%9c-%ec%9b%90%ec%9d%b8%ea%b3%bc-%ed%95%b4%ea%b2%b0-%eb%b0%a9%eb%b2%95-%ed%8e%a8%ed%86%a0%ec%85%80%ea%b3%bc-ris/",
                          "slug":  "kt-%ed%95%b4%ed%82%b9-%ec%82%ac%ed%83%9c%ec%9d%98-%ec%a7%84%ec%a7%9c-%ec%9b%90%ec%9d%b8%ea%b3%bc-%ed%95%b4%ea%b2%b0-%eb%b0%a9%eb%b2%95-%ed%8e%a8%ed%86%a0%ec%85%80%ea%b3%bc-ris",
                          "lastmod":  "2026-01-21T13:44:21+00:00",
@@ -6792,7 +6823,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  207,
+                         "id":  208,
                          "url":  "https://heisenberg.kr/uam_joby_achr/",
                          "slug":  "uam_joby_achr",
                          "lastmod":  "2026-02-03T14:20:42+00:00",
@@ -6825,7 +6856,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  208,
+                         "id":  209,
                          "url":  "https://heisenberg.kr/ai%ec%97%90-%eb%92%a4%ec%b2%98%ec%a7%84-%ec%95%a0%ed%94%8c%ec%9d%98-%ea%bc%bc%ec%88%98-%eb%85%b8%ed%82%a4%ec%95%84-%ec%a0%84%ec%b2%a0%ec%9d%84-%eb%b0%9f%eb%82%98/",
                          "slug":  "ai%ec%97%90-%eb%92%a4%ec%b2%98%ec%a7%84-%ec%95%a0%ed%94%8c%ec%9d%98-%ea%bc%bc%ec%88%98-%eb%85%b8%ed%82%a4%ec%95%84-%ec%a0%84%ec%b2%a0%ec%9d%84-%eb%b0%9f%eb%82%98",
                          "lastmod":  "2025-10-27T06:00:51+00:00",
@@ -6860,7 +6891,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  209,
+                         "id":  210,
                          "url":  "https://heisenberg.kr/%ed%98%84%ec%97%ad-%ec%9b%94%ea%b0%80-1%eb%93%b1-%eb%93%9c%eb%9f%ac%ec%bc%84-%eb%b0%80%eb%9f%ac%ec%9d%98-%ed%8f%ac%ed%8a%b8%ed%8f%b4%eb%a6%ac%ec%98%a4-1%ed%94%bd-natera/",
                          "slug":  "%ed%98%84%ec%97%ad-%ec%9b%94%ea%b0%80-1%eb%93%b1-%eb%93%9c%eb%9f%ac%ec%bc%84-%eb%b0%80%eb%9f%ac%ec%9d%98-%ed%8f%ac%ed%8a%b8%ed%8f%b4%eb%a6%ac%ec%98%a4-1%ed%94%bd-natera",
                          "lastmod":  "2025-10-27T05:58:16+00:00",
@@ -6894,7 +6925,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  210,
+                         "id":  211,
                          "url":  "https://heisenberg.kr/joshua_palantir/",
                          "slug":  "joshua_palantir",
                          "lastmod":  "2025-11-24T10:14:07+00:00",
@@ -6924,7 +6955,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  211,
+                         "id":  212,
                          "url":  "https://heisenberg.kr/lg%ec%a0%84%ec%9e%90%ec%99%80-sk%eb%8f%84-%eb%9b%b0%ec%96%b4%eb%93%a0-ai-%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%84%bc%ed%84%b0-%eb%83%89%ea%b0%81-%ec%83%88%eb%a1%9c%ec%9a%b4-%ea%b8%b0%ed%9a%8c/",
                          "slug":  "lg%ec%a0%84%ec%9e%90%ec%99%80-sk%eb%8f%84-%eb%9b%b0%ec%96%b4%eb%93%a0-ai-%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%84%bc%ed%84%b0-%eb%83%89%ea%b0%81-%ec%83%88%eb%a1%9c%ec%9a%b4-%ea%b8%b0%ed%9a%8c",
                          "lastmod":  "2025-10-27T06:02:15+00:00",
@@ -6958,7 +6989,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  212,
+                         "id":  213,
                          "url":  "https://heisenberg.kr/psiquantum-%ec%9d%b8%eb%a5%98-%ec%b5%9c%ec%b4%88%ec%9d%98-%ec%83%81%ec%97%85%ec%9a%a9-%ec%96%91%ec%9e%90%ec%bb%b4%ed%93%a8%ed%84%b0%ea%b0%80-%eb%90%a0-%ec%88%98-%ec%9e%88%ec%9d%84%ea%b9%8c/",
                          "slug":  "psiquantum-%ec%9d%b8%eb%a5%98-%ec%b5%9c%ec%b4%88%ec%9d%98-%ec%83%81%ec%97%85%ec%9a%a9-%ec%96%91%ec%9e%90%ec%bb%b4%ed%93%a8%ed%84%b0%ea%b0%80-%eb%90%a0-%ec%88%98-%ec%9e%88%ec%9d%84%ea%b9%8c",
                          "lastmod":  "2025-11-01T13:28:10+00:00",
@@ -6989,7 +7020,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  213,
+                         "id":  214,
                          "url":  "https://heisenberg.kr/kccglass/",
                          "slug":  "kccglass",
                          "lastmod":  "2026-02-03T14:20:28+00:00",
@@ -7024,7 +7055,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  214,
+                         "id":  215,
                          "url":  "https://heisenberg.kr/xr-%ec%9c%a0%eb%a6%ac-%eb%91%90%ea%bb%98%eb%a5%bc-1mm-%ec%9d%b4%ed%95%98%eb%a1%9c-%ec%82%bc%ec%84%b1%ec%9d%98-%ea%b2%8c%ec%9e%84%ec%b2%b4%ec%9d%b8%ec%a0%80-%eb%a9%94%ed%83%80%eb%a0%8c/",
                          "slug":  "xr-%ec%9c%a0%eb%a6%ac-%eb%91%90%ea%bb%98%eb%a5%bc-1mm-%ec%9d%b4%ed%95%98%eb%a1%9c-%ec%82%bc%ec%84%b1%ec%9d%98-%ea%b2%8c%ec%9e%84%ec%b2%b4%ec%9d%b8%ec%a0%80-%eb%a9%94%ed%83%80%eb%a0%8c",
                          "lastmod":  "2025-10-27T06:07:10+00:00",
@@ -7055,7 +7086,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  215,
+                         "id":  216,
                          "url":  "https://heisenberg.kr/ai-agent/",
                          "slug":  "ai-agent",
                          "lastmod":  "2026-04-14T01:37:09+00:00",
@@ -7087,7 +7118,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  216,
+                         "id":  217,
                          "url":  "https://heisenberg.kr/%ec%9d%bc%eb%a1%a0-%eb%a8%b8%ec%8a%a4%ed%81%ac%ec%9d%98-grok-4%eb%8a%94-%ec%a0%95%eb%a7%90-%ea%b2%bd%ec%9f%81%eb%a0%a5%ec%9d%b4-%ec%9e%88%eb%8a%94%ea%b0%80/",
                          "slug":  "%ec%9d%bc%eb%a1%a0-%eb%a8%b8%ec%8a%a4%ed%81%ac%ec%9d%98-grok-4%eb%8a%94-%ec%a0%95%eb%a7%90-%ea%b2%bd%ec%9f%81%eb%a0%a5%ec%9d%b4-%ec%9e%88%eb%8a%94%ea%b0%80",
                          "lastmod":  "2025-10-27T06:09:15+00:00",
@@ -7120,7 +7151,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  217,
+                         "id":  218,
                          "url":  "https://heisenberg.kr/%ed%95%b5%ec%9c%b5%ed%95%a9%ec%9c%bc%eb%a1%9c-%ec%88%98%ec%9d%80%ec%9d%84-%ea%b8%88%ec%9c%bc%eb%a1%9c-%eb%b0%94%ea%bf%80-%ec%88%98-%ec%9e%88%eb%8b%a4/",
                          "slug":  "%ed%95%b5%ec%9c%b5%ed%95%a9%ec%9c%bc%eb%a1%9c-%ec%88%98%ec%9d%80%ec%9d%84-%ea%b8%88%ec%9c%bc%eb%a1%9c-%eb%b0%94%ea%bf%80-%ec%88%98-%ec%9e%88%eb%8b%a4",
                          "lastmod":  "2025-10-27T06:10:59+00:00",
@@ -7150,7 +7181,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  218,
+                         "id":  219,
                          "url":  "https://heisenberg.kr/%ea%b0%80%ec%83%81%ec%84%b8%ea%b3%84%eb%a5%bc-%ec%b0%bd%ec%a1%b0%ed%95%98%eb%8a%94-%ea%b5%ac%ea%b8%80-geinie-3-%eb%a9%94%ed%83%80%eb%b2%84%ec%8a%a4-%ec%8b%9c%eb%8c%80%ec%9d%98-%eb%8f%84%eb%9e%98/",
                          "slug":  "%ea%b0%80%ec%83%81%ec%84%b8%ea%b3%84%eb%a5%bc-%ec%b0%bd%ec%a1%b0%ed%95%98%eb%8a%94-%ea%b5%ac%ea%b8%80-geinie-3-%eb%a9%94%ed%83%80%eb%b2%84%ec%8a%a4-%ec%8b%9c%eb%8c%80%ec%9d%98-%eb%8f%84%eb%9e%98",
                          "lastmod":  "2025-10-27T06:11:46+00:00",
@@ -7184,7 +7215,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  219,
+                         "id":  220,
                          "url":  "https://heisenberg.kr/%ec%88%9c%ec%88%98%ec%9d%b5-1%ec%96%b5%ec%9b%90-%eb%b2%8c%ec%97%88%eb%8b%a4-%ec%84%b8%ea%b3%84%ea%b0%80-%ec%a3%bc%eb%aa%a9%ed%95%98%eb%8a%94-%eb%b0%94%ec%9d%b4%eb%b8%8c/",
                          "slug":  "%ec%88%9c%ec%88%98%ec%9d%b5-1%ec%96%b5%ec%9b%90-%eb%b2%8c%ec%97%88%eb%8b%a4-%ec%84%b8%ea%b3%84%ea%b0%80-%ec%a3%bc%eb%aa%a9%ed%95%98%eb%8a%94-%eb%b0%94%ec%9d%b4%eb%b8%8c",
                          "lastmod":  "2025-10-27T06:13:13+00:00",
@@ -7216,7 +7247,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  220,
+                         "id":  221,
                          "url":  "https://heisenberg.kr/amd_vs_nvidia/",
                          "slug":  "amd_vs_nvidia",
                          "lastmod":  "2026-04-22T16:05:40+00:00",
@@ -7250,7 +7281,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  221,
+                         "id":  222,
                          "url":  "https://heisenberg.kr/%eb%8f%88%eb%82%98%eb%ac%b4-%eb%88%84%eb%82%98%eb%8f%84-%ec%93%b8%ec%96%b4%eb%8b%b4%ec%9d%80-ai-1%ed%94%bd-%ed%85%9c%ed%8d%bc%ec%8a%a4ai/",
                          "slug":  "%eb%8f%88%eb%82%98%eb%ac%b4-%eb%88%84%eb%82%98%eb%8f%84-%ec%93%b8%ec%96%b4%eb%8b%b4%ec%9d%80-ai-1%ed%94%bd-%ed%85%9c%ed%8d%bc%ec%8a%a4ai",
                          "lastmod":  "2025-10-27T06:33:43+00:00",
@@ -7285,7 +7316,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  222,
+                         "id":  223,
                          "url":  "https://heisenberg.kr/openai%ec%97%90-%ec%8f%9f%ec%95%84%ec%a7%80%eb%8a%94-%eb%b9%84%ed%8c%90-ai-%ea%b1%b0%ed%92%88%eb%a1%a0%ec%97%90-%ed%9d%94%eb%93%a4%eb%a6%ac%eb%8a%94-%eb%b9%85%ed%85%8c%ed%81%ac%eb%93%a4/",
                          "slug":  "openai%ec%97%90-%ec%8f%9f%ec%95%84%ec%a7%80%eb%8a%94-%eb%b9%84%ed%8c%90-ai-%ea%b1%b0%ed%92%88%eb%a1%a0%ec%97%90-%ed%9d%94%eb%93%a4%eb%a6%ac%eb%8a%94-%eb%b9%85%ed%85%8c%ed%81%ac%eb%93%a4",
                          "lastmod":  "2025-10-27T06:34:45+00:00",
@@ -7320,7 +7351,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  223,
+                         "id":  224,
                          "url":  "https://heisenberg.kr/nvidia_6g/",
                          "slug":  "nvidia_6g",
                          "lastmod":  "2026-02-03T14:26:17+00:00",
@@ -7354,7 +7385,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  224,
+                         "id":  225,
                          "url":  "https://heisenberg.kr/furiosaai/",
                          "slug":  "furiosaai",
                          "lastmod":  "2026-03-11T04:53:26+00:00",
@@ -7385,7 +7416,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  225,
+                         "id":  226,
                          "url":  "https://heisenberg.kr/%ec%a4%91%ea%b5%ad%eb%b0%9c-ai%ea%b0%80-%eb%af%b8%ea%b5%ad%ec%9d%84-%ec%9d%b4%ea%b8%b8-%ec%88%98-%ec%97%86%eb%8a%94-%ec%9d%b4%ec%9c%a0/",
                          "slug":  "%ec%a4%91%ea%b5%ad%eb%b0%9c-ai%ea%b0%80-%eb%af%b8%ea%b5%ad%ec%9d%84-%ec%9d%b4%ea%b8%b8-%ec%88%98-%ec%97%86%eb%8a%94-%ec%9d%b4%ec%9c%a0",
                          "lastmod":  "2025-10-27T06:37:32+00:00",
@@ -7418,7 +7449,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  226,
+                         "id":  227,
                          "url":  "https://heisenberg.kr/%ec%95%a0%ed%94%8c%eb%8f%84-%eb%aa%bb%ed%95%9c-xr-%ed%98%81%ec%8b%a0-%ec%82%bc%ec%84%b1-%ed%8c%8c%ec%9a%b4%eb%93%9c%eb%a6%ac%ea%b0%80-%eb%8f%84%ec%a0%84%ed%95%9c%eb%8b%a4%eb%a9%b4-%ec%99%95%ec%a2%8c/",
                          "slug":  "%ec%95%a0%ed%94%8c%eb%8f%84-%eb%aa%bb%ed%95%9c-xr-%ed%98%81%ec%8b%a0-%ec%82%bc%ec%84%b1-%ed%8c%8c%ec%9a%b4%eb%93%9c%eb%a6%ac%ea%b0%80-%eb%8f%84%ec%a0%84%ed%95%9c%eb%8b%a4%eb%a9%b4-%ec%99%95%ec%a2%8c",
                          "lastmod":  "2025-11-01T05:09:57+00:00",
@@ -7453,7 +7484,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  227,
+                         "id":  228,
                          "url":  "https://heisenberg.kr/skildai/",
                          "slug":  "skildai",
                          "lastmod":  "2025-12-17T10:06:55+00:00",
@@ -7487,7 +7518,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  228,
+                         "id":  229,
                          "url":  "https://heisenberg.kr/yoshuabengio/",
                          "slug":  "yoshuabengio",
                          "lastmod":  "2026-01-18T03:37:05+00:00",
@@ -7520,7 +7551,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중기"
                      },
                      {
-                         "id":  229,
+                         "id":  230,
                          "url":  "https://heisenberg.kr/kimi-k2%eb%a1%9c-%eb%93%9c%eb%9f%ac%eb%82%9c-%ea%b3%b5%eb%8c%80%ec%97%90-%eb%af%b8%ec%b9%9c-%ec%a4%91%ea%b5%ad-%eb%a9%88%ec%b6%b0-%ec%84%a0-%ed%95%9c%ea%b5%ad/",
                          "slug":  "kimi-k2%eb%a1%9c-%eb%93%9c%eb%9f%ac%eb%82%9c-%ea%b3%b5%eb%8c%80%ec%97%90-%eb%af%b8%ec%b9%9c-%ec%a4%91%ea%b5%ad-%eb%a9%88%ec%b6%b0-%ec%84%a0-%ed%95%9c%ea%b5%ad",
                          "lastmod":  "2025-10-27T06:41:36+00:00",
@@ -7552,7 +7583,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  230,
+                         "id":  231,
                          "url":  "https://heisenberg.kr/lig_block/",
                          "slug":  "lig_block",
                          "lastmod":  "2026-03-09T14:54:37+00:00",
@@ -7585,7 +7616,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  231,
+                         "id":  232,
                          "url":  "https://heisenberg.kr/%ec%8a%88%ed%8d%bc%ec%9d%84%ec%9d%98-%ec%97%ad%ec%84%a4-tsmc%eb%a5%bc-%ea%bf%88%ea%be%b8%eb%8a%94-%ec%82%bc%ec%84%b1%eb%b0%94%ec%9d%b4%ec%98%a4%ec%99%80-%ec%85%80%ed%8a%b8/",
                          "slug":  "%ec%8a%88%ed%8d%bc%ec%9d%84%ec%9d%98-%ec%97%ad%ec%84%a4-tsmc%eb%a5%bc-%ea%bf%88%ea%be%b8%eb%8a%94-%ec%82%bc%ec%84%b1%eb%b0%94%ec%9d%b4%ec%98%a4%ec%99%80-%ec%85%80%ed%8a%b8",
                          "lastmod":  "2025-10-27T06:44:18+00:00",
@@ -7620,7 +7651,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  232,
+                         "id":  233,
                          "url":  "https://heisenberg.kr/semantic/",
                          "slug":  "semantic",
                          "lastmod":  "2025-11-24T10:10:28+00:00",
@@ -7651,7 +7682,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  233,
+                         "id":  234,
                          "url":  "https://heisenberg.kr/%ea%b0%a4%eb%9f%ad%ec%8b%9c-%eb%8b%a4%ec%9d%8c%ec%9d%80-%ec%a0%84%ec%9e%90%ed%94%bc%eb%b6%80-%ec%82%bc%ec%84%b1%ec%9d%b4-%ea%b7%b8%eb%a6%ac%eb%8a%94-%ed%8f%ac%ec%8a%a4%ed%8a%b8-%ec%8a%a4%eb%a7%88/",
                          "slug":  "%ea%b0%a4%eb%9f%ad%ec%8b%9c-%eb%8b%a4%ec%9d%8c%ec%9d%80-%ec%a0%84%ec%9e%90%ed%94%bc%eb%b6%80-%ec%82%bc%ec%84%b1%ec%9d%b4-%ea%b7%b8%eb%a6%ac%eb%8a%94-%ed%8f%ac%ec%8a%a4%ed%8a%b8-%ec%8a%a4%eb%a7%88",
                          "lastmod":  "2025-10-27T06:47:23+00:00",
@@ -7683,7 +7714,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  234,
+                         "id":  235,
                          "url":  "https://heisenberg.kr/%ec%a4%91%ea%b5%ad%ec%9d%98-%eb%8f%84%ec%a0%84-%ec%86%8d%ec%97%90%eb%8f%84-%ea%b5%b3%ea%b1%b4%ed%95%9c-%ea%b5%ac%ea%b8%80-ai-%ec%97%90%ec%9d%b4%ec%a0%84%ed%8a%b8-%ec%8b%9c%eb%8c%80%ec%9d%98/",
                          "slug":  "%ec%a4%91%ea%b5%ad%ec%9d%98-%eb%8f%84%ec%a0%84-%ec%86%8d%ec%97%90%eb%8f%84-%ea%b5%b3%ea%b1%b4%ed%95%9c-%ea%b5%ac%ea%b8%80-ai-%ec%97%90%ec%9d%b4%ec%a0%84%ed%8a%b8-%ec%8b%9c%eb%8c%80%ec%9d%98",
                          "lastmod":  "2025-10-27T06:48:12+00:00",
@@ -7717,7 +7748,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  235,
+                         "id":  236,
                          "url":  "https://heisenberg.kr/%ec%9d%bc%eb%9d%bc%ec%9d%b4-%eb%a6%b4%eb%a6%ac-vs-%eb%85%b8%eb%b3%b4-%eb%85%b8%eb%94%94%ec%8a%a4%ed%81%ac-%ec%95%8c%ec%95%bd-%ed%95%98%eb%82%98%ec%97%90-%ec%88%98%ec%8b%ad%ec%a1%b0%ea%b0%80-%eb%aa%b0/",
                          "slug":  "%ec%9d%bc%eb%9d%bc%ec%9d%b4-%eb%a6%b4%eb%a6%ac-vs-%eb%85%b8%eb%b3%b4-%eb%85%b8%eb%94%94%ec%8a%a4%ed%81%ac-%ec%95%8c%ec%95%bd-%ed%95%98%eb%82%98%ec%97%90-%ec%88%98%ec%8b%ad%ec%a1%b0%ea%b0%80-%eb%aa%b0",
                          "lastmod":  "2025-10-27T06:49:16+00:00",
@@ -7749,7 +7780,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  236,
+                         "id":  237,
                          "url":  "https://heisenberg.kr/%ec%a4%91%ea%b5%ad%ec%9d%98-%ea%b9%a8%eb%81%97%ed%95%9c-%ea%b3%b5%ea%b8%b0%ea%b0%80-%ec%a7%80%ea%b5%ac%ec%98%a8%eb%82%9c%ed%99%94%eb%a5%bc-%ea%b0%80%ec%86%8d%ed%99%94-%ec%8b%9c%ed%82%a8%eb%8b%a4/",
                          "slug":  "%ec%a4%91%ea%b5%ad%ec%9d%98-%ea%b9%a8%eb%81%97%ed%95%9c-%ea%b3%b5%ea%b8%b0%ea%b0%80-%ec%a7%80%ea%b5%ac%ec%98%a8%eb%82%9c%ed%99%94%eb%a5%bc-%ea%b0%80%ec%86%8d%ed%99%94-%ec%8b%9c%ed%82%a8%eb%8b%a4",
                          "lastmod":  "2025-10-27T06:51:58+00:00",
@@ -7780,7 +7811,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  237,
+                         "id":  238,
                          "url":  "https://heisenberg.kr/18%eb%85%84-%eb%82%9c%ec%9e%84-%eb%81%9d%eb%82%b8-%eb%b0%94%ec%9d%b4%ec%98%a4%ec%9d%98-%ed%98%81%eb%aa%85-ai%eb%a1%9c-%eb%ac%b4%ec%a0%95%ec%9e%90%ec%a6%9d-%ea%b7%b9%eb%b3%b5%ed%95%98%ea%b3%a0/",
                          "slug":  "18%eb%85%84-%eb%82%9c%ec%9e%84-%eb%81%9d%eb%82%b8-%eb%b0%94%ec%9d%b4%ec%98%a4%ec%9d%98-%ed%98%81%eb%aa%85-ai%eb%a1%9c-%eb%ac%b4%ec%a0%95%ec%9e%90%ec%a6%9d-%ea%b7%b9%eb%b3%b5%ed%95%98%ea%b3%a0",
                          "lastmod":  "2025-10-27T06:53:06+00:00",
@@ -7813,7 +7844,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  238,
+                         "id":  239,
                          "url":  "https://heisenberg.kr/%eb%87%8c%eb%a5%bc-%ed%95%b4%ed%82%b9%ed%95%b4-%eb%b2%84%eb%a6%b0%eb%8b%a4-%eb%af%b8%ec%b9%9c-%ec%86%8d%eb%8f%84%eb%a1%9c-%eb%89%b4%eb%9f%b4%eb%a7%81%ed%81%ac%eb%a5%bc-%ec%ab%93%ec%95%84%ea%b0%80/",
                          "slug":  "%eb%87%8c%eb%a5%bc-%ed%95%b4%ed%82%b9%ed%95%b4-%eb%b2%84%eb%a6%b0%eb%8b%a4-%eb%af%b8%ec%b9%9c-%ec%86%8d%eb%8f%84%eb%a1%9c-%eb%89%b4%eb%9f%b4%eb%a7%81%ed%81%ac%eb%a5%bc-%ec%ab%93%ec%95%84%ea%b0%80",
                          "lastmod":  "2025-10-27T06:55:47+00:00",
@@ -7845,7 +7876,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  239,
+                         "id":  240,
                          "url":  "https://heisenberg.kr/%eb%a0%88%ec%9d%b4%eb%8b%a4%eb%a5%bc-%ec%a7%80%eb%b0%b0%ed%95%98%eb%8a%94-%ec%9e%90%ea%b0%80-%ec%a0%84%ec%9f%81%ec%9d%84-%ec%a7%80%eb%b0%b0%ed%95%9c%eb%8b%a4/",
                          "slug":  "%eb%a0%88%ec%9d%b4%eb%8b%a4%eb%a5%bc-%ec%a7%80%eb%b0%b0%ed%95%98%eb%8a%94-%ec%9e%90%ea%b0%80-%ec%a0%84%ec%9f%81%ec%9d%84-%ec%a7%80%eb%b0%b0%ed%95%9c%eb%8b%a4",
                          "lastmod":  "2025-10-27T06:57:11+00:00",
@@ -7877,7 +7908,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  240,
+                         "id":  241,
                          "url":  "https://heisenberg.kr/%ea%b5%ac%ea%b8%80%ea%b3%bc-%eb%b9%8c%ea%b2%8c%ec%9d%b4%ec%b8%a0%eb%8f%84-%ed%88%ac%ec%9e%90%ed%95%9c-%ed%95%b5%ec%9c%b5%ed%95%a9-%eb%b6%84%ec%95%bc-%eb%8b%a4%ed%81%ac%ed%98%b8%ec%8a%a4-cfs/",
                          "slug":  "%ea%b5%ac%ea%b8%80%ea%b3%bc-%eb%b9%8c%ea%b2%8c%ec%9d%b4%ec%b8%a0%eb%8f%84-%ed%88%ac%ec%9e%90%ed%95%9c-%ed%95%b5%ec%9c%b5%ed%95%a9-%eb%b6%84%ec%95%bc-%eb%8b%a4%ed%81%ac%ed%98%b8%ec%8a%a4-cfs",
                          "lastmod":  "2025-11-08T07:38:20+00:00",
@@ -7908,7 +7939,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2470
                      },
                      {
-                         "id":  241,
+                         "id":  242,
                          "url":  "https://heisenberg.kr/%ec%97%91%ec%8b%9c%eb%85%b8%ec%8a%a4%ea%b0%80-%ec%8a%a4%eb%83%85%eb%93%9c%eb%9e%98%ea%b3%a4%ea%b3%bc-%ea%b2%bd%ec%9f%81%ec%9d%b4-%ea%b0%80%eb%8a%a5%ed%95%a0%ea%b9%8c-%ec%82%bc%ec%84%b1%ec%a0%84/",
                          "slug":  "%ec%97%91%ec%8b%9c%eb%85%b8%ec%8a%a4%ea%b0%80-%ec%8a%a4%eb%83%85%eb%93%9c%eb%9e%98%ea%b3%a4%ea%b3%bc-%ea%b2%bd%ec%9f%81%ec%9d%b4-%ea%b0%80%eb%8a%a5%ed%95%a0%ea%b9%8c-%ec%82%bc%ec%84%b1%ec%a0%84",
                          "lastmod":  "2025-12-21T12:31:29+00:00",
@@ -7942,7 +7973,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  242,
+                         "id":  243,
                          "url":  "https://heisenberg.kr/%ec%9d%98%eb%8c%80-%eb%b8%94%eb%9e%99%ed%99%80%ec%9d%b4-%ec%95%97%ec%95%84%ea%b0%84-%eb%af%b8%eb%9e%98-%eb%a3%a8%eb%8b%9b%c2%b7%eb%b7%b0%eb%85%b8%ea%b0%80-%eb%a9%88%ec%b6%98/",
                          "slug":  "%ec%9d%98%eb%8c%80-%eb%b8%94%eb%9e%99%ed%99%80%ec%9d%b4-%ec%95%97%ec%95%84%ea%b0%84-%eb%af%b8%eb%9e%98-%eb%a3%a8%eb%8b%9b%c2%b7%eb%b7%b0%eb%85%b8%ea%b0%80-%eb%a9%88%ec%b6%98",
                          "lastmod":  "2025-10-27T07:03:26+00:00",
@@ -7976,7 +8007,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  243,
+                         "id":  244,
                          "url":  "https://heisenberg.kr/google_tpu/",
                          "slug":  "google_tpu",
                          "lastmod":  "2025-11-29T04:48:59+00:00",
@@ -8007,7 +8038,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  244,
+                         "id":  245,
                          "url":  "https://heisenberg.kr/%ec%9d%b8%ed%84%b0%eb%84%b7-%ea%b3%b5%ec%a7%9c-%eb%b7%94%ed%8e%98%ec%97%90-%ec%b9%bc-%eb%b9%bc%eb%93%a0-cloudflare-ai-%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%a0%84%ec%9f%81%ec%9d%98-%eb%b0%a9%ec%95%84/",
                          "slug":  "%ec%9d%b8%ed%84%b0%eb%84%b7-%ea%b3%b5%ec%a7%9c-%eb%b7%94%ed%8e%98%ec%97%90-%ec%b9%bc-%eb%b9%bc%eb%93%a0-cloudflare-ai-%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%a0%84%ec%9f%81%ec%9d%98-%eb%b0%a9%ec%95%84",
                          "lastmod":  "2025-10-27T07:07:29+00:00",
@@ -8038,7 +8069,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  245,
+                         "id":  246,
                          "url":  "https://heisenberg.kr/angel_robotics/",
                          "slug":  "angel_robotics",
                          "lastmod":  "2026-01-21T08:12:55+00:00",
@@ -8069,7 +8100,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  246,
+                         "id":  247,
                          "url":  "https://heisenberg.kr/%ec%9d%98%ec%82%ac%eb%8a%94-%ed%95%84%ec%9a%94%ec%97%86%eb%8b%a4%eb%8a%94-%eb%a8%b8%ec%8a%a4%ed%81%ac-%ec%9d%98%ec%82%ac%ec%99%80-%ec%9d%b8%ed%8a%9c%ec%9d%b4%ed%8b%b0%eb%b8%8c-%ec%84%9c%ec%a7%80/",
                          "slug":  "%ec%9d%98%ec%82%ac%eb%8a%94-%ed%95%84%ec%9a%94%ec%97%86%eb%8b%a4%eb%8a%94-%eb%a8%b8%ec%8a%a4%ed%81%ac-%ec%9d%98%ec%82%ac%ec%99%80-%ec%9d%b8%ed%8a%9c%ec%9d%b4%ed%8b%b0%eb%b8%8c-%ec%84%9c%ec%a7%80",
                          "lastmod":  "2025-11-08T07:32:54+00:00",
@@ -8096,7 +8127,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2348
                      },
                      {
-                         "id":  247,
+                         "id":  248,
                          "url":  "https://heisenberg.kr/%eb%84%a4%ec%9d%b4%eb%b2%84%eb%8a%94-%ec%a3%bc%ec%9d%b8%ec%9d%b4-%eb%90%a0-%ec%83%81%ec%9d%b8%ea%b0%80-%eb%85%b8%ec%98%88%ea%b0%80-%eb%90%a0-%ec%83%81%ec%9d%b8%ea%b0%80/",
                          "slug":  "%eb%84%a4%ec%9d%b4%eb%b2%84%eb%8a%94-%ec%a3%bc%ec%9d%b8%ec%9d%b4-%eb%90%a0-%ec%83%81%ec%9d%b8%ea%b0%80-%eb%85%b8%ec%98%88%ea%b0%80-%eb%90%a0-%ec%83%81%ec%9d%b8%ea%b0%80",
                          "lastmod":  "2025-10-27T07:26:11+00:00",
@@ -8130,7 +8161,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  248,
+                         "id":  249,
                          "url":  "https://heisenberg.kr/%ec%82%bc%ec%84%b1%ec%9d%98-%ec%9e%83%ec%96%b4%eb%b2%84%eb%a6%b0-10%eb%85%84-2d-%eb%b0%98%eb%8f%84%ec%b2%b4-%ec%97%ac%ea%b8%b0%ec%97%90-%eb%ac%bb%ed%9e%88%eb%8b%a4/",
                          "slug":  "%ec%82%bc%ec%84%b1%ec%9d%98-%ec%9e%83%ec%96%b4%eb%b2%84%eb%a6%b0-10%eb%85%84-2d-%eb%b0%98%eb%8f%84%ec%b2%b4-%ec%97%ac%ea%b8%b0%ec%97%90-%eb%ac%bb%ed%9e%88%eb%8b%a4",
                          "lastmod":  "2025-10-27T07:26:50+00:00",
@@ -8164,7 +8195,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  249,
+                         "id":  250,
                          "url":  "https://heisenberg.kr/ai%ea%b2%80%ec%83%89%ec%9d%98-%eb%af%b8%eb%9e%98%eb%a5%bc-%eb%ac%bb%ea%b1%b0%eb%93%a0-%ea%b3%a0%ea%b0%9c%eb%a5%bc-%eb%93%a4%ec%96%b4-%ea%b5%ac%ea%b8%80%ec%9d%84-%eb%b3%b4%ea%b2%8c-%ed%95%98%eb%9d%bc/",
                          "slug":  "ai%ea%b2%80%ec%83%89%ec%9d%98-%eb%af%b8%eb%9e%98%eb%a5%bc-%eb%ac%bb%ea%b1%b0%eb%93%a0-%ea%b3%a0%ea%b0%9c%eb%a5%bc-%eb%93%a4%ec%96%b4-%ea%b5%ac%ea%b8%80%ec%9d%84-%eb%b3%b4%ea%b2%8c-%ed%95%98%eb%9d%bc",
                          "lastmod":  "2025-10-27T07:27:21+00:00",
@@ -8195,7 +8226,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  250,
+                         "id":  251,
                          "url":  "https://heisenberg.kr/%ea%b8%b0%eb%93%9d%ea%b6%8c%ec%9d%98-%ec%9e%a5%eb%b2%bd-%ec%95%9e%ec%97%90%ec%84%a0-%eb%a3%a8%eb%8b%9b%c2%b7%eb%b7%b0%eb%85%b8-%eb%a7%8c%eb%85%84-%ec%a0%81%ec%9e%90-%ea%b8%b0%ec%97%85%ec%9d%98/",
                          "slug":  "%ea%b8%b0%eb%93%9d%ea%b6%8c%ec%9d%98-%ec%9e%a5%eb%b2%bd-%ec%95%9e%ec%97%90%ec%84%a0-%eb%a3%a8%eb%8b%9b%c2%b7%eb%b7%b0%eb%85%b8-%eb%a7%8c%eb%85%84-%ec%a0%81%ec%9e%90-%ea%b8%b0%ec%97%85%ec%9d%98",
                          "lastmod":  "2025-11-23T11:25:21+00:00",
@@ -8225,7 +8256,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2379
                      },
                      {
-                         "id":  251,
+                         "id":  252,
                          "url":  "https://heisenberg.kr/%ed%98%84%eb%ac%b4-5-%ec%84%b1%eb%8a%a5-%eb%b6%81%ed%95%9c%ec%9d%b4-%eb%b2%8c%eb%b2%8c-%eb%96%a8%eb%a7%8c-%ed%95%98%eb%84%a4/",
                          "slug":  "%ed%98%84%eb%ac%b4-5-%ec%84%b1%eb%8a%a5-%eb%b6%81%ed%95%9c%ec%9d%b4-%eb%b2%8c%eb%b2%8c-%eb%96%a8%eb%a7%8c-%ed%95%98%eb%84%a4",
                          "lastmod":  "2025-11-07T14:49:11+00:00",
@@ -8257,7 +8288,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  252,
+                         "id":  253,
                          "url":  "https://heisenberg.kr/ai-%ec%8b%a0%ec%95%bd-%ea%b0%9c%eb%b0%9c-%eb%8c%80%ec%9e%a5-%eb%a6%ac%ec%bb%a4%ec%a0%84-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84%ea%b0%80-%ed%88%ac%ec%9e%90%ed%95%9c-%ec%9d%b4%ec%9c%a0/",
                          "slug":  "ai-%ec%8b%a0%ec%95%bd-%ea%b0%9c%eb%b0%9c-%eb%8c%80%ec%9e%a5-%eb%a6%ac%ec%bb%a4%ec%a0%84-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84%ea%b0%80-%ed%88%ac%ec%9e%90%ed%95%9c-%ec%9d%b4%ec%9c%a0",
                          "lastmod":  "2025-10-27T07:44:34+00:00",
@@ -8290,7 +8321,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  253,
+                         "id":  254,
                          "url":  "https://heisenberg.kr/%ec%97%90%eb%84%88%ec%a7%80-%ed%9a%a8%ec%9c%a8%ec%9d%b4-hbm%ec%9d%98-8%eb%b0%b0-%ec%9d%bc%eb%b3%b8%ec%9d%98-%ec%8b%a0%ea%b8%b0%ec%88%a0-bbcube/",
                          "slug":  "%ec%97%90%eb%84%88%ec%a7%80-%ed%9a%a8%ec%9c%a8%ec%9d%b4-hbm%ec%9d%98-8%eb%b0%b0-%ec%9d%bc%eb%b3%b8%ec%9d%98-%ec%8b%a0%ea%b8%b0%ec%88%a0-bbcube",
                          "lastmod":  "2025-10-27T07:45:01+00:00",
@@ -8323,7 +8354,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  254,
+                         "id":  255,
                          "url":  "https://heisenberg.kr/%ec%98%a4%ed%94%88ai%ea%b0%80-%ec%9d%b8%ed%84%b0%eb%84%b7%ec%9d%84-%ed%8c%8c%ea%b4%b4%ed%95%98%ea%b3%a0-%ec%9e%88%eb%8b%a4/",
                          "slug":  "%ec%98%a4%ed%94%88ai%ea%b0%80-%ec%9d%b8%ed%84%b0%eb%84%b7%ec%9d%84-%ed%8c%8c%ea%b4%b4%ed%95%98%ea%b3%a0-%ec%9e%88%eb%8b%a4",
                          "lastmod":  "2025-10-27T07:47:32+00:00",
@@ -8355,7 +8386,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  255,
+                         "id":  256,
                          "url":  "https://heisenberg.kr/%ec%9b%90%ec%a0%84%eb%8f%84-%ec%84%9d%ed%83%84%eb%8f%84-%ed%95%84%ec%9a%94-%ec%97%86%eb%8b%a4-%ec%a7%80%ea%b5%ac-%ed%95%b5%ec%97%90%ec%84%9c-%ea%ba%bc%eb%82%b8-%ec%a7%80%ec%97%b4-%ec%97%90%eb%84%88/",
                          "slug":  "%ec%9b%90%ec%a0%84%eb%8f%84-%ec%84%9d%ed%83%84%eb%8f%84-%ed%95%84%ec%9a%94-%ec%97%86%eb%8b%a4-%ec%a7%80%ea%b5%ac-%ed%95%b5%ec%97%90%ec%84%9c-%ea%ba%bc%eb%82%b8-%ec%a7%80%ec%97%b4-%ec%97%90%eb%84%88",
                          "lastmod":  "2025-10-27T07:49:57+00:00",
@@ -8387,7 +8418,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  256,
+                         "id":  257,
                          "url":  "https://heisenberg.kr/skt_adot/",
                          "slug":  "skt_adot",
                          "lastmod":  "2026-02-03T14:27:13+00:00",
@@ -8421,7 +8452,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  257,
+                         "id":  258,
                          "url":  "https://heisenberg.kr/%ec%84%b8%ea%b3%84-%ec%b5%9c%eb%8c%80%ec%9d%98-%ed%8f%90%ea%b8%b0%eb%ac%bc-%eb%b9%85%ed%85%8c%ed%81%ac-%ec%9b%a8%ec%9d%b4%ec%8a%a4%ed%8a%b8-%eb%a7%a4%eb%8b%88%ec%a7%80%eb%a8%bc%ed%8a%b8wm/",
                          "slug":  "%ec%84%b8%ea%b3%84-%ec%b5%9c%eb%8c%80%ec%9d%98-%ed%8f%90%ea%b8%b0%eb%ac%bc-%eb%b9%85%ed%85%8c%ed%81%ac-%ec%9b%a8%ec%9d%b4%ec%8a%a4%ed%8a%b8-%eb%a7%a4%eb%8b%88%ec%a7%80%eb%a8%bc%ed%8a%b8wm",
                          "lastmod":  "2025-10-27T07:54:59+00:00",
@@ -8453,7 +8484,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  258,
+                         "id":  259,
                          "url":  "https://heisenberg.kr/%ed%95%9c%ea%b5%ad-%ec%8a%a4%ed%83%80%ed%8a%b8%ec%97%85%ea%b3%84-%ec%95%85%ed%94%8c-1%ec%9c%84-%eb%a6%ac%ec%96%bc%ec%9b%94%eb%93%9c-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%eb%84%98%eb%b3%b8%eb%8b%a4/",
                          "slug":  "%ed%95%9c%ea%b5%ad-%ec%8a%a4%ed%83%80%ed%8a%b8%ec%97%85%ea%b3%84-%ec%95%85%ed%94%8c-1%ec%9c%84-%eb%a6%ac%ec%96%bc%ec%9b%94%eb%93%9c-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%eb%84%98%eb%b3%b8%eb%8b%a4",
                          "lastmod":  "2025-11-06T10:35:03+00:00",
@@ -8486,7 +8517,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  259,
+                         "id":  260,
                          "url":  "https://heisenberg.kr/byd_risk/",
                          "slug":  "byd_risk",
                          "lastmod":  "2026-05-16T13:49:26+00:00",
@@ -8520,7 +8551,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  260,
+                         "id":  261,
                          "url":  "https://heisenberg.kr/circle/",
                          "slug":  "circle",
                          "lastmod":  "2026-02-03T14:27:40+00:00",
@@ -8557,7 +8588,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "단기"
                      },
                      {
-                         "id":  261,
+                         "id":  262,
                          "url":  "https://heisenberg.kr/stable_coin/",
                          "slug":  "stable_coin",
                          "lastmod":  "2026-02-03T14:27:28+00:00",
@@ -8587,7 +8618,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  262,
+                         "id":  263,
                          "url":  "https://heisenberg.kr/%ed%95%9c%ea%b5%ad-%ec%b5%9c%ea%b3%a0%ec%9d%98-%ec%9d%b8%ec%9e%ac%eb%8a%94-%ec%9d%98%eb%8c%80%ea%b0%80-%ec%95%84%eb%8b%88%eb%9d%bc-%ea%b3%b5%eb%8c%80%ec%97%90-%ea%b0%84%eb%8b%a4/",
                          "slug":  "%ed%95%9c%ea%b5%ad-%ec%b5%9c%ea%b3%a0%ec%9d%98-%ec%9d%b8%ec%9e%ac%eb%8a%94-%ec%9d%98%eb%8c%80%ea%b0%80-%ec%95%84%eb%8b%88%eb%9d%bc-%ea%b3%b5%eb%8c%80%ec%97%90-%ea%b0%84%eb%8b%a4",
                          "lastmod":  "2025-11-09T14:22:59+00:00",
@@ -8616,7 +8647,7 @@ window.HEISENBERG_DATA = {
                          "textLength":  2309
                      },
                      {
-                         "id":  263,
+                         "id":  264,
                          "url":  "https://heisenberg.kr/lucid/",
                          "slug":  "lucid",
                          "lastmod":  "2026-02-03T14:19:21+00:00",
@@ -8648,7 +8679,7 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  264,
+                         "id":  265,
                          "url":  "https://heisenberg.kr/byd/",
                          "slug":  "byd",
                          "lastmod":  "2026-02-03T14:19:57+00:00",
@@ -8682,75 +8713,263 @@ window.HEISENBERG_DATA = {
                          "horizon":  "중장기"
                      },
                      {
-                         "id":  265,
-                         "url":  "https://heisenberg.kr/lg_satellite/",
-                         "slug":  "lg_satellite",
-                         "lastmod":  "2026-02-03T14:24:23+00:00",
-                         "date":  "2025-07-08",
-                         "title":  "LG전자 실적은 흐림, 기술력은 맑음 – 사막도 뚫은 AI통신",
-                         "category":  "AI",
-                         "author":  "오이",
+                         "id":  266,
+                         "url":  "https://heisenberg.kr/1%eb%85%84-%eb%a7%8c%ec%97%90-300-%ea%b8%89%eb%93%b1-%ed%95%9c%ea%b5%ad%ec%9d%98-%eb%af%b8%eb%9e%98%eb%a1%9c-%ec%9e%90%eb%a6%ac%ec%9e%a1%ec%9d%80-%ed%95%9c%ed%99%94%ec%97%90%ec%96%b4%eb%a1%9c/",
+                         "slug":  "1%eb%85%84-%eb%a7%8c%ec%97%90-300-%ea%b8%89%eb%93%b1-%ed%95%9c%ea%b5%ad%ec%9d%98-%eb%af%b8%eb%9e%98%eb%a1%9c-%ec%9e%90%eb%a6%ac%ec%9e%a1%ec%9d%80-%ed%95%9c%ed%99%94%ec%97%90%ec%96%b4%eb%a1%9c",
+                         "lastmod":  "2025-11-09T14:25:29+00:00",
+                         "date":  "2025-07-07",
+                         "title":  "1년간 300% 급등, 한화에어로스페이스의 분위기가 달라졌다 - 하이젠버그",
+                         "category":  "Latest",
+                         "author":  "",
                          "siteTags":  [
-                                          "#LG전자"
+                                          "#한화에어로스페이스"
                                       ],
                          "themes":  [
+                                        "방산/우주",
+                                        "투자/밸류에이션"
+                                    ],
+                         "companies":  [
+
+                                       ],
+                         "narrative":  "밸류에이션 재분류",
+                         "horizon":  "단기",
+                         "summary":  "K9 자주포는 뛰어난 화력, 기동성, 자동화, 내구성, 경제성 등에서 세계적 수준의 균형 잡힌 성능을 갖추고 있다. 다양한 국가 맞춤형 개량과 현지화 전략으로 글로벌 방산 시장에서 독보적인 경쟁력을 확보했으며 특히 안정적인 부품 공급망과 군수지원(MRO) 체계 구축, 통합 패키지 제공을 통한 ‘기술적 해자’ 형성으로 장기적 우위를 유지 중이다. 그러나 글로벌 방산 시장은 정치·외교적 변수와 유럽 중심의 방산 블록화 등 복잡한 환경에 놓여 있어, 지속적인 투자와 선제적 대응 전략이 필수다. 한화에어로스페이스는 K9 자주포에 대한 기술 리더십을 유지하기 위해 끊임없이 혁신하며, K9의 성공을 일시적 신화에 그치지 않도록 지금 이 순간을 중요한 시험대로 인식해야 한다.",
+                         "headings":  [
+                                          "CHAPTER 1.",
+                                          "결론부터 말하자면, 기술과 시장의 펀더멘털을 고려했을 때 여유만 있으면 ‘무조건 산다’"
+                                      ],
+                         "fullText":  "Latest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nRobotics \n | \n \n 2025.07.07 \n\n1년간 300% 급등, 한화에어로스페이스의 분위기가 달라졌다 \n\n연구자 정보\n\nMissileMind\n 프로필 보기 \n\n출신대학 :\n KAIST \n\n전공 : 항공우주학과\n\n연구분야 : 미사일 탐색기 및 비행 유도/제어 알고리즘\n\n1분 요약\n\nK9 자주포는 뛰어난 화력, 기동성, 자동화, 내구성, 경제성 등에서 세계적 수준의 균형 잡힌 성능을 갖추고 있다. 다양한 국가 맞춤형 개량과 현지화 전략으로 글로벌 방산 시장에서 독보적인 경쟁력을 확보했으며 특히 안정적인 부품 공급망과 군수지원(MRO) 체계 구축, 통합 패키지 제공을 통한 ‘기술적 해자’ 형성으로 장기적 우위를 유지 중이다. 그러나 글로벌 방산 시장은 정치·외교적 변수와 유럽 중심의 방산 블록화 등 복잡한 환경에 놓여 있어, 지속적인 투자와 선제적 대응 전략이 필수다. 한화에어로스페이스는 K9 자주포에 대한 기술 리더십을 유지하기 위해 끊임없이 혁신하며, K9의 성공을 일시적 신화에 그치지 않도록 지금 이 순간을 중요한 시험대로 인식해야 한다. \n\n본문\n\nCHAPTER 1.\n\nK9의 압도적 독주\n\n나는 공군 만기전역을 한 공군 병장이자 미사일 제어 시스템을 전공한 소위 ‘밀덕(밀리터리 덕후)’이다. 밀리터리가 직업이자 취미이기에 관련 커뮤니티, 기사, 유튜브를 매번 챙겨보고 있다. 그런데 요즘 대한민국의 방산 산업이 달라지고 있다는 것이 몸으로 느껴진다.\n\n전세계 자주포 시장의 50%를 한국이 차지한다. 자주포…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 한화에어로스페이스에 투자를 할 것인가?\n\n결론부터 말하자면, 기술과 시장의 펀더멘털을 고려했을 때 여유만 있으면 ‘무조건 산다’\n\n이는 단순히 K9 자주포의 성능이 뛰어나다는 1차원적 평가를 넘어선다. 일론 머스크의 ‘1원칙 사고(First Principles Thinking)’에 입각해 이 문제를 본질부터 파고들면, 그 이유는 더욱 명확해진다. 세상이 불안정해질수록 국가의 제1의무는 ‘생존’이며, …\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#한화에어로스페이스 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nSemiconductor \n\n삼성·하이닉스 위협한다는 ‘메모리 없는 AI’의 진실 \n\nSemiconductor \n 김민우 \n\n4 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n5 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
+                         "textLength":  2355
+                     },
+                     {
+                         "id":  267,
+                         "url":  "https://heisenberg.kr/hbm%ec%97%90%ec%84%9c-%eb%ac%b4%eb%84%88%ec%a7%84-%ec%82%bc%ec%84%b1-cxl%eb%a1%9c-%eb%b6%80%ed%99%9c%ed%95%a0-%ec%88%98-%ec%9e%88%ec%9d%84%ea%b9%8c/",
+                         "slug":  "hbm%ec%97%90%ec%84%9c-%eb%ac%b4%eb%84%88%ec%a7%84-%ec%82%bc%ec%84%b1-cxl%eb%a1%9c-%eb%b6%80%ed%99%9c%ed%95%a0-%ec%88%98-%ec%9e%88%ec%9d%84%ea%b9%8c",
+                         "lastmod":  "2025-11-09T14:26:14+00:00",
+                         "date":  "2025-07-05",
+                         "title":  "CXL, 삼성전자가 선택한 미래 - 하이젠버그",
+                         "category":  "Future",
+                         "author":  "",
+                         "siteTags":  [
+                                          "#SK",
+                                          "#삼성전자"
+                                      ],
+                         "themes":  [
+                                        "AI 인프라",
+                                        "전력망/에너지",
+                                        "반도체 패키징",
+                                        "한국 기업",
+                                        "투자/밸류에이션"
+                                    ],
+                         "companies":  [
+                                           "삼성전자",
+                                           "SK하이닉스"
+                                       ],
+                         "narrative":  "병목/피킹앤쇼벨",
+                         "horizon":  "중기",
+                         "summary":  "삼성전자는 2019년 HBM 투자에 소극적인 결정을 내리며, AI 시대에 메모리 핵심 부품 공급에서 SK하이닉스에 뒤처지게 되었죠. 그 결과, ‘기술의 삼성’이라는 명성에 타격을 입고 주가 역시 부진을 겪고 있습니다. 이에 삼성전자는 새로운 돌파구로 CXL(Compute Express Link) 기술에 주목하고 있으며, 메모리 확장성과 자원 효율을 강화하는 방향으로 전략을 전환하고 있습니다. CXL은 단일 제품이 아닌 CPU, 메모리, 소프트웨어가 유기적으로 연결되는 개방형 생태계로, 고성능보다는 시스템 전반의 비용 절감과 유연성을 중시합니다. 즉 고대역폭이 필요한 AI 학습·추론 환경에서는 HBM에 비해 한계가 존재합니다. 그럼에도 불구하고 CXL은 범용 데이터센터와 중간 수준의 AI 수요에서 충분한 대안을 제시할 수 있으며, 향후 PIM 같은 기술과의 결합을 통해 컴퓨팅 패러다임 자체를 바꿀 잠재력도 가지고 있습니다.",
+                         "headings":  [
+                                          "CHAPTER 1."
+                                      ],
+                         "fullText":  "Future \n\n로그인 \n\n회원 가입 \n\n--\u003e\n\nLatest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nSemiconductor \n | \n \n 2025.07.05 \n\nCXL, 삼성전자가 선택한 미래 \n\n연구자 정보\n\n엘우드\n 프로필 보기 \n\n출신대학 :\n POSTECH \n\n전공 : 전자전기공학과\n\n연구분야 : 통신AI, 메모리\n\n1분 요약\n\n삼성전자는 2019년 HBM 투자에 소극적인 결정을 내리며, AI 시대에 메모리 핵심 부품 공급에서 SK하이닉스에 뒤처지게 되었죠. 그 결과, ‘기술의 삼성’이라는 명성에 타격을 입고 주가 역시 부진을 겪고 있습니다. 이에 삼성전자는 새로운 돌파구로 CXL(Compute Express Link) 기술에 주목하고 있으며, 메모리 확장성과 자원 효율을 강화하는 방향으로 전략을 전환하고 있습니다. CXL은 단일 제품이 아닌 CPU, 메모리, 소프트웨어가 유기적으로 연결되는 개방형 생태계로, 고성능보다는 시스템 전반의 비용 절감과 유연성을 중시합니다. 즉 고대역폭이 필요한 AI 학습·추론 환경에서는 HBM에 비해 한계가 존재합니다. 그럼에도 불구하고 CXL은 범용 데이터센터와 중간 수준의 AI 수요에서 충분한 대안을 제시할 수 있으며, 향후 PIM 같은 기술과의 결합을 통해 컴퓨팅 패러다임 자체를 바꿀 잠재력도 가지고 있습니다. \n\n본문\n\nCHAPTER 1.\n\n초격차의 삼성은 어디로 갔는가\n\n지난 5년 간의 삼성전자 주가 근황을 보면 주주들이 화가 안 날 수가 없다.\n\n10만전자가 될 수 있을 것이라는 기대감을 가졌던 삼성전자는 이제 주가가 6만원만 넘어도 언론이 들썩입니다. 삼성전자의 주가가 바닥을 기고 있는 이유는 삼성전자의 흑역사라고 불리는 2019년의 GOS 사태의 영향부터 HBM…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 CXL 관련 기업에 투자를 할 것인가?\n\n절대 안 한다.\n\n분명 CXL은 성장할 시장임에 틀림없지만 데이터센터의 CPU 교체 주기, 투자 사이클 등의 이유로 HBM처럼 폭발적으로 성장할 수는 없다. 또한 PIM과 같은 미래 기술과 결합한다면 판을 뒤집겠지만 연구실 위에 있는 기술이 상용화되기까지는 너무나 먼 여정이다. 현실적으로 5년 내에 CXL로 인해 주가 상승이 일어날 것 같지는 않으며 오히려 H…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#SK #삼성전자 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nSemiconductor \n\n삼성·하이닉스 위협한다는 ‘메모리 없는 AI’의 진실 \n\nSemiconductor \n 김민우 \n\n4 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n5 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
+                         "textLength":  2438
+                     },
+                     {
+                         "id":  268,
+                         "url":  "https://heisenberg.kr/starlink/",
+                         "slug":  "starlink",
+                         "lastmod":  "2026-02-03T14:24:38+00:00",
+                         "date":  "2025-07-02",
+                         "title":  "국가를 뒤흔드는 머스크의 숨은 야망 - 스타링크의 모든 것 - 하이젠버그",
+                         "category":  "uture",
+                         "author":  "",
+                         "siteTags":  [
+                                          "#스타링크",
+                                          "#테슬라"
+                                      ],
+                         "themes":  [
+                                        "로봇/휴머노이드",
                                         "방산/우주",
                                         "한국 기업"
                                     ],
                          "companies":  [
-                                           "LG"
+                                           "테슬라"
                                        ],
-                         "summary":  "LG전자가 세계 최초로 AI 기반 위성 음성통신 기술을 시연하는데 성공했다! 긴급문자만 가능했던 위성통신을 실시간 음성통화로 확장했고 데이터 압축 기술로 전송속도를 10배 이상 높였다. 사막이나 전쟁 상황, 재난 등 지상망이 없는 곳에서도 1초 내 통화가 가능해진다. 위성통신 시장 선점 경쟁에서 LG의 소프트웨어 역량이 주목받고 있다. 앞으로 글로벌 통신 인프라 판도에 큰 변화가 생길 것이다.",
-                         "headings":  [
-                                          "CHAPTER 1. 나의 생각",
-                                          "CHAPTER 2. 연구 배",
-                                          "CHAPTER 3. 연구 결과",
-                                          "CHAPTER 4. 앞으로의 미래"
-                                      ],
-                         "fullText":  "AI\n2025.07.08\n \nLG전자 실적은 흐림, 기술력은 맑음 – 사막도 뚫은 AI통신\n오이 프로필 보기\n출신대학 : POSTECH\n전공 : 전자전기공학과\n연구분야 : 마이크로파, 안테나\n1분 요약\n\nLG전자가 세계 최초로 AI 기반 위성 음성통신 기술을 시연하는데 성공했다! 긴급문자만 가능했던 위성통신을 실시간 음성통화로 확장했고 데이터 압축 기술로 전송속도를 10배 이상 높였다. 사막이나 전쟁 상황, 재난 등 지상망이 없는 곳에서도 1초 내 통화가 가능해진다. 위성통신 시장 선점 경쟁에서 LG의 소프트웨어 역량이 주목받고 있다. 앞으로 글로벌 통신 인프라 판도에 큰 변화가 생길 것이다.\n\n본문\nCHAPTER 1. 나의 생각\n머스크의 기행\n\n나는 일론 머스크를 싫어한다.\n\n그는 공식 행사 무대에서 전기 톱을 들고 나타나거나[1], 히틀러 연상케 하는 나치식 경례를 하는 등[2], 상식을 벗어난 행동이 많다. 그러나 그는 분명한 천재다. 연구자로 그의 기술적 성과는 인정하지 않을 수 없다. 성향에 대한 호불호는 갈릴 수 있지만, 그의 회사와 기술력은 세계 최고 수준을 넘어서 미래 기술을 이끌고 있다. 전기차, 발사체, 위성 통신. 모두 그의 손에서 나온 기술이다. 그래서 세계 부자 1위가 된 것이리라[3].\n\n머스크는 최근 X에서 한 이용자가 “전기톱 들고 잘 보이려고 애썼던 건 바보 짓이었다”고 꼬집자, “맞는 지적이다. 당시 아르헨티나 대통령인 밀레이가 전기톱을 건네줬고, 그걸 가지고 나갔으며, 지금은 후회한다”고 답하였다.\nLG전자의 새로운 도전\n\n이번 글에서는 그가 개척한 여러 사업 중, 위성 통신과 관련된 이야기와, 이 흐름에 올라탄 LG전자에 대해 알아보려 한다.\n\nLG전자, 분명 기술력은 좋다. 하지만 2025년 2분기 영업이익이 6,391억으로 전년 대비 무려 44.6%나 급감했다. 어마어마한 어닝쇼크다.[36] 국내외 상황이 워낙 좋지 않다보니 당장은 어찌할 도리가 없다. 하지만 우리는 일반적인 뉴스들처럼 보도자료를 복사 붙여넣기하기보다 우리 만의 시각으로 수년 뒤 미래를 해석하는 언론이 아니던가. 오직 하나, 기술력에만 포커스를 맞추고 LG전자에 대해 한번 알아보자.\n\n위성 통신의 존재에 대해선 다들 아실 것이라 생각한다. 2022년 발발한 우크라이나 전쟁에서 러시아의 침공으로 지상망이 마비되자, 스타링크가 우크라이나의 “디지털 생명줄” 역할을 했다. 사견이지만, 심각한 전쟁을 엄청난 마케팅 수단으로 활용했다. 도덕적 측면을 떠나, 이윤과 성장이 목표인 CEO 입장에서는 잘한 행동이다. 외교 협상 카드로까지 부상하며 그 위상을 재고하게 했다.[4] 위성 통신이 새로운 통신 인프라로 자리 잡는 움직임이 보이기 시작했다고 느꼈다. 스타링크 코리아가 출범하고 SKT, KT는 각각 자회사를 통해 위성 통신 시스템을 준비하는 것을 보면 국내에서도 위성 통신 인프라 사업이 보이지 않는 곳에서 준비되고 있음을 알 수 있다.[6] LG 전자에서는 이러한 인공위성 통신 인프라를 활용한 차량 음성통신 솔루션 세계 최초 시연을 선보이기도 했다.[7]\n\nLG전자는 갑자기 왜 위성 통신을 활용한 인공지능 기술을 뽐냈을까. 이 질문은, 위성 통신은 과연 시장성이 있을까?라는 질문과도 이어진다. 즉, 위성 통신이 LTE, 5G에 이어 새로운 통신 인프라로 떠오를 수 있을까?\n\n필자는 application이 관건이라 생각한다. 위성 통신이 잘 활용될 수 있는 선박, 자율주행차, 항공기, UAM, 드론 등 기존 LTE, 5G를 쓰지 못하는 통신 음영지역에서 운용되는 application이 많아질수록 위성 통신이 빛을 발휘할 것이라 생각한다. LG의 임원이 아니기에 속사정은 모르지만, 추측해보자면 위성 통신이 차세대 통신으로 자리 잡을 것이라 생각했기 때문에 이러한 방향성을 선택하지 않았을까 조심스럽게 생각해본다.\n\n프랑스 파리 5GAA에서 시연된 LG의 차량 내 차세대 음성통신 솔루션 (출처:LG전자)\nCHAPTER 2. 연구 배\n위성통신과 ‘NTN’의 등장\n\n용어 설명을 먼저 짚고 넘어가자. NTN(Non-Terrestrial Network)은 비지상망 네트워크라는 뜻으로, 지상 기지국 대신 인공위성 등 지상에 있지 않는 기지국을 활용해 일반 사용자 단말과 직접 통신하는 기술이란 뜻이다. 지상 기지국은 휴대폰 신호를 송수신하는 안테나인데, 보통 아파트 옥상이나 작은 타워 위에 설치된다. 주변을 자세히 둘러보면 아래의 사진과 같은 안테나를 가끔 볼 수 있을 것이다.\n\n지상기지국은 ‘휴대폰과 통신사의 중계소’라고 생각하면 쉽다. 각 지역에 신호를 뿌려주는 역할을 한다.\n\n비지상네트워크는 낮은 궤도에 떠있는 위성 통신만을 뜻하는 것은 아니고, 지상에 있지 않는 기지국 혹은 중계기를 통해 통신하는 네트워크 모두를 말한다. 대표적으로 HAPS(High Altitude Platform Station)라는 게 있는데 성층권 쯤에 떠다니는 드론, 비행선, 항공기를 활용한 하늘 위 통신 기지국이다. AIRBUS에서 시연한 Zephyr가 HAPS다.[8] 상공 20km즈음에 중계기를 띄우는 기술이다. 초기에는 차세대 기술로 주목받았지만, 통신 중계기이므로, 체공 시간이 그야말로 무제한이어야 한다는 한계에 직면했고 지금은 보이지 않는다.\n\n비지상네트워크는 하늘에 띄운 위성이나 드론 등을 통해 지구 어디서든 통신이 가능하게 하는 네트워크다. 지상 기지국\n\n비지상네트워크가 필요한 이유는 어디서든 통신하기 위해서다. 예를 들어 미국을 로드트립 할 때 꼭 알아야 할 주의사항이 있다. 바로 오프라인 지도를 다운 받아 가야 한다는 것이다. 왜냐면 미국 라스베가스에서 그랜드캐니언, 혹은 모뉴먼트 밸리 등으로 여행을 떠날 때 필히 사막을 지나가게 되고, 정말 공포스럽게도 인터넷이 안 터지기 때문이다. 지상 기지국이 없기에 신호가 없는 ‘음영 지역’이다.\n\n사실 이에 대한 기술은 꽤 예전부터 개발되고 연구되고 있었지만, 지금에서야 일론 머스크의 엄청난 마케팅(우크라이나 전쟁)을 통해 다시금 세상에서 주목을 받기 시작했다. 특히, 비지상네트워크(NTN) 중에서도 ‘위성을 이용한 통신’은 최근 국제적으로 공식 5G 규칙을 만드는 표준 기구에서도 본격적으로 논의될 만큼, 미래 통신 기술의 핵심 후보로 주목받고 있다.\n\n위성 통신이 그래서 왜 필요한가? 필요하다. 모빌리티가 다양해지고 있기 때문이다. 앞에서 사막을 달리는 자동차를 예로 들었지만, 이제는 UAM(Urban Air Mobility)부터 드론, 선박, 항공기까지 모빌리티가 다양해졌다. 이들이 통신이 안 되는 문제가 있고, 이는 해결해야 할 문제다. 더군다나 최근 3월 경북 산불로 경북 일대 통신망이 마비된 적이 있었다. 3000여개의 기지국이 불타고, 통신망이 마비되었다. [10] 비슷한 사례로 LA 산불 사건에서도 통신 마비 피해가 있었지만, 스타링크 위성 통신으로 해결한 바 있다. [11] 빈번하진 않지만 늘 있는 자연재해피해를 조금이나마 최소화할 수 있는 해결책이 바로 위성 통신이다.\n\n지상망 vs 위성망\n\n그러면 그렇게 잘 나간다면서 왜 일상에선 체감이 안 되는데? 체감이 되는 것은 5G를 켜게 되면 배터리 누수가 빨라진다는 사실 뿐이다. 아무튼 화제성에 비해 일상에서 체감되기 어려운 이유는 거리에서 오는 한계 때문이다. 우리가 쓰는 휴대폰은 수 킬로미터 이내의 기지국과 통신한다. 반면 LEO(저궤도) 위성은 지상에서 약 550km 이상 떨어져 있다. [12] 이 거리는 신호 송수신에 엄청난 경로 손실을 유발하는데, 현재 휴대폰의 낮은 안테나 이득(–6~0 dBi 수준)과 최대 23 dBm 정도의 출력 표준으로는 이를 만회하기 어렵다. 인체 유해성이나 전파 간섭 문제로 최대 출력이 제한되기 때문이다. [13] 멀리 떨어진 사람에게 작은 목소리로 속삭이는 것과 같다. 상대방(위성)이 듣기 힘드니, 큰 “귀”(대형 안테나)나 큰 “목소리”(고출력 송신기)가 필요하다. 판매 중인 가장 작은 스타링크 안테나 또한 298 x 259mm이다. [14] 이러한 노력으로도 확보 가능한 위성 통신 용량은 제한적이어서, 현재 위성-휴대폰 직통 서비스는 긴급 문자 전송이나 간단한 음성 통화 정도의 저용량 및 저속도로 국한된다.\n\n거리 차이 말고도, 위성 통신을 위해서는 전파가 지구의 전리층을 통과하며, 전리층은 플라즈마 상태의 대기로 인해 전파 간섭이 심하다. 이를 해소하기 위해 신호의 편파를 직선이 아닌 회전하는 형태로 구현하는 기술이 적용된다. 지상망에서 사용되는 선형 편파(LP) 안테나가 아닌 원형 편파(CP) 안테나를 사용한다. [15] 기존 사용하는 전자기기로는 간단한 SOS 문자 이외에는 위성 통신이 되기 힘들다는 것이다. 즉, 새롭게 위성 통신과도 호환이 되는 안테나 및 전자기기가 새롭게 개발되어야 한다는 것이다.\n\n위성 통신의 또 하나의 큰 문제점은 지연시간(latency)이다. 위성은 지상 기지국보다 훨씬 멀리 떨어져 있고 위성은 무려 7.8km/s 속도로 지구 주변을 계속해서 회전한다. [16] 이 때문에 사용자가 연결되어 있는 위성이 지평선 너머로 사라지면, 신호를 끊기지 않게 새로운 위성으로 넘겨주는 ‘핸드오버(hand over)’ 과정이 자주 발생한다. 쉽게 생각해서 마치 릴레이 경주에서 바통을 다음 주자에게 넘기는 것처럼, 데이터 신호를 한 위성에서 다른 위성으로 자연스럽게 넘겨주는 기술인데, 위성의 이동 속도가 워낙 빠르다 보니 이 과정이 수시로 반복되어, 데이터 끊김이나 전송 지연 같은 문제가 자주 발생할 수 있다.\n\n이러한 고질적인 문제를, LG전자는 자체 AI 음성 처리 기술로 음성 데이터를 과감하게 압축해, 위성 통신에서 요구되는 데이터량을 획기적으로 줄임으로써 해소했다. [7] 소프트웨어적 신호처리로 위성 통신의 병목을 뚫었다는 점에서 의미가 크다고 생각된다.\n\nCHAPTER 3. 연구 결과\nLG전자 위성 통신의 힘\nLG전자는 2025년, 세계 최초로 인공위성 기반 음성통신 솔루션을 공개했다.\n\nLG전자가 세계 최초로 시연한 위성 통신을 활용한 양방향 음성통신 기술이 시장에서 어떤 가치를 지닐까? 핵심은 AI 음성 압축 기술로 위성 전송에 필요한 데이터 용량을 크게 줄이고, 기존에 긴급 문자 전송에 국한됐던 위성 통신 서비스를 실시간 음성 대화 수준으로 확장한 점이다. 이로써 음성 메시지 전송 속도가 10배 이상 빨라지고, 양방향 연속 통화까지 가능해졌다. 예를 들어, “도와주세요!” 한 마디를 내뱉고, 119에게 전달되기까지 10초가 걸리던 것을 1초만에 가능하도록 한 것이다. 10초라는 시간은 통신이 안된다고 판단될 정도지만, 1초라면 양방향 통신도 가능할 수 있다. 시연 차량이 파리 도심을 주행하며 지상망(TN)에서 위성망(NTN)으로 전환될 때도 통화 끊김이 발생하지 않았는데, 이는 LG전자가 개발한 자동 망전환 소프트웨어 플랫폼 덕분이었다.\n\n위성 안테나 기술 동향\n\n이번 시연에서 LG전자는 차량에 장착된 평판 위성 안테나를 통해 이동 중 통신을 구현했다. 공식 발표된 사양은 없지만 업계에서는 Kymeta나 Intellian의 전자식 평판 안테나 기술이 활용됐을 것으로 보고 있다. 이 두 기업은 대중들에게 익숙한 기업은 아니지만, 스타링크와 함께 위성 통신 업체에서 떠오르는 기업들이다. 이들이 사용하는 안테나는 크기가 작고, 전자적으로 방향을 바꿀 수 있는 전자식 조향 안테나로, 차량이 달리는 중에도 위성 신호를 계속 추적할 수 있다. Kymeta나 Intellian 같은 회사의 제품을 사용하면, 안테나 크기를 최소화하면서도 신호를 멀리까지 잘 받는 ‘고이득’ 특성을 동시에 얻을 수 있다.[17] 특히 Intellian 은 한국 기업으로, 해상용 VSAT(Very Small Aperture Terminal, 위성 통신을 위해 사용되는 작은 크기의 지상 안테나) 안테나 시장에서 점유율 60%를 차지하는 글로벌 1위 기업이다.[18] 직접 경험해본 사람은 많지 않겠지만… 먼 바다에 나가면 휴대전화가 통하지 않는다. 위성 통신은 이런 바다 한가운데서도 연락이 가능하도록 만들어 준다.\n\n한국 기업 인텔리안의 평판형 안테나. 무려 미군의 인증마저 뚫었는데, 인텔리안의 매출 95%가 수출에서 나온다고 한다.\n\n2025년 현재 위성 통신 안테나 분야에서는 평면형 전자식 안테나를 통한 이동 통신 최적화가 중요한 화두다. 쉽게 설명하면, 대형 안테나가 필요하지만 디자인을 위해 평면형으로 제작된다. 스타링크 안테나가 가장 대표적인 예시다. 또 지구는 공전과 자전을 한다. 심지어 1초에 약 7.8km의 빠른 속도로 움직인다. [16] 지상에 있는 안테나는 끊기지 않는 위성 통신을 하기 위해서는 7.8km/s로 움직이는 약 500km 떨어진 곳의 위성과 양방향으로 신호를 주고받아야 한다. 대충만 생각해도 어렵다. 기존 지상국 안테나는 단말기(휴대폰)는 움직이지만, 기지국은 고정되어있는 상태이다. 하지만 위성 통신에서는 둘다 심지어 고속으로 움직인다. 그만큼 기술력이 필요해진다.[15]\n\n또한, 지구 전체를 생각해보면, 한 대의 위성만으로는 통신이 불가능하다. 지구가 스스로 돌고 있고, 위성도 끊임없이 움직이기 때문에, 처음에는 단말기(휴대폰 등)가 한 위성과 신호를 주고받다가, 위성이 시야(LOS, Line of Sight – 즉, 눈에 보이고 신호가 닿는 범위)를 벗어나면 곧바로 다음 위성으로 연결을 넘겨야 한다. 이렇게 신호를 새로운 위성으로 전환하는 기술을 ‘핸드오버(handover)’라고 부른다. 인텔리안도 영국 런던에 위치한 위성통신 기업인 OneWeb 등과 협력하여, 위성이 빠르게 이동하는 저궤도 환경에서 신호를 빠르고 정확하게 다음 위성으로 넘겨주는 ‘초고속 핸드오버’가 가능한 평면형 단말기를 선보인 바 있다.[19]\n\nSatixFy의 ‘Amber’ 안테나 – 주로 차량용 위성 통신 단말기로 사용된다.\n\n고속으로 움직이는 위성과 안정적으로 통신하려면, 단말기가 위성의 위치를 실시간으로 계속 추적하며 신호 방향을 바꿔줘야 한다. 이런 신호 방향 조절 기술을 ‘빔포밍(beamforming)’이라고 부른다. SatixFy라는 회사는 이런 디지털 빔포밍에 특화된 칩셋을 개발하고 있으며, 이 칩셋을 적용한 전자식 안테나 솔루션은 여러 개의 신호(빔)를 동시에 만들어낼 수 있다. SatixFy의 단말기는 소프트웨어 정의 라디오(SDR, 소프트웨어로 무선 신호를 유연하게 처리하는 기술)와 멀티빔 전자식 조향 안테나(ESMA, 신호를 전자적으로 다양한 방향으로 보내는 안테나) 기술을 적용해, 하나의 장치로 여러 종류의 위성망(저궤도[LEO], 중궤도[MEO], 정지궤도[GEO])에 자유롭게 접속할 수 있는 것이 특징이다.[20]\n\n스타링크에서도 등록한 위성 안테나 특허를 보면, 위에서 언급한 대부분의 위성 통신용 안테나 기술을 특허로 보호받도록 해뒀다. [21] 지연 속도, 주파수 규격, 국가별 roaming 관련 문제 등 보완 및 해결해야할 부분이 여전히 있지만, 완벽히 준비된 상태를 기다리다간 이미 시장은 선점당한 뒤일 것이다. 국내 통신 3사를 생각해보면, 통신 인프라 시장에서는 “선점하는 것” 자체가 엄청난 경쟁력이다.\n\n현재 LG전자의 한계\n\nLG전자는 기존 위성망과 표준 단말을 활용하면서 AI 음성압축 등 소프트웨어 최적화를 통해 품질을 확보하는 전략을 보여주었다. LG전자가 이번 시연에 활용한 기술력에 대해서는 결과만 알 수 있지만, 학계의 타논문들과 비교해볼 수 있다. 2021년 구글 리서치팀 Soundstream 논문[22] 과 2024년 중국 우한대학의 Supercodec 논문[23]이다.\n\n이 그림에서 볼 수 있듯 SoundStream의 비트레이트는 3 kbps로 Opus의 4분의 1 수준이다.\n\n우선 SoundStream[22]은 구글에서 개발한 음성 및 오디오 전용 인공지능 압축 기술이다. 이 기술은 우리가 흔히 사용하는 Zoom, 유튜브, 전화 통화 등에 쓰이는 Opus 같은 기존 코덱보다 훨씬 더 적은 용량(3 kbps)으로도 높은 품질의 소리를 만들어낸다. 여기서 “kbps”는 초당 몇 킬로비트의 데이터를 쓰는지를 나타내는 단위로, 숫자가 작을수록 압축률이 높다는 뜻이다. 놀라운 점은 SoundStream이 기존 Opus 코덱의 12 kbps 수준의 음질을 단 3 kbps로 구현했다는 것이다. 즉, 약 4배나 압축하면서도 음질이 비슷하거나 더 좋았다는 것이다.\n\n다음은 SuperCodec[23]이다. 이 기술은 음성만을 대상으로 한 압축 기술로, 단 1 kbps라는 매우 낮은 비트레이트로도 깨끗한 음성을 복원할 수 있다는 것을 보여줬다. 기존 기술에서는 이렇게 낮은 수준으로 압축하면 목소리가 뭉개지거나 알아듣기 어려운 품질로 떨어졌지만, SuperCodec은 인공지능을 활용해 잃어버린 소리의 디테일을 되살리는 방식으로 이 문제를 해결했다. 특히 소리의 흐름을 되짚으며 디코딩을 보완하는 독특한 구조가 핵심 기술이다. 결과적으로 SuperCodec은 1 kbps로도 기존 코덱보다 더 좋은 음질을 구현해낸 것이다.\n\nLG전자는 명확히 수치를 제시하진 않았다. 그저 전송속도가 10배 이상 빨라졌다는 것 뿐이다. 하지만 위 논문들을 토대로 유추해보았을 때, 일반 코덱 음질을 15~20kbps라고 가정해본다면, 약 1.5~2.0kbps 수준으로 구현했다고 생각해볼 수 있다. LG전자는 실제 시연까지 한 것이기 때문에, 논문에서의 결과들과 수치를 1대1로 비교할 순 없겠지만, 세계적인 기술과 비슷한 수준은 된다고 해석될 수 있다. 그럼에도 필자는 실제 시연에는 모든 주변 회로 및 전체 시스템 최적화가 필요하다는 점을 감안해보면, LG전자의 기술력은 생각보다 많이 앞서있지 않을까 조심스럽게 추측해본다.\n\n개인적으론 LG전자는 가진 기술력에 비해 시장 영향력이 다소 부족하다고 생각한다. 실제로 LG는 세계 최초의 플렉서블폰을 2013년에 출시하고, V40 스마트폰에 다섯 개 카메라를 탑재했으며 G2에 초광각 카메라를 가장 먼저 도입하는 등 혁신적인 시도를 하긴 했다.[24] 2021년에는 출시가 임박했던 롤러블폰 프로토타입이 실물 공개될 정도로 개발이 끝났음에도 제품화되지 못하기도 했다.[25] 최근 LG AI 엑사원의 경우도 마찬가지다. 국내 최고 성능의 AI 기술력을 자랑하지만, 그 영향력이나 시장에 알려진 것은 그에 비해 저조하다.[26] 정말 마케팅의 문제인지, 아니면 영업의 문제인지, 혹은 1% 부족한 기술력의 문제인지는 모르겠지만 말이다.\n\nCHAPTER 4. 앞으로의 미래\n아직 5G도 안 되는데 뭔 위성 통신!?\n\nLTE에서 5G로 넘어간지 몇 년이 됐지만, 아직 사람들에게 5G가 사람들에게 그다지 인상적인 경험을 줬다고 보긴 힘들다. 5G를 켜면 배터리 누수가 빨라지고 굳이 체감이 되지 않는다는 것만 느낄 수 있다. 그러다보니 위성 통신이니 6G니 말하고 다니면 당연히 다들 믿지 않는 눈치이다. 하지만 개인적인 생각은, 아이러니 하게도 한국의 통신 인프라가 OECD 국가 중 1위이기 때문에[27], 위성 통신이 큰 의미를 갖지 못하는 것이라 생각한다. 2022년 ITU(International Telecommunication Union) 연구에 따르면, 전세계 인구의 37%인 약 29억명은 여전히 인터넷에 접속하지 못하고 있는 것으로 나타났으며, 그 중 3억 9천만명은 어떠한 신호도 잡히지 않는 지역에 거주하고 있다. [28]\n\n이런 부분을 생각해봤을때, (물론 경제적인 부분도 존재하겠지만) 넓은 지역을 걸쳐 지상 통신망을 설치하기 힘든 상황이며, 이에 따른 제약을 위성 통신으로 극복하는 것은 충분히 매력있는 아이디어라 생각한다. 지구는 자전하기 때문에, 미국에서 쏘아올린 위성은 인허가 문제만 해결된다면, 어느 나라에서도 쓸 수 있기 때문이다.\n\nSpace X의 로켓으로 스타링크의 위성을 쏘아 올린다. 일론 머스크의 사업들은 모두 유기적으로 연결된 느낌이다.\n\n한가지 문제라고 하면 발사체 문제다. 하지만 미국에서 SpaceX가 스타링크 위성망을 매주 꾸준히 확대하고 있다. 실제로 2025년, SpaceX는 Falcon 9 로켓 36회를 발사해 573기 이상의 스타링크 위성을 궤도에 올렸다. [29] 같은 기간 중국도 차이나텔레콤 산하 기관이 6G 실험용 테라헤르츠 위성 등 시범 발사를 진행했고, 유럽은 11조원 규모 예산으로 290기 위성(IRIS 프로젝트)을 계획하는 등 글로벌 경쟁이 치열하다. [30] 매주 우주 통신 인프라가 설치되고 있는 상황이다.\n\n통신 속도 또한 빠르게 발전 중이다. 미국에서는 스타링크 인터넷 다운로드 속도 기준으로 일부 지역에서 최대 200Mbps 이상의 속도가 관측된다(전국 평균 속도는 104.71Mbps). [31] 이는 Ookla 집계 기준 미국의 평균 유선 광대역 인터넷 속도(약 291Mbps)에는 미치지 못하지만[32], 일부 지역에서는 100~130Mbps 이상의 중위 속도를 기록하고 있다[31]. 한편 인도에서 스타링크 고객은 최대 220Mbps까지 경험할 수 있다고 회사 측이 밝히고 있다.[33] 인구대국 인도의 전국 평균 63.55Mbps[34]와 비교하면, 위성망 도입은 디지털 격차 해소에 기여할 전망이다. 이처럼 넓은 지역에서 지상 인프라만으로 고속통신을 보장하기 어려운 나라들에서는 위성 네트워크가 유력한 대안이 되고 있다.\n\nLG전자의 미래는?\n\n다시 LG전자 입장으로 돌아가보자. 그들은 왜 2025년 5GAA 콘퍼런스에서 차량 탑재형 통신 모듈을 통해 위성을 오가며 실시간 음성통화를 시연했을까? 단순히 기술력을 뽐내기 위해서는 당연히 아닐 것이다. 왜 하필 위성이고, 왜 하필 차량일지를 생각해보자.\n\nKymeta의 위성통신 안테나가 설치된 모습 (출처: 한화시스템). 참고로 미국의 위성통신 스타트업인 Kymeta는 한화시스템에 3,000만 달러의 투자를 받았다.\n\n세계 시장에서 위성 통신이 활성화되더라도, 서론에 말했던 것처럼 하드웨어적인 한계로 인해 휴대폰 등에서 사용되는 지상망을 대체하는 수준은 되지 못할 것이다. 그럼 위성 통신이 가장 잘 쓰일 수 있는 시장은 어디일까? 개인적으로는 모빌리티 분야라고 생각한다. 조금은 큰 안테나가 설치되어도 상대적으로 공간적 문제가 없다[35]. 물론 디자인적으로 다소 불쾌하다고 생각할 수는 있지만 그래도 못 봐주는 수준은 아니다. 차량 색과 맞춰서 적절하게 예쁘게 만들면, 적어도 미국에서는 널리 쓰일 수 있지 않을까 싶다. 무엇보다 자율주행과 전기차 시장이 커져가면서 차량에서 보내는 시간이 많아지고 있다. 자동차라는 모빌리티 내에서 할 수 있는 것들이 많아지면 많아질수록 위성 통신의 최대 장점인, “언제 어디에서든 끊기지 않는 통신”이 가장 빛을 발휘할 것이다.\n\n나는 통신 인프라는 선점의 영역이라 생각한다. 현재 국내 통신 3사가 기술력이 뛰어나서 지금의 위상을 유지하고 있는 것일까? 단언컨대 그건 아니라고 생각한다. 오히려 최근 SKT 해킹 사건을 보면, 독점 비슷하게 시장이 형성된 탓인지, 안주하고 있다는 생각까지도 든다. 이런 부분에서 LG전자는 본인들의 기술력을 살려 위성 통신 시장에 한 걸음 다가간 것이라 생각된다. 선점의 영역인 시장에서 세계 최초라는 타이틀은 굉장한 임팩트가 있을 것이다.\n\n조금 걱정인 것은, 선점이 통하는 것은 인프라 즉 하드웨어 부분이고, 현재 LG전자가 선보인 것은 소프트웨어 영역이다. 이러한 기술력은 언제든지 대체될 수 있기 때문에 방심하지 말고 더 노력해서, LG전자가 세계 시장에 큰 획을 그을 수 있기를 진심으로 기원해 본다.\n\n유튜브\n연구자 의견\n내게 1억이 있다면 LG전자에 투자를 할 것인가?\n\n장기투자라면 BUY, 단기투자라면 NO.\n\nLG전자가 이번에 시연한 신기술은 미래 통신 패러다임의 핵심이 될 기술 혁신이다. LG전자가 마침내 자신의 압도적인 기술력을 실질적인 시장 지배력으로 연결할 최적의 기회를 포착했다고 생각한다.\n\n많은 사람들이 “아직 5G도 체감되지 않는데 무슨 위성 통신이냐”고 반문할 수 있다. 이는 개인적으로 다소 편협한 생각이라고 조…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n멤버십 소개 보기\n좋아요\n\n마음에 든다면 ‘좋아요’를 눌러주세요! 연구진의 인센티브에 반영됩니다.\n\n 좋아요 (4)\n댓글\n\n여러분의 생각을 댓글로 남겨주세요.\n\nahnmg5839 2026년 02월 11일 오후 1:03\n\n인텔리안테크라는 기업도 처음 알게 되었고\n주식 사길 잘했네요\n감사합니다\n\n출처\n1.\n이해준 기자, “\u0027자유 만세, 빌어먹을!\u0027 붉은색 전기톱 치켜 든 머스크, 무슨일”, 중앙일보, 2025\n2.\n이지영 기자, “ ‘나치 경례’ 논란에…머스크 “식상한 공격” 반박”, 중앙일보, 2025\n3.\n이지헌, “자산 500조원\u0027 머스크, 포브스 선정 세계부자 1위에 다시 올라”, 연합뉴스, 2025\n4.\n안세득, 미국, 희토류 광물 협정 제안 거부당하자 우크라이나에 “스타링크 차단” 경고, KBS뉴스, 2025\n5.\n김보라, “머스크, 우크라에 스타링크 안끊어… 폴란드 “다른 공급자 물색”, 동아일보, 2025\n6.\n최가은, 송영근, ”저궤도 위성통신의 활용과 주요 사업자의 서비스 전개 현황, ETRI trends, 2024\n7.\nLG전자, 커넥티드 카를 위한 차세대 인공위성 음성통신 솔루션 최초 시연, LG전자 뉴스룸, 2025\n8.\nhttps://www.airbus.com/en/products-services/defence/uas/zephyr\n9.\nMoniem-Tech, “What is 5G Non-terrestrial network (NTN) Solution?”, 2023\n10.\n선담은, “경북 산불에 통신도 끊겨…도입 5년 만에 첫 ‘재난 로밍’ 발령”, 한겨레, 2025\n11.\nDigital Today, “일론 머스크, LA 산불 피해 지역에 \u0027스타링크\u0027 무료 제공”, 2025\n12.\n공병훈, “우크라이나 전쟁에서 살펴보는 스타링크 기술과 시사점”, 반디뉴스, 2025\n13.\n3GPP TS 36.101, ETSI(유럽전기통신표준협회), 2022\n14.\nSTARLINK MINI Specification, 스타링크 공식 홈페이지\n15.\nSuhila Abulgasem et al, “Antenna Designs for CubeSats A Review”, IEEE Access, 2021\n16.\n최가은, 송영근, “저궤도 위성통신의 활용과 주요 사업자의 서비스 전개 현황, ETRI 전자통신동향분석 자료, 2024\"\n17.\n카이메타 기술 소개, Kymeta 공식 홈페이지\n18.\n인텔리안테크 기업분석 보고서, 한국IR협의회, 2025\n19.\nIntellian and OneWeb Announce Innovative Flat Panel Series for Global LEO Connectivity, Intellian 공식 홈페이지, 2023\n20.\nSatixFy Shareholders Overwhelmingly Approve Proposed Acquisition by MDA Space, SatixFy 공식 홈페이지, 2025\n21.\nAlizera Mahanfar et al, “Antenna Aperture in Phased Array Antenna Systems, Space X Google Patent”, 2019\n22.\nSoundStream: An End-to-End Neural Audio Codec, 구글 리서치, 2021\n23.\nYouqiang Zheng et al, “SuperCodec: A Neural Speech Codec with Selective Back-Projection Network”, IEEE ICASSP, 2024\n24.\nA look back at LG: The wins, the losses, and why it couldn’t survive in the smartphone market, KrASIA, 2021\n25.\nJon Porter, “Watch LG’s tragically-canceled rollable get put through its paces”, theverge, 2022\n26.\n달율밤, “K-AI 카나나 기술적 한계와 전망”, 하이젠버그, 2025\n27.\n한국무역협회, “OECD 회원국 중 5G인프라 1위…디지털역량 우수”, 2024.\n28.\nDavid Curry, “ITU 2.9 Billion Lack Broadband Internet Access”, RTInsights, 2022\n29.\nMatthew Gover, “Satellite Launches Soar to Record Levels in 2025 as New Players Join the Race”, orbitaltoday, 2025.\n30.\nTrisha Ray, “Starlink’s India launch is a crash course on New Delhi’s approach to tech sovereignty”, atlantic council, 2025\n31.\nSue Marek, “Starlink’s U.S. Performance is on the Rise, Making it a Viable Broadband Option in Some States”, Ookla, 2025\n32.\nRobin Layton, “Americans are getting over 290 Mbps in download speed, but are you?”, Allconnect, 2025.\n33.\nStarlink internet in India: Check expected price, speed, and launch details inside, TECHGIG, 2025.\n34.\nDigital 2025: India, DATAreportal, 2025.\n35.\n권오은, “한화시스템, 美 위성통신 벤처에 투자…저궤도 위성 안테나 시장 조준”, 조선비즈, 2020\n36.\n박주평, “LG전자, 2Q 영업익 6391억 전년比 44.6%↓…美 관세 여파(상보)”, 뉴스1, 2025\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다.\n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n멤버십 소개 보기\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다. 혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요!\n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n멤버십 소개 보기\n태그\n#LG전자",
-                         "textLength":  14812,
                          "narrative":  "정책/국방 예산",
-                         "horizon":  "단기"
-                     },
-                     {
-                         "id":  266,
-                         "url":  "https://heisenberg.kr/%ec%97%ad%ec%82%ac%ec%83%81-%ec%b5%9c%ec%95%85%ec%9d%98-%eb%82%9c%ec%a0%9c-%ec%8b%a0%ec%9d%98-%ec%96%b8%ec%96%b4-%eb%aa%a8%eb%93%a0-%ea%b2%83%ec%9d%98-%ec%9d%b4%eb%a1%a0%ec%9d%b4-%eb%93%9c/",
-                         "slug":  "%ec%97%ad%ec%82%ac%ec%83%81-%ec%b5%9c%ec%95%85%ec%9d%98-%eb%82%9c%ec%a0%9c-%ec%8b%a0%ec%9d%98-%ec%96%b8%ec%96%b4-%eb%aa%a8%eb%93%a0-%ea%b2%83%ec%9d%98-%ec%9d%b4%eb%a1%a0%ec%9d%b4-%eb%93%9c",
-                         "lastmod":  "2025-11-09T14:28:54+00:00",
-                         "date":  "2025-07-04",
-                         "title":  "모든 것의 이론(TOE)이 드디어 풀리나 - 하이젠버그",
-                         "category":  "로그인",
-                         "author":  "",
-                         "siteTags":  [
-
-                                      ],
-                         "themes":  [
-                                        "기타"
-                                    ],
-                         "companies":  [
-
-                                       ],
-                         "narrative":  "기술 전환",
                          "horizon":  "중장기",
-                         "summary":  "현대 물리학의 오랜 난제인 양자역학과 일반상대성이론의 통합, 즉 ‘모든 것의 이론’을 향한 새로운 돌파구가 제시되었다. 핀란드의 한 연구팀은 중력을 기존의 시공간 왜곡이 아닌, 다른 힘들처럼 ‘게이지 이론’으로 설명하는 획기적 이론을 발표했다. 이 이론은 중력을 포함한 모든 힘을 단일 방정식으로 통합할 가능성을 열었다. 한편, 이와 같은 이론물리학의 발전을 검증하기 위한 초정밀 양자 센서 기술 또한 비약적으로 발전하고 있다. 흥미롭게도 이 센서 기술은 양자컴퓨터의 핵심인 고품질 큐빗 제작에 필수적이므로, 순수 기초과학 연구가 양자 기술이라는 거대 산업의 기반이 되는 선순환 구조를 만들고 있다.",
+                         "summary":  "러났듯, 스타링크가 제공한 위성 인터넷이 국가 생존의 조건이 되며 일론 머스크는 한 국가조차 좌우하는 영향력을 드러냈습니다. 스타링크는 수만 기의 저궤도 위성망을 기반으로 전 세계 어디서나 인터넷을 제공하며, 기존 위성 통신보다 빠른 속도와 안정성을 앞세웠지만, 한국처럼 인프라가 잘 갖춰진 도심에서는 기존의 통신사들을 대체하긴 어렵습니다. 그러나 국토가 넓거나 인프라가 취약한 국가, 재난 시에는 ‘통신의 마지막 보루’로서 압도적인 가치를 발휘합니다. 머스크가 스타링크에 집착하는 이유는 단순한 돈벌이나 기술 과시를 넘어, 우주·정보 인프라의 주도권을 쥐고 궁극적으로는 인류의 화성 이주까지 노리는 전략적 ‘기반 사업’이기 때문 입니다. 앞으로 6G 시대, 위성 통신은 국가 안보와 주권의 문제로 부상하며, 각국은 ‘통신 영토’ 확보를 위해 치열한 경쟁을 벌일 것이고, 이미 벌이고 있습니다. 스타링크가 국내 통신시장에 직접적 위협은 아니지만, 우리에게 우주 주권의 과제를 던지고 있습니다. 스타링크는 국내 통신시장을 무너뜨리진 않겠지만, 대한민국이 ‘통신 영토’와 ‘우주 주권’을 지키지 못하면 미래 인프라의 스위치가 일론 머스크 손에 넘어갈 지도 모릅니다.",
                          "headings":  [
                                           "CHAPTER 1. 나의 생각"
                                       ],
-                         "fullText":  "로그인 \n\n회원 가입 \n\n--\u003e\n\nLatest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nFuture \n | \n \n 2025.07.04 \n\n모든 것의 이론(TOE)이 드디어 풀리나 \n\n연구자 정보\n\nL\u0027etranger\n 프로필 보기 \n\n출신대학 :\n KAIST \n\n전공 : 원자력 및 양자공학과\n\n연구분야 : 핵융합 경계 플라즈마\n\n1분 요약\n\n현대 물리학의 오랜 난제인 양자역학과 일반상대성이론의 통합, 즉 ‘모든 것의 이론’을 향한 새로운 돌파구가 제시되었다. 핀란드의 한 연구팀은 중력을 기존의 시공간 왜곡이 아닌, 다른 힘들처럼 ‘게이지 이론’으로 설명하는 획기적 이론을 발표했다. 이 이론은 중력을 포함한 모든 힘을 단일 방정식으로 통합할 가능성을 열었다. 한편, 이와 같은 이론물리학의 발전을 검증하기 위한 초정밀 양자 센서 기술 또한 비약적으로 발전하고 있다. 흥미롭게도 이 센서 기술은 양자컴퓨터의 핵심인 고품질 큐빗 제작에 필수적이므로, 순수 기초과학 연구가 양자 기술이라는 거대 산업의 기반이 되는 선순환 구조를 만들고 있다. \n\n본문\n\nCHAPTER 1. 나의 생각\n\n모든 것의 이론\n\n2025년 5월, 믿기 어려운 제목의 기사 가 제 눈을 사로잡았습니다.\n\n ”획기적인 중력이론으로 인해 ‘모든 것의 이론’에 가까워 졌다!”[22] \n\n이 세상에는 풀리지 않은 미스터리가 있습니다. 누군가에게는 사소하게만 느껴질지 모르는 문제이지만, 어떤 이들은 그 수수께끼를 풀기 위해 평생을 바치기도 합니다. ‘모든 것의 이…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 이곳에 투자를 할 것인가?\n\n일단 “관련 주식”을 정의하기 매우 어려운 분야들이고, 본문에서 언급된 회사들의 주식을 산다고 할 지라도 그 선택은 “통일장이론”의 성패와는 관련 없을 것 같습니다. 이 자체가 돈이 되는게 아니니까요.\n\n 즉 ‘모든 것의 이론’ 자체에 직접 투자할 방법은 없지만, 이 연구가 촉발하는 ‘기반 기술(Enabling Technologies)’에 대한 투자 기회는 매우… \n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n4 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n5 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 600만원 vs 6억원, ‘하나의 삼성’이 보여준 각자도생 한국 \n\nOpinion \n 박태균 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
-                         "textLength":  2305
+                         "fullText":  "uture \n\n로그인 \n\n회원 가입 \n\n--\u003e\n\nLatest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nAI \n | \n \n 2025.07.02 \n\n국가를 뒤흔드는 머스크의 숨은 야망 – 스타링크의 모든 것 \n\n연구자 정보\n\n엘우드\n 프로필 보기 \n\n출신대학 :\n POSTECH \n\n전공 : 전자전기공학과\n\n연구분야 : 통신AI, 메모리\n\n1분 요약\n\n러났듯, 스타링크가 제공한 위성 인터넷이 국가 생존의 조건이 되며 일론 머스크는 한 국가조차 좌우하는 영향력을 드러냈습니다. 스타링크는 수만 기의 저궤도 위성망을 기반으로 전 세계 어디서나 인터넷을 제공하며, 기존 위성 통신보다 빠른 속도와 안정성을 앞세웠지만, 한국처럼 인프라가 잘 갖춰진 도심에서는 기존의 통신사들을 대체하긴 어렵습니다. 그러나 국토가 넓거나 인프라가 취약한 국가, 재난 시에는 ‘통신의 마지막 보루’로서 압도적인 가치를 발휘합니다. 머스크가 스타링크에 집착하는 이유는 단순한 돈벌이나 기술 과시를 넘어, 우주·정보 인프라의 주도권을 쥐고 궁극적으로는 인류의 화성 이주까지 노리는 전략적 ‘기반 사업’이기 때문 입니다. 앞으로 6G 시대, 위성 통신은 국가 안보와 주권의 문제로 부상하며, 각국은 ‘통신 영토’ 확보를 위해 치열한 경쟁을 벌일 것이고, 이미 벌이고 있습니다. 스타링크가 국내 통신시장에 직접적 위협은 아니지만, 우리에게 우주 주권의 과제를 던지고 있습니다. 스타링크는 국내 통신시장을 무너뜨리진 않겠지만, 대한민국이 ‘통신 영토’와 ‘우주 주권’을 지키지 못하면 미래 인프라의 스위치가 일론 머스크 손에 넘어갈 지도 모릅니다. \n\n본문\n\nCHAPTER 1. 나의 생각\n\n 국가보다 강한 기업. 기업이 없으면 멸망하는 국가 \n\n우크라이나 군인이 스타링크 터미널을 설치하고 있다.\n\n창작물에서나 볼 수 있던 클리셰가, 현실이 되어가고 있습니다.\n\n러시아가 우크라이나를 침공한 2022년 2월 24일로부터 얼마 되지 않아, 러시아는 우크라이나의 지상 기지국을 포함한 대부분의 인프라를 폭격하여 무력화하였습…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 스타링크에 투자를 할 것인가?\n\n스타링크가 상장 기업이었다면, 저는 미국의 QQQ를 모으듯 적립식으로 매수했을 것 같습니다. 재무제표에 나타나지 않는 가치가 측정하기 힘들 정도로 크다고 생각하며, 42,000개의 위성망이 완성된다면 그 어떤 사기업도 넘볼 수 없는 “기술적 해자”가 완성되는 것입니다. 지구 역사상 이 정도로 강력한 해자를 세운 사기업이 있었을까요? 대형 산불과 같이 통신이…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#스타링크 #테슬라 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nSemiconductor \n\n삼성·하이닉스 위협한다는 ‘메모리 없는 AI’의 진실 \n\nSemiconductor \n 김민우 \n\n4 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n5 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
+                         "textLength":  2568
                      },
                      {
-                         "id":  267,
-                         "url":  "https://heisenberg.kr/%ec%82%bc%ec%84%b1%ea%b3%bc-lg%eb%a5%bc-%eb%b0%94%ec%a7%9d-%eb%92%a4%ec%ab%93%eb%8a%94-%ec%a4%91%ea%b5%ad-oled-%ea%b8%b0%ec%88%a0%ec%9d%98-%eb%af%b8%eb%9e%98%eb%8a%94/",
-                         "slug":  "%ec%82%bc%ec%84%b1%ea%b3%bc-lg%eb%a5%bc-%eb%b0%94%ec%a7%9d-%eb%92%a4%ec%ab%93%eb%8a%94-%ec%a4%91%ea%b5%ad-oled-%ea%b8%b0%ec%88%a0%ec%9d%98-%eb%af%b8%eb%9e%98%eb%8a%94",
-                         "lastmod":  "2025-11-09T14:32:48+00:00",
-                         "date":  "2025-07-03",
-                         "title":  "삼성·LG의 OLED가 위험하다 - 하이젠버그",
-                         "category":  "ergy",
+                         "id":  269,
+                         "url":  "https://heisenberg.kr/agi_5years/",
+                         "slug":  "agi_5years",
+                         "lastmod":  "2025-11-29T05:14:34+00:00",
+                         "date":  "2025-06-26",
+                         "title":  "정말 AGI는 5년 안에 나타날 수 있을까? - 하이젠버그",
+                         "category":  "Energy",
                          "author":  "",
                          "siteTags":  [
-                                          "#BOE",
-                                          "#삼성디스플레이"
+                                          "#OpenAI",
+                                          "#구글"
+                                      ],
+                         "themes":  [
+                                        "AI 인프라",
+                                        "투자/밸류에이션",
+                                        "전력망/에너지"
+                                    ],
+                         "companies":  [
+                                           "OpenAI",
+                                           "구글"
+                                       ],
+                         "narrative":  "효율화의 역설",
+                         "horizon":  "중장기",
+                         "summary":  "오픈AI가 제시한 AGI 달성의 5단계 중 현재의 AI 기술은 2단계에 해당하는 연쇄적 추론능력을 어느정도 갖춘 상태다. 그 동안의 AI 발전 역사를 통해 우리는 인간의 뇌의 효율적인 사고 메커니즘을 영리하게 기술적으로 구현하는 것이 매우 중요함을 알 수 있다. 내가 생각하는 AGI는 인간의 개입없이 자율적 판단과 행동이 가능해야 하고 충분한 데이터 없이도 새로운 분야를 빠르게 학습할 줄 알아야 한다. 이러한 것들이 가능해지기 위해 월드모델의 발전과 강화학습 방법론이 중요할 것이다. 나는 많은 유명한 인물들이 말하는 것처럼 5년 안에 AGI가 개발되지는 않을 거라고 생각하며 그래도 가장 먼저 AGI를 만들 기업으로는 구글을 뽑겠다.",
+                         "headings":  [
+                                          "CHAPTER 1.",
+                                          "결론부터 말하면, 산다. AGI 시대의 최종 승자는 가장 완전한 ‘데이터 제국’과 ‘수직 계열화’를 구축한 기업이 될 것이며, 현재 그 조건에 가장 근접한 플레이어는 구글이다. 만약 1억 원의 자금이 있다면, 구글(GOOGL)과 마이크로소프트(MSFT)에 7:3의 비중으로 투자하는 것이 현시점 가장 합리적인 선택이라 생각한다. 오픈AI의 혁신성을 부정하는 …"
+                                      ],
+                         "fullText":  "Energy \n\nFuture \n\n로그인 \n\n회원 가입 \n\n--\u003e\n\nLatest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nAI \n | \n \n 2025.06.26 \n\n정말 AGI는 5년 안에 나타날 수 있을까? \n\n연구자 정보\n\nYJ\n 프로필 보기 \n\n출신대학 :\n KAIST \n\n전공 : 수학과\n\n연구분야 : LLM 및 강화학습, 수학\n\n1분 요약\n\n오픈AI가 제시한 AGI 달성의 5단계 중 현재의 AI 기술은 2단계에 해당하는 연쇄적 추론능력을 어느정도 갖춘 상태다. 그 동안의 AI 발전 역사를 통해 우리는 인간의 뇌의 효율적인 사고 메커니즘을 영리하게 기술적으로 구현하는 것이 매우 중요함을 알 수 있다. 내가 생각하는 AGI는 인간의 개입없이 자율적 판단과 행동이 가능해야 하고 충분한 데이터 없이도 새로운 분야를 빠르게 학습할 줄 알아야 한다. 이러한 것들이 가능해지기 위해 월드모델의 발전과 강화학습 방법론이 중요할 것이다. 나는 많은 유명한 인물들이 말하는 것처럼 5년 안에 AGI가 개발되지는 않을 거라고 생각하며 그래도 가장 먼저 AGI를 만들 기업으로는 구글을 뽑겠다. \n\n본문\n\nCHAPTER 1.\n\n 수학자도 불안해 하는 시대 \n\nSora를 통해 만든 이미지 (프롬프트: AI의 발전을 보고 놀라는 중년의 수학자)\n\n현 시대를 수학을 전공하고 포닥까지 밟은 입장에서, 현재의 상황을 ‘수학자조차 불안해 하는 시대’라 정의내릴 수 있을 것 같다. 왜냐면 수학은 인간이 할 수 있는 가장 추상적이고 고차원적인 사고라고 여겨져 왔기 때문이다…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 구글(알파벳)에 투자를 할 것인가?\n\n결론부터 말하면, 산다. AGI 시대의 최종 승자는 가장 완전한 ‘데이터 제국’과 ‘수직 계열화’를 구축한 기업이 될 것이며, 현재 그 조건에 가장 근접한 플레이어는 구글이다. 만약 1억 원의 자금이 있다면, 구글(GOOGL)과 마이크로소프트(MSFT)에 7:3의 비중으로 투자하는 것이 현시점 가장 합리적인 선택이라 생각한다. 오픈AI의 혁신성을 부정하는 …\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#OpenAI #구글 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nSemiconductor \n\n삼성·하이닉스 위협한다는 ‘메모리 없는 AI’의 진실 \n\nSemiconductor \n 김민우 \n\n4 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n5 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
+                         "textLength":  2333
+                     },
+                     {
+                         "id":  270,
+                         "url":  "https://heisenberg.kr/%eb%93%9c%eb%94%94%ec%96%b4-%ec%b9%bc-%eb%bd%91%ec%9d%80-%ec%82%bc%ec%84%b1-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%eb%8f%85%ec%a0%90%ec%9d%84-%eb%81%9d%eb%82%bc-%ec%97%b0%ed%95%a9%ea%b5%b0%ec%9d%98/",
+                         "slug":  "%eb%93%9c%eb%94%94%ec%96%b4-%ec%b9%bc-%eb%bd%91%ec%9d%80-%ec%82%bc%ec%84%b1-%ec%97%94%eb%b9%84%eb%94%94%ec%95%84-%eb%8f%85%ec%a0%90%ec%9d%84-%eb%81%9d%eb%82%bc-%ec%97%b0%ed%95%a9%ea%b5%b0%ec%9d%98",
+                         "lastmod":  "2025-11-07T14:47:22+00:00",
+                         "date":  "2025-06-23",
+                         "title":  "삼성전자의 브로드컴 HBM 납품이 의미하는 것 - 하이젠버그",
+                         "category":  "--\u003e",
+                         "author":  "",
+                         "siteTags":  [
+                                          "#SK",
+                                          "#삼성전자"
+                                      ],
+                         "themes":  [
+                                        "AI 인프라",
+                                        "반도체 패키징",
+                                        "한국 기업"
+                                    ],
+                         "companies":  [
+                                           "삼성전자",
+                                           "SK하이닉스",
+                                           "TSMC",
+                                           "AMD"
+                                       ],
+                         "narrative":  "병목/피킹앤쇼벨",
+                         "horizon":  "단기",
+                         "summary":  "과거 이건희 회장의 ‘질’ 경영과 달리, SK하이닉스에 HBM 주도권을 뺏기며 위기에 처한 삼성전자를 진단해보았다. 삼성전자는 최근 기술적 판단 미스를 넘어, 고객 중심 철학의 부재와 조직 문화의 경직으로 인해 경쟁에서 밀려났고, 이는 고객사 문제 해결에 발 벗고 나서는 TSMC의 사례와 대조된다. 하지만 최근 AMD, 브로드컴과의 HBM 공급 계약과 신임 경영진의 변화, 그리고 삼성전자 반도체의 정량적인 수치들은 ‘부활의 신호탄’이라고 볼 수 있다. 삼성전자, 그리고 더 나아가 우리나라가 궁극적으로 세계 시장에서 경쟁력을 갖추기 위해서는 리더의 비전과 ‘비대칭적 보상(주식 보상)’을 통한 파트너십 구축, 그리고 구성원의 절박한 몰입이 필요할 것이다.",
+                         "headings":  [
+                                          "CHAPTER 1."
+                                      ],
+                         "fullText":  "--\u003e\n\nLatest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nSemiconductor \n | \n \n 2025.06.23 \n\n삼성전자의 브로드컴 HBM 납품이 의미하는 것 \n\n연구자 정보\n\n에스오디\n 프로필 보기 \n\n출신대학 :\n Heisenberg Inc. \n\n전공 : 신소재공학부\n\n연구분야 : 반도체 전자패키지, 차량용 반도체\n\n1분 요약\n\n과거 이건희 회장의 ‘질’ 경영과 달리, SK하이닉스에 HBM 주도권을 뺏기며 위기에 처한 삼성전자를 진단해보았다. 삼성전자는 최근 기술적 판단 미스를 넘어, 고객 중심 철학의 부재와 조직 문화의 경직으로 인해 경쟁에서 밀려났고, 이는 고객사 문제 해결에 발 벗고 나서는 TSMC의 사례와 대조된다. 하지만 최근 AMD, 브로드컴과의 HBM 공급 계약과 신임 경영진의 변화, 그리고 삼성전자 반도체의 정량적인 수치들은 ‘부활의 신호탄’이라고 볼 수 있다. 삼성전자, 그리고 더 나아가 우리나라가 궁극적으로 세계 시장에서 경쟁력을 갖추기 위해서는 리더의 비전과 ‘비대칭적 보상(주식 보상)’을 통한 파트너십 구축, 그리고 구성원의 절박한 몰입이 필요할 것이다. \n\n본문\n\nCHAPTER 1.\n\n이건희가 살아있었다면\n\n만약에 이건희 회장이 살아있다면 지금의 상황을 보고 임원들을 모아서 줄빠따를 쳤을 겁니다. 실제로 이건희 회장이 과거 임원을 호되게 질책하던 것이 공개된 적이 있었는데요. 지금 들으면 살벌하기 그지 없습니다. 이건희 회장은 창업주 3남으로 46세에 회장직에 올랐습니다. 지금봐도 상대적으로 어린 나이였고, 임원들 사이에서…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 삼성전자에 투자를 할 것인가?\n\n삼성전자에 투자할 거냐고 묻는다면 얼마 전까지만 해도 절대 쳐다도 안 봤을 겁니다. 나스닥 빅테크들이 몇 배씩 오를 때 내 소중한 돈을 박스피에 넣을 수도 없을 것이요, 근래 삼성전자의 행보들은 분명 아쉬운 점들이 많았기 때문입니다. TSMC가 고객사 설계 잘못까지 자기들 문제로 껴안을 때, 삼성은 책임 소재를 따지는 데 급급한 모습을 보여줬었고 근래 성과…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#SK #삼성전자 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nSemiconductor \n\n삼성·하이닉스 위협한다는 ‘메모리 없는 AI’의 진실 \n\nSemiconductor \n 김민우 \n\n4 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n5 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
+                         "textLength":  2342
+                     },
+                     {
+                         "id":  271,
+                         "url":  "https://heisenberg.kr/tesla_waymo/",
+                         "slug":  "tesla_waymo",
+                         "lastmod":  "2026-02-03T14:19:42+00:00",
+                         "date":  "2025-06-20",
+                         "title":  "테슬라 vs 웨이모... 바보야, 문제는 허가야 - 하이젠버그",
+                         "category":  "가입",
+                         "author":  "",
+                         "siteTags":  [
+                                          "#구글",
+                                          "#테슬라"
+                                      ],
+                         "themes":  [
+                                        "로봇/휴머노이드"
+                                    ],
+                         "companies":  [
+                                           "테슬라",
+                                           "구글"
+                                       ],
+                         "narrative":  "효율화의 역설",
+                         "horizon":  "중기",
+                         "summary":  "자율주행 기술은 더 이상 미래가 아니라 현실이 되고 있으며, 웨이모와 테슬라는 이를 이끄는 대표적인 선두 주자다. 두 기업 모두 자율주행이라는 공통된 목표를 지향하지만, 웨이모는 라이다와 정밀지도를 활용한 보수적이고 안전 중심의 접근을, 테슬라는 카메라 기반의 순수 비전 시스템을 통한 비용 효율성과 확장성을 강조하는 혁신적 전략을 취하고 있다. 웨이모는 높은 안전성과 투명성을 바탕으로 제한된 지역에서 레벨 4 자율주행 서비스를 상용화한 반면, 테슬라는 여전히 레벨 2 수준에 머물러 있으며 기술적 불확실성과 비공개적인 운영 방식으로 인해 신뢰성 논란이 있다. 자율주행 기술이 보편화되기 위해서는 기술 발전뿐만 아니라 법과 제도의 정비, 사회적 합의, 그리고 사용자의 신뢰 확보가 필수적이다. 이러한 측면에서 웨이모는 상대적으로 적극적인 대응을 보이고 있는 반면, 테슬라는 다소 미흡하다는 평가를 받고 있다. 물론 웨이모 역시 고가의 센서와 막대한 연구개발 비용으로 인해 상업적 지속 가능성에 대한 우려가 있으며, 느린 서비스 확장 속도 또한 해결해야 할 과제다. 그럼에도 불구하고, 자율주행의 성공이 단순한 기술 발전을 넘어 사회적 수용과 정책적 기반 위에서 이루어져야 한다는 점을 고려할 때, 웨이모의 보수적인 안전 중심 접근, 규제 기관과의 협력을 통한 제도 개선 노력, 그리고 기술 보고서 및 데이터의 투명한 공개를 통한 신뢰 구축 전략은 장기적인 관점에서 긍정적으로 평가할 수 있다.",
+                         "headings":  [
+                                          "CHAPTER 1."
+                                      ],
+                         "fullText":  "Latest\nSemiconductor\nAI\nBiotechnology\nRobotics\nMembership\nNewsletter\n로그인\nROBOTICS | 2025.06.20\n   \n테슬라 vs 웨이모… 바보야, 문제는 허가야\nMissileMind 프로필 보기\n출신대학 : KAIST\n전공 : 항공우주학과\n연구분야 : 미사일 탐색기 및 비행 유도/제어 알고리즘\n1분 요약\n\n자율주행 기술은 더 이상 미래가 아니라 현실이 되고 있으며, 웨이모와 테슬라는 이를 이끄는 대표적인 선두 주자다. 두 기업 모두 자율주행이라는 공통된 목표를 지향하지만, 웨이모는 라이다와 정밀지도를 활용한 보수적이고 안전 중심의 접근을, 테슬라는 카메라 기반의 순수 비전 시스템을 통한 비용 효율성과 확장성을 강조하는 혁신적 전략을 취하고 있다. 웨이모는 높은 안전성과 투명성을 바탕으로 제한된 지역에서 레벨 4 자율주행 서비스를 상용화한 반면, 테슬라는 여전히 레벨 2 수준에 머물러 있으며 기술적 불확실성과 비공개적인 운영 방식으로 인해 신뢰성 논란이 있다. 자율주행 기술이 보편화되기 위해서는 기술 발전뿐만 아니라 법과 제도의 정비, 사회적 합의, 그리고 사용자의 신뢰 확보가 필수적이다. 이러한 측면에서 웨이모는 상대적으로 적극적인 대응을 보이고 있는 반면, 테슬라는 다소 미흡하다는 평가를 받고 있다. 물론 웨이모 역시 고가의 센서와 막대한 연구개발 비용으로 인해 상업적 지속 가능성에 대한 우려가 있으며, 느린 서비스 확장 속도 또한 해결해야 할 과제다. 그럼에도 불구하고, 자율주행의 성공이 단순한 기술 발전을 넘어 사회적 수용과 정책적 기반 위에서 이루어져야 한다는 점을 고려할 때, 웨이모의 보수적인 안전 중심 접근, 규제 기관과의 협력을 통한 제도 개선 노력, 그리고 기술 보고서 및 데이터의 투명한 공개를 통한 신뢰 구축 전략은 장기적인 관점에서 긍정적으로 평가할 수 있다.\n\n본문\nCHAPTER 1.\n바보야, 문제는 허가야\n\n자율주행이 필요한 이유는 무엇인가? 단지 운전이 귀찮고 이동이 불편하다는 이유만으로 천문학적인 돈과 인력을 쏟아붓는 것이 정당화될 수 있을까? 수십 톤의 미사일을 오차없이 목표를 타격하게 만드는 유도제어 기술을 연구하며 내가 얻은 결론은, 기술의 ‘완벽함’이 그것의 ‘지배적 수용’을 결코 보장하지 않는다는 냉정한 현실…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n로그인 멤버십 소개 보기\n연구자 의견\n내게 1억이 있다면 웨이모에 투자를 할 것인가?\n\n웨이모는 실제 택시 서비스 운영과 사용자들의 경험 및 후기를 종합적으로 살펴볼 때, 타 기업보다 안정적이고 신뢰할 수 있는 자율주행 기술을 구현하고 있는 것으로 평가된다. 기술적 우위를 단정 짓기는 어렵지만, 현재로서는 웨이모가 실질적인 자율주행 수준에 더 근접해 있다는 판단이다. 향후 자율주행 생태계를 선점한 기업이 일정 기간 시장을 독점하는 양상이 전개…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n로그인 멤버십 소개 보기\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다.\n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n로그인 멤버십 소개 보기\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다. 혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요!\n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n로그인 멤버십 소개 보기\n태그\n#구글#테슬라\n인기 글\n1\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁\n2\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다\n3\n삼성·하이닉스 위협한다는 ‘메모리 없는 AI’의 진실\n4\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유\n5\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태\n6\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’\n7\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유\n8\n한국 ‘게임주’의 시대가 저문다\n회사소개 문의하기 개인정보처리방침 이용약관 사이트맵\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기\n\n[책임문구]\n모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
+                         "textLength":  2279
+                     },
+                     {
+                         "id":  272,
+                         "url":  "https://heisenberg.kr/ms_vs_openai/",
+                         "slug":  "ms_vs_openai",
+                         "lastmod":  "2025-11-29T05:13:55+00:00",
+                         "date":  "2025-06-19",
+                         "title":  "오픈AI를 앞세운 마이크로소프트 vs 유튜브를 품은 구글 - 하이젠버그",
+                         "category":  "Semiconductor",
+                         "author":  "",
+                         "siteTags":  [
+                                          "#구글",
+                                          "#마이크로소프트"
+                                      ],
+                         "themes":  [
+                                        "반도체 패키징"
+                                    ],
+                         "companies":  [
+                                           "구글"
+                                       ],
+                         "narrative":  "효율화의 역설",
+                         "horizon":  "단기",
+                         "summary":  "LLM의 할루시네이션은 AI가 잘못된 정보를 사실처럼 전달하는 현상으로, 구글과 Air Canada 사례처럼 기업에 심각한 손실과 법적 책임을 초래할 수 있다. 할루시네이션이 발생하는 근본적인 원인은 LLM이 문장의 진위 판단 없이 확률적으로 다음 단어를 선택하는 자기 회귀적 방식과 모델 내부의 지식(파라메트릭 메모리)의 한계 때문이다. 최근 등장한 RAG(Retrieval-Augmented Generation)는 외부 데이터베이스를 참조하여 답변의 정확성을 높이고 최신 정보를 제공할 수 있는 기술로, 할루시네이션 문제를 효과적으로 완화할 수 있다. 그러나 RAG 역시 DB의 품질과 최신성에 의존하기 때문에 완전한 해결책은 아니며, 기업들은 이를 파인튜닝과 결합한 하이브리드 방식으로 비용 효율적이고 도메인 특화된 서비스를 구현할 수 있다.\n\n특히 독점적 데이터(예: 법률 자료)를 보유한 기업들이 RAG를 활용하면 경쟁력 있는 차별화된 AI 서비스를 개발할 수 있으며, 사용자의 분별력을 강조하면서도 소비자들의 신뢰 문제를 해결할 현실적인 방안으로 자리 잡을 전망이다.",
+                         "headings":  [
+                                          "CHAPTER 1."
+                                      ],
+                         "fullText":  "Semiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nAI \n | \n \n 2025.06.19 \n\n오픈AI를 앞세운 마이크로소프트 vs 유튜브를 품은 구글 \n\n연구자 정보\n\n레몬맛콜라사탕\n 프로필 보기 \n\n출신대학 :\n KAIST \n\n전공 : 데이터사이언스\n\n연구분야 : Neuralimaging, Computational Nueroscience\n\n1분 요약\n\nLLM의 할루시네이션은 AI가 잘못된 정보를 사실처럼 전달하는 현상으로, 구글과 Air Canada 사례처럼 기업에 심각한 손실과 법적 책임을 초래할 수 있다. 할루시네이션이 발생하는 근본적인 원인은 LLM이 문장의 진위 판단 없이 확률적으로 다음 단어를 선택하는 자기 회귀적 방식과 모델 내부의 지식(파라메트릭 메모리)의 한계 때문이다. 최근 등장한 RAG(Retrieval-Augmented Generation)는 외부 데이터베이스를 참조하여 답변의 정확성을 높이고 최신 정보를 제공할 수 있는 기술로, 할루시네이션 문제를 효과적으로 완화할 수 있다. 그러나 RAG 역시 DB의 품질과 최신성에 의존하기 때문에 완전한 해결책은 아니며, 기업들은 이를 파인튜닝과 결합한 하이브리드 방식으로 비용 효율적이고 도메인 특화된 서비스를 구현할 수 있다.\n\n특히 독점적 데이터(예: 법률 자료)를 보유한 기업들이 RAG를 활용하면 경쟁력 있는 차별화된 AI 서비스를 개발할 수 있으며, 사용자의 분별력을 강조하면서도 소비자들의 신뢰 문제를 해결할 현실적인 방안으로 자리 잡을 전망이다. \n\n본문\n\nCHAPTER 1.\n\n “AI는 당신의 뇌를 썩게 만든다.” \n\n최근 New Atlas에 실린 이 충격적인 제목은 단순한 클릭베이트가 아니다. [11] 스탠퍼드 대학의 심리학자들이 주도한 연구에 따르면, ChatGPT의 도입은 사용자로 하여금 더 자주, 더 무비판적으로 AI의 도움을 받도록 만들며, 결과적으로 인간의 판단력, 창의성, 사고 체계에 부정적인 영향을 준다…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 관련 기업에 투자를 할 것인가?\n\n나는 구글에 투자하겠다. AI 데이터 전쟁의 최종 승자는 알파벳(구글)이 될 것이다. 정말 정치 사회적인 것 없이 기술만 놓고 본다면, 현재 시간 기준으론 AI 패권 전쟁의 핵심 투자처로 알파벳(NASDAQ: GOOGL)을 최우선으로 지정하고, 보조적으로 마이크로소프트(NASDAQ: MSFT)와 엔비디아(NASDAQ: NVDA)를 포트폴리오에 편입하는 것이…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#구글 #마이크로소프트 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nSemiconductor \n\n삼성·하이닉스 위협한다는 ‘메모리 없는 AI’의 진실 \n\nSemiconductor \n 김민우 \n\n4 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n5 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
+                         "textLength":  2525
+                     },
+                     {
+                         "id":  273,
+                         "url":  "https://heisenberg.kr/waymo/",
+                         "slug":  "waymo",
+                         "lastmod":  "2026-02-03T14:19:05+00:00",
+                         "date":  "2025-06-11",
+                         "title":  "테슬라를 위협하는 웨이모의 기술력, 구글에 투자해야 할까 - 하이젠버그",
+                         "category":  "로그인",
+                         "author":  "",
+                         "siteTags":  [
+                                          "#구글",
+                                          "#테슬라"
+                                      ],
+                         "themes":  [
+                                        "로봇/휴머노이드",
+                                        "투자/밸류에이션"
+                                    ],
+                         "companies":  [
+                                           "테슬라",
+                                           "구글"
+                                       ],
+                         "narrative":  "효율화의 역설",
+                         "horizon":  "중장기",
+                         "summary":  "완전 자율주행 기술은 꿈의 기술이다. 자면서도 운전할 수 있고, 개인 택시가 생기는 셈이기 때문이다. 미국의 대표적인 자율주행 기업인 테슬라와 웨이모의 기술적 차이를 확인해보자. 테슬라는 Vision-Only 철학이다. 카메라만을 통해 자율주행을 하려한다. 사람과 마찬가지 메커니즘을 적용한다. 웨이모는 센서 융합 전략이다. 레이더, 라이다, 카메라 총 3종류의 센서를 융합하여 최고의 효율로 센싱을 하려 한다. 웨이모는 완전 자율주행을 위해 고정밀 지도가 필요하다. 하지만 테슬라는 각 차량이 하나의 사람이 되고, 그 사람들이 하나의 클라우드에서 정보를 공유하여, 처음 가는 지역에서도 자유롭게 완전 자율주행이 가능하다. 각 기업의 장단점을 통해, 독자 나름대로의 판단을 갖고, 기업을 분석하면 좋겠다.",
+                         "headings":  [
+
+                                      ],
+                         "fullText":  "로그인 \n\n회원 가입 \n\n--\u003e\n\nLatest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nRobotics \n | \n \n 2025.06.11 \n\n테슬라를 위협하는 웨이모의 기술력, 구글에 투자해야 할까 \n\n연구자 정보\n\n오이\n 프로필 보기 \n\n출신대학 :\n POSTECH \n\n전공 : 전자전기공학과\n\n연구분야 : 마이크로파, 안테나\n\n1분 요약\n\n완전 자율주행 기술은 꿈의 기술이다. 자면서도 운전할 수 있고, 개인 택시가 생기는 셈이기 때문이다. 미국의 대표적인 자율주행 기업인 테슬라와 웨이모의 기술적 차이를 확인해보자. 테슬라는 Vision-Only 철학이다. 카메라만을 통해 자율주행을 하려한다. 사람과 마찬가지 메커니즘을 적용한다. 웨이모는 센서 융합 전략이다. 레이더, 라이다, 카메라 총 3종류의 센서를 융합하여 최고의 효율로 센싱을 하려 한다. 웨이모는 완전 자율주행을 위해 고정밀 지도가 필요하다. 하지만 테슬라는 각 차량이 하나의 사람이 되고, 그 사람들이 하나의 클라우드에서 정보를 공유하여, 처음 가는 지역에서도 자유롭게 완전 자율주행이 가능하다. 각 기업의 장단점을 통해, 독자 나름대로의 판단을 갖고, 기업을 분석하면 좋겠다. \n\n본문\n\n테슬라 쇼크 : 웨이모의 시대?\n\n언제부턴가 테슬라를 통해 전기차 유행이 불고, 최근 전기차 캐즘(Chasm)존에 빠져있지만 여전히 자율주행 기술에 대한 관심은 뜨겁다. 2000년대 초반 닷컴버블때만 하더라도, 미국에서 가장 영향력 있는 인물을 꼽으라면 스티브 잡스나 빌 게이츠와 같은 휴대폰과 인터넷 기업의 유명 CEO들이 가장 먼저 떠올랐겠지만, 지금은 아무…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 테슬라에 투자를 할 것인가?\n\n기본적으로 완전 자율주행이 윤리적 문제를 해결할 수 있을까에 대한 답이 내려지지 않을 때까지는 사지 않을 것 같다. 기술력은 당연히 가능하겠지만, 만 번에 한 번, 혹은 10년에 한 번씩 있을 법한 주행 중 사고 이슈에 대해 완전 자율주행이 된다면 그 책임을 모두 기업에게 돌릴 것인가에 대한 의문이 있다. 이러한 법적인, 윤리적인 문제가 해결되려면 많은 시…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#구글 #테슬라 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nSemiconductor \n\n삼성·하이닉스 위협한다는 ‘메모리 없는 AI’의 진실 \n\nSemiconductor \n 김민우 \n\n4 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n5 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
+                         "textLength":  2362
+                     },
+                     {
+                         "id":  274,
+                         "url":  "https://heisenberg.kr/%ec%a0%84%ea%b3%a0%ec%b2%b4-%eb%b0%b0%ed%84%b0%eb%a6%ac%ec%9d%98-%ec%83%81%ec%9a%a9%ed%99%94-%ec%a0%84%eb%a7%9d-%ec%95%88%ec%a0%84%ec%84%b1%ea%b3%bc-%ea%b8%b0%ec%88%a0%ec%a0%81-%ea%b3%bc%ec%a0%9c/",
+                         "slug":  "%ec%a0%84%ea%b3%a0%ec%b2%b4-%eb%b0%b0%ed%84%b0%eb%a6%ac%ec%9d%98-%ec%83%81%ec%9a%a9%ed%99%94-%ec%a0%84%eb%a7%9d-%ec%95%88%ec%a0%84%ec%84%b1%ea%b3%bc-%ea%b8%b0%ec%88%a0%ec%a0%81-%ea%b3%bc%ec%a0%9c",
+                         "lastmod":  "2025-11-01T05:11:02+00:00",
+                         "date":  "2025-06-04",
+                         "title":  "전고체 배터리의 상용화 전망 : 안전성과 기술적 과제 - 하이젠버그",
+                         "category":  "입",
+                         "author":  "",
+                         "siteTags":  [
+                                          "#BMW",
+                                          "#배터리",
+                                          "#삼성SDI",
+                                          "#전고체전지"
                                       ],
                          "themes":  [
                                         "전력망/에너지",
@@ -8759,217 +8978,71 @@ window.HEISENBERG_DATA = {
                                         "투자/밸류에이션"
                                     ],
                          "companies":  [
-                                           "LG"
+                                           "삼성SDI",
+                                           "LG",
+                                           "CATL",
+                                           "LG에너지솔루션",
+                                           "SK온"
                                        ],
                          "narrative":  "상용화 검증",
-                         "horizon":  "단기",
-                         "summary":  "한국은 과거 LCD 패널 시장에서 압도적 기술력과 점유율을 자랑했지만, 중국의 정부 주도 대규모 투자와 저가 공세에 밀려 시장 주도권을 내줬다. 현재는 OLED, 특히 LTPO OLED 분야에서 삼성디스플레이와 LG디스플레이가 기술, 특허, 양산 경험 등에서 세계 선두를 지키고 있다. LTPO OLED는 고주사율과 저전력을 동시에 실현하며, 스마트폰·웨어러블·전기차 등 차세대 전자기기에서 핵심 디스플레이 기술로 각광받고 있다. 그러나 중국 BOE 등 후발주자들은 대규모 설비 투자와 내수 시장 기반, 공격적인 가격 전략을 바탕으로 빠르게 점유율을 확대하고 있다. 2022년만 해도 한국이 전 세계 LTPO 패널의 98%를 차지했으나, 불과 1~2년 만에 중국 비중이 25%로 늘며 격차가 급속히 줄고 있다.",
+                         "horizon":  "중기",
+                         "summary":  "한국 배터리 3사에 ‘최후통첩’이 떨어진 것일 지도 모릅니다. 삼성SDI, LG에너지솔루션, SK온은 전기차 캐즘과 중국의 공세에 적자 전환했고 점유율 하락으로 위기입니다. 중국 CATL은 정부 보조금 덕분에 글로벌 시장을 빠르게 잠식 중입니다. 이 와중에 갑작스럽게 BMW가 전고체 배터리 탑재 전기차를 세계 최초로 주행에 성공했습니다. 삼성SDI는 황화물계 전고체 배터리에 선제 투자했지만, 기술적 허들이 남아있는 상황입니다. 이미 일본 토요타는 특허, 공급망, 양산까지 준비하며 하이브리드로 테스트를 병행하고 있습니다.전고체 배터리는 주행거리 1,000km와 10분 완충이 가능하나 제조 원가와 원재료가 걸림돌이었죠. 하지만 이제 2~3년 내로 실제 차량에 접목될 것이라는 전망이 나오고 있는데요. 그 주인공은 황화리튬 기반의 전고체 배터리입니다. 만약 일본과 독일, 미국 등이 전고체 배터리 시장의 주도권을 가져가버리게 된다면, 한국의 2차전지는 정말 사활에 놓이게 됩니다.",
                          "headings":  [
                                           "CHAPTER 1."
                                       ],
-                         "fullText":  "ergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\n--\u003e\n\nLatest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nSemiconductor \n | \n \n 2025.07.03 \n\n삼성·LG의 OLED가 위험하다 \n\n연구자 정보\n\n쿼카\n 프로필 보기 \n\n출신대학 :\n KAIST \n\n전공 : 반도체공학대학원\n\n연구분야 : 반도체 패키징\n\n1분 요약\n\n한국은 과거 LCD 패널 시장에서 압도적 기술력과 점유율을 자랑했지만, 중국의 정부 주도 대규모 투자와 저가 공세에 밀려 시장 주도권을 내줬다. 현재는 OLED, 특히 LTPO OLED 분야에서 삼성디스플레이와 LG디스플레이가 기술, 특허, 양산 경험 등에서 세계 선두를 지키고 있다. LTPO OLED는 고주사율과 저전력을 동시에 실현하며, 스마트폰·웨어러블·전기차 등 차세대 전자기기에서 핵심 디스플레이 기술로 각광받고 있다. 그러나 중국 BOE 등 후발주자들은 대규모 설비 투자와 내수 시장 기반, 공격적인 가격 전략을 바탕으로 빠르게 점유율을 확대하고 있다. 2022년만 해도 한국이 전 세계 LTPO 패널의 98%를 차지했으나, 불과 1~2년 만에 중국 비중이 25%로 늘며 격차가 급속히 줄고 있다. \n\n본문\n\nCHAPTER 1.\n\nLCD의 악몽 재현되나?\n\n지금 여러분이 사용하고 있는 스마트폰, 아이폰이든 갤럭시든 거의 모두 OLED 디스플레이를 탑재하고 있습니다. 이제는 LCD를 쓴 스마트폰을 찾아보기조차 힘들죠. 그리고 이 OLED 시장에서 한국 기업들이 압도적인 기술력과 점유율로 세계 1~2위를 차지하고 있습니다. 불과 7~8년 전만 해도 “한국 OLED는 절대 …\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 디스플레이 섹터에 투자를 할 것인가?\n\n삼성디스플레이와 LG디스플레이 두 기업 모두 LTPO OLED 분야에서 세계적 선도 기업의 위상을 갖추고 있습니다. 내 돈 주고 내가 투자한다면 삼성디스플레이에 7, LG디스플레이에 3의 비율로 투자할 겁니다. LTPO OLED는 120Hz 이상의 고주사율과 극저전력을 동시에 실현하는 차세대 디스플레이 기술로, 스마트폰과 웨어러블, XR(확장현실), 자동차…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#BOE #삼성디스플레이 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n4 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n5 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 600만원 vs 6억원, ‘하나의 삼성’이 보여준 각자도생 한국 \n\nOpinion \n 박태균 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
-                         "textLength":  2381
-                     },
-                     {
-                         "id":  268,
-                         "url":  "https://heisenberg.kr/%ec%97%94%eb%b9%84%eb%94%94%ec%95%84%ec%97%90-%eb%a7%9e%ec%84%a0-%ed%95%9c%ea%b5%ad%ed%8c%90-%eb%a1%9c%eb%b4%87ai-%eb%b9%84%ed%8c%90%ec%9d%b4-%ec%8f%9f%ec%95%84%ec%a7%80%eb%8a%94-%ec%9d%b4%ec%9c%a0/",
-                         "slug":  "%ec%97%94%eb%b9%84%eb%94%94%ec%95%84%ec%97%90-%eb%a7%9e%ec%84%a0-%ed%95%9c%ea%b5%ad%ed%8c%90-%eb%a1%9c%eb%b4%87ai-%eb%b9%84%ed%8c%90%ec%9d%b4-%ec%8f%9f%ec%95%84%ec%a7%80%eb%8a%94-%ec%9d%b4%ec%9c%a0",
-                         "lastmod":  "2025-11-06T10:06:43+00:00",
-                         "date":  "2025-07-01",
-                         "title":  "한국 RFM 스타트업",
-                         "category":  "uture",
-                         "author":  "",
-                         "siteTags":  [
-                                          "#리얼월드",
-                                          "#엔비디아"
-                                      ],
-                         "themes":  [
-                                        "AI 인프라",
-                                        "로봇/휴머노이드",
-                                        "한국 기업"
-                                    ],
-                         "companies":  [
-                                           "엔비디아"
-                                       ],
-                         "narrative":  "기술 전환",
-                         "horizon":  "중장기",
-                         "summary":  "‘리얼월드’는 휴머노이드 기반 로봇용 AI, 즉 로봇 기반 모델(RFM)을 개발하려는 한국의 스타트업이다. 이들은 한국 및 일본에 풍부한 제조업에 특화된 섬세한 손동작 데이터를 중심으로 한 학습 전략을 통해, 빅테크가 주도하고 있는 로봇 지능 경쟁에 도전하고 있다.\n\nGPT가 방대한 텍스트 데이터를 통해 성공했듯, RFM 또한 언어-비전-행동의 고차원 데이터를 얼마나 확보하느냐가 핵심이다. 그러나 실제 보안상의 문제로 양질의 데이터를 충분히 확보할 수 있을지는 미지수이다. 특히 손 제어에는 촉각까지 포함한 MLA(Multimodal Language Action)이 필수적이며, 이는 빅테크의 당연한 다음 목표가 될 것이다.\n\n즉, 리얼월드는 빅테크와의 정면승부를 선언한 셈이다. 긍정적인 평가를 내리기 어렵지만, 한국과 일본의 숙련공 데이터라는 희귀한 자원에 집중한다면 일말이라도 반전의 기회는 여전히 존재할 수 있지 않을까? 올해 말 예정된 첫 시연이 그 가능성을 입증할 중대한 시험대가 될 것이다.",
-                         "headings":  [
-                                          "CHAPTER 1. 나의 생각"
-                                      ],
-                         "fullText":  "uture \n\n로그인 \n\n회원 가입 \n\n--\u003e\n\nLatest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nRobotics \n | \n \n 2025.07.01 \n\n한국 RFM 스타트업 ‘리얼월드’가 손에 집중하는 이유 \n\n연구자 정보\n\n카지토\n 프로필 보기 \n\n출신대학 :\n POSTECH \n\n전공 : 전기공학과\n\n연구분야 : 로보틱스 제어\n\n1분 요약\n\n‘리얼월드’는 휴머노이드 기반 로봇용 AI, 즉 로봇 기반 모델(RFM)을 개발하려는 한국의 스타트업이다. 이들은 한국 및 일본에 풍부한 제조업에 특화된 섬세한 손동작 데이터를 중심으로 한 학습 전략을 통해, 빅테크가 주도하고 있는 로봇 지능 경쟁에 도전하고 있다.\n\nGPT가 방대한 텍스트 데이터를 통해 성공했듯, RFM 또한 언어-비전-행동의 고차원 데이터를 얼마나 확보하느냐가 핵심이다. 그러나 실제 보안상의 문제로 양질의 데이터를 충분히 확보할 수 있을지는 미지수이다. 특히 손 제어에는 촉각까지 포함한 MLA(Multimodal Language Action)이 필수적이며, 이는 빅테크의 당연한 다음 목표가 될 것이다.\n\n즉, 리얼월드는 빅테크와의 정면승부를 선언한 셈이다. 긍정적인 평가를 내리기 어렵지만, 한국과 일본의 숙련공 데이터라는 희귀한 자원에 집중한다면 일말이라도 반전의 기회는 여전히 존재할 수 있지 않을까? 올해 말 예정된 첫 시연이 그 가능성을 입증할 중대한 시험대가 될 것이다.\n\n본문\n\nCHAPTER 1. 나의 생각\n\n피지컬AI란?\n\n “AI의 궁극적인 형태는 Phyiscal AI가 될 것이다.” \n\n2025년 CES의 기조연설에서 젠슨 황이 던진 이 말은 로봇에 대한 업계의 관심을 단적으로 보여준다. 현재 로봇 업계에서의 가장 뜨거운 키워드를 뽑자면 단연 ‘Physical AI’이다.\n\n간단히 말하자면, GPT처럼 모니터 안에서 물어보는 말에 텍스트로 답…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 리얼월드에 투자를 할 것인가?\n\n절대 안 산다.\n\n로봇이 거대한 물결이라는 점과 한국, 일본이 제조업 강국으로써 숙련공들의 풍부한 데이터를 가지고 있으며, 이를 통한 로봇손의 정밀 제어가 미래가 될 것이라는 비전에는 충분히 공감한다. 하지만, 리얼월드의 전략은 이미 시장을 장악해버린 빅테크들의 빈틈을 노렸다기보다는 정면승부에 가깝다. 출발도 늦은 상황에 투자 규모까지 밀리는 상황에서 긍정적인…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#리얼월드 #엔비디아 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n4 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n5 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 600만원 vs 6억원, ‘하나의 삼성’이 보여준 각자도생 한국 \n\nOpinion \n 박태균 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
-                         "textLength":  2492
-                     },
-                     {
-                         "id":  269,
-                         "url":  "https://heisenberg.kr/%ea%b5%ac%ea%b8%80%ec%9d%98-%ec%97%ad%eb%8c%80%ea%b8%89-%ec%8b%a0%ec%9d%98-%ed%95%9c%ec%88%982-3%ec%b2%9c%ec%a1%b0-%ec%8b%a0%ec%95%bd-%ec%a0%84%ec%9f%81%ec%9d%98-%ec%82%b0%ec%97%85-%ed%98%81/",
-                         "slug":  "%ea%b5%ac%ea%b8%80%ec%9d%98-%ec%97%ad%eb%8c%80%ea%b8%89-%ec%8b%a0%ec%9d%98-%ed%95%9c%ec%88%982-3%ec%b2%9c%ec%a1%b0-%ec%8b%a0%ec%95%bd-%ec%a0%84%ec%9f%81%ec%9d%98-%ec%82%b0%ec%97%85-%ed%98%81",
-                         "lastmod":  "2025-11-08T07:27:19+00:00",
-                         "date":  "2025-06-25",
-                         "title":  "젠슨 황 \"다시 태어나면 생명공학자로\"... AI 시대 최고 수혜 분야 - 하이젠버그",
-                         "category":  "Semiconductor",
-                         "author":  "",
-                         "siteTags":  [
-                                          "#구글"
-                                      ],
-                         "themes":  [
-                                        "바이오/의료 AI",
-                                        "투자/밸류에이션",
-                                        "반도체 패키징"
-                                    ],
-                         "companies":  [
-                                           "구글"
-                                       ],
-                         "narrative":  "밸류에이션 재분류",
-                         "horizon":  "중장기",
-                         "summary":  "2024년, 딥마인드의 최고경영자 데머스 허사비스는 인공지능 기반 단백질 구조 예측 기술인 알파폴드로 노벨 화학상을 수상하며 큰 주목을 받았습니다. 알파폴드는 단백질의 아미노산 서열만으로도 정확한 3차원 구조를 예측할 수 있어, 실험 없이도 생체분자의 기능과 작용을 이해하는 데 큰 도움이 됩니다. 2018년 알파폴드1이 CASP13 대회에서 가능성을 보여준 데 이어, 2020년 알파폴드2는 평균 GDT-TS 92점의 성과로 실험 수준의 정확도를 입증했습니다. 2024년 알파폴드3는 DNA, RNA, 이온, 리간드까지 예측 범위를 넓히며 기술적 도약을 이뤘고, 산업 현장에서도 신약 개발과 유전자 치료에 활용되고 있습니다. 로슈, 사노피, 리커전 등 주요 기업들도 이를 응용 중이며, 아이소모픽 랩스는 이를 기반으로 신약 플랫폼을 개발하고 있습니다. 알파폴드는 인공지능과 생명과학이 결합한 대표 사례로, 인류의 건강과 행복에 실질적인 기여를 하고 있습니다.",
-                         "headings":  [
-                                          "CHAPTER 1.",
-                                          "결론부터 말하자면, ‘산다’를 넘어선 ‘반드시 사야 할(Must-buy)’에 가깝습니다. 이것은 단순한 바이오 기술 투자가 아니라, 향후 수십 년간 바이오 산업 전체에 ‘세금’을 매길 수 있는 플랫폼, 즉 ‘바이오계의 마이크로소프트’에 대한 투자이기 때문입니다."
-                                      ],
-                         "fullText":  "Semiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nBiotechnology \n | \n \n 2025.06.25 \n\n젠슨 황 “다시 태어나면 생명공학자로”… AI 시대 최고 수혜 분야 \n\n연구자 정보\n\n모래토끼\n 프로필 보기 \n\n출신대학 :\n KAIST \n\n전공 : 바이오및뇌공학과\n\n연구분야 : AI Biology, 합성생물학, 시스템 생물학\n\n1분 요약\n\n2024년, 딥마인드의 최고경영자 데머스 허사비스는 인공지능 기반 단백질 구조 예측 기술인 알파폴드로 노벨 화학상을 수상하며 큰 주목을 받았습니다. 알파폴드는 단백질의 아미노산 서열만으로도 정확한 3차원 구조를 예측할 수 있어, 실험 없이도 생체분자의 기능과 작용을 이해하는 데 큰 도움이 됩니다. 2018년 알파폴드1이 CASP13 대회에서 가능성을 보여준 데 이어, 2020년 알파폴드2는 평균 GDT-TS 92점의 성과로 실험 수준의 정확도를 입증했습니다. 2024년 알파폴드3는 DNA, RNA, 이온, 리간드까지 예측 범위를 넓히며 기술적 도약을 이뤘고, 산업 현장에서도 신약 개발과 유전자 치료에 활용되고 있습니다. 로슈, 사노피, 리커전 등 주요 기업들도 이를 응용 중이며, 아이소모픽 랩스는 이를 기반으로 신약 플랫폼을 개발하고 있습니다. 알파폴드는 인공지능과 생명과학이 결합한 대표 사례로, 인류의 건강과 행복에 실질적인 기여를 하고 있습니다. \n\n본문\n\nCHAPTER 1.\n\n과학사의 새로운 분기점\n\nAI로 단백질의 구조를 분석한 연구자 3명에게 2024 노벨화학상이 주어졌다. 보수적인 기풍을 가진 노벨위원회가 AI 연구를 선정한 것은 이례적이다.\n\n2024년은 과학의 역사에 기록될 한 해 였습니다. 우리나라 한강 작가님의 노벨 문학상 수상으로 한국에선 역대 2번째 노벨상이 탄생한 특별한 해이기도 합니…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 딥마인드(or 알파벳)에 투자를 할 것인가?\n\n결론부터 말하자면, ‘산다’를 넘어선 ‘반드시 사야 할(Must-buy)’에 가깝습니다. 이것은 단순한 바이오 기술 투자가 아니라, 향후 수십 년간 바이오 산업 전체에 ‘세금’을 매길 수 있는 플랫폼, 즉 ‘바이오계의 마이크로소프트’에 대한 투자이기 때문입니다. \n\n본문에서 길게 설명하겠지만, 알파폴드의 진정한 가치는 단백질 구조 몇 개를 잘 맞추는 데 있지 않…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#구글 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n4 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n5 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 600만원 vs 6억원, ‘하나의 삼성’이 보여준 각자도생 한국 \n\nOpinion \n 박태균 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
-                         "textLength":  2452
-                     },
-                     {
-                         "id":  270,
-                         "url":  "https://heisenberg.kr/%ec%95%a0%ed%94%8c-%ec%9d%b4%eb%8c%80%eb%a1%9c-%ea%b4%9c%ec%b0%ae%eb%82%98-%eb%89%b4%eb%a1%9c%eb%aa%a8%ed%94%bd-%ea%b4%80%ec%a0%90%ec%97%90%ec%84%9c/",
-                         "slug":  "%ec%95%a0%ed%94%8c-%ec%9d%b4%eb%8c%80%eb%a1%9c-%ea%b4%9c%ec%b0%ae%eb%82%98-%eb%89%b4%eb%a1%9c%eb%aa%a8%ed%94%bd-%ea%b4%80%ec%a0%90%ec%97%90%ec%84%9c",
-                         "lastmod":  "2025-11-08T07:20:26+00:00",
-                         "date":  "2025-06-18",
-                         "title":  "애플 비전 프로, 이 정도 밖에 못하나 - 하이젠버그",
-                         "category":  "그인",
-                         "author":  "",
-                         "siteTags":  [
-                                          "#애플"
-                                      ],
-                         "themes":  [
-                                        "전력망/에너지"
-                                    ],
-                         "companies":  [
-                                           "구글",
-                                           "애플"
-                                       ],
-                         "narrative":  "기술 전환",
-                         "horizon":  "단기",
-                         "summary":  "애플 비전 프로는 망했습니다. 대중들은 그런 실패를 보며 재밌어할 뿐입니다. 그런데 잠깐, 정말 ‘애플’만의 실패였을까요? 곰곰이 생각해 보면 구글부터 메타, 마이크로소프트까지 처참했습니다. 좀 이상합니다. 가장 뛰어난 석박사들이 가는 회사들인데, 좀 더 근본적인 원인이 있던 건 아닐까요? 사실 이는 ‘전력 소모’ 때문입니다. 다행히도 과학자들은 사람의 뇌가 아주 적은 에너지로 복잡한 일을 해내는 것에서 해결의 실마리를 찾았습니다. 지금의 컴퓨터와 인공지능은 정보를 처리하는 방식상 많은 에너지를 쓸 수밖에 없습니다. 그래서 마치 뇌처럼, 꼭 필요할 때만 에너지를 사용하여 전력 소모를 획기적으로 줄이는 ‘뉴로모픽’ 기술이 대안으로 떠오르고 있습니다.",
-                         "headings":  [
-                                          "CHAPTER 1."
-                                      ],
-                         "fullText":  "그인 \n\n회원 가입 \n\n--\u003e\n\nLatest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nSemiconductor \n | \n \n 2025.06.18 \n\n애플 비전 프로, 이 정도 밖에 못하나 \n\n연구자 정보\n\n라떼연두\n 프로필 보기 \n\n출신대학 :\n KAIST \n\n전공 : 전기및전자공학부\n\n연구분야 : 배터리 없는 컴퓨팅, 뉴로모픽AI\n\n1분 요약\n\n애플 비전 프로는 망했습니다. 대중들은 그런 실패를 보며 재밌어할 뿐입니다. 그런데 잠깐, 정말 ‘애플’만의 실패였을까요? 곰곰이 생각해 보면 구글부터 메타, 마이크로소프트까지 처참했습니다. 좀 이상합니다. 가장 뛰어난 석박사들이 가는 회사들인데, 좀 더 근본적인 원인이 있던 건 아닐까요? 사실 이는 ‘전력 소모’ 때문입니다. 다행히도 과학자들은 사람의 뇌가 아주 적은 에너지로 복잡한 일을 해내는 것에서 해결의 실마리를 찾았습니다. 지금의 컴퓨터와 인공지능은 정보를 처리하는 방식상 많은 에너지를 쓸 수밖에 없습니다. 그래서 마치 뇌처럼, 꼭 필요할 때만 에너지를 사용하여 전력 소모를 획기적으로 줄이는 ‘뉴로모픽’ 기술이 대안으로 떠오르고 있습니다. \n\n본문\n\nCHAPTER 1.\n\n애플 비전 프로, 이게 맞나\n\n애플 비전 프로, 잠깐 써봤는데 바로 벗었다고요? 축하합니다, 지극히 정상입니다. 그런데 만약 영화 아이언맨의 자비스처럼, 눈앞에 펼쳐진 정보를 실시간으로 보여주는 가볍고 편안한 AR 글라스가 있다면 어떨까요? 운전 중 내비게이션 정보를 앞 유리가 아닌 내 눈에 바로 띄워주고, 처음 만난 사람의 이름과 직책을 슬…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 애플에 투자를 할 것인가?\n\n딥러닝의 발전은 눈부시지만, 실제 우리 주변 기기에 들어오기에는 너무 비싸고 전력 소모가 높은 한계가 있습니다. 뉴로모픽이 상용화되어 전력 소모 및 비용이 급락한다면, 이는 천문학적인 가치를 가지고 올 것이라 확신합니다. IBM이나 인텔 등에서 개발한 초기 뇌 모방 칩들은 실제로 AI 작업을 하면서도 전기를 훨씬 적게 소모함을 증명했습니다. 이 칩들은 이미…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#애플 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n4 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n5 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 600만원 vs 6억원, ‘하나의 삼성’이 보여준 각자도생 한국 \n\nOpinion \n 박태균 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
-                         "textLength":  2334
-                     },
-                     {
-                         "id":  271,
-                         "url":  "https://heisenberg.kr/%ed%9c%b4%eb%a8%b8%eb%85%b8%ec%9d%b4%eb%93%9c-%ec%8b%9c%eb%8c%80-%ea%b8%b8-%ec%9e%83%ec%9d%80-%ec%82%bc%ec%84%b1%ea%b3%bc-%ed%98%84%eb%8c%80%ec%b0%a8/",
-                         "slug":  "%ed%9c%b4%eb%a8%b8%eb%85%b8%ec%9d%b4%eb%93%9c-%ec%8b%9c%eb%8c%80-%ea%b8%b8-%ec%9e%83%ec%9d%80-%ec%82%bc%ec%84%b1%ea%b3%bc-%ed%98%84%eb%8c%80%ec%b0%a8",
-                         "lastmod":  "2025-11-06T10:50:13+00:00",
-                         "date":  "2025-06-12",
-                         "title":  "휴머노이드 시대, 길 잃은 삼성과 현대차 - 하이젠버그",
-                         "category":  "ergy",
-                         "author":  "",
-                         "siteTags":  [
-                                          "#삼성전자",
-                                          "#현대자동차"
-                                      ],
-                         "themes":  [
-                                        "로봇/휴머노이드",
-                                        "중국 기술",
-                                        "한국 기업",
-                                        "투자/밸류에이션"
-                                    ],
-                         "companies":  [
-                                           "삼성전자"
-                                       ],
-                         "narrative":  "밸류에이션 재분류",
-                         "horizon":  "중장기",
-                         "summary":  "삼성과 현대자동차의 로봇 분야 진출은 시장 규모, 기반 기술, 그리고 그룹 내 시너지 측면에서 자연스러운 행보로 평가된다. 그러나 미래 로봇 기술의 핵심이 LLM(대규모 언어 모델)을 활용한 모빌리티에 있다는 점은 자명하다. 이러한 관점에서 볼 때, 이미 중국이 LLM 기술의 현재와 미래 양 측면에서 한국을 앞서고 있는 상황을 감안하면, 한국이 기술력과 가격 경쟁력 모두에서 시장을 주도하기는 쉽지 않아 보인다. 그럼에도 불구하고, 현대자동차가 인수한 보스턴 다이나믹스의 하드웨어 및 제어 기술은 여전히 세계 최고 수준이며, 여기에 인공지능 역량을 신속하게 보완하고 투자한다면, 글로벌 로봇 시장에서의 위상을 충분히 회복할 수 있을 것이다.",
-                         "headings":  [
-                                          "CHAPTER 1."
-                                      ],
-                         "fullText":  "ergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\n--\u003e\n\nLatest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nRobotics \n | \n \n 2025.06.12 \n\n휴머노이드 시대, 길 잃은 삼성과 현대차 \n\n연구자 정보\n\n카지토\n 프로필 보기 \n\n출신대학 :\n POSTECH \n\n전공 : 전기공학과\n\n연구분야 : 로보틱스 제어\n\n1분 요약\n\n삼성과 현대자동차의 로봇 분야 진출은 시장 규모, 기반 기술, 그리고 그룹 내 시너지 측면에서 자연스러운 행보로 평가된다. 그러나 미래 로봇 기술의 핵심이 LLM(대규모 언어 모델)을 활용한 모빌리티에 있다는 점은 자명하다. 이러한 관점에서 볼 때, 이미 중국이 LLM 기술의 현재와 미래 양 측면에서 한국을 앞서고 있는 상황을 감안하면, 한국이 기술력과 가격 경쟁력 모두에서 시장을 주도하기는 쉽지 않아 보인다. 그럼에도 불구하고, 현대자동차가 인수한 보스턴 다이나믹스의 하드웨어 및 제어 기술은 여전히 세계 최고 수준이며, 여기에 인공지능 역량을 신속하게 보완하고 투자한다면, 글로벌 로봇 시장에서의 위상을 충분히 회복할 수 있을 것이다. \n\n본문\n\nCHAPTER 1.\n\n날 두고 떠난 레인보우 로보틱스\n\nFigureAI가 공개한 Helix AI. (출처 : Figure Youtube – Introducing Helix)\n\n“처음 보는 물건일 테지만, 힘을 합쳐 정리 좀 부탁해.” \n\n지난 2월 실리콘밸리 스타트업 Figure AI가 공개한 Helix AI 데모 영상. 연구원의 말이 끝나기 무섭게, 두 대…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 삼성 or 현대자동차에 투자를 할 것인가?\n\n삼성전자와 현대자동차는 각각 가전제품과 공장 자동화 분야에 로봇을 투입하기 위한 대규모 준비를 진행하고 있다. 그러나 미래 로봇 기술 발전의 핵심이 LLM(대규모 언어 모델)에 있다는 점, 그리고 LLM의 현재와 미래 양 측면 모두에서 중국이 한국을 앞서고 있다는 사실은, 한국 로봇 산업에 대한 투자를 망설이게 만든다. 그럼에도 불구하고, 세계적인 하드웨어…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#삼성전자 #현대자동차 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n4 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n5 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 600만원 vs 6억원, ‘하나의 삼성’이 보여준 각자도생 한국 \n\nOpinion \n 박태균 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
-                         "textLength":  2342
-                     },
-                     {
-                         "id":  272,
-                         "url":  "https://heisenberg.kr/tesla_auto/",
-                         "slug":  "tesla_auto",
-                         "lastmod":  "2026-02-03T14:18:46+00:00",
-                         "date":  "2025-06-10",
-                         "title":  "테슬라의 자율주행이 세계 최고인 이유 - 하이젠버그",
-                         "category":  "gy",
-                         "author":  "",
-                         "siteTags":  [
-                                          "#구글",
-                                          "#테슬라"
-                                      ],
-                         "themes":  [
-                                        "AI 인프라",
-                                        "로봇/휴머노이드",
-                                        "투자/밸류에이션"
-                                    ],
-                         "companies":  [
-                                           "테슬라",
-                                           "구글"
-                                       ],
-                         "narrative":  "병목/피킹앤쇼벨",
-                         "horizon":  "단기",
-                         "summary":  "테슬라는 단순 자동차 회사가 아닌, 자체 AI 인프라, 방대한 데이터, 그리고 로봇 ‘옵티머스’ 개발을 통해 범용 인공지능(AGI)을 지향하는 AI기업이기에 매우 투자 가치가 높은 기업입니다. 자율주행 기술에서 테슬라는 확장성 높은 카메라 비전 방식을, 웨이모는 정밀하지만 HD맵 의존으로 인해 확장성이 제한된 라이다 방식을 사용하고 있죠. 테슬라는 전 세계 수백만 대 차량에서 수집되는 실제 데이터로 AI를 빠르게 고도화하며, 차량 판매와 고부가가치 FSD 소프트웨어 구독이라는 우월한 사업 모델을 가졌습니다. 반면 웨이모는 특정 지역 내 안정성은 뛰어나지만, 고정밀지도 구축 및 규제 문제로 글로벌 사업 확장에 어려움이 따릅니다. 따라서 단기적 지역 성능을 넘어, AI 기술의 범용성과 확장성, 비즈니스 모델의 잠재력을 고려할 때 현재의 기술적 완성도는 부족하더라도 테슬라의 장기적 성장 가능성이 웨이모에 비해 더 크다고 생각합니다. 궁극적으로, 테슬라는 로봇 ‘옵티머스’, 슈퍼컴퓨터 ‘도조’, 그리고 자체 설계 AI 칩을 통해 범용 인공지능(AGI)이라는 미래를 겨냥하고 있습니다. 테슬라가 쌓아둔 방대한 비전 데이터는 향후 AGI를 위한 초석이 될 겁니다.",
-                         "headings":  [
-                                          "CHAPTER 1. 나의 생각"
-                                      ],
-                         "fullText":  "gy \n\nFuture \n\n로그인 \n\n회원 가입 \n\n--\u003e\n\nLatest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nRobotics \n | \n \n 2025.06.10 \n\n테슬라의 자율주행이 세계 최고인 이유 \n\n연구자 정보\n\n엘우드\n 프로필 보기 \n\n출신대학 :\n POSTECH \n\n전공 : 전자전기공학과\n\n연구분야 : 통신AI, 메모리\n\n1분 요약\n\n테슬라는 단순 자동차 회사가 아닌, 자체 AI 인프라, 방대한 데이터, 그리고 로봇 ‘옵티머스’ 개발을 통해 범용 인공지능(AGI)을 지향하는 AI기업이기에 매우 투자 가치가 높은 기업입니다. 자율주행 기술에서 테슬라는 확장성 높은 카메라 비전 방식을, 웨이모는 정밀하지만 HD맵 의존으로 인해 확장성이 제한된 라이다 방식을 사용하고 있죠. 테슬라는 전 세계 수백만 대 차량에서 수집되는 실제 데이터로 AI를 빠르게 고도화하며, 차량 판매와 고부가가치 FSD 소프트웨어 구독이라는 우월한 사업 모델을 가졌습니다. 반면 웨이모는 특정 지역 내 안정성은 뛰어나지만, 고정밀지도 구축 및 규제 문제로 글로벌 사업 확장에 어려움이 따릅니다. 따라서 단기적 지역 성능을 넘어, AI 기술의 범용성과 확장성, 비즈니스 모델의 잠재력을 고려할 때 현재의 기술적 완성도는 부족하더라도 테슬라의 장기적 성장 가능성이 웨이모에 비해 더 크다고 생각합니다. 궁극적으로, 테슬라는 로봇 ‘옵티머스’, 슈퍼컴퓨터 ‘도조’, 그리고 자체 설계 AI 칩을 통해 범용 인공지능(AGI)이라는 미래를 겨냥하고 있습니다. 테슬라가 쌓아둔 방대한 비전 데이터는 향후 AGI를 위한 초석이 될 겁니다. \n\n본문\n\nCHAPTER 1. 나의 생각\n\n테슬라 vs 웨이모\n\n“기술적으로 웨이모는 이미 성과를 내고 있으며, 테슬라는 그보다 몇 년 정도 뒤처져 있을 수도 있습니다.” [1] Technically, Waymo is already performing. We are maybe lagging by a couple years.\n\n이 발언은 누구의 것이었을까요? 무려 테슬라의 A… \n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 테슬라에 투자를 할 것인가?\n\n나는 투자한다. 테슬라가 단순한 자동차 회사를 넘어, 자체 설계한 D1 칩 기반의 슈퍼컴퓨터 Dojo를 운영하며 방대한 고품질 비전 데이터셋을 축적한 AI 기업이라고 생각하기 때문이다. 테슬라는 Dojo의 컴퓨팅 자원을 클라우드 서비스 형태로 판매할 가능성을 시사했으며, 이는 인간 지각의 핵심인 시각 정보를 처리하는 범용 인공지능(AGI)에 가장 가까이 다…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#구글 #테슬라 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n4 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n5 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 600만원 vs 6억원, ‘하나의 삼성’이 보여준 각자도생 한국 \n\nOpinion \n 박태균 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
-                         "textLength":  2571
+                         "fullText":  "입 \n\n--\u003e\n\nLatest \n\nSemiconductor \n\nAI \n\nBiotechnology \n\nRobotics \n\nMembership \n\nNewsletter \n\n전체 카테고리 \n\nOpinion \n\n멤버십 영상 \n\nSemiconductor \n\nBiotechnology \n\nAI \n\nRobotics \n\nEnergy \n\nFuture \n\n로그인 \n\n회원 가입 \n\nEnergy \n | \n \n 2025.06.04 \n\n전고체 배터리의 상용화 전망 : 안전성과 기술적 과제 \n\n연구자 정보\n\n에스오디\n 프로필 보기 \n\n출신대학 :\n Heisenberg Inc. \n\n전공 : 신소재공학부\n\n연구분야 : 반도체 전자패키지, 차량용 반도체\n\n1분 요약\n\n한국 배터리 3사에 ‘최후통첩’이 떨어진 것일 지도 모릅니다. 삼성SDI, LG에너지솔루션, SK온은 전기차 캐즘과 중국의 공세에 적자 전환했고 점유율 하락으로 위기입니다. 중국 CATL은 정부 보조금 덕분에 글로벌 시장을 빠르게 잠식 중입니다. 이 와중에 갑작스럽게 BMW가 전고체 배터리 탑재 전기차를 세계 최초로 주행에 성공했습니다. 삼성SDI는 황화물계 전고체 배터리에 선제 투자했지만, 기술적 허들이 남아있는 상황입니다. 이미 일본 토요타는 특허, 공급망, 양산까지 준비하며 하이브리드로 테스트를 병행하고 있습니다.전고체 배터리는 주행거리 1,000km와 10분 완충이 가능하나 제조 원가와 원재료가 걸림돌이었죠. 하지만 이제 2~3년 내로 실제 차량에 접목될 것이라는 전망이 나오고 있는데요. 그 주인공은 황화리튬 기반의 전고체 배터리입니다. 만약 일본과 독일, 미국 등이 전고체 배터리 시장의 주도권을 가져가버리게 된다면, 한국의 2차전지는 정말 사활에 놓이게 됩니다. \n\n본문\n\nCHAPTER 1.\n\n한국 경제에 사실상 ‘사형선고’ 일지도 모르겠습니다. 불과 5년 만에 2한국 주요 2차전지 배터리 3사가 모두 적자회사가 됐고 점유율은 18.7%로 반토막 났습니다. SNE리서치에 따르면 2024년 1분기 배터리 시장에서 중국은 42.0%의 점유율을 기록하며 한국 배터리 3사를 추월했습니다.[18] 중국 내수 시장이 아니라, 비 중국 시장…\n\n스탠다드 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n연구자 의견\n\n내게 1억이 있다면 BMW에 투자를 할 것인가?\n\n나는 BMW에 투자하지 않는다. 차라리 1억원으로 중고 i7은 사는 것이 만족도가 더 높을 것 같다. BMW는 긍정적인 기술을 내놓은 것임에는 틀림없고 솔리드파워와의 협력도 중요한 이정표다. 하지만 나는 단일 종목을 매수하는 스타일이 아니다. 차라리 키움독일 DAX 상장지수펀드같은 ETF를 매수하는 것은 고려할 만하다. 독일은 최근 경제 불황이지만 그럼에도…\n\n비즈니스 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n문의하기\n\n궁금한 점을 남겨주시면 리포트를 작성한 연구자가 직접 답변드립니다. \n\nVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n커피챗 신청\n\n커피챗을 신청하시면 하이젠버그 운영진과 직접 이야기를 나눌 수 있습니다.\n혹 슬롯이 없다면 ceo@heisenberg.kr로 메일주세요! \n\nVVIP 등급 이상 멤버십 구독이 필요합니다.\n\n로그인 \n 멤버십 소개 보기 \n\n태그\n\n#BMW #배터리 #삼성SDI #전고체전지 \n\n인기 글\n\n1 \n\nAI \n\n“하루 150시간을 일한다” AI 박사가 알려주는 에이전트 사용 팁 \n\nAI \n 준엽 \n\n2 \n\nOpinion \n\n[오피니언] 월급 오르는 사람은 AI에게 묻는 법부터 다르다 \n\nOpinion \n 박태균 \n\n3 \n\nSemiconductor \n\n삼성·하이닉스 위협한다는 ‘메모리 없는 AI’의 진실 \n\nSemiconductor \n 김민우 \n\n4 \n\nAI \n\n앤트로픽 미소스(Mythos), 한국 기업들에 호재인 이유 \n\nAI \n 준엽 \n\n5 \n\nAI \n\n한국은 왜 또 ‘천재팔이’에 속았나? 세금 6천억 K-문샷 사태 \n\nAI \n 신동하 \n\n6 \n\nRobotics \n\n아반떼값 테슬라가 온다 – 게임체인저 ‘건식 배터리’ \n\nRobotics \n 김재승 \n\n7 \n\nOpinion \n\n[오피니언] 삼성전자 DS가 아니라 DX를 택한 이유 \n\nOpinion \n 오이 \n\n8 \n\nFuture \n\n한국 ‘게임주’의 시대가 저문다 \n\nFuture \n 박태균 \n\n회사소개 \n\n문의하기 \n\n개인정보처리방침 \n\n이용약관 \n\n사이트맵 \n\n주식회사 하이젠버그\n\n법인명(상호) : 주식회사 하이젠버그 | 사업자등록번호 : 824-87-02803\n\n주소 : (22737) 인천 서구 중봉대로 586번길 22, 102동 301-A호 | 대표이사 : 권순용\n\nE-MAIL : press@heisenberg.kr\n\n모든 문의는 대표자가 직접 100% 답변드립니다. 궁금한 점은 여기를 클릭 해 편하게 말씀해 주세요.\n\n자주 묻는 질문 보러가기 \n\n[책임문구] \n\n 모든 거래에 대한 책임과 서비스, 취소, 환불 민원등의 처리는 주식회사 하이젠버그에서 진행합니다.\n\n© 2025 Heisenberg.",
+                         "textLength":  2479
                      }
                  ],
     "themeCounts":  {
-                        "반도체 패키징":  51,
-                        "한국 기업":  123,
-                        "투자/밸류에이션":  101,
-                        "전력망/에너지":  66,
-                        "중국 기술":  43,
+                        "전력망/에너지":  68,
+                        "한국 기업":  124,
+                        "반도체 패키징":  53,
+                        "투자/밸류에이션":  102,
+                        "중국 기술":  42,
                         "로봇/휴머노이드":  66,
-                        "AI 인프라":  96,
-                        "바이오/의료 AI":  47,
+                        "AI 인프라":  97,
+                        "바이오/의료 AI":  46,
                         "AI 소프트웨어":  33,
-                        "방산/우주":  16,
-                        "기타":  11
+                        "방산/우주":  17,
+                        "기타":  10
                     },
     "companyCounts":  {
-                          "삼성전자":  49,
-                          "SK하이닉스":  15,
+                          "삼성전자":  50,
+                          "SK하이닉스":  17,
                           "BYD":  4,
-                          "테슬라":  25,
-                          "엔비디아":  55,
-                          "애플":  12,
-                          "구글":  47,
-                          "LG":  17,
+                          "테슬라":  27,
+                          "엔비디아":  54,
+                          "애플":  11,
+                          "구글":  48,
+                          "LG":  16,
                           "Anthropic/Claude":  13,
-                          "OpenAI":  19,
-                          "TSMC":  13,
+                          "OpenAI":  20,
+                          "TSMC":  14,
                           "인텔":  5,
                           "콴타":  1,
                           "Snowflake":  1,
-                          "삼성SDI":  3,
+                          "삼성SDI":  4,
                           "Vertex Pharmaceuticals":  1,
                           "Point2 Technology":  2,
                           "루닛":  4,
                           "Tokamak Energy":  1,
                           "MOREH":  1,
-                          "AMD":  3,
+                          "AMD":  4,
                           "Northrop Grumman":  1,
-                          "LG에너지솔루션":  3,
-                          "SK온":  2,
+                          "LG에너지솔루션":  4,
+                          "SK온":  3,
                           "Recursion":  2,
                           "Insilico":  1,
-                          "CATL":  1
+                          "CATL":  2
                       },
     "narrativeCounts":  {
-                            "병목/피킹앤쇼벨":  82,
-                            "기술 전환":  70,
+                            "기술 전환":  68,
+                            "병목/피킹앤쇼벨":  83,
                             "생태계/락인":  10,
                             "상용화 검증":  29,
-                            "효율화의 역설":  42,
-                            "밸류에이션 재분류":  31,
+                            "효율화의 역설":  46,
+                            "밸류에이션 재분류":  30,
                             "정책/국방 예산":  8
                         },
     "aiBottlenecks":  [
@@ -8986,15 +9059,15 @@ window.HEISENBERG_DATA = {
                                            ],
                               "note":  "AI 데이터센터 외부의 가장 물리적인 병목. 허가, 인력, 시공 역량이 해자.",
                               "articleIds":  [
-                                                 23,
-                                                 29,
-                                                 47,
-                                                 54,
-                                                 97,
-                                                 138,
-                                                 168,
-                                                 204,
-                                                 211
+                                                 24,
+                                                 30,
+                                                 48,
+                                                 55,
+                                                 98,
+                                                 139,
+                                                 169,
+                                                 205,
+                                                 212
                                              ]
                           },
                           {
@@ -9009,14 +9082,16 @@ window.HEISENBERG_DATA = {
                                            ],
                               "note":  "데이터센터 전력 안정성, 피크 대응, 에너지 저장 수요.",
                               "articleIds":  [
-                                                 35,
-                                                 51,
-                                                 75,
-                                                 94,
-                                                 100,
-                                                 116,
-                                                 204,
-                                                 211
+                                                 36,
+                                                 52,
+                                                 76,
+                                                 95,
+                                                 101,
+                                                 117,
+                                                 205,
+                                                 212,
+                                                 267,
+                                                 274
                                              ]
                           },
                           {
@@ -9030,24 +9105,26 @@ window.HEISENBERG_DATA = {
                                            ],
                               "note":  "추론과 긴 문맥 확산이 메모리 수요를 키우는 축.",
                               "articleIds":  [
-                                                 1,
-                                                 6,
-                                                 23,
+                                                 2,
+                                                 7,
                                                  24,
-                                                 32,
-                                                 36,
-                                                 46,
-                                                 62,
-                                                 74,
-                                                 81,
-                                                 121,
-                                                 124,
-                                                 144,
-                                                 148,
-                                                 197,
-                                                 199,
-                                                 241,
-                                                 253
+                                                 25,
+                                                 33,
+                                                 37,
+                                                 47,
+                                                 63,
+                                                 75,
+                                                 82,
+                                                 122,
+                                                 125,
+                                                 145,
+                                                 149,
+                                                 198,
+                                                 200,
+                                                 242,
+                                                 254,
+                                                 267,
+                                                 270
                                              ]
                           },
                           {
@@ -9063,20 +9140,20 @@ window.HEISENBERG_DATA = {
                                            ],
                               "note":  "AI 칩이 커질수록 연결, 전력 공급, 발열 제어가 중요.",
                               "articleIds":  [
-                                                 23,
                                                  24,
-                                                 32,
-                                                 44,
-                                                 59,
-                                                 81,
-                                                 87,
-                                                 91,
-                                                 109,
-                                                 140,
-                                                 144,
-                                                 153,
-                                                 211,
-                                                 241
+                                                 25,
+                                                 33,
+                                                 45,
+                                                 60,
+                                                 82,
+                                                 88,
+                                                 92,
+                                                 110,
+                                                 141,
+                                                 145,
+                                                 154,
+                                                 212,
+                                                 242
                                              ]
                           },
                           {
@@ -9092,13 +9169,13 @@ window.HEISENBERG_DATA = {
                                            ],
                               "note":  "GPU 클러스터 내부 통신 병목. 전력과 지연시간이 핵심.",
                               "articleIds":  [
-                                                 23,
-                                                 38,
-                                                 59,
-                                                 81,
-                                                 121,
-                                                 125,
-                                                 133
+                                                 24,
+                                                 39,
+                                                 60,
+                                                 82,
+                                                 122,
+                                                 126,
+                                                 134
                                              ]
                           },
                           {
@@ -9112,7 +9189,7 @@ window.HEISENBERG_DATA = {
                                            ],
                               "note":  "기업 AI 도입의 실전 병목. 흩어진 데이터를 안전하게 연결하는 층.",
                               "articleIds":  [
-                                                 30
+                                                 31
                                              ]
                           },
                           {
@@ -9128,360 +9205,364 @@ window.HEISENBERG_DATA = {
                                            ],
                               "note":  "AI 사용량을 폭발시키는 응용층. 효율화가 새 수요를 만든다는 논리.",
                               "articleIds":  [
-                                                 11,
-                                                 20,
-                                                 33,
-                                                 36,
-                                                 39,
-                                                 43,
-                                                 48,
-                                                 58,
-                                                 62,
-                                                 68,
+                                                 12,
+                                                 21,
+                                                 34,
+                                                 37,
+                                                 40,
+                                                 44,
+                                                 49,
+                                                 59,
+                                                 63,
                                                  69,
-                                                 77,
-                                                 82,
-                                                 86,
-                                                 92,
-                                                 112,
-                                                 124,
-                                                 131,
-                                                 135,
-                                                 142,
+                                                 70,
+                                                 78,
+                                                 83,
+                                                 87,
+                                                 93,
+                                                 113,
+                                                 125,
+                                                 132,
+                                                 136,
                                                  143,
-                                                 150,
-                                                 160,
-                                                 166,
-                                                 169,
-                                                 174,
-                                                 197,
+                                                 144,
+                                                 151,
+                                                 161,
+                                                 167,
+                                                 170,
+                                                 175,
                                                  198,
-                                                 201,
-                                                 208,
-                                                 215,
+                                                 199,
+                                                 202,
+                                                 209,
                                                  216,
-                                                 218,
-                                                 220,
-                                                 224,
-                                                 228,
-                                                 234,
-                                                 247
+                                                 217,
+                                                 219,
+                                                 221,
+                                                 225,
+                                                 229,
+                                                 235,
+                                                 248,
+                                                 267,
+                                                 269
                                              ]
                           }
                       ],
     "investmentGroups":  [
                              {
                                  "name":  "병목/피킹앤쇼벨",
-                                 "count":  82,
+                                 "count":  83,
                                  "articleIds":  [
-                                                    1,
-                                                    6,
+                                                    2,
                                                     7,
-                                                    12,
+                                                    8,
                                                     13,
                                                     14,
-                                                    23,
+                                                    15,
                                                     24,
-                                                    28,
+                                                    25,
                                                     29,
-                                                    31,
+                                                    30,
                                                     32,
-                                                    36,
-                                                    38,
+                                                    33,
+                                                    37,
                                                     39,
                                                     40,
-                                                    43,
-                                                    46,
+                                                    41,
+                                                    44,
                                                     47,
                                                     48,
-                                                    50,
-                                                    54,
-                                                    56,
-                                                    58,
+                                                    49,
+                                                    51,
+                                                    55,
+                                                    57,
                                                     59,
-                                                    62,
-                                                    65,
-                                                    67,
-                                                    74,
-                                                    77,
-                                                    81,
+                                                    60,
+                                                    63,
+                                                    66,
+                                                    68,
+                                                    75,
+                                                    78,
                                                     82,
-                                                    87,
-                                                    91,
-                                                    96,
+                                                    83,
+                                                    88,
+                                                    92,
                                                     97,
-                                                    109,
-                                                    121,
-                                                    124,
+                                                    98,
+                                                    110,
+                                                    122,
                                                     125,
-                                                    132,
+                                                    126,
                                                     133,
-                                                    135,
-                                                    138,
-                                                    140,
+                                                    134,
+                                                    136,
+                                                    139,
                                                     141,
                                                     142,
-                                                    144,
-                                                    148,
-                                                    150,
-                                                    156,
-                                                    160,
-                                                    164,
-                                                    168,
+                                                    143,
+                                                    145,
+                                                    149,
+                                                    151,
+                                                    157,
+                                                    161,
+                                                    165,
                                                     169,
-                                                    183,
-                                                    185,
-                                                    190,
-                                                    197,
-                                                    199,
-                                                    201,
+                                                    170,
+                                                    184,
+                                                    186,
+                                                    191,
+                                                    198,
+                                                    200,
                                                     202,
-                                                    204,
-                                                    211,
-                                                    215,
+                                                    203,
+                                                    205,
+                                                    212,
                                                     216,
-                                                    220,
-                                                    222,
+                                                    217,
+                                                    221,
                                                     223,
                                                     224,
                                                     225,
                                                     226,
-                                                    228,
-                                                    239,
-                                                    241,
-                                                    248,
-                                                    250,
-                                                    253,
+                                                    227,
+                                                    229,
+                                                    240,
+                                                    242,
+                                                    249,
+                                                    251,
                                                     254,
-                                                    258,
-                                                    263,
-                                                    272
-                                                ]
-                             },
-                             {
-                                 "name":  "기술 전환",
-                                 "count":  70,
-                                 "articleIds":  [
-                                                    2,
-                                                    16,
-                                                    18,
-                                                    19,
-                                                    20,
-                                                    22,
-                                                    27,
-                                                    30,
-                                                    49,
-                                                    55,
-                                                    60,
-                                                    63,
-                                                    66,
-                                                    71,
-                                                    72,
-                                                    76,
-                                                    78,
-                                                    84,
-                                                    85,
-                                                    90,
-                                                    93,
-                                                    95,
-                                                    100,
-                                                    101,
-                                                    104,
-                                                    105,
-                                                    106,
-                                                    108,
-                                                    111,
-                                                    113,
-                                                    115,
-                                                    117,
-                                                    123,
-                                                    128,
-                                                    129,
-                                                    134,
-                                                    137,
-                                                    139,
-                                                    145,
-                                                    147,
-                                                    158,
-                                                    159,
-                                                    161,
-                                                    173,
-                                                    175,
-                                                    177,
-                                                    178,
-                                                    179,
-                                                    180,
-                                                    182,
-                                                    186,
-                                                    188,
-                                                    193,
-                                                    196,
-                                                    212,
-                                                    219,
-                                                    231,
-                                                    233,
-                                                    235,
-                                                    236,
-                                                    237,
-                                                    238,
-                                                    244,
-                                                    246,
                                                     255,
-                                                    256,
+                                                    259,
                                                     264,
-                                                    266,
-                                                    268,
+                                                    267,
                                                     270
                                                 ]
                              },
                              {
-                                 "name":  "효율화의 역설",
-                                 "count":  42,
+                                 "name":  "기술 전환",
+                                 "count":  68,
                                  "articleIds":  [
-                                                    5,
-                                                    8,
-                                                    11,
-                                                    26,
-                                                    33,
+                                                    1,
+                                                    3,
+                                                    17,
+                                                    19,
+                                                    20,
+                                                    21,
+                                                    23,
+                                                    28,
+                                                    31,
+                                                    50,
+                                                    56,
+                                                    61,
                                                     64,
-                                                    68,
-                                                    69,
+                                                    67,
+                                                    72,
                                                     73,
-                                                    75,
+                                                    77,
                                                     79,
+                                                    85,
                                                     86,
-                                                    92,
-                                                    98,
-                                                    103,
+                                                    91,
+                                                    94,
+                                                    96,
+                                                    101,
+                                                    102,
+                                                    105,
+                                                    106,
                                                     107,
+                                                    109,
                                                     112,
+                                                    114,
                                                     116,
                                                     118,
-                                                    127,
+                                                    124,
+                                                    129,
                                                     130,
-                                                    131,
-                                                    143,
+                                                    135,
+                                                    138,
+                                                    140,
                                                     146,
-                                                    155,
-                                                    163,
-                                                    166,
-                                                    172,
+                                                    148,
+                                                    159,
+                                                    160,
+                                                    162,
                                                     174,
                                                     176,
+                                                    178,
+                                                    179,
+                                                    180,
+                                                    181,
+                                                    183,
                                                     187,
-                                                    198,
-                                                    203,
-                                                    208,
-                                                    217,
-                                                    218,
-                                                    229,
+                                                    189,
+                                                    194,
+                                                    197,
+                                                    213,
+                                                    220,
                                                     232,
                                                     234,
-                                                    240,
+                                                    236,
+                                                    237,
+                                                    238,
+                                                    239,
+                                                    245,
                                                     247,
-                                                    261
+                                                    256,
+                                                    257,
+                                                    265
+                                                ]
+                             },
+                             {
+                                 "name":  "효율화의 역설",
+                                 "count":  46,
+                                 "articleIds":  [
+                                                    6,
+                                                    9,
+                                                    12,
+                                                    27,
+                                                    34,
+                                                    65,
+                                                    69,
+                                                    70,
+                                                    74,
+                                                    76,
+                                                    80,
+                                                    87,
+                                                    93,
+                                                    99,
+                                                    104,
+                                                    108,
+                                                    113,
+                                                    117,
+                                                    119,
+                                                    128,
+                                                    131,
+                                                    132,
+                                                    144,
+                                                    147,
+                                                    156,
+                                                    164,
+                                                    167,
+                                                    173,
+                                                    175,
+                                                    177,
+                                                    188,
+                                                    199,
+                                                    204,
+                                                    209,
+                                                    218,
+                                                    219,
+                                                    230,
+                                                    233,
+                                                    235,
+                                                    241,
+                                                    248,
+                                                    262,
+                                                    269,
+                                                    271,
+                                                    272,
+                                                    273
                                                 ]
                              },
                              {
                                  "name":  "밸류에이션 재분류",
-                                 "count":  31,
+                                 "count":  30,
                                  "articleIds":  [
-                                                    9,
                                                     10,
-                                                    21,
-                                                    42,
-                                                    53,
-                                                    61,
-                                                    80,
-                                                    83,
-                                                    88,
+                                                    11,
+                                                    22,
+                                                    43,
+                                                    54,
+                                                    62,
+                                                    81,
+                                                    84,
                                                     89,
-                                                    99,
-                                                    102,
-                                                    126,
-                                                    152,
-                                                    157,
-                                                    167,
-                                                    191,
-                                                    194,
+                                                    90,
+                                                    100,
+                                                    103,
+                                                    127,
+                                                    153,
+                                                    158,
+                                                    168,
+                                                    192,
                                                     195,
-                                                    200,
-                                                    205,
+                                                    196,
+                                                    201,
                                                     206,
-                                                    209,
+                                                    207,
                                                     210,
-                                                    227,
-                                                    249,
-                                                    257,
-                                                    260,
-                                                    262,
-                                                    269,
-                                                    271
+                                                    211,
+                                                    228,
+                                                    250,
+                                                    258,
+                                                    261,
+                                                    263,
+                                                    266
                                                 ]
                              },
                              {
                                  "name":  "상용화 검증",
                                  "count":  29,
                                  "articleIds":  [
-                                                    4,
-                                                    15,
-                                                    17,
-                                                    34,
+                                                    5,
+                                                    16,
+                                                    18,
                                                     35,
-                                                    37,
-                                                    41,
-                                                    52,
-                                                    57,
-                                                    70,
-                                                    110,
-                                                    119,
+                                                    36,
+                                                    38,
+                                                    42,
+                                                    53,
+                                                    58,
+                                                    71,
+                                                    111,
                                                     120,
-                                                    122,
-                                                    136,
-                                                    149,
-                                                    153,
-                                                    162,
-                                                    165,
-                                                    170,
-                                                    181,
-                                                    184,
-                                                    192,
-                                                    214,
-                                                    221,
-                                                    242,
-                                                    245,
-                                                    252,
-                                                    267
+                                                    121,
+                                                    123,
+                                                    137,
+                                                    150,
+                                                    154,
+                                                    163,
+                                                    166,
+                                                    171,
+                                                    182,
+                                                    185,
+                                                    193,
+                                                    215,
+                                                    222,
+                                                    243,
+                                                    246,
+                                                    253,
+                                                    274
                                                 ]
                              },
                              {
                                  "name":  "생태계/락인",
                                  "count":  10,
                                  "articleIds":  [
-                                                    3,
-                                                    25,
-                                                    44,
-                                                    94,
-                                                    114,
-                                                    151,
-                                                    154,
-                                                    207,
-                                                    243,
-                                                    259
+                                                    4,
+                                                    26,
+                                                    45,
+                                                    95,
+                                                    115,
+                                                    152,
+                                                    155,
+                                                    208,
+                                                    244,
+                                                    260
                                                 ]
                              },
                              {
                                  "name":  "정책/국방 예산",
                                  "count":  8,
                                  "articleIds":  [
-                                                    45,
-                                                    51,
-                                                    171,
-                                                    189,
-                                                    213,
-                                                    230,
-                                                    251,
-                                                    265
+                                                    46,
+                                                    52,
+                                                    172,
+                                                    190,
+                                                    214,
+                                                    231,
+                                                    252,
+                                                    268
                                                 ]
                              }
                          ]
