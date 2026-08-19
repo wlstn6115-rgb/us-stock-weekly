@@ -4,7 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>US Stock Weekly Briefing</title>
-  <style>
+<style>
+  /* GitHub Pages shows the Instagram Monthly report, not the weekly dashboard. */
+  body > main, body > .wrap { display: none !important; }
+  .monthly-publish { min-height:100vh; padding:24px 18px 42px; background:#faf4ea; color:#071b3a; font-family:"Malgun Gothic","Segoe UI",sans-serif; }
+  .monthly-publish__inner { width:min(100%,1080px); margin:0 auto; }
+  .monthly-publish header { display:flex; align-items:end; justify-content:space-between; gap:16px; margin:0 0 18px; }
+  .monthly-publish h1 { margin:0; font-size:clamp(22px,4vw,32px); }
+  .monthly-publish p { margin:6px 0 0; color:#675b4d; }
+  .monthly-publish .date { color:#b65d00; font-weight:800; text-align:right; }
+  .monthly-publish .report { display:block; overflow:hidden; border:1px solid #dfc6a7; border-radius:18px; background:#fffaf2; box-shadow:0 12px 28px rgba(59,37,14,.08); }
+  .monthly-publish .report img { display:block; width:100%; height:auto; }
+  .monthly-publish nav { display:flex; justify-content:center; flex-wrap:wrap; gap:8px; margin-top:18px; }
+  .monthly-publish nav a { padding:8px 12px; border:1px solid #d8c5a9; border-radius:999px; color:#071b3a; background:#fffaf2; font-size:14px; font-weight:700; text-decoration:none; }
+  .monthly-publish nav a:hover,.monthly-publish nav a:focus { color:#fff; border-color:#17243a; background:#17243a; }
+  @media (max-width:560px) { .monthly-publish { padding:16px 10px 28px; } .monthly-publish header { align-items:start; flex-direction:column; } .monthly-publish .date { text-align:left; } }
     @page { size: A4 landscape; margin: 10mm; }
     :root { --line:#d7cbb6; --ink:#1f2937; --muted:#6b7280; --accent:#9a5b16; --up:#0f9d58; --down:#c2410c; }
     * { box-sizing: border-box; }
@@ -184,6 +198,18 @@
   </style>
 </head>
 <body>
+<section class="monthly-publish">
+  <div class="monthly-publish__inner">
+    <header>
+      <div><h1>월간 시장 온도계</h1><p>Instagram Monthly 자료와 동일한 양식 및 수치</p></div>
+      <div class="date">2026년 08월<br>기준: 지난달 마지막 거래일 종가 대비</div>
+    </header>
+    <picture class="report"><img src="instagram/monthly/latest/07_monthly_bigtech_ai_cycle.png" alt="AI 투자 체력 점검"></picture>
+    <nav aria-label="월간 자료">
+      <a href="instagram/monthly/latest/01_monthly_one_year_indices.png">1년 지수</a><a href="instagram/monthly/latest/02_monthly_us_equity_indices.png">미국 주식</a><a href="instagram/monthly/latest/03_monthly_macro_asset_indices.png">거시 자산</a><a href="instagram/monthly/latest/04_monthly_korea_fx_indices.png">한국·환율</a><a href="instagram/monthly/latest/05_monthly_asset_temperature.png">자산 온도</a><a href="instagram/monthly/latest/06_monthly_liquidity_bitgold.png">유동성</a><a href="instagram/monthly/latest/07_monthly_bigtech_ai_cycle.png">AI 투자 체력</a><a href="instagram/monthly/latest/08_monthly_ai_disclosures.png">공시 기준</a>
+    </nav>
+  </div>
+</section>
   <div class="wrap">
     <nav class="dashboard-tabs" aria-label="Dashboard tabs">
       <button class="dashboard-tab active" type="button" data-dashboard-tab="marketBrief">미국주식 주간 브리핑</button>
