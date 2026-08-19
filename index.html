@@ -34,10 +34,6 @@
     .news-card ul { margin:0; padding-left:18px; }
     .news-card .news-date { color:var(--accent); font-weight:700; font-size:13px; margin-bottom:6px; }
     .capex-grid { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(340px,0.85fr); gap:14px; align-items:start; }
-    /* The tracker uses the same validated layout and figures as the Monthly Instagram card. */
-    .monthly-capex-card { overflow:hidden; max-width:1080px; margin:0 auto; border:1px solid var(--line); border-radius:18px; background:#fffaf2; box-shadow:0 12px 28px rgba(31,41,55,0.06); }
-    .monthly-capex-card img { display:block; width:100%; height:auto; }
-    .capex-grid { display:none; }
     .capex-chart-card,.capex-list-card { border:1px solid var(--line); border-radius:18px; background:rgba(255,255,255,0.58); padding:14px; }
     .capex-list-card { display:flex; flex-direction:column; min-height:520px; max-height:780px; }
     .capex-stat-row { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:0 0 12px; }
@@ -253,12 +249,9 @@
     <section class="panel">
       <div class="finviz-panel-head">
         <div>
-          <h2>AI 투자 체력 점검</h2>
+          <h2>미국 AI CAPEX 집행 트래커</h2>
         </div>
         <span class="chip" id="capexRangeChip">CAPEX</span>
-      </div>
-      <div class="monthly-capex-card">
-        <img src="instagram/monthly/latest/07_monthly_bigtech_ai_cycle.png" alt="AI 투자 체력 점검 — Instagram Monthly와 동일한 양식 및 수치">
       </div>
       <div class="capex-grid">
         <div class="capex-chart-card">
