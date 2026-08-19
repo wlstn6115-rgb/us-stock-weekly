@@ -35,6 +35,27 @@
     .news-card .news-date { color:var(--accent); font-weight:700; font-size:13px; margin-bottom:6px; }
     .capex-grid { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(340px,0.85fr); gap:14px; align-items:start; }
     .capex-dashboard { display:grid; gap:16px; }
+    .capex-hero { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; }
+    .capex-hero h3 { margin:0; font-size:28px; line-height:1.2; }
+    .capex-hero p { margin:6px 0 0; color:var(--muted); font-size:14px; }
+    .capex-badge { border-radius:999px; padding:7px 14px; background:#1f2937; color:#fffaf2; font-weight:900; }
+    .earnings-strip { display:grid; grid-template-columns:1.8fr repeat(8,minmax(72px,1fr)); overflow:auto; border:1px solid var(--line); border-radius:18px; background:#fffaf2; }
+    .earnings-label,.earnings-item { min-height:78px; padding:12px; border-right:1px solid #e7dac7; }
+    .earnings-label strong,.earnings-item strong { display:block; color:var(--ink); font-size:13px; }
+    .earnings-label span,.earnings-item span { display:block; margin-top:6px; color:var(--accent); font-size:12px; font-weight:900; }
+    .earnings-label small { display:block; margin-top:4px; color:var(--muted); font-size:10px; }
+    .earnings-item:last-child { border-right:0; }
+    .quarter-panels { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .quarter-panel { border:1px solid var(--line); border-radius:18px; padding:16px; background:rgba(255,255,255,.56); }
+    .quarter-panel-head { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:14px; }
+    .quarter-panel h4 { margin:0; color:var(--ink); font-size:18px; }
+    .quarter-total { font-size:18px; font-weight:900; }
+    .quarter-total.capex { color:#2563eb; }.quarter-total.fcf { color:#059669; }
+    .quarter-row { display:grid; grid-template-columns:minmax(112px,1fr) minmax(100px,1.45fr) minmax(62px,.5fr); align-items:center; gap:10px; min-height:29px; }
+    .quarter-row-label { overflow:hidden; color:var(--ink); font-size:12px; font-weight:800; white-space:nowrap; text-overflow:ellipsis; }
+    .quarter-track { height:16px; overflow:hidden; border-radius:999px; background:#f2e8d8; }
+    .quarter-fill { height:100%; min-width:3px; border-radius:999px; }.quarter-fill.capex { background:#2563eb; }.quarter-fill.fcf { background:#059669; }.quarter-fill.negative { background:#d9480f; }
+    .quarter-value { color:var(--ink); font-size:12px; font-weight:900; text-align:right; white-space:nowrap; }
     .capex-intro { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; padding:18px; border:1px solid var(--line); border-radius:18px; background:linear-gradient(135deg,#fffaf2,#f7eddd); }
     .capex-intro h3 { margin:0; font-size:22px; }
     .capex-intro p { margin:6px 0 0; color:var(--muted); font-size:13px; line-height:1.6; }
@@ -209,7 +230,7 @@
     .research-frame { width:100%; height:calc(100vh - 86px); min-height:980px; display:block; border:0; background:#fbf7f0; }
     @media (max-width:1180px) { .correlation-stack { grid-template-columns:repeat(2,minmax(0,1fr)); } }
     @media (max-width:1100px) { .special-grid,.macro-grid { grid-template-columns:1fr; } .research-tab-panel { margin-left:0; margin-right:0; } .research-frame { height:980px; } }
-    @media (max-width:960px) { .grid-4,.grid-2,.chart-grid,.formula-grid,.portfolio-grid,.metric-grid,.correlation-stack,.capex-grid,.capex-stack-grid { grid-template-columns:1fr; } .capex-kpis,.capex-company-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .capex-company { border-bottom:1px solid var(--line); } .capex-intro { flex-direction:column; } .capex-stat-row { grid-template-columns:1fr; } .capex-list-card { min-height:0; max-height:520px; } .finviz-panel-head,.macro-panel-head { align-items:flex-start; flex-direction:column; } .finviz-row,.theme-row { grid-template-columns:1fr; gap:5px; } .finviz-compare-head,.theme-compare-head { display:none; } .finviz-value { text-align:right; } .theme-sector { justify-content:flex-start; width:max-content; padding:3px 9px; } }
+    @media (max-width:960px) { .grid-4,.grid-2,.chart-grid,.formula-grid,.portfolio-grid,.metric-grid,.correlation-stack,.capex-grid,.capex-stack-grid,.quarter-panels { grid-template-columns:1fr; } .capex-kpis,.capex-company-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .capex-company { border-bottom:1px solid var(--line); } .capex-intro,.capex-hero { flex-direction:column; } .capex-stat-row { grid-template-columns:1fr; } .capex-list-card { min-height:0; max-height:520px; } .finviz-panel-head,.macro-panel-head { align-items:flex-start; flex-direction:column; } .finviz-row,.theme-row { grid-template-columns:1fr; gap:5px; } .finviz-compare-head,.theme-compare-head { display:none; } .finviz-value { text-align:right; } .theme-sector { justify-content:flex-start; width:max-content; padding:3px 9px; } }
     @media (max-width:560px) { .capex-kpis,.capex-company-grid { grid-template-columns:1fr; } }
   </style>
 </head>
@@ -699,6 +720,21 @@
       const annualGuidance = rawRows.filter(row => String(row.metricType || '').includes('가이던스'));
       const guidanceTotal = annualGuidance.reduce((sum,row) => sum + amountRaw(row), 0);
       const latestDate = rawRows.map(dateRaw).filter(Boolean).sort().at(-1) || 'N/A';
+      const earnings = [['TSLA','07-22'],['MSFT','07-29'],['GOOGL','07-22'],['META','07-29'],['AMZN','07-30'],['AAPL','07-30'],['NVDA','08-17'],['ORCL','06-10']];
+      const quarters = [
+        { label:'2025년 4Q', capex:[['AMZN','CY25Q4','38.5'],['MSFT','FY26Q2','29.9'],['GOOGL','CY25Q4','27.9'],['META','CY25Q4','22.1'],['ORCL','FY26Q2','12.0'],['TSLA','CY25Q4','2.4'],['AAPL','FY26Q1','2.4'],['NVDA','FY26Q3','1.6']], fcf:[['AAPL','FY26Q1','51.6'],['GOOGL','CY25Q4','24.6'],['NVDA','FY26Q3','22.1'],['AMZN','CY25Q4','16.0'],['META','CY25Q4','14.1'],['MSFT','FY26Q2','5.9'],['TSLA','CY25Q4','1.4'],['ORCL','FY26Q2','-10.0']] },
+        { label:'2026년 1Q', capex:[['AMZN','CY26Q1','43.2'],['GOOGL','CY26Q1','35.7'],['MSFT','FY26Q3','30.9'],['META','CY26Q1','19.8'],['ORCL','FY26Q3','18.6'],['TSLA','CY26Q1','2.5'],['AAPL','FY26Q2','2.0'],['NVDA','FY26Q4','1.3']], fcf:[['NVDA','FY26Q4','34.9'],['AAPL','FY26Q2','26.7'],['MSFT','FY26Q3','15.8'],['META','CY26Q1','12.4'],['GOOGL','CY26Q1','10.1'],['TSLA','CY26Q1','1.4'],['ORCL','FY26Q3','-11.5'],['AMZN','CY26Q1','-17.2']] },
+        { label:'2026년 2Q', capex:[['AMZN','CY26Q2','53.1'],['GOOGL','CY26Q2','44.9'],['MSFT','FY26Q4','35.8'],['META','CY26Q2','31.1'],['ORCL','FY26Q4','12.8'],['TSLA','CY26Q2','5.8'],['AAPL','FY26Q3','2.5'],['NVDA','FY27Q1','1.8']], fcf:[['NVDA','FY27Q1','48.6'],['AAPL','FY26Q3','31.9'],['MSFT','FY26Q4','19.6'],['META','CY26Q2','0.8'],['TSLA','CY26Q2','-1.1'],['ORCL','FY26Q4','-1.9'],['GOOGL','CY26Q2','-5.9'],['AMZN','CY26Q2','-7.7']] }
+      ];
+      const panel = (quarter, metric) => {
+        const rows = quarter[metric]; const total = rows.reduce((sum,row) => sum + Number(row[2]), 0); const max = Math.max(...rows.map(row => Math.abs(Number(row[2]))));
+        const bars = rows.map(row => { const value = Number(row[2]); const tone = value < 0 ? 'negative' : metric; return `<div class="quarter-row"><span class="quarter-row-label">${row[0]} ${row[1]}</span><div class="quarter-track"><div class="quarter-fill ${tone}" style="width:${Math.max(3,Math.abs(value) / max * 100)}%"></div></div><span class="quarter-value">$${value.toFixed(1)}B</span></div>`; }).join('');
+        return `<article class="quarter-panel"><div class="quarter-panel-head"><h4>${quarter.label} · ${metric.toUpperCase()}</h4><strong class="quarter-total ${metric}">$${total.toFixed(1)}B</strong></div>${bars}</article>`;
+      };
+      const earningsHtml = earnings.map(item => `<div class="earnings-item"><strong>${item[0]}</strong><span>${item[1]}</span></div>`).join('');
+      const rawPreview = rawRows.slice().sort((a,b) => dateRaw(b).localeCompare(dateRaw(a))).map(row => `<tr><td>${escRaw(dateRaw(row))}</td><td>${escRaw(row.company)}</td><td>${escRaw(row.period || '')}</td><td class="amount">${escRaw(amountTextRaw(row))}</td><td><a class="source" href="${escRaw(row.sourceUrl || '#')}" target="_blank" rel="noopener">원문 ↗</a></td></tr>`).join('');
+      dashboard.innerHTML = `<section class="capex-hero"><div><span class="capex-badge">07 / 07</span><h3 style="margin-top:18px;">AI 투자 체력 점검</h3><p>분기 종료일 기준 · 회사별 회계기간·정의 상이</p></div><div class="capex-stamp">2026년 08월<br>최근 실적발표일 기준</div></section><section class="earnings-strip"><div class="earnings-label"><strong>최근 실적발표일</strong><small>FY=회계연도 / CY=달력연도<br>CAPEX=설비투자 / FCF=OCF−CAPEX</small></div>${earningsHtml}</section><section class="quarter-panels">${quarters.flatMap(quarter => [panel(quarter,'capex'),panel(quarter,'fcf')]).join('')}</section><details class="capex-raw"><summary style="padding:14px;font-weight:900;cursor:pointer;">공식 공시 원시 데이터 보기 (${rawRows.length}건)</summary><table><thead><tr><th>발간일</th><th>회사</th><th>기간</th><th>CAPEX</th><th>출처</th></tr></thead><tbody>${rawPreview}</tbody></table></details>`;
+      return;
       const companyCards = latestByCompany.map(row => `<article class="capex-company"><div class="capex-company-head"><h4>${escRaw(row.company)}</h4><a href="${escRaw(row.sourceUrl || '#')}" target="_blank" rel="noopener">원문 ↗</a></div><strong>${escRaw(amountTextRaw(row))}</strong><p>${escRaw(row.period || '')} · ${escRaw(row.metricType || '')}</p><p>${escRaw(dateRaw(row))} · ${escRaw(row.source || '공식 공시')}</p></article>`).join('');
       const rawTable = rawRows.slice().sort((a,b) => dateRaw(b).localeCompare(dateRaw(a))).map(row => `<tr><td>${escRaw(dateRaw(row))}</td><td><strong>${escRaw(row.company)}</strong></td><td>${escRaw(row.period || '')}</td><td>${escRaw(row.metricType || '')}</td><td class="amount">${escRaw(amountTextRaw(row))}</td><td>${escRaw(row.summary || row.text || '')}</td><td><a class="source" href="${escRaw(row.sourceUrl || '#')}" target="_blank" rel="noopener">${escRaw(row.source || '원문')} ↗</a></td></tr>`).join('');
       dashboard.innerHTML = `<section class="capex-intro"><div><h3>AI 투자 체력 · Raw Data Explorer</h3><p>공식 IR·SEC 공시에서 수집한 원시 데이터를 회사·기간·지표별로 바로 확인합니다. 이미지 요약이 아닌 HTML 데이터 화면입니다.</p></div><span class="capex-stamp">최신 반영 ${escRaw(latestDate)}</span></section><section class="capex-kpis"><article class="capex-kpi"><span>최근 분기 실제 CAPEX</span><strong>$${latestQuarterTotal.toFixed(1)}B</strong><small>${latestQuarterly.length}개 최신 분기 공시 합계</small></article><article class="capex-kpi"><span>연간 CAPEX 가이던스 합계</span><strong>$${guidanceTotal.toFixed(1)}B</strong><small>공시된 정량 가이던스 항목 합계</small></article><article class="capex-kpi"><span>원시 데이터 레코드</span><strong>${rawRows.length}건</strong><small>각 행에서 공식 원문으로 이동 가능</small></article></section><section class="capex-earnings"><div class="capex-earnings-head"><div><h3>최근 실적발표일</h3><p>CAPEX · FCF 반영 기준 · FY는 회계연도, CY는 달력연도</p></div><span class="chip">공시일 기준 정렬</span></div><div class="capex-company-grid">${companyCards}</div></section><section><div class="finviz-panel-head"><div><h3 style="margin:0;">공식 공시 원시 데이터</h3><p class="muted">날짜·회사·회계기간·지표·금액·요약·원문을 그대로 공유합니다.</p></div></div><div class="capex-raw"><table><thead><tr><th>발간일</th><th>회사</th><th>기간</th><th>지표</th><th>금액</th><th>공시 요약</th><th>출처</th></tr></thead><tbody>${rawTable}</tbody></table></div></section>`;
