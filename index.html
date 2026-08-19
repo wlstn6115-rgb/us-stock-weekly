@@ -44,8 +44,13 @@
     .capex-kpi span { display:block; color:var(--muted); font-size:12px; }
     .capex-kpi strong { display:block; margin-top:5px; color:var(--ink); font-size:24px; }
     .capex-kpi small { display:block; margin-top:5px; color:#475569; font-size:12px; line-height:1.45; }
-    .capex-company-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
-    .capex-company { min-width:0; border:1px solid var(--line); border-radius:16px; padding:14px; background:rgba(255,250,242,.78); }
+    .capex-earnings { border:1px solid var(--line); border-radius:18px; overflow:hidden; background:rgba(255,250,242,.78); }
+    .capex-earnings-head { display:flex; align-items:end; justify-content:space-between; gap:14px; padding:15px 16px; border-bottom:1px solid var(--line); background:#f7eddd; }
+    .capex-earnings-head h3 { margin:0; font-size:18px; }
+    .capex-earnings-head p { margin:4px 0 0; color:var(--muted); font-size:12px; }
+    .capex-company-grid { display:grid; grid-template-columns:repeat(8,minmax(0,1fr)); }
+    .capex-company { min-width:0; min-height:142px; padding:14px; border-right:1px solid var(--line); background:transparent; }
+    .capex-company:last-child { border-right:0; }
     .capex-company-head { display:flex; align-items:baseline; justify-content:space-between; gap:8px; }
     .capex-company h4 { margin:0; font-size:16px; }
     .capex-company strong { display:block; margin-top:12px; color:#0f766e; font-size:21px; }
@@ -204,7 +209,7 @@
     .research-frame { width:100%; height:calc(100vh - 86px); min-height:980px; display:block; border:0; background:#fbf7f0; }
     @media (max-width:1180px) { .correlation-stack { grid-template-columns:repeat(2,minmax(0,1fr)); } }
     @media (max-width:1100px) { .special-grid,.macro-grid { grid-template-columns:1fr; } .research-tab-panel { margin-left:0; margin-right:0; } .research-frame { height:980px; } }
-    @media (max-width:960px) { .grid-4,.grid-2,.chart-grid,.formula-grid,.portfolio-grid,.metric-grid,.correlation-stack,.capex-grid,.capex-stack-grid { grid-template-columns:1fr; } .capex-kpis,.capex-company-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .capex-intro { flex-direction:column; } .capex-stat-row { grid-template-columns:1fr; } .capex-list-card { min-height:0; max-height:520px; } .finviz-panel-head,.macro-panel-head { align-items:flex-start; flex-direction:column; } .finviz-row,.theme-row { grid-template-columns:1fr; gap:5px; } .finviz-compare-head,.theme-compare-head { display:none; } .finviz-value { text-align:right; } .theme-sector { justify-content:flex-start; width:max-content; padding:3px 9px; } }
+    @media (max-width:960px) { .grid-4,.grid-2,.chart-grid,.formula-grid,.portfolio-grid,.metric-grid,.correlation-stack,.capex-grid,.capex-stack-grid { grid-template-columns:1fr; } .capex-kpis,.capex-company-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .capex-company { border-bottom:1px solid var(--line); } .capex-intro { flex-direction:column; } .capex-stat-row { grid-template-columns:1fr; } .capex-list-card { min-height:0; max-height:520px; } .finviz-panel-head,.macro-panel-head { align-items:flex-start; flex-direction:column; } .finviz-row,.theme-row { grid-template-columns:1fr; gap:5px; } .finviz-compare-head,.theme-compare-head { display:none; } .finviz-value { text-align:right; } .theme-sector { justify-content:flex-start; width:max-content; padding:3px 9px; } }
     @media (max-width:560px) { .capex-kpis,.capex-company-grid { grid-template-columns:1fr; } }
   </style>
 </head>
@@ -687,7 +692,8 @@
       const latestByCompany = companyOrderRaw.map(company => rawRows
         .filter(row => row.company === company)
         .sort((a,b) => dateRaw(b).localeCompare(dateRaw(a)) || amountRaw(b) - amountRaw(a))[0])
-        .filter(Boolean);
+        .filter(Boolean)
+        .sort((a,b) => dateRaw(b).localeCompare(dateRaw(a)) || String(a.company).localeCompare(String(b.company)));
       const latestQuarterly = latestByCompany.filter(isQuarterRaw);
       const latestQuarterTotal = latestQuarterly.reduce((sum,row) => sum + amountRaw(row), 0);
       const annualGuidance = rawRows.filter(row => String(row.metricType || '').includes('가이던스'));
@@ -695,7 +701,7 @@
       const latestDate = rawRows.map(dateRaw).filter(Boolean).sort().at(-1) || 'N/A';
       const companyCards = latestByCompany.map(row => `<article class="capex-company"><div class="capex-company-head"><h4>${escRaw(row.company)}</h4><a href="${escRaw(row.sourceUrl || '#')}" target="_blank" rel="noopener">원문 ↗</a></div><strong>${escRaw(amountTextRaw(row))}</strong><p>${escRaw(row.period || '')} · ${escRaw(row.metricType || '')}</p><p>${escRaw(dateRaw(row))} · ${escRaw(row.source || '공식 공시')}</p></article>`).join('');
       const rawTable = rawRows.slice().sort((a,b) => dateRaw(b).localeCompare(dateRaw(a))).map(row => `<tr><td>${escRaw(dateRaw(row))}</td><td><strong>${escRaw(row.company)}</strong></td><td>${escRaw(row.period || '')}</td><td>${escRaw(row.metricType || '')}</td><td class="amount">${escRaw(amountTextRaw(row))}</td><td>${escRaw(row.summary || row.text || '')}</td><td><a class="source" href="${escRaw(row.sourceUrl || '#')}" target="_blank" rel="noopener">${escRaw(row.source || '원문')} ↗</a></td></tr>`).join('');
-      dashboard.innerHTML = `<section class="capex-intro"><div><h3>AI 투자 체력 · Raw Data Explorer</h3><p>공식 IR·SEC 공시에서 수집한 원시 데이터를 회사·기간·지표별로 바로 확인합니다. 이미지 요약이 아닌 HTML 데이터 화면입니다.</p></div><span class="capex-stamp">최신 반영 ${escRaw(latestDate)}</span></section><section class="capex-kpis"><article class="capex-kpi"><span>최근 분기 실제 CAPEX</span><strong>$${latestQuarterTotal.toFixed(1)}B</strong><small>${latestQuarterly.length}개 최신 분기 공시 합계</small></article><article class="capex-kpi"><span>연간 CAPEX 가이던스 합계</span><strong>$${guidanceTotal.toFixed(1)}B</strong><small>공시된 정량 가이던스 항목 합계</small></article><article class="capex-kpi"><span>원시 데이터 레코드</span><strong>${rawRows.length}건</strong><small>각 행에서 공식 원문으로 이동 가능</small></article></section><section><div class="finviz-panel-head"><div><h3 style="margin:0;">회사별 최신 공시</h3><p class="muted">가장 최근에 수집된 금액 기준</p></div></div><div class="capex-company-grid">${companyCards}</div></section><section><div class="finviz-panel-head"><div><h3 style="margin:0;">공식 공시 원시 데이터</h3><p class="muted">날짜·회사·회계기간·지표·금액·요약·원문을 그대로 공유합니다.</p></div></div><div class="capex-raw"><table><thead><tr><th>발간일</th><th>회사</th><th>기간</th><th>지표</th><th>금액</th><th>공시 요약</th><th>출처</th></tr></thead><tbody>${rawTable}</tbody></table></div></section>`;
+      dashboard.innerHTML = `<section class="capex-intro"><div><h3>AI 투자 체력 · Raw Data Explorer</h3><p>공식 IR·SEC 공시에서 수집한 원시 데이터를 회사·기간·지표별로 바로 확인합니다. 이미지 요약이 아닌 HTML 데이터 화면입니다.</p></div><span class="capex-stamp">최신 반영 ${escRaw(latestDate)}</span></section><section class="capex-kpis"><article class="capex-kpi"><span>최근 분기 실제 CAPEX</span><strong>$${latestQuarterTotal.toFixed(1)}B</strong><small>${latestQuarterly.length}개 최신 분기 공시 합계</small></article><article class="capex-kpi"><span>연간 CAPEX 가이던스 합계</span><strong>$${guidanceTotal.toFixed(1)}B</strong><small>공시된 정량 가이던스 항목 합계</small></article><article class="capex-kpi"><span>원시 데이터 레코드</span><strong>${rawRows.length}건</strong><small>각 행에서 공식 원문으로 이동 가능</small></article></section><section class="capex-earnings"><div class="capex-earnings-head"><div><h3>최근 실적발표일</h3><p>CAPEX · FCF 반영 기준 · FY는 회계연도, CY는 달력연도</p></div><span class="chip">공시일 기준 정렬</span></div><div class="capex-company-grid">${companyCards}</div></section><section><div class="finviz-panel-head"><div><h3 style="margin:0;">공식 공시 원시 데이터</h3><p class="muted">날짜·회사·회계기간·지표·금액·요약·원문을 그대로 공유합니다.</p></div></div><div class="capex-raw"><table><thead><tr><th>발간일</th><th>회사</th><th>기간</th><th>지표</th><th>금액</th><th>공시 요약</th><th>출처</th></tr></thead><tbody>${rawTable}</tbody></table></div></section>`;
       return;
       const items = toArray(capexTracker?.items);
       const investments = toArray(capexTracker?.investments);
