@@ -699,10 +699,14 @@
         const xAnchor = px < padX + 42 ? 'start' : (px > width - padX - 42 ? 'end' : 'middle');
         return `<g class="point-hit"><line class="point-guide" x1="${padX}" y1="${py}" x2="${px}" y2="${py}" stroke="#111827" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.72"></line><line class="point-guide" x1="${px}" y1="${py}" x2="${px}" y2="${height - padY}" stroke="#111827" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.72"></line><text class="point-guide hover-y-label" x="3" y="${py - 6}" fill="#111827" font-size="11">${escSvg(valueText)}</text><text class="point-guide hover-x-label" x="${px}" y="${height - padY + 16}" text-anchor="${xAnchor}" fill="#111827" font-size="11">${escSvg(dateText)}</text><circle class="hover-hit" cx="${px}" cy="${py}" r="9"></circle><circle class="data-point" cx="${px}" cy="${py}" r="3.2" fill="${color}"><title>${escSvg(pointLabel(v, i))}</title></circle></g>`;
       }).join('');
-      const labelIndexes = values.length <= 8
+      const labelCount = Math.max(2, Math.min(values.length, Number(item.labelCount || 8)));
+      const labelIndexes = values.length <= labelCount
         ? values.map((_, i) => i)
-        : Array.from(new Set(Array.from({ length: 8 }, (_, i) => Math.round((values.length - 1) * i / 7))));
-      const labels = labelIndexes.map(i => `<div>${item.fullYearLabels ? item.dates[i].slice(0, 7) : item.dates[i].slice(5)}</div>`).join('');
+        : Array.from(new Set(Array.from({ length: labelCount }, (_, i) => Math.round((values.length - 1) * i / (labelCount - 1)))));
+      const axisDateLabel = i => item.compactDateLabels
+        ? `${item.dates[i].slice(2, 4)}.${item.dates[i].slice(5, 7)}`
+        : (item.fullYearLabels ? item.dates[i].slice(0, 7) : item.dates[i].slice(5));
+      const labels = labelIndexes.map(i => `<div>${axisDateLabel(i)}</div>`).join('');
 
       const card = document.createElement('div');
       card.className = 'chart-card';
@@ -733,7 +737,9 @@
           first: Number(item.values[0]),
           last: Number(item.values[item.values.length - 1]),
           changePct: Number(item.changePct || 0),
-          fullYearLabels: true
+          fullYearLabels: true,
+          compactDateLabels: true,
+          labelCount: 5
         };
         return buildLineChartCard(`${meta.title} (${meta.role})`, macroItem, meta.color, meta.source);
       }).filter(Boolean);
