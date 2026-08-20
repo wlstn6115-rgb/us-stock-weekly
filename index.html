@@ -307,10 +307,6 @@
       <div class="capex-dashboard" id="capexDashboard"></div>
     </section>
 
-    <section class="panel">
-      <h2>주요 뉴스 (SAVE 원본 리포트 최근 1주)</h2>
-      <div class="grid-2" id="dailyGrid"></div>
-    </section>
     </div>
 
   </div>
@@ -355,7 +351,6 @@
     const specialGrid = document.getElementById('specialGrid');
     const macroGrid = document.getElementById('macroGrid');
     const correlationGrid = document.getElementById('correlationGrid');
-    const dailyGrid = document.getElementById('dailyGrid');
     const capexRangeChip = document.getElementById('capexRangeChip');
     const capexStats = document.getElementById('capexStats');
     const capexChart = document.getElementById('capexChart');
@@ -982,14 +977,6 @@
     };
 
     renderCapexTracker();
-
-    toArray(dailyNews).forEach(item => {
-      const card = document.createElement('div');
-      card.className = 'news-card';
-      const bullets = toArray(item.bullets).map(x => `<li>${x}</li>`).join('');
-      card.innerHTML = `<div class="news-date">${item.date}</div><h3>${item.headline}</h3><ul>${bullets}</ul>`;
-      dailyGrid.appendChild(card);
-    });
 
   </script>
 </body>
