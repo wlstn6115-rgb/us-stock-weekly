@@ -291,6 +291,18 @@
       .finviz-value { font-size:11px; }
       .finviz-compare-head,.theme-compare-head { margin-bottom:4px; font-size:10px; }
       .finviz-compare-head em,.theme-compare-head em { display:none; }
+      .finviz-row,.finviz-compare-head { grid-template-columns:minmax(124px,.9fr) minmax(0,1fr); gap:8px; }
+      .theme-row,.theme-compare-head { grid-template-columns:minmax(124px,.9fr) minmax(0,1fr); gap:8px; }
+      .finviz-row > :nth-child(2),.theme-row > :nth-child(2),.finviz-compare-head span:nth-child(2),.theme-compare-head span:nth-child(2) { display:none; }
+      .finviz-compare-head span:nth-child(3),.theme-compare-head span:nth-child(3) { font-size:0; text-align:left; }
+      .finviz-compare-head span:nth-child(3)::after,.theme-compare-head span:nth-child(3)::after { content:'이번주'; font-size:10px; }
+      .finviz-name { grid-template-columns:30px minmax(0,1fr); gap:7px; }
+      .finviz-icon { width:30px; height:30px; }
+      .theme-identity { grid-template-columns:28px minmax(0,1fr); gap:7px; }
+      .finviz-name strong,.theme-name strong { font-size:12px; }
+      .finviz-mini { grid-template-columns:minmax(0,1fr) 52px; gap:6px; }
+      .finviz-track { height:18px; }
+      .finviz-value { font-size:12px; }
     }
     @media (max-width:390px) {
       .hero,.panel { padding:14px 12px; }
@@ -471,7 +483,8 @@
       if (finvizWeeklyPeriodText) {
         const previousLabel = finvizWeeklyGroups?.previousStart && finvizWeeklyGroups?.previousEnd ? `${finvizWeeklyGroups.previousStart} ~ ${finvizWeeklyGroups.previousEnd}` : '데이터 없음';
         const currentLabel = finvizWeeklyGroups?.currentStart && finvizWeeklyGroups?.currentEnd ? `${finvizWeeklyGroups.currentStart} ~ ${finvizWeeklyGroups.currentEnd}` : '2026-08-17 ~ 2026-08-19';
-        finvizWeeklyPeriodText.textContent = `비교 기간: 지난주 ${previousLabel} · 이번주 ${currentLabel} · FINVIZ Perf Week`;
+        const compactMobile = window.matchMedia('(max-width: 600px)').matches;
+        finvizWeeklyPeriodText.textContent = compactMobile ? '이번주 등락률 · FINVIZ Perf Week' : `비교 기간: 지난주 ${previousLabel} · 이번주 ${currentLabel} · FINVIZ Perf Week`;
       }
       if (!items.length) {
         finvizWeeklyBars.innerHTML = '<div class="empty-note">FINVIZ 섹터별 주간 데이터를 가져오지 못했습니다.</div>';
@@ -561,7 +574,8 @@
       if (finvizIndustryPeriodText) {
         const previousLabel = finvizWeeklyIndustryGroups?.previousStart && finvizWeeklyIndustryGroups?.previousEnd ? `${finvizWeeklyIndustryGroups.previousStart} ~ ${finvizWeeklyIndustryGroups.previousEnd}` : '데이터 없음';
         const currentLabel = finvizWeeklyIndustryGroups?.currentStart && finvizWeeklyIndustryGroups?.currentEnd ? `${finvizWeeklyIndustryGroups.currentStart} ~ ${finvizWeeklyIndustryGroups.currentEnd}` : '2026-08-17 ~ 2026-08-19';
-        finvizIndustryPeriodText.textContent = `비교 기간: 지난주 ${previousLabel} · 이번주 ${currentLabel} · FINVIZ Perf Week`;
+        const compactMobile = window.matchMedia('(max-width: 600px)').matches;
+        finvizIndustryPeriodText.textContent = compactMobile ? '이번주 등락률 · FINVIZ Perf Week' : `비교 기간: 지난주 ${previousLabel} · 이번주 ${currentLabel} · FINVIZ Perf Week`;
       }
       if (!items.length) {
         finvizIndustryBars.innerHTML = '<div class="empty-note">FINVIZ 업종/테마 주간 데이터를 가져오지 못했습니다.</div>';
