@@ -293,9 +293,9 @@
       .finviz-compare-head em,.theme-compare-head em { display:none; }
       .finviz-row,.finviz-compare-head { grid-template-columns:minmax(124px,.9fr) minmax(0,1fr); gap:8px; }
       .theme-row,.theme-compare-head { grid-template-columns:minmax(124px,.9fr) minmax(0,1fr); gap:8px; }
-      .finviz-row > :nth-child(2),.theme-row > :nth-child(2),.finviz-compare-head span:nth-child(2),.theme-compare-head span:nth-child(2) { display:none; }
-      .finviz-compare-head span:nth-child(3),.theme-compare-head span:nth-child(3) { font-size:0; text-align:left; }
-      .finviz-compare-head span:nth-child(3)::after,.theme-compare-head span:nth-child(3)::after { content:'이번주'; font-size:10px; }
+      .finviz-row:not(.mobile-current) > :nth-child(2),.theme-row:not(.mobile-current) > :nth-child(2),.finviz-compare-head:not(.mobile-current) span:nth-child(2),.theme-compare-head:not(.mobile-current) span:nth-child(2) { display:none; }
+      .finviz-compare-head:not(.mobile-current) span:nth-child(3),.theme-compare-head:not(.mobile-current) span:nth-child(3) { font-size:0; text-align:left; }
+      .finviz-compare-head:not(.mobile-current) span:nth-child(3)::after,.theme-compare-head:not(.mobile-current) span:nth-child(3)::after { content:'이번주'; font-size:10px; }
       .finviz-name { grid-template-columns:30px minmax(0,1fr); gap:7px; }
       .finviz-icon { width:30px; height:30px; }
       .theme-identity { grid-template-columns:28px minmax(0,1fr); gap:7px; }
@@ -483,7 +483,7 @@
       if (finvizWeeklyPeriodText) {
         const previousLabel = finvizWeeklyGroups?.previousStart && finvizWeeklyGroups?.previousEnd ? `${finvizWeeklyGroups.previousStart} ~ ${finvizWeeklyGroups.previousEnd}` : '데이터 없음';
         const currentLabel = finvizWeeklyGroups?.currentStart && finvizWeeklyGroups?.currentEnd ? `${finvizWeeklyGroups.currentStart} ~ ${finvizWeeklyGroups.currentEnd}` : '2026-08-17 ~ 2026-08-19';
-        const compactMobile = window.matchMedia('(max-width: 600px)').matches;
+        const compactMobile = window.matchMedia('(max-width: 960px)').matches;
         finvizWeeklyPeriodText.textContent = compactMobile ? '이번주 등락률 · FINVIZ Perf Week' : `비교 기간: 지난주 ${previousLabel} · 이번주 ${currentLabel} · FINVIZ Perf Week`;
       }
       if (!items.length) {
@@ -552,12 +552,13 @@
       const currentLabel = finvizWeeklyGroups?.currentStart && finvizWeeklyGroups?.currentEnd ? `${finvizWeeklyGroups.currentStart} ~ ${finvizWeeklyGroups.currentEnd}` : '2026-08-17 ~ 2026-08-19';
       const currentWeekHasData = finvizWeeklyGroups?.currentWeekHasData !== false;
       const currentWeekStatusNote = finvizWeeklyGroups?.currentWeekStatusNote || '아직 데이터 없음';
+      const compactPerformanceView = window.matchMedia('(max-width: 960px)').matches;
       finvizWeeklyBars.innerHTML = items.map(item => {
         return `
-          ${item === items[0] ? `<div class="finviz-compare-head"><span></span><span>지난주<br>${previousLabel}</span><span>이번주<br>${currentLabel}${!currentWeekHasData ? `<em>${escSvg(currentWeekStatusNote)}</em>` : ''}</span></div>` : ''}
-          <div class="finviz-row">
+          ${item === items[0] ? (compactPerformanceView ? `<div class="finviz-compare-head mobile-current"><span></span><span>이번주</span></div>` : `<div class="finviz-compare-head"><span></span><span>지난주<br>${previousLabel}</span><span>이번주<br>${currentLabel}${!currentWeekHasData ? `<em>${escSvg(currentWeekStatusNote)}</em>` : ''}</span></div>`) : ''}
+          <div class="finviz-row${compactPerformanceView ? ' mobile-current' : ''}">
             <div class="finviz-name">${iconForGroup(item)}<div><strong>${item.label}</strong><span>${item.note} · ${item.sector}</span></div></div>
-            ${formatWeekValue(item.previousPerfWeek, 'history')}
+            ${compactPerformanceView ? '' : formatWeekValue(item.previousPerfWeek, 'history')}
             ${formatWeekValue(item.perfWeek, currentWeekHasData ? 'data' : 'empty-current')}
           </div>
         `;
@@ -574,7 +575,7 @@
       if (finvizIndustryPeriodText) {
         const previousLabel = finvizWeeklyIndustryGroups?.previousStart && finvizWeeklyIndustryGroups?.previousEnd ? `${finvizWeeklyIndustryGroups.previousStart} ~ ${finvizWeeklyIndustryGroups.previousEnd}` : '데이터 없음';
         const currentLabel = finvizWeeklyIndustryGroups?.currentStart && finvizWeeklyIndustryGroups?.currentEnd ? `${finvizWeeklyIndustryGroups.currentStart} ~ ${finvizWeeklyIndustryGroups.currentEnd}` : '2026-08-17 ~ 2026-08-19';
-        const compactMobile = window.matchMedia('(max-width: 600px)').matches;
+        const compactMobile = window.matchMedia('(max-width: 960px)').matches;
         finvizIndustryPeriodText.textContent = compactMobile ? '이번주 등락률 · FINVIZ Perf Week' : `비교 기간: 지난주 ${previousLabel} · 이번주 ${currentLabel} · FINVIZ Perf Week`;
       }
       if (!items.length) {
@@ -612,12 +613,13 @@
       const currentLabel = finvizWeeklyIndustryGroups?.currentStart && finvizWeeklyIndustryGroups?.currentEnd ? `${finvizWeeklyIndustryGroups.currentStart} ~ ${finvizWeeklyIndustryGroups.currentEnd}` : '2026-08-17 ~ 2026-08-19';
       const currentWeekHasData = finvizWeeklyIndustryGroups?.currentWeekHasData !== false;
       const currentWeekStatusNote = finvizWeeklyIndustryGroups?.currentWeekStatusNote || '아직 데이터 없음';
+      const compactPerformanceView = window.matchMedia('(max-width: 960px)').matches;
       finvizIndustryBars.innerHTML = items.map(item => {
         return `
-          ${item === items[0] ? `<div class="theme-compare-head"><span></span><span>지난주<br>${previousLabel}</span><span>이번주<br>${currentLabel}${!currentWeekHasData ? `<em>${escSvg(currentWeekStatusNote)}</em>` : ''}</span></div>` : ''}
-          <div class="theme-row">
+          ${item === items[0] ? (compactPerformanceView ? `<div class="theme-compare-head mobile-current"><span></span><span>이번주</span></div>` : `<div class="theme-compare-head"><span></span><span>지난주<br>${previousLabel}</span><span>이번주<br>${currentLabel}${!currentWeekHasData ? `<em>${escSvg(currentWeekStatusNote)}</em>` : ''}</span></div>`) : ''}
+          <div class="theme-row${compactPerformanceView ? ' mobile-current' : ''}">
             <div class="theme-identity"><div class="theme-sector">${compactIconForSector(item.sector)}${item.sectorLabel}</div><div class="theme-name"><strong>${item.label}</strong><span>${item.industry}</span></div></div>
-            ${formatThemeWeekValue(item.previousPerfWeek, 'history')}
+            ${compactPerformanceView ? '' : formatThemeWeekValue(item.previousPerfWeek, 'history')}
             ${formatThemeWeekValue(item.perfWeek, currentWeekHasData ? 'data' : 'empty-current')}
           </div>
         `;
