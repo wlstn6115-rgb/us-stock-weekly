@@ -304,6 +304,13 @@
       .finviz-mini { grid-template-columns:minmax(0,1fr) 52px; gap:6px; }
       .finviz-track { height:18px; }
       .finviz-value { font-size:12px; }
+      body { overflow-x:hidden; }
+      .wrap,.dashboard-tab-panel,.panel { width:100%; min-width:0; }
+      .finviz-row.mobile-current { grid-template-columns:minmax(148px,1.08fr) minmax(0,1fr); }
+      .finviz-row.mobile-current .finviz-name { grid-template-columns:1fr; }
+      .finviz-row.mobile-current .finviz-icon { display:none; }
+      .finviz-row.mobile-current .finviz-name > div { min-width:0; }
+      .finviz-row.mobile-current .finviz-name strong { white-space:normal; overflow:visible; text-overflow:clip; word-break:keep-all; }
     }
     @media (max-width:390px) {
       .hero,.panel { padding:14px 12px; }
