@@ -20,6 +20,7 @@
     h1 { margin:0 0 8px; font-size:30px; line-height:1.15; }
     .sub { margin:0; font-size:15px; color:var(--muted); line-height:1.6; }
     .grid-4 { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+    .summary-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
     .grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
     .summary-card,.news-card,.chart-card { border:1px solid var(--line); border-radius:18px; background:rgba(255,255,255,0.58); padding:14px; break-inside:avoid; }
     .summary-card h3,.news-card h3,.chart-card h3 { margin:0 0 8px; font-size:16px; }
@@ -170,9 +171,10 @@
     .finviz-mini.no-data .finviz-track { background:linear-gradient(90deg, rgba(215,203,182,0.18), rgba(215,203,182,0.24)); box-shadow:inset 0 0 0 1px rgba(148,163,184,0.2); }
     .finviz-mini.no-data .finviz-value { color:var(--muted); }
     .finviz-missing { color:var(--muted); font-size:12px; text-align:center; }
-    .theme-row { display:grid; grid-template-columns:92px minmax(156px,0.95fr) minmax(0,1.05fr) minmax(0,1.05fr); gap:10px; align-items:center; min-height:34px; }
-    .theme-compare-head { display:grid; grid-template-columns:92px minmax(156px,0.95fr) minmax(0,1.05fr) minmax(0,1.05fr); gap:10px; align-items:end; margin:0 0 6px; color:var(--muted); font-size:12px; font-weight:800; }
-    .theme-compare-head span:nth-child(n+3) { text-align:center; }
+    .theme-row { display:grid; grid-template-columns:minmax(248px,1.1fr) minmax(0,1.05fr) minmax(0,1.05fr); gap:10px; align-items:center; min-height:38px; }
+    .theme-compare-head { display:grid; grid-template-columns:minmax(248px,1.1fr) minmax(0,1.05fr) minmax(0,1.05fr); gap:10px; align-items:end; margin:0 0 6px; color:var(--muted); font-size:12px; font-weight:800; }
+    .theme-compare-head span:nth-child(n+2) { text-align:center; }
+    .theme-identity { display:grid; grid-template-columns:92px minmax(0,1fr); gap:10px; align-items:center; min-width:0; }
     .theme-sector { display:inline-flex; align-items:center; justify-content:center; gap:5px; min-height:26px; border:1px solid var(--line); border-radius:999px; background:rgba(255,250,242,0.92); color:#334155; font-size:11px; font-weight:800; white-space:nowrap; padding:2px 8px 2px 5px; }
     .theme-sector-icon { width:18px; height:18px; border-radius:999px; display:grid; place-items:center; background:rgba(255,255,255,0.62); }
     .theme-sector-icon svg { width:13px; height:13px; display:block; }
@@ -230,7 +232,8 @@
     .research-frame { width:100%; height:calc(100vh - 86px); min-height:980px; display:block; border:0; background:#fbf7f0; }
     @media (max-width:1180px) { .correlation-stack { grid-template-columns:repeat(2,minmax(0,1fr)); } }
     @media (max-width:1100px) { .special-grid,.macro-grid { grid-template-columns:1fr; } .research-tab-panel { margin-left:0; margin-right:0; } .research-frame { height:980px; } }
-    @media (max-width:960px) { .grid-4,.grid-2,.chart-grid,.formula-grid,.portfolio-grid,.metric-grid,.correlation-stack,.capex-grid,.capex-stack-grid,.quarter-panels { grid-template-columns:1fr; } .capex-kpis,.capex-company-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .capex-company { border-bottom:1px solid var(--line); } .capex-intro,.capex-hero { flex-direction:column; } .capex-stat-row { grid-template-columns:1fr; } .capex-list-card { min-height:0; max-height:520px; } .finviz-panel-head,.macro-panel-head { align-items:flex-start; flex-direction:column; } .finviz-row,.theme-row { grid-template-columns:1fr; gap:5px; } .finviz-compare-head,.theme-compare-head { display:none; } .finviz-value { text-align:right; } .theme-sector { justify-content:flex-start; width:max-content; padding:3px 9px; } }
+    @media (max-width:960px) { .grid-4,.grid-2,.chart-grid,.formula-grid,.portfolio-grid,.metric-grid,.correlation-stack,.capex-grid,.capex-stack-grid,.quarter-panels { grid-template-columns:1fr; } .capex-kpis,.capex-company-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .capex-company { border-bottom:1px solid var(--line); } .capex-intro,.capex-hero { flex-direction:column; } .capex-stat-row { grid-template-columns:1fr; } .capex-list-card { min-height:0; max-height:520px; } .finviz-panel-head,.macro-panel-head { align-items:flex-start; flex-direction:column; } .finviz-row { grid-template-columns:minmax(112px,.9fr) minmax(0,1fr) minmax(0,1fr); gap:8px; } .theme-row,.theme-compare-head { grid-template-columns:minmax(150px,1fr) minmax(0,1fr) minmax(0,1fr); gap:8px; } .finviz-compare-head { grid-template-columns:minmax(112px,.9fr) minmax(0,1fr) minmax(0,1fr); gap:8px; } .finviz-value { text-align:right; } .theme-sector { justify-content:flex-start; width:max-content; padding:3px 9px; } }
+    @media (max-width:960px) { .summary-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
     /* Phone layout: Galaxy 360/412px and iPhone 375/390/430px CSS viewports. */
     @media (max-width:600px) {
       .wrap { padding:8px; }
@@ -241,9 +244,15 @@
       .sub { font-size:13px; line-height:1.55; }
       .panel h2 { font-size:18px; }
       .grid-4 { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+      .summary-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; }
       .summary-card,.chart-card { border-radius:14px; padding:12px; }
       .summary-card h3 { font-size:14px; }
       .big { font-size:18px; }
+      .summary-grid .summary-card { padding:9px 7px; }
+      .summary-grid .summary-card h3 { min-height:30px; margin-bottom:4px; font-size:11px; line-height:1.25; }
+      .summary-grid .summary-row { display:block; }
+      .summary-grid .big { font-size:15px; line-height:1.2; white-space:nowrap; }
+      .summary-grid .up,.summary-grid .down,.summary-grid .flat { display:block; margin-top:3px; font-size:11px; }
       .capex-dashboard { gap:12px; }
       .capex-intro { padding:14px; gap:10px; }
       .capex-intro h3,.capex-hero h3 { font-size:21px; }
@@ -267,11 +276,27 @@
       .mini-svg { height:200px; }
       .correlation-card { overflow:auto; }
       .correlation-table { min-width:440px; }
+      .finviz-row,.finviz-compare-head { grid-template-columns:minmax(88px,.8fr) minmax(0,1fr) minmax(0,1fr); gap:6px; }
+      .theme-row,.theme-compare-head { grid-template-columns:minmax(104px,.95fr) minmax(0,1fr) minmax(0,1fr); gap:6px; }
+      .theme-identity { grid-template-columns:24px minmax(0,1fr); gap:5px; }
+      .theme-sector { min-width:24px; padding:2px; font-size:0; }
+      .theme-sector-icon { width:18px; height:18px; }
+      .finviz-icon { width:27px; height:27px; border-radius:8px; }
+      .finviz-icon svg { width:18px; height:18px; }
+      .finviz-name { grid-template-columns:27px minmax(0,1fr); gap:6px; }
+      .finviz-name strong,.theme-name strong { font-size:11px; }
+      .finviz-name span,.theme-name span { display:none; }
+      .finviz-mini { grid-template-columns:minmax(0,1fr) 46px; gap:4px; }
+      .finviz-track { height:16px; }
+      .finviz-value { font-size:11px; }
+      .finviz-compare-head,.theme-compare-head { margin-bottom:4px; font-size:10px; }
+      .finviz-compare-head em,.theme-compare-head em { display:none; }
     }
     @media (max-width:390px) {
       .hero,.panel { padding:14px 12px; }
       h1 { font-size:23px; }
       .grid-4,.capex-kpis,.capex-company-grid { grid-template-columns:1fr; }
+      .summary-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
       .summary-card { padding:11px; }
       .quarter-row { grid-template-columns:minmax(86px,1fr) minmax(64px,1.15fr) minmax(43px,.42fr); gap:5px; }
       .quarter-row-label,.quarter-value { font-size:10px; }
@@ -295,8 +320,8 @@
     </section>
 
     <section class="panel">
-      <h2>&#51452;&#44036;&#32;&#49828;&#45253;&#49399; (2026-08-17 ~ 2026-08-19)</h2>
-      <div class="grid-4" id="summaryGrid"></div>
+      <h2>&#51452;&#44036;&#32;&#49828;&#45253;&#49399;</h2>
+      <div class="grid-4 summary-grid" id="summaryGrid"></div>
     </section>
 
     <section class="panel">
@@ -434,7 +459,7 @@
 
       const summary = document.createElement('div');
       summary.className = 'summary-card';
-      summary.innerHTML = `<h3>${label}</h3><div class="summary-row"><div class="big">${fmt(item.last, item.unit)}</div><div class="${klass}">${change > 0 ? '+' : ''}${change.toFixed(2)}%</div></div><div class="muted">${item.dates[0]} ~ ${item.dates[item.dates.length - 1]}</div>`;
+      summary.innerHTML = `<h3>${label}</h3><div class="summary-row"><div class="big">${fmt(item.last, item.unit)}</div><div class="${klass}">${change > 0 ? '+' : ''}${change.toFixed(2)}%</div></div>`;
       summaryGrid.appendChild(summary);
     });
 
@@ -575,10 +600,9 @@
       const currentWeekStatusNote = finvizWeeklyIndustryGroups?.currentWeekStatusNote || '아직 데이터 없음';
       finvizIndustryBars.innerHTML = items.map(item => {
         return `
-          ${item === items[0] ? `<div class="theme-compare-head"><span></span><span></span><span>지난주<br>${previousLabel}</span><span>이번주<br>${currentLabel}${!currentWeekHasData ? `<em>${escSvg(currentWeekStatusNote)}</em>` : ''}</span></div>` : ''}
+          ${item === items[0] ? `<div class="theme-compare-head"><span></span><span>지난주<br>${previousLabel}</span><span>이번주<br>${currentLabel}${!currentWeekHasData ? `<em>${escSvg(currentWeekStatusNote)}</em>` : ''}</span></div>` : ''}
           <div class="theme-row">
-            <div class="theme-sector">${compactIconForSector(item.sector)}${item.sectorLabel}</div>
-            <div class="theme-name"><strong>${item.label}</strong><span>${item.industry}</span></div>
+            <div class="theme-identity"><div class="theme-sector">${compactIconForSector(item.sector)}${item.sectorLabel}</div><div class="theme-name"><strong>${item.label}</strong><span>${item.industry}</span></div></div>
             ${formatThemeWeekValue(item.previousPerfWeek, 'history')}
             ${formatThemeWeekValue(item.perfWeek, currentWeekHasData ? 'data' : 'empty-current')}
           </div>
