@@ -1,7 +1,7 @@
 {
     "type":  "weekly",
     "date":  "2026-08-21",
-    "generatedAt":  "2026-08-23T23:00:23.6534117+09:00",
+    "generatedAt":  "2026-08-23T23:04:35.4438018+09:00",
     "caption":  "미국주식 주간 브리핑 2026-08-21",
     "items":  [
                   {
@@ -28,11 +28,6 @@
                       "file":  "05_weekly_macro_this_week.png",
                       "path":  "instagram/weekly/2026-08-21/05_weekly_macro_this_week.png",
                       "latestPath":  "instagram/weekly/latest/05_weekly_macro_this_week.png"
-                  },
-                  {
-                      "file":  "06_weekly_earnings_this_week.png",
-                      "path":  "instagram/weekly/2026-08-21/06_weekly_earnings_this_week.png",
-                      "latestPath":  "instagram/weekly/latest/06_weekly_earnings_this_week.png"
                   },
                   {
                       "file":  "06_weekly_macro_next_week.png",
