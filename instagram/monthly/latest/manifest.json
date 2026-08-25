@@ -1,8 +1,8 @@
 {
     "type":  "monthly",
     "date":  "2026-08-25",
-    "generatedAt":  "2026-08-25T19:40:28.2287337+09:00",
-    "caption":  "미국주식 월간/확장 인스타 자료 2026-08-25",
+    "generatedAt":  "2026-08-26T00:05:27.1213755+09:00",
+    "caption":  "월간 시장 온도계 2026-08-25\n\nAI 투자 체력 자료는 각 사의 회계기간·CAPEX/FCF 정의가 달라 직접적인 동등 비교가 아닙니다. 상세 산식과 비교 기준은 별첨 「AI 투자 공시 기준」을 확인하세요.\n\n원문 IR:\nTSLA https://ir.tesla.com/\nMSFT https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast\nGOOGL https://abc.xyz/investor/events/event-details/2026/2026-Q2-Earnings-Call-2026-GgTAq7Is0z/default.aspx\nMETA https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx\nAMZN https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx\nAAPL https://investor.apple.com/investor-relations/default.aspx\nNVDA https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx\nORCL https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/",
     "items":  [
                   {
                       "file":  "01_monthly_one_year_indices.png",
