@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>자산배분 관측소</title><meta name="description" content="매일 관측한 시장 환경과 현재 보유자산을 함께 보는 개인 자산배분 도구"><link rel="stylesheet" href="./style.css"><script src="./pages-api.js" defer></script><script src="./app.js" defer></script></head>
+<body>
+<header><a class="brand" href="./" aria-label="자산배분 관측소 홈"><span class="brand-icon">◫</span> 자산배분 관측소</a><span class="local">개인용 · 이 브라우저에 저장</span></header>
+<main>
+<div class="page-title"><div><p class="eyebrow">PORTFOLIO OBSERVATORY</p><h1>이번 달, 어디에 더할까요?</h1><p id="basis">시장 데이터를 불러오는 중입니다.</p></div><button id="refresh" class="secondary">게시된 최신 자료 불러오기 ↻</button></div>
+<div id="message" role="status" aria-live="polite" hidden></div>
+<section class="scores" id="scores" aria-label="자산별 환경 Score"><p>Score를 불러오는 중입니다.</p></section>
+<div class="workspace">
+<section class="panel input-panel"><div class="section-title"><h2>내 투자 현황</h2><span>KRW</span></div><p class="muted">현재 평가액과 아직 투자하지 않은 금액을 입력하세요.</p>
+<form id="portfolio-form">
+<label class="budget-label" for="budget">이번 달 남은 투자금</label><div class="money budget"><input id="budget" type="number" min="0" max="1000000000000000" step="1" inputmode="numeric" required placeholder="금액 입력"><span>원</span></div>
+<div class="holdings">
+<label for="QQQ"><i class="dot qqq"></i> QQQ <span>주식</span></label><div class="money"><input id="QQQ" type="number" min="0" max="1000000000000000" step="1" inputmode="numeric" required placeholder="평가액"><span>원</span></div>
+<label for="BTC"><i class="dot btc"></i> Bitcoin <span>비트코인</span></label><div class="money"><input id="BTC" type="number" min="0" max="1000000000000000" step="1" inputmode="numeric" required placeholder="평가액"><span>원</span></div>
+<label for="GOLD"><i class="dot gold"></i> Gold <span>금</span></label><div class="money"><input id="GOLD" type="number" min="0" max="1000000000000000" step="1" inputmode="numeric" required placeholder="평가액"><span>원</span></div>
+<label for="CASH"><i class="dot cash"></i> Cash <span>투자용 원화 현금</span></label><div class="money"><input id="CASH" type="number" min="0" max="1000000000000000" step="1" inputmode="numeric" required placeholder="평가액"><span>원</span></div>
+</div><div class="total"><span>현재 자산 합계</span><strong id="total">—</strong></div>
+<button class="primary" type="submit">추천 배분 계산 <span>→</span></button><button id="save" class="save" type="button">입력값을 이 브라우저에 저장</button><p id="save-note" class="small">저장한 값은 이 브라우저에서만 사용됩니다.</p>
+</form></section>
+<section class="panel allocation-panel"><div class="section-title"><h2>남은 투자금 배분</h2><span class="tag">제한적 비중 조정</span></div><div id="allocation"><div class="empty"><span>＋</span><h3>현재 자산에서 시작합니다.</h3><p>왼쪽에 금액을 입력하면 보유비중과<br>시장 Score를 함께 반영합니다.</p></div></div><div class="allocation-foot"><strong>신규 투자금만 조정합니다.</strong><p>기존 보유자산 매도는 실행하지 않습니다. 매수 후에는 평가액과 남은 투자금을 갱신해 주세요.</p></div></section>
+</div>
+<section class="panel factors-panel"><div class="factor-header"><div><p class="eyebrow">WHAT CHANGED</p><h2>Score를 만든 요인</h2></div><div class="asset-picker" role="group" aria-label="기여요인 자산 선택"><button data-asset="QQQ" aria-pressed="true">QQQ</button><button data-asset="BTC" aria-pressed="false">Bitcoin</button><button data-asset="GOLD" aria-pressed="false">Gold</button><button data-asset="CASH" aria-pressed="false">Cash</button></div></div><p class="muted">가중치는 관측 환경에 따라 매일 조정됩니다. 하루 ±2%p, 기준 가중치 대비 ±8%p 이내입니다.</p><div id="factors"></div></section>
+<details class="limitations"><summary>데이터 범위와 해석 기준</summary><ul id="warnings"></ul><p>Score는 현재 환경의 우호도입니다. 상승 확률이나 검증된 기대수익률을 의미하지 않습니다.</p></details>
+<footer>OBSERVATION → SCORE → BOUNDED ALLOCATION <span>인스타 시장 자료 연동</span></footer>
+</main></body></html>
