@@ -1,6 +1,7 @@
 (function(root){
  'use strict';
  const E=root.PortfolioEngine||(typeof require!=='undefined'?require('./portfolio-engine.js'):null);
+ const B=root.BenchmarkEngine||(typeof require!=='undefined'?require('./benchmark-engine.js'):null);
  const REASONS=['싸 보여서','비싸 보여서','더 오를 것 같아서','하락할 것 같아서','Score가 높아서','Score가 낮아서','내 원칙대로','리밸런싱','현금 확보','위험 축소','기타'];
  const clone=x=>JSON.parse(JSON.stringify(x));
  function month(d){const x=new Date(d+'T00:00:00Z');return x.getUTCFullYear()*12+x.getUTCMonth();}
@@ -14,9 +15,9 @@
  function start(rows,years,initial,monthly,rng=Math.random){
    E.portfolio(initial);E.contribution(initial,monthly);const options=candidates(rows,years);if(!options.length)throw Error('선택한 기간 전체의 가격·당시 Score 데이터가 없습니다.');
    const random=rng();if(!(random>=0&&random<1))throw Error('무작위 값 오류');const index=options[Math.floor(random*options.length)],window=clone(rows.slice(index,index+years*12+1));
-   return {id:root.crypto.randomUUID(),schemaVersion:1,startDate:window[0].date,endDate:window.at(-1).date,duration:years,mode:'free',initialAssets:clone(initial),monthlyContribution:monthly,createdAt:new Date().toISOString(),cursor:0,portfolio:clone(initial),principal:E.value(initial),window,decisions:[]};
+   return {id:root.crypto.randomUUID(),schemaVersion:1,startDate:window[0].date,endDate:window.at(-1).date,duration:years,mode:'free',initialAssets:clone(initial),monthlyContribution:monthly,createdAt:new Date().toISOString(),cursor:0,portfolio:clone(initial),principal:E.value(initial),window,decisions:[],benchmarks:B.initial(window,initial)};
  }
- function view(session){const s=session.window[session.cursor];return {date:s.date,scores:clone(s.scores),prices:clone(s.prices),portfolio:clone(session.portfolio),principal:session.principal,monthlyContribution:session.monthlyContribution,completed:session.cursor>=session.window.length-1,history:clone(session.window.slice(0,session.cursor+1))};}
+ function view(session){const s=session.window[session.cursor];return {date:s.date,scores:clone(s.scores),prices:clone(s.prices),portfolio:clone(session.portfolio),principal:session.principal,monthlyContribution:session.monthlyContribution,completed:session.cursor>=session.window.length-1,history:session.window.slice(0,session.cursor+1).map(x=>({date:x.date,prices:clone(x.prices),scores:clone(x.scores)}))};}
  function decide(session,orders,reason,memo=''){
    if(session.cursor>=session.window.length-1)throw Error('종료된 세션입니다.');if(!REASONS.includes(reason))throw Error('그때 왜 그렇게 했나요? 이유를 선택하세요.');if(typeof memo!=='string'||memo.length>4000||(reason==='기타'&&!memo.trim()))throw Error('기타 이유는 메모가 필요합니다. 메모는 4,000자 이내입니다.');
    const today=session.window[session.cursor],next=session.window[session.cursor+1];
@@ -25,6 +26,8 @@
    const evaluated=E.markToMarket(p.after,returns);
    const decision={id:session.id+':'+session.cursor,schemaVersion:1,sessionId:session.id,decisionDate:today.date,portfolioBefore:clone(p.before),assetScores:clone(today.scores),assetPrices:clone(today.prices),action:p.orders,portfolioAfter:clone(p.after),reasonCategory:reason,reasonMemo:memo,modelVersion:today.modelVersion,contribution:session.monthlyContribution,nextDate:next.date,nextPortfolio:evaluated,periodReturn:E.periodReturn(p.totalBefore,E.value(evaluated),session.monthlyContribution)};
    const updated=clone(session);updated.cursor++;updated.portfolio=evaluated;updated.principal+=session.monthlyContribution;updated.decisions.push(decision);
+   updated.benchmarks=B.step(session.benchmarks,today,next,session.monthlyContribution,E.value(session.portfolio),E.value(evaluated));
+   if(updated.benchmarks.available){decision.developerPortfolio=clone(updated.benchmarks.developer);decision.benchmarkPortfolio={SP500:updated.benchmarks.sp500};decision.developerDecision=clone(updated.benchmarks.lastAllocation);}
    return {session:updated,decision};
  }
  const api={REASONS,valid,candidates,start,view,decide};root.SimulationEngine=api;if(typeof module!=='undefined')module.exports=api;
