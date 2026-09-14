@@ -37,6 +37,15 @@
     add:(store,record)=>transact(store,'readwrite',s=>s.add(M.validateRecord(store,record))),
     get:(store,id)=>transact(store,'readonly',s=>s.get(id)),
     list:(store)=>transact(store,'readonly',s=>s.getAll()),
+    async commitSimulation(session,decision){
+      M.validateRecord('sessions',session);M.validateRecord('decisions',decision);
+      const db=await openDB();return new Promise((resolve,reject)=>{
+        const tx=db.transaction(['sessions','decisions'],'readwrite'),sessions=tx.objectStore('sessions');let failure;
+        const request=sessions.get(session.id);
+        request.onsuccess=()=>{const previous=request.result;if(!previous||previous.cursor!==session.cursor-1||decision.sessionId!==session.id){failure=Error('다른 탭에서 진행된 세션입니다. 다시 불러오세요.');tx.abort();return;}tx.objectStore('decisions').add(decision);sessions.put(session);};
+        tx.oncomplete=()=>{db.close();resolve();};tx.onabort=tx.onerror=()=>{db.close();reject(failure||tx.error);};
+      });
+    },
     async updatePerformance(store,id,futurePerformance){
       if(!['decisions','journals'].includes(store))throw Error('성과 업데이트 대상이 아닙니다.');
       const db=await openDB();return new Promise((resolve,reject)=>{const tx=db.transaction(store,'readwrite'),s=tx.objectStore(store),r=s.get(id);let failure;
