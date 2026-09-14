@@ -1,6 +1,5 @@
 /* GitHub Pages adapter: holdings never leave this browser. */
 let publishedState;
-const storageKey = 'allocation-observatory-portfolio-v1';
 function browserAllocate(scores, input, rules) {
   const names = Object.keys(rules.base);
   if (!input || !input.portfolio || Object.keys(input.portfolio).sort().join() !== names.slice().sort().join()) throw Error('네 자산의 보유액을 입력하세요.');
@@ -49,12 +48,10 @@ function browserAllocate(scores, input, rules) {
 }
 async function pagesApi(path,data){
   if(path==='state'||path==='refresh'){
-    const response=await fetch('./market.json?t='+Date.now(),{cache:'no-store'});
-    if(!response.ok)throw Error('게시된 시장 데이터를 불러오지 못했습니다.');
-    publishedState=await response.json();
-    const d=publishedState.result?.market_date;
-    publishedState.stale=!d||Date.now()-Date.parse(d+'T00:00:00Z')>6*86400000;
-    let portfolio=null;try{portfolio=JSON.parse(localStorage.getItem(storageKey));}catch{}
+    publishedState=await AllocationData.get().getDashboardState();
+    let portfolio=null;
+    try{portfolio=AllocationStore.settings(localStorage).get();}
+    catch(error){publishedState.storageError=error.message;}
     return {...publishedState,portfolio};
   }
   if(path==='simulate'||path==='save'){
@@ -62,7 +59,7 @@ async function pagesApi(path,data){
     const latest=await pagesApi('state');
     if(latest.stale||!latest.result?.scores)throw Error('최신 시장 데이터가 필요합니다. 일일 게시 상태를 확인해 주세요.');
     const allocation=browserAllocate(latest.result.scores,data,latest.rules);
-    if(path==='save')localStorage.setItem(storageKey,JSON.stringify(data));
+    if(path==='save')AllocationStore.settings(localStorage).save(data);
     return {allocation,saved:path==='save'};
   }
   throw Error('지원하지 않는 작업입니다.');

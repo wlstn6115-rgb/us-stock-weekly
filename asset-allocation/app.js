@@ -43,6 +43,7 @@ function renderAllocation(allocation) {
 async function load(initial=false) {
   const next=await api('state'); const changed=current?.result?.generated_at!==next.result?.generated_at;
   current=next;
+  if(next.storageError)message(next.storageError,true);
   $('basis').textContent=next.result?.market_date?`시장 기준 ${next.result.market_date} · ${next.result.regime==='risk_off'?'위험회피 환경':'일반 환경'} · 30초마다 갱신 확인`:'아직 계산된 시장 데이터가 없습니다.';
   if (changed || initial) {
     renderScores();

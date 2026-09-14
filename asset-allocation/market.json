@@ -2,6 +2,8 @@
   "result": {
     "market_date": "2026-09-11",
     "generated_at": "2026-09-14T13:46:57.760239+00:00",
+    "available_at": "2026-09-14T13:46:57.2380109Z",
+    "config_hash": "f975b97fcfef2b127c857b5225db0b8df5f8755e6182f9382797f5299ba38811",
     "regime": "normal",
     "stress": 0.2830204529240267,
     "scores": {
