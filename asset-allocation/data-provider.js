@@ -11,7 +11,7 @@
   function historicalSnapshot(r){
     if(!r)return null;
     const verified=r.pointInTimeVerified===true;
-    return {schemaVersion:2,date:r.date,observationDate:r.date,availableAt:r.availableAt,source:r.source||'historical-file',modelVersion:r.modelVersion||'unavailable',scoreType:r.scoreType||null,indicators:[],assets:Object.fromEntries(Object.keys(M.assets).map(k=>[M.assetId(k),{price:r.prices[k],priceCurrency:r.currency,priceType:r.priceBasis,score:verified?(r.scores?.[k]??null):null,scoreUsable:verified&&Number.isFinite(r.scores?.[k])}])),quality:{pricesAvailable:true,historicalPointInTime:verified}};
+    return {schemaVersion:2,date:r.date,observationDate:r.date,availableAt:r.availableAt,source:r.source||'historical-file',modelVersion:r.modelVersion||'unavailable',scoreType:r.scoreType||null,indicators:[],assets:Object.fromEntries(Object.keys(M.assets).map(k=>[M.assetId(k),{price:r.prices[k],priceCurrency:r.currency,priceType:r.assetDetails?.[M.assetId(k)]?.priceType||r.priceBasis,sourceDate:r.assetDetails?.[M.assetId(k)]?.sourceDate||r.date,ticker:r.assetDetails?.[M.assetId(k)]?.ticker||null,score:verified?(r.scores?.[k]??null):null,scoreUsable:verified&&Number.isFinite(r.scores?.[k])}])),dataVersion:r.dataVersion||null,fx:r.fx||null,cashModel:r.cashModel||null,quality:{pricesAvailable:true,historicalPointInTime:verified}};
   }
   class UnifiedDataProvider{
     constructor({current=new Current(),historical=new Historical()}={}){this.current=current;this.historical=historical;}
@@ -33,12 +33,11 @@
     async getIndicators(date){const s=date?await this.getSnapshot(date):await this.getLatestSnapshot();return {date:s?.date||null,values:[],status:'unavailable',reason:'원본 지표의 값·단위·가용시각은 아직 공개 데이터에 포함되지 않았습니다.'};}
     async getAssetPrices(date){const s=date?await this.getSnapshot(date):await this.getLatestSnapshot();return s?Object.fromEntries(Object.entries(s.assets).map(([k,v])=>[k,v.price])):null;}
     async getMonthlySnapshots(){return this.historical.read();}
-    async getMonthlySnapshot(month){if(!/^\d{4}-(0[1-9]|1[0-2])$/.test(month))throw Error('유효한 월이 필요합니다.');const rows=await this.historical.read();return historicalSnapshot(rows.find(r=>r.date.slice(0,7)===month&&Date.parse(r.availableAt)<=end(r.date)));}
+    async getMonthlySnapshot(month,asOf=new Date().toISOString().slice(0,10)){if(!/^\d{4}-(0[1-9]|1[0-2])$/.test(month))throw Error('유효한 월이 필요합니다.');const cutoff=end(asOf);const rows=await this.historical.read();return historicalSnapshot(rows.find(r=>r.date.slice(0,7)===month&&Date.parse(r.availableAt)<=cutoff));}
     async getMonthlyAssetPrices(asset,start,finish){
       const id=M.assetId(asset);end(start);end(finish);if(start>finish)throw Error('기간 순서 오류');
       const key=Object.keys(M.assets).find(k=>M.assetId(k)===id);
-      if(!key)return [];
-      return (await this.historical.read()).filter(r=>r.date>=start&&r.date<=finish&&Date.parse(r.availableAt)<=end(r.date)).map(r=>({assetId:id,date:r.date,value:r.prices[key],currency:r.currency,priceType:r.priceBasis,source:r.source||'historical-file',sourceDate:r.date,frequency:'monthly'}));
+      return (await this.historical.read()).filter(r=>r.date>=start&&r.date<=finish&&Date.parse(r.availableAt)<=Date.now()&&(key||r.assetDetails?.[id])).map(r=>({assetId:id,date:r.date,availableAt:r.availableAt,value:r.assetDetails?.[id]?.value??r.prices[key],currency:r.currency,priceType:r.assetDetails?.[id]?.priceType||r.priceBasis,source:r.source||'historical-file',sourceDate:r.assetDetails?.[id]?.sourceDate||r.date,frequency:'monthly',ticker:r.assetDetails?.[id]?.ticker||null,fx:r.fx||null}));
     }
     // Journal's daily-price contract remains unavailable; monthly observations cannot support D1.
     async getHistoricalPrices(asset,start,finish){M.assetId(asset);end(start);end(finish);if(start>finish)throw Error('기간 순서 오류');return [];}
