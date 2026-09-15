@@ -1,6 +1,6 @@
 const $ = id => document.getElementById(id);
 const assets = ['QQQ','BTC','GOLD','CASH'];
-const labels = {QQQ:'QQQ',BTC:'Bitcoin',GOLD:'Gold',CASH:'Cash'};
+const labels = {QQQ:'주식',BTC:'비트코인',GOLD:'금',CASH:'현금·단기채'};
 const captions = {QQQ:'주식 환경',BTC:'비트코인 환경',GOLD:'금 환경',CASH:'현금 보유 환경'};
 const factorLabels = {equity_trend:'나스닥100 추세',relative_equity:'미국 주식 상대강도',btc_trend:'비트코인 추세',gold_trend:'금 가격 추세',btc_gold:'비트코인 / 금',dollar:'달러인덱스 변화',nominal_yield:'명목 10년 금리 변화',liquidity:'연준 자산 변화'};
 const colors = {QQQ:'#3264e8',BTC:'#e59932',GOLD:'#9b883f',CASH:'#758b9c'};
@@ -21,19 +21,20 @@ function inputValues() {
   });
   return {portfolio:Object.fromEntries(assets.map((a,i)=>[a,values[i]])),remaining_monthly_investment_krw:values[4]};
 }
-function total() { const sum=assets.reduce((n,a)=>n+(Number($(a).value)||0),0); $('total').textContent=won(sum); }
+function total() { const sum=assets.reduce((n,a)=>n+(Number($(a).value)||0),0); $('total').textContent=won(sum); $('holding-weights').textContent=assets.map(a=>labels[a]+' '+(sum>0?percent(Math.max(0,Number($(a).value)||0)/sum):'—')).join(' · '); }
 function renderScores() {
   const result=current?.result;
   if (!result?.scores) { $('scores').innerHTML='<p>아직 계산 결과가 없습니다. 최신 자료로 다시 계산해 주세요.</p>'; $('factors').textContent='사용 가능한 Score가 없습니다.'; return; }
   $('scores').innerHTML=assets.map(a=>{
     const s=result.scores[a];
-    return `<article class="score-card" style="--asset:${colors[a]}"><div class="card-top">${labels[a]}<span class="asset-caption">${captions[a]}</span></div><div class="score-number">${s.current_score.toFixed(1)} <small>/ 100</small></div><div class="score-state">${escape(s.recommendation)}</div><div class="deltas">${[['1d','1D'],['1w','1W'],['1m','1M']].map(([k,t])=>`<span>${t} <b>${s['score_'+k+'_change'] == null ? '—' : signed(s['score_'+k+'_change'])}</b></span>`).join('')}</div></article>`;
+    return `<article class="score-card" style="--asset:${colors[a]}"><div class="card-top">${labels[a]}<span class="asset-caption">${captions[a]}</span></div><div class="score-number">${s.current_score.toFixed(1)} <small>/ 100</small></div><div class="score-state">${!s.usable?'데이터 부족':s.current_score<40?'부담':s.current_score<60?'중립':s.current_score<80?'우호':'매우 우호'}</div><div class="deltas">${[['1d','1D'],['1w','1W'],['1m','1M']].map(([k,t])=>`<span>${t} <b>${s['score_'+k+'_change'] == null ? '—' : (s['score_'+k+'_change']>0?'▲ ':s['score_'+k+'_change']<0?'▼ ':'→ ')+signed(s['score_'+k+'_change'])}</b></span>`).join('')}</div></article>`;
   }).join('');
   renderFactors();
 }
 function renderFactors() {
   const score=current?.result?.scores?.[selected]; if (!score) return;
-  $('factors').innerHTML=`<div class="table-wrap"><table><thead><tr><th>관측 요인</th><th>기준 → 현재 가중치</th><th>전일 대비</th><th>Score 기여</th><th>데이터</th></tr></thead><tbody>${score.contributions.map(c=>`<tr><td class="factor-name">${escape(factorLabels[c.factor]||c.factor)}<span>${escape(c.factor)}</span></td><td>${percent(c.base_weight)} → <strong>${percent(c.weight)}</strong></td><td>${signed(c.weight_change*100)}%p</td><td class="points ${c.points>=0?'positive':'negative'}">${signed(c.points)}</td><td>${c.data_status==='ok'?'반영됨':escape(c.data_status)}</td></tr>`).join('')}</tbody></table></div><p class="small" style="text-align:left">설정된 지표 충족률 ${percent(score.data_coverage)} · 1D / 1W / 1M의 — 표시는 비교 이력이 아직 없다는 뜻입니다.</p>`;
+  const top=(score.contributions||[]).filter(c=>c.data_status==='ok'&&Number.isFinite(c.points)&&c.points!==0).sort((a,b)=>Math.abs(b.points)-Math.abs(a.points)).slice(0,5);
+  $('factors').innerHTML=`<ul class="factor-summary">${top.map(c=>`<li><strong>${escape(factorLabels[c.factor]||c.factor)}</strong> · ${c.points>0?'우호':'부담'} 기여 ${signed(c.points)}점</li>`).join('')||'<li>설명할 수 있는 유효 기여요인이 없습니다.</li>'}</ul><p class="muted">실질금리 · VIX · HY spread · 선행 PER: 데이터 연동 예정</p><div class="table-wrap"><table><thead><tr><th>관측 요인</th><th>기준 → 현재 가중치</th><th>전일 대비</th><th>Score 기여</th><th>데이터</th></tr></thead><tbody>${score.contributions.map(c=>`<tr><td class="factor-name">${escape(factorLabels[c.factor]||c.factor)}<span>${escape(c.factor)}</span></td><td>${percent(c.base_weight)} → <strong>${percent(c.weight)}</strong></td><td>${signed(c.weight_change*100)}%p</td><td class="points ${c.points>=0?'positive':'negative'}">${signed(c.points)}</td><td>${c.data_status==='ok'?'반영됨':escape(c.data_status)}</td></tr>`).join('')}</tbody></table></div><p class="small" style="text-align:left">설정된 지표 충족률 ${percent(score.data_coverage)} · 1D / 1W / 1M의 — 표시는 비교 이력이 아직 없다는 뜻입니다.</p>`;
 }
 function renderAllocation(allocation) {
   const n=allocation.remaining_monthly_investment_krw;
@@ -44,7 +45,7 @@ async function load(initial=false) {
   const next=await api('state'); const changed=current?.result?.generated_at!==next.result?.generated_at;
   current=next;
   if(next.storageError)message(next.storageError,true);
-  $('basis').textContent=next.result?.market_date?`시장 기준 ${next.result.market_date} · ${next.result.regime==='risk_off'?'위험회피 환경':'일반 환경'} · 30초마다 갱신 확인`:'아직 계산된 시장 데이터가 없습니다.';
+  $('basis').textContent=next.result?.market_date?`시장 기준 ${next.result.market_date} · ${next.result.regime==='risk_off'?'위험회피 환경':'일반 환경'} · 갱신 ${next.result.generated_at||'미제공'} · 모델 ${next.result.model_version||next.result.config_hash||'미제공'} · 30초마다 갱신 확인`:'아직 계산된 시장 데이터가 없습니다.';
   if (changed || initial) {
     renderScores();
     $('warnings').innerHTML=(next.result?.warnings||[]).map(w=>`<li>${escape(w)}</li>`).join('');
