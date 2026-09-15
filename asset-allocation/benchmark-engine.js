@@ -19,10 +19,10 @@
    r.developer=P.markToMarket(r.developer,Object.fromEntries(P.ASSETS.map(a=>[a,next.prices[a]/today.prices[a]-1])));
    const spBefore=r.sp500;r.sp500=Math.round((spBefore+deposit)*(1+(next.sp500TotalReturnKRW/today.sp500TotalReturnKRW-1)));
    const ur=P.periodReturn(userBefore,userAfter,deposit),dr=P.periodReturn(before,P.value(r.developer),deposit),sr=P.periodReturn(spBefore,r.sp500,deposit);
-   if(ur!==null){r.userFactor*=1+ur;r.developerFactor*=1+dr;r.sp500Factor*=1+sr;r.observedPeriods++;}
+   r.periodCounts=r.periodCounts||{userFactor:r.observedPeriods,developerFactor:r.observedPeriods,sp500Factor:r.observedPeriods}; for(const [factor,rate] of [['userFactor',ur],['developerFactor',dr],['sp500Factor',sr]])if(rate!==null){r[factor]*=1+rate;r.periodCounts[factor]++;} r.observedPeriods++;
    r.principal+=deposit;r.lastAllocation={decisionDate:today.date,version:today.developer.version,weights:copy(today.developer.allocation),amounts:buys};
    r.history.push({date:next.date,user:userAfter,developer:P.value(r.developer),sp500:r.sp500,principal:r.principal});return r;
  }
- function view(state,cursor){if(!state?.available)return {available:false,reason:state?.reason||'이전 세션은 비교 데이터가 없습니다.'};if(!cursor)return {available:true,hidden:true};const last=state.history.at(-1);return {available:true,hidden:false,history:copy(state.history),lastAllocation:copy(state.lastAllocation),rows:[['사용자','user','userFactor'],['개발자 전략','developer','developerFactor'],['S&P500 100%','sp500','sp500Factor']].map(([label,key,f])=>({label,value:last[key],principal:state.principal,profit:last[key]-state.principal,twr:state.observedPeriods?state[f]-1:null}))};}
+ function view(state,cursor){if(!state?.available)return {available:false,reason:state?.reason||'이전 세션은 비교 데이터가 없습니다.'};if(!cursor)return {available:true,hidden:true};const last=state.history.at(-1);return {available:true,hidden:false,history:copy(state.history),lastAllocation:copy(state.lastAllocation),rows:[['사용자','user','userFactor'],['개발자 전략','developer','developerFactor'],['S&P500 100%','sp500','sp500Factor']].map(([label,key,f])=>({label,value:last[key],principal:state.principal,profit:last[key]-state.principal,twr:(state.periodCounts?state.periodCounts[f]:state.observedPeriods)?state[f]-1:null}))};}
  const api={allocationValid,supported,initial,step,view,split};root.BenchmarkEngine=api;if(typeof module!=='undefined')module.exports=api;
 })(globalThis);
