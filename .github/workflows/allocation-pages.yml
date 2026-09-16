@@ -1,6 +1,8 @@
 name: Refresh allocation data and deploy Pages
 on:
-  push:
+  workflow_run:
+    workflows: ['pages build and deployment']
+    types: [completed]
     branches: [main]
   schedule:
     - cron: '20 22 * * *'
@@ -14,6 +16,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     environment:
