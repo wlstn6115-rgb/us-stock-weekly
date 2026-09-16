@@ -22,8 +22,16 @@
    const variance=n>1?returns.reduce((s,r)=>s+(r-mean)**2,0)/(n-1):null;
    return {value:last.value,principal:last.principal,profit:last.value-last.principal,twr:n?index-1:null,cagr:n?index**(12/(points.length-1))-1:null,mdd:n?mdd:null,volatility:variance===null?null:Math.sqrt(variance)*Math.sqrt(12),maxDrawdownKRW:Math.round(maxDrawdownKRW),maxPrincipalLoss:Math.round(maxPrincipalLoss),recoveryMonths:recovery,unrecoveredMonths:underwater?points.length-1-peakMonth:0,curve,months:points.length-1};
  }
- function report(session){
+ function report(session,currency='KRW'){
    if(session.cursor!==session.duration*12)return {completed:false};
+   if(currency==='USD'){
+     if(!session.window?.every(s=>Number.isFinite(s.fx?.value)&&s.fx.value>0))return {completed:true,unavailable:true};
+     let principal=P.value(session.initialAssets)/session.window[0].fx.value;
+     const points=[{date:session.startDate,value:principal,principal}];
+     session.decisions.forEach((d,i)=>{principal+=d.contribution/session.window[i].fx.value;points.push({date:d.nextDate,value:P.value(d.nextPortfolio)/session.window[i+1].fx.value,principal});});
+     if(points.length!==session.cursor+1)throw Error('월별 판단 이력이 불완전합니다.');
+     return {completed:true,rows:[{label:'사용자 (USD)',...summarize(points)}],benchmarkAvailable:false};
+   }
    const points=[{date:session.startDate,value:P.value(session.initialAssets),principal:P.value(session.initialAssets)}];let principal=points[0].principal;
    for(const d of session.decisions){principal+=d.contribution;points.push({date:d.nextDate,value:P.value(d.nextPortfolio),principal});}
    if(points.length!==session.cursor+1)throw Error('월별 판단 이력이 불완전합니다.');

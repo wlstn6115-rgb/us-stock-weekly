@@ -4,7 +4,7 @@ const labels = {QQQ:'주식',BTC:'비트코인',GOLD:'금',CASH:'현금·단기�
 const captions = {QQQ:'주식 환경',BTC:'비트코인 환경',GOLD:'금 환경',CASH:'현금 보유 환경'};
 const factorLabels = {equity_trend:'나스닥100 추세',relative_equity:'미국 주식 상대강도',btc_trend:'비트코인 추세',gold_trend:'금 가격 추세',btc_gold:'비트코인 / 금',dollar:'달러인덱스 변화',nominal_yield:'명목 10년 금리 변화',liquidity:'연준 자산 변화'};
 const colors = {QQQ:'#3264e8',BTC:'#e59932',GOLD:'#9b883f',CASH:'#758b9c'};
-const won = value => Number(value).toLocaleString('ko-KR')+'원';
+const won = value => AllocationCurrency.money(Number(value));
 const percent = value => (value*100).toFixed(1)+'%';
 const signed = value => (value >= 0 ? '+' : '')+value.toFixed(2);
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -21,7 +21,7 @@ function inputValues() {
   });
   return {portfolio:Object.fromEntries(assets.map((a,i)=>[a,values[i]])),remaining_monthly_investment_krw:values[4]};
 }
-function total() { const sum=assets.reduce((n,a)=>n+(Number($(a).value)||0),0); $('total').textContent=won(sum); $('holding-weights').textContent=assets.map(a=>labels[a]+' '+(sum>0?percent(Math.max(0,Number($(a).value)||0)/sum):'—')).join(' · '); }
+function total() { const sum=assets.reduce((n,a)=>n+(Number($(a).value)||0),0); $('total').innerHTML=won(sum); $('holding-weights').textContent=assets.map(a=>labels[a]+' '+(sum>0?percent(Math.max(0,Number($(a).value)||0)/sum):'—')).join(' · '); }
 function renderScores() {
   const result=current?.result;
   if (!result?.scores) { $('scores').innerHTML='<p>아직 계산 결과가 없습니다. 최신 자료로 다시 계산해 주세요.</p>'; $('factors').textContent='사용 가능한 Score가 없습니다.'; return; }

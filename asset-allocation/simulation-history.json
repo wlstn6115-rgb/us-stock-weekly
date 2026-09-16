@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "metadata": {
     "source": "Yahoo Finance via yfinance",
-    "updatedAt": "2026-09-15T15:58:32.013462+00:00",
+    "updatedAt": "2026-09-15T16:07:28.715724+00:00",
     "frequency": "monthly",
     "currency": "KRW",
     "priceType": "mixed_adjusted_close_and_close_fx_converted",
@@ -64,7 +64,7 @@
         "end": "2026-08-31"
       }
     },
-    "dataVersion": "43c5674d77b76d79e646c2ff7e25682c0afc906d714dc8871778fd96b81d373a"
+    "dataVersion": "67fdc2af6a4b1779e437bc2346089269a1d7e13d6b966384262ebd861925f42b"
   },
   "snapshots": [
     {
@@ -72,8 +72,8 @@
       "availableAt": "2014-10-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 170296.24050120637,
-          "usdValue": 161.84779357910156,
+          "value": 170296.25655650347,
+          "usdValue": 161.84780883789062,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -96,16 +96,16 @@
           "sourceDate": "2014-09-30"
         },
         "cash": {
-          "value": 76899.1654820349,
-          "usdValue": 73.08417510986328,
+          "value": 76899.18153733201,
+          "usdValue": 73.08419036865234,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2014-09-30"
         },
         "benchmark": {
-          "value": 170296.24050120637,
-          "usdValue": 161.84779357910156,
+          "value": 170296.25655650347,
+          "usdValue": 161.84780883789062,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -123,8 +123,8 @@
       "availableAt": "2014-11-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 174571.95715805516,
-          "usdValue": 165.6594696044922,
+          "value": 174571.9410783425,
+          "usdValue": 165.65945434570312,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -147,16 +147,16 @@
           "sourceDate": "2014-10-31"
         },
         "cash": {
-          "value": 76999.24772061408,
-          "usdValue": 73.06817626953125,
+          "value": 76999.2557604704,
+          "usdValue": 73.06818389892578,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2014-10-31"
         },
         "benchmark": {
-          "value": 174571.95715805516,
-          "usdValue": 165.6594696044922,
+          "value": 174571.9410783425,
+          "usdValue": 165.65945434570312,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -174,8 +174,8 @@
       "availableAt": "2014-12-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 187078.2838098649,
-          "usdValue": 170.21043395996094,
+          "value": 187078.30058079958,
+          "usdValue": 170.21044921875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -198,16 +198,16 @@
           "sourceDate": "2014-11-30"
         },
         "cash": {
-          "value": 80309.23075395077,
-          "usdValue": 73.06817626953125,
+          "value": 80309.23913941812,
+          "usdValue": 73.06818389892578,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2014-11-28"
         },
         "benchmark": {
-          "value": 187078.2838098649,
-          "usdValue": 170.21043395996094,
+          "value": 187078.30058079958,
+          "usdValue": 170.21044921875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -225,8 +225,8 @@
       "availableAt": "2015-01-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 185958.58692614362,
-          "usdValue": 169.77867126464844,
+          "value": 185958.62035204843,
+          "usdValue": 169.77870178222656,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -249,16 +249,16 @@
           "sourceDate": "2014-12-31"
         },
         "cash": {
-          "value": 80014.10364405997,
-          "usdValue": 73.0522232055664,
+          "value": 80014.12035701238,
+          "usdValue": 73.05223846435547,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2014-12-31"
         },
         "benchmark": {
-          "value": 185958.58692614362,
-          "usdValue": 169.77867126464844,
+          "value": 185958.62035204843,
+          "usdValue": 169.77870178222656,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -276,8 +276,8 @@
       "availableAt": "2015-02-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 181025.46374503523,
-          "usdValue": 164.74832153320312,
+          "value": 181025.4302123189,
+          "usdValue": 164.748291015625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -300,16 +300,16 @@
           "sourceDate": "2015-01-31"
         },
         "cash": {
-          "value": 80252.29911371134,
-          "usdValue": 73.03630828857422,
+          "value": 80252.23204827867,
+          "usdValue": 73.03624725341797,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2015-01-30"
         },
         "benchmark": {
-          "value": 181025.46374503523,
-          "usdValue": 164.74832153320312,
+          "value": 181025.4302123189,
+          "usdValue": 164.748291015625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -327,8 +327,8 @@
       "availableAt": "2015-03-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 191525.3041954469,
-          "usdValue": 174.00791931152344,
+          "value": 191525.32099033892,
+          "usdValue": 174.0079345703125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -351,16 +351,16 @@
           "sourceDate": "2015-02-28"
         },
         "cash": {
-          "value": 80388.87665358838,
-          "usdValue": 73.03630828857422,
+          "value": 80388.80947402027,
+          "usdValue": 73.03624725341797,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2015-02-27"
         },
         "benchmark": {
-          "value": 191525.3041954469,
-          "usdValue": 174.00791931152344,
+          "value": 191525.32099033892,
+          "usdValue": 174.0079345703125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -378,8 +378,8 @@
       "availableAt": "2015-04-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 189344.52262115479,
-          "usdValue": 171.27500915527344,
+          "value": 189344.5394897461,
+          "usdValue": 171.2750244140625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -402,16 +402,16 @@
           "sourceDate": "2015-03-31"
         },
         "cash": {
-          "value": 80741.6388130188,
-          "usdValue": 73.03630828857422,
+          "value": 80741.57133865356,
+          "usdValue": 73.03624725341797,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2015-03-31"
         },
         "benchmark": {
-          "value": 189344.52262115479,
-          "usdValue": 171.27500915527344,
+          "value": 189344.5394897461,
+          "usdValue": 171.2750244140625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -453,8 +453,8 @@
           "sourceDate": "2015-04-30"
         },
         "cash": {
-          "value": 78056.44465127774,
-          "usdValue": 73.0202407836914,
+          "value": 78056.47727365233,
+          "usdValue": 73.02027130126953,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -480,8 +480,8 @@
       "availableAt": "2015-06-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 193927.42749023438,
-          "usdValue": 175.182861328125,
+          "value": 193927.46127319336,
+          "usdValue": 175.18289184570312,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -512,8 +512,8 @@
           "sourceDate": "2015-05-29"
         },
         "benchmark": {
-          "value": 193927.42749023438,
-          "usdValue": 175.182861328125,
+          "value": 193927.46127319336,
+          "usdValue": 175.18289184570312,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -531,8 +531,8 @@
       "availableAt": "2015-07-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 191914.0247168094,
-          "usdValue": 171.62457275390625,
+          "value": 191913.97352876142,
+          "usdValue": 171.62452697753906,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -563,8 +563,8 @@
           "sourceDate": "2015-06-30"
         },
         "benchmark": {
-          "value": 191914.0247168094,
-          "usdValue": 171.62457275390625,
+          "value": 191913.97352876142,
+          "usdValue": 171.62452697753906,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -582,8 +582,8 @@
       "availableAt": "2015-08-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 205471.79982928187,
-          "usdValue": 175.5014190673828,
+          "value": 205471.81769381464,
+          "usdValue": 175.50143432617188,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -614,8 +614,8 @@
           "sourceDate": "2015-07-31"
         },
         "benchmark": {
-          "value": 205471.79982928187,
-          "usdValue": 175.5014190673828,
+          "value": 205471.81769381464,
+          "usdValue": 175.50143432617188,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -684,8 +684,8 @@
       "availableAt": "2015-10-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 191781.50747044198,
-          "usdValue": 160.59950256347656,
+          "value": 191781.4892490059,
+          "usdValue": 160.5994873046875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -708,16 +708,16 @@
           "sourceDate": "2015-09-30"
         },
         "cash": {
-          "value": 87140.64703152515,
-          "usdValue": 72.97233581542969,
+          "value": 87140.70169583336,
+          "usdValue": 72.97238159179688,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2015-09-30"
         },
         "benchmark": {
-          "value": 191781.50747044198,
-          "usdValue": 160.59950256347656,
+          "value": 191781.4892490059,
+          "usdValue": 160.5994873046875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -735,8 +735,8 @@
       "availableAt": "2015-11-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 198631.9773930423,
-          "usdValue": 174.25997924804688,
+          "value": 198631.96000015922,
+          "usdValue": 174.2599639892578,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -759,16 +759,16 @@
           "sourceDate": "2015-10-31"
         },
         "cash": {
-          "value": 83160.0613743877,
-          "usdValue": 72.95638275146484,
+          "value": 83160.07876727078,
+          "usdValue": 72.9563980102539,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2015-10-30"
         },
         "benchmark": {
-          "value": 198631.9773930423,
-          "usdValue": 174.25997924804688,
+          "value": 198631.96000015922,
+          "usdValue": 174.2599639892578,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -786,8 +786,8 @@
       "availableAt": "2015-12-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 201976.19276148826,
-          "usdValue": 174.89691162109375,
+          "value": 201976.21038279496,
+          "usdValue": 174.8969268798828,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -810,16 +810,16 @@
           "sourceDate": "2015-11-30"
         },
         "cash": {
-          "value": 84270.63936294056,
-          "usdValue": 72.97233581542969,
+          "value": 84270.69222686067,
+          "usdValue": 72.97238159179688,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2015-11-30"
         },
         "benchmark": {
-          "value": 201976.19276148826,
-          "usdValue": 174.89691162109375,
+          "value": 201976.21038279496,
+          "usdValue": 174.8969268798828,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -837,8 +837,8 @@
       "availableAt": "2016-01-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 202027.91488285363,
-          "usdValue": 171.87429809570312,
+          "value": 202027.87901127338,
+          "usdValue": 171.874267578125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -861,16 +861,16 @@
           "sourceDate": "2015-12-31"
         },
         "cash": {
-          "value": 85755.84626659378,
-          "usdValue": 72.95638275146484,
+          "value": 85755.8642023839,
+          "usdValue": 72.9563980102539,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2015-12-31"
         },
         "benchmark": {
-          "value": 202027.91488285363,
-          "usdValue": 171.87429809570312,
+          "value": 202027.87901127338,
+          "usdValue": 171.874267578125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -888,8 +888,8 @@
       "availableAt": "2016-02-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 196900.11628023535,
-          "usdValue": 163.31719970703125,
+          "value": 196900.18986605108,
+          "usdValue": 163.3172607421875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -912,16 +912,16 @@
           "sourceDate": "2016-01-31"
         },
         "cash": {
-          "value": 87977.63758546673,
-          "usdValue": 72.97233581542969,
+          "value": 87977.69277482852,
+          "usdValue": 72.97238159179688,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2016-01-29"
         },
         "benchmark": {
-          "value": 196900.11628023535,
-          "usdValue": 163.31719970703125,
+          "value": 196900.18986605108,
+          "usdValue": 163.3172607421875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -939,8 +939,8 @@
       "availableAt": "2016-03-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 202530.501580175,
-          "usdValue": 163.18234252929688,
+          "value": 202530.46370389313,
+          "usdValue": 163.18231201171875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -963,16 +963,16 @@
           "sourceDate": "2016-02-29"
         },
         "cash": {
-          "value": 90568.15550691448,
-          "usdValue": 72.97233581542969,
+          "value": 90568.21232133731,
+          "usdValue": 72.97238159179688,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2016-02-29"
         },
         "benchmark": {
-          "value": 202530.501580175,
-          "usdValue": 163.18234252929688,
+          "value": 202530.46370389313,
+          "usdValue": 163.18231201171875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -990,8 +990,8 @@
       "availableAt": "2016-04-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 198581.27447412908,
-          "usdValue": 174.15896606445312,
+          "value": 198581.20488001406,
+          "usdValue": 174.15890502929688,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1014,16 +1014,16 @@
           "sourceDate": "2016-03-31"
         },
         "cash": {
-          "value": 83205.24504158646,
-          "usdValue": 72.97233581542969,
+          "value": 83205.29723717272,
+          "usdValue": 72.97238159179688,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2016-03-31"
         },
         "benchmark": {
-          "value": 198581.27447412908,
-          "usdValue": 174.15896606445312,
+          "value": 198581.20488001406,
+          "usdValue": 174.15890502929688,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1092,8 +1092,8 @@
       "availableAt": "2016-06-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 213108.0682178773,
-          "usdValue": 177.8197479248047,
+          "value": 213108.0865047723,
+          "usdValue": 177.81976318359375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1124,8 +1124,8 @@
           "sourceDate": "2016-05-31"
         },
         "benchmark": {
-          "value": 213108.0682178773,
-          "usdValue": 177.8197479248047,
+          "value": 213108.0865047723,
+          "usdValue": 177.81976318359375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1143,8 +1143,8 @@
       "availableAt": "2016-07-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 205587.1215896681,
-          "usdValue": 178.43780517578125,
+          "value": 205587.1040092539,
+          "usdValue": 178.4377899169922,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1167,16 +1167,16 @@
           "sourceDate": "2016-06-30"
         },
         "cash": {
-          "value": 84093.52913599182,
-          "usdValue": 72.98834991455078,
+          "value": 84093.54671640601,
+          "usdValue": 72.98836517333984,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2016-06-30"
         },
         "benchmark": {
-          "value": 205587.1215896681,
-          "usdValue": 178.43780517578125,
+          "value": 205587.1040092539,
+          "usdValue": 178.4377899169922,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1194,8 +1194,8 @@
       "availableAt": "2016-08-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 207758.70652369596,
-          "usdValue": 184.94566345214844,
+          "value": 207758.72366465628,
+          "usdValue": 184.9456787109375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1218,16 +1218,16 @@
           "sourceDate": "2016-07-31"
         },
         "cash": {
-          "value": 82027.28570163902,
-          "usdValue": 73.0202407836914,
+          "value": 82027.31998355966,
+          "usdValue": 73.02027130126953,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2016-07-29"
         },
         "benchmark": {
-          "value": 207758.70652369596,
-          "usdValue": 184.94566345214844,
+          "value": 207758.72366465628,
+          "usdValue": 184.9456787109375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1245,8 +1245,8 @@
       "availableAt": "2016-09-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 207087.2493431624,
-          "usdValue": 185.1671600341797,
+          "value": 207087.23227803782,
+          "usdValue": 185.16714477539062,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1269,16 +1269,16 @@
           "sourceDate": "2016-08-31"
         },
         "cash": {
-          "value": 81664.37724420894,
-          "usdValue": 73.0202407836914,
+          "value": 81664.41137445811,
+          "usdValue": 73.02027130126953,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2016-08-31"
         },
         "benchmark": {
-          "value": 207087.2493431624,
-          "usdValue": 185.1671600341797,
+          "value": 207087.23227803782,
+          "usdValue": 185.16714477539062,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1296,8 +1296,8 @@
       "availableAt": "2016-10-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 203995.69655064493,
-          "usdValue": 185.17791748046875,
+          "value": 203995.66293187067,
+          "usdValue": 185.17788696289062,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1320,16 +1320,16 @@
           "sourceDate": "2016-09-30"
         },
         "cash": {
-          "value": 80458.25758023653,
-          "usdValue": 73.03630828857422,
+          "value": 80458.190342688,
+          "usdValue": 73.03624725341797,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2016-09-30"
         },
         "benchmark": {
-          "value": 203995.69655064493,
-          "usdValue": 185.17791748046875,
+          "value": 203995.66293187067,
+          "usdValue": 185.17788696289062,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1347,8 +1347,8 @@
       "availableAt": "2016-11-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 208662.05197607726,
-          "usdValue": 181.96743774414062,
+          "value": 208662.0869705826,
+          "usdValue": 181.96746826171875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1371,16 +1371,16 @@
           "sourceDate": "2016-10-31"
         },
         "cash": {
-          "value": 83768.98078281991,
-          "usdValue": 73.0522232055664,
+          "value": 83768.99828007258,
+          "usdValue": 73.05223846435547,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2016-10-31"
         },
         "benchmark": {
-          "value": 208662.05197607726,
-          "usdValue": 181.96743774414062,
+          "value": 208662.0869705826,
+          "usdValue": 181.96746826171875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1398,8 +1398,8 @@
       "availableAt": "2016-12-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 220341.17486535572,
-          "usdValue": 188.67088317871094,
+          "value": 220341.10358483903,
+          "usdValue": 188.6708221435547,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1422,16 +1422,16 @@
           "sourceDate": "2016-11-30"
         },
         "cash": {
-          "value": 85277.41733200941,
-          "usdValue": 73.0202407836914,
+          "value": 85277.45297226775,
+          "usdValue": 73.02027130126953,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2016-11-30"
         },
         "benchmark": {
-          "value": 220341.17486535572,
-          "usdValue": 188.67088317871094,
+          "value": 220341.10358483903,
+          "usdValue": 188.6708221435547,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1449,8 +1449,8 @@
       "availableAt": "2017-01-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 232012.96226972342,
-          "usdValue": 192.49554443359375,
+          "value": 232012.99905225635,
+          "usdValue": 192.49557495117188,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1473,16 +1473,16 @@
           "sourceDate": "2016-12-31"
         },
         "cash": {
-          "value": 88029.89808758348,
-          "usdValue": 73.0362777709961,
+          "value": 88029.88889195025,
+          "usdValue": 73.03627014160156,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2016-12-30"
         },
         "benchmark": {
-          "value": 232012.96226972342,
-          "usdValue": 192.49554443359375,
+          "value": 232012.99905225635,
+          "usdValue": 192.49557495117188,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1500,8 +1500,8 @@
       "availableAt": "2017-02-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 229095.23453007638,
-          "usdValue": 195.94020080566406,
+          "value": 229095.25237080455,
+          "usdValue": 195.94021606445312,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1524,16 +1524,16 @@
           "sourceDate": "2017-01-31"
         },
         "cash": {
-          "value": 85432.05736260116,
-          "usdValue": 73.06819152832031,
+          "value": 85432.0841236934,
+          "usdValue": 73.0682144165039,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2017-01-31"
         },
         "benchmark": {
-          "value": 229095.23453007638,
-          "usdValue": 195.94020080566406,
+          "value": 229095.25237080455,
+          "usdValue": 195.94021606445312,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1551,8 +1551,8 @@
       "availableAt": "2017-03-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 230914.40431009233,
-          "usdValue": 203.63900756835938,
+          "value": 230914.36970499158,
+          "usdValue": 203.63897705078125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1575,16 +1575,16 @@
           "sourceDate": "2017-02-28"
         },
         "cash": {
-          "value": 82896.69187434018,
-          "usdValue": 73.10501098632812,
+          "value": 82896.64861796424,
+          "usdValue": 73.10497283935547,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2017-02-28"
         },
         "benchmark": {
-          "value": 230914.40431009233,
-          "usdValue": 203.63900756835938,
+          "value": 230914.36970499158,
+          "usdValue": 203.63897705078125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1602,8 +1602,8 @@
       "availableAt": "2017-04-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 227753.1142618358,
-          "usdValue": 203.89349365234375,
+          "value": 227753.14835058153,
+          "usdValue": 203.89352416992188,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1626,16 +1626,16 @@
           "sourceDate": "2017-03-31"
         },
         "cash": {
-          "value": 81645.46057095379,
-          "usdValue": 73.09220886230469,
+          "value": 81645.46909314021,
+          "usdValue": 73.09221649169922,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2017-03-31"
         },
         "benchmark": {
-          "value": 227753.1142618358,
-          "usdValue": 203.89349365234375,
+          "value": 227753.14835058153,
+          "usdValue": 203.89352416992188,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1653,8 +1653,8 @@
       "availableAt": "2017-05-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 232674.35133235157,
-          "usdValue": 205.91744995117188,
+          "value": 232674.31684932113,
+          "usdValue": 205.91741943359375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1677,16 +1677,16 @@
           "sourceDate": "2017-04-30"
         },
         "cash": {
-          "value": 82651.29806315526,
-          "usdValue": 73.1466293334961,
+          "value": 82651.25495936722,
+          "usdValue": 73.14659118652344,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2017-04-28"
         },
         "benchmark": {
-          "value": 232674.35133235157,
-          "usdValue": 205.91744995117188,
+          "value": 232674.31684932113,
+          "usdValue": 205.91741943359375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1728,8 +1728,8 @@
           "sourceDate": "2017-05-31"
         },
         "cash": {
-          "value": 82222.00894702785,
-          "usdValue": 73.15776062011719,
+          "value": 82222.04324573465,
+          "usdValue": 73.15779113769531,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -1755,8 +1755,8 @@
       "availableAt": "2017-07-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 240866.82602613233,
-          "usdValue": 210.15480041503906,
+          "value": 240866.77356000617,
+          "usdValue": 210.15475463867188,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1779,16 +1779,16 @@
           "sourceDate": "2017-06-30"
         },
         "cash": {
-          "value": 83935.29988454748,
-          "usdValue": 73.23302459716797,
+          "value": 83935.33486196492,
+          "usdValue": 73.2330551147461,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2017-06-30"
         },
         "benchmark": {
-          "value": 240866.82602613233,
-          "usdValue": 210.15480041503906,
+          "value": 240866.77356000617,
+          "usdValue": 210.15475463867188,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1806,8 +1806,8 @@
       "availableAt": "2017-08-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 241079.8178042248,
-          "usdValue": 214.47427368164062,
+          "value": 241079.88641079515,
+          "usdValue": 214.47433471679688,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1830,16 +1830,16 @@
           "sourceDate": "2017-07-31"
         },
         "cash": {
-          "value": 82344.64159046486,
-          "usdValue": 73.25709533691406,
+          "value": 82344.61586300097,
+          "usdValue": 73.25707244873047,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2017-07-31"
         },
         "benchmark": {
-          "value": 241079.8178042248,
-          "usdValue": 214.47427368164062,
+          "value": 241079.88641079515,
+          "usdValue": 214.47433471679688,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1857,8 +1857,8 @@
       "availableAt": "2017-09-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 241628.417528864,
-          "usdValue": 215.10012817382812,
+          "value": 241628.36610689946,
+          "usdValue": 215.10008239746094,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1881,16 +1881,16 @@
           "sourceDate": "2017-08-31"
         },
         "cash": {
-          "value": 82385.5205126116,
-          "usdValue": 73.34044647216797,
+          "value": 82385.46052031964,
+          "usdValue": 73.34039306640625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2017-08-31"
         },
         "benchmark": {
-          "value": 241628.417528864,
-          "usdValue": 215.10012817382812,
+          "value": 241628.36610689946,
+          "usdValue": 215.10008239746094,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1908,8 +1908,8 @@
       "availableAt": "2017-10-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 251458.38401935995,
-          "usdValue": 219.43417358398438,
+          "value": 251458.43647632748,
+          "usdValue": 219.43421936035156,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1932,16 +1932,16 @@
           "sourceDate": "2017-09-30"
         },
         "cash": {
-          "value": 84104.36970183626,
-          "usdValue": 73.39334869384766,
+          "value": 84104.39593032002,
+          "usdValue": 73.39337158203125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2017-09-29"
         },
         "benchmark": {
-          "value": 251458.38401935995,
-          "usdValue": 219.43417358398438,
+          "value": 251458.43647632748,
+          "usdValue": 219.43421936035156,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1959,8 +1959,8 @@
       "availableAt": "2017-11-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 252332.45434057713,
-          "usdValue": 224.60498046875,
+          "value": 252332.4371980913,
+          "usdValue": 224.60496520996094,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -1983,16 +1983,16 @@
           "sourceDate": "2017-10-31"
         },
         "cash": {
-          "value": 82511.48989870958,
-          "usdValue": 73.44474029541016,
+          "value": 82511.4984699525,
+          "usdValue": 73.44474792480469,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2017-10-31"
         },
         "benchmark": {
-          "value": 252332.45434057713,
-          "usdValue": 224.60498046875,
+          "value": 252332.4371980913,
+          "usdValue": 224.60496520996094,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2010,8 +2010,8 @@
       "availableAt": "2017-12-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 250140.67624288052,
-          "usdValue": 231.47027587890625,
+          "value": 250140.62677419,
+          "usdValue": 231.47023010253906,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2034,16 +2034,16 @@
           "sourceDate": "2017-11-30"
         },
         "cash": {
-          "value": 79412.18784433231,
-          "usdValue": 73.48489379882812,
+          "value": 79412.22082345933,
+          "usdValue": 73.48492431640625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2017-11-30"
         },
         "benchmark": {
-          "value": 250140.67624288052,
-          "usdValue": 231.47027587890625,
+          "value": 250140.62677419,
+          "usdValue": 231.47023010253906,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2061,8 +2061,8 @@
       "availableAt": "2018-01-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 250557.4209514223,
-          "usdValue": 234.27748107910156,
+          "value": 250557.40463230014,
+          "usdValue": 234.2774658203125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2093,8 +2093,8 @@
           "sourceDate": "2017-12-29"
         },
         "benchmark": {
-          "value": 250557.4209514223,
-          "usdValue": 234.27748107910156,
+          "value": 250557.40463230014,
+          "usdValue": 234.2774658203125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2136,8 +2136,8 @@
           "sourceDate": "2018-01-31"
         },
         "cash": {
-          "value": 78977.69094373286,
-          "usdValue": 73.63612365722656,
+          "value": 78977.72367505729,
+          "usdValue": 73.63615417480469,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -2163,8 +2163,8 @@
       "availableAt": "2018-03-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 257415.82483418845,
-          "usdValue": 238.48268127441406,
+          "value": 257415.85777455755,
+          "usdValue": 238.4827117919922,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2187,16 +2187,16 @@
           "sourceDate": "2018-02-28"
         },
         "cash": {
-          "value": 79548.15850325674,
-          "usdValue": 73.69732666015625,
+          "value": 79548.14203307219,
+          "usdValue": 73.69731140136719,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2018-02-28"
         },
         "benchmark": {
-          "value": 257415.82483418845,
-          "usdValue": 238.48268127441406,
+          "value": 257415.85777455755,
+          "usdValue": 238.4827117919922,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2214,8 +2214,8 @@
       "availableAt": "2018-04-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 246326.37561035156,
-          "usdValue": 231.94573974609375,
+          "value": 246326.35940551758,
+          "usdValue": 231.9457244873047,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2246,8 +2246,8 @@
           "sourceDate": "2018-03-29"
         },
         "benchmark": {
-          "value": 246326.37561035156,
-          "usdValue": 231.94573974609375,
+          "value": 246326.35940551758,
+          "usdValue": 231.9457244873047,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2265,8 +2265,8 @@
       "availableAt": "2018-05-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 248904.98183851503,
-          "usdValue": 233.14442443847656,
+          "value": 248904.99812879786,
+          "usdValue": 233.14443969726562,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2289,16 +2289,16 @@
           "sourceDate": "2018-04-30"
         },
         "cash": {
-          "value": 78863.53982251137,
-          "usdValue": 73.86993408203125,
+          "value": 78863.52353222854,
+          "usdValue": 73.86991882324219,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2018-04-30"
         },
         "benchmark": {
-          "value": 248904.98183851503,
-          "usdValue": 233.14442443847656,
+          "value": 248904.99812879786,
+          "usdValue": 233.14443969726562,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2316,8 +2316,8 @@
       "availableAt": "2018-06-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 256730.01833982766,
-          "usdValue": 238.81195068359375,
+          "value": 256730.10035810992,
+          "usdValue": 238.81202697753906,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2340,16 +2340,16 @@
           "sourceDate": "2018-05-31"
         },
         "cash": {
-          "value": 79531.40592793003,
-          "usdValue": 73.98063659667969,
+          "value": 79531.3977261018,
+          "usdValue": 73.98062896728516,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2018-05-31"
         },
         "benchmark": {
-          "value": 256730.01833982766,
-          "usdValue": 238.81195068359375,
+          "value": 256730.10035810992,
+          "usdValue": 238.81202697753906,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2367,8 +2367,8 @@
       "availableAt": "2018-07-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 269137.3510967195,
-          "usdValue": 240.18539428710938,
+          "value": 269137.2998024672,
+          "usdValue": 240.1853485107422,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2391,16 +2391,16 @@
           "sourceDate": "2018-06-30"
         },
         "cash": {
-          "value": 83021.49131396413,
-          "usdValue": 74.09060668945312,
+          "value": 83021.52551013231,
+          "usdValue": 74.09063720703125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2018-06-29"
         },
         "benchmark": {
-          "value": 269137.3510967195,
-          "usdValue": 240.18539428710938,
+          "value": 269137.2998024672,
+          "usdValue": 240.1853485107422,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2418,8 +2418,8 @@
       "availableAt": "2018-08-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 278143.9933338966,
-          "usdValue": 249.0834197998047,
+          "value": 278143.94221679866,
+          "usdValue": 249.0833740234375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2442,16 +2442,16 @@
           "sourceDate": "2018-07-31"
         },
         "cash": {
-          "value": 82849.66374454182,
-          "usdValue": 74.1935043334961,
+          "value": 82849.69782260712,
+          "usdValue": 74.19353485107422,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2018-07-31"
         },
         "benchmark": {
-          "value": 278143.9933338966,
-          "usdValue": 249.0834197998047,
+          "value": 278143.94221679866,
+          "usdValue": 249.0833740234375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2469,8 +2469,8 @@
       "availableAt": "2018-09-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 286708.7631819248,
-          "usdValue": 257.0341796875,
+          "value": 286708.6270186007,
+          "usdValue": 257.0340576171875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2493,16 +2493,16 @@
           "sourceDate": "2018-08-31"
         },
         "cash": {
-          "value": 82890.41925093345,
-          "usdValue": 74.31119537353516,
+          "value": 82890.36818968691,
+          "usdValue": 74.31114959716797,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2018-08-31"
         },
         "benchmark": {
-          "value": 286708.7631819248,
-          "usdValue": 257.0341796875,
+          "value": 286708.6270186007,
+          "usdValue": 257.0340576171875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2520,8 +2520,8 @@
       "availableAt": "2018-10-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 287601.4658550918,
-          "usdValue": 258.56231689453125,
+          "value": 287601.4998001009,
+          "usdValue": 258.5623474121094,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2544,16 +2544,16 @@
           "sourceDate": "2018-09-30"
         },
         "cash": {
-          "value": 82772.71526739746,
-          "usdValue": 74.41514587402344,
+          "value": 82772.77467116341,
+          "usdValue": 74.41519927978516,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2018-09-28"
         },
         "benchmark": {
-          "value": 287601.4658550918,
-          "usdValue": 258.56231689453125,
+          "value": 287601.4998001009,
+          "usdValue": 258.5623474121094,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2571,8 +2571,8 @@
       "availableAt": "2018-11-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 273838.15992244706,
-          "usdValue": 240.6945343017578,
+          "value": 273838.0731228292,
+          "usdValue": 240.6944580078125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2595,16 +2595,16 @@
           "sourceDate": "2018-10-31"
         },
         "cash": {
-          "value": 84806.59447120875,
-          "usdValue": 74.54214477539062,
+          "value": 84806.5684313234,
+          "usdValue": 74.54212188720703,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2018-10-31"
         },
         "benchmark": {
-          "value": 273838.15992244706,
-          "usdValue": 240.6945343017578,
+          "value": 273838.0731228292,
+          "usdValue": 240.6944580078125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2622,8 +2622,8 @@
       "availableAt": "2018-12-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 273847.7457715422,
-          "usdValue": 245.15921020507812,
+          "value": 273847.8309934065,
+          "usdValue": 245.15928649902344,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2646,16 +2646,16 @@
           "sourceDate": "2018-11-30"
         },
         "cash": {
-          "value": 83419.84796281904,
-          "usdValue": 74.68070983886719,
+          "value": 83419.89057375118,
+          "usdValue": 74.68074798583984,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2018-11-30"
         },
         "benchmark": {
-          "value": 273847.7457715422,
-          "usdValue": 245.15921020507812,
+          "value": 273847.8309934065,
+          "usdValue": 245.15928649902344,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2697,8 +2697,8 @@
           "sourceDate": "2018-12-31"
         },
         "cash": {
-          "value": 83518.48626961,
-          "usdValue": 74.8172378540039,
+          "value": 83518.47775291651,
+          "usdValue": 74.81723022460938,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -2724,8 +2724,8 @@
       "availableAt": "2019-02-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 267794.56338500977,
-          "usdValue": 241.47390747070312,
+          "value": 267794.5295410156,
+          "usdValue": 241.473876953125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2748,16 +2748,16 @@
           "sourceDate": "2019-01-31"
         },
         "cash": {
-          "value": 83117.44828796387,
-          "usdValue": 74.94810485839844,
+          "value": 83117.4313659668,
+          "usdValue": 74.94808959960938,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2019-01-31"
         },
         "benchmark": {
-          "value": 267794.56338500977,
-          "usdValue": 241.47390747070312,
+          "value": 267794.5295410156,
+          "usdValue": 241.473876953125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2775,8 +2775,8 @@
       "availableAt": "2019-03-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 277996.1288241204,
-          "usdValue": 249.30152893066406,
+          "value": 277996.04374874383,
+          "usdValue": 249.30145263671875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2799,16 +2799,16 @@
           "sourceDate": "2019-02-28"
         },
         "cash": {
-          "value": 83729.10125902388,
-          "usdValue": 75.08663177490234,
+          "value": 83729.10976656154,
+          "usdValue": 75.08663940429688,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2019-02-28"
         },
         "benchmark": {
-          "value": 277996.1288241204,
-          "usdValue": 249.30152893066406,
+          "value": 277996.04374874383,
+          "usdValue": 249.30145263671875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2826,8 +2826,8 @@
       "availableAt": "2019-04-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 287906.2256606277,
-          "usdValue": 253.81394958496094,
+          "value": 287906.1910439301,
+          "usdValue": 253.8139190673828,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2850,16 +2850,16 @@
           "sourceDate": "2019-03-31"
         },
         "cash": {
-          "value": 85321.24573414214,
-          "usdValue": 75.21797180175781,
+          "value": 85321.25438831653,
+          "usdValue": 75.21797943115234,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2019-03-29"
         },
         "benchmark": {
-          "value": 287906.2256606277,
-          "usdValue": 253.81394958496094,
+          "value": 287906.1910439301,
+          "usdValue": 253.8139190673828,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2877,8 +2877,8 @@
       "availableAt": "2019-05-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 306132.50356152654,
-          "usdValue": 264.1828918457031,
+          "value": 306132.3974711299,
+          "usdValue": 264.18280029296875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2909,8 +2909,8 @@
           "sourceDate": "2019-04-30"
         },
         "benchmark": {
-          "value": 306132.50356152654,
-          "usdValue": 264.1828918457031,
+          "value": 306132.3974711299,
+          "usdValue": 264.18280029296875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2928,8 +2928,8 @@
       "availableAt": "2019-06-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 293928.77434886806,
-          "usdValue": 247.33567810058594,
+          "value": 293928.7199491486,
+          "usdValue": 247.33563232421875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2952,16 +2952,16 @@
           "sourceDate": "2019-05-31"
         },
         "cash": {
-          "value": 89749.66356288549,
-          "usdValue": 75.52269744873047,
+          "value": 89749.69076274522,
+          "usdValue": 75.52272033691406,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2019-05-31"
         },
         "benchmark": {
-          "value": 293928.77434886806,
-          "usdValue": 247.33567810058594,
+          "value": 293928.7199491486,
+          "usdValue": 247.33563232421875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -2979,8 +2979,8 @@
       "availableAt": "2019-07-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 305686.63264144957,
-          "usdValue": 264.54693603515625,
+          "value": 305686.4915879816,
+          "usdValue": 264.54681396484375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3003,16 +3003,16 @@
           "sourceDate": "2019-06-30"
         },
         "cash": {
-          "value": 87425.6711744275,
-          "usdValue": 75.6598129272461,
+          "value": 87425.66235858575,
+          "usdValue": 75.65980529785156,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2019-06-28"
         },
         "benchmark": {
-          "value": 305686.63264144957,
-          "usdValue": 264.54693603515625,
+          "value": 305686.4915879816,
+          "usdValue": 264.54681396484375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3081,8 +3081,8 @@
       "availableAt": "2019-09-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 318750.9975249134,
-          "usdValue": 264.0503234863281,
+          "value": 318750.88700611144,
+          "usdValue": 264.05023193359375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3105,16 +3105,16 @@
           "sourceDate": "2019-08-31"
         },
         "cash": {
-          "value": 91653.34377214778,
-          "usdValue": 75.92476654052734,
+          "value": 91653.3898216486,
+          "usdValue": 75.9248046875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2019-08-30"
         },
         "benchmark": {
-          "value": 318750.9975249134,
-          "usdValue": 264.0503234863281,
+          "value": 318750.88700611144,
+          "usdValue": 264.05023193359375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3132,8 +3132,8 @@
       "availableAt": "2019-10-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 323539.92759279534,
-          "usdValue": 269.1881408691406,
+          "value": 323540.0009515621,
+          "usdValue": 269.1882019042969,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3156,16 +3156,16 @@
           "sourceDate": "2019-09-30"
         },
         "cash": {
-          "value": 91402.47413416766,
-          "usdValue": 76.04768371582031,
+          "value": 91402.43745478429,
+          "usdValue": 76.04765319824219,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2019-09-30"
         },
         "benchmark": {
-          "value": 323539.92759279534,
-          "usdValue": 269.1881408691406,
+          "value": 323540.0009515621,
+          "usdValue": 269.1882019042969,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3183,8 +3183,8 @@
       "availableAt": "2019-11-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 320178.5038933903,
-          "usdValue": 275.13836669921875,
+          "value": 320178.645946607,
+          "usdValue": 275.13848876953125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3215,8 +3215,8 @@
           "sourceDate": "2019-10-31"
         },
         "benchmark": {
-          "value": 320178.5038933903,
-          "usdValue": 275.13836669921875,
+          "value": 320178.645946607,
+          "usdValue": 275.13848876953125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3234,8 +3234,8 @@
       "availableAt": "2019-12-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 335563.1902814135,
-          "usdValue": 285.0979919433594,
+          "value": 335563.15436191857,
+          "usdValue": 285.09796142578125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3258,16 +3258,16 @@
           "sourceDate": "2019-11-30"
         },
         "cash": {
-          "value": 89749.79700548574,
-          "usdValue": 76.25236511230469,
+          "value": 89749.78802561201,
+          "usdValue": 76.25235748291016,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2019-11-29"
         },
         "benchmark": {
-          "value": 335563.1902814135,
-          "usdValue": 285.0979919433594,
+          "value": 335563.15436191857,
+          "usdValue": 285.09796142578125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3285,8 +3285,8 @@
       "availableAt": "2020-01-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 339251.8318006806,
-          "usdValue": 293.3816223144531,
+          "value": 339251.7965116799,
+          "usdValue": 293.381591796875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3309,16 +3309,16 @@
           "sourceDate": "2019-12-31"
         },
         "cash": {
-          "value": 88272.78862548992,
-          "usdValue": 76.33743286132812,
+          "value": 88272.7974477401,
+          "usdValue": 76.33744049072266,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2019-12-31"
         },
         "benchmark": {
-          "value": 339251.8318006806,
-          "usdValue": 293.3816223144531,
+          "value": 339251.7965116799,
+          "usdValue": 293.381591796875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3336,8 +3336,8 @@
       "availableAt": "2020-02-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 348138.516619809,
-          "usdValue": 293.26312255859375,
+          "value": 348138.55284783617,
+          "usdValue": 293.2631530761719,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3360,16 +3360,16 @@
           "sourceDate": "2020-01-31"
         },
         "cash": {
-          "value": 90730.72117344104,
-          "usdValue": 76.42927551269531,
+          "value": 90730.73928745463,
+          "usdValue": 76.42929077148438,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2020-01-31"
         },
         "benchmark": {
-          "value": 348138.516619809,
-          "usdValue": 293.26312255859375,
+          "value": 348138.55284783617,
+          "usdValue": 293.2631530761719,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3387,8 +3387,8 @@
       "availableAt": "2020-03-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 327110.274181813,
-          "usdValue": 270.04669189453125,
+          "value": 327110.2002493143,
+          "usdValue": 270.046630859375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3411,16 +3411,16 @@
           "sourceDate": "2020-02-29"
         },
         "cash": {
-          "value": 92688.9333313778,
-          "usdValue": 76.51957702636719,
+          "value": 92688.92408981547,
+          "usdValue": 76.51956939697266,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2020-02-28"
         },
         "benchmark": {
-          "value": 327110.274181813,
-          "usdValue": 270.04669189453125,
+          "value": 327110.2002493143,
+          "usdValue": 270.046630859375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3438,8 +3438,8 @@
       "availableAt": "2020-04-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 288955.32716305554,
-          "usdValue": 236.32562255859375,
+          "value": 288955.3458199762,
+          "usdValue": 236.3256378173828,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3462,16 +3462,16 @@
           "sourceDate": "2020-03-31"
         },
         "cash": {
-          "value": 93751.78182963096,
-          "usdValue": 76.67603302001953,
+          "value": 93751.80981501192,
+          "usdValue": 76.67605590820312,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2020-03-31"
         },
         "benchmark": {
-          "value": 288955.32716305554,
-          "usdValue": 236.32562255859375,
+          "value": 288955.3458199762,
+          "usdValue": 236.3256378173828,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3489,8 +3489,8 @@
       "availableAt": "2020-05-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 322475.9025091231,
-          "usdValue": 266.3351135253906,
+          "value": 322475.82860836387,
+          "usdValue": 266.3350524902344,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3513,16 +3513,16 @@
           "sourceDate": "2020-04-30"
         },
         "cash": {
-          "value": 92820.30505274981,
-          "usdValue": 76.66094207763672,
+          "value": 92820.35124072433,
+          "usdValue": 76.66098022460938,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2020-04-30"
         },
         "benchmark": {
-          "value": 322475.9025091231,
-          "usdValue": 266.3351135253906,
+          "value": 322475.82860836387,
+          "usdValue": 266.3350524902344,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3540,8 +3540,8 @@
       "availableAt": "2020-06-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 345427.05425305665,
-          "usdValue": 279.0247497558594,
+          "value": 345426.9786927551,
+          "usdValue": 279.0246887207031,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3564,16 +3564,16 @@
           "sourceDate": "2020-05-31"
         },
         "cash": {
-          "value": 94888.16386995092,
-          "usdValue": 76.64757537841797,
+          "value": 94888.22054017708,
+          "usdValue": 76.64762115478516,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2020-05-29"
         },
         "benchmark": {
-          "value": 345427.05425305665,
-          "usdValue": 279.0247497558594,
+          "value": 345426.9786927551,
+          "usdValue": 279.0246887207031,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3591,8 +3591,8 @@
       "availableAt": "2020-07-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 340338.86149104685,
-          "usdValue": 283.9730529785156,
+          "value": 340338.82491603494,
+          "usdValue": 283.9730224609375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3615,16 +3615,16 @@
           "sourceDate": "2020-06-30"
         },
         "cash": {
-          "value": 91861.35186676867,
-          "usdValue": 76.64757537841797,
+          "value": 91861.40672928654,
+          "usdValue": 76.64762115478516,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2020-06-30"
         },
         "benchmark": {
-          "value": 340338.86149104685,
-          "usdValue": 283.9730529785156,
+          "value": 340338.82491603494,
+          "usdValue": 283.9730224609375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3642,8 +3642,8 @@
       "availableAt": "2020-08-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 357696.9849834591,
-          "usdValue": 300.6968688964844,
+          "value": 357697.02128595114,
+          "usdValue": 300.6968994140625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3666,16 +3666,16 @@
           "sourceDate": "2020-07-31"
         },
         "cash": {
-          "value": 91186.86836790293,
-          "usdValue": 76.65596008300781,
+          "value": 91186.89559477195,
+          "usdValue": 76.6559829711914,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2020-07-31"
         },
         "benchmark": {
-          "value": 357696.9849834591,
-          "usdValue": 300.6968688964844,
+          "value": 357697.02128595114,
+          "usdValue": 300.6968994140625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3693,8 +3693,8 @@
       "availableAt": "2020-09-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 379455.783305157,
-          "usdValue": 321.6844787597656,
+          "value": 379455.85530161485,
+          "usdValue": 321.6845397949219,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3717,16 +3717,16 @@
           "sourceDate": "2020-08-31"
         },
         "cash": {
-          "value": 90422.60133423842,
-          "usdValue": 76.65596008300781,
+          "value": 90422.62833291013,
+          "usdValue": 76.6559829711914,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2020-08-31"
         },
         "benchmark": {
-          "value": 379455.783305157,
-          "usdValue": 321.6844787597656,
+          "value": 379455.85530161485,
+          "usdValue": 321.6845397949219,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3744,8 +3744,8 @@
       "availableAt": "2020-10-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 361615.61272744834,
-          "usdValue": 309.6395263671875,
+          "value": 361615.470166415,
+          "usdValue": 309.639404296875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3768,16 +3768,16 @@
           "sourceDate": "2020-09-30"
         },
         "cash": {
-          "value": 89503.83518762793,
-          "usdValue": 76.6391830444336,
+          "value": 89503.82627756335,
+          "usdValue": 76.63917541503906,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2020-09-30"
         },
         "benchmark": {
-          "value": 361615.61272744834,
-          "usdValue": 309.6395263671875,
+          "value": 361615.470166415,
+          "usdValue": 309.639404296875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3819,8 +3819,8 @@
           "sourceDate": "2020-10-31"
         },
         "cash": {
-          "value": 86574.97083845362,
-          "usdValue": 76.64757537841797,
+          "value": 86575.02254377678,
+          "usdValue": 76.64762115478516,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -3846,8 +3846,8 @@
       "availableAt": "2020-12-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 369686.4505146593,
-          "usdValue": 334.7608642578125,
+          "value": 369686.484216135,
+          "usdValue": 334.7608947753906,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3870,16 +3870,16 @@
           "sourceDate": "2020-11-30"
         },
         "cash": {
-          "value": 84634.9456435265,
-          "usdValue": 76.6391830444336,
+          "value": 84634.93721815757,
+          "usdValue": 76.63917541503906,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2020-11-30"
         },
         "benchmark": {
-          "value": 369686.4505146593,
-          "usdValue": 334.7608642578125,
+          "value": 369686.484216135,
+          "usdValue": 334.7608947753906,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3897,8 +3897,8 @@
       "availableAt": "2021-01-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 377165.0677000433,
-          "usdValue": 347.1632080078125,
+          "value": 377165.03454513475,
+          "usdValue": 347.1631774902344,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3921,16 +3921,16 @@
           "sourceDate": "2020-12-31"
         },
         "cash": {
-          "value": 83265.09646847751,
-          "usdValue": 76.64171600341797,
+          "value": 83265.08817975037,
+          "usdValue": 76.64170837402344,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2020-12-31"
         },
         "benchmark": {
-          "value": 377165.0677000433,
-          "usdValue": 347.1632080078125,
+          "value": 377165.03454513475,
+          "usdValue": 347.1631774902344,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3948,8 +3948,8 @@
       "availableAt": "2021-02-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 382211.17383882403,
-          "usdValue": 343.6254577636719,
+          "value": 382211.2077832222,
+          "usdValue": 343.62548828125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3972,16 +3972,16 @@
           "sourceDate": "2021-01-31"
         },
         "cash": {
-          "value": 85247.8172872588,
-          "usdValue": 76.64171600341797,
+          "value": 85247.80880115926,
+          "usdValue": 76.64170837402344,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2021-01-29"
         },
         "benchmark": {
-          "value": 382211.17383882403,
-          "usdValue": 343.6254577636719,
+          "value": 382211.2077832222,
+          "usdValue": 343.62548828125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -3999,8 +3999,8 @@
       "availableAt": "2021-03-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 395254.5318465829,
-          "usdValue": 353.18017578125,
+          "value": 395254.49769344553,
+          "usdValue": 353.1801452636719,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4023,16 +4023,16 @@
           "sourceDate": "2021-02-28"
         },
         "cash": {
-          "value": 85762.66896892805,
-          "usdValue": 76.63333892822266,
+          "value": 85762.68604549672,
+          "usdValue": 76.63335418701172,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2021-02-26"
         },
         "benchmark": {
-          "value": 395254.5318465829,
-          "usdValue": 353.18017578125,
+          "value": 395254.49769344553,
+          "usdValue": 353.1801452636719,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4050,8 +4050,8 @@
       "availableAt": "2021-04-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 418068.6063752137,
-          "usdValue": 369.2142028808594,
+          "value": 418068.77915352583,
+          "usdValue": 369.21435546875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4074,16 +4074,16 @@
           "sourceDate": "2021-03-31"
         },
         "cash": {
-          "value": 86763.97268982138,
-          "usdValue": 76.62496185302734,
+          "value": 86763.98132873699,
+          "usdValue": 76.62496948242188,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2021-03-31"
         },
         "benchmark": {
-          "value": 418068.6063752137,
-          "usdValue": 369.2142028808594,
+          "value": 418068.77915352583,
+          "usdValue": 369.21435546875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4125,8 +4125,8 @@
           "sourceDate": "2021-04-30"
         },
         "cash": {
-          "value": 84795.48190956097,
-          "usdValue": 76.62496185302734,
+          "value": 84795.49035247788,
+          "usdValue": 76.62496948242188,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -4152,8 +4152,8 @@
       "availableAt": "2021-06-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 435460.5591662079,
-          "usdValue": 391.3021240234375,
+          "value": 435460.49124323577,
+          "usdValue": 391.30206298828125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4184,8 +4184,8 @@
           "sourceDate": "2021-05-28"
         },
         "benchmark": {
-          "value": 435460.5591662079,
-          "usdValue": 391.3021240234375,
+          "value": 435460.49124323577,
+          "usdValue": 391.30206298828125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4227,8 +4227,8 @@
           "sourceDate": "2021-06-30"
         },
         "cash": {
-          "value": 86596.88389578089,
-          "usdValue": 76.59983825683594,
+          "value": 86596.89252088778,
+          "usdValue": 76.59984588623047,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -4254,8 +4254,8 @@
       "availableAt": "2021-08-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 468092.1010835208,
-          "usdValue": 409.8449401855469,
+          "value": 468092.17079299316,
+          "usdValue": 409.8450012207031,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4286,8 +4286,8 @@
           "sourceDate": "2021-07-30"
         },
         "benchmark": {
-          "value": 468092.1010835208,
-          "usdValue": 409.8449401855469,
+          "value": 468092.17079299316,
+          "usdValue": 409.8450012207031,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4305,8 +4305,8 @@
       "availableAt": "2021-09-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 491893.98859324306,
-          "usdValue": 422.0418395996094,
+          "value": 491893.9174561575,
+          "usdValue": 422.0417785644531,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4329,16 +4329,16 @@
           "sourceDate": "2021-08-31"
         },
         "cash": {
-          "value": 89258.35999692045,
-          "usdValue": 76.58309173583984,
+          "value": 89258.37778119184,
+          "usdValue": 76.5831069946289,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2021-08-31"
         },
         "benchmark": {
-          "value": 491893.98859324306,
-          "usdValue": 422.0418395996094,
+          "value": 491893.9174561575,
+          "usdValue": 422.0417785644531,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4356,8 +4356,8 @@
       "availableAt": "2021-10-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 477789.08767533675,
-          "usdValue": 402.3724060058594,
+          "value": 477789.0152003579,
+          "usdValue": 402.3723449707031,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4388,8 +4388,8 @@
           "sourceDate": "2021-09-30"
         },
         "benchmark": {
-          "value": 477789.08767533675,
-          "usdValue": 402.3724060058594,
+          "value": 477789.0152003579,
+          "usdValue": 402.3723449707031,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4407,8 +4407,8 @@
       "availableAt": "2021-11-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 502674.47893992066,
-          "usdValue": 430.604248046875,
+          "value": 502674.5501905307,
+          "usdValue": 430.60430908203125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4431,16 +4431,16 @@
           "sourceDate": "2021-10-31"
         },
         "cash": {
-          "value": 89400.80342572648,
-          "usdValue": 76.58309173583984,
+          "value": 89400.821238379,
+          "usdValue": 76.5831069946289,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2021-10-29"
         },
         "benchmark": {
-          "value": 502674.47893992066,
-          "usdValue": 430.604248046875,
+          "value": 502674.5501905307,
+          "usdValue": 430.60430908203125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4482,8 +4482,8 @@
           "sourceDate": "2021-11-30"
         },
         "cash": {
-          "value": 91170.61823803,
-          "usdValue": 76.56635284423828,
+          "value": 91170.63640728034,
+          "usdValue": 76.56636810302734,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -4533,8 +4533,8 @@
           "sourceDate": "2021-12-31"
         },
         "cash": {
-          "value": 91105.53870740812,
-          "usdValue": 76.56635284423828,
+          "value": 91105.55686368886,
+          "usdValue": 76.56636810302734,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -4584,8 +4584,8 @@
           "sourceDate": "2022-01-31"
         },
         "cash": {
-          "value": 92469.94700264186,
-          "usdValue": 76.56635284423828,
+          "value": 92469.9654308334,
+          "usdValue": 76.56636810302734,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -4635,8 +4635,8 @@
           "sourceDate": "2022-02-28"
         },
         "cash": {
-          "value": 91675.00387266465,
-          "usdValue": 76.54957580566406,
+          "value": 91675.01300955098,
+          "usdValue": 76.5495834350586,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -4662,8 +4662,8 @@
       "availableAt": "2022-04-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 515982.5688961297,
-          "usdValue": 426.2768859863281,
+          "value": 515982.6058358252,
+          "usdValue": 426.27691650390625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4686,16 +4686,16 @@
           "sourceDate": "2022-03-31"
         },
         "cash": {
-          "value": 92701.30169638619,
-          "usdValue": 76.58480072021484,
+          "value": 92701.28322653845,
+          "usdValue": 76.58478546142578,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2022-03-31"
         },
         "benchmark": {
-          "value": 515982.5688961297,
-          "usdValue": 426.2768859863281,
+          "value": 515982.6058358252,
+          "usdValue": 426.27691650390625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4737,8 +4737,8 @@
           "sourceDate": "2022-04-30"
         },
         "cash": {
-          "value": 97427.40161698312,
-          "usdValue": 76.57640838623047,
+          "value": 97427.38220337778,
+          "usdValue": 76.5763931274414,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -4764,8 +4764,8 @@
       "availableAt": "2022-06-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 481785.8817030862,
-          "usdValue": 389.74078369140625,
+          "value": 481785.8062532544,
+          "usdValue": 389.74072265625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4788,16 +4788,16 @@
           "sourceDate": "2022-05-31"
         },
         "cash": {
-          "value": 94692.50029453076,
-          "usdValue": 76.60151672363281,
+          "value": 94692.50972575974,
+          "usdValue": 76.60152435302734,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2022-05-31"
         },
         "benchmark": {
-          "value": 481785.8817030862,
-          "usdValue": 389.74078369140625,
+          "value": 481785.8062532544,
+          "usdValue": 389.74072265625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4866,8 +4866,8 @@
       "availableAt": "2022-08-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 505799.12708668783,
-          "usdValue": 390.5332336425781,
+          "value": 505799.0875618458,
+          "usdValue": 390.533203125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4890,16 +4890,16 @@
           "sourceDate": "2022-07-31"
         },
         "cash": {
-          "value": 99323.349084883,
-          "usdValue": 76.68868255615234,
+          "value": 99323.33920367248,
+          "usdValue": 76.68867492675781,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2022-07-29"
         },
         "benchmark": {
-          "value": 505799.12708668783,
-          "usdValue": 390.5332336425781,
+          "value": 505799.0875618458,
+          "usdValue": 390.533203125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4941,8 +4941,8 @@
           "sourceDate": "2022-08-31"
         },
         "cash": {
-          "value": 103744.88174568117,
-          "usdValue": 76.83724975585938,
+          "value": 103744.89204681292,
+          "usdValue": 76.8372573852539,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -4968,8 +4968,8 @@
       "availableAt": "2022-10-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 486212.94754622877,
-          "usdValue": 339.9686279296875,
+          "value": 486212.86025557667,
+          "usdValue": 339.96856689453125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -4992,16 +4992,16 @@
           "sourceDate": "2022-09-30"
         },
         "cash": {
-          "value": 110117.49587072339,
-          "usdValue": 76.99608612060547,
+          "value": 110117.52860471793,
+          "usdValue": 76.99610900878906,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2022-09-30"
         },
         "benchmark": {
-          "value": 486212.94754622877,
-          "usdValue": 339.9686279296875,
+          "value": 486212.86025557667,
+          "usdValue": 339.96856689453125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5019,8 +5019,8 @@
       "availableAt": "2022-11-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 522598.2539544627,
-          "usdValue": 367.59979248046875,
+          "value": 522598.2973397784,
+          "usdValue": 367.5998229980469,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5043,16 +5043,16 @@
           "sourceDate": "2022-10-31"
         },
         "cash": {
-          "value": 109635.11574652325,
-          "usdValue": 77.11821746826172,
+          "value": 109635.10490019433,
+          "usdValue": 77.11820983886719,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2022-10-31"
         },
         "benchmark": {
-          "value": 522598.2539544627,
-          "usdValue": 367.59979248046875,
+          "value": 522598.2973397784,
+          "usdValue": 367.5998229980469,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5070,8 +5070,8 @@
       "availableAt": "2022-12-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 514290.23403852433,
-          "usdValue": 388.03521728515625,
+          "value": 514290.1531443596,
+          "usdValue": 388.03515625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5094,16 +5094,16 @@
           "sourceDate": "2022-11-30"
         },
         "cash": {
-          "value": 102532.27184981387,
-          "usdValue": 77.36124420166016,
+          "value": 102532.29207335506,
+          "usdValue": 77.36125946044922,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2022-11-30"
         },
         "benchmark": {
-          "value": 514290.23403852433,
-          "usdValue": 388.03521728515625,
+          "value": 514290.1531443596,
+          "usdValue": 388.03515625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5121,8 +5121,8 @@
       "availableAt": "2023-01-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 460843.5253025964,
-          "usdValue": 365.6733703613281,
+          "value": 460843.5637626797,
+          "usdValue": 365.67340087890625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5153,8 +5153,8 @@
           "sourceDate": "2022-12-30"
         },
         "benchmark": {
-          "value": 460843.5253025964,
-          "usdValue": 365.6733703613281,
+          "value": 460843.5637626797,
+          "usdValue": 365.67340087890625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5172,8 +5172,8 @@
       "availableAt": "2023-02-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 478646.7081298828,
-          "usdValue": 388.669677734375,
+          "value": 478646.67054748535,
+          "usdValue": 388.6696472167969,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5196,16 +5196,16 @@
           "sourceDate": "2023-01-31"
         },
         "cash": {
-          "value": 95887.62553024292,
-          "usdValue": 77.86246490478516,
+          "value": 95887.58794784546,
+          "usdValue": 77.86243438720703,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2023-01-31"
         },
         "benchmark": {
-          "value": 478646.7081298828,
-          "usdValue": 388.669677734375,
+          "value": 478646.67054748535,
+          "usdValue": 388.6696472167969,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5223,8 +5223,8 @@
       "availableAt": "2023-03-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 499519.41814367846,
-          "usdValue": 378.8974304199219,
+          "value": 499519.5388422236,
+          "usdValue": 378.89752197265625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5247,16 +5247,16 @@
           "sourceDate": "2023-02-28"
         },
         "cash": {
-          "value": 103004.89277823362,
-          "usdValue": 78.13167572021484,
+          "value": 103004.85254538525,
+          "usdValue": 78.13164520263672,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2023-02-28"
         },
         "benchmark": {
-          "value": 499519.41814367846,
-          "usdValue": 378.8974304199219,
+          "value": 499519.5388422236,
+          "usdValue": 378.89752197265625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5274,8 +5274,8 @@
       "availableAt": "2023-04-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 509454.626373291,
-          "usdValue": 392.94610595703125,
+          "value": 509454.66593933105,
+          "usdValue": 392.9461364746094,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5298,16 +5298,16 @@
           "sourceDate": "2023-03-31"
         },
         "cash": {
-          "value": 101701.96380233765,
-          "usdValue": 78.44347381591797,
+          "value": 101701.98358535767,
+          "usdValue": 78.44348907470703,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2023-03-31"
         },
         "benchmark": {
-          "value": 509454.626373291,
-          "usdValue": 392.94610595703125,
+          "value": 509454.66593933105,
+          "usdValue": 392.9461364746094,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5427,8 +5427,8 @@
       "availableAt": "2023-07-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 565024.1107447073,
-          "usdValue": 427.05535888671875,
+          "value": 565024.0299909264,
+          "usdValue": 427.0552978515625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5459,8 +5459,8 @@
           "sourceDate": "2023-06-30"
         },
         "benchmark": {
-          "value": 565024.1107447073,
-          "usdValue": 427.05535888671875,
+          "value": 565024.0299909264,
+          "usdValue": 427.0552978515625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5478,8 +5478,8 @@
       "availableAt": "2023-08-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 561167.5640135631,
-          "usdValue": 441.03424072265625,
+          "value": 561167.5251833014,
+          "usdValue": 441.0342102050781,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5502,16 +5502,16 @@
           "sourceDate": "2023-07-31"
         },
         "cash": {
-          "value": 101401.9666288197,
-          "usdValue": 79.694091796875,
+          "value": 101401.95692125428,
+          "usdValue": 79.69408416748047,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2023-07-31"
         },
         "benchmark": {
-          "value": 561167.5640135631,
-          "usdValue": 441.03424072265625,
+          "value": 561167.5251833014,
+          "usdValue": 441.0342102050781,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5529,8 +5529,8 @@
       "availableAt": "2023-09-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 574018.4698999599,
-          "usdValue": 433.8665466308594,
+          "value": 574018.4295242876,
+          "usdValue": 433.86651611328125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5553,16 +5553,16 @@
           "sourceDate": "2023-08-31"
         },
         "cash": {
-          "value": 105961.39954387955,
-          "usdValue": 80.0899429321289,
+          "value": 105961.37935604341,
+          "usdValue": 80.08992767333984,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2023-08-31"
         },
         "benchmark": {
-          "value": 574018.4698999599,
-          "usdValue": 433.8665466308594,
+          "value": 574018.4295242876,
+          "usdValue": 433.86651611328125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5580,8 +5580,8 @@
       "availableAt": "2023-10-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 557047.9508200362,
-          "usdValue": 413.28631591796875,
+          "value": 557047.9919531532,
+          "usdValue": 413.2863464355469,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5612,8 +5612,8 @@
           "sourceDate": "2023-09-29"
         },
         "benchmark": {
-          "value": 557047.9508200362,
-          "usdValue": 413.28631591796875,
+          "value": 557047.9919531532,
+          "usdValue": 413.2863464355469,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5631,8 +5631,8 @@
       "availableAt": "2023-11-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 545044.2042479403,
-          "usdValue": 404.3144836425781,
+          "value": 545044.1631081104,
+          "usdValue": 404.314453125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5655,16 +5655,16 @@
           "sourceDate": "2023-10-31"
         },
         "cash": {
-          "value": 108864.83498899266,
-          "usdValue": 80.75607299804688,
+          "value": 108864.84527395014,
+          "usdValue": 80.7560806274414,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2023-10-31"
         },
         "benchmark": {
-          "value": 545044.2042479403,
-          "usdValue": 404.3144836425781,
+          "value": 545044.1631081104,
+          "usdValue": 404.314453125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5682,8 +5682,8 @@
       "availableAt": "2023-12-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 568483.7715625577,
-          "usdValue": 441.2460632324219,
+          "value": 568483.8108801842,
+          "usdValue": 441.24609375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5706,16 +5706,16 @@
           "sourceDate": "2023-11-30"
         },
         "cash": {
-          "value": 104530.03841722384,
-          "usdValue": 81.13418579101562,
+          "value": 104530.0580760371,
+          "usdValue": 81.13420104980469,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2023-11-30"
         },
         "benchmark": {
-          "value": 568483.7715625577,
-          "usdValue": 441.2460632324219,
+          "value": 568483.8108801842,
+          "usdValue": 441.24609375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5733,8 +5733,8 @@
       "availableAt": "2024-01-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 589584.2384045944,
-          "usdValue": 461.39129638671875,
+          "value": 589584.2774011753,
+          "usdValue": 461.3913269042969,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5757,16 +5757,16 @@
           "sourceDate": "2023-12-31"
         },
         "cash": {
-          "value": 104119.75008670706,
-          "usdValue": 81.4810562133789,
+          "value": 104119.73058841657,
+          "usdValue": 81.48104095458984,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2023-12-29"
         },
         "benchmark": {
-          "value": 589584.2384045944,
-          "usdValue": 461.39129638671875,
+          "value": 589584.2774011753,
+          "usdValue": 461.3913269042969,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5808,8 +5808,8 @@
           "sourceDate": "2024-01-31"
         },
         "cash": {
-          "value": 108555.67697776482,
-          "usdValue": 81.82876586914062,
+          "value": 108555.63649253547,
+          "usdValue": 81.8287353515625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -5835,8 +5835,8 @@
       "availableAt": "2024-03-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 657625.3134104088,
-          "usdValue": 493.20172119140625,
+          "value": 657625.2727188803,
+          "usdValue": 493.2016906738281,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5859,16 +5859,16 @@
           "sourceDate": "2024-02-29"
         },
         "cash": {
-          "value": 109593.61875856854,
-          "usdValue": 82.19233703613281,
+          "value": 109593.60858568642,
+          "usdValue": 82.19232940673828,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2024-02-29"
         },
         "benchmark": {
-          "value": 657625.3134104088,
-          "usdValue": 493.20172119140625,
+          "value": 657625.2727188803,
+          "usdValue": 493.2016906738281,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5886,8 +5886,8 @@
       "availableAt": "2024-04-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 687494.1350564137,
-          "usdValue": 509.3303527832031,
+          "value": 687494.0938637853,
+          "usdValue": 509.330322265625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5910,16 +5910,16 @@
           "sourceDate": "2024-03-31"
         },
         "cash": {
-          "value": 111398.3064055536,
-          "usdValue": 82.52948760986328,
+          "value": 111398.3167037107,
+          "usdValue": 82.52949523925781,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2024-03-28"
         },
         "benchmark": {
-          "value": 687494.1350564137,
-          "usdValue": 509.3303527832031,
+          "value": 687494.0938637853,
+          "usdValue": 509.330322265625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5937,8 +5937,8 @@
       "availableAt": "2024-05-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 671916.2615033351,
-          "usdValue": 488.7943420410156,
+          "value": 671916.3034540191,
+          "usdValue": 488.79437255859375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5969,8 +5969,8 @@
           "sourceDate": "2024-04-30"
         },
         "benchmark": {
-          "value": 671916.2615033351,
-          "usdValue": 488.7943420410156,
+          "value": 671916.3034540191,
+          "usdValue": 488.79437255859375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -5988,8 +5988,8 @@
       "availableAt": "2024-06-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 706404.7964293584,
-          "usdValue": 513.5173950195312,
+          "value": 706404.7124681771,
+          "usdValue": 513.517333984375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6012,16 +6012,16 @@
           "sourceDate": "2024-05-31"
         },
         "cash": {
-          "value": 114541.28142280784,
-          "usdValue": 83.26520538330078,
+          "value": 114541.2919179555,
+          "usdValue": 83.26521301269531,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2024-05-31"
         },
         "benchmark": {
-          "value": 706404.7964293584,
-          "usdValue": 513.5173950195312,
+          "value": 706404.7124681771,
+          "usdValue": 513.517333984375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6039,8 +6039,8 @@
       "availableAt": "2024-07-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 737350.1350032091,
-          "usdValue": 531.63427734375,
+          "value": 737350.3043086231,
+          "usdValue": 531.6343994140625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6071,8 +6071,8 @@
           "sourceDate": "2024-06-28"
         },
         "benchmark": {
-          "value": 737350.1350032091,
-          "usdValue": 531.63427734375,
+          "value": 737350.3043086231,
+          "usdValue": 531.6343994140625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6090,8 +6090,8 @@
       "availableAt": "2024-08-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 744422.4728393555,
-          "usdValue": 538.0718994140625,
+          "value": 744422.5572814941,
+          "usdValue": 538.0719604492188,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6114,16 +6114,16 @@
           "sourceDate": "2024-07-31"
         },
         "cash": {
-          "value": 116178.76651763916,
-          "usdValue": 83.97453308105469,
+          "value": 116178.78762817383,
+          "usdValue": 83.97454833984375,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2024-07-31"
         },
         "benchmark": {
-          "value": 744422.4728393555,
-          "usdValue": 538.0718994140625,
+          "value": 744422.5572814941,
+          "usdValue": 538.0719604492188,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6141,8 +6141,8 @@
       "availableAt": "2024-09-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 733942.9227961153,
-          "usdValue": 550.6444091796875,
+          "value": 733942.8414435759,
+          "usdValue": 550.6443481445312,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6165,16 +6165,16 @@
           "sourceDate": "2024-08-31"
         },
         "cash": {
-          "value": 112444.8189147329,
-          "usdValue": 84.36229705810547,
+          "value": 112444.79857659806,
+          "usdValue": 84.3622817993164,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2024-08-30"
         },
         "benchmark": {
-          "value": 733942.9227961153,
-          "usdValue": 550.6444091796875,
+          "value": 733942.8414435759,
+          "usdValue": 550.6443481445312,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6216,8 +6216,8 @@
           "sourceDate": "2024-09-30"
         },
         "cash": {
-          "value": 110921.87393415906,
-          "usdValue": 84.71845245361328,
+          "value": 110921.91389082558,
+          "usdValue": 84.7184829711914,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -6267,8 +6267,8 @@
           "sourceDate": "2024-10-31"
         },
         "cash": {
-          "value": 117251.40640043188,
-          "usdValue": 85.05292510986328,
+          "value": 117251.41691808589,
+          "usdValue": 85.05293273925781,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -6294,8 +6294,8 @@
       "availableAt": "2024-12-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 822633.4666221142,
-          "usdValue": 590.4208984375,
+          "value": 822633.5516624004,
+          "usdValue": 590.4209594726562,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6318,16 +6318,16 @@
           "sourceDate": "2024-11-30"
         },
         "cash": {
-          "value": 118943.58408704214,
-          "usdValue": 85.36824798583984,
+          "value": 118943.57345700637,
+          "usdValue": 85.36824035644531,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2024-11-29"
         },
         "benchmark": {
-          "value": 822633.4666221142,
-          "usdValue": 590.4208984375,
+          "value": 822633.5516624004,
+          "usdValue": 590.4209594726562,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6396,8 +6396,8 @@
       "availableAt": "2025-02-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 853016.2691031843,
-          "usdValue": 591.6903076171875,
+          "value": 853016.4450870752,
+          "usdValue": 591.6904296875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6420,16 +6420,16 @@
           "sourceDate": "2025-01-31"
         },
         "cash": {
-          "value": 124000.62530437857,
-          "usdValue": 86.01239013671875,
+          "value": 124000.63630337175,
+          "usdValue": 86.01239776611328,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2025-01-31"
         },
         "benchmark": {
-          "value": 853016.2691031843,
-          "usdValue": 591.6903076171875,
+          "value": 853016.4450870752,
+          "usdValue": 591.6904296875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6447,8 +6447,8 @@
       "availableAt": "2025-03-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 846977.6027598307,
-          "usdValue": 584.1788940429688,
+          "value": 846977.6912522614,
+          "usdValue": 584.178955078125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6471,16 +6471,16 @@
           "sourceDate": "2025-02-28"
         },
         "cash": {
-          "value": 125109.68048051093,
-          "usdValue": 86.2908706665039,
+          "value": 125109.65835740324,
+          "usdValue": 86.29085540771484,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2025-02-28"
         },
         "benchmark": {
-          "value": 846977.6027598307,
-          "usdValue": 584.1788940429688,
+          "value": 846977.6912522614,
+          "usdValue": 584.178955078125,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6522,8 +6522,8 @@
           "sourceDate": "2025-03-31"
         },
         "cash": {
-          "value": 127211.29928334989,
-          "usdValue": 86.57304382324219,
+          "value": 127211.31049405877,
+          "usdValue": 86.57305145263672,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -6549,8 +6549,8 @@
       "availableAt": "2025-05-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 782624.4139840007,
-          "usdValue": 546.84619140625,
+          "value": 782624.501335077,
+          "usdValue": 546.8462524414062,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6573,16 +6573,16 @@
           "sourceDate": "2025-04-30"
         },
         "cash": {
-          "value": 124321.44757024292,
-          "usdValue": 86.86760711669922,
+          "value": 124321.42573247384,
+          "usdValue": 86.86759185791016,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2025-04-30"
         },
         "benchmark": {
-          "value": 782624.4139840007,
-          "usdValue": 546.84619140625,
+          "value": 782624.501335077,
+          "usdValue": 546.8462524414062,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6624,8 +6624,8 @@
           "sourceDate": "2025-05-31"
         },
         "cash": {
-          "value": 119476.60254532099,
-          "usdValue": 87.18310546875,
+          "value": 119476.61300071981,
+          "usdValue": 87.18311309814453,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -6651,8 +6651,8 @@
       "availableAt": "2025-07-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 833261.24798619,
-          "usdValue": 611.0790405273438,
+          "value": 833261.3312131166,
+          "usdValue": 611.0791015625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6683,8 +6683,8 @@
           "sourceDate": "2025-06-30"
         },
         "benchmark": {
-          "value": 833261.24798619,
-          "usdValue": 611.0790405273438,
+          "value": 833261.3312131166,
+          "usdValue": 611.0791015625,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6702,8 +6702,8 @@
       "availableAt": "2025-08-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 870538.1738408804,
-          "usdValue": 625.153076171875,
+          "value": 870538.3438262343,
+          "usdValue": 625.1531982421875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6726,16 +6726,16 @@
           "sourceDate": "2025-07-31"
         },
         "cash": {
-          "value": 122244.9247944206,
-          "usdValue": 87.78683471679688,
+          "value": 122244.91417033598,
+          "usdValue": 87.78682708740234,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2025-07-31"
         },
         "benchmark": {
-          "value": 870538.1738408804,
-          "usdValue": 625.153076171875,
+          "value": 870538.3438262343,
+          "usdValue": 625.1531982421875,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6804,8 +6804,8 @@
       "availableAt": "2025-10-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 924545.7744709253,
-          "usdValue": 660.7060546875,
+          "value": 924545.8598792478,
+          "usdValue": 660.7061157226562,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6836,8 +6836,8 @@
           "sourceDate": "2025-09-30"
         },
         "benchmark": {
-          "value": 924545.7744709253,
-          "usdValue": 660.7060546875,
+          "value": 924545.8598792478,
+          "usdValue": 660.7061157226562,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6855,8 +6855,8 @@
       "availableAt": "2025-11-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 963286.4427164197,
-          "usdValue": 676.4556884765625,
+          "value": 963286.3558011353,
+          "usdValue": 676.4556274414062,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6879,16 +6879,16 @@
           "sourceDate": "2025-10-31"
         },
         "cash": {
-          "value": 126330.00781713054,
-          "usdValue": 88.7136459350586,
+          "value": 126329.99695271999,
+          "usdValue": 88.71363830566406,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2025-10-31"
         },
         "benchmark": {
-          "value": 963286.4427164197,
-          "usdValue": 676.4556884765625,
+          "value": 963286.3558011353,
+          "usdValue": 676.4556274414062,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -6930,8 +6930,8 @@
           "sourceDate": "2025-11-30"
         },
         "cash": {
-          "value": 130018.94457168598,
-          "usdValue": 88.96875762939453,
+          "value": 130018.96687088069,
+          "usdValue": 88.9687728881836,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -6981,8 +6981,8 @@
           "sourceDate": "2025-12-31"
         },
         "cash": {
-          "value": 128357.86868222058,
-          "usdValue": 89.2669677734375,
+          "value": 128357.87965260353,
+          "usdValue": 89.26697540283203,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -7008,8 +7008,8 @@
       "availableAt": "2026-02-01T00:00:00Z",
       "assets": {
         "equity": {
-          "value": 983432.8509942591,
-          "usdValue": 688.3121337890625,
+          "value": 983432.7637896687,
+          "usdValue": 688.3120727539062,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -7032,16 +7032,16 @@
           "sourceDate": "2026-01-31"
         },
         "cash": {
-          "value": 127917.91748473607,
-          "usdValue": 89.53072357177734,
+          "value": 127917.92838530988,
+          "usdValue": 89.53073120117188,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
           "sourceDate": "2026-01-30"
         },
         "benchmark": {
-          "value": 983432.8509942591,
-          "usdValue": 688.3121337890625,
+          "value": 983432.7637896687,
+          "usdValue": 688.3120727539062,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "SPY",
@@ -7083,8 +7083,8 @@
           "sourceDate": "2026-02-28"
         },
         "cash": {
-          "value": 128579.09450455103,
-          "usdValue": 89.76981353759766,
+          "value": 128579.08357681707,
+          "usdValue": 89.76980590820312,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -7185,8 +7185,8 @@
           "sourceDate": "2026-04-30"
         },
         "cash": {
-          "value": 134292.9887456093,
-          "usdValue": 90.28828430175781,
+          "value": 134292.97739780042,
+          "usdValue": 90.28827667236328,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",
@@ -7236,8 +7236,8 @@
           "sourceDate": "2026-05-31"
         },
         "cash": {
-          "value": 135435.6739698276,
-          "usdValue": 90.5748519897461,
+          "value": 135435.68537798524,
+          "usdValue": 90.57485961914062,
           "currency": "KRW",
           "priceType": "adjusted_close",
           "ticker": "BIL",

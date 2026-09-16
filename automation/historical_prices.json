@@ -1,0 +1,12 @@
+{
+  "startDate": "2007-01-01",
+  "maxStalenessDays": 7,
+  "assets": {
+    "equity": {"ticker": "SPY", "field": "Adj Close", "priceType": "adjusted_close"},
+    "gold": {"ticker": "GLD", "field": "Adj Close", "priceType": "adjusted_close"},
+    "bitcoin": {"ticker": "BTC-USD", "field": "Close", "priceType": "close"},
+    "cash": {"ticker": "BIL", "field": "Adj Close", "priceType": "adjusted_close"},
+    "benchmark": {"ticker": "SPY", "field": "Adj Close", "priceType": "adjusted_close"}
+  },
+  "fx": {"ticker": "KRW=X", "field": "Close", "unit": "KRW per USD"}
+}

@@ -25,7 +25,7 @@
             if(!a||!Number.isFinite(a.value)||a.value<=0||a.currency!=='KRW'||!['close','adjusted_close'].includes(a.priceType))throw Error('자산 가격 형식 오류');
             M.validDate(a.sourceDate);if(a.sourceDate>row.date||a.sourceDate.slice(0,7)!==row.date.slice(0,7))throw Error('가격 관측일 오류');
           }
-          return {date:row.date,availableAt:row.availableAt,currency:'KRW',priceBasis:p.metadata.priceType,
+          return {priceOnly:true,decisionAt:row.availableAt,date:row.date,availableAt:row.availableAt,currency:'KRW',priceBasis:p.metadata.priceType,
             source:p.metadata.source,dataVersion:p.metadata.dataVersion,scoreType:null,modelVersion:'unavailable',pointInTimeVerified:false,
             prices:Object.fromEntries(Object.keys(M.assets).map(k=>[k,row.assets[M.assetId(k)].value])),
             assetDetails:row.assets,fx:row.fx,cashModel:p.metadata.cashModel};

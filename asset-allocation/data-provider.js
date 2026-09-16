@@ -14,6 +14,8 @@
     return {schemaVersion:2,date:r.date,observationDate:r.date,availableAt:r.availableAt,source:r.source||'historical-file',modelVersion:r.modelVersion||'unavailable',scoreType:r.scoreType||null,indicators:[],assets:Object.fromEntries(Object.keys(M.assets).map(k=>[M.assetId(k),{price:r.prices[k],priceCurrency:r.currency,priceType:r.assetDetails?.[M.assetId(k)]?.priceType||r.priceBasis,sourceDate:r.assetDetails?.[M.assetId(k)]?.sourceDate||r.date,ticker:r.assetDetails?.[M.assetId(k)]?.ticker||null,score:verified?(r.scores?.[k]??null):null,scoreUsable:verified&&Number.isFinite(r.scores?.[k])}])),dataVersion:r.dataVersion||null,fx:r.fx||null,cashModel:r.cashModel||null,quality:{pricesAvailable:true,historicalPointInTime:verified}};
   }
   class UnifiedDataProvider{
+    async getScoreHistory(){return this.current.getScoreHistory();}
+    async getFX(){return this.current.getFX();}
     constructor({current=new Current(),historical=new Historical()}={}){this.current=current;this.historical=historical;}
     async getLatestSnapshot(){return canonical(await this.current.getLatestSnapshot());}
     async getSnapshot(date){
