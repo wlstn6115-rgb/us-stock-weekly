@@ -1,1 +1,53 @@
-{"schemaVersion":1,"SIMULATION_MIN_DATE":"2014-09-01"}
+{
+  "schemaVersion": 1,
+  "SIMULATION_MIN_DATE": "2014-09-01",
+  "scoreModel": {
+    "version": "price-environment-v1",
+    "method": "price-environment-v1",
+    "lookback": 12,
+    "momentumMonths": 6,
+    "assets": {
+      "QQQ": {
+        "momentumScale": 0.2,
+        "volatilityScale": 0.3,
+        "drawdownScale": 0.3,
+        "weights": [
+          0.6,
+          0.2,
+          0.2
+        ]
+      },
+      "GOLD": {
+        "momentumScale": 0.15,
+        "volatilityScale": 0.2,
+        "drawdownScale": 0.2,
+        "weights": [
+          0.65,
+          0.15,
+          0.2
+        ]
+      },
+      "BTC": {
+        "momentumScale": 0.6,
+        "volatilityScale": 0.9,
+        "drawdownScale": 0.6,
+        "weights": [
+          0.5,
+          0.25,
+          0.25
+        ]
+      },
+      "CASH": {
+        "momentumScale": 0.025,
+        "volatilityScale": 0.05,
+        "drawdownScale": 0.05,
+        "weights": [
+          0.6,
+          0.2,
+          0.2
+        ]
+      }
+    },
+    "cashDefensiveWeight": 0.5
+  }
+}

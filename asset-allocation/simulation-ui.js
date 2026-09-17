@@ -7,8 +7,9 @@
  const get=id=>document.getElementById(id),percent=n=>n===null||n===undefined?'평가 불가':(n*100).toFixed(2)+'%';
  let rows=[],config={},session=null,locked=false,available=false;
  const fmt=(n,usd)=>AllocationCurrency.money(n,session?.window[session.cursor]?.fx?.value??null,usd);
- host.innerHTML=`<h2>과거에서 판단 연습</h2><p class="muted">초기자산은 <a href="#portfolio">투자현황</a>의 원화 평가액을 사용합니다. 연속 자료가 있는 시작 월을 무작위로 선택합니다. 단계 이동과 초안 저장 시 이 브라우저에 저장됩니다.</p>
+ host.innerHTML=`<h2>과거에서 판단 연습</h2><p class="muted">연습용 초기자산을 아래에서 자유롭게 설정하세요. 투자현황의 실제 보유액과 별도로 저장됩니다. 연속 자료가 있는 시작 월을 무작위로 선택합니다. 단계 이동과 초안 저장 시 이 브라우저에 저장됩니다.</p>
  <p id="sim-status" role="status" aria-live="polite">데이터 확인 중…</p><details id="sim-setup" class="sim-setup" open><summary>새 연습 설정</summary>
+ <fieldset><legend>연습용 초기자산 (원)</legend>${P.ASSETS.map(a=>`<label>${names[a]} <input id="sim-initial-${a}" type="number" min="0" max="1000000000000000" step="1" value="${a==='CASH'?10000000:0}" required></label>`).join('')}<p class="muted">기본값은 연습용 현금 1,000만 원입니다. 매월 납입금은 별도로 추가됩니다.</p></fieldset>
  <label>기간 <select id="sim-years">${[1,3,5,10].map(y=>`<option value="${y}">${y}년</option>`).join('')}</select></label>
  <label>매월 새로 적립할 금액 (원) <input id="sim-monthly" type="number" min="0" max="1000000000000000" step="1" placeholder="반복 월납입금"></label>
  <label>연습 방식 <select id="sim-mode"><option value="free">자유롭게 판단</option><option value="philosophy">내 투자 원칙과 비교</option></select></label>
@@ -60,10 +61,11 @@
    <div id="sim-step-content"></div><details class="sim-records"><summary>확정한 판단 기록 (${session.decisions.length}건)</summary>${session.decisions.map(x=>`<p>${esc(x.decisionDate)} · ${esc(x.reasonCategory)}${x.principleCheck?` · 원칙 ${x.principleCheck==='followed'?'준수':'예외'}`:''}<br>${esc(x.reasonMemo)}</p>`).join('')||'아직 확정한 판단이 없습니다.'}</details>`;
    const content=get('sim-step-content');
    if(step===1){
-     content.innerHTML=`<p>${v.fx?`당시 환율 1 USD = ${v.fx.value.toFixed(2)}원 (${esc(v.fx.sourceDate)})`:'당시 환율 미확보'}</p><p>총자산 ${fmt(P.value(v.portfolio))} · 이번 달 신규자금 ${fmt(v.monthlyContribution)}</p><p class="muted">이 시점까지의 정보만 확인하세요. Score가 없는 과거에는 가격과 보유비중으로 판단합니다.</p>
-     <div class="table-wrap"><table><tr><th>자산</th><th>평가액</th><th>비중</th><th>당시 Score</th><th>관측가격 (원화)</th></tr>${P.ASSETS.map(a=>`<tr><th>${names[a]}</th><td>${fmt(v.portfolio[a])}</td><td>${percent(P.allocation(v.portfolio)[a])}</td><td>${v.scores[a]??'과거 Score 없음'}</td><td>${v.prices[a].toFixed(2)}</td></tr>`).join('')}</table></div>
-     <label>과거 그래프 <select id="sim-lookback"><option value="1">1개월</option><option value="6">6개월</option><option value="12" selected>1년</option></select></label><div id="sim-chart"></div><button id="sim-continue" class="primary">투자 선택으로</button>`;
-     chart();get('sim-lookback').onchange=chart;button('sim-continue',()=>move(2));
+     content.innerHTML=`<p>${v.fx?`당시 환율 1 USD = ${v.fx.value.toFixed(2)}원 (${esc(v.fx.sourceDate)})`:'당시 환율 미확보'}</p><p>총자산 ${fmt(P.value(v.portfolio))} · 이번 달 신규자금 ${fmt(v.monthlyContribution)}</p><p class="muted">이 시점까지의 정보만 확인하세요. 추정 Score는 과거 가격으로 재계산한 환경값이며 실제 당시 기록이나 상승 확률이 아닙니다.</p>
+     <div class="table-wrap"><table><tr><th>자산</th><th>평가액</th><th>비중</th><th>Score (기록/추정)</th><th>관측가격 (원화)</th></tr>${P.ASSETS.map(a=>`<tr><th>${names[a]}</th><td>${fmt(v.portfolio[a])}</td><td>${percent(P.allocation(v.portfolio)[a])}</td><td>${v.scores[a]===null?'이력 부족 / 기록 없음':`${v.scores[a]}${v.scoreEstimate?' (추정)':''}`}</td><td>${v.prices[a].toFixed(2)}</td></tr>`).join('')}</table></div>
+     ${v.scoreEstimate?`<details><summary>추정 모델 ${esc(v.scoreEstimate.modelVersion)} · 계산 근거</summary><p>달러 가격 기준 ${session.scoreModel?.momentumMonths||6}개월 추세, 12개월 연율 변동성, 12개월 고점 대비 하락폭. 현금은 BIL 가격 환경과 주식·BTC 방어 점수를 혼합합니다. 매크로 지표 미포함 · 현재 모델과 별개 · 조정가격 수정 이력은 미검증.</p>${v.scoreEstimate.reason?`<p>${esc(v.scoreEstimate.reason)}</p>`:''}${Object.entries(v.scoreEstimate.factors).map(([a,f])=>`<p>${names[a]}: 추세 ${percent(f.momentum)}, 변동성 ${percent(f.volatility)}, 고점 대비 ${percent(f.drawdown)}</p>`).join('')}</details>`:'<p class="muted">이 저장 연습에는 추정 모델이 없습니다. 새 연습에서 추정 Score를 사용할 수 있습니다.</p>'}
+     <label>과거 그래프 <select id="sim-lookback"><option value="1">1개월</option><option value="6">6개월</option><option value="12" selected>1년</option></select></label><label>자산 선택 <select id="sim-chart-asset"><option value="separate">자산별 그래프 (독립 Y축)</option><option value="all">전체 비교 (공통 Y축)</option>${P.ASSETS.map(a=>`<option value="${a}">${names[a]}</option>`).join('')}</select></label><div id="sim-chart"></div><button id="sim-continue" class="primary">투자 선택으로</button>`;
+     chart();get('sim-lookback').onchange=chart;get('sim-chart-asset').onchange=chart;button('sim-continue',()=>move(2));
    }else if(step===2){
      content.innerHTML=`<p>이번 달 신규자금 ${fmt(v.monthlyContribution)}. 입력은 원화입니다. 거래하지 않을 자산은 0을 유지하세요. 매도 후 매수를 처리하며 남은 금액은 현금·단기채에 둡니다.</p>
      <form id="sim-orders-form"><div class="table-wrap"><table><tr><th>자산</th><th>매수 원</th><th>매도 원</th><th>또는 매도 %</th></tr>${['QQQ','GOLD','BTC'].map(a=>`<tr><th>${names[a]}</th>${['buy','sell','percent'].map(k=>`<td><input id="sim-${k}-${a}" aria-label="${names[a]} ${k}" type="number" value="${esc(d.inputs?.[k+'-'+a]??'0')}" min="0" max="${k==='percent'?100:1e15}" step="${k==='percent'?0.1:1}" required></td>`).join('')}</tr>`).join('')}</table></div><p class="small">매도 금액과 매도 비율은 동시에 입력하지 마세요.</p><button class="primary" type="submit">선택 확인 · 이유 기록으로</button></form><button id="sim-back" class="secondary">시장 확인으로</button>`;
@@ -98,12 +100,16 @@
    const h=E.view(session).history.slice(-Number(get('sim-lookback').value)-1),usd=AllocationCurrency.mode==='USD';
    if(usd&&h.some(x=>!Number.isFinite(x.fx?.value)||x.fx.value<=0)){get('sim-chart').textContent='당시 환율이 없어 달러 그래프를 표시할 수 없습니다.';return;}
    if(h.length<2){get('sim-chart').textContent='이 시점 이전의 그래프 데이터가 부족합니다.';return;}
-   const colors=['#3264e8','#9b883f','#e59932','#758b9c'],values=P.ASSETS.map(a=>h.map(s=>(s.prices[a]/(usd?s.fx.value:1))/(h[0].prices[a]/(usd?h[0].fx.value:1))*100)),all=values.flat(),lo=Math.min(...all),hi=Math.max(...all),y=v=>160-(v-lo)/(hi-lo||1)*130;
-   get('sim-chart').innerHTML=`<svg viewBox="0 0 600 190" role="img" aria-label="현재 판단 시점까지의 월별 상대가격"><text x="20" y="18" font-size="12">최대 ${hi.toFixed(1)} · 최소 ${lo.toFixed(1)}</text>${values.map((line,i)=>`<polyline fill="none" stroke="${colors[i]}" stroke-width="2" points="${line.map((v,j)=>`${20+j/(h.length-1)*560},${y(v)}`).join(' ')}"/>`).join('')}<text x="20" y="185" font-size="12">${h[0].date}</text><text x="470" y="185" font-size="12">${h.at(-1).date}</text></svg><p>${P.ASSETS.map((a,i)=>`<span style="color:${colors[i]}">${names[a]}</span>`).join(' · ')} · ${AllocationCurrency.mode} · 구간 시작=100</p>`;
+   const colors=['#3264e8','#9b883f','#e59932','#758b9c'],selected=get('sim-chart-asset').value;
+   function plot(keys){
+    const values=keys.map(a=>h.map(s=>(s.prices[a]/(usd?s.fx.value:1))/(h[0].prices[a]/(usd?h[0].fx.value:1))*100)),all=values.flat(),lo=Math.min(...all),hi=Math.max(...all),padding=Math.max((hi-lo)*0.1,0.1),min=lo-padding,max=hi+padding,y=v=>160-(v-min)/(max-min)*130;
+    return `<figure style="margin:12px 0"><figcaption>${keys.map(a=>names[a]).join(' · ')} · ${AllocationCurrency.mode} · 구간 시작=100</figcaption><svg viewBox="0 0 600 200" role="img" aria-label="${keys.map(a=>names[a]).join(' · ')} 현재 판단까지 상대가격">${[min,(min+max)/2,max].map(t=>`<text x="0" y="${y(t)}" font-size="12">${t.toFixed(1)}</text><line x1="55" x2="580" y1="${y(t)}" y2="${y(t)}" stroke="#e5eaf2"/>`).join('')}${values.map((line,i)=>`<polyline fill="none" stroke="${colors[P.ASSETS.indexOf(keys[i])]}" stroke-width="2" points="${line.map((v,j)=>`${55+j/(h.length-1)*525},${y(v)}`).join(' ')}"/>`).join('')}<text x="55" y="190" font-size="12">${h[0].date}</text><text x="470" y="190" font-size="12">${h.at(-1).date}</text></svg><p class="small">구간 변화 ${keys.map((a,i)=>names[a]+' '+percent(values[i].at(-1)/100-1)).join(' · ')}</p></figure>`;
+   }
+   get('sim-chart').innerHTML='<p class="muted">자산별 그래프는 Y축 범위가 다릅니다. 기울기 대신 축 숫자와 구간 변화율을 비교하세요.</p>'+(selected==='separate'?P.ASSETS.map(a=>plot([a])).join(''):plot(selected==='all'?P.ASSETS:[selected]));
  }
  window.addEventListener('currencychange',()=>{if(session){chart();if(get('sim-performance'))renderPerformance(session,get('sim-performance'));}});
  get('sim-start').onclick=()=>perform(async()=>{
-   const input=Object.fromEntries(P.ASSETS.map(a=>{const e=get(a);if(!e.value.trim())throw Error('투자현황 탭의 보유액을 모두 입력하세요.');return [a,Number(e.value)];}));
+   const input=Object.fromEntries(P.ASSETS.map(a=>{const e=get('sim-initial-'+a);if(!e.value.trim())throw Error('연습용 초기자산을 모두 입력하세요. 미보유 자산은 0입니다.');return [a,Number(e.value)];}));
    if(!get('sim-monthly').value.trim())throw Error('반복 월납입금을 입력하세요.');
    const next=E.start(rows,Number(get('sim-years').value),input,Number(get('sim-monthly').value),Math.random,{...config,mode:get('sim-mode').value,principle:get('sim-principle').value});
    await S.add('sessions',next);session=next;draw();await list();status('연습을 저장했습니다. 첫 단계에서 시장을 확인하세요.');
@@ -113,7 +119,7 @@
    if(range.errors?.historical)throw Error(range.errors.historical);rows=range.rows;config=settings;
    for(const option of get('sim-years').options)option.disabled=!E.candidates(rows,Number(option.value),config).length;
    const first=[...get('sim-years').options].find(o=>!o.disabled);available=!!first;if(first)get('sim-years').value=first.value;get('sim-start').disabled=!available;
-   status(available?`${rows.length}개월 가격 연결. 시작 제한 ${config.minDate}. 주식=SPY, 현금·단기채=BIL. 당시 환율을 반영하고 월말 가격에 거래한다고 가정합니다. 과거 Score·개발자 전략은 미확보입니다.`:'선택 기간을 충족하는 연속 자료가 없습니다. 기존 저장 연습은 아래에서 이어볼 수 있습니다.');
+   status(available?`${rows.length}개월 가격 연결. 시작 제한 ${config.minDate}. 주식=SPY, 현금·단기채=BIL. 당시 환율을 반영하고 월말 가격에 거래한다고 가정합니다. 가격 기반 추정 Score 모델 ${config.scoreModel?.version||'없음'} · 실제 과거 Score와 개발자 전략은 미확보입니다.`:'선택 기간을 충족하는 연속 자료가 없습니다. 기존 저장 연습은 아래에서 이어볼 수 있습니다.');
  }catch(e){status(e.message);}
  try{await list();}catch(e){status('저장소를 열 수 없습니다: '+e.message);}
 })();
