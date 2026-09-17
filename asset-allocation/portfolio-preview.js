@@ -2,9 +2,25 @@
  const host=document.getElementById('trade-preview-section');if(!host)return;
  const names={QQQ:'주식',GOLD:'금',BTC:'비트코인',CASH:'현금·단기채'};
  const fmt=n=>AllocationCurrency.money(n),pct=n=>(n*100).toFixed(1)+'%';
- host.innerHTML=`<h2>매수·매도 전 포트폴리오 미리보기</h2><p class="muted">위에 입력한 현재 평가액과 이번 달 남은 투자금을 사용합니다. 매도대금도 매수에 사용할 수 있습니다.</p><form id="trade-preview-form"><div class="table-wrap"><table><thead><tr><th>자산</th><th>매수금액 (원)</th><th>매도 방식</th><th>매도 입력</th></tr></thead><tbody>${['QQQ','GOLD','BTC'].map(a=>`<tr><th>${names[a]}</th><td><input aria-label="${names[a]} 매수금액" id="trade-buy-${a}" type="number" min="0" max="1000000000000000" step="1" value="0" required></td><td><select aria-label="${names[a]} 매도 방식" id="trade-mode-${a}"><option value="amount">금액 (원)</option><option value="percent">보유액 비율 (%)</option></select></td><td><input aria-label="${names[a]} 매도금액 또는 비율" id="trade-sell-${a}" type="number" min="0" max="1000000000000000" step="1" value="0" required></td></tr>`).join('')}</tbody></table></div><p class="small" style="text-align:left">매도 비율은 현재 보유 평가액 기준입니다. 비율 계산 결과는 원 미만을 버립니다. 거래비용·세금·가격변동은 포함하지 않습니다.</p><button class="secondary" type="submit">변경 전후 미리보기</button></form><div id="trade-preview-result" aria-live="polite"></div><p class="muted">가상 미리보기입니다. 실제 주문·보유액 저장·월 투자금 차감은 실행하지 않습니다.</p>`;
+ host.innerHTML=`<h2>매수·매도 전 포트폴리오 미리보기</h2><p class="muted">위에 입력한 현재 평가액과 이번 달 남은 투자금을 사용합니다. 매도대금도 매수에 사용할 수 있습니다.</p><p><button id="trade-use-allocation" class="secondary" type="button" disabled>추천 배분을 미리보기에 불러오기</button> <button id="trade-clear" class="secondary" type="button">거래 입력 초기화</button></p><p id="trade-allocation-note" class="muted">위에서 추천 배분을 계산하면 불러올 수 있습니다.</p><form id="trade-preview-form"><div class="table-wrap"><table><thead><tr><th>자산</th><th>매수금액 (원)</th><th>매도 방식</th><th>매도 입력</th></tr></thead><tbody>${['QQQ','GOLD','BTC'].map(a=>`<tr><th>${names[a]}</th><td><input aria-label="${names[a]} 매수금액" id="trade-buy-${a}" type="number" min="0" max="1000000000000000" step="1" value="0" required></td><td><select aria-label="${names[a]} 매도 방식" id="trade-mode-${a}"><option value="amount">금액 (원)</option><option value="percent">보유액 비율 (%)</option></select></td><td><input aria-label="${names[a]} 매도금액 또는 비율" id="trade-sell-${a}" type="number" min="0" max="1000000000000000" step="1" value="0" required></td></tr>`).join('')}</tbody></table></div><p class="small" style="text-align:left">매도 비율은 현재 보유 평가액 기준입니다. 비율 계산 결과는 원 미만을 버립니다. 거래비용·세금·가격변동은 포함하지 않습니다.</p><button class="secondary" type="submit">변경 전후 미리보기</button></form><div id="trade-preview-result" aria-live="polite"></div><p class="muted">가상 미리보기입니다. 실제 주문·보유액 저장·월 투자금 차감은 실행하지 않습니다.</p>`;
  const output=document.getElementById('trade-preview-result');
- for(const a of ['QQQ','GOLD','BTC'])document.getElementById('trade-mode-'+a).addEventListener('change',()=>{const p=document.getElementById('trade-mode-'+a).value==='percent',input=document.getElementById('trade-sell-'+a);input.max=p?'100':'1000000000000000';input.step=p?'0.1':'1';input.value='0';});
+ let recommendation=null;
+ const use=document.getElementById('trade-use-allocation'),note=document.getElementById('trade-allocation-note');
+ function clear(){for(const a of ['QQQ','GOLD','BTC']){document.getElementById('trade-buy-'+a).value='0';document.getElementById('trade-sell-'+a).value='0';}invalidate();}
+ function revoke(){recommendation=null;use.disabled=true;note.textContent='입력 또는 시장 자료가 바뀌면 추천 배분을 다시 계산해 주세요.';}
+ window.addEventListener('allocationinvalidated',revoke);
+ window.addEventListener('portfolioinputchanged',()=>{revoke();invalidate();});
+ window.addEventListener('allocationcalculated',e=>{recommendation=JSON.parse(JSON.stringify(e.detail));use.disabled=false;note.textContent='계산된 신규자금 배분을 불러옵니다. 기존 거래 입력은 교체되고 현금 배분은 현금으로 남습니다.';});
+ document.getElementById('trade-clear').onclick=clear;
+ use.onclick=()=>{
+   if(!recommendation)return;
+   const {input,allocation}=recommendation;
+   if(PortfolioEngine.ASSETS.some(a=>Number(document.getElementById(a).value)!==input.portfolio[a])||Number(document.getElementById('budget').value)!==input.remaining_monthly_investment_krw){revoke();invalidate();return;}
+   clear();for(const a of ['QQQ','GOLD','BTC'])document.getElementById('trade-buy-'+a).value=allocation.assets[a].amount_krw;
+   document.getElementById('trade-preview-form').requestSubmit();
+ };
+
+ for(const a of ['QQQ','GOLD','BTC'])document.getElementById('trade-mode-'+a).addEventListener('change',()=>{const p=document.getElementById('trade-mode-'+a).value==='percent',input=document.getElementById('trade-sell-'+a);input.max=p?'100':'1000000000000000';input.step=p?'0.1':'1';input.value='0';invalidate();});
  function invalidate(){output.textContent='입력값이 바뀌었습니다. 변경 전후 미리보기를 다시 눌러 주세요.';}
  host.querySelector('form').addEventListener('input',invalidate);
  document.getElementById('portfolio-form').addEventListener('input',invalidate);

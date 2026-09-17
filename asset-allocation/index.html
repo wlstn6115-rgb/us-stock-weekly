@@ -10,7 +10,7 @@
 <section class="panel factors-panel"><div class="factor-header"><div><p class="eyebrow">WHAT CHANGED</p><h2>Score를 만든 요인</h2></div><div class="asset-picker" role="group" aria-label="기여요인 자산 선택"><button data-asset="QQQ" aria-pressed="true">주식</button><button data-asset="BTC" aria-pressed="false">비트코인</button><button data-asset="GOLD" aria-pressed="false">금</button><button data-asset="CASH" aria-pressed="false">현금·단기채</button></div></div><p class="muted">가중치는 관측 환경에 따라 매일 조정됩니다. 하루 ±2%p, 기준 가중치 대비 ±8%p 이내입니다.</p><div id="factors"></div></section>
 <section id="score-trends" class="panel factors-panel"></section><details class="limitations"><summary>데이터 범위와 해석 기준</summary><ul id="warnings"></ul><p>Score는 현재 환경의 우호도입니다. 상승 확률이나 검증된 기대수익률을 의미하지 않습니다.</p></details>
 </div>
-<div id="portfolio" role="tabpanel" aria-labelledby="tab-portfolio" tabindex="0" hidden><div class="page-title"><div><h1>내 자산에서 시작합니다</h1><p class="muted">현재 보유액과 이번 달 남은 투자금을 바탕으로 배분을 확인하세요.</p></div></div><div class="workspace">
+<div id="portfolio" role="tabpanel" aria-labelledby="tab-portfolio" tabindex="0" hidden><div class="page-title"><div><h1>내 자산에서 시작합니다</h1><p class="muted">현재 보유액과 이번 달 남은 투자금을 바탕으로 배분을 확인하세요.</p></div></div><section id="portfolio-summary" class="panel" aria-live="polite"></section><div class="workspace">
 <section class="panel input-panel"><div class="section-title"><h2>내 투자 현황</h2><span>KRW</span></div><p class="muted">현재 평가액과 아직 투자하지 않은 금액을 입력하세요.</p>
 <form id="portfolio-form">
 <label class="budget-label" for="budget">이번 달 남은 투자금</label><div class="money budget"><input id="budget" type="number" min="0" max="1000000000000000" step="1" inputmode="numeric" required placeholder="금액 입력"><span>원</span></div>

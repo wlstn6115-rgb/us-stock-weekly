@@ -21,7 +21,33 @@ function inputValues() {
   });
   return {portfolio:Object.fromEntries(assets.map((a,i)=>[a,values[i]])),remaining_monthly_investment_krw:values[4]};
 }
-function total() { const sum=assets.reduce((n,a)=>n+(Number($(a).value)||0),0); $('total').innerHTML=won(sum); $('holding-weights').textContent=assets.map(a=>labels[a]+' '+(sum>0?percent(Math.max(0,Number($(a).value)||0)/sum):'—')).join(' · '); }
+function invalidateAllocation() {
+  window.dispatchEvent(new Event('allocationinvalidated'));
+  $('allocation').classList.add('pending');
+}
+function total() {
+  try {
+    const x=inputValues(),sum=Object.values(x.portfolio).reduce((a,b)=>a+b,0);
+    $('total').innerHTML=won(sum);
+    $('holding-weights').textContent=assets.map(a=>labels[a]+' '+(sum?percent(x.portfolio[a]/sum):'—')).join(' · ');
+    $('portfolio-summary').innerHTML=`<p>현재 총 투자자산 <strong>${won(sum)}</strong> · 이번 달 남은 투자금 <strong>${won(x.remaining_monthly_investment_krw)}</strong></p><p class="muted">보유액 합계로 계산합니다. 남은 투자금은 위 보유 현금에 아직 포함하지 않은 신규자금입니다.</p>`;
+  } catch {
+    $('total').textContent='—';$('holding-weights').textContent='모든 금액을 올바르게 입력하면 비중을 표시합니다.';
+    $('portfolio-summary').textContent='현재 보유액과 이번 달 남은 투자금을 입력하세요. 미보유 자산은 0을 입력하세요.';
+  }
+  window.dispatchEvent(new Event('portfolioinputchanged'));
+}
+async function calculate(path='simulate') {
+  invalidateAllocation();
+  const input=inputValues(),fingerprint=JSON.stringify(input);
+  const r=await api(path,input);
+  let unchanged=false;try{unchanged=JSON.stringify(inputValues())===fingerprint;}catch{}
+  if(!unchanged){invalidateAllocation();message('계산 중 입력값이 바뀌었습니다. 현재 입력으로 다시 계산해 주세요.');return false;}
+  renderAllocation(r.allocation);
+  window.dispatchEvent(new CustomEvent('allocationcalculated',{detail:{input,allocation:r.allocation}}));
+  return true;
+}
+
 function renderScores() {
   const result=current?.result;
   if (!result?.scores) { $('scores').innerHTML='<p>아직 계산 결과가 없습니다. 최신 자료로 다시 계산해 주세요.</p>'; $('factors').textContent='사용 가능한 Score가 없습니다.'; return; }
@@ -50,18 +76,19 @@ async function load(initial=false) {
     renderScores();
     $('warnings').innerHTML=(next.result?.warnings||[]).map(w=>`<li>${escape(w)}</li>`).join('');
     if (next.stale || next.result?.status==='error') {
+      invalidateAllocation();
       message('현재 결과가 오래되었거나 갱신에 실패했습니다. 인스타 데이터 상태를 확인해 주세요.',true);
       $('allocation').innerHTML='<div class="empty"><h3>최신 결과가 필요합니다.</h3><p>데이터 갱신 후 다시 계산해 주세요.</p></div>';
     } else if (changed && !initial) {
-      $('allocation').classList.add('pending');
+      invalidateAllocation();
       message('새로운 시장 결과를 불러왔습니다. 현재 입력값으로 추천 배분을 다시 계산해 주세요.');
     }
   }
-  if (initial && next.portfolio) {
+  if (initial && next.portfolio && !dirty) {
     for (const a of assets) $(a).value=next.portfolio.portfolio[a];
     $('budget').value=next.portfolio.remaining_monthly_investment_krw;
     total();
-    if (!next.stale && next.result?.scores) renderAllocation((await api('simulate',inputValues())).allocation);
+    if (!next.stale && next.result?.scores) await calculate();
     $('save-note').textContent='저장된 입력값을 불러왔습니다.';
   }
 }
@@ -71,17 +98,18 @@ async function action(fn) {
   try { await fn(); } catch(e) { message(e.message,true); }
   finally {busy=false;document.querySelectorAll('#portfolio-form button,#refresh').forEach(b=>b.disabled=false);}
 }
-$('portfolio-form').addEventListener('submit',e=>{e.preventDefault();action(async()=>{const r=await api('simulate',inputValues());renderAllocation(r.allocation);message('현재 입력값으로 계산했습니다. 저장하면 다음 접속 때 다시 불러옵니다.');});});
-$('portfolio-form').addEventListener('input',()=>{dirty=true;total();$('allocation').classList.add('pending');$('save-note').textContent='입력값이 변경되었습니다. 계산 후 저장해 주세요.';message('입력값이 바뀌었습니다. 추천 배분 계산을 눌러 반영해 주세요.');});
-$('save').addEventListener('click',()=>action(async()=>{if(!$('portfolio-form').reportValidity())return;const r=await api('save',inputValues());renderAllocation(r.allocation);dirty=false;$('save-note').textContent='이 브라우저에 저장됨';message('보유자산과 남은 투자금을 저장했습니다.');}));
+$('portfolio-form').addEventListener('submit',e=>{e.preventDefault();action(async()=>{if(!await calculate())return;message('현재 입력값으로 계산했습니다. 저장하면 다음 접속 때 다시 불러옵니다.');});});
+$('portfolio-form').addEventListener('input',()=>{dirty=true;total();invalidateAllocation();$('save-note').textContent='입력값이 변경되었습니다. 계산 후 저장해 주세요.';message('입력값이 바뀌었습니다. 추천 배분 계산을 눌러 반영해 주세요.');});
+$('save').addEventListener('click',()=>action(async()=>{if(!$('portfolio-form').reportValidity())return;if(!await calculate('save'))return;dirty=false;$('save-note').textContent='이 브라우저에 저장됨';message('보유자산과 남은 투자금을 저장했습니다.');}));
 $('refresh').addEventListener('click',()=>action(async()=>{message('게시된 최신 시장 데이터를 불러오고 있습니다.');await api('refresh',{});await load();message('게시된 Score를 불러왔습니다. 현재 입력값으로 추천 배분을 계산할 수 있습니다.');}));
 document.querySelectorAll('[data-asset]').forEach(button=>button.addEventListener('click',()=>{selected=button.dataset.asset;document.querySelectorAll('[data-asset]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));renderFactors();}));
+total();
 load(true).catch(e=>message(e.message,true));
 setInterval(()=>{if(!busy)load().catch(()=>message('자료를 불러오지 못했습니다. 인터넷 연결을 확인해 주세요.',true));},30000);
 window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});
 // Same calculation action as the visible form; no saving or account side effects.
 if(document.modelContext?.registerTool){
   const lifetime=new AbortController();
-  Promise.resolve(document.modelContext.registerTool({name:'preview_asset_allocation',title:'자산배분 미리 계산',description:'보유 평가액과 남은 월 투자금을 화면에 입력하고 배분을 계산합니다. 저장하지 않습니다.',inputSchema:{type:'object',properties:{portfolio:{type:'object',properties:Object.fromEntries(assets.map(a=>[a,{type:'integer',minimum:0,maximum:1e15}])),required:assets,additionalProperties:false},remaining_monthly_investment_krw:{type:'integer',minimum:0,maximum:1e15}},required:['portfolio','remaining_monthly_investment_krw'],additionalProperties:false},annotations:{readOnlyHint:false},execute:async input=>{if(busy)throw new Error('다른 계산이 진행 중입니다.');const r=await api('simulate',input);for(const a of assets)$(a).value=input.portfolio[a];$('budget').value=input.remaining_monthly_investment_krw;total();dirty=true;renderAllocation(r.allocation);return r.allocation;}},{signal:lifetime.signal})).catch(()=>{});
+  Promise.resolve(document.modelContext.registerTool({name:'preview_asset_allocation',title:'자산배분 미리 계산',description:'보유 평가액과 남은 월 투자금을 화면에 입력하고 배분을 계산합니다. 저장하지 않습니다.',inputSchema:{type:'object',properties:{portfolio:{type:'object',properties:Object.fromEntries(assets.map(a=>[a,{type:'integer',minimum:0,maximum:1e15}])),required:assets,additionalProperties:false},remaining_monthly_investment_krw:{type:'integer',minimum:0,maximum:1e15}},required:['portfolio','remaining_monthly_investment_krw'],additionalProperties:false},annotations:{readOnlyHint:false},execute:async input=>{if(busy)throw new Error('다른 계산이 진행 중입니다.');const r=await api('simulate',input);for(const a of assets)$(a).value=input.portfolio[a];$('budget').value=input.remaining_monthly_investment_krw;total();dirty=true;renderAllocation(r.allocation);window.dispatchEvent(new CustomEvent('allocationcalculated',{detail:{input,allocation:r.allocation}}));return r.allocation;}},{signal:lifetime.signal})).catch(()=>{});
   window.addEventListener('pagehide',()=>lifetime.abort(),{once:true});
 }
