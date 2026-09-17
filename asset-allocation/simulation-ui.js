@@ -2,7 +2,7 @@
  'use strict';
  const host=document.getElementById('simulation-section');if(!host)return;
  const E=SimulationEngine,P=PortfolioEngine,S=AllocationStore;
- const names={QQQ:'주식 (SPY)',GOLD:'금',BTC:'비트코인',CASH:'현금·단기채 (BIL)'},steps=['시장 확인','투자 선택','이유 기록','결과 확인','다음 달'];
+ const names={QQQ:'주식 (SPY)',GOLD:'금',BTC:'비트코인',CASH:'현금·단기채 (BIL)'},steps=['시장 확인 · 투자 선택','이유 기록','결과 확인','다음 달'];
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const get=id=>document.getElementById(id),percent=n=>n===null||n===undefined?'평가 불가':(n*100).toFixed(2)+'%';
  let rows=[],config={},session=null,locked=false,available=false;
@@ -53,24 +53,24 @@
    let step=session.uiStep|| (v.completed?4:1);
    if(v.completed&&step<4)step=4;
    if(step>=4&&!last)step=1;
+   const displayStep=step<=2?1:step-1;
    const d=session.uiDraft||{inputs:{},reason:'',memo:'',principleCheck:''};
-   get('sim-body').innerHTML=`<div class="sim-progress"><p>완료 ${session.cursor} / ${session.duration*12}개월 · ${esc(session.startDate)} 시작</p><progress max="${session.duration*12}" value="${session.cursor}" aria-label="완료한 투자 월"></progress><ol>${steps.map((name,i)=>`<li ${step===i+1?'aria-current="step"':''}>${i+1}. ${i===4&&v.completed?'최종 정리':name}</li>`).join('')}</ol></div>
-   <h3 id="sim-step-title" tabindex="-1">${step}. ${step===5&&v.completed?'최종 정리':steps[step-1]}</h3>
+   get('sim-body').innerHTML=`<div class="sim-progress"><p>완료 ${session.cursor} / ${session.duration*12}개월 · ${esc(session.startDate)} 시작</p><progress max="${session.duration*12}" value="${session.cursor}" aria-label="완료한 투자 월"></progress><ol>${steps.map((name,i)=>`<li ${displayStep===i+1?'aria-current="step"':''}>${i+1}. ${i===3&&v.completed?'최종 정리':name}</li>`).join('')}</ol></div>
+   <h3 id="sim-step-title" tabindex="-1">${displayStep}. ${step===5&&v.completed?'최종 정리':steps[displayStep-1]}</h3>
    <p>${step>=4&&last?`${esc(last.decisionDate)} 판단 → ${esc(last.nextDate)} 평가`:`판단 기준 ${esc(v.date)}`}</p>
    ${session.principle?`<aside class="sim-principle"><strong>시작할 때 정한 원칙</strong><p>${esc(session.principle)}</p></aside>`:''}
    <div id="sim-step-content"></div><details class="sim-records"><summary>확정한 판단 기록 (${session.decisions.length}건)</summary>${session.decisions.map(x=>`<p>${esc(x.decisionDate)} · ${esc(x.reasonCategory)}${x.principleCheck?` · 원칙 ${x.principleCheck==='followed'?'준수':'예외'}`:''}<br>${esc(x.reasonMemo)}</p>`).join('')||'아직 확정한 판단이 없습니다.'}</details>`;
    const content=get('sim-step-content');
-   if(step===1){
-     content.innerHTML=`<p>${v.fx?`당시 환율 1 USD = ${v.fx.value.toFixed(2)}원 (${esc(v.fx.sourceDate)})`:'당시 환율 미확보'}</p><p>총자산 ${fmt(P.value(v.portfolio))} · 이번 달 신규자금 ${fmt(v.monthlyContribution)}</p><p class="muted">이 시점까지의 정보만 확인하세요. 추정 Score는 과거 가격으로 재계산한 환경값이며 실제 당시 기록이나 상승 확률이 아닙니다.</p>
+   if(step<=2){
+     content.innerHTML=`<div class="sim-decision-grid"><section class="sim-market"><h4>시장과 현재 보유자산</h4><p>${v.fx?`당시 환율 1 USD = ${v.fx.value.toFixed(2)}원 (${esc(v.fx.sourceDate)})`:'당시 환율 미확보'}</p><p>총자산 ${fmt(P.value(v.portfolio))} · 이번 달 신규자금 ${fmt(v.monthlyContribution)}</p><p class="muted">이 시점까지의 정보만 확인하세요. 추정 Score는 과거 가격으로 재계산한 환경값이며 실제 당시 기록이나 상승 확률이 아닙니다.</p>
      <div class="table-wrap"><table><tr><th>자산</th><th>평가액</th><th>비중</th><th>Score (기록/추정)</th><th>관측가격 (원화)</th></tr>${P.ASSETS.map(a=>`<tr><th>${names[a]}</th><td>${fmt(v.portfolio[a])}</td><td>${percent(P.allocation(v.portfolio)[a])}</td><td>${v.scores[a]===null?'이력 부족 / 기록 없음':`${v.scores[a]}${v.scoreEstimate?' (추정)':''}`}</td><td>${v.prices[a].toFixed(2)}</td></tr>`).join('')}</table></div>
      ${v.scoreEstimate?`<details><summary>추정 모델 ${esc(v.scoreEstimate.modelVersion)} · 계산 근거</summary><p>달러 가격 기준 ${session.scoreModel?.momentumMonths||6}개월 추세, 12개월 연율 변동성, 12개월 고점 대비 하락폭. 현금은 BIL 가격 환경과 주식·BTC 방어 점수를 혼합합니다. 매크로 지표 미포함 · 현재 모델과 별개 · 조정가격 수정 이력은 미검증.</p>${v.scoreEstimate.reason?`<p>${esc(v.scoreEstimate.reason)}</p>`:''}${Object.entries(v.scoreEstimate.factors).map(([a,f])=>`<p>${names[a]}: 추세 ${percent(f.momentum)}, 변동성 ${percent(f.volatility)}, 고점 대비 ${percent(f.drawdown)}</p>`).join('')}</details>`:'<p class="muted">이 저장 연습에는 추정 모델이 없습니다. 새 연습에서 추정 Score를 사용할 수 있습니다.</p>'}
-     <label>과거 그래프 <select id="sim-lookback"><option value="1">1개월</option><option value="6">6개월</option><option value="12" selected>1년</option></select></label><label>자산 선택 <select id="sim-chart-asset"><option value="separate">자산별 그래프 (독립 Y축)</option><option value="all">전체 비교 (공통 Y축)</option>${P.ASSETS.map(a=>`<option value="${a}">${names[a]}</option>`).join('')}</select></label><div id="sim-chart"></div><button id="sim-continue" class="primary">투자 선택으로</button>`;
-     chart();get('sim-lookback').onchange=chart;get('sim-chart-asset').onchange=chart;button('sim-continue',()=>move(2));
-   }else if(step===2){
-     content.innerHTML=`<p>이번 달 신규자금 ${fmt(v.monthlyContribution)}. 입력은 원화입니다. 거래하지 않을 자산은 0을 유지하세요. 매도 후 매수를 처리하며 남은 금액은 현금·단기채에 둡니다.</p>
-     <form id="sim-orders-form"><div class="table-wrap"><table><tr><th>자산</th><th>매수 원</th><th>매도 원</th><th>또는 매도 %</th></tr>${['QQQ','GOLD','BTC'].map(a=>`<tr><th>${names[a]}</th>${['buy','sell','percent'].map(k=>`<td><input id="sim-${k}-${a}" aria-label="${names[a]} ${k}" type="number" value="${esc(d.inputs?.[k+'-'+a]??'0')}" min="0" max="${k==='percent'?100:1e15}" step="${k==='percent'?0.1:1}" required></td>`).join('')}</tr>`).join('')}</table></div><p class="small">매도 금액과 매도 비율은 동시에 입력하지 마세요.</p><button class="primary" type="submit">선택 확인 · 이유 기록으로</button></form><button id="sim-back" class="secondary">시장 확인으로</button>`;
+     <label>과거 그래프 <select id="sim-lookback"><option value="1">1개월</option><option value="6">6개월</option><option value="12" selected>1년</option></select></label><label>자산 선택 <select id="sim-chart-asset"><option value="separate">자산별 그래프 (독립 Y축)</option><option value="all">전체 비교 (공통 Y축)</option>${P.ASSETS.map(a=>`<option value="${a}">${names[a]}</option>`).join('')}</select></label><div id="sim-chart"></div></section><section class="sim-trading"><h4>이번 달 투자 선택</h4><div id="sim-order-panel"></div></section></div>`;
+     chart();get('sim-lookback').onchange=chart;get('sim-chart-asset').onchange=chart;
+     get('sim-order-panel').innerHTML=`<p>이번 달 신규자금 ${fmt(v.monthlyContribution)}. 입력은 원화입니다. 거래하지 않을 자산은 0을 유지하세요. 매도 후 매수를 처리하며 남은 금액은 현금·단기채에 둡니다.</p>
+     <div id="sim-cash-summary" aria-live="polite"></div><form id="sim-orders-form"><div class="table-wrap"><table><tr><th>자산</th><th>매수 원</th><th>매도 원</th><th>또는 매도 %</th></tr>${['QQQ','GOLD','BTC'].map(a=>`<tr><th>${names[a]}</th>${['buy','sell','percent'].map(k=>`<td><input id="sim-${k}-${a}" aria-label="${names[a]} ${k}" type="number" value="${esc(d.inputs?.[k+'-'+a]??'0')}" min="0" max="${k==='percent'?100:1e15}" step="${k==='percent'?0.1:1}" required></td>`).join('')}</tr>`).join('')}</table></div><p class="small">매도 금액과 매도 비율은 동시에 입력하지 마세요.</p><button class="primary" type="submit">선택 확인 · 이유 기록으로</button></form><button id="sim-selection-save" class="secondary">선택 초안 저장</button>`;
      get('sim-orders-form').onsubmit=e=>{e.preventDefault();perform(async()=>{const next=draft();P.preview(session.portfolio,session.monthlyContribution,orders(next));await move(3,next);});};
-     button('sim-back',()=>move(1));
+     get('sim-orders-form').addEventListener('input',cashSummary);cashSummary();button('sim-selection-save',()=>move(1));
    }else if(step===3){
      content.innerHTML=preview(d)+`<form id="sim-reason-form"><label>그때 왜 그렇게 했나요? <select id="sim-reason" required><option value="">이유 선택</option>${E.REASONS.map(r=>`<option ${d.reason===r?'selected':''}>${esc(r)}</option>`).join('')}</select></label><label>메모 <textarea id="sim-memo" maxlength="4000">${esc(d.memo)}</textarea></label>
      ${session.mode==='philosophy'?`<label>정한 원칙과 비교 <select id="sim-principle-check" required><option value="">선택</option><option value="followed" ${d.principleCheck==='followed'?'selected':''}>원칙을 따랐습니다</option><option value="exception" ${d.principleCheck==='exception'?'selected':''}>이번에는 예외로 판단했습니다</option></select></label><p>예외로 판단했다면 메모에 이유를 남겨 주세요. 원칙 평가는 자기 기록이며 자동 판정이 아닙니다.</p>`:''}
@@ -95,6 +95,18 @@
    }
    get('sim-step-title').focus({preventScroll:true});
  }
+ function cashSummary(){
+   const output=get('sim-cash-summary');if(!output||!session)return;
+   const held=session.portfolio.CASH,deposit=session.monthlyContribution;
+   output.innerHTML=`<p>현재 현금·단기채 평가액 <strong>${fmt(held)}</strong><br>이번 달 신규 납입 <strong>${fmt(deposit)}</strong></p>`;
+   try{
+     const requested=orders(draft()),sales=P.preview(session.portfolio,deposit,requested.map(o=>({...o,buyAmount:0})));
+     const saleAmount=sales.cashAvailable-held-deposit;
+     output.innerHTML+=`<p>입력한 매도대금 ${fmt(saleAmount)}<br>총 매수 가능액 <strong>${fmt(sales.cashAvailable)}</strong></p>`;
+     const p=P.preview(session.portfolio,deposit,requested),buys=p.orders.reduce((sum,o)=>sum+o.buyAmount,0);
+     output.innerHTML+=`<p>입력한 매수 합계 ${fmt(buys)}<br>거래 후 현금·단기채 <strong>${fmt(p.after.CASH)}</strong></p><p class="small">이전 달 잔액에 가격·환율 변동이 반영된 BIL 평가액입니다. 납입은 판단 확정 시 한 번 적용됩니다.</p>`;
+   }catch(e){const warning=document.createElement('p');warning.className='error';warning.textContent=e.message;output.append(warning);}
+ }
  function chart(){
    if(!get('sim-chart'))return;
    const h=E.view(session).history.slice(-Number(get('sim-lookback').value)-1),usd=AllocationCurrency.mode==='USD';
@@ -107,7 +119,7 @@
    }
    get('sim-chart').innerHTML='<p class="muted">자산별 그래프는 Y축 범위가 다릅니다. 기울기 대신 축 숫자와 구간 변화율을 비교하세요.</p>'+(selected==='separate'?P.ASSETS.map(a=>plot([a])).join(''):plot(selected==='all'?P.ASSETS:[selected]));
  }
- window.addEventListener('currencychange',()=>{if(session){chart();if(get('sim-performance'))renderPerformance(session,get('sim-performance'));}});
+ window.addEventListener('currencychange',()=>{if(session){chart();cashSummary();if(get('sim-performance'))renderPerformance(session,get('sim-performance'));}});
  get('sim-start').onclick=()=>perform(async()=>{
    const input=Object.fromEntries(P.ASSETS.map(a=>{const e=get('sim-initial-'+a);if(!e.value.trim())throw Error('연습용 초기자산을 모두 입력하세요. 미보유 자산은 0입니다.');return [a,Number(e.value)];}));
    if(!get('sim-monthly').value.trim())throw Error('반복 월납입금을 입력하세요.');
