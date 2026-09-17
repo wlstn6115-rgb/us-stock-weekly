@@ -1,20 +1,119 @@
 (async function(){
+ 'use strict';
  const host=document.getElementById('simulation-section');if(!host)return;
- const E=SimulationEngine,P=PortfolioEngine,names={QQQ:'주식',GOLD:'금',BTC:'비트코인',CASH:'현금·단기채'},fmt=(n,usd)=>AllocationCurrency.money(n,session?.window[session.cursor]?.fx?.value??null,usd);
- const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- let rows=[],session=null,previewed=null,locked=false,available=false;
- host.innerHTML=`<h2>과거에서 판단 연습</h2><p class="muted">초기자산은 투자현황 탭의 현재 평가액을 사용합니다. 시작 월은 데이터가 모두 있는 구간에서 무작위로 선택합니다.</p><p id="sim-status" role="status">데이터 확인 중…</p><label>기간 <select id="sim-years"><option value="1">1년</option><option value="3">3년</option><option value="5">5년</option><option value="10">10년</option></select></label> <label>매월 새로 적립할 금액 (원) <input id="sim-monthly" type="number" min="0" max="1000000000000000" step="1" placeholder="반복 월납입금"></label><button id="sim-start" class="secondary" disabled>새 연습 시작</button><div id="sim-sessions"></div><div id="sim-body"></div>`;
- const get=id=>document.getElementById(id),status=text=>get('sim-status').textContent=text;
- async function list(){const all=await AllocationStore.list('sessions');get('sim-sessions').innerHTML=all.slice().sort((a,b)=>b.createdAt.localeCompare(a.createdAt)).map(s=>`<button class="secondary" data-session="${esc(s.id)}">${esc(s.startDate)} · ${s.duration}년 · ${s.cursor}/${s.duration*12}개월 이어보기</button>`).join('');get('sim-sessions').querySelectorAll('button').forEach(b=>b.onclick=()=>perform(async()=>{session=await AllocationStore.get('sessions',b.dataset.session);draw();}));}
- async function perform(fn){if(locked)return;locked=true;host.querySelectorAll('button').forEach(b=>b.disabled=true);try{await fn();}catch(e){status(e.message);}finally{locked=false;host.querySelectorAll('button').forEach(b=>b.disabled=false);get('sim-start').disabled=!available;}}
- function draw(){previewed=null;const v=E.view(session),last=session.decisions.at(-1);get('sim-body').innerHTML=`<h3>${esc(v.date)} · ${session.cursor}/${session.duration*12}개월</h3><p>${v.fx?`당시 환율: 1 USD = ${v.fx.value.toFixed(2)}원 (${v.fx.sourceDate}) · 월말 관측 후 다음 월 구간 평가`:"당시 환율 미확보: 달러 환산 불가"}</p><p>현재 총자산 <strong>${fmt(P.value(v.portfolio))}</strong> · 누적 납입원금 ${fmt(v.principal,v.principalUSD)} · 손익 ${fmt(P.value(v.portfolio)-v.principal,v.fx&&v.principalUSD!==null?P.value(v.portfolio)/v.fx.value-v.principalUSD:undefined)}</p>${last?`<p>직전 월 원화 포트폴리오 수익률 ${(last.periodReturn*100).toFixed(2)}% (월초 납입금 반영 후 기준)${last.periodReturnUSD!=null?` · 달러 ${(last.periodReturnUSD*100).toFixed(2)}%`:""}</p>`:''}<div class="table-wrap"><table><thead><tr><th>자산</th><th>평가액</th><th>비중</th><th>당시 Score</th><th>관측가격 (원화)</th></tr></thead><tbody>${P.ASSETS.map(a=>`<tr><th>${names[a]}</th><td>${fmt(v.portfolio[a])}</td><td>${(P.allocation(v.portfolio)[a]*100).toFixed(1)}%</td><td>${v.scores[a]??'과거 Score 없음'}</td><td>${v.prices[a].toFixed(2)}</td></tr>`).join('')}</tbody></table></div><label>과거 그래프 <select id="sim-lookback"><option value="1">1개월</option><option value="6">6개월</option><option value="12" selected>1년</option></select></label><div id="sim-chart"></div><div id="sim-benchmarks"></div><div id="sim-performance"></div>${v.completed?'<h3>연습을 마쳤습니다.</h3><p>이제 현재입니다. 위의 최신 Score를 확인하고 지금의 판단을 생각해 보세요. 위의 최종 성과 보고서에서 납입원금과 투자손익을 구분해 확인하세요.</p>':`<p>이번 달 신규자금 ${fmt(v.monthlyContribution)} · 모든 매도 후 매수를 처리합니다.</p><form id="sim-form"><div class="table-wrap"><table><thead><tr><th>자산</th><th>매수 원</th><th>매도 원</th><th>또는 매도 %</th></tr></thead><tbody>${['QQQ','GOLD','BTC'].map(a=>`<tr><th>${names[a]}</th>${['buy','sell','percent'].map(k=>`<td><input id="sim-${k}-${a}" aria-label="${names[a]} ${k}" type="number" value="0" min="0" max="${k==='percent'?100:1e15}" step="${k==='percent'?.1:1}" required></td>`).join('')}</tr>`).join('')}</tbody></table></div><label>그때 왜 그렇게 했나요? <select id="sim-reason" required><option value="">이유 선택</option>${E.REASONS.map(r=>`<option>${r}</option>`).join('')}</select></label><label>메모 <textarea id="sim-memo" maxlength="4000"></textarea></label><button class="secondary" type="submit">변경 전후 확인</button><div id="sim-preview"></div><button class="primary" id="sim-confirm" type="button" hidden>이유와 판단 저장 후 다음 달로</button></form>`}<details><summary>내 판단 기록 (${session.decisions.length}건)</summary>${session.decisions.map(d=>`<p>${esc(d.decisionDate)} · ${esc(d.reasonCategory)}<br>${esc(d.reasonMemo)}</p>`).join('')}</details>`;
-   renderBenchmark(session,get('sim-benchmarks'));renderPerformance(session,get('sim-performance'));chart();get('sim-lookback').onchange=chart;if(v.completed)return;
-   const form=get('sim-form');form.oninput=()=>{previewed=null;get('sim-confirm').hidden=true;get('sim-preview').textContent='입력 변경 후 다시 확인해 주세요.';};
-   form.onsubmit=event=>{event.preventDefault();try{const orders=['QQQ','GOLD','BTC'].map(a=>({asset:a,buyAmount:Number(get('sim-buy-'+a).value),sellAmount:Number(get('sim-sell-'+a).value),sellPercent:Number(get('sim-percent-'+a).value)}));const p=P.preview(v.portfolio,v.monthlyContribution,orders);const reason=get('sim-reason').value,memo=get('sim-memo').value;if(!reason||(reason==='기타'&&!memo.trim()))throw Error('판단 이유를 기록하세요. 기타는 메모가 필요합니다.');previewed={orders,reason,memo};get('sim-preview').innerHTML=P.ASSETS.map(a=>`<p>${names[a]}: ${(p.weightsBefore[a]*100).toFixed(1)}% → ${(p.weightsAfter[a]*100).toFixed(1)}% · ${fmt(p.after[a])}</p>`).join('')+p.notes.map(n=>`<p>${esc(n)}</p>`).join('');get('sim-confirm').hidden=false;}catch(e){status(e.message);}};
-   get('sim-confirm').onclick=()=>perform(async()=>{if(!previewed)throw Error('먼저 변경 내용을 확인하세요.');const next=E.decide(session,previewed.orders,previewed.reason,previewed.memo);await AllocationStore.commitSimulation(next.session,next.decision);session=next.session;status('판단과 당시 Snapshot을 저장했습니다. 다음 월 결과입니다.');draw();await list();});
+ const E=SimulationEngine,P=PortfolioEngine,S=AllocationStore;
+ const names={QQQ:'주식 (SPY)',GOLD:'금',BTC:'비트코인',CASH:'현금·단기채 (BIL)'},steps=['시장 확인','투자 선택','이유 기록','결과 확인','다음 달'];
+ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const get=id=>document.getElementById(id),percent=n=>n===null||n===undefined?'평가 불가':(n*100).toFixed(2)+'%';
+ let rows=[],config={},session=null,locked=false,available=false;
+ const fmt=(n,usd)=>AllocationCurrency.money(n,session?.window[session.cursor]?.fx?.value??null,usd);
+ host.innerHTML=`<h2>과거에서 판단 연습</h2><p class="muted">초기자산은 <a href="#portfolio">투자현황</a>의 원화 평가액을 사용합니다. 연속 자료가 있는 시작 월을 무작위로 선택합니다. 단계 이동과 초안 저장 시 이 브라우저에 저장됩니다.</p>
+ <p id="sim-status" role="status" aria-live="polite">데이터 확인 중…</p><details id="sim-setup" class="sim-setup" open><summary>새 연습 설정</summary>
+ <label>기간 <select id="sim-years">${[1,3,5,10].map(y=>`<option value="${y}">${y}년</option>`).join('')}</select></label>
+ <label>매월 새로 적립할 금액 (원) <input id="sim-monthly" type="number" min="0" max="1000000000000000" step="1" placeholder="반복 월납입금"></label>
+ <label>연습 방식 <select id="sim-mode"><option value="free">자유롭게 판단</option><option value="philosophy">내 투자 원칙과 비교</option></select></label>
+ <label id="sim-principle-label" hidden>이번 연습의 투자 원칙 <textarea id="sim-principle" maxlength="2000" placeholder="예: 매월 같은 금액 투자, 현금 10% 이상 유지"></textarea></label>
+ <button id="sim-start" class="secondary" disabled>새 연습 시작</button></details>
+ <details><summary>저장한 연습 이어하기</summary><div id="sim-sessions"></div></details><div id="sim-body"></div>`;
+ const status=text=>{get('sim-status').textContent=text;};
+ get('sim-mode').onchange=()=>{get('sim-principle-label').hidden=get('sim-mode').value!=='philosophy';};
+ async function perform(fn){
+   if(locked)return;locked=true;
+   const controls=[...host.querySelectorAll('button,input,select,textarea')].map(e=>[e,e.disabled]);controls.forEach(([e])=>e.disabled=true);
+   try{await fn();}catch(e){status(e.message);}
+   finally{locked=false;controls.forEach(([e,disabled])=>{if(e.isConnected)e.disabled=disabled;});get('sim-start').disabled=!available;}
  }
- function chart(){const h=E.view(session).history.slice(-Number(get('sim-lookback').value)-1);if(AllocationCurrency.mode==='USD'&&h.some(x=>!Number.isFinite(x.fx?.value)||x.fx.value<=0)){get('sim-chart').textContent='당시 환율이 없는 이전 세션은 달러 그래프를 표시할 수 없습니다.';return;}if(h.length<2){get('sim-chart').textContent='시작 월 이전 그래프 데이터가 없습니다.';return;}const colors=['#3264e8','#9b883f','#e59932','#758b9c'],values=P.ASSETS.map(a=>h.map(s=>(s.prices[a]/(AllocationCurrency.mode==='USD'?(s.fx?.value||1):1))/(h[0].prices[a]/(AllocationCurrency.mode==='USD'?(h[0].fx?.value||1):1))*100)),all=values.flat(),lo=Math.min(...all),hi=Math.max(...all),y=v=>160-(v-lo)/(hi-lo||1)*130;get('sim-chart').innerHTML=`<svg viewBox="0 0 600 190" role="img" aria-label="현재 월까지의 자산별 상대가격 그래프">${values.map((line,i)=>`<polyline fill="none" stroke="${colors[i]}" stroke-width="2" points="${line.map((v,j)=>`${20+j/(h.length-1)*560},${y(v)}`).join(' ')}"/>`).join('')}<text x="20" y="185" font-size="12">${esc(h[0].date)}</text><text x="470" y="185" font-size="12">${esc(h.at(-1).date)}</text></svg><p>${P.ASSETS.map((a,i)=>`<span style="color:${colors[i]}">${names[a]}</span>`).join(' · ')} · ${AllocationCurrency.mode} 기준 · 구간 시작=100 · 월별 관측</p>`;}
- window.addEventListener('currencychange',()=>{if(session){chart();renderPerformance(session,get('sim-performance'));}});
- get('sim-start').onclick=()=>perform(async()=>{const input=Object.fromEntries(P.ASSETS.map(a=>{const e=document.getElementById(a);if(!e.value.trim())throw Error('위의 현재 보유액을 모두 입력하세요.');return [a,Number(e.value)];}));if(!get('sim-monthly').value.trim())throw Error('반복 월납입금을 입력하세요.');const s=E.start(rows,Number(get('sim-years').value),input,Number(get('sim-monthly').value));await AllocationStore.add('sessions',s);session=s;draw();await list();status('시작 월을 무작위로 선택했습니다.');});
- try{const range=await AllocationHistory.get().getAvailableDateRange();if(range.errors?.historical)throw Error(range.errors.historical);rows=range.rows;for(const option of get('sim-years').options)option.disabled=!range.periods[option.value];const first=[...get('sim-years').options].find(o=>!o.disabled);if(first)get('sim-years').value=first.value;available=!!first;get('sim-start').disabled=!first;status((rows.length?'월별 가격 '+rows.length+'개월 ('+rows[0].date+' ~ '+rows[rows.length-1].date+') 연결됨. ':'')+(first?'가격·당시 환율을 사용하는 체험입니다. 주식=SPY, 현금·단기채=BIL입니다. 과거 Score/개발자 전략은 미확보이며, 월말 가격으로 거래한다고 가정합니다.':'연습 데이터 준비 중: 1년 이상 연속된 원화 가격·당시 Score 이력이 없어 시작할 수 없습니다. 과거 Score를 임의 생성하지 않으며, 가격만 사용하는 체험은 준비 중입니다.'));}catch(e){status(e.message);}try{await list();}catch(e){status('기록 저장소를 열 수 없습니다: '+e.message);}
+ async function list(){
+   const all=await S.list('sessions');
+   get('sim-sessions').innerHTML=all.length?all.slice().sort((a,b)=>b.createdAt.localeCompare(a.createdAt)).map(s=>`<button class="secondary" data-session="${esc(s.id)}">${esc(s.startDate)} · ${s.duration}년 · ${s.cursor}/${s.duration*12}개월 이어보기</button>`).join(''):'저장된 연습이 없습니다.';
+   get('sim-sessions').querySelectorAll('button').forEach(b=>b.onclick=()=>perform(async()=>{session=await S.get('sessions',b.dataset.session);draw();status('저장된 단계와 초안을 불러왔습니다.');}));
+ }
+ function draft(){
+   const d=structuredClone(session.uiDraft||{inputs:{},reason:'',memo:'',principleCheck:''});d.inputs=d.inputs||{};
+   ['QQQ','GOLD','BTC'].forEach(a=>['buy','sell','percent'].forEach(k=>{const input=get(`sim-${k}-${a}`);if(input)d.inputs[`${k}-${a}`]=input.value;}));
+   if(get('sim-reason')){d.reason=get('sim-reason').value;d.memo=get('sim-memo').value;d.principleCheck=get('sim-principle-check')?.value||'';}
+   return d;
+ }
+ function orders(d){
+   const number=k=>{const value=d.inputs?.[k]??'0';if(String(value).trim()===''||!Number.isFinite(Number(value)))throw Error('매수·매도 금액을 입력하세요. 거래하지 않으면 0입니다.');return Number(value);};
+   return ['QQQ','GOLD','BTC'].map(a=>({asset:a,buyAmount:number('buy-'+a),sellAmount:number('sell-'+a),sellPercent:number('percent-'+a)}));
+ }
+ async function move(step,d=draft()){
+   session=await S.saveSimulationUI(session,step,d);draw();status('진행 단계와 초안을 저장했습니다.');
+ }
+ function button(id,fn){get(id)?.addEventListener('click',()=>perform(fn));}
+ function preview(d){
+   const p=P.preview(session.portfolio,session.monthlyContribution,orders(d));
+   return `<h4>거래 후 예상 비중</h4><p>아직 다음 월 가격을 반영하지 않은 거래 미리보기입니다.</p><div class="table-wrap"><table><tr><th>자산</th><th>거래 전 → 후</th><th>거래 후 평가액</th></tr>${P.ASSETS.map(a=>`<tr><th>${names[a]}</th><td>${percent(p.weightsBefore[a])} → ${percent(p.weightsAfter[a])}</td><td>${fmt(p.after[a])}</td></tr>`).join('')}</table></div>`;
+ }
+ function draw(){
+   get('sim-setup').open=false;
+   const v=E.view(session),last=session.decisions.at(-1);
+   let step=session.uiStep|| (v.completed?4:1);
+   if(v.completed&&step<4)step=4;
+   if(step>=4&&!last)step=1;
+   const d=session.uiDraft||{inputs:{},reason:'',memo:'',principleCheck:''};
+   get('sim-body').innerHTML=`<div class="sim-progress"><p>완료 ${session.cursor} / ${session.duration*12}개월 · ${esc(session.startDate)} 시작</p><progress max="${session.duration*12}" value="${session.cursor}" aria-label="완료한 투자 월"></progress><ol>${steps.map((name,i)=>`<li ${step===i+1?'aria-current="step"':''}>${i+1}. ${i===4&&v.completed?'최종 정리':name}</li>`).join('')}</ol></div>
+   <h3 id="sim-step-title" tabindex="-1">${step}. ${step===5&&v.completed?'최종 정리':steps[step-1]}</h3>
+   <p>${step>=4&&last?`${esc(last.decisionDate)} 판단 → ${esc(last.nextDate)} 평가`:`판단 기준 ${esc(v.date)}`}</p>
+   ${session.principle?`<aside class="sim-principle"><strong>시작할 때 정한 원칙</strong><p>${esc(session.principle)}</p></aside>`:''}
+   <div id="sim-step-content"></div><details class="sim-records"><summary>확정한 판단 기록 (${session.decisions.length}건)</summary>${session.decisions.map(x=>`<p>${esc(x.decisionDate)} · ${esc(x.reasonCategory)}${x.principleCheck?` · 원칙 ${x.principleCheck==='followed'?'준수':'예외'}`:''}<br>${esc(x.reasonMemo)}</p>`).join('')||'아직 확정한 판단이 없습니다.'}</details>`;
+   const content=get('sim-step-content');
+   if(step===1){
+     content.innerHTML=`<p>${v.fx?`당시 환율 1 USD = ${v.fx.value.toFixed(2)}원 (${esc(v.fx.sourceDate)})`:'당시 환율 미확보'}</p><p>총자산 ${fmt(P.value(v.portfolio))} · 이번 달 신규자금 ${fmt(v.monthlyContribution)}</p><p class="muted">이 시점까지의 정보만 확인하세요. Score가 없는 과거에는 가격과 보유비중으로 판단합니다.</p>
+     <div class="table-wrap"><table><tr><th>자산</th><th>평가액</th><th>비중</th><th>당시 Score</th><th>관측가격 (원화)</th></tr>${P.ASSETS.map(a=>`<tr><th>${names[a]}</th><td>${fmt(v.portfolio[a])}</td><td>${percent(P.allocation(v.portfolio)[a])}</td><td>${v.scores[a]??'과거 Score 없음'}</td><td>${v.prices[a].toFixed(2)}</td></tr>`).join('')}</table></div>
+     <label>과거 그래프 <select id="sim-lookback"><option value="1">1개월</option><option value="6">6개월</option><option value="12" selected>1년</option></select></label><div id="sim-chart"></div><button id="sim-continue" class="primary">투자 선택으로</button>`;
+     chart();get('sim-lookback').onchange=chart;button('sim-continue',()=>move(2));
+   }else if(step===2){
+     content.innerHTML=`<p>이번 달 신규자금 ${fmt(v.monthlyContribution)}. 입력은 원화입니다. 거래하지 않을 자산은 0을 유지하세요. 매도 후 매수를 처리하며 남은 금액은 현금·단기채에 둡니다.</p>
+     <form id="sim-orders-form"><div class="table-wrap"><table><tr><th>자산</th><th>매수 원</th><th>매도 원</th><th>또는 매도 %</th></tr>${['QQQ','GOLD','BTC'].map(a=>`<tr><th>${names[a]}</th>${['buy','sell','percent'].map(k=>`<td><input id="sim-${k}-${a}" aria-label="${names[a]} ${k}" type="number" value="${esc(d.inputs?.[k+'-'+a]??'0')}" min="0" max="${k==='percent'?100:1e15}" step="${k==='percent'?0.1:1}" required></td>`).join('')}</tr>`).join('')}</table></div><p class="small">매도 금액과 매도 비율은 동시에 입력하지 마세요.</p><button class="primary" type="submit">선택 확인 · 이유 기록으로</button></form><button id="sim-back" class="secondary">시장 확인으로</button>`;
+     get('sim-orders-form').onsubmit=e=>{e.preventDefault();perform(async()=>{const next=draft();P.preview(session.portfolio,session.monthlyContribution,orders(next));await move(3,next);});};
+     button('sim-back',()=>move(1));
+   }else if(step===3){
+     content.innerHTML=preview(d)+`<form id="sim-reason-form"><label>그때 왜 그렇게 했나요? <select id="sim-reason" required><option value="">이유 선택</option>${E.REASONS.map(r=>`<option ${d.reason===r?'selected':''}>${esc(r)}</option>`).join('')}</select></label><label>메모 <textarea id="sim-memo" maxlength="4000">${esc(d.memo)}</textarea></label>
+     ${session.mode==='philosophy'?`<label>정한 원칙과 비교 <select id="sim-principle-check" required><option value="">선택</option><option value="followed" ${d.principleCheck==='followed'?'selected':''}>원칙을 따랐습니다</option><option value="exception" ${d.principleCheck==='exception'?'selected':''}>이번에는 예외로 판단했습니다</option></select></label><p>예외로 판단했다면 메모에 이유를 남겨 주세요. 원칙 평가는 자기 기록이며 자동 판정이 아닙니다.</p>`:''}
+     <p>확정하면 판단과 이번 달 납입금이 한 번 저장되고 다음 월 결과가 공개됩니다.</p><button id="sim-confirm" class="primary" type="submit">판단 확정 · 결과 보기</button></form><div class="sim-actions"><button id="sim-back" class="secondary">투자 선택 수정</button><button id="sim-draft-save" class="secondary">초안 저장</button></div>`;
+     button('sim-back',()=>move(2));button('sim-draft-save',()=>move(3));
+     get('sim-reason-form').onsubmit=e=>{e.preventDefault();perform(async()=>{
+       const nextDraft=draft();
+       if(session.mode==='philosophy'&&(!['followed','exception'].includes(nextDraft.principleCheck)||(nextDraft.principleCheck==='exception'&&!nextDraft.memo.trim())))throw Error('원칙 준수 여부와 예외 사유를 남겨 주세요.');
+       const result=E.decide(session,orders(nextDraft),nextDraft.reason,nextDraft.memo);
+       if(session.mode==='philosophy'){result.decision.principleCheck=nextDraft.principleCheck;result.decision.principleSnapshot=session.principle;}
+       await S.commitSimulation(result.session,result.decision);session=result.session;draw();status('판단과 납입금을 저장했습니다. 결과를 확인하세요.');await list();
+     });};
+   }else if(step===4){
+     content.innerHTML=`<p>판단 이유: ${esc(last.reasonCategory)} · ${esc(last.reasonMemo)}</p><p>원화 월수익률 <strong>${percent(last.periodReturn)}</strong>${last.periodReturnUSD!==undefined?` · 달러 월수익률 <strong>${percent(last.periodReturnUSD)}</strong>`:''}</p>
+     <p>평가자산 ${fmt(P.value(v.portfolio))} · 누적 납입원금 ${fmt(v.principal,v.principalUSD)} · 손익 ${fmt(P.value(v.portfolio)-v.principal,v.fx&&v.principalUSD!==null?P.value(v.portfolio)/v.fx.value-v.principalUSD:undefined)}</p><p>${last.fxAtDecision?`판단 환율 ${last.fxAtDecision.value.toFixed(2)} → 평가 환율 ${last.fxAtValuation.value.toFixed(2)}원/USD`:'환율 미확보: 원화 결과만 계산합니다.'}</p>
+     <div class="table-wrap"><table><tr><th>자산</th><th>이번 판단의 거래 후 원화</th><th>다음 월 평가액</th></tr>${P.ASSETS.map(a=>`<tr><th>${names[a]}</th><td>${last.portfolioAfter[a].toLocaleString('ko-KR')}원</td><td>${fmt(last.nextPortfolio[a])}</td></tr>`).join('')}</table></div><div id="sim-benchmarks"></div><button id="sim-next" class="primary">${v.completed?'최종 정리로':'다음 달 준비로'}</button>`;
+     renderBenchmark(session,get('sim-benchmarks'));button('sim-next',()=>move(5,null));
+   }else{
+     content.innerHTML=v.completed?'<h4>모든 월의 판단을 마쳤습니다.</h4><div id="sim-performance"></div><p>메인 탭의 최신 환경과 과거의 판단을 비교해 보세요.</p><a href="#home">현재 시장으로</a>':`<p>다음 판단 기준은 ${esc(v.date)}입니다. 방금 확인한 결과를 출발점으로 새로운 달을 시작합니다.</p><p>아래 버튼은 화면만 전환합니다. 다음 납입금은 다음 판단을 확정할 때 한 번 반영됩니다.</p><button id="sim-open-month" class="primary">새 달의 시장 확인</button>`;
+     if(v.completed)renderPerformance(session,get('sim-performance'));else button('sim-open-month',()=>move(1,null));
+     content.insertAdjacentHTML('beforeend','<button id="sim-back" class="secondary">방금 결과 다시 보기</button>');button('sim-back',()=>move(4,null));
+   }
+   get('sim-step-title').focus({preventScroll:true});
+ }
+ function chart(){
+   if(!get('sim-chart'))return;
+   const h=E.view(session).history.slice(-Number(get('sim-lookback').value)-1),usd=AllocationCurrency.mode==='USD';
+   if(usd&&h.some(x=>!Number.isFinite(x.fx?.value)||x.fx.value<=0)){get('sim-chart').textContent='당시 환율이 없어 달러 그래프를 표시할 수 없습니다.';return;}
+   if(h.length<2){get('sim-chart').textContent='이 시점 이전의 그래프 데이터가 부족합니다.';return;}
+   const colors=['#3264e8','#9b883f','#e59932','#758b9c'],values=P.ASSETS.map(a=>h.map(s=>(s.prices[a]/(usd?s.fx.value:1))/(h[0].prices[a]/(usd?h[0].fx.value:1))*100)),all=values.flat(),lo=Math.min(...all),hi=Math.max(...all),y=v=>160-(v-lo)/(hi-lo||1)*130;
+   get('sim-chart').innerHTML=`<svg viewBox="0 0 600 190" role="img" aria-label="현재 판단 시점까지의 월별 상대가격"><text x="20" y="18" font-size="12">최대 ${hi.toFixed(1)} · 최소 ${lo.toFixed(1)}</text>${values.map((line,i)=>`<polyline fill="none" stroke="${colors[i]}" stroke-width="2" points="${line.map((v,j)=>`${20+j/(h.length-1)*560},${y(v)}`).join(' ')}"/>`).join('')}<text x="20" y="185" font-size="12">${h[0].date}</text><text x="470" y="185" font-size="12">${h.at(-1).date}</text></svg><p>${P.ASSETS.map((a,i)=>`<span style="color:${colors[i]}">${names[a]}</span>`).join(' · ')} · ${AllocationCurrency.mode} · 구간 시작=100</p>`;
+ }
+ window.addEventListener('currencychange',()=>{if(session){chart();if(get('sim-performance'))renderPerformance(session,get('sim-performance'));}});
+ get('sim-start').onclick=()=>perform(async()=>{
+   const input=Object.fromEntries(P.ASSETS.map(a=>{const e=get(a);if(!e.value.trim())throw Error('투자현황 탭의 보유액을 모두 입력하세요.');return [a,Number(e.value)];}));
+   if(!get('sim-monthly').value.trim())throw Error('반복 월납입금을 입력하세요.');
+   const next=E.start(rows,Number(get('sim-years').value),input,Number(get('sim-monthly').value),Math.random,{...config,mode:get('sim-mode').value,principle:get('sim-principle').value});
+   await S.add('sessions',next);session=next;draw();await list();status('연습을 저장했습니다. 첫 단계에서 시장을 확인하세요.');
+ });
+ try{
+   const [range,settings]=await Promise.all([AllocationHistory.get().getAvailableDateRange(),AllocationData.get().getSimulationConfig()]);
+   if(range.errors?.historical)throw Error(range.errors.historical);rows=range.rows;config=settings;
+   for(const option of get('sim-years').options)option.disabled=!E.candidates(rows,Number(option.value),config).length;
+   const first=[...get('sim-years').options].find(o=>!o.disabled);available=!!first;if(first)get('sim-years').value=first.value;get('sim-start').disabled=!available;
+   status(available?`${rows.length}개월 가격 연결. 시작 제한 ${config.minDate}. 주식=SPY, 현금·단기채=BIL. 당시 환율을 반영하고 월말 가격에 거래한다고 가정합니다. 과거 Score·개발자 전략은 미확보입니다.`:'선택 기간을 충족하는 연속 자료가 없습니다. 기존 저장 연습은 아래에서 이어볼 수 있습니다.');
+ }catch(e){status(e.message);}
+ try{await list();}catch(e){status('저장소를 열 수 없습니다: '+e.message);}
 })();

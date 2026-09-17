@@ -37,12 +37,24 @@
     add:(store,record)=>transact(store,'readwrite',s=>s.add(M.validateRecord(store,record))),
     get:(store,id)=>transact(store,'readonly',s=>s.get(id)),
     list:(store)=>transact(store,'readonly',s=>s.getAll()),
+    async saveSimulationUI(session,step,draft){
+      if(!Number.isInteger(step)||step<1||step>5)throw Error('진행 단계 오류');
+      if((step>=4&&!session.decisions?.length)||(step<4&&session.cursor>=session.duration*12))throw Error('진행 상태와 단계가 맞지 않습니다.');
+      const db=await openDB();return new Promise((resolve,reject)=>{
+        const tx=db.transaction('sessions','readwrite'),store=tx.objectStore('sessions'),request=store.get(session.id);let failure,saved;
+        request.onsuccess=()=>{const previous=request.result;
+          if(!previous||previous.cursor!==session.cursor||(previous.uiRevision||0)!==(session.uiRevision||0)){failure=Error('다른 탭에서 세션이 변경되었습니다. 이어보기를 눌러 다시 불러오세요.');tx.abort();return;}
+          saved={...previous,uiStep:step,uiDraft:M.clone(draft),uiRevision:(previous.uiRevision||0)+1};store.put(saved);
+        };
+        tx.oncomplete=()=>{db.close();resolve(saved);};tx.onabort=tx.onerror=()=>{db.close();reject(failure||tx.error);};
+      });
+    },
     async commitSimulation(session,decision){
       M.validateRecord('sessions',session);M.validateRecord('decisions',decision);
       const db=await openDB();return new Promise((resolve,reject)=>{
         const tx=db.transaction(['sessions','decisions'],'readwrite'),sessions=tx.objectStore('sessions');let failure;
         const request=sessions.get(session.id);
-        request.onsuccess=()=>{const previous=request.result;if(!previous||previous.cursor!==session.cursor-1||decision.sessionId!==session.id){failure=Error('다른 탭에서 진행된 세션입니다. 다시 불러오세요.');tx.abort();return;}tx.objectStore('decisions').add(decision);sessions.put(session);};
+        request.onsuccess=()=>{const previous=request.result;if(!previous||previous.cursor!==session.cursor-1||decision.sessionId!==session.id||(session.uiRevision!==undefined&&session.uiRevision!==(previous.uiRevision||0)+1)){failure=Error('다른 탭에서 진행된 세션입니다. 다시 불러오세요.');tx.abort();return;}tx.objectStore('decisions').add(decision);sessions.put(session);};
         tx.oncomplete=()=>{db.close();resolve();};tx.onabort=tx.onerror=()=>{db.close();reject(failure||tx.error);};
       });
     },

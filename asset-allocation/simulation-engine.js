@@ -8,18 +8,21 @@
  function legacyValid(s){return s&&/^\d{4}-\d{2}-\d{2}$/.test(s.date)&&Number.isFinite(Date.parse(s.date))&&Number.isFinite(Date.parse(s.availableAt))&&Date.parse(s.availableAt)<=Date.parse(s.date+'T23:59:59.999Z')&&s.currency==='KRW'&&s.priceBasis==='total_return_index'&&s.pointInTimeVerified===true&&typeof s.modelVersion==='string'&&E.ASSETS.every(a=>Number.isFinite(s.prices?.[a])&&s.prices[a]>0&&Number.isFinite(s.scores?.[a])&&s.scores[a]>=0&&s.scores[a]<=100);}
  function fxValid(s){return s?.priceOnly===true&&s.currency==='KRW'&&Number.isFinite(s.fx?.value)&&s.fx.value>0&&Number.isFinite(Date.parse(s.decisionAt))&&Date.parse(s.availableAt)<=Date.parse(s.decisionAt)&&Date.parse(s.decisionAt)<=Date.parse(s.date+'T00:00:00Z')+86400000&&E.ASSETS.every(a=>Number.isFinite(s.prices?.[a])&&s.prices[a]>0);}
  function valid(s){return legacyValid(s)||fxValid(s);}
- function candidates(rows,years){
+ function candidates(rows,years,{minDate=null}={}){
    if(![1,3,5,10].includes(years))throw Error('기간은 1·3·5·10년 중 선택하세요.');
+   if(minDate!==null&&(!/^\d{4}-\d{2}-\d{2}$/.test(minDate)||!Number.isFinite(Date.parse(minDate))||new Date(minDate+'T00:00:00Z').toISOString().slice(0,10)!==minDate))throw Error('시작 제한 날짜 오류');
    const n=years*12,starts=[];
-   for(let i=0;i+n<rows.length;i++){const w=rows.slice(i,i+n+1);if(w.every((s,j)=>valid(s)&&(!j||month(s.date)===month(w[j-1].date)+1)))starts.push(i);}
+   for(let i=0;i+n<rows.length;i++){const w=rows.slice(i,i+n+1);if((minDate===null||w[0].date>=minDate)&&w.every((s,j)=>valid(s)&&(!j||month(s.date)===month(w[j-1].date)+1)))starts.push(i);}
    return starts;
  }
- function start(rows,years,initial,monthly,rng=Math.random){
-   E.portfolio(initial);E.contribution(initial,monthly);const options=candidates(rows,years);if(!options.length)throw Error('선택한 기간 전체의 가격·당시 Score 데이터가 없습니다.');
+ function start(rows,years,initial,monthly,rng=Math.random,config={}){
+   if(!['free','philosophy'].includes(config.mode||'free'))throw Error('연습 모드 오류');
+   if(config.mode==='philosophy'&&(typeof config.principle!=='string'||!config.principle.trim()||config.principle.length>2000))throw Error('투자 원칙을 2,000자 이내로 입력하세요.');
+   E.portfolio(initial);E.contribution(initial,monthly);const options=candidates(rows,years,config);if(!options.length)throw Error('선택한 기간을 충족하는 연속 데이터가 없습니다.');
    const random=rng();if(!(random>=0&&random<1))throw Error('무작위 값 오류');const index=options[Math.floor(random*options.length)],window=clone(rows.slice(index,index+years*12+1));
-   return {id:root.crypto.randomUUID(),schemaVersion:1,startDate:window[0].date,endDate:window.at(-1).date,duration:years,mode:'free',initialAssets:clone(initial),monthlyContribution:monthly,createdAt:new Date().toISOString(),cursor:0,portfolio:clone(initial),principal:E.value(initial),window,decisions:[],principalUSD:window[0].fx?E.value(initial)/window[0].fx.value:null,benchmarks:B.initial(window,initial)};
+   return {id:root.crypto.randomUUID(),schemaVersion:1,uiStep:1,uiRevision:0,uiDraft:null,minDate:config.minDate||null,principle:config.mode==='philosophy'?config.principle.trim():null,startDate:window[0].date,endDate:window.at(-1).date,duration:years,mode:config.mode||'free',initialAssets:clone(initial),monthlyContribution:monthly,createdAt:new Date().toISOString(),cursor:0,portfolio:clone(initial),principal:E.value(initial),prehistory:clone(rows.slice(Math.max(0,index-12),index)),window,decisions:[],principalUSD:window[0].fx?E.value(initial)/window[0].fx.value:null,benchmarks:B.initial(window,initial)};
  }
- function view(session){const s=session.window[session.cursor];return {date:s.date,fx:s.fx||null,decisionAt:s.decisionAt||s.date,principalUSD:session.principalUSD??null,scores:clone(s.scores||Object.fromEntries(E.ASSETS.map(a=>[a,null]))),prices:clone(s.prices),portfolio:clone(session.portfolio),principal:session.principal,monthlyContribution:session.monthlyContribution,completed:session.cursor>=session.window.length-1,history:session.window.slice(0,session.cursor+1).map(x=>({date:x.date,fx:x.fx||null,prices:clone(x.prices),scores:clone(x.scores||Object.fromEntries(E.ASSETS.map(a=>[a,null])))}))};}
+ function view(session){const s=session.window[session.cursor];return {date:s.date,fx:s.fx||null,decisionAt:s.decisionAt||s.date,principalUSD:session.principalUSD??null,scores:clone(s.scores||Object.fromEntries(E.ASSETS.map(a=>[a,null]))),prices:clone(s.prices),portfolio:clone(session.portfolio),principal:session.principal,monthlyContribution:session.monthlyContribution,completed:session.cursor>=session.window.length-1,history:[...(session.prehistory||[]),...session.window.slice(0,session.cursor+1)].map(x=>({date:x.date,fx:x.fx||null,prices:clone(x.prices),scores:clone(x.scores||Object.fromEntries(E.ASSETS.map(a=>[a,null])))}))};}
  function decide(session,orders,reason,memo=''){
    if(session.cursor>=session.window.length-1)throw Error('종료된 세션입니다.');if(!REASONS.includes(reason))throw Error('그때 왜 그렇게 했나요? 이유를 선택하세요.');if(typeof memo!=='string'||memo.length>4000||(reason==='기타'&&!memo.trim()))throw Error('기타 이유는 메모가 필요합니다. 메모는 4,000자 이내입니다.');
    const today=session.window[session.cursor],next=session.window[session.cursor+1];
@@ -30,6 +33,7 @@
    const updated=clone(session);updated.cursor++;updated.portfolio=evaluated;updated.principal+=session.monthlyContribution;if(today.fx&&next.fx){decision.fxAtDecision=clone(today.fx);decision.fxAtValuation=clone(next.fx);decision.decisionAt=today.decisionAt;decision.contributionUSD=session.monthlyContribution/today.fx.value;decision.periodReturnUSD=(E.value(session.portfolio)+session.monthlyContribution)>0?(E.value(evaluated)/next.fx.value)/((E.value(session.portfolio)+session.monthlyContribution)/today.fx.value)-1:null;updated.principalUSD=(session.principalUSD??E.value(session.initialAssets)/session.window[0].fx.value)+decision.contributionUSD;}updated.decisions.push(decision);
    updated.benchmarks=B.step(session.benchmarks,today,next,session.monthlyContribution,E.value(session.portfolio),E.value(evaluated));
    if(updated.benchmarks.available){decision.developerPortfolio=clone(updated.benchmarks.developer);decision.benchmarkPortfolio={SP500:updated.benchmarks.sp500};decision.developerDecision=clone(updated.benchmarks.lastAllocation);}
+   updated.uiStep=4;updated.uiDraft=null;updated.uiRevision=(session.uiRevision||0)+1;
    return {session:updated,decision};
  }
  const api={REASONS,valid,candidates,start,view,decide};root.SimulationEngine=api;if(typeof module!=='undefined')module.exports=api;
