@@ -5,7 +5,7 @@ on:
     types: [completed]
     branches: [main]
   schedule:
-    - cron: '20 22 * * *'
+    - cron: '20 * * * *'
   workflow_dispatch:
 permissions:
   contents: read
@@ -34,11 +34,10 @@ jobs:
       - name: Install pinned collector dependencies
         run: python -m pip install -r automation/requirements-history.txt
       - name: Collect completed months and recent FX
-        run: >-
-          python automation/update_historical_prices.py
-          --config automation/historical_prices.json
-          --output asset-allocation/simulation-history.json
-          --fx-output asset-allocation/fx.json
+        run: |
+          python automation/update_historical_prices.py --config automation/historical_prices.json --output asset-allocation/simulation-history.json --fx-output asset-allocation/fx.json
+      - name: Refresh hourly USD KRW
+        run: python automation/update_fx.py --output asset-allocation/fx.json
       - uses: actions/configure-pages@v5
       - name: Prepare existing static site
         run: |
