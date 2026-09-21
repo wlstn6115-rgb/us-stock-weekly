@@ -53,5 +53,23 @@
    }
    return history;
  }
- const api={REASONS,valid,candidates,start,view,decide,trend};root.SimulationEngine=api;if(typeof module!=='undefined')module.exports=api;
+ function returns(session,currency='KRW'){
+   const h=trend(session),usd=currency==='USD',suffix=usd?'USD':'',first=session.window[0],last=session.window[h.length-1];
+   function twr(key){let factor=1,count=0;
+     for(let i=1;i<h.length;i++){
+       const d=session.decisions[i-1],fx=session.window[i-1].fx?.value;
+       const before=h[i-1][key+suffix],after=h[i][key+suffix];
+       if(before===null||after===null||(usd&&!(fx>0)))return null;
+       const base=before+(usd?d.contribution/fx:d.contribution);
+       if(base>0){factor*=after/base;count++;}
+     }
+     return count?factor-1:null;
+   }
+   const assetReturns=Object.fromEntries(E.ASSETS.map(a=>{
+     const validFX=!usd||(first.fx?.value>0&&last.fx?.value>0);
+     return [a,validFX? (last.prices[a]/(usd?last.fx.value:1))/(first.prices[a]/(usd?first.fx.value:1))-1:null];
+   }));
+   return {user:twr('user'),benchmark:twr('benchmark'),assets:assetReturns};
+ }
+ const api={REASONS,valid,candidates,start,view,decide,trend,returns};root.SimulationEngine=api;if(typeof module!=='undefined')module.exports=api;
 })(globalThis);
