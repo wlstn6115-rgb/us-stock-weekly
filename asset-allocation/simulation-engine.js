@@ -39,5 +39,19 @@
    updated.uiStep=4;updated.uiDraft=null;updated.uiRevision=(session.uiRevision||0)+1;
    return {session:updated,decision};
  }
- const api={REASONS,valid,candidates,start,view,decide};root.SimulationEngine=api;if(typeof module!=='undefined')module.exports=api;
+ function trend(session){
+   const first=session.window[0],n=E.value(session.initialAssets),price=r=>r.assetDetails?.benchmark?.value??r.sp500TotalReturnKRW;
+   let principal=n,principalUSD=first.fx?.value>0?n/first.fx.value:null,benchmark=Number.isFinite(price(first))&&price(first)>0?n:null;
+   const point=(r,user)=>({date:r.date,principal,user,benchmark,principalUSD,userUSD:r.fx?.value>0?user/r.fx.value:null,benchmarkUSD:r.fx?.value>0&&benchmark!==null?benchmark/r.fx.value:null});
+   const history=[point(first,n)];
+   for(let i=0;i<Math.min(session.cursor,session.decisions.length);i++){
+     const d=session.decisions[i],today=session.window[i],next=session.window[i+1];
+     principal+=d.contribution;
+     principalUSD=principalUSD!==null&&today.fx?.value>0?principalUSD+d.contribution/today.fx.value:null;
+     benchmark=benchmark!==null&&Number.isFinite(price(today))&&price(today)>0&&Number.isFinite(price(next))&&price(next)>0?Math.round((benchmark+d.contribution)*price(next)/price(today)):null;
+     history.push(point(next,E.value(d.nextPortfolio)));
+   }
+   return history;
+ }
+ const api={REASONS,valid,candidates,start,view,decide,trend};root.SimulationEngine=api;if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

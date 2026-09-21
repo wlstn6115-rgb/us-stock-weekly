@@ -8,7 +8,7 @@
  let rows=[],config={},session=null,locked=false,available=false;
  const fmt=(n,usd)=>AllocationCurrency.money(n,session?.window[session.cursor]?.fx?.value??null,usd);
  host.innerHTML=`<h2>과거에서 판단 연습</h2><p class="muted">연습용 초기자산을 아래에서 자유롭게 설정하세요. 투자현황의 실제 보유액과 별도로 저장됩니다. 연속 자료가 있는 시작 월을 무작위로 선택합니다. 단계 이동과 초안 저장 시 이 브라우저에 저장됩니다.</p>
- <p id="sim-status" role="status" aria-live="polite">데이터 확인 중…</p><details id="sim-setup" class="sim-setup" open><summary>새 연습 설정</summary>
+ <section id="sim-asset-trend" class="sim-asset-trend" hidden></section><p id="sim-status" role="status" aria-live="polite">데이터 확인 중…</p><details id="sim-setup" class="sim-setup" open><summary>새 연습 설정</summary>
  <fieldset><legend>연습용 초기자산 (원)</legend>${P.ASSETS.map(a=>`<label>${names[a]} <input id="sim-initial-${a}" type="number" min="0" max="1000000000000000" step="1" value="${a==='CASH'?10000000:0}" required></label>`).join('')}<p class="muted">기본값은 연습용 현금 1,000만 원입니다. 매월 납입금은 별도로 추가됩니다.</p></fieldset>
  <label>기간 <select id="sim-years">${[1,3,5,10].map(y=>`<option value="${y}">${y}년</option>`).join('')}</select></label>
  <label>매월 새로 적립할 금액 (원) <input id="sim-monthly" type="number" min="0" max="1000000000000000" step="1" placeholder="반복 월납입금"></label>
@@ -48,7 +48,7 @@
    return `<h4>거래 후 예상 비중</h4><p>아직 다음 월 가격을 반영하지 않은 거래 미리보기입니다.</p><div class="table-wrap"><table><tr><th>자산</th><th>거래 전 → 후</th><th>거래 후 평가액</th></tr>${P.ASSETS.map(a=>`<tr><th>${names[a]}</th><td>${percent(p.weightsBefore[a])} → ${percent(p.weightsAfter[a])}</td><td>${fmt(p.after[a])}</td></tr>`).join('')}</table></div>`;
  }
  function draw(){
-   get('sim-setup').open=false;
+   get('sim-setup').open=false;assetTrend();
    const v=E.view(session),last=session.decisions.at(-1);
    let step=session.uiStep|| (v.completed?4:1);
    if(v.completed&&step<4)step=4;
@@ -63,7 +63,7 @@
    const content=get('sim-step-content');
    if(step<=2){
      content.innerHTML=`<div class="sim-decision-grid"><section class="sim-market"><h4>시장과 현재 보유자산</h4><p>${v.fx?`당시 환율 1 USD = ${v.fx.value.toFixed(2)}원 (${esc(v.fx.sourceDate)})`:'당시 환율 미확보'}</p><p>총자산 ${fmt(P.value(v.portfolio))} · 이번 달 신규자금 ${fmt(v.monthlyContribution)}</p><p class="muted">이 시점까지의 정보만 확인하세요. 추정 Score는 과거 가격으로 재계산한 환경값이며 실제 당시 기록이나 상승 확률이 아닙니다.</p>
-     <div class="table-wrap"><table><tr><th>자산</th><th>평가액</th><th>비중</th><th>Score (기록/추정)</th><th>관측가격 (원화)</th></tr>${P.ASSETS.map(a=>`<tr><th>${names[a]}</th><td>${fmt(v.portfolio[a])}</td><td>${percent(P.allocation(v.portfolio)[a])}</td><td>${v.scores[a]===null?'이력 부족 / 기록 없음':`${v.scores[a]}${v.scoreEstimate?' (추정)':''}`}</td><td>${v.prices[a].toFixed(2)}</td></tr>`).join('')}</table></div>
+     <div class="table-wrap"><table><tr><th>자산</th><th>평가액</th><th>비중</th><th>Score (기록/추정)</th><th>관측가격 (원화)</th></tr>${P.ASSETS.map(a=>`<tr><th>${names[a]}</th><td>${fmt(v.portfolio[a])}</td><td>${percent(P.allocation(v.portfolio)[a])}</td><td>${v.scores[a]===null?'이력 부족 / 기록 없음':`${v.scores[a]}${v.scoreEstimate?' (추정)':''}`}</td><td>${Math.round(v.prices[a]).toLocaleString('ko-KR')}</td></tr>`).join('')}</table></div>
      ${v.scoreEstimate?`<details><summary>추정 모델 ${esc(v.scoreEstimate.modelVersion)} · 계산 근거</summary><p>달러 가격 기준 ${session.scoreModel?.momentumMonths||6}개월 추세, 12개월 연율 변동성, 12개월 고점 대비 하락폭. 현금은 BIL 가격 환경과 주식·BTC 방어 점수를 혼합합니다. 매크로 지표 미포함 · 현재 모델과 별개 · 조정가격 수정 이력은 미검증.</p>${v.scoreEstimate.reason?`<p>${esc(v.scoreEstimate.reason)}</p>`:''}${Object.entries(v.scoreEstimate.factors).map(([a,f])=>`<p>${names[a]}: 추세 ${percent(f.momentum)}, 변동성 ${percent(f.volatility)}, 고점 대비 ${percent(f.drawdown)}</p>`).join('')}</details>`:'<p class="muted">이 저장 연습에는 추정 모델이 없습니다. 새 연습에서 추정 Score를 사용할 수 있습니다.</p>'}
      <label>과거 그래프 <select id="sim-lookback"><option value="1">1개월</option><option value="6">6개월</option><option value="12" selected>1년</option></select></label><label>자산 선택 <select id="sim-chart-asset"><option value="separate">자산별 그래프 (독립 Y축)</option><option value="all">전체 비교 (공통 Y축)</option>${P.ASSETS.map(a=>`<option value="${a}">${names[a]}</option>`).join('')}</select></label><div id="sim-chart"></div></section><section class="sim-trading"><h4>이번 달 투자 선택</h4><div id="sim-order-panel"></div></section></div>`;
      chart();get('sim-lookback').onchange=chart;get('sim-chart-asset').onchange=chart;
@@ -95,6 +95,13 @@
    }
    get('sim-step-title').focus({preventScroll:true});
  }
+ function assetTrend(){
+   const host=get('sim-asset-trend');if(!session){host.hidden=true;return;}host.hidden=false;
+   const h=E.trend(session),usd=AllocationCurrency.mode==='USD',suffix=usd?'USD':'',keys=['principal','user','benchmark'],labels=['누적 납입금','내 평가액','S&P500'],colors=['#758b9c','#3264e8','#e59932'],last=h.at(-1);
+   const all=h.flatMap(r=>keys.map(k=>r[k+suffix])).filter(Number.isFinite),max=Math.max(1,...all)*1.05,y=n=>120-n/max*90,x=i=>100+i/Math.max(1,h.length-1)*480;
+   const money=n=>n===null?'자료 없음':(usd?'$':'')+Math.round(n).toLocaleString('ko-KR')+(usd?'':'원');
+   host.innerHTML=`<strong>월별 자산 트렌드 · ${AllocationCurrency.mode}</strong><div class="sim-trend-values">${keys.map((k,i)=>`<span style="color:${colors[i]}">${labels[i]} <b>${money(last[k+suffix])}</b></span>`).join('')}</div><svg viewBox="0 0 600 145" role="img" aria-label="확정한 월까지 누적 납입금, 내 평가액, S&P500 평가액">${[0,max/2,max].map(t=>`<text x="0" y="${y(t)}" font-size="11">${Math.round(t).toLocaleString('ko-KR')}</text><line x1="100" x2="580" y1="${y(t)}" y2="${y(t)}" stroke="#e5eaf2"/>`).join('')}${keys.map((k,i)=>{const points=h.map((r,j)=>({v:r[k+suffix],j})).filter(p=>Number.isFinite(p.v));return `<polyline fill="none" stroke="${colors[i]}" stroke-width="2" points="${points.map(p=>`${x(p.j)},${y(p.v)}`).join(' ')}"/>${points.map(p=>`<circle cx="${x(p.j)}" cy="${y(p.v)}" r="2" fill="${colors[i]}"><title>${h[p.j].date} ${labels[i]} ${money(p.v)}</title></circle>`).join('')}`;}).join('')}<text x="100" y="140" font-size="11">${h[0].date}</text><text x="470" y="140" font-size="11">${last.date}</text></svg><small>초기 총액 전부 + 같은 월 납입금을 SPY에 투자한 비교입니다. 확정한 월까지만 표시 · 당시 환율 반영 · 비용 제외.</small><details><summary>월별 금액 표</summary><div class="table-wrap"><table><tr><th>월</th>${labels.map(l=>`<th>${l}</th>`).join('')}</tr>${h.map(r=>`<tr><th>${r.date}</th>${keys.map(k=>`<td>${money(r[k+suffix])}</td>`).join('')}</tr>`).join('')}</table></div></details>`;
+ }
  function cashSummary(){
    const output=get('sim-cash-summary');if(!output||!session)return;
    const held=session.portfolio.CASH,deposit=session.monthlyContribution;
@@ -114,12 +121,12 @@
    if(h.length<2){get('sim-chart').textContent='이 시점 이전의 그래프 데이터가 부족합니다.';return;}
    const colors=['#3264e8','#9b883f','#e59932','#758b9c'],selected=get('sim-chart-asset').value;
    function plot(keys){
-    const values=keys.map(a=>h.map(s=>(s.prices[a]/(usd?s.fx.value:1))/(h[0].prices[a]/(usd?h[0].fx.value:1))*100)),all=values.flat(),lo=Math.min(...all),hi=Math.max(...all),padding=Math.max((hi-lo)*0.1,0.1),min=lo-padding,max=hi+padding,y=v=>160-(v-min)/(max-min)*130;
-    return `<figure style="margin:12px 0"><figcaption>${keys.map(a=>names[a]).join(' · ')} · ${AllocationCurrency.mode} · 구간 시작=100</figcaption><svg viewBox="0 0 600 200" role="img" aria-label="${keys.map(a=>names[a]).join(' · ')} 현재 판단까지 상대가격">${[min,(min+max)/2,max].map(t=>`<text x="0" y="${y(t)}" font-size="12">${t.toFixed(1)}</text><line x1="55" x2="580" y1="${y(t)}" y2="${y(t)}" stroke="#e5eaf2"/>`).join('')}${values.map((line,i)=>`<polyline fill="none" stroke="${colors[P.ASSETS.indexOf(keys[i])]}" stroke-width="2" points="${line.map((v,j)=>`${55+j/(h.length-1)*525},${y(v)}`).join(' ')}"/>`).join('')}<text x="55" y="190" font-size="12">${h[0].date}</text><text x="470" y="190" font-size="12">${h.at(-1).date}</text></svg><p class="small">구간 변화 ${keys.map((a,i)=>names[a]+' '+percent(values[i].at(-1)/100-1)).join(' · ')}</p></figure>`;
+    const values=keys.map(a=>h.map(s=>s.prices[a]/(usd?s.fx.value:1))),all=values.flat(),lo=Math.min(...all),hi=Math.max(...all),padding=Math.max((hi-lo)*0.1,0.1),min=Math.max(0,lo-padding),max=hi+padding,y=v=>160-(v-min)/(max-min)*130;
+    return `<figure style="margin:12px 0"><figcaption>${keys.map(a=>names[a]).join(' · ')} · ${AllocationCurrency.mode} · 실제 가격 (조정종가/종가)</figcaption><svg viewBox="0 0 600 200" role="img" aria-label="${keys.map(a=>names[a]).join(' · ')} 현재 판단까지 실제 가격">${[min,(min+max)/2,max].map(t=>`<text x="0" y="${y(t)}" font-size="12">${Math.round(t).toLocaleString('ko-KR')}</text><line x1="105" x2="580" y1="${y(t)}" y2="${y(t)}" stroke="#e5eaf2"/>`).join('')}${values.map((line,i)=>`<polyline fill="none" stroke="${colors[P.ASSETS.indexOf(keys[i])]}" stroke-width="2" points="${line.map((v,j)=>`${105+j/(h.length-1)*475},${y(v)}`).join(' ')}"/>`).join('')}<text x="105" y="190" font-size="12">${h[0].date}</text><text x="470" y="190" font-size="12">${h.at(-1).date}</text></svg><p class="small">구간 변화 ${keys.map((a,i)=>names[a]+' '+percent(values[i].at(-1)/values[i][0]-1)).join(' · ')}</p></figure>`;
    }
    get('sim-chart').innerHTML='<p class="muted">자산별 그래프는 Y축 범위가 다릅니다. 기울기 대신 축 숫자와 구간 변화율을 비교하세요.</p>'+(selected==='separate'?P.ASSETS.map(a=>plot([a])).join(''):plot(selected==='all'?P.ASSETS:[selected]));
  }
- window.addEventListener('currencychange',()=>{if(session){chart();cashSummary();if(get('sim-performance'))renderPerformance(session,get('sim-performance'));}});
+ window.addEventListener('currencychange',()=>{if(session){assetTrend();chart();cashSummary();if(get('sim-performance'))renderPerformance(session,get('sim-performance'));}});
  get('sim-start').onclick=()=>perform(async()=>{
    const input=Object.fromEntries(P.ASSETS.map(a=>{const e=get('sim-initial-'+a);if(!e.value.trim())throw Error('연습용 초기자산을 모두 입력하세요. 미보유 자산은 0입니다.');return [a,Number(e.value)];}));
    if(!get('sim-monthly').value.trim())throw Error('반복 월납입금을 입력하세요.');
