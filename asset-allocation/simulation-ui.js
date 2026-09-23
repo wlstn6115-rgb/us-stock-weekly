@@ -43,8 +43,17 @@
    get('sim-sessions').innerHTML=all.length?all.slice().sort((a,b)=>b.createdAt.localeCompare(a.createdAt)).map(s=>`<button class="secondary" data-session="${esc(s.id)}">${dateLabel(s.startDate,s)} · ${s.duration}년 · ${s.cursor}/${s.duration*12}개월 이어보기</button>`).join(''):'저장된 연습이 없습니다.';
    get('sim-sessions').querySelectorAll('button').forEach(b=>b.onclick=()=>perform(async()=>{session=await S.get('sessions',b.dataset.session);draw();status('저장된 단계와 초안을 불러왔습니다.');}));
  }
+ function defaultDraft(){
+   const inputs={};
+   for(const a of ['QQQ','GOLD','BTC']){
+     const previous=session.decisions.at(-1)?.action?.find(o=>o.asset===a);
+     inputs['buy-'+a]=String(previous?.buyAmount||0);
+     inputs['sell-'+a]='0';inputs['percent-'+a]='0';
+   }
+   return {inputs,reason:'',memo:'',principleCheck:''};
+ }
  function draft(){
-   const d=structuredClone(session.uiDraft||{inputs:{},reason:'',memo:'',principleCheck:''});d.inputs=d.inputs||{};
+   const d=structuredClone(session.uiDraft||defaultDraft());d.inputs=d.inputs||{};
    ['QQQ','GOLD','BTC'].forEach(a=>['buy','sell','percent'].forEach(k=>{const input=get(`sim-${k}-${a}`);if(input)d.inputs[`${k}-${a}`]=input.value;}));
    if(get('sim-reason')){d.reason=get('sim-reason').value;d.memo=get('sim-memo').value;d.principleCheck=get('sim-principle-check')?.value||'';}
    return d;
@@ -68,7 +77,7 @@
    if(v.completed&&step<4)step=4;
    if(step>=4&&!last)step=1;
    const displayStep=step<=2?1:step-1;
-   const d=session.uiDraft||{inputs:{},reason:'',memo:'',principleCheck:''};
+   const d=session.uiDraft||defaultDraft();
    get('sim-body').innerHTML=`<div class="sim-progress"><p>완료 ${session.cursor} / ${session.duration*12}개월 · ${dateLabel(session.startDate)} 시작</p><progress max="${session.duration*12}" value="${session.cursor}" aria-label="완료한 투자 월"></progress><ol>${steps.map((name,i)=>`<li ${displayStep===i+1?'aria-current="step"':''}>${i+1}. ${i===3&&v.completed?'최종 정리':name}</li>`).join('')}</ol></div>
    <h3 id="sim-step-title" tabindex="-1">${displayStep}. ${step===5&&v.completed?'최종 정리':steps[displayStep-1]}</h3>
    <p>${step>=4&&last?`${dateLabel(last.decisionDate)} 판단 → ${dateLabel(last.nextDate)} 평가`:`판단 기준 ${dateLabel(v.date)}`}</p>
@@ -82,9 +91,9 @@
      <label>과거 그래프 <select id="sim-lookback"><option value="1">1개월</option><option value="6">6개월</option><option value="12" selected>1년</option></select></label><label>자산 선택 <select id="sim-chart-asset"><option value="separate">자산별 그래프 (독립 Y축)</option><option value="all">전체 비교 (공통 Y축)</option>${P.ASSETS.map(a=>`<option value="${a}">${names[a]}</option>`).join('')}</select></label><div id="sim-chart"></div></section><section class="sim-trading"><h4>이번 달 투자 선택</h4><div id="sim-order-panel"></div></section></div>`;
      chart();get('sim-lookback').onchange=chart;get('sim-chart-asset').onchange=chart;
      get('sim-order-panel').innerHTML=`<p>이번 달 신규자금 ${fmt(v.monthlyContribution)}. 입력은 원화입니다. 거래하지 않을 자산은 0을 유지하세요. 매도 후 매수를 처리하며 남은 금액은 현금·단기채에 둡니다.</p>
-     <div id="sim-cash-summary" aria-live="polite"></div><form id="sim-orders-form"><div class="table-wrap"><table><tr><th>자산</th><th>매수 원</th><th>매도 원</th><th>또는 매도 %</th></tr>${['QQQ','GOLD','BTC'].map(a=>`<tr><th>${names[a]}</th>${['buy','sell','percent'].map(k=>`<td><input id="sim-${k}-${a}" aria-label="${names[a]} ${k}" type="number" value="${esc(d.inputs?.[k+'-'+a]??'0')}" min="0" max="${k==='percent'?100:1e15}" step="${k==='percent'?0.1:1}" required></td>`).join('')}</tr>`).join('')}</table></div><p class="small">매도 금액과 매도 비율은 동시에 입력하지 마세요.</p><button class="primary" type="submit">선택 확인 · 이유 기록으로</button></form><button id="sim-selection-save" class="secondary">선택 초안 저장</button>`;
+     <div id="sim-cash-summary" aria-live="polite"></div><form id="sim-orders-form"><div class="table-wrap"><table><tr><th>자산</th><th>매수 원</th><th>매도 원</th><th>또는 매도 %</th></tr>${['QQQ','GOLD','BTC'].map(a=>`<tr><th>${names[a]}</th>${['buy','sell','percent'].map(k=>`<td><input id="sim-${k}-${a}" aria-label="${names[a]} ${k}" type="number" value="${esc(d.inputs?.[k+'-'+a]??'0')}" min="0" max="${k==='percent'?100:1e15}" step="${k==='percent'?0.1:1}" required></td>`).join('')}</tr>`).join('')}</table></div><p class="small">매도 금액과 매도 비율은 동시에 입력하지 마세요.</p><button class="primary" type="submit">선택 확인 · 이유 기록으로</button></form><p class="small">직전 확정 월의 매수금액을 자동으로 불러옵니다. 수정하거나 0으로 지울 수 있습니다. 매도는 반복하지 않습니다. 실제 반영은 판단 확정 시에만 이루어집니다.</p><button id="sim-clear-buys" class="secondary">매수금액 모두 0으로</button><button id="sim-selection-save" class="secondary">선택 초안 저장</button>`;
      get('sim-orders-form').onsubmit=e=>{e.preventDefault();perform(async()=>{const next=draft();P.preview(session.portfolio,session.monthlyContribution,orders(next));await move(3,next);});};
-     get('sim-orders-form').addEventListener('input',cashSummary);cashSummary();button('sim-selection-save',()=>move(1));
+     get('sim-orders-form').addEventListener('input',cashSummary);cashSummary();button('sim-clear-buys',async()=>{for(const a of ['QQQ','GOLD','BTC'])get('sim-buy-'+a).value='0';cashSummary();await move(1);});button('sim-selection-save',()=>move(1));
    }else if(step===3){
      content.innerHTML=preview(d)+`<form id="sim-reason-form"><label>그때 왜 그렇게 했나요? <select id="sim-reason" required><option value="">이유 선택</option>${E.REASONS.map(r=>`<option ${d.reason===r?'selected':''}>${esc(r)}</option>`).join('')}</select></label><label>메모 <textarea id="sim-memo" maxlength="4000">${esc(d.memo)}</textarea></label>
      ${session.mode==='philosophy'?`<label>정한 원칙과 비교 <select id="sim-principle-check" required><option value="">선택</option><option value="followed" ${d.principleCheck==='followed'?'selected':''}>원칙을 따랐습니다</option><option value="exception" ${d.principleCheck==='exception'?'selected':''}>이번에는 예외로 판단했습니다</option></select></label><p>예외로 판단했다면 메모에 이유를 남겨 주세요. 원칙 평가는 자기 기록이며 자동 판정이 아닙니다.</p>`:''}
