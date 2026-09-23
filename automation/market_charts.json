@@ -1,0 +1,58 @@
+[
+  {
+    "id": "sp500",
+    "name": "S&P500 지수",
+    "ticker": "^GSPC",
+    "unit": "point",
+    "provider": "Yahoo"
+  },
+  {
+    "id": "bitcoin",
+    "name": "비트코인",
+    "ticker": "BTC-USD",
+    "unit": "USD",
+    "provider": "Yahoo"
+  },
+  {
+    "id": "gold",
+    "name": "금 선물",
+    "ticker": "GC=F",
+    "unit": "USD/oz",
+    "provider": "Yahoo"
+  },
+  {
+    "id": "ust1",
+    "name": "미국채 1년 수익률",
+    "ticker": "DGS1",
+    "unit": "%",
+    "provider": "FRED"
+  },
+  {
+    "id": "ust10",
+    "name": "미국채 10년 수익률",
+    "ticker": "DGS10",
+    "unit": "%",
+    "provider": "FRED"
+  },
+  {
+    "id": "wti",
+    "name": "WTI 선물",
+    "ticker": "CL=F",
+    "unit": "USD/barrel",
+    "provider": "Yahoo"
+  },
+  {
+    "id": "dxy",
+    "name": "달러인덱스",
+    "ticker": "DX-Y.NYB",
+    "unit": "point",
+    "provider": "Yahoo"
+  },
+  {
+    "id": "nasdaq",
+    "name": "나스닥100 지수",
+    "ticker": "^NDX",
+    "unit": "point",
+    "provider": "Yahoo"
+  }
+]

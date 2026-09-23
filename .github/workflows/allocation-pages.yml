@@ -38,6 +38,8 @@ jobs:
           python automation/update_historical_prices.py --config automation/historical_prices.json --output asset-allocation/simulation-history.json --fx-output asset-allocation/fx.json
       - name: Refresh hourly USD KRW
         run: python automation/update_fx.py --output asset-allocation/fx.json
+      - name: Refresh market chart series
+        run: python automation/update_market_charts.py --config automation/market_charts.json --output asset-allocation/market-charts.json
       - uses: actions/configure-pages@v5
       - name: Prepare existing static site
         run: |

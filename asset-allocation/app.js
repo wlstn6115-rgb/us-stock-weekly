@@ -53,7 +53,7 @@ function renderScores() {
   if (!result?.scores) { $('scores').innerHTML='<p>아직 계산 결과가 없습니다. 최신 자료로 다시 계산해 주세요.</p>'; $('factors').textContent='사용 가능한 Score가 없습니다.'; return; }
   $('scores').innerHTML=assets.map(a=>{
     const s=result.scores[a];
-    return `<article class="score-card" style="--asset:${colors[a]}"><div class="card-top">${labels[a]}<span class="asset-caption">${captions[a]}</span></div><div class="score-number">${s.current_score.toFixed(1)} <small>/ 100</small></div><div class="score-state">${!s.usable?'데이터 부족':s.current_score<40?'부담':s.current_score<60?'중립':s.current_score<80?'우호':'매우 우호'}</div><div class="deltas">${[['1d','1D'],['1w','1W'],['1m','1M']].map(([k,t])=>`<span>${t} <b>${s['score_'+k+'_change'] == null ? '—' : (s['score_'+k+'_change']>0?'▲ ':s['score_'+k+'_change']<0?'▼ ':'→ ')+signed(s['score_'+k+'_change'])}</b></span>`).join('')}</div></article>`;
+    return `<article class="score-card" style="--asset:${colors[a]}"><div class="card-top">${labels[a]}<span class="asset-caption">${captions[a]}</span></div><div class="score-number">${s.current_score.toFixed(1)} <small>/ 100</small></div><div class="score-state">${!s.usable?'데이터 부족':s.current_score<40?'부담':s.current_score<60?'중립':s.current_score<80?'우호':'매우 우호'}</div>${!s.usable?`<p class="small">유효 데이터 ${(s.data_coverage*100).toFixed(1)}% / 기준 ${((result.minimum_score_coverage??0.7)*100).toFixed(0)}%<br>${s.contributions.filter(c=>c.data_status!=='ok').map(c=>escape(factorLabels[c.factor]||c.factor)+': '+escape(({stale:'관측이 오래됨',missing:'자료 없음',warmup:'비교 이력 부족',zero_variance:'과거 변동 없음',nonpositive_price:'가격값 오류'})[c.data_status]||c.data_status)+((c.latest_observation||result.factors?.[c.factor]?.latest_observation)?' ('+escape((c.latest_observation||result.factors?.[c.factor]?.latest_observation))+')':'')).join('<br>')}</p>`:''}<div class="deltas">${[['1d','1D'],['1w','1W'],['1m','1M']].map(([k,t])=>`<span>${t} <b>${s['score_'+k+'_change'] == null ? '—' : (s['score_'+k+'_change']>0?'▲ ':s['score_'+k+'_change']<0?'▼ ':'→ ')+signed(s['score_'+k+'_change'])}</b></span>`).join('')}</div></article>`;
   }).join('');
   renderFactors();
 }
@@ -71,7 +71,7 @@ async function load(initial=false) {
   const next=await api('state'); const changed=current?.result?.generated_at!==next.result?.generated_at;
   current=next;
   if(next.storageError)message(next.storageError,true);
-  $('basis').textContent=next.result?.market_date?`시장 기준 ${next.result.market_date} · ${next.result.regime==='risk_off'?'위험회피 환경':'일반 환경'} · 갱신 ${next.result.generated_at||'미제공'} · 모델 ${next.result.model_version||next.result.config_hash||'미제공'} · 30초마다 갱신 확인`:'아직 계산된 시장 데이터가 없습니다.';
+  $('basis').textContent=next.result?.market_date?`시장 기준 ${next.result.market_date} · ${next.result.regime==='risk_off'?'위험회피 환경':'일반 환경'} · 갱신 ${next.result.generated_at||'미제공'} · 모델 ${AllocationModels.modelLabel(next.result.model_version||next.result.config_hash)} · 30초마다 갱신 확인`:'아직 계산된 시장 데이터가 없습니다.';
   if (changed || initial) {
     renderScores();
     $('warnings').innerHTML=(next.result?.warnings||[]).map(w=>`<li>${escape(w)}</li>`).join('');
