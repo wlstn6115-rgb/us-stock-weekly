@@ -13,15 +13,26 @@
  async function draw(){try{
    const [all,state]=await Promise.all([AllocationData.get().getScoreHistory(),AllocationData.get().getDashboardState()]);const latest=state.normalizedSnapshot;
    const rows=all.filter(r=>r.modelVersion===latest?.modelVersion&&Date.parse(r.availableAt)<=Date.now()).sort((a,b)=>a.date.localeCompare(b.date));
-   const fingerprint=JSON.stringify([rows,state.result]);if(fingerprint===previous)return;previous=fingerprint;
+   const fingerprint=JSON.stringify([rows,state.result]);if(fingerprint===previous&&document.querySelector('#score-chart-QQQ svg'))return;previous=fingerprint;
    const opened=[...host.querySelectorAll('details[open][data-keep]')].map(e=>e.dataset.keep);
    host.innerHTML='<h2>자산별 Score 추이</h2><p class="muted">실제로 기록된 같은 모델의 Score만 표시합니다. 빈 날짜는 새로 계산하지 않습니다. 세로축 0~100.</p><div class="trend-grid">'+Object.keys(names).map(a=>{
      const points=rows.filter(r=>Number.isFinite(r.scores[a]));if(!points.length)return `<article><h3>${names[a]}</h3><p>기록이 아직 없습니다.</p></article>`;
      const first=Date.parse(points[0].date),last=Date.parse(points.at(-1).date),x=r=>35+(Date.parse(r.date)-first)/(last-first||1)*280,y=r=>125-r.scores[a];
      return `<article><h3>${names[a]}</h3><svg viewBox="0 0 350 160" role="img" aria-label="${names[a]} 환경 Score 추이"><text x="0" y="28">100</text><text x="14" y="128">0</text><path d="M30 25V125H325" fill="none" stroke="#cdd8e4"/><polyline points="${points.map(r=>`${x(r)},${y(r)}`).join(' ')}" fill="none" stroke="${colors[a]}" stroke-width="2"/>${points.map(r=>`<circle tabindex="0" role="button" data-score-asset="${a}" data-score-date="${r.date}" data-score-value="${r.scores[a].toFixed(2)}" aria-label="${r.date} ${names[a]} Score ${r.scores[a].toFixed(2)}" cx="${x(r)}" cy="${y(r)}" r="5" fill="${colors[a]}"><title>${r.date}: ${r.scores[a].toFixed(2)}</title></circle>`).join('')}<text x="30" y="150">${points[0].date}</text><text x="240" y="150">${points.at(-1).date}</text></svg><p id="score-point-${a}" aria-live="polite">${points.at(-1).date} · Score ${points.at(-1).scores[a].toFixed(2)}점</p><p class="small">점을 누르거나 마우스를 올리면 날짜와 Score가 표시됩니다.</p><details data-keep="dates-${a}"><summary>날짜별 Score (${points.length}개)</summary><div class="table-wrap"><table><tr><th>날짜</th><th>Score</th></tr>${points.map(r=>`<tr><td>${r.date}</td><td>${r.scores[a].toFixed(2)}</td></tr>`).join('')}</table></div></details>${formula(a,state)}</article>`;
    }).join('')+'</div><details><summary>날짜별 Score 값 보기</summary><div class="table-wrap"><table><tr><th>기준일</th>'+Object.values(names).map(n=>`<th>${n}</th>`).join('')+'</tr>'+rows.map(r=>`<tr><td>${r.date}</td>${Object.keys(names).map(a=>`<td>${r.scores[a]===null?'—':r.scores[a].toFixed(2)}</td>`).join('')}</tr>`).join('')+'</table></div></details><p class="small">모델 '+esc(AllocationModels.modelLabel(latest?.modelVersion))+' · 모델이 바뀌면 다른 버전의 선을 연결하지 않습니다.</p>';
+   const articles=[...host.querySelectorAll('.trend-grid article')];
+   Object.keys(names).forEach((a,i)=>{
+     const mount=document.getElementById('score-chart-'+a),article=articles[i];
+     if(!mount||!article)return;
+     article.querySelector('h3')?.remove();
+     article.querySelector('[data-keep="formula-'+a+'"]')?.remove();
+     // Keep only compact chart and the selected date/value in the Score card.
+     article.querySelectorAll('details,.small').forEach(e=>e.remove());
+     mount.replaceChildren(...article.childNodes);
+   });
+   host.innerHTML='<details data-keep="all-formulas"><summary>Score 계산식 · 자산별 현재 적용값</summary><p class="muted">같은 모델로 실제 기록된 Score만 표시합니다. 빈 날짜는 보간하지 않으며 그래프 세로축은 0~100입니다.</p>'+Object.keys(names).map(a=>'<h3>'+names[a]+'</h3>'+formula(a,state)).join('')+'</details>';
    for(const d of host.querySelectorAll('details[data-keep]'))d.open=opened.includes(d.dataset.keep);
-   host.querySelectorAll('[data-score-asset]').forEach(dot=>{const show=()=>{document.getElementById('score-point-'+dot.dataset.scoreAsset).textContent=dot.dataset.scoreDate+' · Score '+dot.dataset.scoreValue+'점';};['mouseenter','focus','click'].forEach(event=>dot.addEventListener(event,show));dot.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show();}});});
+   document.querySelectorAll('#scores [data-score-asset]').forEach(dot=>{const show=()=>{document.getElementById('score-point-'+dot.dataset.scoreAsset).textContent=dot.dataset.scoreDate+' · Score '+dot.dataset.scoreValue+'점';};['mouseenter','focus','click'].forEach(event=>dot.addEventListener(event,show));dot.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show();}});});
  }catch(e){host.textContent='Score 추이를 불러오지 못했습니다: '+e.message;}}
- draw();setInterval(draw,30000);
+ window.addEventListener('scorecardsrendered',draw);draw();setInterval(draw,30000);
 })(globalThis);
