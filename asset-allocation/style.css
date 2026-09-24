@@ -17,3 +17,20 @@
 .market-chart-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:18px}.market-chart-grid article{min-width:0}.market-chart-grid svg{width:100%;display:block}.market-chart-grid h3{font-size:15px}.market-chart-grid small{overflow-wrap:anywhere}@media(max-width:900px){.market-chart-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.market-chart-grid{grid-template-columns:minmax(0,1fr)}}
 
 .score-mini-chart{min-width:0;margin:12px 0}.score-mini-chart svg{width:100%;display:block;font-size:10px}.score-mini-chart p{font-size:11px;color:var(--muted);text-align:center;margin:6px 0}.score-card{min-width:0}#score-trends summary{cursor:pointer;font-weight:600}#score-trends>details>h3{margin-top:24px}@media(max-width:480px){.scores{grid-template-columns:minmax(0,1fr)}}
+
+/* Compact decision workspace: no overlay hides market or trade inputs. */
+.sim-asset-trend,.sim-trading{position:static}.sim-order-score{display:block;font-size:11px;color:#526d86}.sim-cash-compact{display:none}
+@media(max-width:720px){
+ #simulation-section{padding:12px}#simulation-section>h2{font-size:16px}#simulation-section>p.muted{font-size:12px}
+ .sim-asset-trend{padding:8px;margin:8px 0;font-size:12px}.sim-asset-trend svg{max-height:130px}.sim-asset-trend summary{cursor:pointer}
+ #sim-step-content .sim-decision-grid{gap:4px}#sim-step-content .sim-market>label{margin:2px;font-size:11px;display:inline-flex}#sim-step-content .sim-market select{width:auto;padding:4px;font-size:11px;max-width:190px}
+ #sim-chart>p.muted,#sim-chart figure>p.small{display:none}#sim-chart figure{margin:4px 0!important}#sim-chart figcaption{font-size:10px}#sim-chart svg{height:105px;max-height:105px}
+ .sim-trading>h4,#sim-order-panel>p,#sim-orders-form>p.small{display:none}
+ #sim-cash-summary{padding:6px;margin:4px 0;font-size:11px}#sim-cash-summary>p:not(.error){display:none}.sim-cash-compact{display:block}
+ #sim-orders-form table{table-layout:fixed;width:100%;font-size:12px}#sim-orders-form th,#sim-orders-form td{padding:4px;font-size:11px;white-space:normal}
+ #simulation-section #sim-orders-form td input{width:100%;min-width:0;padding:7px 3px;font-size:12px}
+ #sim-orders-form:not(.show-percent) tr>*:nth-child(4){display:none}.sim-percent-toggle{padding:4px;font-size:11px;float:right}.sim-cash-score{font-size:11px;margin:3px 0;display:inline-block}
+ #sim-orders-form .primary{padding:9px;font-size:12px;margin:5px 0}#sim-clear-buys,#sim-selection-save{font-size:11px;padding:6px;margin:2px}
+ .sim-market-details{margin:6px 0;font-size:11px}.sim-market-details summary{cursor:pointer}.sim-market-details .table-wrap{max-width:100%}
+ .sim-progress p{font-size:12px;margin:5px 0}.sim-progress progress{height:5px}.sim-progress ol{margin:5px 0}#sim-step-title{font-size:15px;margin:8px 0}#sim-step-title+p{font-size:11px;margin:4px 0}
+}

@@ -10,11 +10,12 @@
  function legacyValid(s){return s&&/^\d{4}-\d{2}-\d{2}$/.test(s.date)&&Number.isFinite(Date.parse(s.date))&&Number.isFinite(Date.parse(s.availableAt))&&Date.parse(s.availableAt)<=Date.parse(s.date+'T23:59:59.999Z')&&s.currency==='KRW'&&s.priceBasis==='total_return_index'&&s.pointInTimeVerified===true&&typeof s.modelVersion==='string'&&E.ASSETS.every(a=>Number.isFinite(s.prices?.[a])&&s.prices[a]>0&&Number.isFinite(s.scores?.[a])&&s.scores[a]>=0&&s.scores[a]<=100);}
  function fxValid(s){return s?.priceOnly===true&&s.currency==='KRW'&&Number.isFinite(s.fx?.value)&&s.fx.value>0&&Number.isFinite(Date.parse(s.decisionAt))&&Date.parse(s.availableAt)<=Date.parse(s.decisionAt)&&Date.parse(s.decisionAt)<=Date.parse(s.date+'T00:00:00Z')+86400000&&E.ASSETS.every(a=>Number.isFinite(s.prices?.[a])&&s.prices[a]>0);}
  function valid(s){return legacyValid(s)||fxValid(s);}
- function candidates(rows,years,{minDate=null}={}){
+ function candidates(rows,years,{minDate=null,scoreModel=null}={}){
    if(![1,3,5,10].includes(years))throw Error('기간은 1·3·5·10년 중 선택하세요.');
    if(minDate!==null&&(!/^\d{4}-\d{2}-\d{2}$/.test(minDate)||!Number.isFinite(Date.parse(minDate))||new Date(minDate+'T00:00:00Z').toISOString().slice(0,10)!==minDate))throw Error('시작 제한 날짜 오류');
    const n=years*12,starts=[];
-   for(let i=0;i+n<rows.length;i++){const w=rows.slice(i,i+n+1);if((minDate===null||w[0].date>=minDate)&&w.every((s,j)=>valid(s)&&(!j||month(s.date)===month(w[j-1].date)+1)))starts.push(i);}
+   const ready=rows.map((r,i)=>!scoreModel||!r.priceOnly||E.ASSETS.every(a=>Number.isFinite((r.scoreEstimate||H.estimate(rows,i,scoreModel)).scores[a])));
+   for(let i=0;i+n<rows.length;i++){const w=rows.slice(i,i+n+1);if((minDate===null||w[0].date>=minDate)&&w.every((s,j)=>ready[i+j]&&valid(s)&&(!j||month(s.date)===month(w[j-1].date)+1)))starts.push(i);}
    return starts;
  }
  function start(rows,years,initial,monthly,rng=Math.random,config={}){
