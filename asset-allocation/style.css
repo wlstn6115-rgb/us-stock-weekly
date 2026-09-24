@@ -12,7 +12,7 @@
 
 .sim-decision-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}.sim-market,.sim-trading{min-width:0}.sim-trading{position:sticky;top:12px}#sim-cash-summary{background:#f0f5ff;border-radius:12px;padding:12px;margin:12px 0}#sim-cash-summary p{margin:8px 0}@media(max-width:900px){.sim-decision-grid{grid-template-columns:minmax(0,1fr)}.sim-trading{position:static}}
 
-.sim-asset-trend{position:sticky;top:0;z-index:5;background:#fff;border:1px solid #dbe4f2;border-radius:12px;padding:12px;margin-bottom:18px}.sim-asset-trend svg{display:block;width:100%;max-height:250px}.sim-trend-values{display:flex;flex-wrap:wrap;gap:12px;font-size:13px}.sim-asset-trend small{display:block;font-size:11px}.sim-asset-trend details[open]{max-height:200px;overflow:auto}
+.sim-asset-trend{position:sticky;top:0;z-index:5;background:#fff;border:1px solid #dbe4f2;border-radius:12px;padding:12px;margin-bottom:18px}.sim-asset-trend svg{display:block;width:100%;max-height:250px}.sim-trend-values{display:flex;flex-wrap:wrap;gap:12px;font-size:13px}.sim-asset-trend small{display:block;font-size:11px}.sim-asset-trend details[open]{max-height:none;overflow:visible}
 
 .market-chart-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:18px}.market-chart-grid article{min-width:0}.market-chart-grid svg{width:100%;display:block}.market-chart-grid h3{font-size:15px}.market-chart-grid small{overflow-wrap:anywhere}@media(max-width:900px){.market-chart-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.market-chart-grid{grid-template-columns:minmax(0,1fr)}}
 
@@ -22,7 +22,7 @@
 .sim-asset-trend,.sim-trading{position:static}.sim-order-score{display:block;font-size:11px;color:#526d86}.sim-cash-compact{display:none}
 @media(max-width:720px){
  #simulation-section{padding:12px}#simulation-section>h2{font-size:16px}#simulation-section>p.muted{font-size:12px}
- .sim-asset-trend{padding:8px;margin:8px 0;font-size:12px}.sim-asset-trend svg{max-height:130px}.sim-asset-trend summary{cursor:pointer}
+ .sim-asset-trend{padding:8px;margin:8px 0;font-size:12px}.sim-asset-trend svg{height:auto;max-height:none}.sim-asset-trend summary{cursor:pointer}
  #sim-step-content .sim-decision-grid{gap:4px}#sim-step-content .sim-market>label{margin:2px;font-size:11px;display:inline-flex}#sim-step-content .sim-market select{width:auto;padding:4px;font-size:11px;max-width:190px}
  #sim-chart>p.muted,#sim-chart figure>p.small{display:none}#sim-chart figure{margin:4px 0!important}#sim-chart figcaption{font-size:10px}#sim-chart svg{height:105px;max-height:105px}
  .sim-trading>h4,#sim-order-panel>p,#sim-orders-form>p.small{display:none}
