@@ -17,6 +17,7 @@
 .market-chart-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:18px}.market-chart-grid article{min-width:0}.market-chart-grid svg{width:100%;display:block}.market-chart-grid h3{font-size:15px}.market-chart-grid small{overflow-wrap:anywhere}@media(max-width:900px){.market-chart-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.market-chart-grid{grid-template-columns:minmax(0,1fr)}}
 
 .score-mini-chart{min-width:0;margin:12px 0}.score-mini-chart svg{width:100%;display:block;font-size:10px}.score-mini-chart p{font-size:11px;color:var(--muted);text-align:center;margin:6px 0}.score-card{min-width:0}#score-trends summary{cursor:pointer;font-weight:600}#score-trends>details>h3{margin-top:24px}@media(max-width:480px){.scores{grid-template-columns:minmax(0,1fr)}}
+.chart-selected-sr{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 
 /* Compact decision workspace: no overlay hides market or trade inputs. */
 .sim-asset-trend,.sim-trading{position:static}.sim-order-score{display:block;font-size:11px;color:#526d86}.sim-cash-compact{display:none}
