@@ -655,6 +655,7 @@
     const buildLineChartCard = (label, item, color, footerText = '') => {
       const change = Number(item.changePct || 0);
       const klass = change > 0 ? 'up' : (change < 0 ? 'down' : 'flat');
+      const hasProvisional = Array.isArray(item.provisionalDates) && item.provisionalDates.length > 0;
       const sourceText = Array.isArray(item.sources) && item.sources.length ? `자료 출처: ${item.sources.join(' / ')}` : (item.source ? `자료 출처: ${item.source}` : '');
       const resolvedFooterText = footerText || sourceText;
 
