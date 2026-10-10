@@ -57,6 +57,19 @@
       }
     },
     {
+      "date": "2026-09-17",
+      "availableAt": "2026-09-21T13:30:01.7383144Z",
+      "modelVersion": "f975b97fcfef2b127c857b5225db0b8df5f8755e6182f9382797f5299ba38811",
+      "scores": {
+        "QQQ": 51.6820963420106,
+        "BTC": 49.17823570887932,
+        "GOLD": 42.939890915954365,
+        "CASH": 50.65098279567188
+      },
+      "source": "retrospective",
+      "pointInTimeVerified": false
+    },
+    {
       "date": "2026-09-18",
       "availableAt": "2026-09-21T13:30:01.7383144Z",
       "modelVersion": "f975b97fcfef2b127c857b5225db0b8df5f8755e6182f9382797f5299ba38811",
@@ -156,6 +169,19 @@
       }
     },
     {
+      "date": "2026-10-01",
+      "availableAt": "2026-10-05T11:26:21.3964816Z",
+      "modelVersion": "f975b97fcfef2b127c857b5225db0b8df5f8755e6182f9382797f5299ba38811",
+      "scores": {
+        "QQQ": 45.694340125937124,
+        "BTC": 42.59408986391008,
+        "GOLD": 40.02192969704442,
+        "CASH": 56.711645001472014
+      },
+      "source": "retrospective",
+      "pointInTimeVerified": false
+    },
+    {
       "date": "2026-10-02",
       "availableAt": "2026-10-05T11:26:21.3964816Z",
       "modelVersion": "f975b97fcfef2b127c857b5225db0b8df5f8755e6182f9382797f5299ba38811",
@@ -167,6 +193,32 @@
       }
     },
     {
+      "date": "2026-10-05",
+      "availableAt": "2026-10-08T07:24:56.4453632Z",
+      "modelVersion": "f975b97fcfef2b127c857b5225db0b8df5f8755e6182f9382797f5299ba38811",
+      "scores": {
+        "QQQ": 50.508427100906715,
+        "BTC": 43.288286336012135,
+        "GOLD": 41.118420238548836,
+        "CASH": 52.33258037760157
+      },
+      "source": "retrospective",
+      "pointInTimeVerified": false
+    },
+    {
+      "date": "2026-10-06",
+      "availableAt": "2026-10-08T07:24:56.4453632Z",
+      "modelVersion": "f975b97fcfef2b127c857b5225db0b8df5f8755e6182f9382797f5299ba38811",
+      "scores": {
+        "QQQ": 54.48369736099314,
+        "BTC": 44.79944865438948,
+        "GOLD": 47.27011834105892,
+        "CASH": 47.69788079874734
+      },
+      "source": "retrospective",
+      "pointInTimeVerified": false
+    },
+    {
       "date": "2026-10-07",
       "availableAt": "2026-10-08T07:24:56.4453632Z",
       "modelVersion": "f975b97fcfef2b127c857b5225db0b8df5f8755e6182f9382797f5299ba38811",
@@ -176,6 +228,19 @@
         "GOLD": 44.96708664410944,
         "CASH": 49.60846698399817
       }
+    },
+    {
+      "date": "2026-10-08",
+      "availableAt": "2026-10-10T07:40:14.7479793Z",
+      "modelVersion": "f975b97fcfef2b127c857b5225db0b8df5f8755e6182f9382797f5299ba38811",
+      "scores": {
+        "QQQ": 52.26068948004347,
+        "BTC": 48.108131823110355,
+        "GOLD": 51.20016648975363,
+        "CASH": 48.07202786002329
+      },
+      "source": "retrospective",
+      "pointInTimeVerified": false
     },
     {
       "date": "2026-10-09",
