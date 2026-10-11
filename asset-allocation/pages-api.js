@@ -21,9 +21,10 @@ async function pagesApi(path,data){
       const reset=allocation.policy_actions?.reset_counts||[];
       if(reset.length&&allocation.policy_context?.id){
         if(saved.policy_state?.policy_version!==allocation.policy_context.id){
-          saved.policy_state={policy_version:allocation.policy_context.id,defensive_sales_completed:{}};
+          saved.policy_state={policy_version:allocation.policy_context.id,defensive_sales_completed:{},reset_dates:{}};
         }
-        for(const asset of reset)saved.policy_state.defensive_sales_completed[asset]=0;
+        saved.policy_state.reset_dates ||= {};
+        for(const asset of reset){saved.policy_state.defensive_sales_completed[asset]=0;saved.policy_state.reset_dates[asset]=latest.result.market_date;}
       }
       AllocationStore.settings(localStorage).save(saved);
     }

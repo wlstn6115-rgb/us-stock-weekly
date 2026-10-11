@@ -19,8 +19,26 @@ function inputValues() {
     if (!Number.isSafeInteger(value) || value < 0 || value > 1e15) throw new Error('금액은 0 이상 1,000조 원 이하의 정수여야 합니다.');
     return value;
   });
-  const counts=Object.fromEntries(['QQQ','BTC','GOLD'].map(a=>{const field=$('sold-'+a),raw=field.value.trim();if(!raw)return [a,null];const n=Number(raw);if(!Number.isInteger(n)||n<0||n>3)throw new Error('분할매도 실행 횟수는 0~3으로 입력하세요.');return [a,n];}));
-  return {portfolio:Object.fromEntries(assets.map((a,i)=>[a,values[i]])),remaining_monthly_investment_krw:values[4],policy_state:{policy_version:current?.allocation_policy?.id||null,defensive_sales_completed:counts}};
+  return {portfolio:Object.fromEntries(assets.map((a,i)=>[a,values[i]])),remaining_monthly_investment_krw:values[4]};
+}
+async function journalPolicyState(){
+  const policy=current?.allocation_policy;
+  if(!policy)return undefined;
+  const saved=(AllocationStore.settings(localStorage).get()||current?.portfolio)?.policy_state;
+  const same=saved?.policy_version===policy.id;
+  const resetDates=same?saved.reset_dates||{}:{};
+  let journals;
+  try{journals=await AllocationStore.list('journals');}catch{journals=null;}
+  const counts={};
+  for(const a of ['QQQ','BTC','GOLD']){
+    const legacy=same&&Number.isInteger(saved.defensive_sales_completed?.[a])?saved.defensive_sales_completed[a]:null;
+    if(!journals){counts[a]=legacy;continue;}
+    const months=new Set(journals.filter(e=>e.tradeDate>=(resetDates[a]||'0000-00-00')&&
+      [policy.scoreModelVersion,current.result?.config_hash].includes(e.modelVersion)&&
+      e.actions?.some(order=>order.asset===a&&order.sellAmount>0)).map(e=>e.tradeDate.slice(0,7)));
+    counts[a]=Math.min(policy.maxDefensiveSalesPerCycle,Math.max(legacy||0,months.size));
+  }
+  return {policy_version:policy.id,defensive_sales_completed:counts,reset_dates:resetDates};
 }
 function invalidateAllocation() {
   window.dispatchEvent(new Event('allocationinvalidated'));
@@ -41,6 +59,7 @@ function total() {
 async function calculate(path='simulate') {
   invalidateAllocation();
   const input=inputValues(),fingerprint=JSON.stringify(input);
+  input.policy_state=await journalPolicyState();
   const r=await api(path,input);
   let unchanged=false;try{unchanged=JSON.stringify(inputValues())===fingerprint;}catch{}
   if(!unchanged){invalidateAllocation();message('계산 중 입력값이 바뀌었습니다. 현재 입력으로 다시 계산해 주세요.');return false;}
@@ -71,22 +90,25 @@ function renderAllocation(allocation) {
   $('allocation').classList.remove('pending');
   $('allocation').innerHTML=`<div class="allocation-total">${won(n)} <small>배분 합계</small></div><p class="muted">메인 Score → 보유비중 조정 → 제한된 신규 투자금 배분</p>${allocation.score_context?`<p class="small">기준 ${escape(allocation.score_context.market_date)} · 모델 ${escape(AllocationModels.modelLabel(allocation.score_context.config_hash))} · ${assets.map(a=>labels[a]+' '+allocation.score_context.scores[a].current_score.toFixed(1)).join(' / ')}</p>`:''}<div class="stack" aria-label="자산별 추천 배분">${assets.map(a=>`<span style="width:${allocation.assets[a].suggested_weight*100}%;background:${colors[a]}" title="${labels[a]} ${percent(allocation.assets[a].suggested_weight)}"></span>`).join('')}</div>${assets.map(a=>{const x=allocation.assets[a];return `<div class="buy-row"><div class="buy-label"><i class="dot" style="background:${colors[a]}"></i>${labels[a]}</div><div class="buy-meta">현재 ${percent(x.current_weight)} → 투자 후 ${percent(x.projected_weight)}<br>${(x.reasons||[]).map(escape).join('<br>')}<br>${x.constraint_active?'월 배분 한도 적용':'월 배분 범위 '+percent(x.lower_bound)+'~'+percent(x.upper_bound)}</div><div class="buy-value">${won(x.amount_krw)}<small>신규자금의 ${percent(x.suggested_weight)}</small></div></div>`;}).join('')}${allocation.cash_shortfall_after_krw>0?`<p class="fallback">이번 달 투자금을 반영해도 현금이 ${won(allocation.cash_shortfall_after_krw)} 부족합니다. 다음 달에도 현금 확보가 필요합니다.</p>`:''}${allocation.fallback_due_to_data?'<p class="fallback">데이터가 부족해 Score 조정을 중지했습니다. 기본배분과 보유비중만 반영했습니다.</p>':''}`;
   const policy=allocation.policy_context||{},actions=allocation.policy_actions||{};
-  for(const a of actions.reset_counts||[]){const field=$('sold-'+a);if(field)field.value='0';}
   $('allocation-policy-tag').textContent=policy.status==='active'?policy.label:'기존 배분 · 정책 미등록';
   if(policy.status!=='active'){$('allocation').insertAdjacentHTML('beforeend','<p class="fallback">이 Score 버전에는 새 매도·재진입 규칙이 등록되지 않았습니다. 기존 신규자금 배분만 표시합니다.</p>');return;}
-  const sells=Object.entries(actions.sells||{}).map(([a,x])=>`<li>${labels[a]} ${won(x.amount_krw)} ${x.kind==='defensive'?`방어 매도 검토 · 보유액의 5% · 이번 약세 구간 실행 ${x.completed_in_cycle}/3회`:'비중 초과분 완만한 매도 검토'}</li>`);
+  const sells=Object.entries(actions.sells||{}).map(([a,x])=>`<li>${labels[a]} ${won(x.amount_krw)} ${x.kind==='defensive'?`방어 매도 검토 · 보유액의 5% · 매매일지 기준 ${x.completed_in_cycle}/3회`:'비중 초과분 완만한 매도 검토'}</li>`);
+  const holdings=inputValues().portfolio,totalHoldings=Object.values(holdings).reduce((sum,value)=>sum+value,0);
+  const saleFormula=Object.entries(actions.sells||{}).map(([a,x])=>x.kind==='defensive'
+    ?`<li>${labels[a]}: ⌊${won(holdings[a])} × 5%⌋ = ${won(x.amount_krw)}</li>`
+    :`<li>${labels[a]}: ⌊min(${won(holdings[a])} − ${percent(policy.stop_buy_weight[a])} × ${won(totalHoldings)}, 5% × ${won(totalHoldings)})⌋ = ${won(x.amount_krw)}</li>`).join('');
   const recoveries=Object.entries(actions.reentry_buys||{}).map(([a,value])=>`<li>${labels[a]} ${won(value)} · 기존 투자용 현금에서 추가매수 검토</li>`);
   const unknown=Object.entries(actions.statuses||{}).filter(([,status])=>status==='sale_history_required').map(([a])=>labels[a]);
   const limited=Object.entries(actions.statuses||{}).filter(([,status])=>status==='sale_limit_reached').map(([a])=>labels[a]);
   const missing=Object.entries(actions.statuses||{}).filter(([,status])=>status==='score_or_1m_unavailable').map(([a])=>labels[a]);
   const reset=(actions.reset_counts||[]).map(a=>labels[a]);
-  $('allocation').insertAdjacentHTML('beforeend',`<div class="policy-advice"><div class="policy-context"><strong>${escape(policy.label)}</strong> · 정책 ${escape(policy.id)}<br>Score 모델 ${escape(policy.score_model_version||'미확인')} · 현금 바닥 ${percent(policy.cash_floor)} · BTC 매수중단 ${percent(policy.stop_buy_weight.BTC)} (소프트 캡)</div><h3>기존 자산·투자용 현금의 선택적 조정</h3>${sells.length?`<p>매도 검토</p><ul>${sells.join('')}</ul>`:''}${recoveries.length?`<p>회복 시 추가매수 검토</p><ul>${recoveries.join('')}</ul>`:''}${!sells.length&&!recoveries.length?'<p class="muted">현재 계산 가능한 추가 매도·재진입 검토안은 없습니다.</p>':''}${reset.length?`<p class="small">${reset.join('·')}: Score 55점 이상으로 분할매도 횟수를 0회로 초기화했습니다.</p>`:''}${unknown.length?`<p class="fallback">${unknown.join('·')}의 지난 분할매도 실행 횟수를 입력해야 3회 제한을 적용한 매도금액을 볼 수 있습니다. 신규매수는 일단 보류합니다.</p>`:''}${limited.length?`<p class="small">${limited.join('·')}: 이번 약세 구간의 3회 한도에 도달했습니다.</p>`:''}${missing.length?`<p class="small">${missing.join('·')}: 1개월 Score 변화 또는 유효 Score가 없어 방어·회복 신호를 보류합니다. 비중 초과 검토는 별개입니다.</p>`:''}<p class="policy-caution">이 규칙은 사후 재구성 Score의 탐색 결과입니다. 매매는 자동 실행되지 않으며 비용·세금·환전 차이는 이 금액에 포함되지 않습니다. 부동산 자금은 별도 원화로 확보하세요.</p></div>`);
+  $('allocation').insertAdjacentHTML('beforeend',`<div class="policy-advice"><div class="policy-context"><strong>${escape(policy.label)}</strong> · 정책 ${escape(policy.id)}<br>Score 모델 ${escape(policy.score_model_version||'미확인')} · 현금 바닥 ${percent(policy.cash_floor)} · BTC 매수중단 ${percent(policy.stop_buy_weight.BTC)} (소프트 캡)</div><h3>기존 자산·투자용 현금의 선택적 조정</h3><p>매도 검토</p>${sells.length?`<ul>${sells.join('')}</ul>`:'<p class="muted">현재 계산 가능한 매도 검토안은 없습니다.</p>'}<details class="policy-formula"><summary>매도 산식과 현재 계산값</summary><p>방어 매도: Score 40점 미만이고 1개월 Score 변화가 −5점 이하일 때, 해당 자산 평가액의 5%를 원 미만 버림. 기록된 매도 월이 3회 이상이면 중단하고 Score 55점 이상에서 새 구간으로 초기화합니다.</p><p>비중 초과 매도: 현재 비중이 자산별 상한을 넘으면 초과액과 총자산의 5% 중 작은 금액을 원 미만 버림. 상한은 주식 75% · 비트코인 35% · 금 30%입니다.</p>${saleFormula?`<ul>${saleFormula}</ul>`:''}<p class="small">매도 횟수는 이 브라우저의 매매일지에 기록된 매도 월 기준입니다. 기록되지 않은 실제 매도는 계산에 반영되지 않습니다.</p></details>${recoveries.length?`<p>회복 시 추가매수 검토</p><ul>${recoveries.join('')}</ul>`:''}${!sells.length&&!recoveries.length?'<p class="muted">현재 계산 가능한 추가 매도·재진입 검토안은 없습니다.</p>':''}${reset.length?`<p class="small">${reset.join('·')}: Score 55점 이상으로 새 약세 구간으로 판단합니다.</p>`:''}${unknown.length?`<p class="fallback">${unknown.join('·')}: 매매일지 저장소를 읽을 수 없어 3회 제한 확인 전까지 방어 매도금액을 보류합니다.</p>`:''}${limited.length?`<p class="small">${limited.join('·')}: 기록된 매도 월 3회 한도에 도달했습니다.</p>`:''}${missing.length?`<p class="small">${missing.join('·')}: 1개월 Score 변화 또는 유효 Score가 없어 방어·회복 신호를 보류합니다. 비중 초과 검토는 별개입니다.</p>`:''}<p class="policy-caution">이 규칙은 사후 재구성 Score의 탐색 결과입니다. 매매는 자동 실행되지 않으며 비용·세금·환전 차이는 이 금액에 포함되지 않습니다.</p></div>`);
 }
 async function load(initial=false) {
   const next=await api('state'); const changed=current?.result?.generated_at!==next.result?.generated_at;
   const policyChanged=!!current&&current.allocation_policy?.id!==next.allocation_policy?.id;
   current=next;
-  if(policyChanged){for(const a of ['QQQ','BTC','GOLD'])$('sold-'+a).value='';invalidateAllocation();message('Score 모델에 연결된 추천 규칙이 바뀌었습니다. 분할매도 실행 횟수를 확인하고 다시 계산해 주세요.');}
+  if(policyChanged){invalidateAllocation();message('Score 모델에 연결된 추천 규칙이 바뀌었습니다. 새 규칙으로 다시 계산해 주세요.');}
   if(next.storageError)message(next.storageError,true);
   $('basis').textContent=next.result?.market_date?`시장 기준 ${next.result.market_date} · ${next.result.regime==='risk_off'?'위험회피 환경':'일반 환경'} · 갱신 ${next.result.generated_at||'미제공'} · 모델 ${AllocationModels.modelLabel(next.result.model_version||next.result.config_hash)} · 30초마다 갱신 확인`:'아직 계산된 시장 데이터가 없습니다.';
   if (changed || initial) {
@@ -104,7 +126,6 @@ async function load(initial=false) {
   if (initial && next.portfolio && !dirty) {
     for (const a of assets) $(a).value=next.portfolio.portfolio[a];
     $('budget').value=next.portfolio.remaining_monthly_investment_krw;
-    for(const a of ['QQQ','BTC','GOLD'])$('sold-'+a).value=next.portfolio.policy_state?.policy_version===next.allocation_policy?.id?(next.portfolio.policy_state.defensive_sales_completed?.[a]??''):'';
     total();
     if (!next.stale && next.result?.scores) await calculate();
     $('save-note').textContent='저장된 입력값을 불러왔습니다.';
@@ -128,6 +149,6 @@ window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.return
 // Same calculation action as the visible form; no saving or account side effects.
 if(document.modelContext?.registerTool){
   const lifetime=new AbortController();
-  Promise.resolve(document.modelContext.registerTool({name:'preview_asset_allocation',title:'자산배분 미리 계산',description:'보유 평가액과 남은 월 투자금을 화면에 입력하고 배분을 계산합니다. 저장하지 않습니다.',inputSchema:{type:'object',properties:{portfolio:{type:'object',properties:Object.fromEntries(assets.map(a=>[a,{type:'integer',minimum:0,maximum:1e15}])),required:assets,additionalProperties:false},remaining_monthly_investment_krw:{type:'integer',minimum:0,maximum:1e15}},required:['portfolio','remaining_monthly_investment_krw'],additionalProperties:false},annotations:{readOnlyHint:false},execute:async input=>{if(busy)throw new Error('다른 계산이 진행 중입니다.');const r=await api('simulate',input);for(const a of assets)$(a).value=input.portfolio[a];$('budget').value=input.remaining_monthly_investment_krw;total();dirty=true;renderAllocation(r.allocation);window.dispatchEvent(new CustomEvent('allocationcalculated',{detail:{input,allocation:r.allocation}}));return r.allocation;}},{signal:lifetime.signal})).catch(()=>{});
+  Promise.resolve(document.modelContext.registerTool({name:'preview_asset_allocation',title:'자산배분 미리 계산',description:'보유 평가액과 남은 월 투자금을 화면에 입력하고 배분을 계산합니다. 저장하지 않습니다.',inputSchema:{type:'object',properties:{portfolio:{type:'object',properties:Object.fromEntries(assets.map(a=>[a,{type:'integer',minimum:0,maximum:1e15}])),required:assets,additionalProperties:false},remaining_monthly_investment_krw:{type:'integer',minimum:0,maximum:1e15}},required:['portfolio','remaining_monthly_investment_krw'],additionalProperties:false},annotations:{readOnlyHint:false},execute:async input=>{if(busy)throw new Error('다른 계산이 진행 중입니다.');input.policy_state=await journalPolicyState();const r=await api('simulate',input);for(const a of assets)$(a).value=input.portfolio[a];$('budget').value=input.remaining_monthly_investment_krw;total();dirty=true;renderAllocation(r.allocation);window.dispatchEvent(new CustomEvent('allocationcalculated',{detail:{input,allocation:r.allocation}}));return r.allocation;}},{signal:lifetime.signal})).catch(()=>{});
   window.addEventListener('pagehide',()=>lifetime.abort(),{once:true});
 }
