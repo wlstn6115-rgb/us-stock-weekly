@@ -10,13 +10,13 @@
  function revoke(){recommendation=null;use.disabled=true;note.textContent='입력 또는 시장 자료가 바뀌면 추천 배분을 다시 계산해 주세요.';}
  window.addEventListener('allocationinvalidated',revoke);
  window.addEventListener('portfolioinputchanged',()=>{revoke();invalidate();});
- window.addEventListener('allocationcalculated',e=>{recommendation=JSON.parse(JSON.stringify(e.detail));use.disabled=false;note.textContent='계산된 신규자금 배분을 불러옵니다. 기존 거래 입력은 교체되고 현금 배분은 현금으로 남습니다.';});
+ window.addEventListener('allocationcalculated',e=>{recommendation=JSON.parse(JSON.stringify(e.detail));use.disabled=false;note.textContent='신규자금 배분과 선택적 매도·기존 현금 재투자 검토안을 함께 불러옵니다. 실제 주문은 실행하지 않습니다.';});
  document.getElementById('trade-clear').onclick=clear;
  use.onclick=()=>{
    if(!recommendation)return;
    const {input,allocation}=recommendation;
    if(PortfolioEngine.ASSETS.some(a=>Number(document.getElementById(a).value)!==input.portfolio[a])||Number(document.getElementById('budget').value)!==input.remaining_monthly_investment_krw){revoke();invalidate();return;}
-   clear();for(const a of ['QQQ','GOLD','BTC'])document.getElementById('trade-buy-'+a).value=allocation.assets[a].amount_krw;
+   clear();for(const a of ['QQQ','GOLD','BTC']){document.getElementById('trade-buy-'+a).value=allocation.assets[a].amount_krw+(allocation.policy_actions?.reentry_buys?.[a]||0);document.getElementById('trade-sell-'+a).value=allocation.policy_actions?.sells?.[a]?.amount_krw||0;}
    document.getElementById('trade-preview-form').requestSubmit();
  };
 

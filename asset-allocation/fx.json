@@ -7,5 +7,5 @@
   "source": "Yahoo Finance KRW=X",
   "interval": "1h",
   "observationType": "hourly bar timestamp; latest bar may be incomplete",
-  "updatedAt": "2026-10-10T07:40:20.149499+00:00"
+  "updatedAt": "2026-10-11T13:03:39.956308+00:00"
 }

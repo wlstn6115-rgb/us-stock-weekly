@@ -12,7 +12,10 @@
  }
  async function draw(){try{
    const [all,state]=await Promise.all([AllocationData.get().getScoreHistory(),AllocationData.get().getDashboardState()]);const latest=state.normalizedSnapshot;
-   const rows=all.filter(r=>r.modelVersion===latest?.modelVersion&&Date.parse(r.availableAt)<=Date.now()).sort((a,b)=>a.date.localeCompare(b.date));
+   // Score history is keyed by the exact config hash; the semantic model ID is
+   // for allocation-policy selection and must not join different score vintages.
+   const historyVersion=state.result?.config_hash||latest?.modelVersion;
+   const rows=all.filter(r=>r.modelVersion===historyVersion&&Date.parse(r.availableAt)<=Date.now()).sort((a,b)=>a.date.localeCompare(b.date));
    const fingerprint=JSON.stringify([rows,state.result]);if(fingerprint===previous&&document.querySelector('#score-chart-QQQ svg'))return;previous=fingerprint;
    const opened=[...host.querySelectorAll('details[open][data-keep]')].map(e=>e.dataset.keep);
    host.innerHTML='<h2>자산별 Score 추이</h2><p class="muted">같은 모델의 실제 기록과 기록 사이 거래일의 사후 재계산값을 구분해 표시합니다. 세로축 0~100.</p><div class="trend-grid">'+Object.keys(names).map(a=>{

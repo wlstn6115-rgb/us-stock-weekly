@@ -1,8 +1,8 @@
 {
   "result": {
     "market_date": "2026-10-09",
-    "generated_at": "2026-10-10T07:40:24.720555+00:00",
-    "available_at": "2026-10-10T07:40:14.7479793Z",
+    "generated_at": "2026-10-11T13:03:44.181876+00:00",
+    "available_at": "2026-10-11T13:03:33.9841510Z",
     "config_hash": "f975b97fcfef2b127c857b5225db0b8df5f8755e6182f9382797f5299ba38811",
     "regime": "normal",
     "stress": 0,
@@ -69,7 +69,7 @@
         "recommendation": "Hold"
       },
       "BTC": {
-        "current_score": 46.807308009325894,
+        "current_score": 47.13717933920669,
         "data_coverage": 1.0,
         "usable": true,
         "contributions": [
@@ -105,7 +105,7 @@
             "weight": 0.13903137729678552,
             "base_weight": 0.15,
             "weight_change": 0.0036562075677381567,
-            "points": -2.561088850862093,
+            "points": -2.4282425862960477,
             "data_status": "ok",
             "latest_observation": "2026-10-09"
           },
@@ -114,16 +114,16 @@
             "weight": 0.23171896216130922,
             "base_weight": 0.25,
             "weight_change": 0.006093679279563585,
-            "points": -3.084755342008407,
+            "points": -2.887730276693655,
             "data_status": "ok",
             "latest_observation": "2026-10-09"
           }
         ],
-        "market_change_at_current_weights": 3.978268016048837,
+        "market_change_at_current_weights": 4.308139345929632,
         "weight_change_effect": -0.09413480970223276,
         "score_1d_change": null,
         "score_1d_reference_date": null,
-        "score_1w_change": 4.9977561751105455,
+        "score_1w_change": 5.327627504991341,
         "score_1w_reference_date": "2026-10-02",
         "score_1m_change": null,
         "score_1m_reference_date": null,
@@ -191,7 +191,7 @@
         "recommendation": "Hold"
       },
       "CASH": {
-        "current_score": 48.81462159512642,
+        "current_score": 48.69660345304067,
         "data_coverage": 0.9999999999999999,
         "usable": true,
         "contributions": [
@@ -200,7 +200,7 @@
             "weight": 0.13879980882953522,
             "base_weight": 0.15,
             "weight_change": 0.0037333970568216024,
-            "points": 1.847770453324368,
+            "points": 1.7297523112386253,
             "data_status": "ok",
             "latest_observation": "2026-10-09"
           },
@@ -241,17 +241,18 @@
             "latest_observation": "2026-10-09"
           }
         ],
-        "market_change_at_current_weights": -0.7488248277213216,
+        "market_change_at_current_weights": -0.8668429698070668,
         "weight_change_effect": -0.04502056115043018,
         "score_1d_change": null,
         "score_1d_reference_date": null,
-        "score_1w_change": -8.637333770639366,
+        "score_1w_change": -8.75535191272511,
         "score_1w_reference_date": "2026-10-02",
         "score_1m_change": null,
         "score_1m_reference_date": null,
         "recommendation": "Hold"
       }
     },
+    "model_version": "instagram-adaptive-v0.1",
     "status": "scores_only",
     "warnings": [
       "QQQ는 Nasdaq 100 지수, 상대강도는 Nasdaq 100/S&P 500 대용입니다.",
@@ -260,7 +261,6 @@
       "과거 공개 버전 미검증으로 엄격한 백테스트는 아직 제공하지 않습니다.",
       "보유액은 현재 브라우저에만 저장됩니다. 로컬 앱이나 다른 기기와 동기화되지 않습니다.",
       "게시된 시장 데이터는 원래 컴퓨터에서 일일 갱신·업로드가 완료되어야 변경됩니다.",
-      "인스타 경제일정 발표값 2건 누락으로 전체 검증은 FAIL이지만, Score 입력 시계열과 기준일을 별도로 검증하여 계산했습니다. 일정 값은 Score 요인이 아닙니다.",
       "기준일과 마지막 관측일이 다른 요인: liquidity (2026-10-07). 미확정 가격은 소급 사용하지 않습니다."
     ],
     "minimum_score_coverage": 0.7
@@ -307,5 +307,27 @@
         "GOLD": 0.3
       }
     }
+  },
+  "allocation_policy": {
+    "scoreModelVersion": "instagram-adaptive-v0.1",
+    "id": "middle-score-soft-cap-v1",
+    "label": "ver1 · 중간 강도 Score + 비중 제한",
+    "researchStatus": "2019~2026 사후 재구성 Score의 탐색 규칙; 당시 자료 검증 전",
+    "cashFloor": 0.05,
+    "stopBuyWeight": {
+      "QQQ": 0.75,
+      "BTC": 0.35,
+      "GOLD": 0.3
+    },
+    "sellBelow": 40,
+    "sellMomentumAtMost": -5,
+    "defensiveSaleFraction": 0.05,
+    "maxDefensiveSalesPerCycle": 3,
+    "resetScoreAtLeast": 55,
+    "concentrationSalePortfolioFraction": 0.05,
+    "recoveryScoreAtLeast": 55,
+    "recoveryMomentumAtLeast": 0,
+    "recoveryCashFraction": 0.3333333333333333,
+    "recoveryMaxPortfolioFraction": 0.05
   }
 }

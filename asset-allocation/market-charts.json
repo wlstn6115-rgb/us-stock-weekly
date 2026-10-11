@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-10T07:40:20.379513+00:00",
+  "updatedAt": "2026-10-11T13:03:40.205600+00:00",
   "series": [
     {
       "id": "sp500",
@@ -9,7 +9,7 @@
       "unit": "point",
       "provider": "Yahoo",
       "sourceUrl": "https://finance.yahoo.com/quote/^GSPC/",
-      "updatedAt": "2026-10-10T07:40:20.379513+00:00",
+      "updatedAt": "2026-10-11T13:03:40.205600+00:00",
       "status": "ok",
       "observations": [
         {
@@ -1025,13 +1025,9 @@
       "unit": "USD",
       "provider": "Yahoo",
       "sourceUrl": "https://finance.yahoo.com/quote/BTC-USD/",
-      "updatedAt": "2026-10-10T07:40:20.379513+00:00",
+      "updatedAt": "2026-10-11T13:03:40.205600+00:00",
       "status": "ok",
       "observations": [
-        {
-          "date": "2025-10-10",
-          "value": 113214.3671875
-        },
         {
           "date": "2025-10-11",
           "value": 110807.8828125
@@ -2490,7 +2486,11 @@
         },
         {
           "date": "2026-10-10",
-          "value": 82657.6015625
+          "value": 82912.2265625
+        },
+        {
+          "date": "2026-10-11",
+          "value": 83000.0078125
         }
       ]
     },
@@ -2501,13 +2501,9 @@
       "unit": "USD/oz",
       "provider": "Yahoo",
       "sourceUrl": "https://finance.yahoo.com/quote/GC=F/",
-      "updatedAt": "2026-10-10T07:40:20.379513+00:00",
+      "updatedAt": "2026-10-11T13:03:40.205600+00:00",
       "status": "ok",
       "observations": [
-        {
-          "date": "2025-10-10",
-          "value": 4000.39990234375
-        },
         {
           "date": "2025-10-13",
           "value": 4133.0
@@ -3517,7 +3513,7 @@
       "unit": "%",
       "provider": "FRED",
       "sourceUrl": "https://fred.stlouisfed.org/series/DGS1",
-      "updatedAt": "2026-10-10T07:40:20.379513+00:00",
+      "updatedAt": "2026-10-11T13:03:40.205600+00:00",
       "status": "ok",
       "observations": [
         {
@@ -4541,7 +4537,7 @@
       "unit": "%",
       "provider": "FRED",
       "sourceUrl": "https://fred.stlouisfed.org/series/DGS10",
-      "updatedAt": "2026-10-10T07:40:20.379513+00:00",
+      "updatedAt": "2026-10-11T13:03:40.205600+00:00",
       "status": "ok",
       "observations": [
         {
@@ -5565,13 +5561,9 @@
       "unit": "USD/barrel",
       "provider": "Yahoo",
       "sourceUrl": "https://finance.yahoo.com/quote/CL=F/",
-      "updatedAt": "2026-10-10T07:40:20.379513+00:00",
+      "updatedAt": "2026-10-11T13:03:40.205600+00:00",
       "status": "ok",
       "observations": [
-        {
-          "date": "2025-10-10",
-          "value": 58.900001525878906
-        },
         {
           "date": "2025-10-13",
           "value": 59.4900016784668
@@ -6581,13 +6573,9 @@
       "unit": "point",
       "provider": "Yahoo",
       "sourceUrl": "https://finance.yahoo.com/quote/DX-Y.NYB/",
-      "updatedAt": "2026-10-10T07:40:20.379513+00:00",
+      "updatedAt": "2026-10-11T13:03:40.205600+00:00",
       "status": "ok",
       "observations": [
-        {
-          "date": "2025-10-10",
-          "value": 98.9800033569336
-        },
         {
           "date": "2025-10-13",
           "value": 99.2699966430664
@@ -7597,7 +7585,7 @@
       "unit": "point",
       "provider": "Yahoo",
       "sourceUrl": "https://finance.yahoo.com/quote/^NDX/",
-      "updatedAt": "2026-10-10T07:40:20.379513+00:00",
+      "updatedAt": "2026-10-11T13:03:40.205600+00:00",
       "status": "ok",
       "observations": [
         {
