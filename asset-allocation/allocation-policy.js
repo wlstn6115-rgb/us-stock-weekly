@@ -13,8 +13,9 @@
   if(state.policy_version===policy.id){if(typeof counts!=='object'||Array.isArray(counts)||Object.values(counts).some(n=>n!==null&&(!Number.isInteger(n)||n<0||n>policy.maxDefensiveSalesPerCycle)))throw Error('분할매도 실행 횟수는 0~3이어야 합니다.');}
   for(const a of assets){
    const score=scores[a],momentum=score.score_1m_change,weight=total?holdings[a]/total:0;
-   if(!score.usable||!Number.isFinite(momentum))statuses[a]='score_or_1m_unavailable';
+   if(!score.usable)statuses[a]='score_or_1m_unavailable';
    else if(score.current_score>=policy.resetScoreAtLeast){statuses[a]='cycle_reset';resetCounts.push(a);}
+   else if(!Number.isFinite(momentum))statuses[a]='score_or_1m_unavailable';
    else if(score.current_score<policy.sellBelow&&momentum<=policy.sellMomentumAtMost){
     stressed.add(a);const count=state.policy_version===policy.id?counts[a]??null:null;
     if(count===null)statuses[a]='sale_history_required';
