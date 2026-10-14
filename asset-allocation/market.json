@@ -1,254 +1,254 @@
 {
   "result": {
-    "market_date": "2026-10-12",
-    "generated_at": "2026-10-13T14:24:43.155750+00:00",
-    "available_at": "2026-10-13T14:24:32.8829822Z",
+    "market_date": "2026-10-13",
+    "generated_at": "2026-10-14T14:37:23.740866+00:00",
+    "available_at": "2026-10-14T14:37:12.1777699Z",
     "config_hash": "f975b97fcfef2b127c857b5225db0b8df5f8755e6182f9382797f5299ba38811",
     "regime": "normal",
-    "stress": 0,
+    "stress": 0.003363372913065372,
     "scores": {
       "QQQ": {
-        "current_score": 47.90183629860252,
+        "current_score": 45.286150469136324,
         "data_coverage": 1.0,
         "usable": true,
         "contributions": [
           {
             "factor": "nominal_yield",
-            "weight": 0.2141993347065062,
+            "weight": 0.21077467931047558,
             "base_weight": 0.2,
-            "weight_change": -0.00473311156883538,
-            "points": 5.3327838759776185,
+            "weight_change": -0.0034246553960306236,
+            "points": 4.366727786343007,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           },
           {
             "factor": "liquidity",
-            "weight": 0.19895172696797606,
+            "weight": 0.19920455387640784,
             "base_weight": 0.2,
-            "weight_change": 0.00034942434400797584,
-            "points": 0.301107702957205,
+            "weight_change": 0.0002528269084317858,
+            "points": 0.30149034919407797,
             "data_status": "ok",
             "latest_observation": "2026-10-07"
           },
           {
             "factor": "dollar",
-            "weight": 0.16064950102987963,
+            "weight": 0.15808100948285667,
             "base_weight": 0.15,
-            "weight_change": -0.003549833676626535,
-            "points": -1.0548933638885083,
+            "weight_change": -0.002568491547022961,
+            "points": -0.802837750652968,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           },
           {
             "factor": "equity_trend",
-            "weight": 0.2367774651642434,
+            "weight": 0.23996653185014438,
             "base_weight": 0.25,
-            "weight_change": 0.0044075116119188795,
-            "points": -2.542577672153058,
+            "weight_change": 0.003189066685900993,
+            "points": -3.873869529627748,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           },
           {
             "factor": "relative_equity",
-            "weight": 0.18942197213139472,
+            "weight": 0.19197322548011553,
             "base_weight": 0.2,
-            "weight_change": 0.003526009289535087,
-            "points": -4.134584244290737,
+            "weight_change": 0.0025512533487208056,
+            "points": -4.705360386120042,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           }
         ],
-        "market_change_at_current_weights": -3.2084702139410837,
-        "weight_change_effect": -0.11536984122350447,
-        "score_1d_change": -3.323840055164588,
-        "score_1d_reference_date": "2026-10-09",
+        "market_change_at_current_weights": -2.4577406503248653,
+        "weight_change_effect": -0.1579451791413291,
+        "score_1d_change": -2.6156858294661944,
+        "score_1d_reference_date": "2026-10-12",
         "score_1w_change": null,
         "score_1w_reference_date": null,
-        "score_1m_change": 5.832990880404864,
-        "score_1m_reference_date": "2026-09-11",
+        "score_1m_change": 5.459946628491046,
+        "score_1m_reference_date": "2026-09-14",
         "recommendation": "Hold"
       },
       "BTC": {
-        "current_score": 47.52545165085817,
+        "current_score": 48.48772382467754,
         "data_coverage": 1.0,
         "usable": true,
         "contributions": [
           {
             "factor": "nominal_yield",
-            "weight": 0.16021216596506174,
+            "weight": 0.15774985010209525,
             "base_weight": 0.15,
-            "weight_change": -0.0034040553216872493,
-            "points": 3.988699855508843,
+            "weight_change": -0.0024623158629664965,
+            "points": 3.268185039995112,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           },
           {
             "factor": "liquidity",
-            "weight": 0.2481088581546182,
+            "weight": 0.24856484257368605,
             "base_weight": 0.25,
-            "weight_change": 0.0006303806151272684,
-            "points": 0.3755056038005504,
+            "weight_change": 0.00045598441906785636,
+            "points": 0.3761957230727088,
             "data_status": "ok",
             "latest_observation": "2026-10-07"
           },
           {
             "factor": "dollar",
-            "weight": 0.213616221286749,
+            "weight": 0.21033313346946036,
             "base_weight": 0.2,
-            "weight_change": -0.0045387404289163324,
-            "points": -1.4026955129628358,
+            "weight_change": -0.0032830878172886435,
+            "points": -1.068207878446808,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           },
           {
             "factor": "btc_gold",
-            "weight": 0.14177353297258916,
+            "weight": 0.14375706519553438,
             "base_weight": 0.15,
-            "weight_change": 0.0027421556758036314,
-            "points": -2.344007529045523,
+            "weight_change": 0.001983532222945228,
+            "points": -1.5005029223743254,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           },
           {
             "factor": "btc_trend",
-            "weight": 0.23628922162098193,
+            "weight": 0.23959510865922395,
             "base_weight": 0.25,
-            "weight_change": 0.00457025945967271,
-            "points": -3.092050766442864,
+            "weight_change": 0.003305887038242028,
+            "points": -2.587946137569152,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           }
         ],
-        "market_change_at_current_weights": 0.5354122429226678,
-        "weight_change_effect": -0.14713993127118385,
-        "score_1d_change": 0.3882723116514839,
-        "score_1d_reference_date": "2026-10-09",
+        "market_change_at_current_weights": 1.0773816745521572,
+        "weight_change_effect": -0.11510950073279247,
+        "score_1d_change": 0.9622721738193647,
+        "score_1d_reference_date": "2026-10-12",
         "score_1w_change": null,
         "score_1w_reference_date": null,
-        "score_1m_change": 8.331819023499953,
-        "score_1m_reference_date": "2026-09-11",
+        "score_1m_change": 8.098453036539496,
+        "score_1m_reference_date": "2026-09-14",
         "recommendation": "Hold"
       },
       "GOLD": {
-        "current_score": 55.55567904102246,
+        "current_score": 53.94941793909089,
         "data_coverage": 1.0,
         "usable": true,
         "contributions": [
           {
             "factor": "nominal_yield",
-            "weight": 0.21161432772344846,
+            "weight": 0.20881824356596873,
             "base_weight": 0.2,
-            "weight_change": -0.0038714425744827974,
-            "points": 5.268426609987841,
+            "weight_change": -0.002796084157479728,
+            "points": 4.326195297546531,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           },
           {
             "factor": "equity_trend",
-            "weight": 0.09401136226759692,
+            "weight": 0.09545309316129741,
             "base_weight": 0.1,
-            "weight_change": 0.001996212577467696,
-            "points": 1.009518327533736,
+            "weight_change": 0.0014417308937004908,
+            "points": 1.5409350056248117,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
+          },
+          {
+            "factor": "liquidity",
+            "weight": 0.1483465793313809,
+            "base_weight": 0.15,
+            "weight_change": 0.0005242657795274663,
+            "points": 0.2245182709633923,
+            "data_status": "ok",
+            "latest_observation": "2026-10-07"
           },
           {
             "factor": "gold_trend",
-            "weight": 0.2820340868027907,
+            "weight": 0.28635927948389217,
             "base_weight": 0.3,
-            "weight_change": 0.0059886377324031015,
-            "points": 0.7909470727280419,
+            "weight_change": 0.004325192681101486,
+            "points": -0.8165877770857308,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
-          },
-          {
-            "factor": "liquidity",
-            "weight": 0.14782231355185343,
-            "base_weight": 0.15,
-            "weight_change": 0.0007258954827155384,
-            "points": 0.2237248098207404,
-            "data_status": "ok",
-            "latest_observation": "2026-10-07"
+            "latest_observation": "2026-10-13"
           },
           {
             "factor": "dollar",
-            "weight": 0.26451790965431055,
+            "weight": 0.26102280445746084,
             "base_weight": 0.25,
-            "weight_change": -0.004839303218103497,
-            "points": -1.7369377790478981,
+            "weight_change": -0.0034951051968497016,
+            "points": -1.3256428579581112,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           }
         ],
-        "market_change_at_current_weights": 0.8860219024706169,
-        "weight_change_effect": -0.013530090706346698,
-        "score_1d_change": 0.8724918117642702,
-        "score_1d_reference_date": "2026-10-09",
+        "market_change_at_current_weights": -1.5880040133047402,
+        "weight_change_effect": -0.01825708862682518,
+        "score_1d_change": -1.6062611019315653,
+        "score_1d_reference_date": "2026-10-12",
         "score_1w_change": null,
         "score_1w_reference_date": null,
-        "score_1m_change": 15.967454655911993,
-        "score_1m_reference_date": "2026-09-11",
+        "score_1m_change": 16.9866652836033,
+        "score_1m_reference_date": "2026-09-14",
         "recommendation": "Hold"
       },
       "CASH": {
-        "current_score": 50.75979904269827,
-        "data_coverage": 1.0,
+        "current_score": 52.67776057308519,
+        "data_coverage": 0.9999999999999999,
         "usable": true,
         "contributions": [
           {
             "factor": "equity_trend",
-            "weight": 0.2831997132443028,
+            "weight": 0.28724984318843244,
             "base_weight": 0.3,
-            "weight_change": 0.00560009558523239,
-            "points": 3.041071780862411,
+            "weight_change": 0.004050129944129621,
+            "points": 4.637181720044714,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           },
           {
             "factor": "btc_trend",
-            "weight": 0.1415998566221514,
+            "weight": 0.14362492159421622,
             "base_weight": 0.15,
-            "weight_change": 0.002800047792616195,
-            "points": 1.8529577531853203,
+            "weight_change": 0.0020250649720648106,
+            "points": 1.5513403557293977,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           },
           {
             "factor": "dollar",
-            "weight": 0.21327081474819776,
+            "weight": 0.21007155243938946,
             "base_weight": 0.2,
-            "weight_change": -0.004423604916065915,
-            "points": 1.40042742583511,
+            "weight_change": -0.0031992623088082928,
+            "points": 1.0668794005576383,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           },
           {
             "factor": "liquidity",
-            "weight": 0.1486588006371502,
+            "weight": 0.14898213033857233,
             "base_weight": 0.15,
-            "weight_change": 0.0004470664542832459,
-            "points": -0.22499080890828596,
+            "weight_change": 0.0003233297014221259,
+            "points": -0.22548015908974342,
             "data_status": "ok",
             "latest_observation": "2026-10-07"
           },
           {
             "factor": "nominal_yield",
-            "weight": 0.21327081474819776,
+            "weight": 0.21007155243938946,
             "base_weight": 0.2,
-            "weight_change": -0.004423604916065915,
-            "points": -5.309667108276284,
+            "weight_change": -0.0031992623088082928,
+            "points": -4.3521607441568175,
             "data_status": "ok",
-            "latest_observation": "2026-10-12"
+            "latest_observation": "2026-10-13"
           }
         ],
-        "market_change_at_current_weights": 1.9619959320683265,
-        "weight_change_effect": 0.10119965758926952,
-        "score_1d_change": 2.063195589657596,
-        "score_1d_reference_date": "2026-10-09",
+        "market_change_at_current_weights": 1.7898175314627878,
+        "weight_change_effect": 0.12814399892413064,
+        "score_1d_change": 1.9179615303869184,
+        "score_1d_reference_date": "2026-10-12",
         "score_1w_change": null,
         "score_1w_reference_date": null,
-        "score_1m_change": -10.327783855469896,
-        "score_1m_reference_date": "2026-09-11",
+        "score_1m_change": -9.945644454484658,
+        "score_1m_reference_date": "2026-09-14",
         "recommendation": "Hold"
       }
     },
