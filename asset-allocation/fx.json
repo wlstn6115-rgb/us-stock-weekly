@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-15",
-  "observedAt": "2026-10-15T12:00:00+00:00",
-  "value": 1345.5799560546875,
+  "date": "2026-10-16",
+  "observedAt": "2026-10-16T08:00:00+00:00",
+  "value": 1332.5699462890625,
   "unit": "KRW per USD",
   "source": "Yahoo Finance KRW=X",
   "interval": "1h",
   "observationType": "hourly bar timestamp; latest bar may be incomplete",
-  "updatedAt": "2026-10-15T12:28:58.562092+00:00"
+  "updatedAt": "2026-10-16T08:15:43.851065+00:00"
 }
