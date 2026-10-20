@@ -1,52 +1,52 @@
 {
     "type":  "monthly",
-    "date":  "2026-10-19",
-    "generatedAt":  "2026-10-19T22:14:41.4138942+09:00",
-    "caption":  "미국주식 월간/확장 인스타 자료 2026-10-19",
+    "date":  "2026-10-20",
+    "generatedAt":  "2026-10-20T21:16:40.3397399+09:00",
+    "caption":  "미국주식 월간/확장 인스타 자료 2026-10-20",
     "items":  [
                   {
                       "file":  "01_monthly_one_year_indices.png",
-                      "path":  "instagram/monthly/2026-10-19/01_monthly_one_year_indices.png",
+                      "path":  "instagram/monthly/2026-10-20/01_monthly_one_year_indices.png",
                       "latestPath":  "instagram/monthly/latest/01_monthly_one_year_indices.png"
                   },
                   {
                       "file":  "02_monthly_us_equity_indices.png",
-                      "path":  "instagram/monthly/2026-10-19/02_monthly_us_equity_indices.png",
+                      "path":  "instagram/monthly/2026-10-20/02_monthly_us_equity_indices.png",
                       "latestPath":  "instagram/monthly/latest/02_monthly_us_equity_indices.png"
                   },
                   {
                       "file":  "03_monthly_macro_asset_indices.png",
-                      "path":  "instagram/monthly/2026-10-19/03_monthly_macro_asset_indices.png",
+                      "path":  "instagram/monthly/2026-10-20/03_monthly_macro_asset_indices.png",
                       "latestPath":  "instagram/monthly/latest/03_monthly_macro_asset_indices.png"
                   },
                   {
                       "file":  "04_monthly_korea_fx_indices.png",
-                      "path":  "instagram/monthly/2026-10-19/04_monthly_korea_fx_indices.png",
+                      "path":  "instagram/monthly/2026-10-20/04_monthly_korea_fx_indices.png",
                       "latestPath":  "instagram/monthly/latest/04_monthly_korea_fx_indices.png"
                   },
                   {
                       "file":  "05_monthly_asset_temperature.png",
-                      "path":  "instagram/monthly/2026-10-19/05_monthly_asset_temperature.png",
+                      "path":  "instagram/monthly/2026-10-20/05_monthly_asset_temperature.png",
                       "latestPath":  "instagram/monthly/latest/05_monthly_asset_temperature.png"
                   },
                   {
                       "file":  "06_monthly_liquidity_bitgold.png",
-                      "path":  "instagram/monthly/2026-10-19/06_monthly_liquidity_bitgold.png",
+                      "path":  "instagram/monthly/2026-10-20/06_monthly_liquidity_bitgold.png",
                       "latestPath":  "instagram/monthly/latest/06_monthly_liquidity_bitgold.png"
                   },
                   {
                       "file":  "07_monthly_bigtech_ai_cycle.png",
-                      "path":  "instagram/monthly/2026-10-19/07_monthly_bigtech_ai_cycle.png",
+                      "path":  "instagram/monthly/2026-10-20/07_monthly_bigtech_ai_cycle.png",
                       "latestPath":  "instagram/monthly/latest/07_monthly_bigtech_ai_cycle.png"
                   },
                   {
                       "file":  "08_monthly_ai_disclosures.png",
-                      "path":  "instagram/monthly/2026-10-19/08_monthly_ai_disclosures.png",
+                      "path":  "instagram/monthly/2026-10-20/08_monthly_ai_disclosures.png",
                       "latestPath":  "instagram/monthly/latest/08_monthly_ai_disclosures.png"
                   },
                   {
                       "file":  "fred_walcl.png",
-                      "path":  "instagram/monthly/2026-10-19/fred_walcl.png",
+                      "path":  "instagram/monthly/2026-10-20/fred_walcl.png",
                       "latestPath":  "instagram/monthly/latest/fred_walcl.png"
                   }
               ]
