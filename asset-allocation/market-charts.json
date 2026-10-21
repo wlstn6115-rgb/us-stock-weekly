@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-20T12:14:34.453493+00:00",
+  "updatedAt": "2026-10-21T11:10:35.777190+00:00",
   "series": [
     {
       "id": "sp500",
@@ -9,13 +9,9 @@
       "unit": "point",
       "provider": "Yahoo",
       "sourceUrl": "https://finance.yahoo.com/quote/^GSPC/",
-      "updatedAt": "2026-10-20T12:14:34.453493+00:00",
+      "updatedAt": "2026-10-21T11:10:35.777190+00:00",
       "status": "ok",
       "observations": [
-        {
-          "date": "2025-10-20",
-          "value": 6735.1298828125
-        },
         {
           "date": "2025-10-21",
           "value": 6735.35009765625
@@ -1015,6 +1011,10 @@
         {
           "date": "2026-10-19",
           "value": 7690.72998046875
+        },
+        {
+          "date": "2026-10-20",
+          "value": 7712.56982421875
         }
       ]
     },
@@ -1025,13 +1025,9 @@
       "unit": "USD",
       "provider": "Yahoo",
       "sourceUrl": "https://finance.yahoo.com/quote/BTC-USD/",
-      "updatedAt": "2026-10-20T12:14:34.453493+00:00",
+      "updatedAt": "2026-10-21T11:10:35.777190+00:00",
       "status": "ok",
       "observations": [
-        {
-          "date": "2025-10-20",
-          "value": 110588.9296875
-        },
         {
           "date": "2025-10-21",
           "value": 108476.890625
@@ -2490,7 +2486,11 @@
         },
         {
           "date": "2026-10-20",
-          "value": 81287.3984375
+          "value": 82941.0
+        },
+        {
+          "date": "2026-10-21",
+          "value": 83370.9765625
         }
       ]
     },
@@ -2501,13 +2501,9 @@
       "unit": "USD/oz",
       "provider": "Yahoo",
       "sourceUrl": "https://finance.yahoo.com/quote/GC=F/",
-      "updatedAt": "2026-10-20T12:14:34.453493+00:00",
+      "updatedAt": "2026-10-21T11:10:35.777190+00:00",
       "status": "ok",
       "observations": [
-        {
-          "date": "2025-10-20",
-          "value": 4359.39990234375
-        },
         {
           "date": "2025-10-21",
           "value": 4109.10009765625
@@ -3509,8 +3505,8 @@
           "value": 4160.10009765625
         },
         {
-          "date": "2026-10-20",
-          "value": 4139.89990234375
+          "date": "2026-10-21",
+          "value": 4145.7998046875
         }
       ]
     },
@@ -3521,13 +3517,9 @@
       "unit": "%",
       "provider": "FRED",
       "sourceUrl": "https://fred.stlouisfed.org/series/DGS1",
-      "updatedAt": "2026-10-20T12:14:34.453493+00:00",
+      "updatedAt": "2026-10-21T11:10:35.777190+00:00",
       "status": "ok",
       "observations": [
-        {
-          "date": "2025-10-15",
-          "value": 3.61
-        },
         {
           "date": "2025-10-16",
           "value": 3.54
@@ -4531,6 +4523,10 @@
         {
           "date": "2026-10-16",
           "value": 4.46
+        },
+        {
+          "date": "2026-10-19",
+          "value": 4.5
         }
       ]
     },
@@ -4541,13 +4537,9 @@
       "unit": "%",
       "provider": "FRED",
       "sourceUrl": "https://fred.stlouisfed.org/series/DGS10",
-      "updatedAt": "2026-10-20T12:14:34.453493+00:00",
+      "updatedAt": "2026-10-21T11:10:35.777190+00:00",
       "status": "ok",
       "observations": [
-        {
-          "date": "2025-10-15",
-          "value": 4.05
-        },
         {
           "date": "2025-10-16",
           "value": 3.99
@@ -5551,6 +5543,10 @@
         {
           "date": "2026-10-16",
           "value": 5.09
+        },
+        {
+          "date": "2026-10-19",
+          "value": 5.15
         }
       ]
     },
@@ -5561,13 +5557,9 @@
       "unit": "USD/barrel",
       "provider": "Yahoo",
       "sourceUrl": "https://finance.yahoo.com/quote/CL=F/",
-      "updatedAt": "2026-10-20T12:14:34.453493+00:00",
+      "updatedAt": "2026-10-21T11:10:35.777190+00:00",
       "status": "ok",
       "observations": [
-        {
-          "date": "2025-10-20",
-          "value": 57.52000045776367
-        },
         {
           "date": "2025-10-21",
           "value": 57.81999969482422
@@ -6569,8 +6561,8 @@
           "value": 103.66000366210938
         },
         {
-          "date": "2026-10-20",
-          "value": 100.77999877929688
+          "date": "2026-10-21",
+          "value": 99.55999755859375
         }
       ]
     },
@@ -6581,13 +6573,9 @@
       "unit": "point",
       "provider": "Yahoo",
       "sourceUrl": "https://finance.yahoo.com/quote/DX-Y.NYB/",
-      "updatedAt": "2026-10-20T12:14:34.453493+00:00",
+      "updatedAt": "2026-10-21T11:10:35.777190+00:00",
       "status": "ok",
       "observations": [
-        {
-          "date": "2025-10-20",
-          "value": 98.58999633789062
-        },
         {
           "date": "2025-10-21",
           "value": 98.93000030517578
@@ -7590,7 +7578,11 @@
         },
         {
           "date": "2026-10-20",
-          "value": 101.86399841308594
+          "value": 101.7300033569336
+        },
+        {
+          "date": "2026-10-21",
+          "value": 101.69300079345703
         }
       ]
     },
@@ -7601,13 +7593,9 @@
       "unit": "point",
       "provider": "Yahoo",
       "sourceUrl": "https://finance.yahoo.com/quote/^NDX/",
-      "updatedAt": "2026-10-20T12:14:34.453493+00:00",
+      "updatedAt": "2026-10-21T11:10:35.777190+00:00",
       "status": "ok",
       "observations": [
-        {
-          "date": "2025-10-20",
-          "value": 25141.01953125
-        },
         {
           "date": "2025-10-21",
           "value": 25127.130859375
@@ -8607,6 +8595,10 @@
         {
           "date": "2026-10-19",
           "value": 29529.349609375
+        },
+        {
+          "date": "2026-10-20",
+          "value": 29490.279296875
         }
       ]
     }
