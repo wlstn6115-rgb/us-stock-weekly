@@ -310,9 +310,9 @@
   },
   "allocation_policy": {
     "scoreModelVersion": "instagram-adaptive-v0.1",
-    "id": "middle-score-soft-cap-v1",
-    "label": "ver1 · 중간 강도 Score + 비중 제한",
-    "researchStatus": "2019~2026 사후 재구성 Score의 탐색 규칙; 당시 자료 검증 전",
+    "id": "low-score-installments-v2",
+    "label": "ver1 · 40점 미만 분할매수 + 현금 비중 조절",
+    "researchStatus": "사용자 요청: 40점 미만 분할매수·현금 여유 시 확대. 현금 단계는 구현 운영값이며 미래 성과 미검증",
     "cashFloor": 0.05,
     "stopBuyWeight": {
       "QQQ": 0.75,
@@ -328,6 +328,28 @@
     "recoveryScoreAtLeast": 55,
     "recoveryMomentumAtLeast": 0,
     "recoveryCashFraction": 0.3333333333333333,
-    "recoveryMaxPortfolioFraction": 0.05
+    "recoveryMaxPortfolioFraction": 0.05,
+    "accumulationAssets": [
+      "QQQ",
+      "BTC"
+    ],
+    "accumulationScoreBelow": 40,
+    "accumulationCashTiers": [
+      {
+        "cashWeightAtLeast": 0,
+        "surplusCashFraction": 0.3333333333333333,
+        "maxAssetPortfolioFraction": 0.05
+      },
+      {
+        "cashWeightAtLeast": 0.2,
+        "surplusCashFraction": 0.5,
+        "maxAssetPortfolioFraction": 0.075
+      },
+      {
+        "cashWeightAtLeast": 0.35,
+        "surplusCashFraction": 0.6666666666666666,
+        "maxAssetPortfolioFraction": 0.1
+      }
+    ]
   }
 }
