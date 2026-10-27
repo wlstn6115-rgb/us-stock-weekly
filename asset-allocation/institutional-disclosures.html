@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="6개 기관의 SEC 13F 보유 공시와 낸시 펠로시의 의회 거래공시를 원문·기준일과 함께 확인합니다.">
+  <title>기관 보유·의회 거래 공시 | 자산배분 관측소</title>
+  <link rel="stylesheet" href="./institutional-disclosures.css">
+  <script src="./institutional-disclosures.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="./#home">◫ 자산배분 관측소</a><a class="back-link" href="./#home">관측소로 돌아가기 ↗</a></header>
+  <main>
+    <section class="page-heading" aria-labelledby="page-title">
+      <div><p class="eyebrow">PUBLIC FILINGS</p><h1 id="page-title">기관 보유·의회 거래 공시</h1><p class="intro">누가 무엇을 신고했는지, 원문과 날짜로 확인합니다.</p></div>
+      <div class="snapshot-stamp"><span>조회 기준일</span><strong id="snapshot-date">불러오는 중</strong><small id="snapshot-updated"></small></div>
+    </section>
+    <div class="scope-note"><strong>6개 기관의 13F + 낸시 펠로시의 PTR</strong><p>기관 13F는 분기 말 보유내역이며 현재 포지션이나 실제 매매내역이 아닙니다. 펠로시는 의회 거래공시로, 기관 보유 비중·순위와 합산하지 않습니다.</p></div>
+    <nav id="target-picker" class="target-picker" aria-label="공시 대상 선택"></nav>
+    <p id="page-status" class="page-status" role="status" aria-live="polite">공개 공시 자료를 불러오고 있습니다.</p>
+    <section id="disclosure-detail" aria-live="polite" aria-busy="true"></section>
+    <section class="methodology" aria-labelledby="method-title">
+      <p class="eyebrow">읽는 기준</p><h2 id="method-title">신고한 범위만 봅니다</h2>
+      <div class="method-grid"><article><h3>13F 기관 보유</h3><p>미국 SEC 신고 범위의 분기 말 보유가치입니다. 전체 운용자산(AUM)·현금·공매도·비상장 투자를 모두 보여주지 않습니다. 옵션 신고가치는 실제 지급한 프리미엄이 아닙니다.</p></article><article><h3>전분기 수량 변화</h3><p>동일 CUSIP·주식 종류·옵션 구분·수량 단위끼리 비교합니다. 증감은 실제 매매일·매매가격을 알려주지 않으며, 합병·분할 등으로도 달라질 수 있습니다.</p></article><article><h3>의회 거래공시 PTR</h3><p>거래일과 신고일을 구분하고 금액은 원문 구간을 유지합니다. 배우자(SP) 거래는 별도 표시합니다. 거래금액으로 보유액·수익·순자산을 계산하지 않습니다.</p></article></div>
+      <p id="collection-note" class="small"></p>
+      <p class="small">표시 날짜는 원문에 적힌 날짜입니다. 조회 기준일 이후의 공시는 포함하지 않으며, 원문 확인 실패는 ‘신규 공시 없음’으로 바꾸지 않습니다. 본 자료는 매매 지시가 아닙니다.</p>
+    </section>
+  </main>
+  <footer>공개 원문 → 신고 범위 확인 → 기간을 구분한 비교 <a href="./#home">자산배분 관측소</a></footer>
+</body>
+</html>
