@@ -8,7 +8,7 @@
     "weightBasis": "검증된 달러 표의 전체 공시 보유가치(옵션 포함) 대비 비중 · AUM 아님",
     "aggregationKey": "CUSIP + SH/PRN + PUT/CALL",
     "comparisonBasis": "동일 범위·동일 증권의 직전 분기말 신고수량 대비 차이",
-    "valuePolicy": "원문 달러값 보존. 단위 의심 항목은 USD값·비중 null; 임의 1000배 금지.",
+    "valuePolicy": "원문 달러값 보존. 단위 의심 시 USD값 보류, 원문 기재값 기준 참고 비율은 동일 단위 전제로 계산.",
     "privacy": "공개 공시 데이터만 포함. 로컬 경로·인증정보·사용자 개인 자산 제외."
   },
   "targets": [
@@ -530,7 +530,7 @@
       "cik": "0001536411",
       "filingType": "13F",
       "status": "NEEDS_REVIEW",
-      "statusReason": "원문 단위 대사 필요: 금액·비중 표시 보류",
+      "statusReason": "달러 금액 대사 필요 · 기재값 기준 참고 비율",
       "reportPeriod": "2026-06-30",
       "filingDate": "2026-08-14",
       "accession": "0001536411-26-000006",
@@ -569,7 +569,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 16.598482,
           "priorShares": 3063606,
           "shareChange": 122700,
           "changeType": "INCREASE"
@@ -585,7 +585,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 5.404352,
           "priorShares": 495280,
           "shareChange": 94400,
           "changeType": "INCREASE"
@@ -601,7 +601,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 4.45944,
           "priorShares": 2612880,
           "shareChange": 490000,
           "changeType": "INCREASE"
@@ -617,7 +617,7 @@
           "putCall": "CALL",
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 3.352309,
           "priorShares": 821000,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -633,7 +633,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.915068,
           "priorShares": 1154090,
           "shareChange": 270600,
           "changeType": "INCREASE"
@@ -649,7 +649,7 @@
           "putCall": "CALL",
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.799271,
           "priorShares": 4228000,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -665,7 +665,7 @@
           "putCall": "CALL",
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.762252,
           "priorShares": 0,
           "shareChange": 1350000,
           "changeType": "NEW"
@@ -681,7 +681,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.739013,
           "priorShares": 3235962,
           "shareChange": -97065,
           "changeType": "DECREASE"
@@ -697,7 +697,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.477232,
           "priorShares": 45800,
           "shareChange": 495800,
           "changeType": "INCREASE"
@@ -713,7 +713,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.320444,
           "priorShares": 3109202,
           "shareChange": -207469,
           "changeType": "DECREASE"
@@ -729,7 +729,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.306416,
           "priorShares": 0,
           "shareChange": 336300,
           "changeType": "NEW"
@@ -745,7 +745,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.27502,
           "priorShares": 3436170,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -761,7 +761,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.259322,
           "priorShares": 50700,
           "shareChange": 71300,
           "changeType": "INCREASE"
@@ -777,7 +777,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.206778,
           "priorShares": 0,
           "shareChange": 2204600,
           "changeType": "NEW"
@@ -793,7 +793,7 @@
           "putCall": "CALL",
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.100806,
           "priorShares": 200000,
           "shareChange": 259300,
           "changeType": "INCREASE"
@@ -809,7 +809,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.074208,
           "priorShares": 262495,
           "shareChange": 532300,
           "changeType": "INCREASE"
@@ -825,7 +825,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.022777,
           "priorShares": 1099905,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -841,7 +841,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 2.007904,
           "priorShares": 0,
           "shareChange": 743950,
           "changeType": "NEW"
@@ -857,7 +857,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 1.996735,
           "priorShares": 3070146,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -873,7 +873,7 @@
           "putCall": "CALL",
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 1.902739,
           "priorShares": 79000,
           "shareChange": 251000,
           "changeType": "INCREASE"
@@ -889,7 +889,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 1.52284,
           "priorShares": 38155,
           "shareChange": -3255,
           "changeType": "DECREASE"
@@ -905,7 +905,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 1.436136,
           "priorShares": 315860,
           "shareChange": 83727,
           "changeType": "INCREASE"
@@ -921,7 +921,7 @@
           "putCall": "CALL",
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 1.289788,
           "priorShares": 90000,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -937,7 +937,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 1.241063,
           "priorShares": 0,
           "shareChange": 4074993,
           "changeType": "NEW"
@@ -953,7 +953,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 1.136665,
           "priorShares": 377555,
           "shareChange": 176000,
           "changeType": "INCREASE"
@@ -969,7 +969,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 1.083833,
           "priorShares": 0,
           "shareChange": 603000,
           "changeType": "NEW"
@@ -985,7 +985,7 @@
           "putCall": "CALL",
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 1.017031,
           "priorShares": 0,
           "shareChange": 126000,
           "changeType": "NEW"
@@ -1001,7 +1001,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.987496,
           "priorShares": 0,
           "shareChange": 982200,
           "changeType": "NEW"
@@ -1017,7 +1017,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.934607,
           "priorShares": 0,
           "shareChange": 299000,
           "changeType": "NEW"
@@ -1033,7 +1033,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.889182,
           "priorShares": 2667485,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -1049,7 +1049,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.812688,
           "priorShares": 0,
           "shareChange": 72900,
           "changeType": "NEW"
@@ -1065,7 +1065,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.763406,
           "priorShares": 0,
           "shareChange": 116650,
           "changeType": "NEW"
@@ -1081,7 +1081,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.75976,
           "priorShares": 2313455,
           "shareChange": 1902729,
           "changeType": "INCREASE"
@@ -1097,7 +1097,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.695989,
           "priorShares": 0,
           "shareChange": 314150,
           "changeType": "NEW"
@@ -1113,7 +1113,7 @@
           "putCall": "CALL",
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.674745,
           "priorShares": 0,
           "shareChange": 250000,
           "changeType": "NEW"
@@ -1129,7 +1129,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.647859,
           "priorShares": 1894450,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -1145,7 +1145,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.576086,
           "priorShares": 387400,
           "shareChange": -58600,
           "changeType": "DECREASE"
@@ -1161,7 +1161,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.56864,
           "priorShares": 0,
           "shareChange": 632600,
           "changeType": "NEW"
@@ -1177,7 +1177,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.548605,
           "priorShares": 211355,
           "shareChange": -144161,
           "changeType": "DECREASE"
@@ -1193,7 +1193,7 @@
           "putCall": "CALL",
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.540506,
           "priorShares": 0,
           "shareChange": 50000,
           "changeType": "NEW"
@@ -1209,7 +1209,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.494852,
           "priorShares": 4539800,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -1225,7 +1225,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.491416,
           "priorShares": 159700,
           "shareChange": 49200,
           "changeType": "INCREASE"
@@ -1241,7 +1241,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.487924,
           "priorShares": 750190,
           "shareChange": -566135,
           "changeType": "DECREASE"
@@ -1257,7 +1257,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.46572,
           "priorShares": 0,
           "shareChange": 39500,
           "changeType": "NEW"
@@ -1273,7 +1273,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.447201,
           "priorShares": 1545610,
           "shareChange": 1238500,
           "changeType": "INCREASE"
@@ -1289,7 +1289,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.444265,
           "priorShares": 0,
           "shareChange": 2941500,
           "changeType": "NEW"
@@ -1305,7 +1305,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.440695,
           "priorShares": 0,
           "shareChange": 173000,
           "changeType": "NEW"
@@ -1321,7 +1321,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.433863,
           "priorShares": 0,
           "shareChange": 203618,
           "changeType": "NEW"
@@ -1337,7 +1337,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.430217,
           "priorShares": 0,
           "shareChange": 254400,
           "changeType": "NEW"
@@ -1353,7 +1353,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.421581,
           "priorShares": 562637,
           "shareChange": 560472,
           "changeType": "INCREASE"
@@ -1369,7 +1369,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.417321,
           "priorShares": 963189,
           "shareChange": 1718226,
           "changeType": "INCREASE"
@@ -1385,7 +1385,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.411525,
           "priorShares": 121843,
           "shareChange": 1217,
           "changeType": "INCREASE"
@@ -1401,7 +1401,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.410297,
           "priorShares": 41200,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -1417,7 +1417,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.408321,
           "priorShares": 0,
           "shareChange": 118300,
           "changeType": "NEW"
@@ -1433,7 +1433,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.406363,
           "priorShares": 2377285,
           "shareChange": -1752286,
           "changeType": "DECREASE"
@@ -1449,7 +1449,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.405193,
           "priorShares": 738785,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -1465,7 +1465,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.396921,
           "priorShares": 0,
           "shareChange": 720175,
           "changeType": "NEW"
@@ -1481,7 +1481,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.396595,
           "priorShares": 0,
           "shareChange": 754800,
           "changeType": "NEW"
@@ -1497,7 +1497,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.393812,
           "priorShares": 125655,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -1513,7 +1513,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.369076,
           "priorShares": 0,
           "shareChange": 18450,
           "changeType": "NEW"
@@ -1529,7 +1529,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.36257,
           "priorShares": 0,
           "shareChange": 43600,
           "changeType": "NEW"
@@ -1545,7 +1545,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.321905,
           "priorShares": 0,
           "shareChange": 356600,
           "changeType": "NEW"
@@ -1561,7 +1561,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.313538,
           "priorShares": 106100,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -1577,7 +1577,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.303789,
           "priorShares": 0,
           "shareChange": 74400,
           "changeType": "NEW"
@@ -1593,7 +1593,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.296592,
           "priorShares": 0,
           "shareChange": 403100,
           "changeType": "NEW"
@@ -1609,7 +1609,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.292812,
           "priorShares": 94895,
           "shareChange": -38300,
           "changeType": "DECREASE"
@@ -1625,7 +1625,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.284963,
           "priorShares": 0,
           "shareChange": 12380,
           "changeType": "NEW"
@@ -1641,7 +1641,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.276385,
           "priorShares": 238600,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -1657,7 +1657,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.236909,
           "priorShares": 986827,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -1673,7 +1673,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.202654,
           "priorShares": 0,
           "shareChange": 77400,
           "changeType": "NEW"
@@ -1689,7 +1689,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.197127,
           "priorShares": 0,
           "shareChange": 652220,
           "changeType": "NEW"
@@ -1705,7 +1705,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.193442,
           "priorShares": 0,
           "shareChange": 88200,
           "changeType": "NEW"
@@ -1721,7 +1721,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.191139,
           "priorShares": 106700,
           "shareChange": -78610,
           "changeType": "DECREASE"
@@ -1737,7 +1737,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.190736,
           "priorShares": 0,
           "shareChange": 151000,
           "changeType": "NEW"
@@ -1753,7 +1753,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.188376,
           "priorShares": 0,
           "shareChange": 56550,
           "changeType": "NEW"
@@ -1769,7 +1769,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.185747,
           "priorShares": 1493390,
           "shareChange": -1307750,
           "changeType": "DECREASE"
@@ -1785,7 +1785,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.18473,
           "priorShares": 0,
           "shareChange": 19200,
           "changeType": "NEW"
@@ -1801,7 +1801,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.183866,
           "priorShares": 0,
           "shareChange": 50300,
           "changeType": "NEW"
@@ -1817,7 +1817,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.175614,
           "priorShares": 0,
           "shareChange": 22000,
           "changeType": "NEW"
@@ -1833,7 +1833,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.164925,
           "priorShares": 134700,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -1849,7 +1849,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.153583,
           "priorShares": 0,
           "shareChange": 300200,
           "changeType": "NEW"
@@ -1865,7 +1865,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.14915,
           "priorShares": 655900,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -1881,7 +1881,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.138211,
           "priorShares": 0,
           "shareChange": 297600,
           "changeType": "NEW"
@@ -1897,7 +1897,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.125315,
           "priorShares": 0,
           "shareChange": 349000,
           "changeType": "NEW"
@@ -1913,7 +1913,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.120652,
           "priorShares": 383363,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -1929,7 +1929,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.11595,
           "priorShares": 0,
           "shareChange": 1170900,
           "changeType": "NEW"
@@ -1945,7 +1945,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.113513,
           "priorShares": 0,
           "shareChange": 2583000,
           "changeType": "NEW"
@@ -1961,7 +1961,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.106988,
           "priorShares": 0,
           "shareChange": 311100,
           "changeType": "NEW"
@@ -1977,7 +1977,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.106317,
           "priorShares": 62525,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -1993,7 +1993,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.104877,
           "priorShares": 0,
           "shareChange": 20200,
           "changeType": "NEW"
@@ -2009,7 +2009,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.101173,
           "priorShares": 0,
           "shareChange": 153600,
           "changeType": "NEW"
@@ -2025,7 +2025,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.082942,
           "priorShares": 0,
           "shareChange": 633700,
           "changeType": "NEW"
@@ -2041,7 +2041,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.076437,
           "priorShares": 0,
           "shareChange": 87100,
           "changeType": "NEW"
@@ -2057,7 +2057,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.057131,
           "priorShares": 0,
           "shareChange": 59500,
           "changeType": "NEW"
@@ -2073,7 +2073,7 @@
           "putCall": null,
           "sourceRowCount": 1,
           "valueUsd": null,
-          "weightPct": null,
+          "weightPct": 0.019287,
           "priorShares": 173000,
           "shareChange": 0,
           "changeType": "UNCHANGED"
@@ -2081,7 +2081,7 @@
       ],
       "transactions": [],
       "notes": [
-        "원문 XML/표의 달러 단위와 기재액·수량 사이에 단위 대사가 필요합니다. 1,000배를 임의 적용하지 않았으며 달러 합계·달러 평가액·금액비중을 표시하지 않습니다.",
+        "원문 XML의 달러 단위와 수량 사이에 대사가 필요해 달러 금액은 보류합니다. 비율은 각 원문 기재값을 정보표 기재값 합계로 나눈 수치이며, 행 전체에 같은 단위가 적용되었다는 전제의 참고 비율입니다.",
         "원문 표 항목합계 5,210,856와 표지 합계 5,210,860가 -4만큼 다릅니다. 임의 정정하지 않았습니다.",
         "13F는 신고 법인의 분기말 보유 내역이며 인물 개인의 전체 자산이나 현재 포지션이 아닙니다.",
         "공시 보유가치 합계는 AUM이 아닙니다. 현금·일반 공매도·비공개 자산 등은 같은 범위가 아닙니다.",
