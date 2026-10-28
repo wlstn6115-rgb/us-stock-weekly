@@ -28,7 +28,8 @@ def main():
             else:
                 import yfinance as yf
                 frame=yf.download(spec['ticker'],period='1y',interval='1d',auto_adjust=False,multi_level_index=False,progress=False,threads=False)
-                rows=[{'date':stamp.date().isoformat(),'value':float(v)} for stamp,v in frame['Close'].dropna().items() if stamp.date()<=now.date()]
+                # Today's Yahoo daily bar can still be intraday. Use only completed UTC dates.
+                rows=[{'date':stamp.date().isoformat(),'value':float(v)} for stamp,v in frame['Close'].dropna().items() if stamp.date()<now.date()]
                 link='https://finance.yahoo.com/quote/'+spec['ticker']+'/'
             valid(rows)
             result.append({**spec,'sourceUrl':link,'updatedAt':now.isoformat(),'status':'ok','observations':rows})

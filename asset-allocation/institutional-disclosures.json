@@ -8,7 +8,7 @@
     "weightBasis": "검증된 달러 표의 전체 공시 보유가치(옵션 포함) 대비 비중 · AUM 아님",
     "aggregationKey": "CUSIP + SH/PRN + PUT/CALL",
     "comparisonBasis": "동일 범위·동일 증권의 직전 분기말 신고수량 대비 차이",
-    "valuePolicy": "원문 달러값 보존. 단위 의심 시 USD값 보류, 원문 기재값 기준 참고 비율은 동일 단위 전제로 계산.",
+    "valuePolicy": "단위 의심 시 원문 USD 보류. 동일 단위 전제하에 기재값 비율과 가격 대조에 따른 1000배 환산 추정치를 명시.",
     "privacy": "공개 공시 데이터만 포함. 로컬 경로·인증정보·사용자 개인 자산 제외."
   },
   "targets": [
@@ -530,7 +530,7 @@
       "cik": "0001536411",
       "filingType": "13F",
       "status": "NEEDS_REVIEW",
-      "statusReason": "달러 금액 대사 필요 · 기재값 기준 참고 비율",
+      "statusReason": "달러 금액은 1,000배 환산 추정치 · 원문 단위 불일치",
       "reportPeriod": "2026-06-30",
       "filingDate": "2026-08-14",
       "accession": "0001536411-26-000006",
@@ -572,7 +572,8 @@
           "weightPct": 16.598482,
           "priorShares": 3063606,
           "shareChange": 122700,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 864923000
         },
         {
           "issuer": "Taiwan Semiconductor Manufac",
@@ -588,7 +589,8 @@
           "weightPct": 5.404352,
           "priorShares": 495280,
           "shareChange": 94400,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 281613000
         },
         {
           "issuer": "Stmicroelectronics N V",
@@ -604,7 +606,8 @@
           "weightPct": 4.45944,
           "priorShares": 2612880,
           "shareChange": 490000,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 232375000
         },
         {
           "issuer": "Invesco Exchange Traded Fd T",
@@ -620,7 +623,8 @@
           "weightPct": 3.352309,
           "priorShares": 821000,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 174684000
         },
         {
           "issuer": "Insmed Inc",
@@ -636,7 +640,8 @@
           "weightPct": 2.915068,
           "priorShares": 1154090,
           "shareChange": 270600,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 151900000
         },
         {
           "issuer": "Ishares Inc",
@@ -652,7 +657,8 @@
           "weightPct": 2.799271,
           "priorShares": 4228000,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 145866000
         },
         {
           "issuer": "Insmed Inc",
@@ -668,7 +674,8 @@
           "weightPct": 2.762252,
           "priorShares": 0,
           "shareChange": 1350000,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 143937000
         },
         {
           "issuer": "Ypf Sociedad Anonima",
@@ -684,7 +691,8 @@
           "weightPct": 2.739013,
           "priorShares": 3235962,
           "shareChange": -97065,
-          "changeType": "DECREASE"
+          "changeType": "DECREASE",
+          "estimatedValueUsd": 142726000
         },
         {
           "issuer": "Amazon Com Inc",
@@ -700,7 +708,8 @@
           "weightPct": 2.477232,
           "priorShares": 45800,
           "shareChange": 495800,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 129085000
         },
         {
           "issuer": "Bbb Foods Inc",
@@ -716,7 +725,8 @@
           "weightPct": 2.320444,
           "priorShares": 3109202,
           "shareChange": -207469,
-          "changeType": "DECREASE"
+          "changeType": "DECREASE",
+          "estimatedValueUsd": 120915000
         },
         {
           "issuer": "Alphabet Inc",
@@ -732,7 +742,8 @@
           "weightPct": 2.306416,
           "priorShares": 0,
           "shareChange": 336300,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 120184000
         },
         {
           "issuer": "Ishares Inc",
@@ -748,7 +759,8 @@
           "weightPct": 2.27502,
           "priorShares": 3436170,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 118548000
         },
         {
           "issuer": "Seagate Technology Hldngs Pl",
@@ -764,7 +776,8 @@
           "weightPct": 2.259322,
           "priorShares": 50700,
           "shareChange": 71300,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 117730000
         },
         {
           "issuer": "Fox Corp",
@@ -780,7 +793,8 @@
           "weightPct": 2.206778,
           "priorShares": 0,
           "shareChange": 2204600,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 114992000
         },
         {
           "issuer": "Amazon Com Inc",
@@ -796,7 +810,8 @@
           "weightPct": 2.100806,
           "priorShares": 200000,
           "shareChange": 259300,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 109470000
         },
         {
           "issuer": "United Airls Hldgs Inc",
@@ -812,7 +827,8 @@
           "weightPct": 2.074208,
           "priorShares": 262495,
           "shareChange": 532300,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 108084000
         },
         {
           "issuer": "Sea Ltd",
@@ -828,7 +844,8 @@
           "weightPct": 2.022777,
           "priorShares": 1099905,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 105404000
         },
         {
           "issuer": "Cdw Corp",
@@ -844,7 +861,8 @@
           "weightPct": 2.007904,
           "priorShares": 0,
           "shareChange": 743950,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 104629000
         },
         {
           "issuer": "Newamsterdam Pharma Company",
@@ -860,7 +878,8 @@
           "weightPct": 1.996735,
           "priorShares": 3070146,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 104047000
         },
         {
           "issuer": "Ishares Tr",
@@ -876,7 +895,8 @@
           "weightPct": 1.902739,
           "priorShares": 79000,
           "shareChange": 251000,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 99149000
         },
         {
           "issuer": "Sandisk Corp",
@@ -892,7 +912,8 @@
           "weightPct": 1.52284,
           "priorShares": 38155,
           "shareChange": -3255,
-          "changeType": "DECREASE"
+          "changeType": "DECREASE",
+          "estimatedValueUsd": 79353000
         },
         {
           "issuer": "Revolution Medicines Inc",
@@ -908,7 +929,8 @@
           "weightPct": 1.436136,
           "priorShares": 315860,
           "shareChange": 83727,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 74835000
         },
         {
           "issuer": "State Str Spdr S&P 500 Etf T",
@@ -924,7 +946,8 @@
           "weightPct": 1.289788,
           "priorShares": 90000,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 67209000
         },
         {
           "issuer": "Bitdeer Technologies Group",
@@ -940,7 +963,8 @@
           "weightPct": 1.241063,
           "priorShares": 0,
           "shareChange": 4074993,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 64670000
         },
         {
           "issuer": "Crh Plc",
@@ -956,7 +980,8 @@
           "weightPct": 1.136665,
           "priorShares": 377555,
           "shareChange": 176000,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 59230000
         },
         {
           "issuer": "Delta Air Lines Inc",
@@ -972,7 +997,8 @@
           "weightPct": 1.083833,
           "priorShares": 0,
           "shareChange": 603000,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 56477000
         },
         {
           "issuer": "Tesla Inc",
@@ -988,7 +1014,8 @@
           "weightPct": 1.017031,
           "priorShares": 0,
           "shareChange": 126000,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 52996000
         },
         {
           "issuer": "Fluor Corp",
@@ -1004,7 +1031,8 @@
           "weightPct": 0.987496,
           "priorShares": 0,
           "shareChange": 982200,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 51457000
         },
         {
           "issuer": "D R Horton Inc",
@@ -1020,7 +1048,8 @@
           "weightPct": 0.934607,
           "priorShares": 0,
           "shareChange": 299000,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 48701000
         },
         {
           "issuer": "Coupang Inc",
@@ -1036,7 +1065,8 @@
           "weightPct": 0.889182,
           "priorShares": 2667485,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 46334000
         },
         {
           "issuer": "Advanced Micro Devices Inc",
@@ -1052,7 +1082,8 @@
           "weightPct": 0.812688,
           "priorShares": 0,
           "shareChange": 72900,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 42348000
         },
         {
           "issuer": "Palo Alto Networks Inc",
@@ -1068,7 +1099,8 @@
           "weightPct": 0.763406,
           "priorShares": 0,
           "shareChange": 116650,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 39780000
         },
         {
           "issuer": "Cleveland-Cliffs Inc New",
@@ -1084,7 +1116,8 @@
           "weightPct": 0.75976,
           "priorShares": 2313455,
           "shareChange": 1902729,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 39590000
         },
         {
           "issuer": "Hut 8 Corp",
@@ -1100,7 +1133,8 @@
           "weightPct": 0.695989,
           "priorShares": 0,
           "shareChange": 314150,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 36267000
         },
         {
           "issuer": "Cdw Corp",
@@ -1116,7 +1150,8 @@
           "weightPct": 0.674745,
           "priorShares": 0,
           "shareChange": 250000,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 35160000
         },
         {
           "issuer": "Caris Life Sciences Inc",
@@ -1132,7 +1167,8 @@
           "weightPct": 0.647859,
           "priorShares": 1894450,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 33759000
         },
         {
           "issuer": "Global X Fds",
@@ -1148,7 +1184,8 @@
           "weightPct": 0.576086,
           "priorShares": 387400,
           "shareChange": -58600,
-          "changeType": "DECREASE"
+          "changeType": "DECREASE",
+          "estimatedValueUsd": 30019000
         },
         {
           "issuer": "Fox Corp",
@@ -1164,7 +1201,8 @@
           "weightPct": 0.56864,
           "priorShares": 0,
           "shareChange": 632600,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 29631000
         },
         {
           "issuer": "Woodward Inc",
@@ -1180,7 +1218,8 @@
           "weightPct": 0.548605,
           "priorShares": 211355,
           "shareChange": -144161,
-          "changeType": "DECREASE"
+          "changeType": "DECREASE",
+          "estimatedValueUsd": 28587000
         },
         {
           "issuer": "Meta Platforms Inc",
@@ -1196,7 +1235,8 @@
           "weightPct": 0.540506,
           "priorShares": 0,
           "shareChange": 50000,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 28165000
         },
         {
           "issuer": "Nuvation Bio Inc",
@@ -1212,7 +1252,8 @@
           "weightPct": 0.494852,
           "priorShares": 4539800,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 25786000
         },
         {
           "issuer": "Protagonist Therapeutics Inc",
@@ -1228,7 +1269,8 @@
           "weightPct": 0.491416,
           "priorShares": 159700,
           "shareChange": 49200,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 25607000
         },
         {
           "issuer": "Roku Inc",
@@ -1244,7 +1286,8 @@
           "weightPct": 0.487924,
           "priorShares": 750190,
           "shareChange": -566135,
-          "changeType": "DECREASE"
+          "changeType": "DECREASE",
+          "estimatedValueUsd": 25425000
         },
         {
           "issuer": "Cavco Inds Inc Del",
@@ -1260,7 +1303,8 @@
           "weightPct": 0.46572,
           "priorShares": 0,
           "shareChange": 39500,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 24268000
         },
         {
           "issuer": "Adma Biologics Inc",
@@ -1276,7 +1320,8 @@
           "weightPct": 0.447201,
           "priorShares": 1545610,
           "shareChange": 1238500,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 23303000
         },
         {
           "issuer": "Hyperliquid Strategies Inc",
@@ -1292,7 +1337,8 @@
           "weightPct": 0.444265,
           "priorShares": 0,
           "shareChange": 2941500,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 23150000
         },
         {
           "issuer": "Rambus Inc Del",
@@ -1308,7 +1354,8 @@
           "weightPct": 0.440695,
           "priorShares": 0,
           "shareChange": 173000,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 22964000
         },
         {
           "issuer": "Rhythm Pharmaceuticals Inc",
@@ -1324,7 +1371,8 @@
           "weightPct": 0.433863,
           "priorShares": 0,
           "shareChange": 203618,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 22608000
         },
         {
           "issuer": "Champion Homes Inc",
@@ -1340,7 +1388,8 @@
           "weightPct": 0.430217,
           "priorShares": 0,
           "shareChange": 254400,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 22418000
         },
         {
           "issuer": "Daktronics Inc",
@@ -1356,7 +1405,8 @@
           "weightPct": 0.421581,
           "priorShares": 562637,
           "shareChange": 560472,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 21968000
         },
         {
           "issuer": "Purecycle Technologies Inc",
@@ -1372,7 +1422,8 @@
           "weightPct": 0.417321,
           "priorShares": 963189,
           "shareChange": 1718226,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 21746000
         },
         {
           "issuer": "Southern Copper Corp",
@@ -1388,7 +1439,8 @@
           "weightPct": 0.411525,
           "priorShares": 121843,
           "shareChange": 1217,
-          "changeType": "INCREASE"
+          "changeType": "INCREASE",
+          "estimatedValueUsd": 21444000
         },
         {
           "issuer": "Linde Plc",
@@ -1404,7 +1456,8 @@
           "weightPct": 0.410297,
           "priorShares": 41200,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 21380000
         },
         {
           "issuer": "Entegris Inc",
@@ -1420,7 +1473,8 @@
           "weightPct": 0.408321,
           "priorShares": 0,
           "shareChange": 118300,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 21277000
         },
         {
           "issuer": "Teva Pharmaceutical Inds Ltd",
@@ -1436,7 +1490,8 @@
           "weightPct": 0.406363,
           "priorShares": 2377285,
           "shareChange": -1752286,
-          "changeType": "DECREASE"
+          "changeType": "DECREASE",
+          "estimatedValueUsd": 21175000
         },
         {
           "issuer": "Unity Software Inc",
@@ -1452,7 +1507,8 @@
           "weightPct": 0.405193,
           "priorShares": 738785,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 21114000
         },
         {
           "issuer": "Aeva Technologies Inc",
@@ -1468,7 +1524,8 @@
           "weightPct": 0.396921,
           "priorShares": 0,
           "shareChange": 720175,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 20683000
         },
         {
           "issuer": "Riot Platforms Inc",
@@ -1484,7 +1541,8 @@
           "weightPct": 0.396595,
           "priorShares": 0,
           "shareChange": 754800,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 20666000
         },
         {
           "issuer": "Qnity Electronics Inc",
@@ -1500,7 +1558,8 @@
           "weightPct": 0.393812,
           "priorShares": 125655,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 20521000
         },
         {
           "issuer": "Equinix Inc",
@@ -1516,7 +1575,8 @@
           "weightPct": 0.369076,
           "priorShares": 0,
           "shareChange": 18450,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 19232000
         },
         {
           "issuer": "Lam Research Corp",
@@ -1532,7 +1592,8 @@
           "weightPct": 0.36257,
           "priorShares": 0,
           "shareChange": 43600,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 18893000
         },
         {
           "issuer": "Definium Therapeutics Inc",
@@ -1548,7 +1609,8 @@
           "weightPct": 0.321905,
           "priorShares": 0,
           "shareChange": 356600,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 16774000
         },
         {
           "issuer": "Belite Bio Inc Sponsored",
@@ -1564,7 +1626,8 @@
           "weightPct": 0.313538,
           "priorShares": 106100,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 16338000
         },
         {
           "issuer": "Invesco Exchange Traded Fd T",
@@ -1580,7 +1643,8 @@
           "weightPct": 0.303789,
           "priorShares": 0,
           "shareChange": 74400,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 15830000
         },
         {
           "issuer": "10X Genomics Inc",
@@ -1596,7 +1660,8 @@
           "weightPct": 0.296592,
           "priorShares": 0,
           "shareChange": 403100,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 15455000
         },
         {
           "issuer": "Wabtec",
@@ -1612,7 +1677,8 @@
           "weightPct": 0.292812,
           "priorShares": 94895,
           "shareChange": -38300,
-          "changeType": "DECREASE"
+          "changeType": "DECREASE",
+          "estimatedValueUsd": 15258000
         },
         {
           "issuer": "Eli Lilly & Co",
@@ -1628,7 +1694,8 @@
           "weightPct": 0.284963,
           "priorShares": 0,
           "shareChange": 12380,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 14849000
         },
         {
           "issuer": "Xenon Pharmaceuticals Inc",
@@ -1644,7 +1711,8 @@
           "weightPct": 0.276385,
           "priorShares": 238600,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 14402000
         },
         {
           "issuer": "Olema Pharmaceuticals Inc",
@@ -1660,7 +1728,8 @@
           "weightPct": 0.236909,
           "priorShares": 986827,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 12345000
         },
         {
           "issuer": "Repligen Corp",
@@ -1676,7 +1745,8 @@
           "weightPct": 0.202654,
           "priorShares": 0,
           "shareChange": 77400,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 10560000
         },
         {
           "issuer": "Rocket Cos Inc",
@@ -1692,7 +1762,8 @@
           "weightPct": 0.197127,
           "priorShares": 0,
           "shareChange": 652220,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 10272000
         },
         {
           "issuer": "Baidu Inc",
@@ -1708,7 +1779,8 @@
           "weightPct": 0.193442,
           "priorShares": 0,
           "shareChange": 88200,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 10080000
         },
         {
           "issuer": "Arm Holdings Plc",
@@ -1724,7 +1796,8 @@
           "weightPct": 0.191139,
           "priorShares": 106700,
           "shareChange": -78610,
-          "changeType": "DECREASE"
+          "changeType": "DECREASE",
+          "estimatedValueUsd": 9960000
         },
         {
           "issuer": "Carvana Co",
@@ -1740,7 +1813,8 @@
           "weightPct": 0.190736,
           "priorShares": 0,
           "shareChange": 151000,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 9939000
         },
         {
           "issuer": "Reddit Inc",
@@ -1756,7 +1830,8 @@
           "weightPct": 0.188376,
           "priorShares": 0,
           "shareChange": 56550,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 9816000
         },
         {
           "issuer": "Alcoa Corp",
@@ -1772,7 +1847,8 @@
           "weightPct": 0.185747,
           "priorShares": 1493390,
           "shareChange": -1307750,
-          "changeType": "DECREASE"
+          "changeType": "DECREASE",
+          "estimatedValueUsd": 9679000
         },
         {
           "issuer": "Thermo Fisher Scientific Inc",
@@ -1788,7 +1864,8 @@
           "weightPct": 0.18473,
           "priorShares": 0,
           "shareChange": 19200,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 9626000
         },
         {
           "issuer": "Danaher Corp Del",
@@ -1804,7 +1881,8 @@
           "weightPct": 0.183866,
           "priorShares": 0,
           "shareChange": 50300,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 9581000
         },
         {
           "issuer": "F5 Inc",
@@ -1820,7 +1898,8 @@
           "weightPct": 0.175614,
           "priorShares": 0,
           "shareChange": 22000,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 9151000
         },
         {
           "issuer": "Vista Energy S.A.B. De C.V.",
@@ -1836,7 +1915,8 @@
           "weightPct": 0.164925,
           "priorShares": 134700,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 8594000
         },
         {
           "issuer": "Skeena Res Ltd New",
@@ -1852,7 +1932,8 @@
           "weightPct": 0.153583,
           "priorShares": 0,
           "shareChange": 300200,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 8003000
         },
         {
           "issuer": "Jbs N.V.",
@@ -1868,7 +1949,8 @@
           "weightPct": 0.14915,
           "priorShares": 655900,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 7772000
         },
         {
           "issuer": "Monte Rosa Therapeutics Inc",
@@ -1884,7 +1966,8 @@
           "weightPct": 0.138211,
           "priorShares": 0,
           "shareChange": 297600,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 7202000
         },
         {
           "issuer": "Relay Therapeutics Inc",
@@ -1900,7 +1983,8 @@
           "weightPct": 0.125315,
           "priorShares": 0,
           "shareChange": 349000,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 6530000
         },
         {
           "issuer": "Dbv Technologies S A Sponsored",
@@ -1916,7 +2000,8 @@
           "weightPct": 0.120652,
           "priorShares": 383363,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 6287000
         },
         {
           "issuer": "Ccc Intelligent Solutions Hl",
@@ -1932,7 +2017,8 @@
           "weightPct": 0.11595,
           "priorShares": 0,
           "shareChange": 1170900,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 6042000
         },
         {
           "issuer": "Uwm Holdings Corporation",
@@ -1948,7 +2034,8 @@
           "weightPct": 0.113513,
           "priorShares": 0,
           "shareChange": 2583000,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 5915000
         },
         {
           "issuer": "Navitas Semiconductor Corp",
@@ -1964,7 +2051,8 @@
           "weightPct": 0.106988,
           "priorShares": 0,
           "shareChange": 311100,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 5575000
         },
         {
           "issuer": "Solstice Advanced Matls Inc",
@@ -1980,7 +2068,8 @@
           "weightPct": 0.106317,
           "priorShares": 62525,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 5540000
         },
         {
           "issuer": "Ftai Aviation Ltd",
@@ -1996,7 +2085,8 @@
           "weightPct": 0.104877,
           "priorShares": 0,
           "shareChange": 20200,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 5465000
         },
         {
           "issuer": "Beam Therapeutics Inc",
@@ -2012,7 +2102,8 @@
           "weightPct": 0.101173,
           "priorShares": 0,
           "shareChange": 153600,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 5272000
         },
         {
           "issuer": "Aurora Innovation Inc",
@@ -2028,7 +2119,8 @@
           "weightPct": 0.082942,
           "priorShares": 0,
           "shareChange": 633700,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 4322000
         },
         {
           "issuer": "Iren Limited",
@@ -2044,7 +2136,8 @@
           "weightPct": 0.076437,
           "priorShares": 0,
           "shareChange": 87100,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 3983000
         },
         {
           "issuer": "Grupo Financiero Galicia S.A",
@@ -2060,7 +2153,8 @@
           "weightPct": 0.057131,
           "priorShares": 0,
           "shareChange": 59500,
-          "changeType": "NEW"
+          "changeType": "NEW",
+          "estimatedValueUsd": 2977000
         },
         {
           "issuer": "Wave Life Sciences Ltd",
@@ -2076,18 +2170,21 @@
           "weightPct": 0.019287,
           "priorShares": 173000,
           "shareChange": 0,
-          "changeType": "UNCHANGED"
+          "changeType": "UNCHANGED",
+          "estimatedValueUsd": 1005000
         }
       ],
       "transactions": [],
       "notes": [
-        "원문 XML의 달러 단위와 수량 사이에 대사가 필요해 달러 금액은 보류합니다. 비율은 각 원문 기재값을 정보표 기재값 합계로 나눈 수치이며, 행 전체에 같은 단위가 적용되었다는 전제의 참고 비율입니다.",
+        "달러 금액은 원문 기재값에 1,000을 곱한 추정치입니다. 분기말 Natera·TSMC 종가와 수량 대조에 근거하며 SEC 원문 단위와 불일치하므로 확정 공시 금액이 아닙니다. 비율은 정보표 합계 기준입니다.",
+        "대조 자료: Natera 2026-06-30 종가 $271.45 × 3,186,306주 ≈ $864.92M; TSMC 종가 $477.57 × 589,680주 ≈ $281.61M.",
         "원문 표 항목합계 5,210,856와 표지 합계 5,210,860가 -4만큼 다릅니다. 임의 정정하지 않았습니다.",
         "13F는 신고 법인의 분기말 보유 내역이며 인물 개인의 전체 자산이나 현재 포지션이 아닙니다.",
         "공시 보유가치 합계는 AUM이 아닙니다. 현금·일반 공매도·비공개 자산 등은 같은 범위가 아닙니다.",
         "PUT/CALL 공시가치는 기초자산 명목가치이며 옵션 프리미엄·순노출이 아닙니다.",
         "수량 증감은 두 분기말 신고수량의 차이입니다. 실제 매매일·매매금액을 뜻하지 않습니다."
-      ]
+      ],
+      "estimatedReportedValueUsd": 5210856000
     },
     {
       "id": "thiel",

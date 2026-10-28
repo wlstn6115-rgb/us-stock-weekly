@@ -1,0 +1,13 @@
+/* Shared navigation and allocation-observatory palette. */
+.site-switcher{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px;padding:10px 0;border-bottom:1px solid #dce3ed}
+.site-switcher a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:1px solid #dce3ed;border-radius:10px;background:#fff;color:#173451;text-decoration:none;font:700 14px/1.4 "Segoe UI","Malgun Gothic",sans-serif}
+.site-switcher a[aria-current=page]{background:#235ae5;border-color:#235ae5;color:#fff}.site-switcher a:focus-visible{outline:3px solid #94b7ff;outline-offset:3px}
+@media(max-width:480px){.site-switcher a{flex:1 1 auto;padding:10px 8px;font-size:12px}}
+@media print{.site-switcher{display:none}}
+/* Briefing's existing card and section markup. */
+body.briefing-theme{background:#f2f5f8;color:#172a3b;--line:#e2e8f0;--ink:#172a3b;--muted:#627486;--accent:#235ae5;--up:#177765;--down:#b5574c}
+body.briefing-theme .hero,body.briefing-theme .panel{background:#fff;border-color:#e2e8f0;border-radius:12px;box-shadow:none}
+body.briefing-theme .summary-card,body.briefing-theme .news-card,body.briefing-theme .chart-card{background:#f8fafc;border-color:#e2e8f0;border-radius:12px}
+body.briefing-theme .dashboard-tabs{background:#f2f5f8}body.briefing-theme .dashboard-tab{background:#fff;border-color:#dce3ed;color:#173451}body.briefing-theme .dashboard-tab.active{background:#235ae5;color:#fff;border-color:#235ae5}
+body.briefing-theme .capex-badge{background:#18314c;color:#fff}body.briefing-theme .earnings-strip{background:#fff;border-color:#e2e8f0}
+body.briefing-theme .capex-intro{background:#f3f7ff;border-color:#dce3ed}body.briefing-theme .capex-stamp,body.briefing-theme .capex-earnings-head,body.briefing-theme .capex-raw th,body.briefing-theme .capex-stack-svg{background:#f8fafc;border-color:#e2e8f0}body.briefing-theme .quarter-track,body.briefing-theme .capex-bar-track,body.briefing-theme .capex-tags span{background:#e9eff7}body.briefing-theme .capex-stat.watch strong,body.briefing-theme .finviz-compare-head em,body.briefing-theme .theme-compare-head em{color:#235ae5}body.briefing-theme .capex-bar-fill.watch{background:#235ae5}body.briefing-theme .research-frame{background:#f2f5f8}
