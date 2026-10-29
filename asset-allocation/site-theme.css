@@ -11,3 +11,16 @@ body.briefing-theme .summary-card,body.briefing-theme .news-card,body.briefing-t
 body.briefing-theme .dashboard-tabs{background:#f2f5f8}body.briefing-theme .dashboard-tab{background:#fff;border-color:#dce3ed;color:#173451}body.briefing-theme .dashboard-tab.active{background:#235ae5;color:#fff;border-color:#235ae5}
 body.briefing-theme .capex-badge{background:#18314c;color:#fff}body.briefing-theme .earnings-strip{background:#fff;border-color:#e2e8f0}
 body.briefing-theme .capex-intro{background:#f3f7ff;border-color:#dce3ed}body.briefing-theme .capex-stamp,body.briefing-theme .capex-earnings-head,body.briefing-theme .capex-raw th,body.briefing-theme .capex-stack-svg{background:#f8fafc;border-color:#e2e8f0}body.briefing-theme .quarter-track,body.briefing-theme .capex-bar-track,body.briefing-theme .capex-tags span{background:#e9eff7}body.briefing-theme .capex-stat.watch strong,body.briefing-theme .finviz-compare-head em,body.briefing-theme .theme-compare-head em{color:#235ae5}body.briefing-theme .capex-bar-fill.watch{background:#235ae5}body.briefing-theme .research-frame{background:#f2f5f8}
+/* Identical masthead and navigation geometry on every service. */
+.site-banner{box-sizing:border-box;height:78px;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 max(28px,calc((100vw - 1320px)/2));background:#fff;color:#172a3b;font:16px/normal "Segoe UI","Malgun Gothic",sans-serif}
+.site-banner .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#172a3b;font-size:1.13rem;font-weight:750;line-height:normal}
+.site-banner .brand-icon{display:inline-block;background:#18314c;color:#fff;font-size:1.5rem;line-height:normal;padding:2px 9px;border-radius:8px}
+.site-banner .local{font-size:.875rem;color:#627486;line-height:normal}
+body.briefing-theme .wrap{max-width:1320px;margin:auto;padding:36px 28px}
+body.disclosures-theme{font:16px/1.65 "Segoe UI","Malgun Gothic",sans-serif}
+body.disclosures-theme main{max-width:1320px;margin:auto;padding:36px 28px 60px}
+body.disclosures-theme h1{font-size:1.9rem;letter-spacing:-.045em;line-height:1.2}
+@media(max-width:720px){.site-banner{height:64px;padding:0 20px}.site-banner .local{display:none}body.briefing-theme .wrap,body.disclosures-theme main{padding:24px 16px 40px}}
+@media(max-width:480px){body.briefing-theme .summary-row{flex-wrap:wrap;gap:3px 8px}body.briefing-theme .summary-card{min-width:0}body.briefing-theme .summary-card .big{overflow-wrap:anywhere}}
+@media(max-width:480px){body.briefing-theme .summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body.briefing-theme .summary-head{flex-wrap:wrap}}
+@media(max-width:480px){body.briefing-theme .chart-meta{flex-wrap:wrap;gap:6px}body.briefing-theme .chart-meta>div{min-width:0;overflow-wrap:anywhere}}
