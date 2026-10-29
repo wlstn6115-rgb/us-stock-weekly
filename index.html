@@ -753,27 +753,25 @@
       }).filter(Boolean);
     };
 
+    const compactLabels = new Set(['Bitcoin (USD)', 'KOSPI', 'USD/KRW', 'Fear & Greed', 'Federal Reserve Balance Sheet', 'BIT/GOLD']);
     Object.entries(series).forEach(([label, item], idx) => {
-      if (label === 'Fear & Greed' || label === 'Bitcoin (USD)' || label === 'BIT/GOLD' || label === 'Federal Reserve Balance Sheet' || label === 'US S&P 500' || label === 'US Manufacturing PMI' || label === 'US Industrial Production' || label === 'US Retail Sales YoY' || label === 'US GDP Annual Growth Rate' || label === 'US Unemployment Rate') { return; }
-      const card = buildLineChartCard(label, item, colors[idx % colors.length]);
-      chartGrid.appendChild(card);
+      if (compactLabels.has(label) || label === 'US S&P 500' || label === 'US Manufacturing PMI' || label === 'US Industrial Production' || label === 'US Retail Sales YoY' || label === 'US GDP Annual Growth Rate' || label === 'US Unemployment Rate') { return; }
+      chartGrid.appendChild(buildLineChartCard(label, item, colors[idx % colors.length]));
     });
-
-    if (series['Fear & Greed']) {
-      specialGrid.appendChild(buildLineChartCard('Fear & Greed', series['Fear & Greed'], '#334155'));
-    }
-
-    if (series['Bitcoin (USD)']) {
-      specialGrid.appendChild(buildLineChartCard('Bitcoin (USD)', series['Bitcoin (USD)'], '#f7931a', '자료 출처: TradingView · BITSTAMP:BTCUSD · Nasdaq 종가 시점 정렬'));
-    }
-
-    if (series['BIT/GOLD']) {
-      specialGrid.appendChild(buildLineChartCard('BIT/GOLD', series['BIT/GOLD'], '#8b5cf6', '자료 출처: TradingView · BITSTAMP:BTCUSD / OANDA:XAUUSD · Nasdaq 종가 시점 정렬'));
-    }
-
-    if (series['Federal Reserve Balance Sheet']) {
-      specialGrid.appendChild(buildLineChartCard('연준 대차대조표 (WALCL)', series['Federal Reserve Balance Sheet'], '#0f766e', '자료 출처: FRED · WALCL · 연준 총자산 · 단위: 십억 USD'));
-    }
+    const compactCards = [
+      {key:'Bitcoin (USD)', title:'Bitcoin (USD)', color:'#f7931a', footer:'자료 출처: TradingView · BITSTAMP:BTCUSD · Nasdaq 종가 시점 정렬'},
+      {key:'KOSPI', title:'KOSPI'},
+      {key:'USD/KRW', title:'USD/KRW'},
+      {key:'Fear & Greed', title:'Fear & Greed', color:'#334155'},
+      {key:'Federal Reserve Balance Sheet', title:'연준 대차대조표 (WALCL)', color:'#0f766e', footer:'자료 출처: FRED · WALCL · 연준 총자산 · 단위: 십억 USD'},
+      {key:'BIT/GOLD', title:'BIT/GOLD', color:'#8b5cf6', footer:'자료 출처: TradingView · BITSTAMP:BTCUSD / OANDA:XAUUSD · Nasdaq 종가 시점 정렬'}
+    ];
+    const sourceLabels = Object.keys(series);
+    compactCards.forEach(({key, title, color, footer}) => {
+      if (!series[key]) return;
+      const originalIndex = sourceLabels.indexOf(key);
+      specialGrid.appendChild(buildLineChartCard(title, series[key], color || colors[originalIndex % colors.length], footer || ''));
+    });
 
     const macroCards = buildMacroTradingEconomicsCards();
     if (macroCards.length) {
