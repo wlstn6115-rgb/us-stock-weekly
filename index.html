@@ -368,6 +368,13 @@
     .snapshot-dial-inner span { margin-top:4px; color:#b7c5d0; font-size:10px; font-weight:700; }
     .summary-grid .snapshot-dial-card h3 { min-height:0; margin:7px 0 0; font-size:15px; line-height:1.25; color:var(--ink); }
     .snapshot-level { color:var(--muted); font-size:13px; font-weight:700; line-height:1.3; overflow-wrap:anywhere; }
+    .summary-grid { grid-template-columns:repeat(6,minmax(0,1fr)); gap:8px; }
+    .summary-grid .snapshot-dial-card { gap:3px; padding:12px 6px 10px; }
+    .summary-grid .snapshot-dial { width:clamp(76px,8vw,104px); padding:7px; }
+    .summary-grid .snapshot-dial-inner strong { font-size:clamp(16px,1.7vw,21px); }
+    .summary-grid .snapshot-dial-card h3 { margin:4px 0 0; font-size:13px; }
+    .summary-grid .snapshot-level { font-size:12px; }
+    @media (max-width:960px) { .summary-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
     @media (max-width:640px) { .summary-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; } .summary-grid .snapshot-dial-card { padding:13px 6px; } .snapshot-dial { width:min(116px, 78%); } .snapshot-dial-inner strong { font-size:21px; } .summary-grid .snapshot-dial-card h3 { min-height:0; font-size:12px; } .snapshot-level { font-size:12px; } }
   </style>
 <link rel="stylesheet" href="./asset-allocation/site-theme.css">
