@@ -118,7 +118,7 @@ async function load(initial=false) {
   current=next;
   if(policyChanged){invalidateAllocation();message('Score 모델에 연결된 추천 규칙이 바뀌었습니다. 새 규칙으로 다시 계산해 주세요.');}
   if(next.storageError)message(next.storageError,true);
-  $('basis').textContent=next.result?.market_date?`시장 기준 ${next.result.market_date} · ${next.result.regime==='risk_off'?'위험회피 환경':'일반 환경'} · 갱신 ${next.result.generated_at||'미제공'} · 모델 ${AllocationModels.modelLabel(next.result.model_version||next.result.config_hash)} · 30초마다 갱신 확인`:'아직 계산된 시장 데이터가 없습니다.';
+  $('basis').textContent=next.result?.market_date?`시장 기준 ${next.result.market_date} · ${next.result.regime==='risk_off'?'위험회피 환경':'일반 환경'} · 모델 ${AllocationModels.modelLabel(next.result.model_version||next.result.config_hash)} · 30초마다 갱신 확인`:'아직 계산된 시장 데이터가 없습니다.';
   if (changed || initial) {
     renderScores();
     $('warnings').innerHTML=(next.result?.warnings||[]).map(w=>`<li>${escape(w)}</li>`).join('');

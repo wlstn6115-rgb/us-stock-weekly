@@ -175,8 +175,6 @@
       snapshot = validateSnapshot(await response.json());
       snapshot.targets = snapshot.targets.slice().sort((a, b) => TARGET_ORDER.indexOf(a.id) - TARGET_ORDER.indexOf(b.id));
       $('snapshot-date').textContent = date(snapshot.asOfDate);
-      const stamp = new Date(snapshot.generatedAt);
-      $('snapshot-updated').textContent = Number.isNaN(stamp.getTime()) ? '' : '수집 ' + stamp.toLocaleString('ko-KR', {timeZone: 'Asia/Seoul'}) + ' KST';
       $('target-picker').innerHTML = snapshot.targets.map(target => `<button class="target-button ${isPtr(target) ? 'ptr' : ''}" type="button" data-target="${escape(target.id)}" aria-pressed="false"><strong>${escape(target.nameKo || TARGET_NAMES[target.id] || target.personName)}</strong><small>${isPtr(target) ? '의회 거래공시 · PTR' : '기관 보유공시 · 13F'}</small></button>`).join('');
       $('target-picker').addEventListener('click', event => { const button = event.target.closest('button[data-target]'); if (button) selectTarget(button.dataset.target); });
       $('collection-note').textContent = '이 화면은 게시된 공시 스냅샷을 읽습니다. 페이지를 여는 것만으로 SEC·의회 원문을 새로 수집하지 않습니다.';
