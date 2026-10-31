@@ -355,6 +355,18 @@
       .quarter-row-label,.quarter-value { font-size:8px; }
       .quarter-track { height:10px; }
     }
+    /* Weekly snapshot: the ring encodes absolute weekly change on a 10% scale. */
+    .snapshot-scale { margin:-2px 0 14px; color:var(--muted); font-size:12px; line-height:1.5; }
+    .summary-grid .snapshot-dial-card { --dial-color:#64748b; min-width:0; display:flex; flex-direction:column; align-items:center; text-align:center; gap:5px; padding:18px 10px 16px; background:linear-gradient(180deg,rgba(255,255,255,.82),rgba(255,250,242,.55)); }
+    .summary-grid .snapshot-dial-card.up { --dial-color:#009c6f; }
+    .summary-grid .snapshot-dial-card.down { --dial-color:#df4b20; }
+    .snapshot-dial { width:clamp(112px,11vw,152px); aspect-ratio:1; border-radius:50%; padding:9px; box-sizing:border-box; display:grid; place-items:center; background:conic-gradient(var(--dial-color) 0deg var(--snapshot-arc),transparent var(--snapshot-arc) 360deg),repeating-conic-gradient(#a8b2bc 0deg 1.2deg,#e3e8eb 1.2deg 3.6deg); box-shadow:0 4px 14px rgba(15,23,42,.12); }
+    .snapshot-dial-inner { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; border-radius:50%; color:#fff; background:radial-gradient(circle at 35% 24%,#303e4e,#0c1726 72%); box-shadow:inset 0 0 0 3px rgba(255,255,255,.09); }
+    .snapshot-dial-inner strong { font-size:clamp(20px,2.1vw,28px); line-height:1.1; letter-spacing:-.04em; }
+    .snapshot-dial-inner span { margin-top:4px; color:#b7c5d0; font-size:10px; font-weight:700; }
+    .summary-grid .snapshot-dial-card h3 { min-height:0; margin:7px 0 0; font-size:15px; line-height:1.25; color:var(--ink); }
+    .snapshot-level { color:var(--muted); font-size:13px; font-weight:700; line-height:1.3; overflow-wrap:anywhere; }
+    @media (max-width:640px) { .summary-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; } .summary-grid .snapshot-dial-card { padding:13px 6px; } .snapshot-dial { width:min(116px, 78%); } .snapshot-dial-inner strong { font-size:21px; } .summary-grid .snapshot-dial-card h3 { min-height:0; font-size:12px; } .snapshot-level { font-size:12px; } }
   </style>
 <link rel="stylesheet" href="./asset-allocation/site-theme.css">
 </head>
@@ -373,6 +385,8 @@
 
     <section class="panel">
       <div class="summary-head"><h2>&#51452;&#44036;&#32;&#49828;&#45253;&#49399;</h2><span class="chip">기준 미국 2026-10-28 (한국 2026-10-29)</span></div>
+
+      <p class="snapshot-scale">원형 막대: 등락폭 10% 기준 · 10% 초과는 가득 표시</p>
       <div class="grid-4 summary-grid" id="summaryGrid"></div>
     </section>
 
@@ -505,12 +519,14 @@
     const toArray = value => Array.isArray(value) ? value : (value === null || value === undefined ? [] : [value]);
 
     Object.entries(weeklySnapshot).forEach(([label, item]) => {
-      const change = Number(item.changePct || 0);
-      const klass = change > 0 ? 'up' : (change < 0 ? 'down' : 'flat');
-
+      const change = item.changePct == null ? NaN : Number(item.changePct);
+      const valid = Number.isFinite(change);
+      const klass = !valid ? 'flat' : (change > 0 ? 'up' : (change < 0 ? 'down' : 'flat'));
+      const displayChange = valid ? `${change > 0 ? '+' : ''}${change.toFixed(2)}%` : '—';
       const summary = document.createElement('div');
-      summary.className = 'summary-card';
-      summary.innerHTML = `<h3>${label}</h3><div class="summary-row"><div class="big">${fmt(item.last, item.unit)}</div><div class="${klass}">${change > 0 ? '+' : ''}${change.toFixed(2)}%</div></div>`;
+      summary.className = `summary-card snapshot-dial-card ${klass}`;
+      summary.style.setProperty('--snapshot-arc', `${valid ? Math.min(Math.abs(change), 10) * 36 : 0}deg`);
+      summary.innerHTML = `<div class="snapshot-dial" aria-label="${escSvg(label)} 등락률 ${displayChange}"><div class="snapshot-dial-inner"><strong>${displayChange}</strong><span>등락률</span></div></div><h3>${escSvg(label)}</h3><div class="snapshot-level">${fmt(item.last, item.unit)}</div>`;
       summaryGrid.appendChild(summary);
     });
 
