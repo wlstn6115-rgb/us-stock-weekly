@@ -1,0 +1,3874 @@
+{
+  "schemaVersion": 1,
+  "initialKRW": 100000000,
+  "startDate": "2026-01-02",
+  "trackingStart": "2026-11-03",
+  "through": "2026-11-02",
+  "modelVersion": "ver2",
+  "priceBasis": "S&P 500 price index, BTC/USD, gold USD, USD/KRW; no dividends; gold, BTC and FX prior available date; 2026-01-01 BTC bootstrap Yahoo, later values TradingView report",
+  "fees": "매수·매도 각 0.1%, 세금·스프레드·현금이자 제외",
+  "schedule": "각 월 첫 미국 거래일 월 1회, 직전 사용가능 신호. 첫날 이전 전액 현금.",
+  "historyNotice": "2026-11-02까지 과거 시점 신호 사후 재구성, 원본 당시 가용성 미검증. 11-03 이후 실제 관측한 신호만 이용.",
+  "observations": [
+    {
+      "date": "2026-01-02",
+      "ver2": 99910080.93,
+      "sp500": 99900000.0,
+      "ver2Return": -0.0008991907283443235,
+      "sp500Return": -0.0010000000000000009,
+      "phase": "backtest",
+      "rebalanced": true,
+      "signalMissing": false,
+      "decision": {
+        "type": "retrospective",
+        "cutoff": "2025-12-29"
+      },
+      "targetWeights": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 0.9000000000000001,
+        "cash": 0.1
+      },
+      "sourceDates": {
+        "equity": "2026-01-02",
+        "gold": "2025-12-31",
+        "btc": "2026-01-01",
+        "fx": "2026-01-01"
+      }
+    },
+    {
+      "date": "2026-01-05",
+      "ver2": 100287594.8,
+      "sp500": 100534491.02,
+      "ver2Return": 0.002875948011638041,
+      "sp500Return": 0.005344910242502943,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-05",
+        "gold": "2026-01-02",
+        "btc": "2026-01-02",
+        "fx": "2026-01-01"
+      }
+    },
+    {
+      "date": "2026-01-06",
+      "ver2": 103207353.59,
+      "sp500": 101771248.27,
+      "ver2Return": 0.03207353587324446,
+      "sp500Return": 0.017712482708278188,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-06",
+        "gold": "2026-01-05",
+        "btc": "2026-01-05",
+        "fx": "2026-01-05"
+      }
+    },
+    {
+      "date": "2026-01-07",
+      "ver2": 104227867.72,
+      "sp500": 101414562.46,
+      "ver2Return": 0.042278677236192275,
+      "sp500Return": 0.014145624635186538,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-07",
+        "gold": "2026-01-06",
+        "btc": "2026-01-06",
+        "fx": "2026-01-06"
+      }
+    },
+    {
+      "date": "2026-01-08",
+      "ver2": 103234725.57,
+      "sp500": 101282956.55,
+      "ver2Return": 0.03234725571655983,
+      "sp500Return": 0.012829565475636295,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-08",
+        "gold": "2026-01-07",
+        "btc": "2026-01-07",
+        "fx": "2026-01-07"
+      }
+    },
+    {
+      "date": "2026-01-09",
+      "ver2": 104138839.78,
+      "sp500": 102381081.48,
+      "ver2Return": 0.041388397842114344,
+      "sp500Return": 0.023810814806873415,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-09",
+        "gold": "2026-01-08",
+        "btc": "2026-01-08",
+        "fx": "2026-01-08"
+      }
+    },
+    {
+      "date": "2026-01-12",
+      "ver2": 105156998.77,
+      "sp500": 102929903.15,
+      "ver2Return": 0.05156998766299781,
+      "sp500Return": 0.029299031483259963,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-12",
+        "gold": "2026-01-09",
+        "btc": "2026-01-09",
+        "fx": "2026-01-09"
+      }
+    },
+    {
+      "date": "2026-01-13",
+      "ver2": 107506527.74,
+      "sp500": 103289382.85,
+      "ver2Return": 0.07506527742909963,
+      "sp500Return": 0.032893828509102274,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-13",
+        "gold": "2026-01-12",
+        "btc": "2026-01-12",
+        "fx": "2026-01-12"
+      }
+    },
+    {
+      "date": "2026-01-14",
+      "ver2": 107987874.27,
+      "sp500": 103419467.61,
+      "ver2Return": 0.07987874268795436,
+      "sp500Return": 0.03419467609305937,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-14",
+        "gold": "2026-01-13",
+        "btc": "2026-01-13",
+        "fx": "2026-01-13"
+      }
+    },
+    {
+      "date": "2026-01-15",
+      "ver2": 108265624.29,
+      "sp500": 102937914.87,
+      "ver2Return": 0.08265624287646633,
+      "sp500Return": 0.029379148742124217,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-15",
+        "gold": "2026-01-14",
+        "btc": "2026-01-14",
+        "fx": "2026-01-14"
+      }
+    },
+    {
+      "date": "2026-01-16",
+      "ver2": 108000489.25,
+      "sp500": 103189216.55,
+      "ver2Return": 0.08000489245871978,
+      "sp500Return": 0.03189216545809348,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-16",
+        "gold": "2026-01-15",
+        "btc": "2026-01-15",
+        "fx": "2026-01-15"
+      }
+    },
+    {
+      "date": "2026-01-20",
+      "ver2": 107740743.88,
+      "sp500": 101318959.28,
+      "ver2Return": 0.07740743877886747,
+      "sp500Return": 0.01318959277952092,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-20",
+        "gold": "2026-01-16",
+        "btc": "2026-01-16",
+        "fx": "2026-01-19"
+      }
+    },
+    {
+      "date": "2026-01-21",
+      "ver2": 111467889.62,
+      "sp500": 102492713.5,
+      "ver2Return": 0.11467889621254734,
+      "sp500Return": 0.024927134991665545,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-21",
+        "gold": "2026-01-20",
+        "btc": "2026-01-20",
+        "fx": "2026-01-19"
+      }
+    },
+    {
+      "date": "2026-01-22",
+      "ver2": 112403079.82,
+      "sp500": 102501402.79,
+      "ver2Return": 0.1240307982117026,
+      "sp500Return": 0.025014027933257355,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-22",
+        "gold": "2026-01-21",
+        "btc": "2026-01-21",
+        "fx": "2026-01-21"
+      }
+    },
+    {
+      "date": "2026-01-23",
+      "ver2": 114555949.09,
+      "sp500": 102762337.0,
+      "ver2Return": 0.1455594908769906,
+      "sp500Return": 0.027623370006421233,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-23",
+        "gold": "2026-01-22",
+        "btc": "2026-01-22",
+        "fx": "2026-01-22"
+      }
+    },
+    {
+      "date": "2026-01-26",
+      "ver2": 115866143.02,
+      "sp500": 103227244.94,
+      "ver2Return": 0.15866143020093149,
+      "sp500Return": 0.032272449353454524,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-26",
+        "gold": "2026-01-23",
+        "btc": "2026-01-23",
+        "fx": "2026-01-23"
+      }
+    },
+    {
+      "date": "2026-01-27",
+      "ver2": 115406623.29,
+      "sp500": 101686937.07,
+      "ver2Return": 0.15406623292495158,
+      "sp500Return": 0.016869370701902975,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-27",
+        "gold": "2026-01-26",
+        "btc": "2026-01-26",
+        "fx": "2026-01-26"
+      }
+    },
+    {
+      "date": "2026-01-28",
+      "ver2": 117845926.7,
+      "sp500": 101588958.41,
+      "ver2Return": 0.178459266983249,
+      "sp500Return": 0.01588958408890062,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-28",
+        "gold": "2026-01-27",
+        "btc": "2026-01-27",
+        "fx": "2026-01-27"
+      }
+    },
+    {
+      "date": "2026-01-29",
+      "ver2": 121347396.17,
+      "sp500": 100850775.89,
+      "ver2Return": 0.21347396173998767,
+      "sp500Return": 0.008507758946496802,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-29",
+        "gold": "2026-01-28",
+        "btc": "2026-01-28",
+        "fx": "2026-01-28"
+      }
+    },
+    {
+      "date": "2026-01-30",
+      "ver2": 121678032.25,
+      "sp500": 100392061.99,
+      "ver2Return": 0.21678032250606938,
+      "sp500Return": 0.003920619878047038,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-01-30",
+        "gold": "2026-01-29",
+        "btc": "2026-01-29",
+        "fx": "2026-01-29"
+      }
+    },
+    {
+      "date": "2026-02-02",
+      "ver2": 111200852.91,
+      "sp500": 101824471.35,
+      "ver2Return": 0.1120085290954318,
+      "sp500Return": 0.018244713467874485,
+      "phase": "backtest",
+      "rebalanced": true,
+      "signalMissing": false,
+      "decision": {
+        "type": "retrospective",
+        "cutoff": "2026-01-28"
+      },
+      "targetWeights": {
+        "equity": 0.2,
+        "btc": 0.0,
+        "gold": 0.7000000000000001,
+        "cash": 0.1
+      },
+      "sourceDates": {
+        "equity": "2026-02-02",
+        "gold": "2026-01-30",
+        "btc": "2026-01-30",
+        "fx": "2026-01-30"
+      }
+    },
+    {
+      "date": "2026-02-03",
+      "ver2": 108520756.25,
+      "sp500": 101625335.45,
+      "ver2Return": 0.085207562533693,
+      "sp500Return": 0.016253354482468563,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-03",
+        "gold": "2026-02-02",
+        "btc": "2026-02-02",
+        "fx": "2026-02-02"
+      }
+    },
+    {
+      "date": "2026-02-04",
+      "ver2": 112858901.18,
+      "sp500": 100859533.61,
+      "ver2Return": 0.12858901177652116,
+      "sp500Return": 0.008595336146864696,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-04",
+        "gold": "2026-02-03",
+        "btc": "2026-02-03",
+        "fx": "2026-02-03"
+      }
+    },
+    {
+      "date": "2026-02-05",
+      "ver2": 112998519.52,
+      "sp500": 100117824.47,
+      "ver2Return": 0.12998519519052176,
+      "sp500Return": 0.0011782447262616014,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-05",
+        "gold": "2026-02-04",
+        "btc": "2026-02-04",
+        "fx": "2026-02-04"
+      }
+    },
+    {
+      "date": "2026-02-06",
+      "ver2": 111897744.51,
+      "sp500": 102621731.55,
+      "ver2Return": 0.1189774451342247,
+      "sp500Return": 0.026217315462652158,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-06",
+        "gold": "2026-02-05",
+        "btc": "2026-02-05",
+        "fx": "2026-02-05"
+      }
+    },
+    {
+      "date": "2026-02-09",
+      "ver2": 114334785.94,
+      "sp500": 103126098.68,
+      "ver2Return": 0.14334785944265072,
+      "sp500Return": 0.03126098679961142,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-09",
+        "gold": "2026-02-06",
+        "btc": "2026-02-06",
+        "fx": "2026-02-06"
+      }
+    },
+    {
+      "date": "2026-02-10",
+      "ver2": 115968265.45,
+      "sp500": 102442908.96,
+      "ver2Return": 0.1596826544635117,
+      "sp500Return": 0.024429089617573174,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-10",
+        "gold": "2026-02-09",
+        "btc": "2026-02-09",
+        "fx": "2026-02-09"
+      }
+    },
+    {
+      "date": "2026-02-11",
+      "ver2": 115019684.66,
+      "sp500": 102294309.27,
+      "ver2Return": 0.1501968466236825,
+      "sp500Return": 0.022943092656449338,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-11",
+        "gold": "2026-02-10",
+        "btc": "2026-02-10",
+        "fx": "2026-02-10"
+      }
+    },
+    {
+      "date": "2026-02-12",
+      "ver2": 115181914.98,
+      "sp500": 100300558.03,
+      "ver2Return": 0.15181914977059252,
+      "sp500Return": 0.0030055802967718925,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-12",
+        "gold": "2026-02-11",
+        "btc": "2026-02-11",
+        "fx": "2026-02-11"
+      }
+    },
+    {
+      "date": "2026-02-13",
+      "ver2": 111296532.63,
+      "sp500": 99240380.72,
+      "ver2Return": 0.11296532630016354,
+      "sp500Return": -0.007596192795774059,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-13",
+        "gold": "2026-02-12",
+        "btc": "2026-02-12",
+        "fx": "2026-02-12"
+      }
+    },
+    {
+      "date": "2026-02-17",
+      "ver2": 113797601.03,
+      "sp500": 99928936.4,
+      "ver2Return": 0.13797601030842022,
+      "sp500Return": -0.0007106360067227202,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-17",
+        "gold": "2026-02-13",
+        "btc": "2026-02-13",
+        "fx": "2026-02-16"
+      }
+    },
+    {
+      "date": "2026-02-18",
+      "ver2": 111432203.17,
+      "sp500": 100485443.03,
+      "ver2Return": 0.11432203172724353,
+      "sp500Return": 0.004854430338133486,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-18",
+        "gold": "2026-02-17",
+        "btc": "2026-02-17",
+        "fx": "2026-02-16"
+      }
+    },
+    {
+      "date": "2026-02-19",
+      "ver2": 113387305.45,
+      "sp500": 100491799.73,
+      "ver2Return": 0.13387305446101938,
+      "sp500Return": 0.004917997323745205,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-19",
+        "gold": "2026-02-18",
+        "btc": "2026-02-18",
+        "fx": "2026-02-18"
+      }
+    },
+    {
+      "date": "2026-02-20",
+      "ver2": 114045100.3,
+      "sp500": 101419506.71,
+      "ver2Return": 0.14045100300283564,
+      "sp500Return": 0.014195067090086999,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-20",
+        "gold": "2026-02-19",
+        "btc": "2026-02-19",
+        "fx": "2026-02-19"
+      }
+    },
+    {
+      "date": "2026-02-23",
+      "ver2": 115300275.4,
+      "sp500": 100316087.29,
+      "ver2Return": 0.15300275404189279,
+      "sp500Return": 0.0031608728781042927,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-23",
+        "gold": "2026-02-20",
+        "btc": "2026-02-20",
+        "fx": "2026-02-20"
+      }
+    },
+    {
+      "date": "2026-02-24",
+      "ver2": 117057528.87,
+      "sp500": 100456203.16,
+      "ver2Return": 0.1705752887240637,
+      "sp500Return": 0.004562031586404114,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-24",
+        "gold": "2026-02-23",
+        "btc": "2026-02-23",
+        "fx": "2026-02-23"
+      }
+    },
+    {
+      "date": "2026-02-25",
+      "ver2": 116213035.37,
+      "sp500": 101407094.08,
+      "ver2Return": 0.16213035373513374,
+      "sp500Return": 0.014070940809716825,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-25",
+        "gold": "2026-02-24",
+        "btc": "2026-02-24",
+        "fx": "2026-02-24"
+      }
+    },
+    {
+      "date": "2026-02-26",
+      "ver2": 114819378.74,
+      "sp500": 99814642.95,
+      "ver2Return": 0.14819378744247969,
+      "sp500Return": -0.0018535705419954196,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-26",
+        "gold": "2026-02-25",
+        "btc": "2026-02-25",
+        "fx": "2026-02-25"
+      }
+    },
+    {
+      "date": "2026-02-27",
+      "ver2": 115473469.75,
+      "sp500": 99427452.06,
+      "ver2Return": 0.1547346975198296,
+      "sp500Return": -0.005725479430277902,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-02-27",
+        "gold": "2026-02-26",
+        "btc": "2026-02-26",
+        "fx": "2026-02-26"
+      }
+    },
+    {
+      "date": "2026-03-02",
+      "ver2": 117495777.01,
+      "sp500": 100389697.83,
+      "ver2Return": 0.1749577701012177,
+      "sp500Return": 0.003896978349281932,
+      "phase": "backtest",
+      "rebalanced": true,
+      "signalMissing": false,
+      "decision": {
+        "type": "retrospective",
+        "cutoff": "2026-02-25"
+      },
+      "targetWeights": {
+        "equity": 0.3,
+        "btc": 0.0,
+        "gold": 0.6000000000000001,
+        "cash": 0.1
+      },
+      "sourceDates": {
+        "equity": "2026-03-02",
+        "gold": "2026-02-27",
+        "btc": "2026-02-27",
+        "fx": "2026-02-27"
+      }
+    },
+    {
+      "date": "2026-03-03",
+      "ver2": 119408744.23,
+      "sp500": 100674609.85,
+      "ver2Return": 0.1940874423348129,
+      "sp500Return": 0.006746098477252271,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-03",
+        "gold": "2026-03-02",
+        "btc": "2026-03-02",
+        "fx": "2026-03-02"
+      }
+    },
+    {
+      "date": "2026-03-04",
+      "ver2": 119083286.77,
+      "sp500": 103963385.47,
+      "ver2Return": 0.19083286770185492,
+      "sp500Return": 0.03963385470952918,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-04",
+        "gold": "2026-03-03",
+        "btc": "2026-03-03",
+        "fx": "2026-03-03"
+      }
+    },
+    {
+      "date": "2026-03-05",
+      "ver2": 117403212.07,
+      "sp500": 101463445.53,
+      "ver2Return": 0.17403212068126672,
+      "sp500Return": 0.014634455308238259,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-05",
+        "gold": "2026-03-04",
+        "btc": "2026-03-04",
+        "fx": "2026-03-04"
+      }
+    },
+    {
+      "date": "2026-03-06",
+      "ver2": 116789692.31,
+      "sp500": 100739391.14,
+      "ver2Return": 0.16789692307304693,
+      "sp500Return": 0.0073939113843146664,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-06",
+        "gold": "2026-03-05",
+        "btc": "2026-03-05",
+        "fx": "2026-03-05"
+      }
+    },
+    {
+      "date": "2026-03-09",
+      "ver2": 119052791.37,
+      "sp500": 102454095.8,
+      "ver2Return": 0.19052791373662048,
+      "sp500Return": 0.024540958029787063,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-09",
+        "gold": "2026-03-06",
+        "btc": "2026-03-06",
+        "fx": "2026-03-06"
+      }
+    },
+    {
+      "date": "2026-03-10",
+      "ver2": 118348239.05,
+      "sp500": 101796480.68,
+      "ver2Return": 0.18348239051226134,
+      "sp500Return": 0.017964806792390542,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-10",
+        "gold": "2026-03-09",
+        "btc": "2026-03-09",
+        "fx": "2026-03-09"
+      }
+    },
+    {
+      "date": "2026-03-11",
+      "ver2": 117803125.0,
+      "sp500": 100469939.31,
+      "ver2Return": 0.17803125003763443,
+      "sp500Return": 0.004699393062439494,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-11",
+        "gold": "2026-03-10",
+        "btc": "2026-03-10",
+        "fx": "2026-03-10"
+      }
+    },
+    {
+      "date": "2026-03-12",
+      "ver2": 117573905.39,
+      "sp500": 99428841.43,
+      "ver2Return": 0.17573905393893297,
+      "sp500Return": -0.005711585748238379,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-12",
+        "gold": "2026-03-11",
+        "btc": "2026-03-11",
+        "fx": "2026-03-11"
+      }
+    },
+    {
+      "date": "2026-03-13",
+      "ver2": 117374173.19,
+      "sp500": 100112507.02,
+      "ver2Return": 0.17374173191521036,
+      "sp500Return": 0.0011250701908542826,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-13",
+        "gold": "2026-03-12",
+        "btc": "2026-03-12",
+        "fx": "2026-03-12"
+      }
+    },
+    {
+      "date": "2026-03-16",
+      "ver2": 117030731.33,
+      "sp500": 101363694.45,
+      "ver2Return": 0.1703073133065547,
+      "sp500Return": 0.0136369444976987,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-16",
+        "gold": "2026-03-13",
+        "btc": "2026-03-13",
+        "fx": "2026-03-13"
+      }
+    },
+    {
+      "date": "2026-03-17",
+      "ver2": 116658166.86,
+      "sp500": 101220326.06,
+      "ver2Return": 0.16658166858625223,
+      "sp500Return": 0.012203260553320439,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-17",
+        "gold": "2026-03-16",
+        "btc": "2026-03-16",
+        "fx": "2026-03-16"
+      }
+    },
+    {
+      "date": "2026-03-18",
+      "ver2": 115806015.38,
+      "sp500": 99658244.86,
+      "ver2Return": 0.15806015384109662,
+      "sp500Return": -0.0034175514405768714,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-18",
+        "gold": "2026-03-17",
+        "btc": "2026-03-17",
+        "fx": "2026-03-17"
+      }
+    },
+    {
+      "date": "2026-03-19",
+      "ver2": 114518017.39,
+      "sp500": 100339278.19,
+      "ver2Return": 0.14518017390278293,
+      "sp500Return": 0.003392781911452092,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-19",
+        "gold": "2026-03-18",
+        "btc": "2026-03-18",
+        "fx": "2026-03-18"
+      }
+    },
+    {
+      "date": "2026-03-20",
+      "ver2": 110869417.89,
+      "sp500": 98485516.77,
+      "ver2Return": 0.10869417888073585,
+      "sp500Return": -0.015144832310881817,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-20",
+        "gold": "2026-03-19",
+        "btc": "2026-03-19",
+        "fx": "2026-03-19"
+      }
+    },
+    {
+      "date": "2026-03-23",
+      "ver2": 109848772.53,
+      "sp500": 100186537.04,
+      "ver2Return": 0.09848772534795946,
+      "sp500Return": 0.0018653704315172437,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-23",
+        "gold": "2026-03-20",
+        "btc": "2026-03-20",
+        "fx": "2026-03-20"
+      }
+    },
+    {
+      "date": "2026-03-24",
+      "ver2": 106878214.87,
+      "sp500": 98375274.23,
+      "ver2Return": 0.06878214869915777,
+      "sp500Return": -0.016247257670218063,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-24",
+        "gold": "2026-03-23",
+        "btc": "2026-03-23",
+        "fx": "2026-03-23"
+      }
+    },
+    {
+      "date": "2026-03-25",
+      "ver2": 107905894.52,
+      "sp500": 99746824.55,
+      "ver2Return": 0.07905894519148071,
+      "sp500Return": -0.0025317545191484436,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-25",
+        "gold": "2026-03-24",
+        "btc": "2026-03-24",
+        "fx": "2026-03-24"
+      }
+    },
+    {
+      "date": "2026-03-26",
+      "ver2": 109238819.29,
+      "sp500": 98139370.13,
+      "ver2Return": 0.09238819293024991,
+      "sp500Return": -0.018606298706772884,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-26",
+        "gold": "2026-03-25",
+        "btc": "2026-03-25",
+        "fx": "2026-03-25"
+      }
+    },
+    {
+      "date": "2026-03-27",
+      "ver2": 106871554.33,
+      "sp500": 97039638.35,
+      "ver2Return": 0.06871554331089036,
+      "sp500Return": -0.029603616528243615,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-27",
+        "gold": "2026-03-26",
+        "btc": "2026-03-26",
+        "fx": "2026-03-26"
+      }
+    },
+    {
+      "date": "2026-03-30",
+      "ver2": 109100636.16,
+      "sp500": 96914788.85,
+      "ver2Return": 0.09100636156757491,
+      "sp500Return": -0.030852111470514143,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-30",
+        "gold": "2026-03-27",
+        "btc": "2026-03-27",
+        "fx": "2026-03-27"
+      }
+    },
+    {
+      "date": "2026-03-31",
+      "ver2": 110599728.22,
+      "sp500": 100265187.98,
+      "ver2Return": 0.10599728217287696,
+      "sp500Return": 0.002651879808819313,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-03-31",
+        "gold": "2026-03-30",
+        "btc": "2026-03-30",
+        "fx": "2026-03-30"
+      }
+    },
+    {
+      "date": "2026-04-01",
+      "ver2": 113750611.85,
+      "sp500": 101494923.51,
+      "ver2Return": 0.13750611850209693,
+      "sp500Return": 0.014949235129082306,
+      "phase": "backtest",
+      "rebalanced": true,
+      "signalMissing": false,
+      "decision": {
+        "type": "retrospective",
+        "cutoff": "2026-03-29"
+      },
+      "targetWeights": {
+        "equity": 0.3,
+        "btc": 0.0,
+        "gold": 0.6000000000000001,
+        "cash": 0.1
+      },
+      "sourceDates": {
+        "equity": "2026-04-01",
+        "gold": "2026-03-31",
+        "btc": "2026-03-31",
+        "fx": "2026-03-31"
+      }
+    },
+    {
+      "date": "2026-04-02",
+      "ver2": 113878876.02,
+      "sp500": 100508006.05,
+      "ver2Return": 0.13878876018623187,
+      "sp500Return": 0.005080060538559916,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-02",
+        "gold": "2026-04-01",
+        "btc": "2026-04-01",
+        "fx": "2026-04-01"
+      }
+    },
+    {
+      "date": "2026-04-06",
+      "ver2": 112739572.89,
+      "sp500": 101018496.87,
+      "ver2Return": 0.12739572892053896,
+      "sp500Return": 0.010184968689979979,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-06",
+        "gold": "2026-04-02",
+        "btc": "2026-04-02",
+        "fx": "2026-04-03"
+      }
+    },
+    {
+      "date": "2026-04-07",
+      "ver2": 112524237.78,
+      "sp500": 101095194.79,
+      "ver2Return": 0.1252423778233982,
+      "sp500Return": 0.010951947909442428,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-07",
+        "gold": "2026-04-06",
+        "btc": "2026-04-06",
+        "fx": "2026-04-03"
+      }
+    },
+    {
+      "date": "2026-04-08",
+      "ver2": 113494517.6,
+      "sp500": 103086851.56,
+      "ver2Return": 0.13494517596544986,
+      "sp500Return": 0.030868515604106417,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-08",
+        "gold": "2026-04-07",
+        "btc": "2026-04-07",
+        "fx": "2026-04-07"
+      }
+    },
+    {
+      "date": "2026-04-09",
+      "ver2": 112601438.66,
+      "sp500": 102175330.46,
+      "ver2Return": 0.12601438664240172,
+      "sp500Return": 0.02175330461378877,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-09",
+        "gold": "2026-04-08",
+        "btc": "2026-04-08",
+        "fx": "2026-04-08"
+      }
+    },
+    {
+      "date": "2026-04-10",
+      "ver2": 113142976.26,
+      "sp500": 102101078.95,
+      "ver2Return": 0.13142976261050032,
+      "sp500Return": 0.02101078952512392,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-10",
+        "gold": "2026-04-09",
+        "btc": "2026-04-09",
+        "fx": "2026-04-09"
+      }
+    },
+    {
+      "date": "2026-04-13",
+      "ver2": 113501053.72,
+      "sp500": 103276898.15,
+      "ver2Return": 0.13501053716825728,
+      "sp500Return": 0.03276898145146512,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-13",
+        "gold": "2026-04-10",
+        "btc": "2026-04-10",
+        "fx": "2026-04-10"
+      }
+    },
+    {
+      "date": "2026-04-14",
+      "ver2": 113827448.12,
+      "sp500": 104678664.28,
+      "ver2Return": 0.13827448122423158,
+      "sp500Return": 0.04678664278693345,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-14",
+        "gold": "2026-04-13",
+        "btc": "2026-04-13",
+        "fx": "2026-04-13"
+      }
+    },
+    {
+      "date": "2026-04-15",
+      "ver2": 114488699.95,
+      "sp500": 104409227.09,
+      "ver2Return": 0.14488699951086303,
+      "sp500Return": 0.04409227089317791,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-15",
+        "gold": "2026-04-14",
+        "btc": "2026-04-14",
+        "fx": "2026-04-14"
+      }
+    },
+    {
+      "date": "2026-04-16",
+      "ver2": 114413122.84,
+      "sp500": 105212540.6,
+      "ver2Return": 0.1441312283652807,
+      "sp500Return": 0.05212540595496962,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-16",
+        "gold": "2026-04-15",
+        "btc": "2026-04-15",
+        "fx": "2026-04-15"
+      }
+    },
+    {
+      "date": "2026-04-17",
+      "ver2": 114946213.45,
+      "sp500": 106626140.99,
+      "ver2Return": 0.14946213447982992,
+      "sp500Return": 0.0662614099282206,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-17",
+        "gold": "2026-04-16",
+        "btc": "2026-04-16",
+        "fx": "2026-04-16"
+      }
+    },
+    {
+      "date": "2026-04-20",
+      "ver2": 114304114.4,
+      "sp500": 104924191.2,
+      "ver2Return": 0.14304114399916568,
+      "sp500Return": 0.049241912030770774,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-20",
+        "gold": "2026-04-17",
+        "btc": "2026-04-17",
+        "fx": "2026-04-17"
+      }
+    },
+    {
+      "date": "2026-04-21",
+      "ver2": 114402230.59,
+      "sp500": 105160473.0,
+      "ver2Return": 0.1440223059183452,
+      "sp500Return": 0.0516047299940372,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-21",
+        "gold": "2026-04-20",
+        "btc": "2026-04-20",
+        "fx": "2026-04-20"
+      }
+    },
+    {
+      "date": "2026-04-22",
+      "ver2": 113180109.62,
+      "sp500": 106578677.33,
+      "ver2Return": 0.13180109620782243,
+      "sp500Return": 0.0657867732914259,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-22",
+        "gold": "2026-04-21",
+        "btc": "2026-04-21",
+        "fx": "2026-04-21"
+      }
+    },
+    {
+      "date": "2026-04-23",
+      "ver2": 114178428.55,
+      "sp500": 106436281.93,
+      "ver2Return": 0.1417842854753275,
+      "sp500Return": 0.0643628192532677,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-23",
+        "gold": "2026-04-22",
+        "btc": "2026-04-22",
+        "fx": "2026-04-22"
+      }
+    },
+    {
+      "date": "2026-04-24",
+      "ver2": 113686301.22,
+      "sp500": 107126615.47,
+      "ver2Return": 0.13686301219978803,
+      "sp500Return": 0.07126615469885245,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-24",
+        "gold": "2026-04-23",
+        "btc": "2026-04-23",
+        "fx": "2026-04-23"
+      }
+    },
+    {
+      "date": "2026-04-27",
+      "ver2": 114143997.41,
+      "sp500": 107391049.39,
+      "ver2Return": 0.14143997413540066,
+      "sp500Return": 0.07391049389203785,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-27",
+        "gold": "2026-04-24",
+        "btc": "2026-04-24",
+        "fx": "2026-04-24"
+      }
+    },
+    {
+      "date": "2026-04-28",
+      "ver2": 112969640.72,
+      "sp500": 106346090.55,
+      "ver2Return": 0.12969640715751152,
+      "sp500Return": 0.06346090546396521,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-28",
+        "gold": "2026-04-27",
+        "btc": "2026-04-27",
+        "fx": "2026-04-27"
+      }
+    },
+    {
+      "date": "2026-04-29",
+      "ver2": 111906047.69,
+      "sp500": 106461767.38,
+      "ver2Return": 0.1190604769271999,
+      "sp500Return": 0.06461767383911732,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-29",
+        "gold": "2026-04-28",
+        "btc": "2026-04-28",
+        "fx": "2026-04-28"
+      }
+    },
+    {
+      "date": "2026-04-30",
+      "ver2": 112236739.79,
+      "sp500": 108250577.21,
+      "ver2Return": 0.1223673978583073,
+      "sp500Return": 0.08250577207119858,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-04-30",
+        "gold": "2026-04-29",
+        "btc": "2026-04-29",
+        "fx": "2026-04-29"
+      }
+    },
+    {
+      "date": "2026-05-01",
+      "ver2": 112813181.11,
+      "sp500": 108050026.64,
+      "ver2Return": 0.12813181113638383,
+      "sp500Return": 0.08050026644565933,
+      "phase": "backtest",
+      "rebalanced": true,
+      "signalMissing": false,
+      "decision": {
+        "type": "retrospective",
+        "cutoff": "2026-04-28"
+      },
+      "targetWeights": {
+        "equity": 0.5,
+        "btc": 0.0,
+        "gold": 0.4,
+        "cash": 0.1
+      },
+      "sourceDates": {
+        "equity": "2026-05-01",
+        "gold": "2026-04-30",
+        "btc": "2026-04-30",
+        "fx": "2026-04-30"
+      }
+    },
+    {
+      "date": "2026-05-04",
+      "ver2": 112005569.41,
+      "sp500": 107061294.86,
+      "ver2Return": 0.12005569411311612,
+      "sp500Return": 0.07061294858034128,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-04",
+        "gold": "2026-05-01",
+        "btc": "2026-05-01",
+        "fx": "2026-05-01"
+      }
+    },
+    {
+      "date": "2026-05-05",
+      "ver2": 111618823.55,
+      "sp500": 107999379.4,
+      "ver2Return": 0.11618823553353752,
+      "sp500Return": 0.0799937940224702,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-05",
+        "gold": "2026-05-04",
+        "btc": "2026-05-04",
+        "fx": "2026-05-04"
+      }
+    },
+    {
+      "date": "2026-05-06",
+      "ver2": 112815961.58,
+      "sp500": 109586837.78,
+      "ver2Return": 0.12815961577540436,
+      "sp500Return": 0.09586837780720114,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-06",
+        "gold": "2026-05-05",
+        "btc": "2026-05-05",
+        "fx": "2026-05-05"
+      }
+    },
+    {
+      "date": "2026-05-07",
+      "ver2": 112295901.56,
+      "sp500": 107428351.6,
+      "ver2Return": 0.12295901557077382,
+      "sp500Return": 0.07428351596048022,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-07",
+        "gold": "2026-05-06",
+        "btc": "2026-05-06",
+        "fx": "2026-05-06"
+      }
+    },
+    {
+      "date": "2026-05-08",
+      "ver2": 112994561.92,
+      "sp500": 108466772.12,
+      "ver2Return": 0.12994561915126468,
+      "sp500Return": 0.0846677211822473,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-08",
+        "gold": "2026-05-07",
+        "btc": "2026-05-07",
+        "fx": "2026-05-07"
+      }
+    },
+    {
+      "date": "2026-05-11",
+      "ver2": 114225420.18,
+      "sp500": 109653596.17,
+      "ver2Return": 0.1422542017915902,
+      "sp500Return": 0.09653596166748546,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-11",
+        "gold": "2026-05-08",
+        "btc": "2026-05-08",
+        "fx": "2026-05-08"
+      }
+    },
+    {
+      "date": "2026-05-12",
+      "ver2": 114829002.1,
+      "sp500": 110118907.6,
+      "ver2Return": 0.14829002095613442,
+      "sp500Return": 0.10118907603963745,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-12",
+        "gold": "2026-05-11",
+        "btc": "2026-05-11",
+        "fx": "2026-05-11"
+      }
+    },
+    {
+      "date": "2026-05-13",
+      "ver2": 116340850.79,
+      "sp500": 112206273.48,
+      "ver2Return": 0.16340850790388028,
+      "sp500Return": 0.12206273481846441,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-13",
+        "gold": "2026-05-12",
+        "btc": "2026-05-12",
+        "fx": "2026-05-12"
+      }
+    },
+    {
+      "date": "2026-05-14",
+      "ver2": 116554223.42,
+      "sp500": 113100950.12,
+      "ver2Return": 0.16554223418021996,
+      "sp500Return": 0.13100950118749521,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-14",
+        "gold": "2026-05-13",
+        "btc": "2026-05-13",
+        "fx": "2026-05-13"
+      }
+    },
+    {
+      "date": "2026-05-15",
+      "ver2": 115531402.85,
+      "sp500": 111748079.01,
+      "ver2Return": 0.1553140284546275,
+      "sp500Return": 0.11748079011833057,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-15",
+        "gold": "2026-05-14",
+        "btc": "2026-05-14",
+        "fx": "2026-05-14"
+      }
+    },
+    {
+      "date": "2026-05-18",
+      "ver2": 114907303.09,
+      "sp500": 112193983.31,
+      "ver2Return": 0.1490730308907986,
+      "sp500Return": 0.12193983306614031,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-18",
+        "gold": "2026-05-15",
+        "btc": "2026-05-15",
+        "fx": "2026-05-15"
+      }
+    },
+    {
+      "date": "2026-05-19",
+      "ver2": 114562664.88,
+      "sp500": 111360934.63,
+      "ver2Return": 0.14562664878240472,
+      "sp500Return": 0.11360934626657149,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-19",
+        "gold": "2026-05-18",
+        "btc": "2026-05-18",
+        "fx": "2026-05-18"
+      }
+    },
+    {
+      "date": "2026-05-20",
+      "ver2": 115458566.42,
+      "sp500": 113666548.6,
+      "ver2Return": 0.15458566423185838,
+      "sp500Return": 0.13666548602793194,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-20",
+        "gold": "2026-05-19",
+        "btc": "2026-05-19",
+        "fx": "2026-05-19"
+      }
+    },
+    {
+      "date": "2026-05-21",
+      "ver2": 115196660.9,
+      "sp500": 112791983.66,
+      "ver2Return": 0.15196660901067283,
+      "sp500Return": 0.12791983658186656,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-21",
+        "gold": "2026-05-20",
+        "btc": "2026-05-20",
+        "fx": "2026-05-20"
+      }
+    },
+    {
+      "date": "2026-05-22",
+      "ver2": 116108817.21,
+      "sp500": 113993532.26,
+      "ver2Return": 0.16108817206304837,
+      "sp500Return": 0.13993532257783214,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-22",
+        "gold": "2026-05-21",
+        "btc": "2026-05-21",
+        "fx": "2026-05-21"
+      }
+    },
+    {
+      "date": "2026-05-26",
+      "ver2": 116505035.99,
+      "sp500": 115103426.0,
+      "ver2Return": 0.16505035991542916,
+      "sp500Return": 0.15103426004725606,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-26",
+        "gold": "2026-05-22",
+        "btc": "2026-05-22",
+        "fx": "2026-05-25"
+      }
+    },
+    {
+      "date": "2026-05-27",
+      "ver2": 116521111.96,
+      "sp500": 115122714.23,
+      "ver2Return": 0.16521111961773793,
+      "sp500Return": 0.15122714233886536,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-27",
+        "gold": "2026-05-26",
+        "btc": "2026-05-26",
+        "fx": "2026-05-25"
+      }
+    },
+    {
+      "date": "2026-05-28",
+      "ver2": 115186959.83,
+      "sp500": 114573253.7,
+      "ver2Return": 0.15186959827106272,
+      "sp500Return": 0.1457325369705218,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-28",
+        "gold": "2026-05-27",
+        "btc": "2026-05-27",
+        "fx": "2026-05-27"
+      }
+    },
+    {
+      "date": "2026-05-29",
+      "ver2": 115671348.25,
+      "sp500": 114700180.59,
+      "ver2Return": 0.1567134825248082,
+      "sp500Return": 0.14700180589509348,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-05-29",
+        "gold": "2026-05-28",
+        "btc": "2026-05-28",
+        "fx": "2026-05-28"
+      }
+    },
+    {
+      "date": "2026-06-01",
+      "ver2": 116828020.42,
+      "sp500": 115666505.24,
+      "ver2Return": 0.1682802041800946,
+      "sp500Return": 0.15666505241082018,
+      "phase": "backtest",
+      "rebalanced": true,
+      "signalMissing": false,
+      "decision": {
+        "type": "retrospective",
+        "cutoff": "2026-05-27"
+      },
+      "targetWeights": {
+        "equity": 0.24999999999999997,
+        "btc": 0.29000000000000004,
+        "gold": 0.26,
+        "cash": 0.2
+      },
+      "sourceDates": {
+        "equity": "2026-06-01",
+        "gold": "2026-05-29",
+        "btc": "2026-05-29",
+        "fx": "2026-05-29"
+      }
+    },
+    {
+      "date": "2026-06-02",
+      "ver2": 116055326.17,
+      "sp500": 116438899.2,
+      "ver2Return": 0.16055326170443474,
+      "sp500Return": 0.16438899203635415,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-02",
+        "gold": "2026-06-01",
+        "btc": "2026-06-01",
+        "fx": "2026-06-01"
+      }
+    },
+    {
+      "date": "2026-06-03",
+      "ver2": 114145760.59,
+      "sp500": 115909163.98,
+      "ver2Return": 0.1414576059007222,
+      "sp500Return": 0.15909163975450547,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-03",
+        "gold": "2026-06-02",
+        "btc": "2026-06-02",
+        "fx": "2026-06-02"
+      }
+    },
+    {
+      "date": "2026-06-04",
+      "ver2": 113744330.69,
+      "sp500": 117198335.52,
+      "ver2Return": 0.13744330690697382,
+      "sp500Return": 0.1719833551712715,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-04",
+        "gold": "2026-06-03",
+        "btc": "2026-06-03",
+        "fx": "2026-06-03"
+      }
+    },
+    {
+      "date": "2026-06-05",
+      "ver2": 112609165.81,
+      "sp500": 114423681.13,
+      "ver2Return": 0.1260916580938629,
+      "sp500Return": 0.14423681134778144,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-05",
+        "gold": "2026-06-04",
+        "btc": "2026-06-04",
+        "fx": "2026-06-04"
+      }
+    },
+    {
+      "date": "2026-06-08",
+      "ver2": 111291972.61,
+      "sp500": 116397319.94,
+      "ver2Return": 0.11291972612979673,
+      "sp500Return": 0.16397319938770338,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-08",
+        "gold": "2026-06-05",
+        "btc": "2026-06-05",
+        "fx": "2026-06-05"
+      }
+    },
+    {
+      "date": "2026-06-09",
+      "ver2": 111233843.13,
+      "sp500": 114148436.48,
+      "ver2Return": 0.11233843128128851,
+      "sp500Return": 0.14148436484340232,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-09",
+        "gold": "2026-06-08",
+        "btc": "2026-06-08",
+        "fx": "2026-06-08"
+      }
+    },
+    {
+      "date": "2026-06-10",
+      "ver2": 109585231.14,
+      "sp500": 112153697.01,
+      "ver2Return": 0.09585231144723094,
+      "sp500Return": 0.12153697013886045,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-10",
+        "gold": "2026-06-09",
+        "btc": "2026-06-09",
+        "fx": "2026-06-09"
+      }
+    },
+    {
+      "date": "2026-06-11",
+      "ver2": 108512474.47,
+      "sp500": 113726446.67,
+      "ver2Return": 0.08512474473216747,
+      "sp500Return": 0.13726446669001513,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-11",
+        "gold": "2026-06-10",
+        "btc": "2026-06-10",
+        "fx": "2026-06-10"
+      }
+    },
+    {
+      "date": "2026-06-12",
+      "ver2": 110972708.62,
+      "sp500": 115197775.7,
+      "ver2Return": 0.1097270862451778,
+      "sp500Return": 0.15197775700421734,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-12",
+        "gold": "2026-06-11",
+        "btc": "2026-06-11",
+        "fx": "2026-06-11"
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "ver2": 110532283.32,
+      "sp500": 115845906.55,
+      "ver2Return": 0.10532283319120928,
+      "sp500Return": 0.15845906549063504,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-15",
+        "gold": "2026-06-12",
+        "btc": "2026-06-12",
+        "fx": "2026-06-12"
+      }
+    },
+    {
+      "date": "2026-06-16",
+      "ver2": 112298820.89,
+      "sp500": 114927478.02,
+      "ver2Return": 0.12298820891579587,
+      "sp500Return": 0.14927478017411833,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-16",
+        "gold": "2026-06-15",
+        "btc": "2026-06-15",
+        "fx": "2026-06-15"
+      }
+    },
+    {
+      "date": "2026-06-17",
+      "ver2": 111390728.44,
+      "sp500": 113270325.09,
+      "ver2Return": 0.11390728443661202,
+      "sp500Return": 0.1327032509337216,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-17",
+        "gold": "2026-06-16",
+        "btc": "2026-06-16",
+        "fx": "2026-06-16"
+      }
+    },
+    {
+      "date": "2026-06-18",
+      "ver2": 110802241.05,
+      "sp500": 115012389.92,
+      "ver2Return": 0.10802241045773409,
+      "sp500Return": 0.15012389917377478,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-18",
+        "gold": "2026-06-17",
+        "btc": "2026-06-17",
+        "fx": "2026-06-17"
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "ver2": 110794311.25,
+      "sp500": 115737123.85,
+      "ver2Return": 0.1079431125493795,
+      "sp500Return": 0.1573712384512338,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-22",
+        "gold": "2026-06-18",
+        "btc": "2026-06-18",
+        "fx": "2026-06-19"
+      }
+    },
+    {
+      "date": "2026-06-23",
+      "ver2": 110918603.78,
+      "sp500": 114074815.37,
+      "ver2Return": 0.10918603778633651,
+      "sp500Return": 0.14074815373269933,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-23",
+        "gold": "2026-06-22",
+        "btc": "2026-06-22",
+        "fx": "2026-06-19"
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "ver2": 109510765.29,
+      "sp500": 114142866.37,
+      "ver2Return": 0.09510765293329637,
+      "sp500Return": 0.14142866370196838,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-24",
+        "gold": "2026-06-23",
+        "btc": "2026-06-23",
+        "fx": "2026-06-23"
+      }
+    },
+    {
+      "date": "2026-06-25",
+      "ver2": 108038521.7,
+      "sp500": 114849968.89,
+      "ver2Return": 0.08038521696199052,
+      "sp500Return": 0.1484996888509833,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-25",
+        "gold": "2026-06-24",
+        "btc": "2026-06-24",
+        "fx": "2026-06-24"
+      }
+    },
+    {
+      "date": "2026-06-26",
+      "ver2": 107802232.47,
+      "sp500": 114555759.13,
+      "ver2Return": 0.07802232470772097,
+      "sp500Return": 0.14555759134951063,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-26",
+        "gold": "2026-06-25",
+        "btc": "2026-06-25",
+        "fx": "2026-06-25"
+      }
+    },
+    {
+      "date": "2026-06-29",
+      "ver2": 108449795.02,
+      "sp500": 115616450.87,
+      "ver2Return": 0.08449795020739326,
+      "sp500Return": 0.1561645087024286,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-29",
+        "gold": "2026-06-26",
+        "btc": "2026-06-26",
+        "fx": "2026-06-26"
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "ver2": 109042574.85,
+      "sp500": 117104013.54,
+      "ver2Return": 0.09042574847013629,
+      "sp500Return": 0.17104013538652096,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-06-30",
+        "gold": "2026-06-29",
+        "btc": "2026-06-29",
+        "fx": "2026-06-29"
+      }
+    },
+    {
+      "date": "2026-07-01",
+      "ver2": 108596469.63,
+      "sp500": 117442761.25,
+      "ver2Return": 0.08596469634154258,
+      "sp500Return": 0.17442761247610905,
+      "phase": "backtest",
+      "rebalanced": true,
+      "signalMissing": false,
+      "decision": {
+        "type": "retrospective",
+        "cutoff": "2026-06-28"
+      },
+      "targetWeights": {
+        "equity": 0.19999999999999998,
+        "btc": 0.14,
+        "gold": 0.46,
+        "cash": 0.2
+      },
+      "sourceDates": {
+        "equity": "2026-07-01",
+        "gold": "2026-06-30",
+        "btc": "2026-06-30",
+        "fx": "2026-06-30"
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "ver2": 109296849.15,
+      "sp500": 117567414.47,
+      "ver2Return": 0.09296849146666974,
+      "sp500Return": 0.1756741447088539,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-02",
+        "gold": "2026-07-01",
+        "btc": "2026-07-01",
+        "fx": "2026-07-01"
+      }
+    },
+    {
+      "date": "2026-07-06",
+      "ver2": 109691219.82,
+      "sp500": 116867914.46,
+      "ver2Return": 0.0969121982141361,
+      "sp500Return": 0.16867914463288747,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-06",
+        "gold": "2026-07-02",
+        "btc": "2026-07-02",
+        "fx": "2026-07-03"
+      }
+    },
+    {
+      "date": "2026-07-07",
+      "ver2": 110695307.76,
+      "sp500": 116347565.7,
+      "ver2Return": 0.10695307764480111,
+      "sp500Return": 0.1634756569548914,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-07",
+        "gold": "2026-07-06",
+        "btc": "2026-07-06",
+        "fx": "2026-07-03"
+      }
+    },
+    {
+      "date": "2026-07-08",
+      "ver2": 109022994.85,
+      "sp500": 114675530.76,
+      "ver2Return": 0.09022994848543964,
+      "sp500Return": 0.14675530764866607,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-08",
+        "gold": "2026-07-07",
+        "btc": "2026-07-07",
+        "fx": "2026-07-07"
+      }
+    },
+    {
+      "date": "2026-07-09",
+      "ver2": 108066758.75,
+      "sp500": 115174216.61,
+      "ver2Return": 0.08066758754340198,
+      "sp500Return": 0.15174216611973068,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-09",
+        "gold": "2026-07-08",
+        "btc": "2026-07-08",
+        "fx": "2026-07-08"
+      }
+    },
+    {
+      "date": "2026-07-10",
+      "ver2": 108955305.98,
+      "sp500": 115717223.95,
+      "ver2Return": 0.08955305977149486,
+      "sp500Return": 0.15717223946920833,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-10",
+        "gold": "2026-07-09",
+        "btc": "2026-07-09",
+        "fx": "2026-07-09"
+      }
+    },
+    {
+      "date": "2026-07-13",
+      "ver2": 108401182.96,
+      "sp500": 114287386.85,
+      "ver2Return": 0.08401182962465681,
+      "sp500Return": 0.14287386847643924,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-13",
+        "gold": "2026-07-10",
+        "btc": "2026-07-10",
+        "fx": "2026-07-10"
+      }
+    },
+    {
+      "date": "2026-07-14",
+      "ver2": 106240426.69,
+      "sp500": 113989854.84,
+      "ver2Return": 0.0624042668690834,
+      "sp500Return": 0.13989854840671478,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-14",
+        "gold": "2026-07-13",
+        "btc": "2026-07-13",
+        "fx": "2026-07-13"
+      }
+    },
+    {
+      "date": "2026-07-15",
+      "ver2": 107240809.69,
+      "sp500": 114023390.56,
+      "ver2Return": 0.07240809692730821,
+      "sp500Return": 0.14023390562320293,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-15",
+        "gold": "2026-07-14",
+        "btc": "2026-07-14",
+        "fx": "2026-07-14"
+      }
+    },
+    {
+      "date": "2026-07-16",
+      "ver2": 107384030.35,
+      "sp500": 113623140.81,
+      "ver2Return": 0.07384030349899207,
+      "sp500Return": 0.13623140811848766,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-16",
+        "gold": "2026-07-15",
+        "btc": "2026-07-15",
+        "fx": "2026-07-15"
+      }
+    },
+    {
+      "date": "2026-07-17",
+      "ver2": 105520856.8,
+      "sp500": 111734973.09,
+      "ver2Return": 0.05520856795142626,
+      "sp500Return": 0.1173497309101923,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-17",
+        "gold": "2026-07-16",
+        "btc": "2026-07-16",
+        "fx": "2026-07-16"
+      }
+    },
+    {
+      "date": "2026-07-20",
+      "ver2": 106121903.29,
+      "sp500": 111846702.64,
+      "ver2Return": 0.06121903294144304,
+      "sp500Return": 0.1184670264189851,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-20",
+        "gold": "2026-07-17",
+        "btc": "2026-07-17",
+        "fx": "2026-07-17"
+      }
+    },
+    {
+      "date": "2026-07-21",
+      "ver2": 106145327.51,
+      "sp500": 112435296.91,
+      "ver2Return": 0.06145327513284782,
+      "sp500Return": 0.12435296909835736,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-21",
+        "gold": "2026-07-20",
+        "btc": "2026-07-20",
+        "fx": "2026-07-20"
+      }
+    },
+    {
+      "date": "2026-07-22",
+      "ver2": 107412376.08,
+      "sp500": 112346471.57,
+      "ver2Return": 0.07412376082008709,
+      "sp500Return": 0.1234647156734534,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-22",
+        "gold": "2026-07-21",
+        "btc": "2026-07-21",
+        "fx": "2026-07-21"
+      }
+    },
+    {
+      "date": "2026-07-23",
+      "ver2": 107352767.92,
+      "sp500": 110672349.24,
+      "ver2Return": 0.07352767918869785,
+      "sp500Return": 0.10672349237141443,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-23",
+        "gold": "2026-07-22",
+        "btc": "2026-07-22",
+        "fx": "2026-07-22"
+      }
+    },
+    {
+      "date": "2026-07-24",
+      "ver2": 105962124.97,
+      "sp500": 110521075.5,
+      "ver2Return": 0.059621249663850406,
+      "sp500Return": 0.10521075502092847,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-24",
+        "gold": "2026-07-23",
+        "btc": "2026-07-23",
+        "fx": "2026-07-23"
+      }
+    },
+    {
+      "date": "2026-07-27",
+      "ver2": 105102735.63,
+      "sp500": 109548062.3,
+      "ver2Return": 0.05102735634404576,
+      "sp500Return": 0.09548062298139737,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-27",
+        "gold": "2026-07-24",
+        "btc": "2026-07-24",
+        "fx": "2026-07-24"
+      }
+    },
+    {
+      "date": "2026-07-28",
+      "ver2": 106107699.42,
+      "sp500": 110343867.37,
+      "ver2Return": 0.06107699421312551,
+      "sp500Return": 0.10343867370832749,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-28",
+        "gold": "2026-07-27",
+        "btc": "2026-07-27",
+        "fx": "2026-07-27"
+      }
+    },
+    {
+      "date": "2026-07-29",
+      "ver2": 104136832.55,
+      "sp500": 107727319.64,
+      "ver2Return": 0.04136832554529257,
+      "sp500Return": 0.07727319636776442,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-29",
+        "gold": "2026-07-28",
+        "btc": "2026-07-28",
+        "fx": "2026-07-28"
+      }
+    },
+    {
+      "date": "2026-07-30",
+      "ver2": 104429882.42,
+      "sp500": 109282756.23,
+      "ver2Return": 0.04429882422943909,
+      "sp500Return": 0.09282756234482892,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-30",
+        "gold": "2026-07-29",
+        "btc": "2026-07-29",
+        "fx": "2026-07-29"
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "ver2": 104307277.81,
+      "sp500": 108289588.2,
+      "ver2Return": 0.0430727780771345,
+      "sp500Return": 0.08289588196022524,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-07-31",
+        "gold": "2026-07-30",
+        "btc": "2026-07-30",
+        "fx": "2026-07-30"
+      }
+    },
+    {
+      "date": "2026-08-03",
+      "ver2": 103987106.94,
+      "sp500": 110591920.6,
+      "ver2Return": 0.03987106938391394,
+      "sp500Return": 0.10591920602740634,
+      "phase": "backtest",
+      "rebalanced": true,
+      "signalMissing": false,
+      "decision": {
+        "type": "retrospective",
+        "cutoff": "2026-07-29"
+      },
+      "targetWeights": {
+        "equity": 0.19999999999999998,
+        "btc": 0.14,
+        "gold": 0.46,
+        "cash": 0.2
+      },
+      "sourceDates": {
+        "equity": "2026-08-03",
+        "gold": "2026-07-31",
+        "btc": "2026-07-31",
+        "fx": "2026-07-31"
+      }
+    },
+    {
+      "date": "2026-08-04",
+      "ver2": 104052308.02,
+      "sp500": 111855874.0,
+      "ver2Return": 0.04052308022072837,
+      "sp500Return": 0.11855874001389366,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-04",
+        "gold": "2026-08-03",
+        "btc": "2026-08-03",
+        "fx": "2026-08-03"
+      }
+    },
+    {
+      "date": "2026-08-05",
+      "ver2": 104255159.54,
+      "sp500": 111459684.4,
+      "ver2Return": 0.04255159535437625,
+      "sp500Return": 0.11459684398815595,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-05",
+        "gold": "2026-08-04",
+        "btc": "2026-08-04",
+        "fx": "2026-08-04"
+      }
+    },
+    {
+      "date": "2026-08-06",
+      "ver2": 106140176.26,
+      "sp500": 111013629.09,
+      "ver2Return": 0.06140176258922203,
+      "sp500Return": 0.11013629094154531,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-06",
+        "gold": "2026-08-05",
+        "btc": "2026-08-05",
+        "fx": "2026-08-05"
+      }
+    },
+    {
+      "date": "2026-08-07",
+      "ver2": 106184677.74,
+      "sp500": 111679752.1,
+      "ver2Return": 0.06184677736938782,
+      "sp500Return": 0.11679752099441698,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-07",
+        "gold": "2026-08-06",
+        "btc": "2026-08-06",
+        "fx": "2026-08-06"
+      }
+    },
+    {
+      "date": "2026-08-10",
+      "ver2": 106615831.98,
+      "sp500": 110599660.4,
+      "ver2Return": 0.0661583198205633,
+      "sp500Return": 0.10599660402977218,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-10",
+        "gold": "2026-08-07",
+        "btc": "2026-08-07",
+        "fx": "2026-08-07"
+      }
+    },
+    {
+      "date": "2026-08-11",
+      "ver2": 107328344.0,
+      "sp500": 110858182.06,
+      "ver2Return": 0.07328343998562747,
+      "sp500Return": 0.10858182063586286,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-11",
+        "gold": "2026-08-10",
+        "btc": "2026-08-10",
+        "fx": "2026-08-10"
+      }
+    },
+    {
+      "date": "2026-08-12",
+      "ver2": 106650681.19,
+      "sp500": 110619857.97,
+      "ver2Return": 0.06650681189060159,
+      "sp500Return": 0.10619857967863,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-12",
+        "gold": "2026-08-11",
+        "btc": "2026-08-11",
+        "fx": "2026-08-11"
+      }
+    },
+    {
+      "date": "2026-08-13",
+      "ver2": 107577449.44,
+      "sp500": 111749452.58,
+      "ver2Return": 0.07577449444243145,
+      "sp500Return": 0.11749452584701858,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-13",
+        "gold": "2026-08-12",
+        "btc": "2026-08-12",
+        "fx": "2026-08-12"
+      }
+    },
+    {
+      "date": "2026-08-14",
+      "ver2": 106852522.82,
+      "sp500": 111632362.87,
+      "ver2Return": 0.06852522824717333,
+      "sp500Return": 0.11632362870140822,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-14",
+        "gold": "2026-08-13",
+        "btc": "2026-08-13",
+        "fx": "2026-08-13"
+      }
+    },
+    {
+      "date": "2026-08-17",
+      "ver2": 106651788.68,
+      "sp500": 110671844.83,
+      "ver2Return": 0.0665178868127776,
+      "sp500Return": 0.10671844830669186,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-17",
+        "gold": "2026-08-14",
+        "btc": "2026-08-14",
+        "fx": "2026-08-14"
+      }
+    },
+    {
+      "date": "2026-08-18",
+      "ver2": 107388982.89,
+      "sp500": 109990673.33,
+      "ver2Return": 0.07388982886283957,
+      "sp500Return": 0.099906733343476,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-18",
+        "gold": "2026-08-17",
+        "btc": "2026-08-17",
+        "fx": "2026-08-17"
+      }
+    },
+    {
+      "date": "2026-08-19",
+      "ver2": 106550116.44,
+      "sp500": 110092858.42,
+      "ver2Return": 0.06550116442643472,
+      "sp500Return": 0.10092858424943896,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-19",
+        "gold": "2026-08-18",
+        "btc": "2026-08-18",
+        "fx": "2026-08-18"
+      }
+    },
+    {
+      "date": "2026-08-20",
+      "ver2": 107480430.05,
+      "sp500": 107077151.9,
+      "ver2Return": 0.07480430051012199,
+      "sp500Return": 0.07077151901245893,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-20",
+        "gold": "2026-08-19",
+        "btc": "2026-08-19",
+        "fx": "2026-08-19"
+      }
+    },
+    {
+      "date": "2026-08-21",
+      "ver2": 109182518.87,
+      "sp500": 108117176.36,
+      "ver2Return": 0.09182518868988265,
+      "sp500Return": 0.08117176355216493,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-21",
+        "gold": "2026-08-20",
+        "btc": "2026-08-20",
+        "fx": "2026-08-20"
+      }
+    },
+    {
+      "date": "2026-08-24",
+      "ver2": 110712755.85,
+      "sp500": 107335579.91,
+      "ver2Return": 0.10712755847873856,
+      "sp500Return": 0.07335579905939715,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-24",
+        "gold": "2026-08-21",
+        "btc": "2026-08-21",
+        "fx": "2026-08-21"
+      }
+    },
+    {
+      "date": "2026-08-25",
+      "ver2": 111417849.26,
+      "sp500": 107507179.05,
+      "ver2Return": 0.11417849262529622,
+      "sp500Return": 0.07507179050949087,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-25",
+        "gold": "2026-08-24",
+        "btc": "2026-08-24",
+        "fx": "2026-08-24"
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "ver2": 111667218.03,
+      "sp500": 107530381.58,
+      "ver2Return": 0.11667218034276972,
+      "sp500Return": 0.07530381576655443,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-26",
+        "gold": "2026-08-25",
+        "btc": "2026-08-25",
+        "fx": "2026-08-25"
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "ver2": 110995613.77,
+      "sp500": 108441567.25,
+      "ver2Return": 0.10995613769158785,
+      "sp500Return": 0.08441567254004245,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-27",
+        "gold": "2026-08-26",
+        "btc": "2026-08-26",
+        "fx": "2026-08-26"
+      }
+    },
+    {
+      "date": "2026-08-28",
+      "ver2": 111152867.83,
+      "sp500": 107836287.91,
+      "ver2Return": 0.11152867834378277,
+      "sp500Return": 0.07836287907066275,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-28",
+        "gold": "2026-08-27",
+        "btc": "2026-08-27",
+        "fx": "2026-08-27"
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "ver2": 108526667.85,
+      "sp500": 107077777.09,
+      "ver2Return": 0.08526667845536329,
+      "sp500Return": 0.0707777708688504,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-08-31",
+        "gold": "2026-08-28",
+        "btc": "2026-08-28",
+        "fx": "2026-08-28"
+      }
+    },
+    {
+      "date": "2026-09-01",
+      "ver2": 108056650.15,
+      "sp500": 105670588.43,
+      "ver2Return": 0.08056650151186551,
+      "sp500Return": 0.05670588431980317,
+      "phase": "backtest",
+      "rebalanced": true,
+      "signalMissing": false,
+      "decision": {
+        "type": "retrospective",
+        "cutoff": "2026-08-27"
+      },
+      "targetWeights": {
+        "equity": 0.04999999999999996,
+        "btc": 0.29000000000000004,
+        "gold": 0.46,
+        "cash": 0.2
+      },
+      "sourceDates": {
+        "equity": "2026-09-01",
+        "gold": "2026-08-31",
+        "btc": "2026-08-31",
+        "fx": "2026-08-31"
+      }
+    },
+    {
+      "date": "2026-09-02",
+      "ver2": 106255016.04,
+      "sp500": 106440673.71,
+      "ver2Return": 0.06255016041641714,
+      "sp500Return": 0.06440673712526723,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-02",
+        "gold": "2026-09-01",
+        "btc": "2026-09-01",
+        "fx": "2026-09-01"
+      }
+    },
+    {
+      "date": "2026-09-03",
+      "ver2": 106226036.66,
+      "sp500": 106528806.43,
+      "ver2Return": 0.06226036662677714,
+      "sp500Return": 0.06528806429064504,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-03",
+        "gold": "2026-09-02",
+        "btc": "2026-09-02",
+        "fx": "2026-09-02"
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "ver2": 108746524.24,
+      "sp500": 105960125.26,
+      "ver2Return": 0.08746524236133935,
+      "sp500Return": 0.05960125255163651,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-04",
+        "gold": "2026-09-03",
+        "btc": "2026-09-03",
+        "fx": "2026-09-03"
+      }
+    },
+    {
+      "date": "2026-09-08",
+      "ver2": 106820273.87,
+      "sp500": 104502691.82,
+      "ver2Return": 0.06820273873532723,
+      "sp500Return": 0.04502691821258464,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-08",
+        "gold": "2026-09-04",
+        "btc": "2026-09-04",
+        "fx": "2026-09-07"
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "ver2": 105429094.06,
+      "sp500": 103996624.86,
+      "ver2Return": 0.05429094062859452,
+      "sp500Return": 0.03996624857543196,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-09",
+        "gold": "2026-09-08",
+        "btc": "2026-09-08",
+        "fx": "2026-09-07"
+      }
+    },
+    {
+      "date": "2026-09-10",
+      "ver2": 105205888.61,
+      "sp500": 102719827.29,
+      "ver2Return": 0.05205888612002085,
+      "sp500Return": 0.027198272913727006,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-10",
+        "gold": "2026-09-09",
+        "btc": "2026-09-09",
+        "fx": "2026-09-09"
+      }
+    },
+    {
+      "date": "2026-09-11",
+      "ver2": 104427889.77,
+      "sp500": 104122210.3,
+      "ver2Return": 0.044278897686719,
+      "sp500Return": 0.04122210299035123,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-11",
+        "gold": "2026-09-10",
+        "btc": "2026-09-10",
+        "fx": "2026-09-10"
+      }
+    },
+    {
+      "date": "2026-09-14",
+      "ver2": 104498475.82,
+      "sp500": 103336868.97,
+      "ver2Return": 0.044984758220459,
+      "sp500Return": 0.03336868965012596,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-14",
+        "gold": "2026-09-11",
+        "btc": "2026-09-11",
+        "fx": "2026-09-11"
+      }
+    },
+    {
+      "date": "2026-09-15",
+      "ver2": 104900055.15,
+      "sp500": 103463701.84,
+      "ver2Return": 0.04900055154104832,
+      "sp500Return": 0.03463701837280331,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-15",
+        "gold": "2026-09-14",
+        "btc": "2026-09-14",
+        "fx": "2026-09-14"
+      }
+    },
+    {
+      "date": "2026-09-16",
+      "ver2": 104685476.08,
+      "sp500": 103969998.8,
+      "ver2Return": 0.04685476077214745,
+      "sp500Return": 0.03969998803741426,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-16",
+        "gold": "2026-09-15",
+        "btc": "2026-09-15",
+        "fx": "2026-09-15"
+      }
+    },
+    {
+      "date": "2026-09-17",
+      "ver2": 104845171.91,
+      "sp500": 105687355.08,
+      "ver2Return": 0.04845171911754109,
+      "sp500Return": 0.05687355075015765,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-17",
+        "gold": "2026-09-16",
+        "btc": "2026-09-16",
+        "fx": "2026-09-16"
+      }
+    },
+    {
+      "date": "2026-09-18",
+      "ver2": 106806899.0,
+      "sp500": 107014782.1,
+      "ver2Return": 0.068068990047083,
+      "sp500Return": 0.07014782100851757,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-18",
+        "gold": "2026-09-17",
+        "btc": "2026-09-17",
+        "fx": "2026-09-17"
+      }
+    },
+    {
+      "date": "2026-09-21",
+      "ver2": 109517141.83,
+      "sp500": 109138334.6,
+      "ver2Return": 0.0951714183097705,
+      "sp500Return": 0.09138334597787479,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-21",
+        "gold": "2026-09-18",
+        "btc": "2026-09-18",
+        "fx": "2026-09-18"
+      }
+    },
+    {
+      "date": "2026-09-22",
+      "ver2": 110304459.84,
+      "sp500": 107932255.33,
+      "ver2Return": 0.10304459843743619,
+      "sp500Return": 0.07932255331442573,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-22",
+        "gold": "2026-09-21",
+        "btc": "2026-09-21",
+        "fx": "2026-09-21"
+      }
+    },
+    {
+      "date": "2026-09-23",
+      "ver2": 109314151.47,
+      "sp500": 105849671.39,
+      "ver2Return": 0.0931415147155421,
+      "sp500Return": 0.05849671388573863,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-23",
+        "gold": "2026-09-22",
+        "btc": "2026-09-22",
+        "fx": "2026-09-22"
+      }
+    },
+    {
+      "date": "2026-09-24",
+      "ver2": 108275613.26,
+      "sp500": 106453456.7,
+      "ver2Return": 0.08275613264277526,
+      "sp500Return": 0.06453456702216065,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-24",
+        "gold": "2026-09-23",
+        "btc": "2026-09-23",
+        "fx": "2026-09-23"
+      }
+    },
+    {
+      "date": "2026-09-25",
+      "ver2": 108305563.3,
+      "sp500": 107195511.58,
+      "ver2Return": 0.08305563297033336,
+      "sp500Return": 0.0719551157896734,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-25",
+        "gold": "2026-09-24",
+        "btc": "2026-09-24",
+        "fx": "2026-09-24"
+      }
+    },
+    {
+      "date": "2026-09-28",
+      "ver2": 107572430.33,
+      "sp500": 105482440.07,
+      "ver2Return": 0.07572430330532942,
+      "sp500Return": 0.05482440070113759,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-28",
+        "gold": "2026-09-25",
+        "btc": "2026-09-25",
+        "fx": "2026-09-25"
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "ver2": 105665901.13,
+      "sp500": 105575373.05,
+      "ver2Return": 0.05665901133546525,
+      "sp500Return": 0.05575373047694665,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-29",
+        "gold": "2026-09-28",
+        "btc": "2026-09-28",
+        "fx": "2026-09-28"
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "ver2": 106083276.87,
+      "sp500": 104996039.22,
+      "ver2Return": 0.0608327686546013,
+      "sp500Return": 0.04996039215426973,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-09-30",
+        "gold": "2026-09-29",
+        "btc": "2026-09-29",
+        "fx": "2026-09-29"
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "ver2": 105809060.81,
+      "sp500": 105161211.43,
+      "ver2Return": 0.05809060813061118,
+      "sp500Return": 0.051612114277807875,
+      "phase": "backtest",
+      "rebalanced": true,
+      "signalMissing": false,
+      "decision": {
+        "type": "retrospective",
+        "cutoff": "2026-09-28"
+      },
+      "targetWeights": {
+        "equity": 0.14999999999999997,
+        "btc": 0.29000000000000004,
+        "gold": 0.46,
+        "cash": 0.1
+      },
+      "sourceDates": {
+        "equity": "2026-10-01",
+        "gold": "2026-09-30",
+        "btc": "2026-09-30",
+        "fx": "2026-09-30"
+      }
+    },
+    {
+      "date": "2026-10-02",
+      "ver2": 106922062.41,
+      "sp500": 106336799.97,
+      "ver2Return": 0.06922062414220309,
+      "sp500Return": 0.06336799972094198,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-02",
+        "gold": "2026-10-01",
+        "btc": "2026-10-01",
+        "fx": "2026-10-01"
+      }
+    },
+    {
+      "date": "2026-10-05",
+      "ver2": 105407379.56,
+      "sp500": 105744547.1,
+      "ver2Return": 0.054073795613447384,
+      "sp500Return": 0.05744547100797104,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-05",
+        "gold": "2026-10-02",
+        "btc": "2026-10-02",
+        "fx": "2026-10-02"
+      }
+    },
+    {
+      "date": "2026-10-06",
+      "ver2": 105802399.0,
+      "sp500": 106211326.12,
+      "ver2Return": 0.058023989994832714,
+      "sp500Return": 0.06211326121963734,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-06",
+        "gold": "2026-10-05",
+        "btc": "2026-10-05",
+        "fx": "2026-10-05"
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "ver2": 105737969.51,
+      "sp500": 105607979.77,
+      "ver2Return": 0.05737969508795726,
+      "sp500Return": 0.056079797709054136,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-07",
+        "gold": "2026-10-06",
+        "btc": "2026-10-06",
+        "fx": "2026-10-06"
+      }
+    },
+    {
+      "date": "2026-10-08",
+      "ver2": 104156166.07,
+      "sp500": 105220409.47,
+      "ver2Return": 0.041561660722609695,
+      "sp500Return": 0.05220409474281573,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-08",
+        "gold": "2026-10-07",
+        "btc": "2026-10-07",
+        "fx": "2026-10-07"
+      }
+    },
+    {
+      "date": "2026-10-09",
+      "ver2": 104171392.49,
+      "sp500": 106026365.45,
+      "ver2Return": 0.04171392493686721,
+      "sp500Return": 0.06026365453011606,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-09",
+        "gold": "2026-10-08",
+        "btc": "2026-10-08",
+        "fx": "2026-10-08"
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "ver2": 105073923.13,
+      "sp500": 105960101.37,
+      "ver2Return": 0.050739231330214185,
+      "sp500Return": 0.05960101370916937,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-12",
+        "gold": "2026-10-09",
+        "btc": "2026-10-09",
+        "fx": "2026-10-09"
+      }
+    },
+    {
+      "date": "2026-10-13",
+      "ver2": 104452880.57,
+      "sp500": 105378200.64,
+      "ver2Return": 0.04452880565969708,
+      "sp500Return": 0.05378200640857678,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-13",
+        "gold": "2026-10-12",
+        "btc": "2026-10-12",
+        "fx": "2026-10-12"
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "ver2": 104922822.82,
+      "sp500": 104821830.95,
+      "ver2Return": 0.04922822820012995,
+      "sp500Return": 0.04821830953243311,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-14",
+        "gold": "2026-10-13",
+        "btc": "2026-10-13",
+        "fx": "2026-10-13"
+      }
+    },
+    {
+      "date": "2026-10-15",
+      "ver2": 103751231.6,
+      "sp500": 105196651.3,
+      "ver2Return": 0.03751231595794602,
+      "sp500Return": 0.05196651296814436,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-15",
+        "gold": "2026-10-14",
+        "btc": "2026-10-14",
+        "fx": "2026-10-14"
+      }
+    },
+    {
+      "date": "2026-10-16",
+      "ver2": 104697492.44,
+      "sp500": 104109160.04,
+      "ver2Return": 0.0469749244142732,
+      "sp500Return": 0.04109160041346649,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-16",
+        "gold": "2026-10-15",
+        "btc": "2026-10-15",
+        "fx": "2026-10-15"
+      }
+    },
+    {
+      "date": "2026-10-19",
+      "ver2": 103693078.23,
+      "sp500": 103764041.61,
+      "ver2Return": 0.03693078233135494,
+      "sp500Return": 0.03764041613316471,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-19",
+        "gold": "2026-10-16",
+        "btc": "2026-10-16",
+        "fx": "2026-10-16"
+      }
+    },
+    {
+      "date": "2026-10-20",
+      "ver2": 103376091.17,
+      "sp500": 103883116.37,
+      "ver2Return": 0.03376091172243312,
+      "sp500Return": 0.03883116373484663,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-20",
+        "gold": "2026-10-19",
+        "btc": "2026-10-19",
+        "fx": "2026-10-19"
+      }
+    },
+    {
+      "date": "2026-10-21",
+      "ver2": 103159413.75,
+      "sp500": 104125137.91,
+      "ver2Return": 0.03159413749955364,
+      "sp500Return": 0.04125137910271426,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-21",
+        "gold": "2026-10-20",
+        "btc": "2026-10-20",
+        "fx": "2026-10-20"
+      }
+    },
+    {
+      "date": "2026-10-22",
+      "ver2": 103903005.98,
+      "sp500": 102945175.98,
+      "ver2Return": 0.03903005975310281,
+      "sp500Return": 0.029451759806776945,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-22",
+        "gold": "2026-10-21",
+        "btc": "2026-10-21",
+        "fx": "2026-10-21"
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "ver2": 101396540.6,
+      "sp500": 102287774.54,
+      "ver2Return": 0.013965406045401085,
+      "sp500Return": 0.022877745412104966,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-23",
+        "gold": "2026-10-22",
+        "btc": "2026-10-22",
+        "fx": "2026-10-22"
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "ver2": 101084177.8,
+      "sp500": 102977563.07,
+      "ver2Return": 0.010841778020352022,
+      "sp500Return": 0.029775630698037014,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-26",
+        "gold": "2026-10-23",
+        "btc": "2026-10-23",
+        "fx": "2026-10-23"
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "ver2": 100908948.96,
+      "sp500": 103638439.92,
+      "ver2Return": 0.009089489645769389,
+      "sp500Return": 0.03638439918110992,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-27",
+        "gold": "2026-10-26",
+        "btc": "2026-10-26",
+        "fx": "2026-10-26"
+      }
+    },
+    {
+      "date": "2026-10-28",
+      "ver2": 101797963.04,
+      "sp500": 103926146.66,
+      "ver2Return": 0.017979630350647202,
+      "sp500Return": 0.03926146658954477,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-28",
+        "gold": "2026-10-27",
+        "btc": "2026-10-27",
+        "fx": "2026-10-27"
+      }
+    },
+    {
+      "date": "2026-10-29",
+      "ver2": 103330601.76,
+      "sp500": 104890737.59,
+      "ver2Return": 0.03330601761236718,
+      "sp500Return": 0.04890737590862404,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-29",
+        "gold": "2026-10-28",
+        "btc": "2026-10-28",
+        "fx": "2026-10-28"
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "ver2": 101827973.19,
+      "sp500": 102615390.26,
+      "ver2Return": 0.01827973190494725,
+      "sp500Return": 0.026153902554918673,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-10-30",
+        "gold": "2026-10-29",
+        "btc": "2026-10-29",
+        "fx": "2026-10-29"
+      }
+    },
+    {
+      "date": "2026-11-02",
+      "ver2": 98443328.27,
+      "sp500": 101798865.83,
+      "ver2Return": -0.015566717273252206,
+      "sp500Return": 0.01798865830500951,
+      "phase": "backtest",
+      "rebalanced": false,
+      "signalMissing": true,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-11-02",
+        "gold": "2026-10-30",
+        "btc": "2026-10-30",
+        "fx": "2026-10-30"
+      }
+    }
+  ]
+}
