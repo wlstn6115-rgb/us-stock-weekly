@@ -16,6 +16,12 @@
       "sp500": 99900000.0,
       "ver2Return": -0.0008991907283443235,
       "sp500Return": -0.0010000000000000009,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 89919072.83,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": true,
       "signalMissing": false,
@@ -42,6 +48,12 @@
       "sp500": 100534491.02,
       "ver2Return": 0.002875948011638041,
       "sp500Return": 0.005344910242502943,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 90296586.71,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -60,6 +72,12 @@
       "sp500": 101771248.27,
       "ver2Return": 0.03207353587324446,
       "sp500Return": 0.017712482708278188,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 93216345.49,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -78,6 +96,12 @@
       "sp500": 101414562.46,
       "ver2Return": 0.042278677236192275,
       "sp500Return": 0.014145624635186538,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 94236859.63,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -96,6 +120,12 @@
       "sp500": 101282956.55,
       "ver2Return": 0.03234725571655983,
       "sp500Return": 0.012829565475636295,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 93243717.48,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -114,6 +144,12 @@
       "sp500": 102381081.48,
       "ver2Return": 0.041388397842114344,
       "sp500Return": 0.023810814806873415,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 94147831.69,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -132,6 +168,12 @@
       "sp500": 102929903.15,
       "ver2Return": 0.05156998766299781,
       "sp500Return": 0.029299031483259963,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 95165990.67,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -150,6 +192,12 @@
       "sp500": 103289382.85,
       "ver2Return": 0.07506527742909963,
       "sp500Return": 0.032893828509102274,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 97515519.65,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -168,6 +216,12 @@
       "sp500": 103419467.61,
       "ver2Return": 0.07987874268795436,
       "sp500Return": 0.03419467609305937,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 97996866.18,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -186,6 +240,12 @@
       "sp500": 102937914.87,
       "ver2Return": 0.08265624287646633,
       "sp500Return": 0.029379148742124217,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 98274616.19,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -204,6 +264,12 @@
       "sp500": 103189216.55,
       "ver2Return": 0.08000489245871978,
       "sp500Return": 0.03189216545809348,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 98009481.15,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -222,6 +288,12 @@
       "sp500": 101318959.28,
       "ver2Return": 0.07740743877886747,
       "sp500Return": 0.01318959277952092,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 97749735.79,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -240,6 +312,12 @@
       "sp500": 102492713.5,
       "ver2Return": 0.11467889621254734,
       "sp500Return": 0.024927134991665545,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 101476881.53,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -258,6 +336,12 @@
       "sp500": 102501402.79,
       "ver2Return": 0.1240307982117026,
       "sp500Return": 0.025014027933257355,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 102412071.73,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -276,6 +360,12 @@
       "sp500": 102762337.0,
       "ver2Return": 0.1455594908769906,
       "sp500Return": 0.027623370006421233,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 104564940.99,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -294,6 +384,12 @@
       "sp500": 103227244.94,
       "ver2Return": 0.15866143020093149,
       "sp500Return": 0.032272449353454524,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 105875134.93,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -312,6 +408,12 @@
       "sp500": 101686937.07,
       "ver2Return": 0.15406623292495158,
       "sp500Return": 0.016869370701902975,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 105415615.2,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -330,6 +432,12 @@
       "sp500": 101588958.41,
       "ver2Return": 0.178459266983249,
       "sp500Return": 0.01588958408890062,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 107854918.61,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -348,6 +456,12 @@
       "sp500": 100850775.89,
       "ver2Return": 0.21347396173998767,
       "sp500Return": 0.008507758946496802,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 111356388.08,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -366,6 +480,12 @@
       "sp500": 100392061.99,
       "ver2Return": 0.21678032250606938,
       "sp500Return": 0.003920619878047038,
+      "allocation": {
+        "equity": 0.0,
+        "btc": 0.0,
+        "gold": 111687024.16,
+        "cash": 9991008.09
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -384,6 +504,12 @@
       "sp500": 101824471.35,
       "ver2Return": 0.1120085290954318,
       "sp500Return": 0.018244713467874485,
+      "allocation": {
+        "equity": 22240170.58,
+        "btc": 0.0,
+        "gold": 77840597.04,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": true,
       "signalMissing": false,
@@ -410,6 +536,12 @@
       "sp500": 101625335.45,
       "ver2Return": 0.085207562533693,
       "sp500Return": 0.016253354482468563,
+      "allocation": {
+        "equity": 22196675.97,
+        "btc": 0.0,
+        "gold": 75203995.0,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -428,6 +560,12 @@
       "sp500": 100859533.61,
       "ver2Return": 0.12858901177652116,
       "sp500Return": 0.008595336146864696,
+      "allocation": {
+        "equity": 22029412.01,
+        "btc": 0.0,
+        "gold": 79709403.87,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -446,6 +584,12 @@
       "sp500": 100117824.47,
       "ver2Return": 0.12998519519052176,
       "sp500Return": 0.0011782447262616014,
+      "allocation": {
+        "equity": 21867410.31,
+        "btc": 0.0,
+        "gold": 80011023.92,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -464,6 +608,12 @@
       "sp500": 102621731.55,
       "ver2Return": 0.1189774451342247,
       "sp500Return": 0.026217315462652158,
+      "allocation": {
+        "equity": 22414305.57,
+        "btc": 0.0,
+        "gold": 78363353.66,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -482,6 +632,12 @@
       "sp500": 103126098.68,
       "ver2Return": 0.14334785944265072,
       "sp500Return": 0.03126098679961142,
+      "allocation": {
+        "equity": 22524467.8,
+        "btc": 0.0,
+        "gold": 80690232.85,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -500,6 +656,12 @@
       "sp500": 102442908.96,
       "ver2Return": 0.1596826544635117,
       "sp500Return": 0.024429089617573174,
+      "allocation": {
+        "equity": 22375247.72,
+        "btc": 0.0,
+        "gold": 82472932.44,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -518,6 +680,12 @@
       "sp500": 102294309.27,
       "ver2Return": 0.1501968466236825,
       "sp500Return": 0.022943092656449338,
+      "allocation": {
+        "equity": 22342791.06,
+        "btc": 0.0,
+        "gold": 81556808.32,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -536,6 +704,12 @@
       "sp500": 100300558.03,
       "ver2Return": 0.15181914977059252,
       "sp500Return": 0.0030055802967718925,
+      "allocation": {
+        "equity": 21907322.38,
+        "btc": 0.0,
+        "gold": 82154507.31,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -554,6 +728,12 @@
       "sp500": 99240380.72,
       "ver2Return": 0.11296532630016354,
       "sp500Return": -0.007596192795774059,
+      "allocation": {
+        "equity": 21675761.89,
+        "btc": 0.0,
+        "gold": 78500685.45,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -572,6 +752,12 @@
       "sp500": 99928936.4,
       "ver2Return": 0.13797601030842022,
       "sp500Return": -0.0007106360067227202,
+      "allocation": {
+        "equity": 21826153.99,
+        "btc": 0.0,
+        "gold": 80851361.75,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -590,6 +776,12 @@
       "sp500": 100485443.03,
       "ver2Return": 0.11432203172724353,
       "sp500Return": 0.004854430338133486,
+      "allocation": {
+        "equity": 21947704.36,
+        "btc": 0.0,
+        "gold": 78364413.52,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -608,6 +800,12 @@
       "sp500": 100491799.73,
       "ver2Return": 0.13387305446101938,
       "sp500Return": 0.004917997323745205,
+      "allocation": {
+        "equity": 21949092.77,
+        "btc": 0.0,
+        "gold": 80318127.38,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -626,6 +824,12 @@
       "sp500": 101419506.71,
       "ver2Return": 0.14045100300283564,
       "sp500Return": 0.014195067090086999,
+      "allocation": {
+        "equity": 22151719.52,
+        "btc": 0.0,
+        "gold": 80773295.49,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -644,6 +848,12 @@
       "sp500": 100316087.29,
       "ver2Return": 0.15300275404189279,
       "sp500Return": 0.0031608728781042927,
+      "allocation": {
+        "equity": 21910714.23,
+        "btc": 0.0,
+        "gold": 82269475.88,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -662,6 +872,12 @@
       "sp500": 100456203.16,
       "ver2Return": 0.1705752887240637,
       "sp500Return": 0.004562031586404114,
+      "allocation": {
+        "equity": 21941317.88,
+        "btc": 0.0,
+        "gold": 83996125.7,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -680,6 +896,12 @@
       "sp500": 101407094.08,
       "ver2Return": 0.16213035373513374,
       "sp500Return": 0.014070940809716825,
+      "allocation": {
+        "equity": 22149008.39,
+        "btc": 0.0,
+        "gold": 82943941.69,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -698,6 +920,12 @@
       "sp500": 99814642.95,
       "ver2Return": 0.14819378744247969,
       "sp500Return": -0.0018535705419954196,
+      "allocation": {
+        "equity": 21801190.39,
+        "btc": 0.0,
+        "gold": 81898103.07,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -716,6 +944,12 @@
       "sp500": 99427452.06,
       "ver2Return": 0.1547346975198296,
       "sp500Return": -0.005725479430277902,
+      "allocation": {
+        "equity": 21716621.41,
+        "btc": 0.0,
+        "gold": 82636763.05,
+        "cash": 11120085.29
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -734,6 +968,12 @@
       "sp500": 100389697.83,
       "ver2Return": 0.1749577701012177,
       "sp500Return": 0.003896978349281932,
+      "allocation": {
+        "equity": 35248733.1,
+        "btc": 0.0,
+        "gold": 70497466.21,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": true,
       "signalMissing": false,
@@ -760,6 +1000,12 @@
       "sp500": 100674609.85,
       "ver2Return": 0.1940874423348129,
       "sp500Return": 0.006746098477252271,
+      "allocation": {
+        "equity": 35348771.13,
+        "btc": 0.0,
+        "gold": 72310395.4,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -778,6 +1024,12 @@
       "sp500": 103963385.47,
       "ver2Return": 0.19083286770185492,
       "sp500Return": 0.03963385470952918,
+      "allocation": {
+        "equity": 36503522.83,
+        "btc": 0.0,
+        "gold": 70830186.24,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -796,6 +1048,12 @@
       "sp500": 101463445.53,
       "ver2Return": 0.17403212068126672,
       "sp500Return": 0.014634455308238259,
+      "allocation": {
+        "equity": 35625746.35,
+        "btc": 0.0,
+        "gold": 70027888.02,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -814,6 +1072,12 @@
       "sp500": 100739391.14,
       "ver2Return": 0.16789692307304693,
       "sp500Return": 0.0073939113843146664,
+      "allocation": {
+        "equity": 35371517.08,
+        "btc": 0.0,
+        "gold": 69668597.53,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -832,6 +1096,12 @@
       "sp500": 102454095.8,
       "ver2Return": 0.19052791373662048,
       "sp500Return": 0.024540958029787063,
+      "allocation": {
+        "equity": 35973582.51,
+        "btc": 0.0,
+        "gold": 71329631.16,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -850,6 +1120,12 @@
       "sp500": 101796480.68,
       "ver2Return": 0.18348239051226134,
       "sp500Return": 0.017964806792390542,
+      "allocation": {
+        "equity": 35742681.33,
+        "btc": 0.0,
+        "gold": 70855980.02,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -868,6 +1144,12 @@
       "sp500": 100469939.31,
       "ver2Return": 0.17803125003763443,
       "sp500Return": 0.004699393062439494,
+      "allocation": {
+        "equity": 35276907.41,
+        "btc": 0.0,
+        "gold": 70776639.89,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -886,6 +1168,12 @@
       "sp500": 99428841.43,
       "ver2Return": 0.17573905393893297,
       "sp500Return": -0.005711585748238379,
+      "allocation": {
+        "equity": 34911358.13,
+        "btc": 0.0,
+        "gold": 70912969.56,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -904,6 +1192,12 @@
       "sp500": 100112507.02,
       "ver2Return": 0.17374173191521036,
       "sp500Return": 0.0011250701908542826,
+      "allocation": {
+        "equity": 35151406.13,
+        "btc": 0.0,
+        "gold": 70473189.36,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -922,6 +1216,12 @@
       "sp500": 101363694.45,
       "ver2Return": 0.1703073133065547,
       "sp500Return": 0.0136369444976987,
+      "allocation": {
+        "equity": 35590721.85,
+        "btc": 0.0,
+        "gold": 69690431.78,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -940,6 +1240,12 @@
       "sp500": 101220326.06,
       "ver2Return": 0.16658166858625223,
       "sp500Return": 0.012203260553320439,
+      "allocation": {
+        "equity": 35540382.48,
+        "btc": 0.0,
+        "gold": 69368206.68,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -958,6 +1264,12 @@
       "sp500": 99658244.86,
       "ver2Return": 0.15806015384109662,
       "sp500Return": -0.0034175514405768714,
+      "allocation": {
+        "equity": 34991906.04,
+        "btc": 0.0,
+        "gold": 69064531.64,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -976,6 +1288,12 @@
       "sp500": 100339278.19,
       "ver2Return": 0.14518017390278293,
       "sp500Return": 0.003392781911452092,
+      "allocation": {
+        "equity": 35231029.81,
+        "btc": 0.0,
+        "gold": 67537409.88,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -994,6 +1312,12 @@
       "sp500": 98485516.77,
       "ver2Return": 0.10869417888073585,
       "sp500Return": -0.015144832310881817,
+      "allocation": {
+        "equity": 34580138.9,
+        "btc": 0.0,
+        "gold": 64539701.29,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1012,6 +1336,12 @@
       "sp500": 100186537.04,
       "ver2Return": 0.09848772534795946,
       "sp500Return": 0.0018653704315172437,
+      "allocation": {
+        "equity": 35177399.48,
+        "btc": 0.0,
+        "gold": 62921795.35,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1030,6 +1360,12 @@
       "sp500": 98375274.23,
       "ver2Return": 0.06878214869915777,
       "sp500Return": -0.016247257670218063,
+      "allocation": {
+        "equity": 34541430.65,
+        "btc": 0.0,
+        "gold": 60587206.52,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1048,6 +1384,12 @@
       "sp500": 99746824.55,
       "ver2Return": 0.07905894519148071,
       "sp500Return": -0.0025317545191484436,
+      "allocation": {
+        "equity": 35023008.06,
+        "btc": 0.0,
+        "gold": 61133308.76,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1066,6 +1408,12 @@
       "sp500": 98139370.13,
       "ver2Return": 0.09238819293024991,
       "sp500Return": -0.018606298706772884,
+      "allocation": {
+        "equity": 34458600.23,
+        "btc": 0.0,
+        "gold": 63030641.37,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1084,6 +1432,12 @@
       "sp500": 97039638.35,
       "ver2Return": 0.06871554331089036,
       "sp500Return": -0.029603616528243615,
+      "allocation": {
+        "equity": 34072463.47,
+        "btc": 0.0,
+        "gold": 61049513.16,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1102,6 +1456,12 @@
       "sp500": 96914788.85,
       "ver2Return": 0.09100636156757491,
       "sp500Return": -0.030852111470514143,
+      "allocation": {
+        "equity": 34028626.44,
+        "btc": 0.0,
+        "gold": 63322432.02,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1120,6 +1480,12 @@
       "sp500": 100265187.98,
       "ver2Return": 0.10599728217287696,
       "sp500Return": 0.002651879808819313,
+      "allocation": {
+        "equity": 35205015.32,
+        "btc": 0.0,
+        "gold": 63645135.19,
+        "cash": 11749577.7
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1138,6 +1504,12 @@
       "sp500": 101494923.51,
       "ver2Return": 0.13750611850209693,
       "sp500Return": 0.014949235129082306,
+      "allocation": {
+        "equity": 34125183.56,
+        "btc": 0.0,
+        "gold": 68250367.11,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": true,
       "signalMissing": false,
@@ -1164,6 +1536,12 @@
       "sp500": 100508006.05,
       "ver2Return": 0.13878876018623187,
       "sp500Return": 0.005080060538559916,
+      "allocation": {
+        "equity": 33793356.72,
+        "btc": 0.0,
+        "gold": 68710458.12,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1182,6 +1560,12 @@
       "sp500": 101018496.87,
       "ver2Return": 0.12739572892053896,
       "sp500Return": 0.010184968689979979,
+      "allocation": {
+        "equity": 33964996.76,
+        "btc": 0.0,
+        "gold": 67399514.95,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1200,6 +1584,12 @@
       "sp500": 101095194.79,
       "ver2Return": 0.1252423778233982,
       "sp500Return": 0.010951947909442428,
+      "allocation": {
+        "equity": 33990784.56,
+        "btc": 0.0,
+        "gold": 67158392.04,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1218,6 +1608,12 @@
       "sp500": 103086851.56,
       "ver2Return": 0.13494517596544986,
       "sp500Return": 0.030868515604106417,
+      "allocation": {
+        "equity": 34660430.39,
+        "btc": 0.0,
+        "gold": 67459026.02,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1236,6 +1632,12 @@
       "sp500": 102175330.46,
       "ver2Return": 0.12601438664240172,
       "sp500Return": 0.02175330461378877,
+      "allocation": {
+        "equity": 34353953.74,
+        "btc": 0.0,
+        "gold": 66872423.74,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1254,6 +1656,12 @@
       "sp500": 102101078.95,
       "ver2Return": 0.13142976261050032,
       "sp500Return": 0.02101078952512392,
+      "allocation": {
+        "equity": 34328988.48,
+        "btc": 0.0,
+        "gold": 67438926.59,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1272,6 +1680,12 @@
       "sp500": 103276898.15,
       "ver2Return": 0.13501053716825728,
       "sp500Return": 0.03276898145146512,
+      "allocation": {
+        "equity": 34724328.9,
+        "btc": 0.0,
+        "gold": 67401663.63,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1290,6 +1704,12 @@
       "sp500": 104678664.28,
       "ver2Return": 0.13827448122423158,
       "sp500Return": 0.04678664278693345,
+      "allocation": {
+        "equity": 35195638.45,
+        "btc": 0.0,
+        "gold": 67256748.48,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1308,6 +1728,12 @@
       "sp500": 104409227.09,
       "ver2Return": 0.14488699951086303,
       "sp500Return": 0.04409227089317791,
+      "allocation": {
+        "equity": 35105046.79,
+        "btc": 0.0,
+        "gold": 68008591.97,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1326,6 +1752,12 @@
       "sp500": 105212540.6,
       "ver2Return": 0.1441312283652807,
       "sp500Return": 0.05212540595496962,
+      "allocation": {
+        "equity": 35375141.3,
+        "btc": 0.0,
+        "gold": 67662920.36,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1344,6 +1776,12 @@
       "sp500": 106626140.99,
       "ver2Return": 0.14946213447982992,
       "sp500Return": 0.0662614099282206,
+      "allocation": {
+        "equity": 35850429.83,
+        "btc": 0.0,
+        "gold": 67720722.44,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1362,6 +1800,12 @@
       "sp500": 104924191.2,
       "ver2Return": 0.14304114399916568,
       "sp500Return": 0.049241912030770774,
+      "allocation": {
+        "equity": 35278190.87,
+        "btc": 0.0,
+        "gold": 67650862.34,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1380,6 +1824,12 @@
       "sp500": 105160473.0,
       "ver2Return": 0.1440223059183452,
       "sp500Return": 0.0516047299940372,
+      "allocation": {
+        "equity": 35357634.84,
+        "btc": 0.0,
+        "gold": 67669534.57,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1398,6 +1848,12 @@
       "sp500": 106578677.33,
       "ver2Return": 0.13180109620782243,
       "sp500Return": 0.0657867732914259,
+      "allocation": {
+        "equity": 35834471.33,
+        "btc": 0.0,
+        "gold": 65970577.1,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1416,6 +1872,12 @@
       "sp500": 106436281.93,
       "ver2Return": 0.1417842854753275,
       "sp500Return": 0.0643628192532677,
+      "allocation": {
+        "equity": 35786594.36,
+        "btc": 0.0,
+        "gold": 67016773.0,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1434,6 +1896,12 @@
       "sp500": 107126615.47,
       "ver2Return": 0.13686301219978803,
       "sp500Return": 0.07126615469885245,
+      "allocation": {
+        "equity": 36018702.12,
+        "btc": 0.0,
+        "gold": 66292537.92,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1452,6 +1920,12 @@
       "sp500": 107391049.39,
       "ver2Return": 0.14143997413540066,
       "sp500Return": 0.07391049389203785,
+      "allocation": {
+        "equity": 36107611.55,
+        "btc": 0.0,
+        "gold": 66661324.68,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1470,6 +1944,12 @@
       "sp500": 106346090.55,
       "ver2Return": 0.12969640715751152,
       "sp500Return": 0.06346090546396521,
+      "allocation": {
+        "equity": 35756269.72,
+        "btc": 0.0,
+        "gold": 65838309.81,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1488,6 +1968,12 @@
       "sp500": 106461767.38,
       "ver2Return": 0.1190604769271999,
       "sp500Return": 0.06461767383911732,
+      "allocation": {
+        "equity": 35795163.22,
+        "btc": 0.0,
+        "gold": 64735823.28,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1506,6 +1992,12 @@
       "sp500": 108250577.21,
       "ver2Return": 0.1223673978583073,
       "sp500Return": 0.08250577207119858,
+      "allocation": {
+        "equity": 36396606.74,
+        "btc": 0.0,
+        "gold": 64465071.86,
+        "cash": 11375061.19
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1524,6 +2016,12 @@
       "sp500": 108050026.64,
       "ver2Return": 0.12813181113638383,
       "sp500Return": 0.08050026644565933,
+      "allocation": {
+        "equity": 56406590.56,
+        "btc": 0.0,
+        "gold": 45125272.45,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": true,
       "signalMissing": false,
@@ -1550,6 +2048,12 @@
       "sp500": 107061294.86,
       "ver2Return": 0.12005569411311612,
       "sp500Return": 0.07061294858034128,
+      "allocation": {
+        "equity": 55890431.6,
+        "btc": 0.0,
+        "gold": 44833819.7,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1568,6 +2072,12 @@
       "sp500": 107999379.4,
       "ver2Return": 0.11618823553353752,
       "sp500Return": 0.0799937940224702,
+      "allocation": {
+        "equity": 56380150.6,
+        "btc": 0.0,
+        "gold": 43957354.84,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1586,6 +2096,12 @@
       "sp500": 109586837.78,
       "ver2Return": 0.12815961577540436,
       "sp500Return": 0.09586837780720114,
+      "allocation": {
+        "equity": 57208869.64,
+        "btc": 0.0,
+        "gold": 44325773.82,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1604,6 +2120,12 @@
       "sp500": 107428351.6,
       "ver2Return": 0.12295901557077382,
       "sp500Return": 0.07428351596048022,
+      "allocation": {
+        "equity": 56082050.42,
+        "btc": 0.0,
+        "gold": 44932533.02,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1622,6 +2144,12 @@
       "sp500": 108466772.12,
       "ver2Return": 0.12994561915126468,
       "sp500Return": 0.0846677211822473,
+      "allocation": {
+        "equity": 56624148.96,
+        "btc": 0.0,
+        "gold": 45089094.84,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1640,6 +2168,12 @@
       "sp500": 109653596.17,
       "ver2Return": 0.1422542017915902,
       "sp500Return": 0.09653596166748546,
+      "allocation": {
+        "equity": 57243720.29,
+        "btc": 0.0,
+        "gold": 45700381.78,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1658,6 +2192,12 @@
       "sp500": 110118907.6,
       "ver2Return": 0.14829002095613442,
       "sp500Return": 0.10118907603963745,
+      "allocation": {
+        "equity": 57486632.13,
+        "btc": 0.0,
+        "gold": 46061051.85,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1676,6 +2216,12 @@
       "sp500": 112206273.48,
       "ver2Return": 0.16340850790388028,
       "sp500Return": 0.12206273481846441,
+      "allocation": {
+        "equity": 58576323.6,
+        "btc": 0.0,
+        "gold": 46483209.07,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1694,6 +2240,12 @@
       "sp500": 113100950.12,
       "ver2Return": 0.16554223418021996,
       "sp500Return": 0.13100950118749521,
+      "allocation": {
+        "equity": 59043381.88,
+        "btc": 0.0,
+        "gold": 46229523.43,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1712,6 +2264,12 @@
       "sp500": 111748079.01,
       "ver2Return": 0.1553140284546275,
       "sp500Return": 0.11748079011833057,
+      "allocation": {
+        "equity": 58337127.11,
+        "btc": 0.0,
+        "gold": 45912957.63,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1730,6 +2288,12 @@
       "sp500": 112193983.31,
       "ver2Return": 0.1490730308907986,
       "sp500Return": 0.12193983306614031,
+      "allocation": {
+        "equity": 58569907.62,
+        "btc": 0.0,
+        "gold": 45056077.35,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1748,6 +2312,12 @@
       "sp500": 111360934.63,
       "ver2Return": 0.14562664878240472,
       "sp500Return": 0.11360934626657149,
+      "allocation": {
+        "equity": 58135021.7,
+        "btc": 0.0,
+        "gold": 45146325.07,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1766,6 +2336,12 @@
       "sp500": 113666548.6,
       "ver2Return": 0.15458566423185838,
       "sp500Return": 0.13666548602793194,
+      "allocation": {
+        "equity": 59338647.72,
+        "btc": 0.0,
+        "gold": 44838600.59,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1784,6 +2360,12 @@
       "sp500": 112791983.66,
       "ver2Return": 0.15196660901067283,
       "sp500Return": 0.12791983658186656,
+      "allocation": {
+        "equity": 58882088.58,
+        "btc": 0.0,
+        "gold": 45033254.21,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1802,6 +2384,12 @@
       "sp500": 113993532.26,
       "ver2Return": 0.16108817206304837,
       "sp500Return": 0.13993532257783214,
+      "allocation": {
+        "equity": 59509346.73,
+        "btc": 0.0,
+        "gold": 45318152.36,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1820,6 +2408,12 @@
       "sp500": 115103426.0,
       "ver2Return": 0.16505035991542916,
       "sp500Return": 0.15103426004725606,
+      "allocation": {
+        "equity": 60088757.25,
+        "btc": 0.0,
+        "gold": 45134960.63,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1838,6 +2432,12 @@
       "sp500": 115122714.23,
       "ver2Return": 0.16521111961773793,
       "sp500Return": 0.15122714233886536,
+      "allocation": {
+        "equity": 60098826.51,
+        "btc": 0.0,
+        "gold": 45140967.34,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1856,6 +2456,12 @@
       "sp500": 114573253.7,
       "ver2Return": 0.15186959827106272,
       "sp500Return": 0.1457325369705218,
+      "allocation": {
+        "equity": 59811985.34,
+        "btc": 0.0,
+        "gold": 44093656.37,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1874,6 +2480,12 @@
       "sp500": 114700180.59,
       "ver2Return": 0.1567134825248082,
       "sp500Return": 0.14700180589509348,
+      "allocation": {
+        "equity": 59878246.44,
+        "btc": 0.0,
+        "gold": 44511783.7,
+        "cash": 11281318.11
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1892,6 +2504,12 @@
       "sp500": 115666505.24,
       "ver2Return": 0.1682802041800946,
       "sp500Return": 0.15666505241082018,
+      "allocation": {
+        "equity": 29207005.1,
+        "btc": 33880125.92,
+        "gold": 30375285.31,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": true,
       "signalMissing": false,
@@ -1918,6 +2536,12 @@
       "sp500": 116438899.2,
       "ver2Return": 0.16055326170443474,
       "sp500Return": 0.16438899203635415,
+      "allocation": {
+        "equity": 29402042.68,
+        "btc": 33181798.69,
+        "gold": 30105880.72,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1936,6 +2560,12 @@
       "sp500": 115909163.98,
       "ver2Return": 0.1414576059007222,
       "sp500Return": 0.15909163975450547,
+      "allocation": {
+        "equity": 29268278.98,
+        "btc": 31273631.21,
+        "gold": 30238246.32,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1954,6 +2584,12 @@
       "sp500": 117198335.52,
       "ver2Return": 0.13744330690697382,
       "sp500Return": 0.1719833551712715,
+      "allocation": {
+        "equity": 29593808.31,
+        "btc": 30633626.29,
+        "gold": 30151292.01,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1972,6 +2608,12 @@
       "sp500": 114423681.13,
       "ver2Return": 0.1260916580938629,
       "sp500Return": 0.14423681134778144,
+      "allocation": {
+        "equity": 28893178.99,
+        "btc": 29863226.99,
+        "gold": 30487155.75,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -1990,6 +2632,12 @@
       "sp500": 116397319.94,
       "ver2Return": 0.11291972612979673,
       "sp500Return": 0.16397319938770338,
+      "allocation": {
+        "equity": 29391543.48,
+        "btc": 28732105.51,
+        "gold": 29802719.54,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2008,6 +2656,12 @@
       "sp500": 114148436.48,
       "ver2Return": 0.11233843128128851,
       "sp500Return": 0.14148436484340232,
+      "allocation": {
+        "equity": 28823676.83,
+        "btc": 29688637.53,
+        "gold": 29355924.68,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2026,6 +2680,12 @@
       "sp500": 112153697.01,
       "ver2Return": 0.09585231144723094,
       "sp500Return": 0.12153697013886045,
+      "allocation": {
+        "equity": 28319984.2,
+        "btc": 29041302.01,
+        "gold": 28858340.85,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2044,6 +2704,12 @@
       "sp500": 113726446.67,
       "ver2Return": 0.08512474473216747,
       "sp500Return": 0.13726446669001513,
+      "allocation": {
+        "equity": 28717119.98,
+        "btc": 28859328.49,
+        "gold": 27570421.93,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2062,6 +2728,12 @@
       "sp500": 115197775.7,
       "ver2Return": 0.1097270862451778,
       "sp500Return": 0.15197775700421734,
+      "allocation": {
+        "equity": 29088645.98,
+        "btc": 29872436.48,
+        "gold": 28646022.08,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2080,6 +2752,12 @@
       "sp500": 115845906.55,
       "ver2Return": 0.10532283319120928,
       "sp500Return": 0.15845906549063504,
+      "allocation": {
+        "equity": 29252305.82,
+        "btc": 29562851.4,
+        "gold": 28351522.02,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2098,6 +2776,12 @@
       "sp500": 114927478.02,
       "ver2Return": 0.12298820891579587,
       "sp500Return": 0.14927478017411833,
+      "allocation": {
+        "equity": 29020392.98,
+        "btc": 30886921.9,
+        "gold": 29025901.93,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2116,6 +2800,12 @@
       "sp500": 113270325.09,
       "ver2Return": 0.11390728443661202,
       "sp500Return": 0.1327032509337216,
+      "allocation": {
+        "equity": 28601944.5,
+        "btc": 30374300.6,
+        "gold": 29048879.27,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2134,6 +2824,12 @@
       "sp500": 115012389.92,
       "ver2Return": 0.10802241045773409,
       "sp500Return": 0.15012389917377478,
+      "allocation": {
+        "equity": 29041834.13,
+        "btc": 29875684.23,
+        "gold": 28519118.61,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2152,6 +2848,12 @@
       "sp500": 115737123.85,
       "ver2Return": 0.1079431125493795,
       "sp500Return": 0.1573712384512338,
+      "allocation": {
+        "equity": 29224837.04,
+        "btc": 29526498.05,
+        "gold": 28677372.08,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2170,6 +2872,12 @@
       "sp500": 114074815.37,
       "ver2Return": 0.10918603778633651,
       "sp500Return": 0.14074815373269933,
+      "allocation": {
+        "equity": 28805086.73,
+        "btc": 30250403.26,
+        "gold": 28497509.71,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2188,6 +2896,12 @@
       "sp500": 114142866.37,
       "ver2Return": 0.09510765293329637,
       "sp500Return": 0.14142866370196838,
+      "allocation": {
+        "equity": 28822270.32,
+        "btc": 29318108.66,
+        "gold": 28004782.23,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2206,6 +2920,12 @@
       "sp500": 114849968.89,
       "ver2Return": 0.08038521696199052,
       "sp500Return": 0.1484996888509833,
+      "allocation": {
+        "equity": 29000821.11,
+        "btc": 28339110.4,
+        "gold": 27332986.09,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2224,6 +2944,12 @@
       "sp500": 114555759.13,
       "ver2Return": 0.07802232470772097,
       "sp500Return": 0.14555759134951063,
+      "allocation": {
+        "equity": 28926530.07,
+        "btc": 27969144.59,
+        "gold": 27540953.73,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2242,6 +2968,12 @@
       "sp500": 115616450.87,
       "ver2Return": 0.08449795020739326,
       "sp500Return": 0.1561645087024286,
+      "allocation": {
+        "equity": 29194365.85,
+        "btc": 28109763.63,
+        "gold": 27780061.46,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2260,6 +2992,12 @@
       "sp500": 117104013.54,
       "ver2Return": 0.09042574847013629,
       "sp500Return": 0.17104013538652096,
+      "allocation": {
+        "equity": 29569991.02,
+        "btc": 28573497.31,
+        "gold": 27533482.44,
+        "cash": 23365604.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2278,6 +3016,12 @@
       "sp500": 117442761.25,
       "ver2Return": 0.08596469634154258,
       "sp500Return": 0.17442761247610905,
+      "allocation": {
+        "equity": 21719293.93,
+        "btc": 15203505.75,
+        "gold": 49954376.03,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": true,
       "signalMissing": false,
@@ -2304,6 +3048,12 @@
       "sp500": 117567414.47,
       "ver2Return": 0.09296849146666974,
       "sp500Return": 0.1756741447088539,
+      "allocation": {
+        "equity": 21742346.69,
+        "btc": 15542734.37,
+        "gold": 50292474.16,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2322,6 +3072,12 @@
       "sp500": 116867914.46,
       "ver2Return": 0.0969121982141361,
       "sp500Return": 0.16867914463288747,
+      "allocation": {
+        "equity": 21612984.55,
+        "btc": 15710589.44,
+        "gold": 50648351.9,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2340,6 +3096,12 @@
       "sp500": 116347565.7,
       "ver2Return": 0.10695307764480111,
       "sp500Return": 0.1634756569548914,
+      "allocation": {
+        "equity": 21516753.78,
+        "btc": 16290037.25,
+        "gold": 51169222.81,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2358,6 +3120,12 @@
       "sp500": 114675530.76,
       "ver2Return": 0.09022994848543964,
       "sp500Return": 0.14675530764866607,
+      "allocation": {
+        "equity": 21207535.76,
+        "btc": 16122092.15,
+        "gold": 49974073.01,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2376,6 +3144,12 @@
       "sp500": 115174216.61,
       "ver2Return": 0.08066758754340198,
       "sp500Return": 0.15174216611973068,
+      "allocation": {
+        "equity": 21299760.3,
+        "btc": 15675076.58,
+        "gold": 49372627.95,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2394,6 +3168,12 @@
       "sp500": 115717223.95,
       "ver2Return": 0.08955305977149486,
       "sp500Return": 0.15717223946920833,
+      "allocation": {
+        "equity": 21400181.44,
+        "btc": 15923723.23,
+        "gold": 49912107.38,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2412,6 +3192,12 @@
       "sp500": 114287386.85,
       "ver2Return": 0.08401182962465681,
       "sp500Return": 0.14287386847643924,
+      "allocation": {
+        "equity": 21135754.31,
+        "btc": 16026757.12,
+        "gold": 49519377.61,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2430,6 +3216,12 @@
       "sp500": 113989854.84,
       "ver2Return": 0.0624042668690834,
       "sp500Return": 0.13989854840671478,
+      "allocation": {
+        "equity": 21080730.18,
+        "btc": 15509283.61,
+        "gold": 47931118.97,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2448,6 +3240,12 @@
       "sp500": 114023390.56,
       "ver2Return": 0.07240809692730821,
       "sp500Return": 0.14023390562320293,
+      "allocation": {
+        "equity": 21086932.12,
+        "btc": 16029928.53,
+        "gold": 48404655.12,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2466,6 +3264,12 @@
       "sp500": 113623140.81,
       "ver2Return": 0.07384030349899207,
       "sp500Return": 0.13623140811848766,
+      "allocation": {
+        "equity": 21012911.87,
+        "btc": 16154453.06,
+        "gold": 48497371.49,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2484,6 +3288,12 @@
       "sp500": 111734973.09,
       "ver2Return": 0.05520856795142626,
       "sp500Return": 0.1173497309101923,
+      "allocation": {
+        "equity": 20663723.3,
+        "btc": 15874772.05,
+        "gold": 47263067.52,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2502,6 +3312,12 @@
       "sp500": 111846702.64,
       "ver2Return": 0.06121903294144304,
       "sp500Return": 0.1184670264189851,
+      "allocation": {
+        "equity": 20684386.02,
+        "btc": 15894816.62,
+        "gold": 47823406.72,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2520,6 +3336,12 @@
       "sp500": 112435296.91,
       "ver2Return": 0.06145327513284782,
       "sp500Return": 0.12435296909835736,
+      "allocation": {
+        "equity": 20793237.79,
+        "btc": 16080382.73,
+        "gold": 47552413.06,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2538,6 +3360,12 @@
       "sp500": 112346471.57,
       "ver2Return": 0.07412376082008709,
       "sp500Return": 0.1234647156734534,
+      "allocation": {
+        "equity": 20776810.86,
+        "btc": 16416413.52,
+        "gold": 48499857.77,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2556,6 +3384,12 @@
       "sp500": 110672349.24,
       "ver2Return": 0.07352767918869785,
       "sp500Return": 0.10672349237141443,
+      "allocation": {
+        "equity": 20467206.81,
+        "btc": 16242845.88,
+        "gold": 48923421.3,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2574,6 +3408,12 @@
       "sp500": 110521075.5,
       "ver2Return": 0.059621249663850406,
       "sp500Return": 0.10521075502092847,
+      "allocation": {
+        "equity": 20439230.98,
+        "btc": 15940057.29,
+        "gold": 47863542.77,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2592,6 +3432,12 @@
       "sp500": 109548062.3,
       "ver2Return": 0.05102735634404576,
       "sp500Return": 0.09548062298139737,
+      "allocation": {
+        "equity": 20259286.64,
+        "btc": 15643295.25,
+        "gold": 47480859.82,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2610,6 +3456,12 @@
       "sp500": 110343867.37,
       "ver2Return": 0.06107699421312551,
       "sp500Return": 0.10343867370832749,
+      "allocation": {
+        "equity": 20406458.97,
+        "btc": 15908065.19,
+        "gold": 48073881.33,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2628,6 +3480,12 @@
       "sp500": 107727319.64,
       "ver2Return": 0.04136832554529257,
       "sp500Return": 0.07727319636776442,
+      "allocation": {
+        "equity": 19922567.34,
+        "btc": 15504270.0,
+        "gold": 46990701.29,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2646,6 +3504,12 @@
       "sp500": 109282756.23,
       "ver2Return": 0.04429882422943909,
       "sp500Return": 0.09282756234482892,
+      "allocation": {
+        "equity": 20210222.23,
+        "btc": 15396946.92,
+        "gold": 47103419.34,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2664,6 +3528,12 @@
       "sp500": 108289588.2,
       "ver2Return": 0.0430727780771345,
       "sp500Return": 0.08289588196022524,
+      "allocation": {
+        "equity": 20026550.55,
+        "btc": 15439075.87,
+        "gold": 47122357.46,
+        "cash": 21719293.93
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2682,6 +3552,12 @@
       "sp500": 110591920.6,
       "ver2Return": 0.03987106938391394,
       "sp500Return": 0.10591920602740634,
+      "allocation": {
+        "equity": 20797421.39,
+        "btc": 14558194.97,
+        "gold": 47834069.19,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": true,
       "signalMissing": false,
@@ -2708,6 +3584,12 @@
       "sp500": 111855874.0,
       "ver2Return": 0.04052308022072837,
       "sp500Return": 0.11855874001389366,
+      "allocation": {
+        "equity": 21035114.8,
+        "btc": 14676306.09,
+        "gold": 47543465.74,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2726,6 +3608,12 @@
       "sp500": 111459684.4,
       "ver2Return": 0.04255159535437625,
       "sp500Return": 0.11459684398815595,
+      "allocation": {
+        "equity": 20960609.16,
+        "btc": 14731748.59,
+        "gold": 47765380.4,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2744,6 +3632,12 @@
       "sp500": 111013629.09,
       "ver2Return": 0.06140176258922203,
       "sp500Return": 0.11013629094154531,
+      "allocation": {
+        "equity": 20876726.0,
+        "btc": 14838741.49,
+        "gold": 49627287.38,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2762,6 +3656,12 @@
       "sp500": 111679752.1,
       "ver2Return": 0.06184677736938782,
       "sp500Return": 0.11679752099441698,
+      "allocation": {
+        "equity": 21001994.11,
+        "btc": 14745779.89,
+        "gold": 49639482.36,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2780,6 +3680,12 @@
       "sp500": 110599660.4,
       "ver2Return": 0.0661583198205633,
       "sp500Return": 0.10599660402977218,
+      "allocation": {
+        "equity": 20798876.9,
+        "btc": 14730261.95,
+        "gold": 50289271.74,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2798,6 +3704,12 @@
       "sp500": 110858182.06,
       "ver2Return": 0.07328343998562747,
       "sp500Return": 0.10858182063586286,
+      "allocation": {
+        "equity": 20847493.33,
+        "btc": 14596402.54,
+        "gold": 51087026.75,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2816,6 +3728,12 @@
       "sp500": 110619857.97,
       "ver2Return": 0.06650681189060159,
       "sp500Return": 0.10619857967863,
+      "allocation": {
+        "equity": 20802675.16,
+        "btc": 14413145.6,
+        "gold": 50637439.04,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2834,6 +3752,12 @@
       "sp500": 111749452.58,
       "ver2Return": 0.07577449444243145,
       "sp500Return": 0.11749452584701858,
+      "allocation": {
+        "equity": 21015101.67,
+        "btc": 14437670.99,
+        "gold": 51327255.4,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2852,6 +3776,12 @@
       "sp500": 111632362.87,
       "ver2Return": 0.06852522824717333,
       "sp500Return": 0.11632362870140822,
+      "allocation": {
+        "equity": 20993082.3,
+        "btc": 14444061.02,
+        "gold": 50617958.11,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2870,6 +3800,12 @@
       "sp500": 110671844.83,
       "ver2Return": 0.0665178868127776,
       "sp500Return": 0.10671844830669186,
+      "allocation": {
+        "equity": 20812451.58,
+        "btc": 14294572.91,
+        "gold": 50747342.8,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2888,6 +3824,12 @@
       "sp500": 109990673.33,
       "ver2Return": 0.07388982886283957,
       "sp500Return": 0.099906733343476,
+      "allocation": {
+        "equity": 20684353.52,
+        "btc": 14615324.63,
+        "gold": 51291883.35,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2906,6 +3848,12 @@
       "sp500": 110092858.42,
       "ver2Return": 0.06550116442643472,
       "sp500Return": 0.10092858424943896,
+      "allocation": {
+        "equity": 20703569.99,
+        "btc": 14677308.52,
+        "gold": 50371816.55,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2924,6 +3872,12 @@
       "sp500": 107077151.9,
       "ver2Return": 0.07480430051012199,
       "sp500Return": 0.07077151901245893,
+      "allocation": {
+        "equity": 20136449.72,
+        "btc": 15243766.89,
+        "gold": 51302792.05,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2942,6 +3896,12 @@
       "sp500": 108117176.36,
       "ver2Return": 0.09182518868988265,
       "sp500Return": 0.08117176355216493,
+      "allocation": {
+        "equity": 20332032.07,
+        "btc": 16276809.89,
+        "gold": 51776255.53,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2960,6 +3920,12 @@
       "sp500": 107335579.91,
       "ver2Return": 0.10712755847873856,
       "sp500Return": 0.07335579905939715,
+      "allocation": {
+        "equity": 20185048.54,
+        "btc": 17178988.0,
+        "gold": 52551297.92,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2978,6 +3944,12 @@
       "sp500": 107507179.05,
       "ver2Return": 0.11417849262529622,
       "sp500Return": 0.07507179050949087,
+      "allocation": {
+        "equity": 20217318.7,
+        "btc": 17538389.41,
+        "gold": 52864719.76,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -2996,6 +3968,12 @@
       "sp500": 107530381.58,
       "ver2Return": 0.11667218034276972,
       "sp500Return": 0.07530381576655443,
+      "allocation": {
+        "equity": 20221682.07,
+        "btc": 17589741.27,
+        "gold": 53058373.31,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3014,6 +3992,12 @@
       "sp500": 108441567.25,
       "ver2Return": 0.10995613769158785,
       "sp500Return": 0.08441567254004245,
+      "allocation": {
+        "equity": 20393035.57,
+        "btc": 17505904.23,
+        "gold": 52299252.59,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3032,6 +4016,12 @@
       "sp500": 107836287.91,
       "ver2Return": 0.11152867834378277,
       "sp500Return": 0.07836287907066275,
+      "allocation": {
+        "equity": 20279209.44,
+        "btc": 17768428.86,
+        "gold": 52307808.14,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3050,6 +4040,12 @@
       "sp500": 107077777.09,
       "ver2Return": 0.08526667845536329,
       "sp500Return": 0.0707777708688504,
+      "allocation": {
+        "equity": 20136567.29,
+        "btc": 17186487.13,
+        "gold": 50406192.03,
+        "cash": 20797421.39
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3068,6 +4064,12 @@
       "sp500": 105670588.43,
       "ver2Return": 0.08056650151186551,
       "sp500Return": 0.05670588431980317,
+      "allocation": {
+        "equity": 5402832.51,
+        "btc": 31336428.54,
+        "gold": 49706059.07,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": true,
       "signalMissing": false,
@@ -3094,6 +4096,12 @@
       "sp500": 106440673.71,
       "ver2Return": 0.06255016041641714,
       "sp500Return": 0.06440673712526723,
+      "allocation": {
+        "equity": 5442206.21,
+        "btc": 30775811.16,
+        "gold": 48425668.65,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3112,6 +4120,12 @@
       "sp500": 106528806.43,
       "ver2Return": 0.06226036662677714,
       "sp500Return": 0.06528806429064504,
+      "allocation": {
+        "equity": 5446712.34,
+        "btc": 30499401.85,
+        "gold": 48668592.43,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3130,6 +4144,12 @@
       "sp500": 105960125.26,
       "ver2Return": 0.08746524236133935,
       "sp500Return": 0.05960125255163651,
+      "allocation": {
+        "equity": 5417636.24,
+        "btc": 32195879.42,
+        "gold": 49521678.55,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3148,6 +4168,12 @@
       "sp500": 104502691.82,
       "ver2Return": 0.06820273873532723,
       "sp500Return": 0.04502691821258464,
+      "allocation": {
+        "equity": 5343119.11,
+        "btc": 31181475.37,
+        "gold": 48684349.37,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3166,6 +4192,12 @@
       "sp500": 103996624.86,
       "ver2Return": 0.05429094062859452,
       "sp500Return": 0.03996624857543196,
+      "allocation": {
+        "equity": 5317244.41,
+        "btc": 30644092.63,
+        "gold": 47856426.99,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3184,6 +4216,12 @@
       "sp500": 102719827.29,
       "ver2Return": 0.05205888612002085,
       "sp500Return": 0.027198272913727006,
+      "allocation": {
+        "equity": 5251963.01,
+        "btc": 30362149.76,
+        "gold": 47980445.81,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3202,6 +4240,12 @@
       "sp500": 104122210.3,
       "ver2Return": 0.044278897686719,
       "sp500Return": 0.04122210299035123,
+      "allocation": {
+        "equity": 5323665.47,
+        "btc": 30091114.35,
+        "gold": 47401779.92,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3220,6 +4264,12 @@
       "sp500": 103336868.97,
       "ver2Return": 0.044984758220459,
       "sp500Return": 0.03336868965012596,
+      "allocation": {
+        "equity": 5283511.74,
+        "btc": 30066030.17,
+        "gold": 47537603.88,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3238,6 +4288,12 @@
       "sp500": 103463701.84,
       "ver2Return": 0.04900055154104832,
       "sp500Return": 0.03463701837280331,
+      "allocation": {
+        "equity": 5289996.58,
+        "btc": 30902953.94,
+        "gold": 47095774.6,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3256,6 +4312,12 @@
       "sp500": 103969998.8,
       "ver2Return": 0.04685476077214745,
       "sp500Return": 0.03969998803741426,
+      "allocation": {
+        "equity": 5315883.04,
+        "btc": 30062146.56,
+        "gold": 47696116.44,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3274,6 +4336,12 @@
       "sp500": 105687355.08,
       "ver2Return": 0.04845171911754109,
       "sp500Return": 0.05687355075015765,
+      "allocation": {
+        "equity": 5403689.77,
+        "btc": 30177400.13,
+        "gold": 47652751.98,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3292,6 +4360,12 @@
       "sp500": 107014782.1,
       "ver2Return": 0.068068990047083,
       "sp500Return": 0.07014782100851757,
+      "allocation": {
+        "equity": 5471559.8,
+        "btc": 30719741.84,
+        "gold": 49004267.34,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3310,6 +4384,12 @@
       "sp500": 109138334.6,
       "ver2Return": 0.0951714183097705,
       "sp500Return": 0.09138334597787479,
+      "allocation": {
+        "equity": 5580134.93,
+        "btc": 32739585.86,
+        "gold": 49586091.01,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3328,6 +4408,12 @@
       "sp500": 107932255.33,
       "ver2Return": 0.10304459843743619,
       "sp500Return": 0.07932255331442573,
+      "allocation": {
+        "equity": 5518469.3,
+        "btc": 34489167.56,
+        "gold": 48685492.96,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3346,6 +4432,12 @@
       "sp500": 105849671.39,
       "ver2Return": 0.0931415147155421,
       "sp500Return": 0.05849671388573863,
+      "allocation": {
+        "equity": 5411988.84,
+        "btc": 33972166.92,
+        "gold": 48318665.68,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3364,6 +4456,12 @@
       "sp500": 106453456.7,
       "ver2Return": 0.08275613264277526,
       "sp500Return": 0.06453456702216065,
+      "allocation": {
+        "equity": 5442859.79,
+        "btc": 33501963.36,
+        "gold": 47719460.09,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3382,6 +4480,12 @@
       "sp500": 107195511.58,
       "ver2Return": 0.08305563297033336,
       "sp500Return": 0.0719551157896734,
+      "allocation": {
+        "equity": 5480800.32,
+        "btc": 33521653.92,
+        "gold": 47691779.03,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3400,6 +4504,12 @@
       "sp500": 105482440.07,
       "ver2Return": 0.07572430330532942,
       "sp500Return": 0.05482440070113759,
+      "allocation": {
+        "equity": 5393212.67,
+        "btc": 33082848.3,
+        "gold": 47485039.33,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3418,6 +4528,12 @@
       "sp500": 105575373.05,
       "ver2Return": 0.05665901133546525,
       "sp500Return": 0.05575373047694665,
+      "allocation": {
+        "equity": 5397964.24,
+        "btc": 32913250.15,
+        "gold": 45743356.71,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3436,6 +4552,12 @@
       "sp500": 104996039.22,
       "ver2Return": 0.0608327686546013,
       "sp500Return": 0.04996039215426973,
+      "allocation": {
+        "equity": 5368343.47,
+        "btc": 32899377.21,
+        "gold": 46204226.15,
+        "cash": 21611330.03
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3454,6 +4576,12 @@
       "sp500": 105161211.43,
       "ver2Return": 0.05809060813061118,
       "sp500Return": 0.051612114277807875,
+      "allocation": {
+        "equity": 15871359.12,
+        "btc": 30684627.64,
+        "gold": 48672167.97,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": true,
       "signalMissing": false,
@@ -3480,6 +4608,12 @@
       "sp500": 106336799.97,
       "ver2Return": 0.06922062414220309,
       "sp500Return": 0.06336799972094198,
+      "allocation": {
+        "equity": 16048783.74,
+        "btc": 31190526.36,
+        "gold": 49101846.23,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3498,6 +4632,12 @@
       "sp500": 105744547.1,
       "ver2Return": 0.054073795613447384,
       "sp500Return": 0.05744547100797104,
+      "allocation": {
+        "equity": 15959398.52,
+        "btc": 30697106.21,
+        "gold": 48169968.74,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3516,6 +4656,12 @@
       "sp500": 106211326.12,
       "ver2Return": 0.058023989994832714,
       "sp500Return": 0.06211326121963734,
+      "allocation": {
+        "equity": 16029846.72,
+        "btc": 31167565.63,
+        "gold": 48024080.57,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3534,6 +4680,12 @@
       "sp500": 105607979.77,
       "ver2Return": 0.05737969508795726,
       "sp500Return": 0.056079797709054136,
+      "allocation": {
+        "equity": 15938787.22,
+        "btc": 31030400.96,
+        "gold": 48187875.24,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3552,6 +4704,12 @@
       "sp500": 105220409.47,
       "ver2Return": 0.041561660722609695,
       "sp500Return": 0.05220409474281573,
+      "allocation": {
+        "equity": 15880293.53,
+        "btc": 30251101.05,
+        "gold": 47443865.41,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3570,6 +4728,12 @@
       "sp500": 106026365.45,
       "ver2Return": 0.04171392493686721,
       "sp500Return": 0.06026365453011606,
+      "allocation": {
+        "equity": 16001931.7,
+        "btc": 29689838.11,
+        "gold": 47898716.61,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3588,6 +4752,12 @@
       "sp500": 105960101.37,
       "ver2Return": 0.050739231330214185,
       "sp500Return": 0.05960101370916937,
+      "allocation": {
+        "equity": 15991930.85,
+        "btc": 29887227.34,
+        "gold": 48613858.86,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3606,6 +4776,12 @@
       "sp500": 105378200.64,
       "ver2Return": 0.04452880565969708,
       "sp500Return": 0.05378200640857678,
+      "allocation": {
+        "equity": 15904108.02,
+        "btc": 29910215.41,
+        "gold": 48057651.06,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3624,6 +4800,12 @@
       "sp500": 104821830.95,
       "ver2Return": 0.04922822820012995,
       "sp500Return": 0.04821830953243311,
+      "allocation": {
+        "equity": 15820138.44,
+        "btc": 30248588.56,
+        "gold": 48273189.75,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3642,6 +4824,12 @@
       "sp500": 105196651.3,
       "ver2Return": 0.03751231595794602,
       "sp500Return": 0.05196651296814436,
+      "allocation": {
+        "equity": 15876707.85,
+        "btc": 29722171.44,
+        "gold": 47571446.22,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3660,6 +4848,12 @@
       "sp500": 104109160.04,
       "ver2Return": 0.0469749244142732,
       "sp500Return": 0.04109160041346649,
+      "allocation": {
+        "equity": 15712579.23,
+        "btc": 29946737.33,
+        "gold": 48457269.8,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3678,6 +4872,12 @@
       "sp500": 103764041.61,
       "ver2Return": 0.03693078233135494,
       "sp500Return": 0.03764041613316471,
+      "allocation": {
+        "equity": 15660492.55,
+        "btc": 29429871.56,
+        "gold": 48021808.03,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3696,6 +4896,12 @@
       "sp500": 103883116.37,
       "ver2Return": 0.03376091172243312,
       "sp500Return": 0.03883116373484663,
+      "allocation": {
+        "equity": 15678463.8,
+        "btc": 29481209.08,
+        "gold": 47635512.21,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3714,6 +4920,12 @@
       "sp500": 104125137.91,
       "ver2Return": 0.03159413749955364,
       "sp500Return": 0.04125137910271426,
+      "allocation": {
+        "equity": 15714990.68,
+        "btc": 29642698.37,
+        "gold": 47220818.62,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3732,6 +4944,12 @@
       "sp500": 102945175.98,
       "ver2Return": 0.03903005975310281,
       "sp500Return": 0.029451759806776945,
+      "allocation": {
+        "equity": 15536906.01,
+        "btc": 30364473.04,
+        "gold": 47420720.84,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3750,6 +4968,12 @@
       "sp500": 102287774.54,
       "ver2Return": 0.013965406045401085,
       "sp500Return": 0.022877745412104966,
+      "allocation": {
+        "equity": 15437688.3,
+        "btc": 29234700.76,
+        "gold": 46143245.46,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3768,6 +4992,12 @@
       "sp500": 102977563.07,
       "ver2Return": 0.010841778020352022,
       "sp500Return": 0.029775630698037014,
+      "allocation": {
+        "equity": 15541794.0,
+        "btc": 29151233.15,
+        "gold": 45810244.57,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3786,6 +5016,12 @@
       "sp500": 103638439.92,
       "ver2Return": 0.009089489645769389,
       "sp500Return": 0.03638439918110992,
+      "allocation": {
+        "equity": 15641536.23,
+        "btc": 28702683.22,
+        "gold": 45983823.43,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3804,6 +5040,12 @@
       "sp500": 103926146.66,
       "ver2Return": 0.017979630350647202,
       "sp500Return": 0.03926146658954477,
+      "allocation": {
+        "equity": 15684958.11,
+        "btc": 28994512.72,
+        "gold": 46537586.13,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3822,6 +5064,12 @@
       "sp500": 104890737.59,
       "ver2Return": 0.03330601761236718,
       "sp500Return": 0.04890737590862404,
+      "allocation": {
+        "equity": 15830538.11,
+        "btc": 29648882.81,
+        "gold": 47270274.77,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3840,6 +5088,12 @@
       "sp500": 102615390.26,
       "ver2Return": 0.01827973190494725,
       "sp500Return": 0.026153902554918673,
+      "allocation": {
+        "equity": 15487133.4,
+        "btc": 29263714.73,
+        "gold": 46496218.97,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": false,
@@ -3858,6 +5112,12 @@
       "sp500": 101798865.83,
       "ver2Return": -0.015566717273252206,
       "sp500Return": 0.01798865830500951,
+      "allocation": {
+        "equity": 15363900.2,
+        "btc": 27740304.02,
+        "gold": 44758217.97,
+        "cash": 10580906.08
+      },
       "phase": "backtest",
       "rebalanced": false,
       "signalMissing": true,
@@ -3876,6 +5136,12 @@
       "sp500": 102802198.6,
       "ver2Return": -0.002750546612859339,
       "sp500Return": 0.028021986042645386,
+      "allocation": {
+        "equity": 15515327.28,
+        "btc": 27869983.71,
+        "gold": 45758728.27,
+        "cash": 10580906.08
+      },
       "phase": "tracking",
       "rebalanced": false,
       "signalMissing": false,
