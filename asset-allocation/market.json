@@ -1,8 +1,8 @@
 {
   "result": {
     "market_date": "2026-11-04",
-    "generated_at": "2026-11-05T14:53:22.791576+00:00",
-    "available_at": "2026-11-05T10:19:34.066465+00:00",
+    "generated_at": "2026-11-05T14:59:21.451608+00:00",
+    "available_at": "2026-11-05T14:59:12.668819+00:00",
     "config_hash": "f975b97fcfef2b127c857b5225db0b8df5f8755e6182f9382797f5299ba38811",
     "regime": "normal",
     "stress": 0,
