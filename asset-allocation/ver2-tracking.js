@@ -8,6 +8,16 @@
   scores.insertAdjacentElement('afterend', host);
   const money = x => Math.round(x).toLocaleString('ko-KR') + '원';
   const pct = x => (x >= 0 ? '+' : '') + (x * 100).toFixed(2) + '%';
+  const maxDrawdown = (rows, key) => {
+    let peak = 0, worst = 0;
+    for (const row of rows) {
+      const value = row[key];
+      if (!Number.isFinite(value) || value <= 0) continue;
+      peak = Math.max(peak, value);
+      worst = Math.min(worst, value / peak - 1);
+    }
+    return worst;
+  };
   const labels = [['equity', '미국 주식'], ['btc', '비트코인'], ['gold', '금'], ['cash', '현금']];
 
   function draw(d) {
@@ -25,7 +35,8 @@
     const missing = rows.filter(r => r.signalMissing).map(r => r.date);
     host.innerHTML = `<div class="section-title"><h2>Ver2 · S&amp;P 500 거치식 추이</h2><span class="tag">기준 ${last.date}</span></div>
       <p>2026년 첫 거래일부터 각각 1억 원 · 추가 납입 없음 · 원화 기준</p>
-      <div class="sim-trend-values"><span style="color:#2458e9">Ver2 <b>${money(last.ver2)} · ${pct(last.ver2Return)}</b></span><span style="color:#f18b18">S&amp;P 500 <b>${money(last.sp500)} · ${pct(last.sp500Return)}</b></span></div>
+      <div class="sim-trend-values"><span style="color:#2458e9">Ver2 <b>${money(last.ver2)} · ${pct(last.ver2Return)} · MDD ${pct(maxDrawdown(rows, 'ver2'))}</b></span><span style="color:#f18b18">S&amp;P 500 <b>${money(last.sp500)} · ${pct(last.sp500Return)} · MDD ${pct(maxDrawdown(rows, 'sp500'))}</b></span></div>
+      <p class="small">MDD(최대낙폭)는 그래프 시작일부터 기준일까지 일별 평가액의 고점 대비 최대 하락률입니다.</p>
       <div style="position:relative">
         <svg viewBox="0 0 620 230" font-size="10" role="img" tabindex="0" aria-label="Ver2와 S&amp;P 500의 일별 원화 평가액. 좌우 방향키로 날짜 선택" style="width:100%;height:auto;touch-action:pan-y">
           <text x="0" y="33">${money(max)}</text><text x="0" y="195">${money(min)}</text>
