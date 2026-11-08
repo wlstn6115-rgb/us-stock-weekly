@@ -17,7 +17,7 @@
       <fieldset><legend>연습용 초기 자산 (원)</legend>${keys.map(a=>`<label>${names[a]} <input id="v2-initial-${a}" type="number" min="0" step="1" value="${a==='CASH'?10000000:0}"></label>`).join('')}</fieldset>
       <label>매월 납입금 (원) <input id="v2-practice-deposit" type="number" min="0" step="1" value="2000000"></label>
       <label>기간 <select id="v2-years"><option value="1">1년</option><option value="3">3년</option><option value="5">5년</option></select></label>
-      <label>시작 월 <select id="v2-start-month"></select></label>
+      <p class="small">시작 시점은 연속된 자료 중 무작위로 선택하며, 실제 날짜는 연습을 마친 뒤 공개합니다.</p>
       <button id="v2-practice-start" class="primary" disabled>새 연습 시작</button>
     </details>
     <div id="v2-practice-body"></div>
@@ -36,11 +36,10 @@
   }
   function month(s){return Number(s.slice(0,4))*12+Number(s.slice(5,7));}
   function starts() {
-    const sel=get('v2-start-month'), list=candidates(Number(get('v2-years').value));
-    sel.innerHTML=list.map(i=>`<option value="${i}">${rows[i].month}</option>`).join('');
+    const list=candidates(Number(get('v2-years').value));
     get('v2-practice-start').disabled=!list.length;
     if(!list.length) status('선택한 기간에 연속된 Ver2 자료가 없습니다.');
-    else status('연습 기간과 시작 월을 선택하세요. 결측 월이 포함된 구간은 선택하지 않습니다.');
+    else status('연습 기간을 선택하세요. 결측 월이 포함된 구간은 선택하지 않습니다.');
   }
   function save(){try{localStorage.setItem(key,JSON.stringify(session));}catch(e){status('저장하지 못했습니다. 브라우저 저장 설정을 확인하세요.');}}
   function draw() {
@@ -49,14 +48,14 @@
     const total=P.value(session.portfolio), benchmark=Object.values(session.model).reduce((a,b)=>a+b,0);
     const target=weights(row.target.weights);
     get('v2-practice-body').innerHTML=`<section style="margin-top:20px">
-      <h3>${done?'연습 완료':'이번 달 투자 선택'} · ${row.month}</h3>
+      <h3>${done?'연습 완료 · '+esc(session.startMonth)+' ~ '+esc(row.month):'이번 달 투자 선택 · '+(session.cursor+1)+'번째 달'}</h3>
       <p>진행 ${session.cursor} / ${session.months}개월 · 누적 납입 원금 ${money(session.principal)}</p>
       <p><strong>내 평가액 ${money(total)}</strong> · Ver2 ${money(benchmark)} · S&amp;P500 ${money(session.sp500)}</p>
       <p class="small">비교 자산은 같은 초기 자산과 월 납입금으로 시작합니다. Ver2는 월별 전체 자산을 재배분합니다. 사용자 거래에는 수수료 0.1%, Ver2에도 매수·매도 각 0.1%를 적용합니다. S&amp;P500은 수수료·배당·세금 제외 가격 대용치입니다.</p>
       <div class="table-wrap"><table><thead><tr><th>자산</th><th>현재 평가액</th><th>현재 비중</th><th>Ver2 목표 비중</th>${done?'':'<th>매수 (원)</th><th>매도 (원)</th>'}</tr></thead><tbody>
       ${keys.map(a=>`<tr><th>${names[a]}</th><td>${money(session.portfolio[a])}</td><td>${(total?session.portfolio[a]/total*100:0).toFixed(1)}%</td><td>${(target[a]*100).toFixed(1)}%</td>${done?'':(a==='CASH'?'<td>—</td><td>—</td>':`<td><input id="v2-buy-${a}" aria-label="${names[a]} 매수" type="number" min="0" step="1" value="0" style="width:110px"></td><td><input id="v2-sell-${a}" aria-label="${names[a]} 매도" type="number" min="0" step="1" value="0" style="width:110px"></td>`)}</tr>`).join('')}</tbody></table></div>
-      ${done?'<p>선택한 기간의 연습을 마쳤습니다.</p>':`<p>이번 달 납입 ${money(session.deposit)} · 다음 평가 월 ${next.month}</p><label>투자 이유 <input id="v2-reason" type="text" maxlength="300" placeholder="선택 사항"></label> <button id="v2-next" class="primary">판단 확정 · 다음 달 결과</button>`}
-      <details><summary>월별 기록 (${session.history.length}건)</summary><div class="table-wrap"><table><thead><tr><th>판단 월</th><th>다음 평가 월</th><th>내 평가액</th><th>Ver2</th><th>S&amp;P500</th><th>이유</th></tr></thead><tbody>${session.history.map(h=>`<tr><td>${esc(h.date)}</td><td>${esc(h.next)}</td><td>${money(h.user)}</td><td>${money(h.model)}</td><td>${money(h.sp500)}</td><td>${esc(h.reason)}</td></tr>`).join('')}</tbody></table></div></details>
+      ${done?'<p>선택한 기간의 연습을 마쳤습니다. 실제 기간을 공개합니다.</p>':`<p>이번 달 납입 ${money(session.deposit)} · 다음 평가: ${session.cursor+2}번째 달</p><label>투자 이유 <input id="v2-reason" type="text" maxlength="300" placeholder="선택 사항"></label> <button id="v2-next" class="primary">판단 확정 · 다음 달 결과</button>`}
+      <details><summary>월별 기록 (${session.history.length}건)</summary><div class="table-wrap"><table><thead><tr><th>판단 월</th><th>다음 평가 월</th><th>내 평가액</th><th>Ver2</th><th>S&amp;P500</th><th>이유</th></tr></thead><tbody>${session.history.map((h,i)=>`<tr><td>${done?esc(h.date):(i+1)+'번째 달'}</td><td>${done?esc(h.next):(i+2)+'번째 달'}</td><td>${money(h.user)}</td><td>${money(h.model)}</td><td>${money(h.sp500)}</td><td>${esc(h.reason)}</td></tr>`).join('')}</tbody></table></div></details>
       </section>`;
     if(!done)get('v2-next').onclick=()=>{
       try {
@@ -97,8 +96,9 @@
     get('v2-practice-start').onclick=()=>{
       try {
         const portfolio=Object.fromEntries(keys.map(a=>[a,val('v2-initial-'+a)]));
-        const deposit=val('v2-practice-deposit'),start=Number(get('v2-start-month').value),months=Number(get('v2-years').value)*12;
-        if(!candidates(months/12).includes(start))throw Error('선택한 기간의 자료를 확인하세요.');
+        const deposit=val('v2-practice-deposit'),months=Number(get('v2-years').value)*12,options=candidates(months/12);
+        if(!options.length)throw Error('선택한 기간의 자료를 확인하세요.');
+        const start=options[Math.floor(Math.random()*options.length)];
         const total=P.value(portfolio);if(total===0&&deposit===0)throw Error('초기 자산 또는 월 납입금을 입력하세요.');
         session={schemaVersion:1,start,startMonth:rows[start].month,months,cursor:0,deposit,portfolio,model:{...portfolio},sp500:total,principal:total,history:[]};
         save();get('v2-setup').open=false;draw();status('연습을 시작했습니다.');
