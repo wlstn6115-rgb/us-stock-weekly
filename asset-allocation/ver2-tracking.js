@@ -48,9 +48,7 @@
         </svg>
         <div data-tooltip role="status" aria-live="polite" hidden style="position:absolute;top:8px;z-index:2;pointer-events:none;background:#fff;border:1px solid #cdd9e8;border-radius:10px;box-shadow:0 4px 18px #10233a26;padding:10px 12px;font-size:12px;line-height:1.6;color:#102a43;min-width:215px;max-width:95%"></div>
       </div>
-      <p class="small">그래프에 마우스를 올리거나 터치하면 해당 날짜의 평가액과 실제 구성 비중을 볼 수 있습니다. 실제 구성은 목표 비중과 다를 수 있습니다.</p>
-      <p class="small">파랑 Ver2 · 주황 S&amp;P 500 가격지수. 각 월 첫 미국 거래일에 Ver2를 재배분하며 매수·매도 각 0.1% 반영, 세금·스프레드·현금이자·배당 제외. 금·BTC와 원/달러는 직전 가용일 기준입니다. 2026-01-01 BTC만 Yahoo 대용치입니다.</p>
-      <p class="small">11월 2일까지는 사후 백테스트이며, 이후 수집한 시점별 신호로 관측합니다. 과거 신호의 당시 이용 가능성은 검증되지 않았습니다. ${missing.length ? '신호가 없어 재배분하지 않은 월: ' + missing.join(', ') + '.' : ''} ${start < 0 ? '아직 시작일 이후 확정된 미국 종가가 없어 실시간 관측 구간은 표시되지 않습니다.' : ''}</p>`;
+      `;
     const svg = host.querySelector('svg'), tip = host.querySelector('[data-tooltip]');
     const cursor = host.querySelector('[data-cursor]'), dot = host.querySelector('[data-dot]');
     let index = rows.length - 1;
