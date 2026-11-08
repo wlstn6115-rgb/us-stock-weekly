@@ -21,6 +21,7 @@
       <button id="v2-practice-start" class="primary" disabled>새 연습 시작</button>
     </details>
     <div id="v2-practice-body"></div>
+    <details><summary>Ver2 전체 기간 자동 계산</summary><p>초기 0원에서 매월 납입하고 전체 자산을 Ver2 목표로 재배분합니다. 신호가 없는 달은 납입과 재배분을 건너뜁니다.</p><label>월 납입금 <input id="v2-monthly" type="number" min="1" step="1" value="2000000"> 원</label> <button id="v2-sim-run">계산</button><p id="v2-sim-result" role="status"></p></details>
     <details><summary>기존 저장 연습</summary><p>기존 기록은 그대로 보존됩니다. 기존 Ver1 연습은 Ver2로 자동 변환하지 않습니다.</p><div id="v2-old-sessions"></div></details>`;
   const get = id => document.getElementById(id);
   const status = msg => { get('v2-practice-status').textContent = msg; };
@@ -82,6 +83,16 @@
     if(!response.ok)throw Error('과거 시뮬레이션 자료를 불러오지 못했습니다.');
     rows=(await response.json()).observations;
     if(!Array.isArray(rows)||!rows.length)throw Error('과거 시뮬레이션 자료가 비어 있습니다.');
+    get('v2-sim-run').onclick=()=>{
+      const out=get('v2-sim-result');
+      try {
+        const deposit=val('v2-monthly');if(!deposit)throw Error('월 납입금은 0보다 커야 합니다.');
+        let vals={QQQ:0,BTC:0,GOLD:0,CASH:0},last=null,prev=null,idx=1,peak=1,mdd=0,paid=0,skips=0,used=0;
+        for(const x of rows){if(x.status!=='available'){skips++;continue;}if(last)for(const a of keys)vals[a]*=x.prices[a]/last[a];const before=Object.values(vals).reduce((a,b)=>a+b,0);const z=V.rebalance(vals,deposit,weights(x.target.weights));idx*=prev===null?1-z.cost/deposit:(before-z.cost)/prev;vals=z.after;prev=Object.values(vals).reduce((a,b)=>a+b,0);last=x.prices;peak=Math.max(peak,idx);mdd=Math.min(mdd,idx/peak-1);paid+=deposit;used++;}
+        if(!used)throw Error('사용 가능한 과거 자료가 없습니다.');
+        out.textContent=`납입 ${money(paid)} · 평가액 ${money(prev)} · 월말 MDD ${(mdd*100).toFixed(2)}% · 계산 ${used}개월 · 결측 제외 ${skips}개월. 사후 재구성 신호 기준입니다.`;
+      }catch(e){out.textContent=e.message;}
+    };
     starts();
     get('v2-practice-start').onclick=()=>{
       try {
