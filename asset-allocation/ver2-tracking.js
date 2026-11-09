@@ -5,7 +5,7 @@
   const host = document.createElement('section');
   host.className = 'panel factors-panel';
   host.id = 'v2-tracking';
-  scores.insertAdjacentElement('afterend', host);
+  document.getElementById('allocation-comparison').appendChild(host);
   const money = x => Math.round(x).toLocaleString('ko-KR') + '원';
   const pct = x => (x >= 0 ? '+' : '') + (x * 100).toFixed(2) + '%';
   const maxDrawdown = (rows, key) => {
