@@ -42,6 +42,21 @@
     else status('연습 기간을 선택하세요. 결측 월이 포함된 구간은 선택하지 않습니다.');
   }
   function save(){try{localStorage.setItem(key,JSON.stringify(session));}catch(e){status('저장하지 못했습니다. 브라우저 저장 설정을 확인하세요.');}}
+  function trendChart(done) {
+    const initial=session.principal-session.deposit*session.cursor;
+    const points=[{date:session.startMonth,user:initial,model:initial,sp500:initial,principal:initial},
+      ...session.history.map((h,i)=>({...h,date:h.next,principal:initial+session.deposit*(i+1)}))];
+    if(points.some(p=>!['user','model','sp500','principal'].every(k=>Number.isFinite(p[k])&&p[k]>=0))) return '<p>그래프에 필요한 과거 평가액이 부족합니다.</p>';
+    const series=[['user','내 평가액','#2458e9'],['model','Ver2','#059669'],['sp500','S&amp;P 500','#e88312'],['principal','누적 원금','#73899c']];
+    const all=points.flatMap(p=>series.map(([k])=>p[k]));
+    const low=Math.min(...all),high=Math.max(...all),padding=Math.max((high-low)*.12,high*.01,1),min=Math.max(0,low-padding),max=high+padding;
+    const x=i=>110+(points.length===1?0:i/(points.length-1)*480),y=n=>185-(n-min)/(max-min)*150;
+    const title=(p,i)=>done?esc(p.date):(i===0?'시작':i+'개월 후');
+    const ticks=Array.from({length:4},(_,i)=>min+(max-min)*i/3).map(v=>`<text x="102" y="${y(v)+3}" text-anchor="end" font-size="10">${money(v)}</text><line x1="110" x2="590" y1="${y(v)}" y2="${y(v)}" stroke="#e0e7ef"/>`).join('');
+    const lines=series.map(([k,label,color])=>`<polyline data-series="${k}" fill="none" stroke="${color}" stroke-width="2.5" ${k==='principal'?'stroke-dasharray="5 4"':''} points="${points.map((p,i)=>`${x(i)},${y(p[k])}`).join(' ')}"/>${points.map((p,i)=>`<circle cx="${x(i)}" cy="${y(p[k])}" r="3" fill="${color}" tabindex="0"><title>${title(p,i)} · ${label}: ${money(p[k])}</title></circle>`).join('')}`).join('');
+    const labels=points.length===1?'':`<text x="110" y="207" font-size="10">${title(points[0],0)}</text><text x="590" y="207" text-anchor="end" font-size="10">${title(points.at(-1),points.length-1)}</text>`;
+    return `<section aria-label="월별 자산 추이" style="margin:18px 0"><h4>월별 자산 추이</h4><div style="display:flex;gap:12px;flex-wrap:wrap;font-size:13px">${series.map(([,label,color])=>`<span style="color:${color}">● ${label}</span>`).join('')}</div><svg viewBox="0 0 620 215" role="img" aria-label="지금까지의 내 평가액, Ver2, S&amp;P 500 및 누적 원금" style="width:100%;height:auto;max-height:360px">${ticks}${lines}${labels}</svg><p class="small">확정한 달까지만 표시합니다. 금액에는 동일한 월 납입금이 포함됩니다. 점에 마우스를 올리면 금액을 볼 수 있습니다. Y축은 금액 범위에 맞춰 조정됩니다.</p></section>`;
+  }
   function draw() {
     if(!session)return;
     const row=rows[session.start+session.cursor], next=rows[session.start+session.cursor+1], done=session.cursor>=session.months;
@@ -51,6 +66,7 @@
       <h3>${done?'연습 완료 · '+esc(session.startMonth)+' ~ '+esc(row.month):'이번 달 투자 선택 · '+(session.cursor+1)+'번째 달'}</h3>
       <p>진행 ${session.cursor} / ${session.months}개월 · 누적 납입 원금 ${money(session.principal)}</p>
       <p><strong>내 평가액 ${money(total)}</strong> · Ver2 ${money(benchmark)} · S&amp;P500 ${money(session.sp500)}</p>
+      ${trendChart(done)}
       <p class="small">비교 자산은 같은 초기 자산과 월 납입금으로 시작합니다. Ver2는 월별 전체 자산을 재배분합니다. 사용자 거래에는 수수료 0.1%, Ver2에도 매수·매도 각 0.1%를 적용합니다. S&amp;P500은 수수료·배당·세금 제외 가격 대용치입니다.</p>
       <div class="table-wrap"><table><thead><tr><th>자산</th><th>현재 평가액</th><th>현재 비중</th><th>Ver2 목표 비중</th>${done?'':'<th>매수 (원)</th><th>매도 (원)</th>'}</tr></thead><tbody>
       ${keys.map(a=>`<tr><th>${names[a]}</th><td>${money(session.portfolio[a])}</td><td>${(total?session.portfolio[a]/total*100:0).toFixed(1)}%</td><td>${(target[a]*100).toFixed(1)}%</td>${done?'':(a==='CASH'?'<td>—</td><td>—</td>':`<td><input id="v2-buy-${a}" aria-label="${names[a]} 매수" type="number" min="0" step="1" value="0" style="width:110px"></td><td><input id="v2-sell-${a}" aria-label="${names[a]} 매도" type="number" min="0" step="1" value="0" style="width:110px"></td>`)}</tr>`).join('')}</tbody></table></div>
