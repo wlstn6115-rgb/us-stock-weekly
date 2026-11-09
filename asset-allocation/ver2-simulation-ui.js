@@ -10,7 +10,14 @@
   const weights = w => ({QQQ:w.equity, BTC:w.btc, GOLD:w.gold, CASH:w.cash});
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   let rows = [], session = null, practiceTrends = {};
-  host.innerHTML = `<h2>Ver2 자산 시뮬레이터</h2>
+  host.innerHTML = `<style>
+    .v2-chart-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}
+    .v2-chart-grid>section{min-width:0;margin:0!important;border:1px solid #e1e9f2;border-radius:10px;padding:12px;background:#f8fafc}
+    .v2-chart-grid h4{margin:0 0 5px;font-size:15px}
+    .v2-chart-grid p.small{margin:5px 0;font-size:11px;line-height:1.4;text-align:left}
+    .v2-chart-grid svg{display:block;max-height:190px!important}
+    @media(max-width:700px){.v2-chart-grid{grid-template-columns:1fr}.v2-chart-grid svg{max-height:200px!important}}
+  </style><h2>Ver2 자산 시뮬레이터</h2>
     <p class="muted">초기 자산과 월 납입금을 정하고 과거 시장에서 직접 매수·매도해 보세요. 같은 조건의 Ver2 전체 자산 재배분 및 S&amp;P500과 비교합니다. 과거 Ver2 신호는 사후 재구성 값입니다.</p>
     <p id="v2-practice-status" role="status" aria-live="polite">시뮬레이션 자료 확인 중…</p>
     <details id="v2-setup" open><summary>새 연습 설정</summary>
@@ -76,8 +83,7 @@
       <h3>${done?'연습 완료 · '+esc(session.startMonth)+' ~ '+esc(row.month):'이번 달 투자 선택 · '+(session.cursor+1)+'번째 달'}</h3>
       <p>진행 ${session.cursor} / ${session.months}개월 · 누적 납입 원금 ${money(session.principal)}</p>
       <p><strong>내 평가액 ${money(total)}</strong> · Ver2 ${money(benchmark)} · S&amp;P500 ${money(session.sp500)}</p>
-      ${marketTrend(row.month)}
-      ${trendChart(done)}
+      <div class="v2-chart-grid">${marketTrend(row.month)}${trendChart(done)}</div>
       <p class="small">비교 자산은 같은 초기 자산과 월 납입금으로 시작합니다. Ver2는 월별 전체 자산을 재배분합니다. 사용자 거래에는 수수료 0.1%, Ver2에도 매수·매도 각 0.1%를 적용합니다. S&amp;P500은 수수료·배당·세금 제외 가격 대용치입니다.</p>
       <div class="table-wrap"><table><thead><tr><th>자산</th><th>현재 평가액</th><th>현재 비중</th><th>Ver2 목표 비중</th>${done?'':'<th>매수 (원)</th><th>매도 (원)</th>'}</tr></thead><tbody>
       ${keys.map(a=>`<tr><th>${names[a]}</th><td>${money(session.portfolio[a])}</td><td>${(total?session.portfolio[a]/total*100:0).toFixed(1)}%</td><td>${(target[a]*100).toFixed(1)}%</td>${done?'':(a==='CASH'?'<td>—</td><td>—</td>':`<td><input id="v2-buy-${a}" aria-label="${names[a]} 매수" type="number" min="0" step="1" value="0" style="width:110px"></td><td><input id="v2-sell-${a}" aria-label="${names[a]} 매도" type="number" min="0" step="1" value="0" style="width:110px"></td>`)}</tr>`).join('')}</tbody></table></div>
