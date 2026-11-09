@@ -3,7 +3,7 @@
   const labels={'SPY':'주식','^TNX':'미 10년 금리','GLD':'금','BTC-USD':'비트코인','CL=F':'WTI','DX-Y.NYB':'달러지수'};
   const signed=(x,d=2)=>(x>0?'+':'')+(x*100).toFixed(d)+'%';
   const pctPoints=n=>(n*100).toFixed(1)+'%p';
-  function render(data,result,causes){
+  function render(data,result,causes,previous){
     const f=data.features,c=data.correlations,pairs=Object.entries(c),strong=pairs.filter(([,v])=>Math.abs(v)>=.5);
     const cards=[
       ['연준 총자산 · 13주',signed(f.walcl_13w,3),f.walcl_13w<0?'감소':'증가 또는 보합','증가와 BTC/금 상승 시 주식 → BTC; 감소와 상관계수 > 0.1이면 주식 → 금'],
@@ -15,6 +15,9 @@
       ['주식 수익률 · 3개월',signed(f.stock_3m),'참고 지표','수집 중이나 현재 배분 규칙에는 미사용']
     ];
     const list=pairs.map(([key,value])=>{const [a,b]=key.split('|');return `<span class="factor-pair">${labels[a]||a} · ${labels[b]||b} <b>${value.toFixed(2)}</b>${Math.abs(value)>=.5?' <small>해당</small>':''}</span>`}).join('');
+    const keys=[['equity','QQQ','주식'],['btc','BTC','비트코인'],['gold','GOLD','금'],['cash','CASH','현금']];
+    const fmt=x=>(x*100).toFixed(1)+'%';
+    const comparison=previous ? keys.map(([oldKey,newKey,label])=>{const old=previous.target.weights[oldKey],now=result.weights[newKey],change=(now-old)*100;return '<span class="factor-change"><b>'+label+'</b> '+fmt(old)+' → <b>'+fmt(now)+'</b> <small>'+(Math.abs(change)<0.005?'변화 없음':(change>0?'▲ +':'▼ ')+change.toFixed(1)+'%p')+'</small></span>'}).join('') : '직전 관측값을 확인할 수 없습니다.';
     const moves=result.moves.map(m=>`<li>${causes[m.reason]||m.reason} <b>${pctPoints(m.amount)}</b> 이동</li>`).join('');
     return `<style>
       .factor-table-wrap{overflow-x:auto;margin:10px 0}.factor-table{width:100%;border-collapse:collapse;font-size:12px;line-height:1.4}.factor-table th,.factor-table td{text-align:left;padding:6px 8px;border-bottom:1px solid #e1e9f2}.factor-table thead{color:#536b85;background:#f5f8fd}.factor-table td b{color:#2457ca}.factor-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}
@@ -23,13 +26,13 @@
       .factor-card-state{color:#2457ca;font-size:12px;font-weight:700}.factor-card-rule{font-size:11px;line-height:1.45;color:#657b91;margin:6px 0 0}
       .factor-pairs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;margin-top:10px}
       .factor-pair{font-size:12px;color:#405e7a}.factor-pair small{color:#2457ca}
-      .factor-moves{margin:8px 0 0;padding-left:21px}.factor-moves li{margin:5px 0;line-height:1.5}
+      .factor-changes{display:flex;flex-wrap:wrap;gap:7px 16px;margin:8px 0 14px}.factor-change{font-size:13px;color:#24445f}.factor-change small{color:#2758ce}.factor-moves{margin:8px 0 0;padding-left:21px}.factor-moves li{margin:5px 0;line-height:1.5}
       @media(max-width:850px){.factor-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:430px){.factor-cards{gap:7px}.factor-card{padding:9px}.factor-card-value{font-size:18px}.factor-pairs{grid-template-columns:1fr}}
     </style><h2>현재 비중에 영향을 준 환경</h2>
       <p class="small" style="text-align:left;margin:8px 0">모델 입력값과 판단 기준 · 각 조건은 다른 지표와 함께 적용됩니다.</p>
       <div class="factor-table-wrap"><table class="factor-table"><thead><tr><th>지표</th><th>현재 값</th><th>상태</th><th>배분 판단 기준</th></tr></thead><tbody>${cards.map(([title,value,state,rule])=>`<tr><th scope="row">${title}</th><td><b>${value}</b></td><td>${state}</td><td>${rule}</td></tr>`).join('')}</tbody></table></div>
       <details><summary>자산 간 상관관계 14쌍 보기</summary><p class="small" style="text-align:left">주식·BTC 한 쌍은 별도로 판단합니다. 음의 상관도 절댓값이 0.5 이상이면 집계합니다.</p><div class="factor-pairs">${list}</div></details>
-      <p style="margin:14px 0 5px">기본 비중 주식 50% · 비트코인 14% · 금 26% · 현금 10%</p>
+      <p style="margin:14px 0 5px"><b>직전 자료 대비 목표 비중 변화</b>${previous?` <span class="small">${previous.marketDate} → ${data.marketDate}</span>`:''}</p><div class="factor-changes">${comparison}</div><p style="margin:14px 0 5px"><b>기본 비중에서 적용된 모델 규칙</b> · 주식 50% · 비트코인 14% · 금 26% · 현금 10%</p>
       ${moves?`<ul class="factor-moves">${moves}</ul>`:'<p>현재 기본 비중을 조정한 신호가 없습니다.</p>'}`;
   }
   root.AllocationFactors={render};
