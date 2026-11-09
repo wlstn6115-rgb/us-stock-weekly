@@ -15,10 +15,6 @@
       ['주식 수익률 · 3개월',signed(f.stock_3m),'참고 지표','수집 중이나 현재 배분 규칙에는 미사용']
     ];
     const list=pairs.map(([key,value])=>{const [a,b]=key.split('|');return `<span class="factor-pair">${labels[a]||a} · ${labels[b]||b} <b>${value.toFixed(2)}</b>${Math.abs(value)>=.5?' <small>해당</small>':''}</span>`}).join('');
-    const keys=[['equity','QQQ','주식'],['btc','BTC','비트코인'],['gold','GOLD','금'],['cash','CASH','현금']];
-    const fmt=x=>(x*100).toFixed(1)+'%';
-    const comparison=previous ? keys.map(([oldKey,newKey,label])=>{const old=previous.target.weights[oldKey],now=result.weights[newKey],change=(now-old)*100;return '<span class="factor-change"><b>'+label+'</b> '+fmt(old)+' → <b>'+fmt(now)+'</b> <small>'+(Math.abs(change)<0.005?'변화 없음':(change>0?'▲ +':'▼ ')+change.toFixed(1)+'%p')+'</small></span>'}).join('') : '직전 관측값을 확인할 수 없습니다.';
-    const moves=result.moves.map(m=>`<li>${causes[m.reason]||m.reason} <b>${pctPoints(m.amount)}</b> 이동</li>`).join('');
     return `<style>
       .factor-table-wrap{overflow-x:auto;margin:10px 0}.factor-table{width:100%;border-collapse:collapse;font-size:12px;line-height:1.4}.factor-table th,.factor-table td{text-align:left;padding:6px 8px;border-bottom:1px solid #e1e9f2}.factor-table thead{color:#536b85;background:#f5f8fd}.factor-table td b{color:#2457ca}.factor-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}
       .factor-card{background:#f5f8fd;border:1px solid #dce6f5;border-radius:10px;padding:12px;min-width:0}
@@ -32,8 +28,7 @@
       <p class="small" style="text-align:left;margin:8px 0">모델 입력값과 판단 기준 · 각 조건은 다른 지표와 함께 적용됩니다.</p>
       <div class="factor-table-wrap"><table class="factor-table"><thead><tr><th>지표</th><th>현재 값</th><th>상태</th><th>배분 판단 기준</th></tr></thead><tbody>${cards.map(([title,value,state,rule])=>`<tr><th scope="row">${title}</th><td><b>${value}</b></td><td>${state}</td><td>${rule}</td></tr>`).join('')}</tbody></table></div>
       <details><summary>자산 간 상관관계 14쌍 보기</summary><p class="small" style="text-align:left">주식·BTC 한 쌍은 별도로 판단합니다. 음의 상관도 절댓값이 0.5 이상이면 집계합니다.</p><div class="factor-pairs">${list}</div></details>
-      <p style="margin:14px 0 5px"><b>직전 자료 대비 목표 비중 변화</b>${previous?` <span class="small">${previous.marketDate} → ${data.marketDate}</span>`:''}</p><div class="factor-changes">${comparison}</div><p style="margin:14px 0 5px"><b>기본 비중에서 적용된 모델 규칙</b> · 주식 50% · 비트코인 14% · 금 26% · 현금 10%</p>
-      ${moves?`<ul class="factor-moves">${moves}</ul>`:'<p>현재 기본 비중을 조정한 신호가 없습니다.</p>'}`;
+`;
   }
   root.AllocationFactors={render};
 })(globalThis);
