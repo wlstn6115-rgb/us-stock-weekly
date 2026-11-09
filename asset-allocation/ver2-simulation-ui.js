@@ -9,7 +9,7 @@
   const money = n => Math.round(n).toLocaleString('ko-KR') + '원';
   const weights = w => ({QQQ:w.equity, BTC:w.btc, GOLD:w.gold, CASH:w.cash});
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  let rows = [], session = null;
+  let rows = [], session = null, practiceTrends = {};
   host.innerHTML = `<h2>Ver2 자산 시뮬레이터</h2>
     <p class="muted">초기 자산과 월 납입금을 정하고 과거 시장에서 직접 매수·매도해 보세요. 같은 조건의 Ver2 전체 자산 재배분 및 S&amp;P500과 비교합니다. 과거 Ver2 신호는 사후 재구성 값입니다.</p>
     <p id="v2-practice-status" role="status" aria-live="polite">시뮬레이션 자료 확인 중…</p>
@@ -42,6 +42,16 @@
     else status('연습 기간을 선택하세요. 결측 월이 포함된 구간은 선택하지 않습니다.');
   }
   function save(){try{localStorage.setItem(key,JSON.stringify(session));}catch(e){status('저장하지 못했습니다. 브라우저 저장 설정을 확인하세요.');}}
+  function marketTrend(monthKey) {
+    const source=practiceTrends[monthKey], series=[['QQQ','S&P 500 (SPY)','#3264e8'],['GOLD','금 (GLD)','#a48c39'],['BTC','비트코인','#e9952c']];
+    if(!source || series.some(([k])=>!Array.isArray(source[k])||source[k].length<2||source[k].some(n=>!Number.isFinite(n)||n<=0))) return '<section class="v2-market-trend"><h4>판단 시점 이전 한 달 자산 흐름</h4><p class="small">해당 구간의 일별 자료가 없어 그래프를 표시하지 않습니다.</p></section>';
+    const n=source.QQQ.length;if(series.some(([k])=>source[k].length!==n)) return '<section class="v2-market-trend"><h4>판단 시점 이전 한 달 자산 흐름</h4><p class="small">일별 자료의 길이가 맞지 않아 그래프를 표시하지 않습니다.</p></section>';
+    const all=series.flatMap(([k])=>source[k]), low=Math.min(...all,1), high=Math.max(...all,1), pad=Math.max((high-low)*.12,.005), min=Math.max(0,low-pad),max=high+pad;
+    const x=i=>65+i/(n-1)*510,y=v=>165-(v-min)/(max-min)*140;
+    const ticks=Array.from({length:4},(_,i)=>min+(max-min)*i/3).map(v=>`<line x1="65" x2="575" y1="${y(v)}" y2="${y(v)}" stroke="#e0e7ef"/><text x="57" y="${y(v)+3}" text-anchor="end" font-size="10">${v.toFixed(2)}</text>`).join('');
+    const lines=series.map(([k,label,color])=>`<polyline data-market-series="${k}" fill="none" stroke="${color}" stroke-width="2.4" points="${source[k].map((v,i)=>`${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ')}"/>`).join('');
+    return `<section class="v2-market-trend" aria-label="판단 시점 이전 한 달 자산 흐름" style="margin:18px 0"><h4>판단 시점 이전 한 달 자산 흐름</h4><p class="small">시작값 1 기준 · 실제 가격과 날짜 비공개 · 판단 시점까지의 확정 데이터</p><div style="display:flex;gap:12px;flex-wrap:wrap;font-size:13px">${series.map(([k,label,color])=>{const v=(source[k].at(-1)-1)*100;return `<span style="color:${color}">● ${label} ${v>=0?'+':''}${v.toFixed(1)}%</span>`}).join('')}</div><svg viewBox="0 0 600 190" role="img" aria-label="직전 한 달 동안의 S&P 500, 금, 비트코인의 정규화 가격 추이" style="width:100%;height:auto;max-height:330px">${ticks}<line x1="65" x2="575" y1="${y(1)}" y2="${y(1)}" stroke="#8192a4" stroke-dasharray="4 3"/>${lines}<text x="65" y="184" font-size="10">한 달 전</text><text x="575" y="184" text-anchor="end" font-size="10">판단 시점</text></svg><p class="small">달러 기준 SPY·GLD 대용치 및 비트코인 가격을 각각 1로 정규화했습니다. 비트코인은 주식시장 마감보다 늦게 확정되는 정보를 피하기 위해 직전 확정 일봉을 사용합니다.</p></section>`;
+  }
   function trendChart(done) {
     const initial=session.principal-session.deposit*session.cursor;
     const points=[{date:session.startMonth,user:initial,model:initial,sp500:initial,principal:initial},
@@ -66,6 +76,7 @@
       <h3>${done?'연습 완료 · '+esc(session.startMonth)+' ~ '+esc(row.month):'이번 달 투자 선택 · '+(session.cursor+1)+'번째 달'}</h3>
       <p>진행 ${session.cursor} / ${session.months}개월 · 누적 납입 원금 ${money(session.principal)}</p>
       <p><strong>내 평가액 ${money(total)}</strong> · Ver2 ${money(benchmark)} · S&amp;P500 ${money(session.sp500)}</p>
+      ${marketTrend(row.month)}
       ${trendChart(done)}
       <p class="small">비교 자산은 같은 초기 자산과 월 납입금으로 시작합니다. Ver2는 월별 전체 자산을 재배분합니다. 사용자 거래에는 수수료 0.1%, Ver2에도 매수·매도 각 0.1%를 적용합니다. S&amp;P500은 수수료·배당·세금 제외 가격 대용치입니다.</p>
       <div class="table-wrap"><table><thead><tr><th>자산</th><th>현재 평가액</th><th>현재 비중</th><th>Ver2 목표 비중</th>${done?'':'<th>매수 (원)</th><th>매도 (원)</th>'}</tr></thead><tbody>
@@ -98,6 +109,7 @@
     if(!response.ok)throw Error('과거 시뮬레이션 자료를 불러오지 못했습니다.');
     rows=(await response.json()).observations;
     if(!Array.isArray(rows)||!rows.length)throw Error('과거 시뮬레이션 자료가 비어 있습니다.');
+    try { const prices=await fetch('./ver2-practice-trends.json?t='+Date.now(),{cache:'no-store'}); if(prices.ok)practiceTrends=(await prices.json()).months||{}; } catch(e) { practiceTrends={}; }
     get('v2-sim-run').onclick=()=>{
       const out=get('v2-sim-result');
       try {
