@@ -1,12 +1,12 @@
 {
   "marketDate": "2026-11-09",
-  "availableAt": "2026-11-10T13:43:33.382630+00:00",
+  "availableAt": "2026-11-10T13:44:58.329884+00:00",
   "reportCapturedAt": "2026-11-10T13:37:54.945762+00:00",
   "features": {
     "relative_3m": 0.2081708311262611,
     "stock_3m": -0.026773640918682617,
     "walcl_13w": -6.253179378667983e-05,
-    "fear": 31.9428571428571,
+    "fear": 31.8857142857143,
     "corr60": 0.49104733917022414,
     "btcvol60": 0.40621522568803264
   },
@@ -48,7 +48,7 @@
   "source": "weekly report: TradingView/FRED/CNN",
   "fearObservation": {
     "date": "2026-11-09",
-    "source": "cnn_history_cache"
+    "source": "cnn_daily_cache"
   },
   "caveat": "연구 데이터의 SPY·GLD·선물 대용치와 운영 보고서 지수·현물 원천은 다를 수 있습니다."
 }
