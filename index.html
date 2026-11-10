@@ -381,6 +381,18 @@
     @media (max-width:640px) { .summary-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; } .summary-grid .snapshot-dial-card { padding:13px 6px; } .snapshot-dial { width:min(116px, 78%); } .snapshot-dial-inner strong { font-size:21px; } .summary-grid .snapshot-dial-card h3 { min-height:0; font-size:12px; } .snapshot-level { font-size:12px; } }
   </style>
 <link rel="stylesheet" href="./asset-allocation/site-theme.css">
+<style id="compact-market-layout">
+#chartGrid .chart-meta .chip:first-of-type,#specialGrid .chart-meta .chip:first-of-type,#chartGrid .widget-meta,#specialGrid .widget-meta{display:none}
+#finvizWeeklyBars,#finvizIndustryBars{gap:3px}
+#finvizWeeklyBars .finviz-row,#finvizIndustryBars .theme-row{min-height:28px}
+#finvizWeeklyBars .finviz-name{grid-template-columns:26px minmax(0,1fr);gap:7px}
+#finvizWeeklyBars .finviz-icon{width:26px;height:26px;border-radius:8px}
+#finvizWeeklyBars .finviz-icon svg{width:17px;height:17px}
+#finvizWeeklyBars .finviz-name > div > span,#finvizIndustryBars .theme-name span{display:none}
+#finvizWeeklyBars .finviz-name > .finviz-icon{display:grid}
+#finvizWeeklyBars .finviz-name strong,#finvizIndustryBars .theme-name strong{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#finvizIndustryBars .theme-sector{min-height:22px;padding-top:0;padding-bottom:0}
+</style>
 </head>
 <body class="briefing-theme">
 <header class="site-banner"><a class="brand" href="https://wlstn6115-rgb.github.io/us-stock-weekly/asset-allocation/#home" aria-label="자산배분 관측소 홈"><span class="brand-icon">◫</span> 자산배분 관측소</a><span class="local">개인용 · 이 브라우저에 저장</span></header>
@@ -407,7 +419,7 @@
       <div class="finviz-panel-head">
         <div>
           <h2>&#51452;&#44036; &#49465;&#53552;&#48324; &#46321;&#46973;&#47456;</h2>
-          <p class="sub">&#44592;&#49696;, &#44552;&#50997;, &#50640;&#45320;&#51648;, &#49548;&#48708;&#51116; &#46321; &#47588;&#53356;&#47196; &#54644;&#49437;&#50857; FINVIZ 11&#44060; &#49465;&#53552;</p>
+          
           <p class="sub" id="finvizWeeklyPeriodText">비교 기간: 지난주 2026-10-19 ~ 2026-10-20 · 이번주 진행중 · FINVIZ Perf Week</p>
         </div>
         <span class="chip" id="finvizSourceChip">FINVIZ</span>
@@ -419,7 +431,7 @@
       <div class="finviz-panel-head">
         <div>
           <h2>관심 업종/테마 등락률</h2>
-          <p class="sub">반도체, 소프트웨어, 클라우드 등 섹터 내부 온도차 추적</p>
+          
           <p class="sub" id="finvizIndustryPeriodText">비교 기간: 지난주 2026-10-19 ~ 2026-10-20 · 이번주 진행중 · FINVIZ Perf Week</p>
         </div>
         <span class="chip" id="finvizIndustrySourceChip">FINVIZ</span>
