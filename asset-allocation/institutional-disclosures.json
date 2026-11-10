@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "asOfDate": "2026-11-09",
-  "generatedAt": "2026-11-09T21:39:48.767175+09:00",
+  "asOfDate": "2026-11-10",
+  "generatedAt": "2026-11-10T22:19:39.005326+09:00",
   "collectionMode": "OFFICIAL_LIVE_LOOKUP",
   "methodology": {
     "scope": "요청한 6개 기관 13F 및 낸시 펠로시 최신 의회 PTR",
@@ -33,7 +33,7 @@
         "https://www.sec.gov/Archives/edgar/data/1067983/000119312526352200/56757.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001067983.json",
-      "latestCheckAt": "2026-11-09T21:39:46.260000+09:00",
+      "latestCheckAt": "2026-11-10T22:19:35.740982+09:00",
       "latestObservedFilingDate": "2026-08-14",
       "priorReportPeriod": "2026-03-31",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526226661/0001193125-26-226661-index.htm",
@@ -573,7 +573,7 @@
         "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000006/form13f_20260630.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001536411.json",
-      "latestCheckAt": "2026-11-09T21:39:46.571952+09:00",
+      "latestCheckAt": "2026-11-10T22:19:36.049159+09:00",
       "latestObservedFilingDate": "2026-08-14",
       "priorReportPeriod": "2026-03-31",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000004/0001536411-26-000004-index.htm",
@@ -2236,7 +2236,7 @@
         "https://www.sec.gov/Archives/edgar/data/1562087/000131586326000593/thiel2q2026.inftbl.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001562087.json",
-      "latestCheckAt": "2026-11-09T21:39:46.902855+09:00",
+      "latestCheckAt": "2026-11-10T22:19:36.386257+09:00",
       "latestObservedFilingDate": "2026-08-14",
       "priorReportPeriod": "2026-03-31",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1562087/000131586326000423/0001315863-26-000423-index.htm",
@@ -2419,7 +2419,7 @@
         "https://www.sec.gov/Archives/edgar/data/2026053/000117266126003790/infotable.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0002026053.json",
-      "latestCheckAt": "2026-11-09T21:39:47.512106+09:00",
+      "latestCheckAt": "2026-11-10T22:19:36.894731+09:00",
       "latestObservedFilingDate": "2026-08-14",
       "priorReportPeriod": "2026-03-31",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/2026053/000117266126002339/0001172661-26-002339-index.htm",
@@ -2714,7 +2714,7 @@
         "https://www.sec.gov/Archives/edgar/data/1608046/000119312526347818/56942.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001608046.json",
-      "latestCheckAt": "2026-11-09T21:39:47.959072+09:00",
+      "latestCheckAt": "2026-11-10T22:19:37.271724+09:00",
       "latestObservedFilingDate": "2026-08-13",
       "priorReportPeriod": "2026-03-31",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1608046/000119312526217663/0001193125-26-217663-index.htm",
@@ -12144,7 +12144,7 @@
         "https://www.sec.gov/Archives/edgar/data/850529/000085052926000009/2026q313f2.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0000850529.json",
-      "latestCheckAt": "2026-11-09T21:39:48.348525+09:00",
+      "latestCheckAt": "2026-11-10T22:19:37.770237+09:00",
       "latestObservedFilingDate": "2026-11-06",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/850529/000085052926000006/0000850529-26-000006-index.htm",
@@ -30196,68 +30196,17 @@
       "entityName": "U.S. House of Representatives · Nancy Pelosi",
       "cik": null,
       "filingType": "PTR",
-      "status": "VERIFIED_SOURCE",
-      "statusReason": "2026년 공식 공개목록과 최신 PTR 1행 대사",
+      "status": "NEEDS_REVIEW",
+      "statusReason": "새 PTR 원문 행 수동 대사 필요",
       "reportPeriod": null,
-      "filingDate": "2026-10-02",
-      "accession": "20035553",
-      "isAmendment": false,
-      "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035553.pdf",
-      "indexUrl": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026FD.zip",
-      "latestCheckAt": "2026-11-09T21:39:48.767175+09:00",
+      "filingDate": "2026-11-06",
+      "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035780.pdf",
       "positionCount": null,
       "reportedValueUsd": null,
       "holdings": [],
-      "transactions": [
-        {
-          "assetName": "REOF XXX, LLC",
-          "ticker": null,
-          "owner": "SP",
-          "ownerLabel": "배우자",
-          "transactionDate": "2026-09-08",
-          "notificationDate": "2026-09-08",
-          "transactionType": "PURCHASE",
-          "transactionTypeLabel": "매수",
-          "amountRange": "$500,001–$1,000,000",
-          "amountMinUsd": 500001,
-          "amountMaxUsd": 1000000,
-          "disclosureDate": "2026-10-02",
-          "filingDate": "2026-10-02",
-          "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035553.pdf",
-          "instrument": "비상장 LLC 지분",
-          "assetTypeCode": "AB",
-          "description": "샌프란시스코 상업용 오피스 부동산을 취득·관리하는 LLC 투자. [AB]는 자산 유형 코드이며 주식 티커가 아닙니다."
-        }
-      ],
-      "officialIndexPtrCount": 4,
-      "documentPageCount": 1,
-      "filingHistory": [
-        {
-          "filingDate": "2026-10-02",
-          "documentId": "20035553",
-          "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035553.pdf"
-        },
-        {
-          "filingDate": "2026-08-21",
-          "documentId": "20035143",
-          "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035143.pdf"
-        },
-        {
-          "filingDate": "2026-06-23",
-          "documentId": "20034836",
-          "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20034836.pdf"
-        },
-        {
-          "filingDate": "2026-01-23",
-          "documentId": "20033725",
-          "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20033725.pdf"
-        }
-      ],
+      "transactions": [],
       "notes": [
-        "의회 거래공시(PTR)이며 13F가 아닙니다. 거래일과 공개일을 구분합니다.",
-        "SP는 배우자 명의입니다. 금액은 신고 범위이며 정확한 거래금액이 아닙니다.",
-        "PTR는 특정 거래 신고이며 현재 보유액·전체 자산·수익률·포트폴리오 비중을 보여주지 않습니다.",
-        "이 화면은 최신 PTR의 1행을 표시합니다. 이전 신고 문서는 원문 링크로 제공하며 전체 거래 이력으로 표시하지 않습니다."
+        "의회 거래공시(PTR)는 13F 분기말 보유명세가 아닙니다. 새 문서를 이전 거래로 대체하지 않았습니다."
       ]
     }
   ],
