@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "asOfDate": "2026-11-15",
-  "generatedAt": "2026-11-15T21:01:52.974033+09:00",
+  "generatedAt": "2026-11-15T22:18:45.225646+09:00",
   "collectionMode": "OFFICIAL_LIVE_LOOKUP",
   "methodology": {
     "scope": "요청한 6개 기관 13F 및 낸시 펠로시 최신 의회 PTR",
@@ -33,7 +33,7 @@
         "https://www.sec.gov/Archives/edgar/data/1067983/000119312526352200/56757.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001067983.json",
-      "latestCheckAt": "2026-11-15T21:01:50.875000+09:00",
+      "latestCheckAt": "2026-11-15T22:18:42.827830+09:00",
       "latestObservedFilingDate": "2026-08-14",
       "priorReportPeriod": "2026-03-31",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526226661/0001193125-26-226661-index.htm",
@@ -573,7 +573,7 @@
         "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000006/form13f_20260630.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001536411.json",
-      "latestCheckAt": "2026-11-15T21:01:51.119467+09:00",
+      "latestCheckAt": "2026-11-15T22:18:43.099892+09:00",
       "latestObservedFilingDate": "2026-08-14",
       "priorReportPeriod": "2026-03-31",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000004/0001536411-26-000004-index.htm",
@@ -2236,7 +2236,7 @@
         "https://www.sec.gov/Archives/edgar/data/1562087/000131586326000593/thiel2q2026.inftbl.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001562087.json",
-      "latestCheckAt": "2026-11-15T21:01:51.431913+09:00",
+      "latestCheckAt": "2026-11-15T22:18:43.404708+09:00",
       "latestObservedFilingDate": "2026-08-14",
       "priorReportPeriod": "2026-03-31",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1562087/000131586326000423/0001315863-26-000423-index.htm",
@@ -2419,7 +2419,7 @@
         "https://www.sec.gov/Archives/edgar/data/2026053/000117266126003790/infotable.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0002026053.json",
-      "latestCheckAt": "2026-11-15T21:01:51.997843+09:00",
+      "latestCheckAt": "2026-11-15T22:18:43.896480+09:00",
       "latestObservedFilingDate": "2026-08-14",
       "priorReportPeriod": "2026-03-31",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/2026053/000117266126002339/0001172661-26-002339-index.htm",
@@ -2714,7 +2714,7 @@
         "https://www.sec.gov/Archives/edgar/data/1608046/000119312526456954/60568.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001608046.json",
-      "latestCheckAt": "2026-11-15T21:01:52.279028+09:00",
+      "latestCheckAt": "2026-11-15T22:18:44.249445+09:00",
       "latestObservedFilingDate": "2026-11-12",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1608046/000119312526347818/0001193125-26-347818-index.htm",
@@ -12161,7 +12161,7 @@
         "https://www.sec.gov/Archives/edgar/data/850529/000085052926000009/2026q313f2.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0000850529.json",
-      "latestCheckAt": "2026-11-15T21:01:52.622696+09:00",
+      "latestCheckAt": "2026-11-15T22:18:44.705536+09:00",
       "latestObservedFilingDate": "2026-11-06",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/850529/000085052926000006/0000850529-26-000006-index.htm",
@@ -30213,17 +30213,73 @@
       "entityName": "U.S. House of Representatives · Nancy Pelosi",
       "cik": null,
       "filingType": "PTR",
-      "status": "NEEDS_REVIEW",
-      "statusReason": "새 PTR 원문 행 수동 대사 필요",
+      "status": "VERIFIED_SOURCE",
+      "statusReason": "최신 PTR 1행 원문 대사",
       "reportPeriod": null,
       "filingDate": "2026-11-06",
+      "accession": "20035780",
+      "isAmendment": false,
       "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035780.pdf",
+      "indexUrl": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026FD.zip",
+      "latestCheckAt": "2026-11-15T22:18:45.224648+09:00",
       "positionCount": null,
       "reportedValueUsd": null,
       "holdings": [],
-      "transactions": [],
+      "transactions": [
+        {
+          "assetName": "Warner Bros. Discovery, Inc. - Series A Common Stock",
+          "ticker": "WBD",
+          "owner": "SP",
+          "ownerLabel": "배우자",
+          "transactionDate": "2026-10-07",
+          "notificationDate": "2026-10-07",
+          "transactionType": "SALE",
+          "transactionTypeLabel": "매도",
+          "amountRange": "$50,001–$100,000",
+          "amountMinUsd": 50001,
+          "amountMaxUsd": 100000,
+          "disclosureDate": "2026-11-06",
+          "filingDate": "2026-11-06",
+          "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035780.pdf",
+          "instrument": "보통주",
+          "assetTypeCode": "ST",
+          "description": "원문상 파라마운트 스카이댄스와의 합병에 따른 현금 수령액입니다."
+        }
+      ],
+      "officialIndexPtrCount": 5,
+      "documentPageCount": 1,
+      "filingHistory": [
+        {
+          "filingDate": "2026-11-06",
+          "documentId": "20035780",
+          "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035780.pdf"
+        },
+        {
+          "filingDate": "2026-10-02",
+          "documentId": "20035553",
+          "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035553.pdf"
+        },
+        {
+          "filingDate": "2026-08-21",
+          "documentId": "20035143",
+          "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035143.pdf"
+        },
+        {
+          "filingDate": "2026-06-23",
+          "documentId": "20034836",
+          "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20034836.pdf"
+        },
+        {
+          "filingDate": "2026-01-23",
+          "documentId": "20033725",
+          "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20033725.pdf"
+        }
+      ],
       "notes": [
-        "의회 거래공시(PTR)는 13F 분기말 보유명세가 아닙니다. 새 문서를 이전 거래로 대체하지 않았습니다."
+        "의회 거래공시(PTR)이며 13F가 아닙니다. 거래일과 공개일을 구분합니다.",
+        "SP는 배우자 명의입니다. 금액은 신고 범위이며 정확한 거래금액이 아닙니다.",
+        "원문은 WBD 합병에 따른 현금 수령액을 매도(S)로 신고합니다.",
+        "PTR는 현재 보유액이나 전체 포트폴리오 비중을 보여주지 않습니다."
       ]
     }
   ],
