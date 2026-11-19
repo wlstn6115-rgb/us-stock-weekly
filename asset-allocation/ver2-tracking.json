@@ -3,7 +3,7 @@
   "initialKRW": 100000000,
   "startDate": "2026-01-02",
   "trackingStart": "2026-11-03",
-  "through": "2026-11-17",
+  "through": "2026-11-18",
   "modelVersion": "ver2",
   "priceBasis": "S&P 500 price index, BTC/USD, gold USD, USD/KRW; no dividends; gold, BTC and FX prior available date; 2026-01-01 BTC bootstrap Yahoo, later values TradingView report",
   "fees": "매수·매도 각 0.1%, 세금·스프레드·현금이자 제외",
@@ -5392,6 +5392,30 @@
         "gold": "2026-11-16",
         "btc": "2026-11-16",
         "fx": "2026-11-16"
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "ver2": 93064154.39,
+      "sp500": 99011173.42,
+      "ver2Return": -0.06935845607014868,
+      "sp500Return": -0.009888265840887756,
+      "allocation": {
+        "equity": 14943170.29,
+        "btc": 23129477.76,
+        "gold": 44410600.26,
+        "cash": 10580906.08
+      },
+      "phase": "tracking",
+      "rebalanced": false,
+      "signalMissing": false,
+      "decision": null,
+      "targetWeights": null,
+      "sourceDates": {
+        "equity": "2026-11-18",
+        "gold": "2026-11-17",
+        "btc": "2026-11-17",
+        "fx": "2026-11-17"
       }
     }
   ]
