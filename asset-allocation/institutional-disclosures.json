@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "asOfDate": "2026-11-19",
-  "generatedAt": "2026-11-19T20:39:34.158308+09:00",
+  "asOfDate": "2026-11-20",
+  "generatedAt": "2026-11-20T18:49:32.052396+09:00",
   "collectionMode": "OFFICIAL_LIVE_LOOKUP",
   "methodology": {
     "scope": "요청한 6개 기관 13F 및 낸시 펠로시 최신 의회 PTR",
@@ -33,7 +33,7 @@
         "https://www.sec.gov/Archives/edgar/data/1067983/000119312526463399/60471.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001067983.json",
-      "latestCheckAt": "2026-11-19T20:39:32.272379+09:00",
+      "latestCheckAt": "2026-11-20T18:49:29.529240+09:00",
       "latestObservedFilingDate": "2026-11-16",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526352200/0001193125-26-352200-index.htm",
@@ -590,7 +590,7 @@
         "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000011/form13f_20260930.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001536411.json",
-      "latestCheckAt": "2026-11-19T20:39:32.368123+09:00",
+      "latestCheckAt": "2026-11-20T18:49:29.806135+09:00",
       "latestObservedFilingDate": "2026-11-16",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000006/0001536411-26-000006-index.htm",
@@ -1743,7 +1743,7 @@
         "https://www.sec.gov/Archives/edgar/data/1562087/000131586326000787/thiel3q2026.inftbl.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001562087.json",
-      "latestCheckAt": "2026-11-19T20:39:32.569584+09:00",
+      "latestCheckAt": "2026-11-20T18:49:30.178728+09:00",
       "latestObservedFilingDate": "2026-11-16",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1562087/000131586326000593/0001315863-26-000593-index.htm",
@@ -1874,7 +1874,7 @@
         "https://www.sec.gov/Archives/edgar/data/2026053/000117266126005427/infotable.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0002026053.json",
-      "latestCheckAt": "2026-11-19T20:39:33.187466+09:00",
+      "latestCheckAt": "2026-11-20T18:49:30.742485+09:00",
       "latestObservedFilingDate": "2026-11-16",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/2026053/000117266126005426/0001172661-26-005426-index.htm",
@@ -1888,7 +1888,7 @@
       "rawRowCount": 17,
       "positionCount": 16,
       "priorPositionCount": 15,
-      "comparisonStatus": "SCOPE_CHANGED",
+      "comparisonStatus": "QUANTITY_COMPARISON",
       "holdings": [
         {
           "issuer": "PERSHING SQUARE INC",
@@ -1903,9 +1903,9 @@
           "valueUsd": 10309165762,
           "estimatedValueUsd": null,
           "weightPct": 33.475067,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 184289699,
+          "shareChange": 0,
+          "changeType": "UNCHANGED"
         },
         {
           "issuer": "UBER TECHNOLOGIES INC",
@@ -1920,9 +1920,9 @@
           "valueUsd": 2347719794,
           "estimatedValueUsd": null,
           "weightPct": 7.623321,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 34326200,
+          "shareChange": -57921,
+          "changeType": "DECREASE"
         },
         {
           "issuer": "AMAZON COM INC",
@@ -1937,9 +1937,9 @@
           "valueUsd": 2119214838,
           "estimatedValueUsd": null,
           "weightPct": 6.881338,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 8563857,
+          "shareChange": -58078,
+          "changeType": "DECREASE"
         },
         {
           "issuer": "MICROSOFT CORP",
@@ -1954,9 +1954,9 @@
           "valueUsd": 2084825149,
           "estimatedValueUsd": null,
           "weightPct": 6.769671,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 6206730,
+          "shareChange": -2141951,
+          "changeType": "DECREASE"
         },
         {
           "issuer": "META PLATFORMS INC",
@@ -1971,9 +1971,9 @@
           "valueUsd": 2054651769,
           "estimatedValueUsd": null,
           "weightPct": 6.671695,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 3196062,
+          "shareChange": -362763,
+          "changeType": "DECREASE"
         },
         {
           "issuer": "HOWARD HUGHES HOLDINGS INC",
@@ -1988,9 +1988,9 @@
           "valueUsd": 2050468952,
           "estimatedValueUsd": null,
           "weightPct": 6.658112,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 27852064,
+          "shareChange": 0,
+          "changeType": "UNCHANGED"
         },
         {
           "issuer": "BROOKFIELD CORP",
@@ -2005,9 +2005,9 @@
           "valueUsd": 1871531870,
           "estimatedValueUsd": null,
           "weightPct": 6.077083,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 57481047,
+          "shareChange": -6149948,
+          "changeType": "DECREASE"
         },
         {
           "issuer": "RESTAURANT BRANDS INTL INC",
@@ -2022,9 +2022,9 @@
           "valueUsd": 1564263175,
           "estimatedValueUsd": null,
           "weightPct": 5.079345,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 25821284,
+          "shareChange": -3814205,
+          "changeType": "DECREASE"
         },
         {
           "issuer": "NETFLIX INC.",
@@ -2039,9 +2039,9 @@
           "valueUsd": 1072418728,
           "estimatedValueUsd": null,
           "weightPct": 3.482269,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 13081465,
+          "shareChange": 2331279,
+          "changeType": "INCREASE"
         },
         {
           "issuer": "MASTERCARD INCORPORATED",
@@ -2056,9 +2056,9 @@
           "valueUsd": 1041406426,
           "estimatedValueUsd": null,
           "weightPct": 3.381568,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 2124646,
+          "shareChange": -236227,
+          "changeType": "DECREASE"
         },
         {
           "issuer": "VISA INC",
@@ -2073,9 +2073,9 @@
           "valueUsd": 1031535818,
           "estimatedValueUsd": null,
           "weightPct": 3.349517,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 3270470,
+          "shareChange": -399750,
+          "changeType": "DECREASE"
         },
         {
           "issuer": "S&P GLOBAL INC",
@@ -2090,9 +2090,9 @@
           "valueUsd": 1022921853,
           "estimatedValueUsd": null,
           "weightPct": 3.321547,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 2593155,
+          "shareChange": 0,
+          "changeType": "UNCHANGED"
         },
         {
           "issuer": "INTERCONTINENTAL EXCHANGE IN",
@@ -2107,9 +2107,9 @@
           "valueUsd": 1008855725,
           "estimatedValueUsd": null,
           "weightPct": 3.275873,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 0,
+          "shareChange": 6635899,
+          "changeType": "NEW"
         },
         {
           "issuer": "ALCON AG",
@@ -2124,9 +2124,9 @@
           "valueUsd": 954175943,
           "estimatedValueUsd": null,
           "weightPct": 3.098321,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 0,
+          "shareChange": 14736308,
+          "changeType": "NEW"
         },
         {
           "issuer": "PERSHING SQUARE USA LTD",
@@ -2141,9 +2141,9 @@
           "valueUsd": 148400000,
           "estimatedValueUsd": null,
           "weightPct": 0.481872,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 4000000,
+          "shareChange": 0,
+          "changeType": "UNCHANGED"
         },
         {
           "issuer": "SEAPORT ENTMT GROUP INC",
@@ -2158,14 +2158,14 @@
           "valueUsd": 114994324,
           "estimatedValueUsd": null,
           "weightPct": 0.3734,
-          "priorShares": null,
-          "shareChange": null,
-          "changeType": "NO_COMPARISON"
+          "priorShares": 5023780,
+          "shareChange": 0,
+          "changeType": "UNCHANGED"
         }
       ],
       "transactions": [],
       "notes": [
-        "기존 Pershing Square Capital Management의 13F-NT가 지목한 모회사 PERSHING SQUARE INC.의 합산 공시입니다. 보고 범위 변경으로 전분기 증감을 비교하지 않습니다.",
+        "동일 신고 법인 PERSHING SQUARE INC.의 2분기 원공시와 신규 보유 추가 정정을 합산해 3분기 수량과 비교했습니다.",
         "13F는 신고 법인의 분기말 보유 내역이며 인물 개인의 전체 자산이나 현재 포지션이 아닙니다.",
         "공시 보유가치 합계는 AUM이 아닙니다. 현금·일반 공매도·비공개 자산 등은 같은 범위가 아닙니다.",
         "PUT/CALL 공시가치는 기초자산 명목가치이며 옵션 프리미엄·순노출이 아닙니다.",
@@ -2203,7 +2203,7 @@
         "https://www.sec.gov/Archives/edgar/data/1608046/000119312526456954/60568.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001608046.json",
-      "latestCheckAt": "2026-11-19T20:39:33.355831+09:00",
+      "latestCheckAt": "2026-11-20T18:49:31.123596+09:00",
       "latestObservedFilingDate": "2026-11-12",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1608046/000119312526347818/0001193125-26-347818-index.htm",
@@ -11650,7 +11650,7 @@
         "https://www.sec.gov/Archives/edgar/data/850529/000085052926000009/2026q313f2.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0000850529.json",
-      "latestCheckAt": "2026-11-19T20:39:33.632212+09:00",
+      "latestCheckAt": "2026-11-20T18:49:31.514662+09:00",
       "latestObservedFilingDate": "2026-11-06",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/850529/000085052926000006/0000850529-26-000006-index.htm",
@@ -29710,7 +29710,7 @@
       "isAmendment": false,
       "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035780.pdf",
       "indexUrl": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026FD.zip",
-      "latestCheckAt": "2026-11-19T20:39:34.157311+09:00",
+      "latestCheckAt": "2026-11-20T18:49:32.052396+09:00",
       "positionCount": null,
       "reportedValueUsd": null,
       "holdings": [],
