@@ -672,6 +672,60 @@
         "source": "report"
       },
       "caveat": "연구 데이터의 SPY·GLD·선물 대용치와 운영 보고서 지수·현물 원천은 다를 수 있습니다."
+    },
+    {
+      "marketDate": "2026-11-20",
+      "availableAt": "2026-11-21T07:07:00.965196+00:00",
+      "reportCapturedAt": "2026-11-21T07:06:44.879405+00:00",
+      "features": {
+        "relative_3m": 0.03169430683809149,
+        "stock_3m": -0.09563612806972766,
+        "walcl_13w": -0.000629586348279032,
+        "fear": 9.6737,
+        "corr60": 0.6610181837290975,
+        "btcvol60": 0.3945307698558785
+      },
+      "correlations": {
+        "SPY|^TNX": 0.14871458236305668,
+        "SPY|GLD": 0.4730579900149361,
+        "SPY|CL=F": -0.340089340795505,
+        "SPY|DX-Y.NYB": -0.14110465190311997,
+        "^TNX|GLD": -0.16403076582235046,
+        "^TNX|BTC-USD": 0.11691309988399477,
+        "^TNX|CL=F": 0.22270887961932553,
+        "^TNX|DX-Y.NYB": 0.4229462733181891,
+        "GLD|BTC-USD": 0.48000135207803435,
+        "GLD|CL=F": -0.3301833486774594,
+        "GLD|DX-Y.NYB": -0.45067001395870265,
+        "BTC-USD|CL=F": -0.2661466755651637,
+        "BTC-USD|DX-Y.NYB": -0.15880339035804164,
+        "CL=F|DX-Y.NYB": 0.0778865893043765
+      },
+      "target": {
+        "version": "ver2-research",
+        "weights": {
+          "equity": 0.0,
+          "btc": 0.14,
+          "gold": 0.76,
+          "cash": 0.1
+        },
+        "moves": [
+          {
+            "reason": "연준 자산 감소",
+            "amount": 0.3
+          },
+          {
+            "reason": "공포 환경",
+            "amount": 0.2
+          }
+        ]
+      },
+      "source": "weekly report: TradingView/FRED/CNN",
+      "fearObservation": {
+        "date": "2026-11-20",
+        "source": "report"
+      },
+      "caveat": "연구 데이터의 SPY·GLD·선물 대용치와 운영 보고서 지수·현물 원천은 다를 수 있습니다."
     }
   ]
 }
