@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "asOfDate": "2026-11-21",
-  "generatedAt": "2026-11-21T16:06:55.869057+09:00",
+  "generatedAt": "2026-11-21T16:20:56.204598+09:00",
   "collectionMode": "OFFICIAL_LIVE_LOOKUP",
   "methodology": {
     "scope": "요청한 6개 기관 13F 및 낸시 펠로시 최신 의회 PTR",
@@ -33,7 +33,7 @@
         "https://www.sec.gov/Archives/edgar/data/1067983/000119312526463399/60471.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001067983.json",
-      "latestCheckAt": "2026-11-21T16:06:51.794929+09:00",
+      "latestCheckAt": "2026-11-21T16:20:53.910866+09:00",
       "latestObservedFilingDate": "2026-11-16",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526352200/0001193125-26-352200-index.htm",
@@ -590,7 +590,7 @@
         "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000011/form13f_20260930.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001536411.json",
-      "latestCheckAt": "2026-11-21T16:06:51.975255+09:00",
+      "latestCheckAt": "2026-11-21T16:20:54.231908+09:00",
       "latestObservedFilingDate": "2026-11-16",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1536411/000153641126000006/0001536411-26-000006-index.htm",
@@ -1743,7 +1743,7 @@
         "https://www.sec.gov/Archives/edgar/data/1562087/000131586326000787/thiel3q2026.inftbl.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001562087.json",
-      "latestCheckAt": "2026-11-21T16:06:53.756882+09:00",
+      "latestCheckAt": "2026-11-21T16:20:54.509581+09:00",
       "latestObservedFilingDate": "2026-11-16",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1562087/000131586326000593/0001315863-26-000593-index.htm",
@@ -1874,7 +1874,7 @@
         "https://www.sec.gov/Archives/edgar/data/2026053/000117266126005427/infotable.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0002026053.json",
-      "latestCheckAt": "2026-11-21T16:06:54.265801+09:00",
+      "latestCheckAt": "2026-11-21T16:20:55.062717+09:00",
       "latestObservedFilingDate": "2026-11-16",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/2026053/000117266126005426/0001172661-26-005426-index.htm",
@@ -2203,7 +2203,7 @@
         "https://www.sec.gov/Archives/edgar/data/1608046/000119312526456954/60568.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0001608046.json",
-      "latestCheckAt": "2026-11-21T16:06:54.678042+09:00",
+      "latestCheckAt": "2026-11-21T16:20:55.388488+09:00",
       "latestObservedFilingDate": "2026-11-12",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/1608046/000119312526347818/0001193125-26-347818-index.htm",
@@ -11650,7 +11650,7 @@
         "https://www.sec.gov/Archives/edgar/data/850529/000085052926000009/2026q313f2.xml"
       ],
       "submissionsUrl": "https://data.sec.gov/submissions/CIK0000850529.json",
-      "latestCheckAt": "2026-11-21T16:06:55.198071+09:00",
+      "latestCheckAt": "2026-11-21T16:20:55.735641+09:00",
       "latestObservedFilingDate": "2026-11-06",
       "priorReportPeriod": "2026-06-30",
       "priorSourceUrl": "https://www.sec.gov/Archives/edgar/data/850529/000085052926000006/0000850529-26-000006-index.htm",
@@ -29710,7 +29710,7 @@
       "isAmendment": false,
       "sourceUrl": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/20035780.pdf",
       "indexUrl": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2026FD.zip",
-      "latestCheckAt": "2026-11-21T16:06:55.869057+09:00",
+      "latestCheckAt": "2026-11-21T16:20:56.203600+09:00",
       "positionCount": null,
       "reportedValueUsd": null,
       "holdings": [],
