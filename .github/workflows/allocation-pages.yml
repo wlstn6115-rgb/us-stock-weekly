@@ -5,7 +5,7 @@ on:
     types: [completed]
     branches: [main]
   schedule:
-    - cron: '20 * * * *'
+    - cron: '30 6 * * *'
   workflow_dispatch:
 permissions:
   contents: read
@@ -26,25 +26,59 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+      - uses: google-github-actions/auth@v3
+        if: vars.ALLOCATION_CLOUD_PROVIDER != ''
+        with:
+          workload_identity_provider: ${{ vars.ALLOCATION_CLOUD_PROVIDER }}
+          service_account: allocation-pages-runner@project-0dccbc1e-1212-4a3d-bcc.iam.gserviceaccount.com
+          project_id: project-0dccbc1e-1212-4a3d-bcc
+      - uses: google-github-actions/setup-gcloud@v3
+        if: vars.ALLOCATION_CLOUD_PROVIDER != ''
+      - name: Execute Cloud Run refresh
+        if: vars.ALLOCATION_CLOUD_PROVIDER != '' && github.event_name != 'workflow_run'
+        run: gcloud run jobs execute us-stock-weekly-refresh --project project-0dccbc1e-1212-4a3d-bcc --region asia-northeast3 --wait
+      - name: Load Cloud Run output
+        if: vars.ALLOCATION_CLOUD_PROVIDER != ''
+        run: |
+          gcloud storage cp gs://project-0dccbc1e-1212-4a3d-bcc-allocation-feed/allocation-refresh.json "$RUNNER_TEMP/allocation-refresh.json"
+          python - "$RUNNER_TEMP/allocation-refresh.json" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          bundle = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+          files = ("simulation-history.json", "fx.json", "market-charts.json")
+          if set(bundle) != set(files) or any(not isinstance(bundle[name], dict) for name in files):
+              raise SystemExit("Unexpected Cloud Run output")
+          for name in files:
+              Path("asset-allocation", name).write_text(
+                  json.dumps(bundle[name], allow_nan=False), encoding="utf-8"
+              )
+          PY
       - uses: actions/setup-python@v5
+        if: vars.ALLOCATION_CLOUD_PROVIDER == ''
         with:
           python-version: '3.12'
           cache: pip
           cache-dependency-path: automation/requirements-history.txt
       - name: Install pinned collector dependencies
+        if: vars.ALLOCATION_CLOUD_PROVIDER == ''
         run: python -m pip install -r automation/requirements-history.txt
       - name: Collect completed months and recent FX
+        if: vars.ALLOCATION_CLOUD_PROVIDER == ''
         run: |
           python automation/update_historical_prices.py --config automation/historical_prices.json --output asset-allocation/simulation-history.json --fx-output asset-allocation/fx.json
       - name: Refresh hourly USD KRW
+        if: vars.ALLOCATION_CLOUD_PROVIDER == ''
         run: python automation/update_fx.py --output asset-allocation/fx.json
       - name: Refresh market chart series
+        if: vars.ALLOCATION_CLOUD_PROVIDER == ''
         run: python automation/update_market_charts.py --config automation/market_charts.json --output asset-allocation/market-charts.json
       - uses: actions/configure-pages@v5
       - name: Prepare existing static site
         run: |
           mkdir _site
-          rsync -a --exclude='.git' --exclude='.github' --exclude='automation' --exclude='_site' ./ _site/
+          rsync -a --exclude='.git' --exclude='.github' --exclude='automation' --exclude='_site' --exclude='gha-creds-*.json' ./ _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
