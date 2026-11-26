@@ -68,6 +68,34 @@ jobs:
       - name: Refresh market chart series
         if: vars.ALLOCATION_CLOUD_PROVIDER == ''
         run: python automation/update_market_charts.py --config automation/market_charts.json --output asset-allocation/market-charts.json
+      - name: Refresh official 13F and PTR disclosures
+        if: github.event_name != 'push'
+        run: |
+          mkdir -p "$RUNNER_TEMP/disclosures/automation"
+          cp automation/update_institutional_disclosures.py "$RUNNER_TEMP/disclosures/automation/"
+          snapshot="$RUNNER_TEMP/disclosures/institutional-disclosures.json"
+          if ! timeout 180s python "$RUNNER_TEMP/disclosures/automation/update_institutional_disclosures.py" --output "$snapshot"; then
+            echo "::warning::Official disclosures collection failed. Published snapshot retained."
+            exit 0
+          fi
+          python - "$snapshot" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          new = Path(sys.argv[1])
+          public = Path("asset-allocation/institutional-disclosures.json")
+          snapshot = json.loads(new.read_text(encoding="utf-8"))
+          previous = json.loads(public.read_text(encoding="utf-8"))
+          if snapshot["asOfDate"] < previous["asOfDate"]:
+              print("::warning::Published disclosures are newer. Snapshot retained.")
+          elif snapshot.get("collectionErrors") or {
+              row["id"] for row in snapshot["targets"] if row["status"] != "UNAVAILABLE"
+          } != {"buffett", "druckenmiller", "thiel", "ackman", "nps", "fisher", "pelosi"}:
+              print("::warning::Incomplete disclosures. Published snapshot retained.")
+          else:
+              public.write_bytes(new.read_bytes())
+          PY
       - uses: actions/configure-pages@v5
       - name: Prepare existing static site
         run: |
