@@ -74,27 +74,45 @@ jobs:
           mkdir -p "$RUNNER_TEMP/disclosures/automation"
           cp automation/update_institutional_disclosures.py "$RUNNER_TEMP/disclosures/automation/"
           snapshot="$RUNNER_TEMP/disclosures/institutional-disclosures.json"
-          if ! timeout 180s python "$RUNNER_TEMP/disclosures/automation/update_institutional_disclosures.py" --output "$snapshot"; then
-            echo "::warning::Official disclosures collection failed. Published snapshot retained."
+          status=0
+          timeout 180s python "$RUNNER_TEMP/disclosures/automation/update_institutional_disclosures.py" --output "$snapshot" || status=$?
+          if [[ ! -s "$snapshot" || ( "$status" != 0 && "$status" != 2 ) ]]; then
+            echo "::warning::Disclosures collector returned no usable snapshot. Published snapshot retained."
             exit 0
           fi
           python - "$snapshot" <<'PY'
           import json
           import sys
+          from datetime import datetime
           from pathlib import Path
 
           new = Path(sys.argv[1])
           public = Path("asset-allocation/institutional-disclosures.json")
           snapshot = json.loads(new.read_text(encoding="utf-8"))
           previous = json.loads(public.read_text(encoding="utf-8"))
-          if snapshot["asOfDate"] < previous["asOfDate"]:
+          ids = {"buffett", "druckenmiller", "thiel", "ackman", "nps", "fisher", "pelosi"}
+          rows = snapshot["targets"]
+          if len(rows) != len(ids) or {row["id"] for row in rows} != ids:
+              raise SystemExit("Unexpected disclosures targets")
+          if datetime.fromisoformat(snapshot["generatedAt"]) < datetime.fromisoformat(previous["generatedAt"]):
               print("::warning::Published disclosures are newer. Snapshot retained.")
-          elif snapshot.get("collectionErrors") or {
-              row["id"] for row in snapshot["targets"] if row["status"] != "UNAVAILABLE"
-          } != {"buffett", "druckenmiller", "thiel", "ackman", "nps", "fisher", "pelosi"}:
-              print("::warning::Incomplete disclosures. Published snapshot retained.")
-          else:
-              public.write_bytes(new.read_bytes())
+              raise SystemExit(0)
+          old_rows = {row["id"]: row for row in previous["targets"]}
+          refreshed = 0
+          for i, row in enumerate(rows):
+              old = old_rows[row["id"]]
+              older_filing = (row.get("filingDate") or "") < (old.get("filingDate") or "")
+              if row["status"] == "UNAVAILABLE" or older_filing:
+                  rows[i] = old
+                  print(f"::warning::{row['id']}: published filing retained.")
+              else:
+                  refreshed += 1
+          if refreshed:
+              snapshot["collectionErrors"] = [
+                  {"id": row["id"], "error": "Official source lookup failed; previous filing retained"}
+                  for row in snapshot.get("collectionErrors", [])
+              ]
+              public.write_text(json.dumps(snapshot, ensure_ascii=False), encoding="utf-8")
           PY
       - uses: actions/configure-pages@v5
       - name: Prepare existing static site
