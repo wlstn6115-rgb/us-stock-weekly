@@ -1,0 +1,4 @@
+curl_cffi==0.16.3
+pandas==3.0.5
+pandas-market-calendars==5.7.0
+websockets==17.1

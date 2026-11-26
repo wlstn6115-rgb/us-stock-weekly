@@ -68,6 +68,17 @@ jobs:
       - name: Refresh market chart series
         if: vars.ALLOCATION_CLOUD_PROVIDER == ''
         run: python automation/update_market_charts.py --config automation/market_charts.json --output asset-allocation/market-charts.json
+      - name: Refresh Ver2 from TradingView, FRED and CNN
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = push ]; then
+            python automation/ver2/scripts/refresh_cloud_ver2.py . --preserve
+          else
+            python -m pip install -r automation/ver2/requirements.txt
+            if ! timeout 240s python automation/ver2/scripts/refresh_cloud_ver2.py .; then
+              echo "::warning::Ver2 refresh failed. Preserving last public observations."
+              python automation/ver2/scripts/refresh_cloud_ver2.py . --preserve
+            fi
+          fi
       - name: Refresh official 13F and PTR disclosures
         if: github.event_name != 'push'
         run: |
