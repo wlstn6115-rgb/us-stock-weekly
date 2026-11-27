@@ -125,6 +125,26 @@ jobs:
               ]
               public.write_text(json.dumps(snapshot, ensure_ascii=False), encoding="utf-8")
           PY
+      - name: Configure optional public market API
+        env:
+          MARKET_API_URL: ${{ vars.MARKET_API_URL }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          url = os.environ["MARKET_API_URL"].strip().rstrip("/")
+          if url:
+              parsed = urlparse(url)
+              if parsed.scheme != "https" or not parsed.hostname or not parsed.hostname.endswith(".run.app") or parsed.path or parsed.username or parsed.query or parsed.fragment:
+                  raise SystemExit("MARKET_API_URL must be a Cloud Run HTTPS origin")
+              Path("asset-allocation/market-api-config.js").write_text(
+                  "globalThis.PUBLIC_MARKET_API_URL = " + json.dumps(url) + ";\n",
+                  encoding="utf-8",
+              )
+          PY
       - uses: actions/configure-pages@v5
       - name: Prepare existing static site
         run: |

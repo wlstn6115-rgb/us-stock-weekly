@@ -86,7 +86,7 @@
   }
   async function refresh() {
     try {
-      const r = await fetch('./ver2-tracking.json?t=' + Date.now(), {cache:'no-store'});
+      const r = await (globalThis.fetchPublicMarket || globalThis.fetch.bind(globalThis))('./ver2-tracking.json?t=' + Date.now(), {cache:'no-store'});
       if (!r.ok) throw Error('데이터 없음');
       draw(await r.json());
     } catch (e) {

@@ -170,7 +170,7 @@
   }
   async function load() {
     try {
-      const response = await root.fetch('./institutional-disclosures.json', {cache: 'no-store'});
+      const response = await (globalThis.fetchPublicMarket || globalThis.fetch.bind(globalThis))('./institutional-disclosures.json', {cache: 'no-store'});
       if (!response.ok) throw new Error('HTTP ' + response.status);
       snapshot = validateSnapshot(await response.json());
       snapshot.targets = snapshot.targets.slice().sort((a, b) => TARGET_ORDER.indexOf(a.id) - TARGET_ORDER.indexOf(b.id));

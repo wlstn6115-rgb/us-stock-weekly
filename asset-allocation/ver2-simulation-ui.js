@@ -111,11 +111,11 @@
   }
   get('v2-years').onchange=starts;
   try {
-    const response=await fetch('./ver2-simulation-history.json?t='+Date.now(),{cache:'no-store'});
+    const response=await (globalThis.fetchPublicMarket || globalThis.fetch.bind(globalThis))('./ver2-simulation-history.json?t='+Date.now(),{cache:'no-store'});
     if(!response.ok)throw Error('과거 시뮬레이션 자료를 불러오지 못했습니다.');
     rows=(await response.json()).observations;
     if(!Array.isArray(rows)||!rows.length)throw Error('과거 시뮬레이션 자료가 비어 있습니다.');
-    try { const prices=await fetch('./ver2-practice-trends.json?t='+Date.now(),{cache:'no-store'}); if(prices.ok)practiceTrends=(await prices.json()).months||{}; } catch(e) { practiceTrends={}; }
+    try { const prices=await (globalThis.fetchPublicMarket || globalThis.fetch.bind(globalThis))('./ver2-practice-trends.json?t='+Date.now(),{cache:'no-store'}); if(prices.ok)practiceTrends=(await prices.json()).months||{}; } catch(e) { practiceTrends={}; }
     get('v2-sim-run').onclick=()=>{
       const out=get('v2-sim-result');
       try {

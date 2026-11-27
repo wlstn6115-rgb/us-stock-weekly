@@ -4,7 +4,10 @@
   class HistoricalDataAdapter{
     constructor({url='./simulation-history.json',fetcher=root.fetch?.bind(root)}={}){this.url=url;this.fetcher=fetcher;}
     async read(){
-      const response=await this.fetcher(this.url,{cache:'no-store'});
+      const options={cache:'no-store'};
+      const response=await (root.readPublicMarketDataset && this.url === './simulation-history.json'
+        ? root.readPublicMarketDataset('simulation-history.json',this.url,this.fetcher,options)
+        : this.fetcher(this.url,options));
       if(response.status===404)return [];
       if(!response.ok)throw Error('과거 데이터 조회 실패');
       const p=await response.json();
