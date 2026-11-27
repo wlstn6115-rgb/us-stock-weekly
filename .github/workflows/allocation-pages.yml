@@ -146,6 +146,8 @@ jobs:
               )
           PY
       - name: Collect cloud briefing data and connect the renderer
+        env:
+          TRADING_ECONOMICS_API_KEY: ${{ secrets.TRADING_ECONOMICS_API_KEY }}
         run: |
           script=automation/ver2/scripts/refresh_briefing.py
           if [ "$GITHUB_EVENT_NAME" = push ]; then

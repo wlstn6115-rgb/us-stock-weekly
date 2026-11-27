@@ -4,11 +4,13 @@ import json
 import csv
 import io
 import math
+import os
 import re
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, time, timedelta, timezone
 from pathlib import Path
 from urllib.error import HTTPError
+from urllib.parse import urlencode
 from urllib.request import urlopen
 from zoneinfo import ZoneInfo
 
@@ -138,6 +140,34 @@ def update_macro(series, cutoff):
         series["US S&P 500"] = {**old, "source": source,
                                "dates": dates, "values": [points[d][0] for d in dates],
                                "pointSources": [points[d][1] for d in dates]}
+    token = os.environ.get("TRADING_ECONOMICS_API_KEY")
+    if not token:
+        print("::warning::S&P Global PMI: Trading Economics credential unavailable; previous release retained")
+        return
+    old = series["US Manufacturing PMI"]
+    previous = dict(zip(old["dates"], old["values"]))
+    try:
+        query = urlencode({"c": token, "f": "json"})
+        url = "https://api.tradingeconomics.com/historical/country/united%20states/indicator/manufacturing%20pmi"
+        with urlopen(f"{url}?{query}", timeout=20) as response:
+            items = json.load(response)
+        incoming = {row["DateTime"][:7] + "-01": float(row["Value"]) for row in items
+                    if row["Country"] == "United States" and row["Value"] is not None
+                    and row["DateTime"][:7] + "-01" <= cutoff}
+        overlap = sorted(previous.keys() & incoming.keys())[-3:]
+        if len(overlap) < 3 or any(abs(previous[d] - incoming[d]) > 0.11 for d in overlap):
+            raise ValueError("PMI overlap differs")
+        if not all(math.isfinite(value) and 0 <= value <= 100 for value in incoming.values()):
+            raise ValueError("PMI values invalid")
+    except (OSError, ValueError, TypeError, KeyError):
+        print("::warning::S&P Global PMI: official API could not validate the release; previous release retained")
+        return
+    source = "Trading Economics - S&P Global"
+    points = {**previous, **{d: v for d, v in incoming.items() if d >= min(previous)}}
+    dates = sorted(points)
+    series["US Manufacturing PMI"] = {**old, "source": source, "dates": dates,
+                                       "values": [points[d] for d in dates],
+                                       "pointSources": [source] * len(dates)}
 
 
 def refresh(previous, now):
