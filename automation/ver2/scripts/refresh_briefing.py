@@ -1,6 +1,8 @@
 """Collect public briefing prices and FINVIZ data with the existing Ver2 sources."""
 
 import json
+import csv
+import io
 import math
 import re
 from concurrent.futures import ThreadPoolExecutor
@@ -20,6 +22,12 @@ MARKET_FIELDS = ("weeklySnapshot", "series", "finvizWeeklyGroups",
 CORRELATION_LABELS = ("S&P 500", "US 10Y Treasury", "Gold", "Bitcoin (USD)",
                       "WTI Crude", "Dollar Index", "KOSPI", "USD/KRW")
 SITE = "https://wlstn6115-rgb.github.io/us-stock-weekly/"
+FRED_MACRO = {
+    "US Industrial Production": ("INDPRO", "Federal Reserve", True, False),
+    "US Retail Sales YoY": ("RSAFS", "U.S. Census Bureau", True, False),
+    "US GDP Annual Growth Rate": ("GDPC1", "U.S. Bureau of Economic Analysis", True, True),
+    "US Unemployment Rate": ("UNRATE", "U.S. Bureau of Labor Statistics", False, False),
+}
 
 
 def extract(html):
@@ -76,6 +84,60 @@ def correlations(data, month):
             "matrix": {a: {b: 1.0 if a == b else round(float(matrix.loc[a, b]), 4)
                             if math.isfinite(matrix.loc[a, b]) else None
                             for b in CORRELATION_LABELS} for a in CORRELATION_LABELS}}
+
+
+def fred_macro(code, yoy, quarterly):
+    with urlopen(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={code}", timeout=20) as response:
+        csv_text = response.read().decode("utf-8-sig")
+    rows = {day: float(value) for day, value in list(csv.reader(io.StringIO(csv_text)))[1:]
+            if value not in ("", ".")}
+    result = {}
+    for day, value in rows.items():
+        prior = str(int(day[:4]) - 1) + day[4:]
+        if yoy and (prior not in rows or rows[prior] <= 0):
+            continue
+        # The existing chart labels GDP by the last month of each quarter.
+        label = f"{day[:4]}-{int(day[5:7]) + 2:02d}-01" if quarterly else day
+        result[label] = round((value / rows[prior] - 1) * 100, 1) if yoy else value
+    return result
+
+
+def update_macro(series, cutoff):
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        pending = {name: pool.submit(fred_macro, code, yoy, quarterly)
+                   for name, (code, _, yoy, quarterly) in FRED_MACRO.items()}
+        for name, future in pending.items():
+            old = series[name]
+            previous = dict(zip(old["dates"], old["values"]))
+            try:
+                fresh = {day: value for day, value in future.result().items()
+                         if day <= cutoff and math.isfinite(value)}
+                overlap = sorted(previous.keys() & fresh.keys())[-3:]
+                if len(overlap) < 3 or any(abs(previous[d] - fresh[d]) > 0.11 for d in overlap):
+                    raise ValueError("published overlap differs from official series")
+            except (OSError, ValueError) as error:
+                print(f"::warning::{name}: existing series retained ({error})")
+                continue
+            code, agency, _, _ = FRED_MACRO[name]
+            source = f"FRED {code} - {agency}"
+            dates = sorted(set(previous) | {d for d in fresh if d >= min(previous)})
+            series[name] = {**old, "source": source, "sources": list(dict.fromkeys([*old.get("sources", []), source])),
+                            "dates": dates, "values": [fresh[d] if d in fresh else previous[d] for d in dates],
+                            "pointSources": [source if d in fresh else old["source"] for d in dates]}
+            print(f"{name}: {dates[-1]} ({source})")
+    old = series["US S&P 500"]
+    equity = series["S&P 500"]
+    closes = {day[:7] + "-01": value for day, value in zip(equity["dates"], equity["values"])
+              if day <= cutoff}
+    month = cutoff[:7] + "-01"
+    if month in closes and (not old["dates"] or month >= old["dates"][-1]):
+        points = dict(zip(old["dates"], zip(old["values"], old.get("pointSources", [old["source"]] * len(old["dates"])))))
+        source = "TradingView TVC:SPX - latest close of month"
+        points[month] = (closes[month], source)
+        dates = sorted(points)
+        series["US S&P 500"] = {**old, "source": source,
+                               "dates": dates, "values": [points[d][0] for d in dates],
+                               "pointSources": [points[d][1] for d in dates]}
 
 
 def refresh(previous, now):
@@ -157,6 +219,7 @@ def refresh(previous, now):
                      currentEnd=latest, currentWeekHasData=True)
         saved["items"].sort(key=lambda row: row["perfWeek"], reverse=True)
     previous["marketOverlay"]["through"] = latest
+    update_macro(previous["series"], latest)
     month = latest[:7]
     updated = correlations(previous["series"], month)
     if updated:
