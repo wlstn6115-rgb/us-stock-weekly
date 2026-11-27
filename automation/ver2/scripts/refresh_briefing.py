@@ -1,0 +1,196 @@
+"""Collect public briefing prices and FINVIZ data with the existing Ver2 sources."""
+
+import json
+import math
+import re
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, time, timedelta, timezone
+from pathlib import Path
+from urllib.error import HTTPError
+from urllib.request import urlopen
+from zoneinfo import ZoneInfo
+
+from refresh_cloud_ver2 import collect, close_series, tradingview
+
+
+EXTRA = {"Nasdaq 100": "TVC:NDX", "Dow": "TVC:DJI", "Russell 2000": "TVC:RUT"}
+KST = ZoneInfo("Asia/Seoul")
+MARKET_FIELDS = ("weeklySnapshot", "series", "finvizWeeklyGroups",
+                 "finvizWeeklyIndustryGroups", "marketOverlay", "monthlyCorrelations")
+CORRELATION_LABELS = ("S&P 500", "US 10Y Treasury", "Gold", "Bitcoin (USD)",
+                      "WTI Crude", "Dollar Index", "KOSPI", "USD/KRW")
+SITE = "https://wlstn6115-rgb.github.io/us-stock-weekly/"
+
+
+def extract(html):
+    data = {}
+    for key in MARKET_FIELDS:
+        row = re.search(rf"(?m)^    const {key} = (.*?);\s*$", html)
+        if not row:
+            raise ValueError(f"Missing published briefing field: {key}")
+        data[key] = json.loads(row[1])
+    return data
+
+
+def finviz(group, rows):
+    from bs4 import BeautifulSoup
+    from curl_cffi import requests
+
+    url = f"https://finviz.com/groups?g={group}&o=name&v=140"
+    response = requests.get(url, impersonate="chrome", timeout=20)
+    response.raise_for_status()
+    table = BeautifulSoup(response.text, "html.parser")
+    values = {}
+    for row in table.select("tr"):
+        cells = row.find_all("td", recursive=False)
+        if len(cells) < 8:
+            continue
+        link = cells[1].find("a")
+        if not link:
+            continue
+        numbers = [cell.get_text(strip=True) for cell in cells[2:]]
+        if not re.fullmatch(r"[+-]?\d+(?:\.\d+)?%", numbers[0]):
+            continue
+        values[link.get_text(strip=True)] = float(numbers[0][:-1])
+    if not rows or any(row[group] not in values for row in rows):
+        raise ValueError(f"Incomplete FINVIZ {group} response")
+    return url, values
+
+
+def correlations(data, month):
+    import pandas as pd
+
+    prices = {}
+    for name in CORRELATION_LABELS:
+        item = data[name]
+        prices[name] = pd.Series({day: value for day, value in zip(item["dates"], item["values"])
+                                  if day.startswith(month)}, dtype=float).sort_index()
+    returns = pd.concat([prices[name].pct_change(fill_method=None).rename(name)
+                         for name in CORRELATION_LABELS], axis=1).dropna()
+    if len(returns) < 5:
+        return None
+    matrix = returns.corr()
+    dates = prices["S&P 500"].index
+    return {"month": month, "start": dates[0], "end": dates[-1],
+            "observations": len(returns), "labels": CORRELATION_LABELS,
+            "matrix": {a: {b: 1.0 if a == b else round(float(matrix.loc[a, b]), 4)
+                            if math.isfinite(matrix.loc[a, b]) else None
+                            for b in CORRELATION_LABELS} for a in CORRELATION_LABELS}}
+
+
+def refresh(previous, now):
+    import pandas_market_calendars as calendars
+
+    latest, series = collect(now)
+    if latest < previous["marketOverlay"]["through"]:
+        raise ValueError("Refusing an older market close")
+    schedule = calendars.get_calendar("NYSE").schedule(
+        start_date=now.date() - timedelta(days=460), end_date=latest)
+    sessions = [(day.date().isoformat(), row.market_close) for day, row in schedule.iterrows()]
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        jobs = {name: pool.submit(tradingview, symbol) for name, symbol in EXTRA.items()}
+        quotes = pool.submit(tradingview, "KRX:KOSPI")
+        for name, future in jobs.items():
+            points = close_series(future.result(), sessions)
+            if latest not in points:
+                raise ValueError(f"Missing {name} close for {latest}")
+            series[name] = {"dates": list(points), "values": list(points.values())}
+        korea = {}
+        now_kst = now.astimezone(KST)
+        for stamp, value in quotes.result():
+            local = datetime.fromtimestamp(stamp, KST)
+            if (local.weekday() < 5 and time(9) <= local.time() < time(15, 30)
+                    and (local.date() < now_kst.date() or now_kst.time() >= time(15, 45))
+                    and math.isfinite(value) and value > 0):
+                korea[local.date().isoformat()] = value
+        if not korea:
+            raise ValueError("KOSPI close unavailable")
+        series["KOSPI"] = {"dates": sorted(korea), "values": [korea[d] for d in sorted(korea)]}
+    for name, item in series.items():
+        if name not in previous["series"]:
+            continue
+        old = previous["series"][name]
+        points = dict(zip(old["dates"], zip(old["values"], old.get("pointSources", [""] * len(old["dates"])))))
+        source = old.get("source", "")
+        points.update({day: (value, source) for day, value in zip(item["dates"], item["values"])})
+        dates = sorted(points)
+        previous["series"][name] = {**old, "dates": dates, "values": [points[d][0] for d in dates],
+                                    "pointSources": [points[d][1] for d in dates]}
+    monday = datetime.fromisoformat(latest).date()
+    monday -= timedelta(days=monday.weekday())
+    for name, item in previous["weeklySnapshot"].items():
+        points = previous["series"][name]
+        rows = list(zip(points["dates"], points["values"]))
+        end_day = rows[-1][0]
+        market_monday = datetime.fromisoformat(end_day).date()
+        market_monday -= timedelta(days=market_monday.weekday())
+        boundary = market_monday.isoformat()
+        prior = [row for row in rows if row[0] < boundary]
+        current = [row for row in rows if row[0] >= boundary]
+        if not prior or not current or prior[-1][1] <= 0:
+            raise ValueError(f"Cannot compare snapshot for {name}")
+        selected = [prior[-1], *current]
+        first, last = selected[0][1], selected[-1][1]
+        previous["weeklySnapshot"][name] = {**item, "dates": [r[0] for r in selected],
+            "values": [r[1] for r in selected], "first": first, "last": last,
+            "pointSources": [item.get("source", "") for _ in selected],
+            "changePct": round((last / first - 1) * 100, 2)}
+    for key, group in (("finvizWeeklyGroups", "sector"), ("finvizWeeklyIndustryGroups", "industry")):
+        saved = previous[key]
+        if saved.get("currentStart") == monday.isoformat() and saved.get("currentEnd", "") >= latest:
+            continue
+        ny = now.astimezone(ZoneInfo("America/New_York"))
+        if ny.weekday() < 5 and time(9, 30) <= ny.time() < time(16, 15):
+            raise ValueError("FINVIZ comparison waits until the US close buffer")
+        if saved.get("currentStart") != monday.isoformat():
+            prior_close = max(day for day, _ in sessions if day < monday.isoformat())
+            if saved.get("currentEnd") != prior_close:
+                raise ValueError("FINVIZ prior-week final snapshot is missing")
+            saved.update(previousStart=saved["currentStart"], previousEnd=saved["currentEnd"],
+                         previousFetchedAt=saved["fetchedAt"], currentStart=monday.isoformat())
+            for row in saved["items"]:
+                row["previousPerfWeek"] = row["perfWeek"]
+        url, perf = finviz(group, saved["items"])
+        for row in saved["items"]:
+            row.update(perfWeek=perf[row[group]], change=None)
+        saved.update(source=url, fetchedAt=now.astimezone(KST).strftime("%Y-%m-%d %H:%M"),
+                     currentEnd=latest, currentWeekHasData=True)
+        saved["items"].sort(key=lambda row: row["perfWeek"], reverse=True)
+    previous["marketOverlay"]["through"] = latest
+    month = latest[:7]
+    updated = correlations(previous["series"], month)
+    if updated:
+        saved = {row["month"]: row for row in previous["monthlyCorrelations"]}
+        saved[month] = updated
+        previous["monthlyCorrelations"] = [saved[key] for key in sorted(saved)]
+    previous["schemaVersion"] = 1
+    previous["generatedAt"] = now.isoformat()
+    return previous
+
+
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("published_html", type=Path)
+    parser.add_argument("output", type=Path)
+    parser.add_argument("--preserve", action="store_true")
+    args = parser.parse_args()
+    now = datetime.now(timezone.utc)
+    data = extract(args.published_html.read_text(encoding="utf-8-sig"))
+    try:
+        with urlopen(SITE + "briefing-data.json", timeout=12) as response:
+            public = json.load(response)
+        if public["marketOverlay"]["through"] >= data["marketOverlay"]["through"]:
+            # Keep the original collector's macro series when the HTML has been refreshed.
+            for name in data["series"].keys() & public["series"].keys():
+                if data["series"][name]["dates"][-1:] > public["series"][name]["dates"][-1:]:
+                    public["series"][name] = data["series"][name]
+            data = public
+    except HTTPError as error:
+        if error.code != 404:
+            raise
+    if not args.preserve:
+        data = refresh(data, now)
+    elif "schemaVersion" not in data:
+        raise SystemExit(0)
+    args.output.write_text(json.dumps(data, ensure_ascii=False, allow_nan=False), encoding="utf-8")

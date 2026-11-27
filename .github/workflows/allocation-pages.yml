@@ -145,6 +145,19 @@ jobs:
                   encoding="utf-8",
               )
           PY
+      - name: Collect cloud briefing data and connect the renderer
+        run: |
+          script=automation/ver2/scripts/refresh_briefing.py
+          if [ "$GITHUB_EVENT_NAME" = push ]; then
+            python "$script" index.html briefing-data.json --preserve
+          else
+            python -m pip install -r automation/ver2/requirements.txt beautifulsoup4==4.15.0
+            if ! timeout 300s python "$script" index.html briefing-data.json; then
+              echo "::warning::Briefing source refresh failed. Preserving published briefing."
+              python "$script" index.html briefing-data.json --preserve
+            fi
+          fi
+          python automation/ver2/scripts/connect_briefing.py index.html
       - uses: actions/configure-pages@v5
       - name: Prepare existing static site
         run: |
