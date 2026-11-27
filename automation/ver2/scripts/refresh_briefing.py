@@ -6,6 +6,7 @@ import io
 import math
 import os
 import re
+import calendar
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, time, timedelta, timezone
 from pathlib import Path
@@ -30,6 +31,33 @@ FRED_MACRO = {
     "US GDP Annual Growth Rate": ("GDPC1", "U.S. Bureau of Economic Analysis", True, True),
     "US Unemployment Rate": ("UNRATE", "U.S. Bureau of Labor Statistics", False, False),
 }
+
+
+def public_pmi():
+    from bs4 import BeautifulSoup
+    from curl_cffi import requests
+
+    response = requests.get("https://tradingeconomics.com/united-states/manufacturing-pmi",
+                            impersonate="chrome", timeout=20)
+    response.raise_for_status()
+    page = BeautifulSoup(response.text, "html.parser")
+    tag = page.select_one('meta[name="description"]')
+    summary = tag.get("content", "") if tag else ""
+    match = re.search(
+        r"Manufacturing PMI in the United States (?:\w+ )+to (\d+(?:\.\d+)?) points in ([A-Za-z]+) "
+        r"from (\d+(?:\.\d+)?) points in ([A-Za-z]+) of (\d{4})",
+        summary, re.I,
+    )
+    if not match:
+        raise ValueError("Public PMI summary layout changed")
+    current, month_name, previous, previous_name, year = match.groups()
+    months = {name.lower(): i for i, name in enumerate(calendar.month_name) if name}
+    month, prior = months[month_name.lower()], months[previous_name.lower()]
+    year = int(year)
+    if month != prior % 12 + 1:
+        raise ValueError("PMI summary does not identify adjacent releases")
+    return {f"{year}-{prior:02d}-01": float(previous),
+            f"{year + (month < prior)}-{month:02d}-01": float(current)}
 
 
 def extract(html):
@@ -141,26 +169,26 @@ def update_macro(series, cutoff):
                                "dates": dates, "values": [points[d][0] for d in dates],
                                "pointSources": [points[d][1] for d in dates]}
     token = os.environ.get("TRADING_ECONOMICS_API_KEY")
-    if not token:
-        print("::warning::S&P Global PMI: Trading Economics credential unavailable; previous release retained")
-        return
     old = series["US Manufacturing PMI"]
     previous = dict(zip(old["dates"], old["values"]))
     try:
-        query = urlencode({"c": token, "f": "json"})
-        url = "https://api.tradingeconomics.com/historical/country/united%20states/indicator/manufacturing%20pmi"
-        with urlopen(f"{url}?{query}", timeout=20) as response:
-            items = json.load(response)
-        incoming = {row["DateTime"][:7] + "-01": float(row["Value"]) for row in items
-                    if row["Country"] == "United States" and row["Value"] is not None
-                    and row["DateTime"][:7] + "-01" <= cutoff}
+        if token:
+            query = urlencode({"c": token, "f": "json"})
+            url = "https://api.tradingeconomics.com/historical/country/united%20states/indicator/manufacturing%20pmi"
+            with urlopen(f"{url}?{query}", timeout=20) as response:
+                items = json.load(response)
+            incoming = {row["DateTime"][:7] + "-01": float(row["Value"]) for row in items
+                        if row["Country"] == "United States" and row["Value"] is not None}
+        else:
+            incoming = public_pmi()
+        incoming = {day: value for day, value in incoming.items() if day <= cutoff}
         overlap = sorted(previous.keys() & incoming.keys())[-3:]
-        if len(overlap) < 3 or any(abs(previous[d] - incoming[d]) > 0.11 for d in overlap):
+        if len(overlap) < (3 if token else 1) or any(abs(previous[d] - incoming[d]) > 0.11 for d in overlap[:-1] if len(overlap) > 1) or (len(overlap) == 1 and abs(previous[overlap[0]] - incoming[overlap[0]]) > 0.11):
             raise ValueError("PMI overlap differs")
         if not all(math.isfinite(value) and 0 <= value <= 100 for value in incoming.values()):
             raise ValueError("PMI values invalid")
     except (OSError, ValueError, TypeError, KeyError):
-        print("::warning::S&P Global PMI: official API could not validate the release; previous release retained")
+        print("::warning::S&P Global PMI: source could not validate the release; previous release retained")
         return
     source = "Trading Economics - S&P Global"
     points = {**previous, **{d: v for d, v in incoming.items() if d >= min(previous)}}

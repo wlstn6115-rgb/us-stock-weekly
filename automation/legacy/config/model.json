@@ -1,0 +1,66 @@
+{
+  "version": "instagram-adaptive-v0.1",
+  "window": 60,
+  "minimum": 15,
+  "minimum_coverage": 0.7,
+  "max_weight_deviation": 0.08,
+  "max_daily_weight_change": 0.02,
+  "weight_smoothing": 0.25,
+  "risk_off_threshold": 0.35,
+  "regime_drivers": {"equity_trend": -1, "dollar": 1, "nominal_yield": 1},
+  "stress_group_boost": {"risk": 1.0, "trend": -0.3, "liquidity": 0.2},
+  "factors": {
+    "equity_trend": {"series": "Nasdaq 100", "transform": "log_return", "lag": 5, "max_age_days": 5, "group": "trend"},
+    "relative_equity": {"series": "Nasdaq 100", "denominator": "S&P 500", "transform": "log_return", "lag": 5, "max_age_days": 5, "group": "trend"},
+    "btc_trend": {"series": "Bitcoin (USD)", "transform": "log_return", "lag": 5, "max_age_days": 5, "group": "trend"},
+    "gold_trend": {"series": "Gold", "transform": "log_return", "lag": 5, "max_age_days": 5, "group": "trend"},
+    "btc_gold": {"series": "Bitcoin (USD)", "denominator": "Gold", "transform": "log_return", "lag": 5, "max_age_days": 5, "group": "trend"},
+    "dollar": {"series": "Dollar Index", "transform": "log_return", "lag": 5, "max_age_days": 5, "group": "risk"},
+    "nominal_yield": {"series": "US 10Y Treasury", "transform": "difference", "lag": 5, "max_age_days": 5, "group": "risk"},
+    "liquidity": {"series": "Federal Reserve Balance Sheet", "transform": "log_return", "lag": 1, "max_age_days": 14, "group": "liquidity"}
+  },
+  "assets": {
+    "QQQ": {
+      "equity_trend": {"weight": 0.25, "direction": 1},
+      "relative_equity": {"weight": 0.2, "direction": 1},
+      "dollar": {"weight": 0.15, "direction": -1},
+      "nominal_yield": {"weight": 0.2, "direction": -1},
+      "liquidity": {"weight": 0.2, "direction": 1}
+    },
+    "BTC": {
+      "btc_trend": {"weight": 0.25, "direction": 1},
+      "btc_gold": {"weight": 0.15, "direction": 1},
+      "dollar": {"weight": 0.2, "direction": -1},
+      "nominal_yield": {"weight": 0.15, "direction": -1},
+      "liquidity": {"weight": 0.25, "direction": 1}
+    },
+    "GOLD": {
+      "gold_trend": {"weight": 0.3, "direction": 1},
+      "dollar": {"weight": 0.25, "direction": -1},
+      "nominal_yield": {"weight": 0.2, "direction": -1},
+      "equity_trend": {"weight": 0.1, "direction": -1},
+      "liquidity": {"weight": 0.15, "direction": 1}
+    },
+    "CASH": {
+      "equity_trend": {"weight": 0.3, "direction": -1},
+      "btc_trend": {"weight": 0.15, "direction": -1},
+      "dollar": {"weight": 0.2, "direction": 1},
+      "nominal_yield": {"weight": 0.2, "direction": 1},
+      "liquidity": {"weight": 0.15, "direction": -1}
+    }
+  },
+  "rules": {
+    "base": {"QQQ": 0.6, "BTC": 0.15, "GOLD": 0.15, "CASH": 0.1},
+    "reference": {"QQQ": 0.6, "BTC": 0.15, "GOLD": 0.15, "CASH": 0.1},
+    "max_tilt": {"QQQ": 0.1, "BTC": 0.05, "GOLD": 0.05, "CASH": 0.1},
+    "min": {"QQQ": 0, "BTC": 0, "GOLD": 0, "CASH": 0},
+    "max": {"QQQ": 0.75, "BTC": 0.25, "GOLD": 0.3, "CASH": 1},
+    "score_strength": 0.1,
+    "momentum_strength": 0.03,
+    "portfolio_strength": 0.2,
+    "portfolio_guardrails": {
+      "cash_floor": 0.10,
+      "stop_buy_weight": {"QQQ": 0.75, "BTC": 0.25, "GOLD": 0.30}
+    }
+  }
+}

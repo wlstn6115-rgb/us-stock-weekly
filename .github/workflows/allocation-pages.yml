@@ -159,7 +159,22 @@ jobs:
               python "$script" index.html briefing-data.json --preserve
             fi
           fi
-          python automation/ver2/scripts/connect_briefing.py index.html
+          capex="$RUNNER_TEMP/capex-briefing.json"
+          if [ "$GITHUB_EVENT_NAME" != push ]; then
+            if ! timeout 150s pwsh -NoProfile -File automation/ver2/scripts/refresh_capex.ps1 -OutputPath "$capex"; then
+              echo "::warning::SEC annual CAPEX refresh failed. Preserving previous public records."
+            fi
+          fi
+          python automation/ver2/scripts/connect_briefing.py index.html --data briefing-data.json --capex "$capex"
+      - name: Compute or preserve public legacy allocation scores
+        run: |
+          script=automation/legacy/refresh_legacy_scores.py
+          if [ "$GITHUB_EVENT_NAME" = push ]; then
+            python "$script" briefing-data.json asset-allocation --preserve
+          elif ! python "$script" briefing-data.json asset-allocation; then
+            echo "::warning::Legacy score refresh failed. Preserving previous score."
+            python "$script" briefing-data.json asset-allocation --preserve
+          fi
       - uses: actions/configure-pages@v5
       - name: Prepare existing static site
         run: |
